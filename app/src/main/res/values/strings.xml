@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Projet</string>
+    <string name="title_activity_main_menu_activy">MainMenuActivity</string>
 </resources>

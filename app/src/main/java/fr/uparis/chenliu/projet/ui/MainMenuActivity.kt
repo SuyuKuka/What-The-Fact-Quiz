@@ -1,5 +1,4 @@
-
-package fr.uparis.chenliu.projet
+package fr.uparis.chenliu.projet.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,15 +11,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
+import fr.uparis.chenliu.projet.ui.ui.theme.ProjetTheme
 
-class MainActivity : ComponentActivity() {
+class MainMenuActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             ProjetTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
