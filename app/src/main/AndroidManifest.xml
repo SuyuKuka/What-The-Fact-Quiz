@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet">
         <activity
+            android:name=".ui.QuizzActivity"
+            android:exported="false"
+            android:label="@string/title_activity_quizz"
+            android:theme="@style/Theme.Projet" />
+        <activity
             android:name=".ui.MainMenuActivity"
             android:exported="false"
             android:label="@string/title_activity_main_menu"
