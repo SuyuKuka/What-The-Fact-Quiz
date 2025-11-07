@@ -8,5 +8,7 @@ data class UsersEntity (
     @PrimaryKey(autoGenerate = true)
     val userId: Int = 0,
     val username: String,
-    val subscribe: Boolean
+    val subscribe: Boolean,
+    val games: Int,
+    val wins: Int
 )
