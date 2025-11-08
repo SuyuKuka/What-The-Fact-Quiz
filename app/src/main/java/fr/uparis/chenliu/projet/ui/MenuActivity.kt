@@ -63,7 +63,6 @@ import fr.uparis.chenliu.projet.navigation.Screen
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 import java.time.LocalDateTime
-import fr.uparis.chenliu.projet.ui.viewmodel.MainMenuViewModel
 import kotlin.jvm.java
 
 class MainMenuActivity : ComponentActivity() {
