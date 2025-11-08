@@ -61,6 +61,8 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import fr.uparis.chenliu.projet.navigation.Screen
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
+import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
+import java.time.LocalDateTime
 import fr.uparis.chenliu.projet.ui.viewmodel.MainMenuViewModel
 import kotlin.jvm.java
 
@@ -84,7 +86,7 @@ class MainMenuActivity : ComponentActivity() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @Composable
-fun MyScreenMainMenu(username: String, model: MainMenuViewModel = viewModel()) {
+fun MyScreenMainMenu(username: String, model: MenuViewModel = viewModel()) {
     val backStack = rememberNavBackStack(Screen.Home)
     val snack = remember { SnackbarHostState() }
 
@@ -123,7 +125,7 @@ fun MonTopBar() = TopAppBar(
 )
 
 @Composable
-fun MonBottomBar(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
+fun MonBottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     val current = backStack.last()
     var alert by remember { mutableStateOf(false) }
     var destination by remember { mutableStateOf<Screen?>(null) }
@@ -166,7 +168,7 @@ fun MonBottomBar(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
                 leave()
             },
             title = "Changements Non Sauvegardés",
-            "Des modifications n'ont pas été enregistrées. Voulez-vous les conserver?"
+            text = "Des modifications n'ont pas été enregistrées. Voulez-vous les conserver?"
         )
     }
 }
@@ -176,7 +178,14 @@ fun MonBottomBar(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @Composable
-fun ProfileScreen(model: MainMenuViewModel, username: String) {
+fun ProfileScreen(model: MenuViewModel, username: String) {
+    val subscription = model.subscription.value
+    val duration = model.duration.value
+    val day = LocalDateTime.now().dayOfMonth.toString()
+    val month = LocalDateTime.now().month.value
+    val year = LocalDateTime.now().year.toString()
+
+
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = model.translateBackground()),
@@ -185,14 +194,16 @@ fun ProfileScreen(model: MainMenuViewModel, username: String) {
             contentScale = ContentScale.Crop
         )
         Column {
-            Text("PROFILE")
-            Text("Hello $username")
+            Text(text = "PROFILE")
+            Text(text = "Hello $username")
+            Text(text = "Abonné : $subscription")
+            Text(text = "Temps restant : $day/$month/$year -> $duration")
         }
     }
 }
 
 @Composable
-fun LeaderboardScreen(model: MainMenuViewModel) {
+fun LeaderboardScreen(model: MenuViewModel) {
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = model.translateBackground()),
@@ -200,12 +211,12 @@ fun LeaderboardScreen(model: MainMenuViewModel) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Text("LEADERBOARD")
+        Text(text = "LEADERBOARD")
     }
 }
 
 @Composable
-fun HomeScreen(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
+fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = model.translateBackground()),
@@ -285,7 +296,7 @@ fun HomeScreen(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
 }
 
 @Composable
-fun ShopScreen(model: MainMenuViewModel) {
+fun ShopScreen(model: MenuViewModel) {
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = model.translateBackground()),
@@ -293,12 +304,30 @@ fun ShopScreen(model: MainMenuViewModel) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Text("SHOP")
+        Text(text = "SHOP")
+        Column {
+            Row {
+                Button(onClick = { manageSubscription(model = model, isMonthly = true)}) {
+                    Text(text = "1.99€/mois")
+                }
+                Button(onClick = { manageSubscription(model = model, isMonthly = false) }) {
+                    Text(text = "9.99€/an")
+                }
+            }
+        }
+    }
+}
+
+fun manageSubscription(model: MenuViewModel,isMonthly: Boolean) {
+    if (model.subscription.value) {
+        model.extendSubscription(isMonthly = isMonthly)
+    } else {
+        model.buySubscription(isMonthly = isMonthly)
     }
 }
 
 @Composable
-fun SettingsScreen(model: MainMenuViewModel) {
+fun SettingsScreen(model: MenuViewModel) {
     val update = { model.updateSettings(); model.saved.value = true }
     val selectedBackground = model.background
     val selectedFont = model.font
@@ -311,23 +340,23 @@ fun SettingsScreen(model: MainMenuViewModel) {
             contentScale = ContentScale.Crop
         )
         Column {
-            Text("Paramètre")
+            Text(text = "Paramètre")
             Row {
-                Text("Musique")
+                Text(text = "Musique")
                 SliderManage(value = model.music.floatValue) {
                     model.music.floatValue = it
                     model.saved.value = false
                 }
             }
             Row {
-                Text("Son")
+                Text(text = "Son")
                 SliderManage(value = model.sound.floatValue) {
                     model.sound.floatValue = it
                     model.saved.value = false
                 }
             }
             Row {
-                Text("Fond")
+                Text(text = "Fond")
                 ChoiceField(
                     label = "Fond",
                     choice = selectedBackground.intValue,
@@ -338,7 +367,7 @@ fun SettingsScreen(model: MainMenuViewModel) {
                 )
             }
             Row {
-                Text("Police")
+                Text(text = "Police")
                 ChoiceField(
                     label = "Police",
                     choice = selectedFont.intValue,
@@ -347,7 +376,7 @@ fun SettingsScreen(model: MainMenuViewModel) {
                 )
             }
             Row {
-                Text("Domaine préféré")
+                Text(text = "Domaine préféré")
                 WriteField(
                     value = model.preferredTopics.value,
                     onValueChange = {
@@ -360,7 +389,7 @@ fun SettingsScreen(model: MainMenuViewModel) {
                     onlyNb = false
                 )
             }
-            Button(onClick = { update() }) { Text("Enregistrer") }
+            Button(onClick = { update() }) { Text(text = "Enregistrer") }
         }
     }
 }
@@ -376,14 +405,14 @@ fun SliderManage(value: Float, onValueChange: (Float) -> Unit) {
             value = value,
             onValueChange = onValueChange
         )
-        Text(("%.0f / 100".format(value * 100)))
+        Text(text = ("%.0f / 100".format(value * 100)))
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChoiceField(label: String, choice: Int, onValueChange: (Int) -> Unit, choiceList: List<String>) {
-    var expanded by remember { mutableStateOf(false) }
+    var expanded by remember { mutableStateOf(value = false) }
     val text = choiceList[choice]
 
     ExposedDropdownMenuBox(
@@ -395,7 +424,7 @@ fun ChoiceField(label: String, choice: Int, onValueChange: (Int) -> Unit, choice
             readOnly = true,
             value = text,
             onValueChange = { },
-            label = { Text(label + expanded) },
+            label = { Text(text = label + expanded) },
             trailingIcon = {
                 ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
             }
@@ -410,7 +439,7 @@ fun ChoiceField(label: String, choice: Int, onValueChange: (Int) -> Unit, choice
                         onValueChange(index)
                         expanded = false
                     },
-                    text = { Text(c) }
+                    text = { Text(text = c) }
                 )
             }
         }
@@ -421,16 +450,16 @@ fun ChoiceField(label: String, choice: Int, onValueChange: (Int) -> Unit, choice
 fun Alert(onConfirm: () -> Unit, onCancel: () -> Unit, title: String, text: String) {
     AlertDialog(
         onDismissRequest = onCancel,
-        title = { Text(title) },
+        title = { Text(text = title) },
         text = { Text(text) },
         confirmButton = {
             Button(onClick = onConfirm) {
-                Text("Oui")
+                Text(text = "Oui")
             }
         },
         dismissButton = {
             Button(onClick = onCancel) {
-                Text("Non")
+                Text(text = "Non")
             }
         }
     )

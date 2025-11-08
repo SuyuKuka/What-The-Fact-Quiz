@@ -34,6 +34,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MainViewModel
+import java.time.LocalDateTime
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
 class MainActivity : ComponentActivity() {
@@ -59,7 +60,19 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel(), quizzmo
         LoadingScreen()
     } else {
         if (exist) {
-
+            if (model.duration.value != "") {
+                val duration = model.duration.value.split("/")
+                val dayToday = LocalDateTime.now().dayOfMonth
+                val monthToday = LocalDateTime.now().month.value
+                val yearToday = LocalDateTime.now().year
+                if (duration[2].toInt() <= yearToday) {
+                    if (duration[1].toInt() < monthToday) {
+                        if (duration[0].toInt() <= dayToday) {
+                            model.expireSubscription()
+                        }
+                    }
+                }
+            }
             intent.putExtra("username", username)
             context.startActivity(intent)
             activity.finish()
@@ -74,7 +87,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel(), quizzmo
                     fontSize = 25.sp,
                     onDone = { model.insertUsers() }
                 )
-                Button(onClick = {quizzmodel.initQuizz(context); model.insertUsers() } ) { Text("Continuer") }
+                Button(onClick = {quizzmodel.initQuizz(context); model.insertUsers() } ) { Text(text = "Continuer") }
             }
         }
     }
@@ -116,21 +129,23 @@ fun LoadingScreen() {
         )
 
         Column(
-            modifier = Modifier.fillMaxSize().align(Alignment.Center),
+            modifier = Modifier
+                .fillMaxSize()
+                .align(Alignment.Center),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(modifier = Modifier.weight(3f))
+            Spacer(modifier = Modifier.weight(weight = 3f))
             CircularProgressIndicator(
                 color = Color.White,
-                modifier = Modifier.size(70.dp)
+                modifier = Modifier.size(size = 70.dp)
             )
             Text(
-                "Chargement...",
+                text = "Chargement...",
                 color = Color.White,
                 fontSize = 20.sp,
                 modifier = Modifier.padding(top = 20.dp)
             )
-            Spacer(modifier = Modifier.weight(0.5f))
+            Spacer(modifier = Modifier.weight(weight = 0.5f))
         }
     }
 }
