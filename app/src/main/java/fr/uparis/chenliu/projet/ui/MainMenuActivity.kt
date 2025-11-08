@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -28,6 +29,7 @@ import androidx.compose.material3.TextField
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -200,6 +202,11 @@ fun HomeScreen(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
         )
 
         Column {
+            // temporaire
+            val context = LocalContext.current
+            val intent = Intent(context, QuizzActivity::class.java)
+            Button(onClick = { context.startActivity(intent) } ) { Text("QUIZZ (temporaire)") }
+            //
             Text("HOME")
             Button(onClick = {
                 if (backStack.last() != Screen.Level) backStack += Screen.Level
