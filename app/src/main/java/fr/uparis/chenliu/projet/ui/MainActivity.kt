@@ -58,7 +58,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
         LoadingScreen()
     } else {
         if (exist) {
-            model.initQuizz(context)
+
             intent.putExtra("username", username)
             context.startActivity(intent)
             activity.finish()
@@ -66,7 +66,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
             Column {
                 Text(text = "WTF (What The Fact) Quiz")
                 WriteField(username, { model.username.value = it }, "Entrer votre pseudo", modifier = Modifier.padding(start = 10.dp), 25.sp, { model.insertUsers(); })
-                Button(onClick = { model.insertUsers() } ) { Text("Continuer") }
+                Button(onClick = { model.initQuizz(context); model.insertUsers() } ) { Text("Continuer") }
 
                 Button(onClick = { model.deleteAllUsers() }) { Text("Supprimer les données") }
             }

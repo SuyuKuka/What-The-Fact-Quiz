@@ -2,6 +2,9 @@ package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
 import android.content.Context
+import android.util.Log
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -25,6 +28,16 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     var username = mutableStateOf("")
     var loading = mutableStateOf(true)
     var exist = mutableStateOf(false)
+
+    var currentQuestion = QuestionEntity(-1,-1,-1,"", null)
+
+    var question = mutableStateOf("")
+    val answers: Array<MutableState<String>> = Array(5) { mutableStateOf("") }
+    val answersValidity: Array<MutableState<Boolean>> = Array(5) { mutableStateOf(false) }
+
+    var validity = mutableStateOf(false)
+
+
 
     init {
         viewModelScope.launch {
@@ -80,4 +93,30 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
             }
         }
     }
+
+    fun getQuestionAndAnswer(subject: Int, difficulty: Int){
+        viewModelScope.launch {
+            currentQuestion = db.quizzDao().getQuestion(subject, difficulty)
+
+            // question
+            question.value = currentQuestion.question
+
+            // responses
+            val res = db.quizzDao().getAnswersForQuestion(currentQuestion.idQuestion)
+            for (i in 0..res.size-1) {
+                answers[i].value = res[i]
+            }
+            val resId = db.quizzDao().getAnswersValidity(currentQuestion.idQuestion)
+            for (i in 0..res.size-1) {
+                answersValidity[i].value = resId[i]
+            }
+        }
+    }
+
+//    fun checkAnswer(id: Int) {
+//        viewModelScope.launch {
+//            validity.value = db.quizzDao().checkValidity(id)
+//        }
+//    }
+
 }
