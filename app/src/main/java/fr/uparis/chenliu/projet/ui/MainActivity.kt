@@ -64,7 +64,14 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
         } else {
             Column {
                 Text(text = "WTF (What The Fact) Quiz")
-                WriteField(username, { model.username.value = it }, "Entrer votre pseudo", modifier = Modifier.padding(start = 10.dp), 25.sp, { model.insertUsers(); })
+                WriteField(
+                    value = username,
+                    onValueChange = { model.username.value = it },
+                    label = "Entrer votre pseudo",
+                    modifier = Modifier.padding(start = 10.dp),
+                    fontSize = 25.sp,
+                    onDone = { model.insertUsers() }
+                )
                 Button(onClick = { model.insertUsers() } ) { Text("Continuer") }
                 Button(onClick = { model.deleteAllUsers() }) { Text("Supprimer les données") }
             }
