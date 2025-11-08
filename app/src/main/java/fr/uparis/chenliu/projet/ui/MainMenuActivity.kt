@@ -202,6 +202,11 @@ fun HomeScreen(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
         )
 
         Column {
+            // temporaire
+            val context = LocalContext.current
+            val intent = Intent(context, QuizzActivity::class.java)
+            Button(onClick = { context.startActivity(intent) } ) { Text("QUIZZ (temporaire)") }
+            //
             Text("HOME")
             Button(onClick = {
                 if (backStack.last() != Screen.Level) backStack += Screen.Level

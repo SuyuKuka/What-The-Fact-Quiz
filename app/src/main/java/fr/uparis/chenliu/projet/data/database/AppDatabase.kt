@@ -15,7 +15,7 @@ import fr.uparis.chenliu.projet.data.entity.AnswerEntity
 import fr.uparis.chenliu.projet.data.entity.QuestionEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 
-@Database(entities = [UsersEntity::class, SettingsEntity::class, AnswerEntity::class, QuestionEntity::class], version = 2)
+@Database(entities = [UsersEntity::class, SettingsEntity::class, AnswerEntity::class, QuestionEntity::class], version = 3)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun usersDao(): UsersDao
     abstract fun settingsDao(): SettingsDao
