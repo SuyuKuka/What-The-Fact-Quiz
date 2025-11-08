@@ -57,9 +57,9 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     username.value = "Joueur"
                 }
 
-                db.usersDao().insertUser(UsersEntity(username = username.value, subscribe = false, games = 0, wins = 0))
+                db.usersDao().insertUser(UsersEntity(username = username.value.trim(), subscribe = false, games = 0, wins = 0))
                 user.value = db.usersDao().getUser()
-                db.settingsDao().init(SettingsEntity(user.value!!.userId, 100, 100, 0, "sans-serif", ""))
+                db.settingsDao().init(SettingsEntity(user.value!!.userId, 1f, 1f, 0, 0, ""))
                 exist.value = true
                 loading.value = false
             }

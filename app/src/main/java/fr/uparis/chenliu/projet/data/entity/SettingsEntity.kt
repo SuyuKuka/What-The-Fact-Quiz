@@ -17,9 +17,9 @@ import androidx.room.PrimaryKey
 data class SettingsEntity(
     @PrimaryKey
     val userId: Int,
-    val sound: Int,
-    val music: Int,
-    val background: Long,
-    val font: String,
+    val music: Float,
+    val sound: Float,
+    val background: Int,
+    val font: Int,
     val preferredTopics: String
 )
