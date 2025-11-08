@@ -39,6 +39,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
@@ -48,6 +49,7 @@ import androidx.navigation3.ui.NavDisplay
 import fr.uparis.chenliu.projet.navigation.Screen
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MainMenuViewModel
+import kotlin.jvm.java
 
 class MainMenuActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -202,11 +204,6 @@ fun HomeScreen(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
         )
 
         Column {
-            // temporaire
-            val context = LocalContext.current
-            val intent = Intent(context, QuizzActivity::class.java)
-            Button(onClick = { context.startActivity(intent) } ) { Text("QUIZZ (temporaire)") }
-            //
             Text("HOME")
             Button(onClick = {
                 if (backStack.last() != Screen.Level) backStack += Screen.Level
@@ -321,7 +318,11 @@ fun SelectLevel(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
                     if (backStack.last() != Screen.Home)
                         backStack += Screen.Home
                 }) { Text("Retour") }
-                Button(onClick = { /* START QUIZ ACTIVITY */ }) { Text("Jouer") }
+
+                val context = LocalContext.current
+                val intent = Intent(context, QuizzActivity::class.java)
+                intent.putExtra("difficulty", selected.value)
+                Button(onClick = { context.startActivity(intent)  }) { Text("Jouer") }
             }
         }
     }

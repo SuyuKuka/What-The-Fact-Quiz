@@ -1,6 +1,7 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MainViewModel
+import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,16 +26,19 @@ class QuizzActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ProjetTheme {
-                MyQuizzScreen()
+
+                val difficulty = intent.getStringExtra("difficulty")!!
+                MyQuizzScreen(difficulty)
             }
         }
     }
 }
 
 @Composable
-fun MyQuizzScreen(model: MainViewModel = viewModel()){
-    model.getQuestionAndAnswer(1,1) // todo choisir selon la diff, et la matiere
+fun MyQuizzScreen(diff: String, model: QuizzViewModel = viewModel()){
+
     val question = model.question.value
+    model.getQuestionAndAnswer(1,diff)
     val answers = model.answers
     val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
     val good = Toast.makeText(LocalContext.current, "NICE JOB", Toast.LENGTH_SHORT)
