@@ -35,6 +35,7 @@ import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MainViewModel
 import java.time.LocalDateTime
+import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +49,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
+fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel(), quizzmodel: QuizzViewModel = viewModel()) {
     val context = LocalContext.current
     val intent = Intent(context, MainMenuActivity::class.java)
     val username = model.username.value
@@ -72,7 +73,6 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                     }
                 }
             }
-            model.initQuizz(c = context)
             intent.putExtra("username", username)
             context.startActivity(intent)
             activity.finish()
@@ -87,7 +87,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                     fontSize = 25.sp,
                     onDone = { model.insertUsers() }
                 )
-                Button(onClick = { model.insertUsers() } ) { Text(text = "Continuer") }
+                Button(onClick = {quizzmodel.initQuizz(context); model.insertUsers() } ) { Text(text = "Continuer") }
             }
         }
     }

@@ -5,13 +5,21 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -35,8 +43,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -49,6 +60,7 @@ import fr.uparis.chenliu.projet.navigation.Screen
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 import java.time.LocalDateTime
+import kotlin.jvm.java
 
 class MainMenuActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,13 +99,11 @@ fun MyScreenMainMenu(username: String, model: MenuViewModel = viewModel()) {
             backStack = backStack,
             modifier = Modifier.padding(paddingValues = pad),
             entryProvider = entryProvider{
-                entry<Screen.Profile> { ProfileScreen(model = model, username = username)}
+                entry<Screen.Profile> { ProfileScreen(model = model)}
                 entry<Screen.Leaderboard> { LeaderboardScreen(model = model) }
-                entry<Screen.Home> { HomeScreen(model = model, backStack = backStack)}
+                entry<Screen.Home> { HomeScreen(model = model)}
                 entry<Screen.Shop> { ShopScreen(model = model) }
                 entry<Screen.Settings> { SettingsScreen(model = model) }
-
-                entry<Screen.Level> { SelectLevel(model = model, backStack) }
             }
         )
     }
@@ -164,7 +174,8 @@ fun MonBottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @Composable
-fun ProfileScreen(model: MenuViewModel, username: String) {
+fun ProfileScreen(model: MenuViewModel) {
+    val username = model.username.value
     val subscription = model.subscription.value
     val duration = model.duration.value
     val day = LocalDateTime.now().dayOfMonth.toString()
@@ -181,7 +192,7 @@ fun ProfileScreen(model: MenuViewModel, username: String) {
         )
         Column {
             Text(text = "PROFILE")
-            Text(text = "Hello $username")
+            Text(text = "Hello ${username}")
             Text(text = "Abonné : $subscription")
             Text(text = "Temps restant : $day/$month/$year -> $duration")
         }
@@ -202,7 +213,19 @@ fun LeaderboardScreen(model: MenuViewModel) {
 }
 
 @Composable
-fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
+fun HomeScreen(model: MenuViewModel) {
+    // todo: load depuis la db
+    val difficulty = listOf("Facile", "Moyen", "Difficile")
+    val subject = listOf("Maths", "Histoire", "Géographie", "Science")
+
+
+    val selectedDiff = remember { mutableStateOf(difficulty[0]) }
+    val selectedSubj = remember { mutableStateOf(subject[0]) }
+    val context = LocalContext.current
+    val intent = Intent(context, QuizzActivity::class.java)
+    intent.putExtra("difficulty", selectedDiff.value)
+    intent.putExtra("subject", selectedSubj.value)
+
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = model.translateBackground()),
@@ -210,18 +233,61 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-
         Column {
-            // temporaire
-            val context = LocalContext.current
-            val intent = Intent(context, QuizzActivity::class.java)
-            Button(onClick = { context.startActivity(intent) } ) { Text(text = "QUIZZ (temporaire)") }
-            //
-            Text(text = "HOME")
-            Button(onClick = {
-                if (backStack.last() != Screen.Level) backStack += Screen.Level
-            }) { Text(text = "Choisir la difficulté") }
+            Row(modifier = Modifier.fillMaxWidth()) {
+                difficulty.forEach { diff ->
+                    Button(
+                        onClick = { selectedDiff.value = diff },
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(4.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = if (selectedDiff.value == diff) Color.Blue else Color.Gray,
+                            contentColor = Color.White
+                        )
+                    ) {
+                        Text(text = diff)
+                    }
+                }
+            }
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(2),
+                contentPadding = PaddingValues(8.dp),
+                modifier = Modifier
+                    .weight(1f)
+            ) {
+                items(subject) { subj ->
+                    Button(
+                        onClick = { selectedSubj.value = subj  },
+                        modifier = Modifier
+                            .aspectRatio(1f)
+                            .padding(8.dp)
+                            .fillMaxWidth(),
+                        shape = RectangleShape,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = if (selectedSubj.value == subj) Color.Blue else Color.Gray,
+                            contentColor = Color.White
+                        )
+                    ) {
+                        Text("QUIZZ DE $subj", textAlign = TextAlign.Center)
+                    }
+                }
+            }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Button(
+                    onClick = { context.startActivity(intent) },
+                    modifier = Modifier.fillMaxWidth(0.8f)
+                ) {
+                    Text("GOGOGOGOGO")
+                }
+            }
         }
+
     }
 }
 
@@ -320,37 +386,6 @@ fun SettingsScreen(model: MenuViewModel) {
                 )
             }
             Button(onClick = { update() }) { Text(text = "Enregistrer") }
-        }
-    }
-}
-
-@Composable
-fun SelectLevel(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
-    val difficulty = listOf("Facile", "Moyen", "Difficile", "Expert")
-    val selected = remember { mutableStateOf(difficulty[0]) }
-
-    Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = model.translateBackground()),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
-        Column {
-            Text(text = "SELECT LEVEL")
-            Row {
-                Button(onClick = { selected.value = difficulty[0] }) { Text(text = "Facile") }
-                Button(onClick = { selected.value = difficulty[1] }) { Text(text = "Moyen") }
-                Button(onClick = { selected.value = difficulty[2] }) { Text(text = "Difficile") }
-            }
-            Button(onClick = { selected.value = difficulty[3] }) { Text(text = "Expert") }
-            Row {
-                Button(onClick = {
-                    if (backStack.last() != Screen.Home)
-                        backStack += Screen.Home
-                }) { Text(text = "Retour") }
-                Button(onClick = { /* START QUIZ ACTIVITY */ }) { Text(text = "Jouer") }
-            }
         }
     }
 }

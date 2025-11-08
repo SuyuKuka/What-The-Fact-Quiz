@@ -1,26 +1,30 @@
 {
   "question": [
-    { "subject": 1, "difficulty": 1, "question": "1 + 1 = ?", "resources": null },
-    { "subject": 1, "difficulty": 1, "question": "5 + 3 = ?", "resources": null },
-    { "subject": 1, "difficulty": 1, "question": "2 + 2 = ?", "resources": null },
-    { "subject": 1, "difficulty": 1, "question": "3 + 4 = ?", "resources": null },
-    { "subject": 1, "difficulty": 2, "question": "4.5 + 2.3 = ?", "resources": null },
-    { "subject": 1, "difficulty": 2, "question": "7.2 + 5.8 = ?", "resources": null },
-    { "subject": 1, "difficulty": 2, "question": "9.6 - 4.1 = ?", "resources": null },
-    { "subject": 1, "difficulty": 2, "question": "6.7 - 3.2 = ?", "resources": null },
-    { "subject": 1, "difficulty": 3, "question": "6 × 7 = ?", "resources": null },
-    { "subject": 1, "difficulty": 3, "question": "56 ÷ 8 = ?", "resources": null },
-    { "subject": 1, "difficulty": 3, "question": "9 × 9 = ?", "resources": null },
-    { "subject": 1, "difficulty": 3, "question": "72 ÷ 6 = ?", "resources": null },
-    { "subject": 2, "difficulty": 1, "question": "Qui a découvert l’Amérique ?", "resources": null },
-    { "subject": 2, "difficulty": 1, "question": "En quelle année a eu lieu la Révolution française ?", "resources": null },
-    { "subject": 2, "difficulty": 2, "question": "Qui était le premier président des États-Unis ?", "resources": null },
-    { "subject": 2, "difficulty": 2, "question": "Quel empire était dirigé par Napoléon ?", "resources": null },
-    { "subject": 2, "difficulty": 2, "question": "Qui a signé l’armistice mettant fin à la Première Guerre mondiale ?", "resources": null },
-    { "subject": 2, "difficulty": 3, "question": "Quelle bataille est considérée comme le tournant de la Seconde Guerre mondiale en Europe ?", "resources": null },
-    { "subject": 2, "difficulty": 3, "question": "En quelle année l’Empire romain d’Occident s’est-il effondré ?", "resources": null },
-    { "subject": 2, "difficulty": 3, "question": "Quel traité a mis fin à la guerre de 30 ans en 1648 ?", "resources": null }
+    { "subject": "Maths", "difficulty": "Facile", "question": "1 + 1 = ?", "resources": null },
+    { "subject": "Maths", "difficulty": "Facile", "question": "5 + 3 = ?", "resources": null },
+    { "subject": "Maths", "difficulty": "Facile", "question": "2 + 2 = ?", "resources": null },
+    { "subject": "Maths", "difficulty": "Facile", "question": "3 + 4 = ?", "resources": null },
 
+    { "subject": "Maths", "difficulty": "Moyen", "question": "4.5 + 2.3 = ?", "resources": null },
+    { "subject": "Maths", "difficulty": "Moyen", "question": "7.2 + 5.8 = ?", "resources": null },
+    { "subject": "Maths", "difficulty": "Moyen", "question": "9.6 - 4.1 = ?", "resources": null },
+    { "subject": "Maths", "difficulty": "Moyen", "question": "6.7 - 3.2 = ?", "resources": null },
+
+    { "subject": "Maths", "difficulty": "Difficile", "question": "6 × 7 = ?", "resources": null },
+    { "subject": "Maths", "difficulty": "Difficile", "question": "56 ÷ 8 = ?", "resources": null },
+    { "subject": "Maths", "difficulty": "Difficile", "question": "9 × 9 = ?", "resources": null },
+    { "subject": "Maths", "difficulty": "Difficile", "question": "72 ÷ 6 = ?", "resources": null },
+
+    { "subject": "Histoire", "difficulty": "Facile", "question": "Qui a découvert l’Amérique ?", "resources": null },
+    { "subject": "Histoire", "difficulty": "Facile", "question": "En quelle année a eu lieu la Révolution française ?", "resources": null },
+
+    { "subject": "Histoire", "difficulty": "Moyen", "question": "Qui était le premier président des États-Unis ?", "resources": null },
+    { "subject": "Histoire", "difficulty": "Moyen", "question": "Quel empire était dirigé par Napoléon ?", "resources": null },
+    { "subject": "Histoire", "difficulty": "Moyen", "question": "Qui a signé l’armistice mettant fin à la Première Guerre mondiale ?", "resources": null },
+
+    { "subject": "Histoire", "difficulty": "Difficile", "question": "Quelle bataille est considérée comme le tournant de la Seconde Guerre mondiale en Europe ?", "resources": null },
+    { "subject": "Histoire", "difficulty": "Difficile", "question": "En quelle année l’Empire romain d’Occident s’est-il effondré ?", "resources": null },
+    { "subject": "Histoire", "difficulty": "Difficile", "question": "Quel traité a mis fin à la guerre de 30 ans en 1648 ?", "resources": null }
   ],
   "answer": [
     { "idQuestion": 1, "answer": "2", "validity": true, "position": null },

@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 data class QuestionEntity(
     @PrimaryKey(autoGenerate = true)
     val idQuestion: Int = 0,
-    val subject: Int,
-    val difficulty: Int,
+    val subject: String,
+    val difficulty: String,
     val question: String,
     val resources: String?
 )
