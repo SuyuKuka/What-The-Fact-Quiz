@@ -11,11 +11,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -52,7 +50,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
@@ -102,9 +99,9 @@ fun MyScreenMainMenu(username: String, model: MenuViewModel = viewModel()) {
             backStack = backStack,
             modifier = Modifier.padding(paddingValues = pad),
             entryProvider = entryProvider{
-                entry<Screen.Profile> { ProfileScreen(model = model, username = username)}
+                entry<Screen.Profile> { ProfileScreen(model = model)}
                 entry<Screen.Leaderboard> { LeaderboardScreen(model = model) }
-                entry<Screen.Home> { HomeScreen(model = model, backStack = backStack)}
+                entry<Screen.Home> { HomeScreen(model = model)}
                 entry<Screen.Shop> { ShopScreen(model = model) }
                 entry<Screen.Settings> { SettingsScreen(model = model) }
             }
@@ -177,7 +174,8 @@ fun MonBottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @Composable
-fun ProfileScreen(model: MenuViewModel, username: String) {
+fun ProfileScreen(model: MenuViewModel) {
+    val username = model.username.value
     val subscription = model.subscription.value
     val duration = model.duration.value
     val day = LocalDateTime.now().dayOfMonth.toString()
@@ -194,7 +192,7 @@ fun ProfileScreen(model: MenuViewModel, username: String) {
         )
         Column {
             Text(text = "PROFILE")
-            Text(text = "Hello $username")
+            Text(text = "Hello ${username}")
             Text(text = "Abonné : $subscription")
             Text(text = "Temps restant : $day/$month/$year -> $duration")
         }
@@ -215,7 +213,19 @@ fun LeaderboardScreen(model: MenuViewModel) {
 }
 
 @Composable
-fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
+fun HomeScreen(model: MenuViewModel) {
+    // todo: load depuis la db
+    val difficulty = listOf("Facile", "Moyen", "Difficile")
+    val subject = listOf("Maths", "Histoire", "Géographie", "Science")
+
+
+    val selectedDiff = remember { mutableStateOf(difficulty[0]) }
+    val selectedSubj = remember { mutableStateOf(subject[0]) }
+    val context = LocalContext.current
+    val intent = Intent(context, QuizzActivity::class.java)
+    intent.putExtra("difficulty", selectedDiff.value)
+    intent.putExtra("subject", selectedSubj.value)
+
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = model.translateBackground()),
@@ -223,19 +233,6 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-
-        // todo: load depuis la db
-        val difficulty = listOf("Facile", "Moyen", "Difficile")
-        val subject = listOf("Maths", "Histoire", "Géographie", "Science")
-
-
-        val selectedDiff = remember { mutableStateOf(difficulty[0]) }
-        val selectedSubj = remember { mutableStateOf(subject[0]) }
-        val context = LocalContext.current
-        val intent = Intent(context, QuizzActivity::class.java)
-        intent.putExtra("difficulty", selectedDiff.value)
-        intent.putExtra("subject", selectedSubj.value)
-
         Column {
             Row(modifier = Modifier.fillMaxWidth()) {
                 difficulty.forEach { diff ->
@@ -284,7 +281,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             ) {
                 Button(
                     onClick = { context.startActivity(intent) },
-                    modifier = Modifier.fillMaxWidth(0.8f) // un peu plus étroit
+                    modifier = Modifier.fillMaxWidth(0.8f)
                 ) {
                     Text("GOGOGOGOGO")
                 }

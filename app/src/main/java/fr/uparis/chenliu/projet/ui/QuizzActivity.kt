@@ -1,7 +1,6 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,9 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
-import fr.uparis.chenliu.projet.ui.viewmodel.MainViewModel
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
-import javax.security.auth.Subject
 
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +24,6 @@ class QuizzActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ProjetTheme {
-
                 val difficulty = intent.getStringExtra("difficulty")!!
                 val subject = intent.getStringExtra("subject")!!
                 MyQuizzScreen(difficulty, subject)
@@ -38,7 +34,6 @@ class QuizzActivity : ComponentActivity() {
 
 @Composable
 fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel()){
-
     val question = model.question.value
     model.getQuestionAndAnswer(subj,diff)
     val answers = model.answers
