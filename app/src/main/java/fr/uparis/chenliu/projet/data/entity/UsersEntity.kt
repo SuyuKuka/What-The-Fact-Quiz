@@ -9,6 +9,7 @@ data class UsersEntity (
     val userId: Int = 0,
     val username: String,
     val subscribe: Boolean,
+    val duration: String,
     val games: Int,
     val wins: Int
 )

@@ -25,6 +25,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     private var user = mutableStateOf<UsersEntity?>(null)
 
     var username = mutableStateOf("")
+    val duration = mutableStateOf("")
     var loading = mutableStateOf(true)
     var exist = mutableStateOf(false)
 
@@ -43,6 +44,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
             } else {
                 exist.value = true
                 username.value = user.value!!.username
+                duration.value = user.value!!.duration
             }
             delay(3000)
             loading.value = false
@@ -57,7 +59,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     username.value = "Joueur"
                 }
 
-                db.usersDao().insertUser(UsersEntity(username = username.value.trim(), subscribe = false, games = 0, wins = 0))
+                db.usersDao().insertUser(UsersEntity(username = username.value.trim(), subscribe = false, duration = "", games = 0, wins = 0))
                 user.value = db.usersDao().getUser()
                 db.settingsDao().init(SettingsEntity(user.value!!.userId, 1f, 1f, 0, 0, ""))
                 exist.value = true
@@ -66,11 +68,13 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun deleteAllUsers() {
+    fun expireSubscription() {
         viewModelScope.launch {
-            db.usersDao().deleteAllUsers()
+            db.usersDao().updateSubscribe(userId = user.value!!.userId, subscribe = false)
+            db.usersDao().updateDuration(userId = user.value!!.userId, duration = "")
         }
     }
+
     fun initQuizz(c:Context){
         viewModelScope.launch {
             val inputStream = c.resources.openRawResource(R.raw.quizz)

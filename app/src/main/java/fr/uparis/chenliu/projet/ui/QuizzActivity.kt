@@ -44,12 +44,20 @@ fun MyQuizzScreen(model: MainViewModel = viewModel()){
                 Text(text = question)
             }
             Row {
-                Button(onClick = { if (answers[0].value.validity) { good.show() } else { bad.show()} }) { Text(text = answers[0].value.answer) }
-                Button(onClick = { if (answers[1].value.validity) { good.show() } else { bad.show()} }) { Text(text = answers[1].value.answer) }
+                Button(onClick = { if (answers[0].value.validity) { good.show() } else { bad.show()} }) {
+                    Text(text = answers[0].value.answer)
+                }
+                Button(onClick = { if (answers[1].value.validity) { good.show() } else { bad.show()} }) {
+                    Text(text = answers[1].value.answer)
+                }
             }
             Row {
-                Button(onClick = { if (answers[2].value.validity) { good.show() } else { bad.show()} }) { Text(text = answers[2].value.answer) }
-                Button(onClick = { if (answers[3].value.validity) { good.show() } else { bad.show()} }) { Text(text = answers[3].value.answer) }
+                Button(onClick = { if (answers[2].value.validity) { good.show() } else { bad.show()} }) {
+                    Text(text = answers[2].value.answer)
+                }
+                Button(onClick = { if (answers[3].value.validity) { good.show() } else { bad.show()} }) {
+                    Text(text = answers[3].value.answer)
+                }
             }
         }
     }

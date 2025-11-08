@@ -17,6 +17,12 @@ interface UsersDao {
     @Query("SELECT * FROM UsersEntity LIMIT 1")
     suspend fun getUser(): UsersEntity?
 
+    @Query("UPDATE UsersEntity SET subscribe = :subscribe WHERE userId = :userId")
+    suspend fun updateSubscribe(userId: Int, subscribe: Boolean)
+
+    @Query("UPDATE UsersEntity SET duration = :duration WHERE userId = :userId")
+    suspend fun updateDuration(userId: Int, duration: String)
+
     @Query("DELETE FROM UsersEntity")
     suspend fun deleteAllUsers()
 
