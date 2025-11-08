@@ -58,7 +58,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
         LoadingScreen()
     } else {
         if (exist) {
-
+            model.initQuizz(context)
             intent.putExtra("username", username)
             context.startActivity(intent)
             activity.finish()
@@ -73,8 +73,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                     fontSize = 25.sp,
                     onDone = { model.insertUsers() }
                 )
-                Button(onClick = { model.initQuizz(context); model.insertUsers() } ) { Text("Continuer") }
-                Button(onClick = { model.deleteAllUsers() }) { Text("Supprimer les données") }
+                Button(onClick = { model.insertUsers() } ) { Text("Continuer") }
             }
         }
     }
@@ -116,16 +115,13 @@ fun LoadingScreen() {
         )
 
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .align(Alignment.Center),
+            modifier = Modifier.fillMaxSize().align(Alignment.Center),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Spacer(modifier = Modifier.weight(3f))
             CircularProgressIndicator(
                 color = Color.White,
-                modifier = Modifier
-                    .size(70.dp)
+                modifier = Modifier.size(70.dp)
             )
             Text(
                 "Chargement...",
