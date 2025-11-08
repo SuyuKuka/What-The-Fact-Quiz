@@ -58,6 +58,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
         LoadingScreen()
     } else {
         if (exist) {
+            model.initQuizz(context)
             intent.putExtra("username", username)
             context.startActivity(intent)
             activity.finish()
