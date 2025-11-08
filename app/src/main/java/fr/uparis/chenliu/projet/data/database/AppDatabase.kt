@@ -4,18 +4,18 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import fr.uparis.chenliu.projet.data.dao.QuizzDao
 
 // Import DAO et Entity
 import fr.uparis.chenliu.projet.data.dao.UsersDao
-import fr.uparis.chenliu.projet.data.entity.UsersEntity
-
 import fr.uparis.chenliu.projet.data.dao.SettingsDao
+import fr.uparis.chenliu.projet.data.dao.QuizzDao
+
 import fr.uparis.chenliu.projet.data.entity.AnswerEntity
 import fr.uparis.chenliu.projet.data.entity.QuestionEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
+import fr.uparis.chenliu.projet.data.entity.UsersEntity
 
-@Database(entities = [UsersEntity::class, SettingsEntity::class, AnswerEntity::class, QuestionEntity::class], version = 3)
+@Database(entities = [UsersEntity::class, SettingsEntity::class, AnswerEntity::class, QuestionEntity::class], version = 4)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun usersDao(): UsersDao
     abstract fun settingsDao(): SettingsDao
