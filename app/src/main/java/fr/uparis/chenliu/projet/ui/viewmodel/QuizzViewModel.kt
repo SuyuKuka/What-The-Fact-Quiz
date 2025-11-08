@@ -24,7 +24,7 @@ import kotlin.jvm.java
 
 class QuizzViewModel(application: Application): AndroidViewModel(application) {
     private val db = AppDatabase.getInstance(application)
-    var currentQuestion = QuestionEntity(-1,-1,"","", null)
+    var currentQuestion = QuestionEntity(-1,"","","", null)
 
     var question = mutableStateOf("")
     val answers: Array<MutableState<QuizzDao.AnswerSummary>> = Array(5) { mutableStateOf(QuizzDao.AnswerSummary("",false)) }
@@ -48,7 +48,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun getQuestionAndAnswer(subject: Int, difficulty: String){
+    fun getQuestionAndAnswer(subject: String, difficulty: String){
         viewModelScope.launch {
             currentQuestion = db.quizzDao().getQuestion(subject, difficulty)
 

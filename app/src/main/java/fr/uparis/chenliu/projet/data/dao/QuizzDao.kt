@@ -19,7 +19,7 @@ interface QuizzDao {
     suspend fun insertAnswer(answer: AnswerEntity)
 
     @Query("SELECT * FROM QuestionEntity WHERE difficulty = :difficulty AND subject = :subject ORDER BY RANDOM() LIMIT 1")
-    suspend fun getQuestion(subject: Int, difficulty: String): QuestionEntity
+    suspend fun getQuestion(subject: String, difficulty: String): QuestionEntity
 
     @Query(" SELECT DISTINCT answer, validity FROM AnswerEntity WHERE idQuestion = :idQuestion AND validity = false ORDER BY RANDOM() LIMIT 3")
     suspend fun getWrongAnswers(idQuestion: Int): List<AnswerSummary>

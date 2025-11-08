@@ -5,13 +5,23 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -35,8 +45,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat.startActivity
@@ -93,8 +106,6 @@ fun MyScreenMainMenu(username: String, model: MainMenuViewModel = viewModel()) {
                 entry<Screen.Home> { HomeScreen(model = model, backStack = backStack)}
                 entry<Screen.Shop> { ShopScreen(model = model) }
                 entry<Screen.Settings> { SettingsScreen(model = model) }
-
-                entry<Screen.Level> { SelectLevel(model = model, backStack) }
             }
         )
     }
@@ -203,12 +214,73 @@ fun HomeScreen(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
             contentScale = ContentScale.Crop
         )
 
+        // todo: load depuis la db
+        val difficulty = listOf("Facile", "Moyen", "Difficile")
+        val subject = listOf("Maths", "Histoire", "Géographie", "Science")
+
+
+        val selectedDiff = remember { mutableStateOf(difficulty[0]) }
+        val selectedSubj = remember { mutableStateOf(subject[0]) }
+        val context = LocalContext.current
+        val intent = Intent(context, QuizzActivity::class.java)
+        intent.putExtra("difficulty", selectedDiff.value)
+        intent.putExtra("subject", selectedSubj.value)
+
         Column {
-            Text("HOME")
-            Button(onClick = {
-                if (backStack.last() != Screen.Level) backStack += Screen.Level
-            }) { Text("Choisir la difficulté") }
+            Row(modifier = Modifier.fillMaxWidth()) {
+                difficulty.forEach { diff ->
+                    Button(
+                        onClick = { selectedDiff.value = diff },
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(4.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = if (selectedDiff.value == diff) Color.Blue else Color.Gray,
+                            contentColor = Color.White
+                        )
+                    ) {
+                        Text(text = diff)
+                    }
+                }
+            }
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(2),
+                contentPadding = PaddingValues(8.dp),
+                modifier = Modifier
+                    .weight(1f)
+            ) {
+                items(subject) { subj ->
+                    Button(
+                        onClick = { selectedSubj.value = subj  },
+                        modifier = Modifier
+                            .aspectRatio(1f)
+                            .padding(8.dp)
+                            .fillMaxWidth(),
+                        shape = RectangleShape,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = if (selectedSubj.value == subj) Color.Blue else Color.Gray,
+                            contentColor = Color.White
+                        )
+                    ) {
+                        Text("QUIZZ DE $subj", textAlign = TextAlign.Center)
+                    }
+                }
+            }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Button(
+                    onClick = { context.startActivity(intent) },
+                    modifier = Modifier.fillMaxWidth(0.8f) // un peu plus étroit
+                ) {
+                    Text("GOGOGOGOGO")
+                }
+            }
         }
+
     }
 }
 
@@ -289,41 +361,6 @@ fun SettingsScreen(model: MainMenuViewModel) {
                 )
             }
             Button(onClick = { update() }) { Text("Enregistrer") }
-        }
-    }
-}
-
-@Composable
-fun SelectLevel(model: MainMenuViewModel, backStack: NavBackStack<NavKey>) {
-    val difficulty = listOf("Facile", "Moyen", "Difficile", "Expert")
-    val selected = remember { mutableStateOf(difficulty[0]) }
-
-    Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = model.translateBackground()),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
-        Column {
-            Text("SELECT LEVEL")
-            Row {
-                Button(onClick = { selected.value = difficulty[0] }) { Text("Facile") }
-                Button(onClick = { selected.value = difficulty[1] }) { Text("Moyen") }
-                Button(onClick = { selected.value = difficulty[2] }) { Text("Difficile") }
-            }
-            Button(onClick = { selected.value = difficulty[3] }) { Text("Expert") }
-            Row {
-                Button(onClick = {
-                    if (backStack.last() != Screen.Home)
-                        backStack += Screen.Home
-                }) { Text("Retour") }
-
-                val context = LocalContext.current
-                val intent = Intent(context, QuizzActivity::class.java)
-                intent.putExtra("difficulty", selected.value)
-                Button(onClick = { context.startActivity(intent)  }) { Text("Jouer") }
-            }
         }
     }
 }

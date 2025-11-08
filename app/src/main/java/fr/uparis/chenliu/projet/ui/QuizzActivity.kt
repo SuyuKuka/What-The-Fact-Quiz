@@ -19,6 +19,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MainViewModel
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
+import javax.security.auth.Subject
 
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,17 +29,18 @@ class QuizzActivity : ComponentActivity() {
             ProjetTheme {
 
                 val difficulty = intent.getStringExtra("difficulty")!!
-                MyQuizzScreen(difficulty)
+                val subject = intent.getStringExtra("subject")!!
+                MyQuizzScreen(difficulty, subject)
             }
         }
     }
 }
 
 @Composable
-fun MyQuizzScreen(diff: String, model: QuizzViewModel = viewModel()){
+fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel()){
 
     val question = model.question.value
-    model.getQuestionAndAnswer(1,diff)
+    model.getQuestionAndAnswer(subj,diff)
     val answers = model.answers
     val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
     val good = Toast.makeText(LocalContext.current, "NICE JOB", Toast.LENGTH_SHORT)
