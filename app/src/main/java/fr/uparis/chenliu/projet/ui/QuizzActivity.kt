@@ -40,7 +40,6 @@ fun MyQuizzScreen(model: MainViewModel = viewModel()){
     model.getQuestionAndAnswer(1,1) // todo choisir selon la diff, et la matiere
     val question = model.question.value
     val answers = model.answers
-    val answersValidity = model.answersValidity
 
 
     val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
@@ -53,13 +52,13 @@ fun MyQuizzScreen(model: MainViewModel = viewModel()){
             Row {
                 Text(text = question)
             }
-            Row {   // todo: ordre aléatoire
-                Button(onClick = { if (answersValidity[0].value) { good.show() } else { bad.show()} }) { Text(text = answers[0].value) }
-                Button(onClick = { if (answersValidity[1].value) { good.show() } else { bad.show()} }) { Text(text = answers[1].value) }
+            Row {
+                Button(onClick = { if (answers[0].value.validity) { good.show() } else { bad.show()} }) { Text(text = answers[0].value.answer) }
+                Button(onClick = { if (answers[1].value.validity) { good.show() } else { bad.show()} }) { Text(text = answers[1].value.answer) }
             }
             Row {
-                Button(onClick = { if (answersValidity[2].value) { good.show() } else { bad.show()} }) { Text(text = answers[2].value) }
-                Button(onClick = { if (answersValidity[3].value) { good.show() } else { bad.show()} }) { Text(text = answers[3].value) }
+                Button(onClick = { if (answers[2].value.validity) { good.show() } else { bad.show()} }) { Text(text = answers[2].value.answer) }
+                Button(onClick = { if (answers[3].value.validity) { good.show() } else { bad.show()} }) { Text(text = answers[3].value.answer) }
             }
         }
     }

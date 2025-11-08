@@ -2,16 +2,15 @@ package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
 import android.content.Context
-import android.util.Log
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import fr.uparis.chenliu.projet.R
-import fr.uparis.chenliu.projet.ui.AnswerParameter
-import fr.uparis.chenliu.projet.ui.QuestionParameter
+import fr.uparis.chenliu.projet.data.dao.QuizzDao
+import fr.uparis.chenliu.projet.data.model.AnswerParameter
+import fr.uparis.chenliu.projet.data.model.QuestionParameter
 import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.AnswerEntity
 import fr.uparis.chenliu.projet.data.entity.QuestionEntity
@@ -32,10 +31,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     var currentQuestion = QuestionEntity(-1,-1,-1,"", null)
 
     var question = mutableStateOf("")
-    val answers: Array<MutableState<String>> = Array(5) { mutableStateOf("") }
-    val answersValidity: Array<MutableState<Boolean>> = Array(5) { mutableStateOf(false) }
-
-    var validity = mutableStateOf(false)
+    val answers: Array<MutableState<QuizzDao.AnswerSummary>> = Array(5) { mutableStateOf(QuizzDao.AnswerSummary("",false)) }
 
 
 
@@ -102,13 +98,13 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
             question.value = currentQuestion.question
 
             // responses
-            val res = db.quizzDao().getAnswersForQuestion(currentQuestion.idQuestion)
+            val bad = db.quizzDao().getWrongAnswers(currentQuestion.idQuestion)
+            val good = db.quizzDao().getCorrectAnswer(currentQuestion.idQuestion)
+
+            val res = (bad + good).shuffled()
+
             for (i in 0..res.size-1) {
                 answers[i].value = res[i]
-            }
-            val resId = db.quizzDao().getAnswersValidity(currentQuestion.idQuestion)
-            for (i in 0..res.size-1) {
-                answersValidity[i].value = resId[i]
             }
         }
     }

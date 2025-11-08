@@ -1,4 +1,4 @@
-package fr.uparis.chenliu.projet.ui
+package fr.uparis.chenliu.projet.data.model
 
 class QuestionParameter(
     val question: List<QuestionData>
