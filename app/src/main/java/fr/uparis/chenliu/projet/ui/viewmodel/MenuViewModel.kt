@@ -35,7 +35,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val preferredTopics = mutableStateOf("")
 
     val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
-    val fontList = listOf("Police 1", "Police 2", "Police 3")
+    val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
     val saved = mutableStateOf(true)
 
     val MAX_ENERGY = 20
@@ -135,11 +135,21 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             0 -> R.drawable.b0
             1 -> R.drawable.b1
             2 -> R.drawable.b2
-            else -> {
-                R.drawable.b0
-            }
+            else -> R.drawable.b0
         }
         return background
+    }
+
+    fun translateFont(): Int {
+        val font = when(font.intValue) {
+            0 -> 0
+            1 -> R.font.game
+            2 -> R.font.typewritter
+            3 -> R.font.pixel
+            4 -> R.font.pokemon
+            else -> 0
+        }
+        return font
     }
 
     fun undoSettings() {

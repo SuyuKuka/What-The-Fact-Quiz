@@ -50,6 +50,7 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -421,7 +422,9 @@ fun SettingsScreen(model: MenuViewModel) {
                 ChoiceField(
                     label = "Police",
                     choice = selectedFont.intValue,
-                    onValueChange = { newValue -> selectedFont.intValue = newValue; model.saved.value = false },
+                    onValueChange = { newValue ->
+                        selectedFont.intValue = newValue; model.saved.value = false
+                    },
                     choiceList = model.fontList
                 )
             }
@@ -529,4 +532,8 @@ fun UnderlineTextField(value: String, onValueChange: (String) -> Unit) {
             color = Color.Black
         )
     }
+}
+
+@Composable
+fun DisplayText(text: String, fontSize: TextUnit, font: Int, color: Color) {
 }
