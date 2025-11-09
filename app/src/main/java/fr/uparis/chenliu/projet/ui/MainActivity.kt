@@ -39,6 +39,8 @@ import java.time.LocalDateTime
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
 class MainActivity : ComponentActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -86,9 +88,9 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel(), quizzmo
                     label = "Entrer votre pseudo",
                     modifier = Modifier.padding(start = 10.dp),
                     fontSize = 25.sp,
-                    onDone = { model.insertUsers() }
+                    onDone = { model.insertData(context) }
                 )
-                Button(onClick = {quizzmodel.initQuizz(context); model.insertUsers() } ) { Text(text = "Continuer") }
+                Button(onClick = {model.insertData(context) } ) { Text(text = "Continuer") }
             }
         }
     }
