@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import fr.uparis.chenliu.projet.data.dao.QuizzGeoDao
 
 // Import DAO et Entity
@@ -20,16 +21,17 @@ import fr.uparis.chenliu.projet.data.entity.AnswerMathsEntity
 import fr.uparis.chenliu.projet.data.entity.QuizzGeoEntity
 import fr.uparis.chenliu.projet.data.entity.QuizzHistoryEntity
 import fr.uparis.chenliu.projet.data.entity.QuizzInfoEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzMathsEntity
+import fr.uparis.chenliu.projet.data.entity.QuizzScienceEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 
 @Database(entities = [
     UsersEntity::class, SettingsEntity::class,
-    AnswerMathsEntity::class, QuizzMathsEntity::class,
+    AnswerMathsEntity::class, QuizzScienceEntity::class,
     AnswerHistoryEntity::class, QuizzHistoryEntity::class,
     AnswerInfoEntity::class, QuizzInfoEntity::class,
-    AnswerGeoEntity::class, QuizzGeoEntity::class], version = 2 )
+    AnswerGeoEntity::class, QuizzGeoEntity::class], version = 3 )
+@TypeConverters(Converter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun usersDao(): UsersDao
     abstract fun settingsDao(): SettingsDao

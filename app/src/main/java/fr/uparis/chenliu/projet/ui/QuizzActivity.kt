@@ -1,7 +1,6 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.os.Bundle
-import android.util.Log.i
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
@@ -20,7 +19,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -61,7 +59,7 @@ class QuizzActivity : ComponentActivity() {
 @Composable
 fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel()){
     // todo:simplifier tout ca
-    val answerHistory = remember { mutableStateListOf<QuizzViewModel.AnswerSummary>() }
+    val answerHistory = remember { mutableStateListOf<String>() }
     val goodAnswer = remember { mutableStateListOf<String>() }
     val questionHistory = remember { mutableStateListOf<String>() }
     val score = remember { mutableIntStateOf(0) }
@@ -84,12 +82,12 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 @Composable
 fun Game(
     question: String,
-    answers: Array<MutableState<QuizzViewModel.AnswerSummary>>,
+    answers: MutableState<QuizzViewModel.AnswerSummary>,
     score: MutableIntState,
     nbQuestion: MutableIntState,
-    answerHistory: SnapshotStateList<QuizzViewModel.AnswerSummary>,
+    answerHistory: SnapshotStateList<String>,
     questionHistory: SnapshotStateList<String>,
-    goodAnswer: SnapshotStateList<String>
+    goodAnswer: SnapshotStateList<String>,
 ){
 
     val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
@@ -115,26 +113,22 @@ fun Game(
             modifier = Modifier
                 .weight(1f)
         ) {
-            items(answers) { ans ->
-                if (ans.value.validity) {
-                    goodAnswer.add(ans.value.answer)
-                }
+            items(answers.value.propositions) { ans ->
                 Button(
                     onClick = {
-                        answerHistory.add(ans.value)
+                        answerHistory.add(ans)
                         questionHistory.add(question)
-                        if (ans.value.validity) {
-                            good.show(); ++score.intValue; nbQuestion.intValue--
-                        } else {
-                            bad.show(); nbQuestion.intValue--
-                        } },
+                        goodAnswer.add(answers.value.answer)
+                        if (ans == answers.value.answer) { good.show(); ++score.intValue } else { bad.show() }
+                        nbQuestion.intValue--
+                              },
                     modifier = Modifier
                         .aspectRatio(1.5f)
                         .padding(8.dp)
                         .fillMaxWidth(),
                     shape = RectangleShape
                 ) {
-                    Text(text = ans.value.answer)
+                    Text(text = ans)
                 }
             }
         }
@@ -145,7 +139,7 @@ fun Game(
 fun Result(
     score: MutableIntState,
     nbQuestion: MutableIntState,
-    answerHistory: SnapshotStateList<QuizzViewModel.AnswerSummary>,
+    answerHistory: SnapshotStateList<String>,
     questionHistory: SnapshotStateList<String>,
     goodAnswer: SnapshotStateList<String>
 ) {
@@ -166,17 +160,14 @@ fun Result(
         ) {
             itemsIndexed(questionHistory) { i, question ->
 
-            val index = i+1
-            if (answerHistory[i].validity) {
-                    Text("Question ${index}: $question", color = Color.Green)
-                    Text("Réponse : ${answerHistory[i].answer}", color = Color.Green)
-                }
-                else {
-                    Text("Question ${index}: $question", color = Color.Red)
-                    Text("Faux : ${answerHistory[i].answer}", color = Color.Red)
+                if (answerHistory[i] == goodAnswer[i]) {
+                    Text("Question ${i+1}: $question", color = Color.Black)
+                    Text("Réponse -> ${goodAnswer[i]}", color = Color.Green)
+                } else {
+                    Text("Question ${i+1}: $question", color = Color.Black)
+                    Text("Faux : ${answerHistory[i]}", color = Color.Red)
                     Text("Réponse -> ${goodAnswer[i]}", color = Color.Blue)
                 }
-
             }
         }
         Row(

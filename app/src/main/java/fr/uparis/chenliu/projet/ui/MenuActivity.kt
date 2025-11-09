@@ -245,7 +245,7 @@ fun LeaderboardScreen(model: MenuViewModel) {
 fun HomeScreen(model: MenuViewModel) {
     // todo: load depuis la db
     val difficulty = listOf("Facile", "Moyen", "Difficile")
-    val subject = listOf("Maths", "Histoire", "Géographie", "Informatique", "Pokémon")
+    val subject = listOf("Science")
 
     val selectedDiff = remember { mutableStateOf(difficulty[0]) }
     val selectedSubj = remember { mutableStateOf(subject[0]) }

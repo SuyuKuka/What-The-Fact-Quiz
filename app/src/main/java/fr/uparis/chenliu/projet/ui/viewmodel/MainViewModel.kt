@@ -8,22 +8,14 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.data.database.AppDatabase
-import fr.uparis.chenliu.projet.data.entity.AnswerGeoEntity
-import fr.uparis.chenliu.projet.data.entity.AnswerHistoryEntity
-import fr.uparis.chenliu.projet.data.entity.AnswerInfoEntity
-import fr.uparis.chenliu.projet.data.entity.AnswerMathsEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzGeoEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzHistoryEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzInfoEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzMathsEntity
+import fr.uparis.chenliu.projet.data.entity.QuizzScienceEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
-import fr.uparis.chenliu.projet.data.model.AnswerData
-import fr.uparis.chenliu.projet.data.model.AnswerParameter
-import fr.uparis.chenliu.projet.data.model.QuestionData
-import fr.uparis.chenliu.projet.data.model.QuestionParameter
+import fr.uparis.chenliu.projet.data.model.JsonReader
+
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.jvm.java
 
 class MainViewModel(application: Application): AndroidViewModel(application) {
     private val db = AppDatabase.getInstance(application)
@@ -74,111 +66,61 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     }
 
     suspend fun initQuizz(c:Context) {
-        quizz(c, R.raw.quizzmaths)
-        quizz(c, R.raw.quizzinfo)
-        quizz(c, R.raw.quizzhistory)
-        quizz(c, R.raw.quizzgeo)
+        quizz(c, R.raw.science)
+//        quizz(c, R.raw.quizzinfo)
+//        quizz(c, R.raw.quizzhistory)
+//        quizz(c, R.raw.quizzgeo)
     }
 
     suspend fun quizz(c: Context, quizz: Int) {
         val inputStream = c.resources.openRawResource(quizz)
         val jsonString = inputStream.bufferedReader().use { it.readText() }
-        val questionData = Gson().fromJson(jsonString, QuestionParameter::class.java)
-        val qData = questionData.question
+        val quizzData = Gson().fromJson(jsonString, JsonReader.QuizzParameter::class.java)
 
-        val answerData = Gson().fromJson(jsonString, AnswerParameter::class.java)
-        val aData = answerData.answer
-
-        quizzQuestion(qData, quizz)
-        quizzAnwser(aData, quizz)
+        quizzQuestion(quizzData.quizz, quizz)
     }
 
-    suspend fun quizzQuestion(qData: List<QuestionData>, quizz: Int) {
+    suspend fun quizzQuestion(qData: List<JsonReader.QuizzData>, quizz: Int) {
         qData.forEach {
             when (quizz) {
-                R.raw.quizzmaths -> {
+                R.raw.science -> {
                     db.quizzMathsDao().insertQuestion(
-                        QuizzMathsEntity(
-                            difficulty = it.difficulty,
+                        QuizzScienceEntity(
+                            id = it.id,
                             question = it.question,
-                            resources = it.resources
-                        )
-                    )
-                }
-                R.raw.quizzinfo -> {
-                    db.quizzInfoDao().insertQuestion(
-                        QuizzInfoEntity(
-                            difficulty = it.difficulty,
-                            question = it.question,
-                            resources = it.resources
-                        )
-                    )
-                }
-                R.raw.quizzgeo -> {
-                    db.quizzGeoDao().insertQuestion(
-                        QuizzGeoEntity(
-                            difficulty = it.difficulty,
-                            question = it.question,
-                            resources = it.resources
-                        )
-                    )
-                }
-                R.raw.quizzhistory -> {
-                    db.quizzHistoryDao().insertQuestion(
-                        QuizzHistoryEntity(
-                            difficulty = it.difficulty,
-                            question = it.question,
-                            resources = it.resources
-                        )
-                    )
-                }
-            }
-        }
-    }
-
-    suspend fun quizzAnwser(aData: List<AnswerData>, quizz: Int) {
-        aData.forEach {
-            when (quizz) {
-                R.raw.quizzmaths -> {
-                    db.quizzMathsDao().insertAnswer(
-                        AnswerMathsEntity(
-                            idQuestion = it.idQuestion,
+                            propositions = it.propositions,
                             answer = it.answer,
-                            validity = it.validity,
-                            position = it.position
+                            difficulty = it.difficulty
                         )
                     )
                 }
-                R.raw.quizzinfo -> {
-                    db.quizzInfoDao().insertAnswer(
-                        AnswerInfoEntity(
-                            idQuestion = it.idQuestion,
-                            answer = it.answer,
-                            validity = it.validity,
-                            position = it.position
-                        )
-                    )
-                }
-                R.raw.quizzgeo -> {
-                    db.quizzGeoDao().insertAnswer(
-                        AnswerGeoEntity(
-                            idQuestion = it.idQuestion,
-                            answer = it.answer,
-                            validity = it.validity,
-                            position = it.position
-                        )
-                    )
-                }
-                R.raw.quizzhistory -> {
-                    db.quizzHistoryDao().insertAnswer(
-                        AnswerHistoryEntity(
-                            idQuestion = it.idQuestion,
-                            answer = it.answer,
-                            validity = it.validity,
-                            position = it.position
-                        )
-                    )
-                }
+//                R.raw.quizzinfo -> {
+//                    db.quizzInfoDao().insertQuestion(
+//                        QuizzInfoEntity(
+//                            difficulty = it.difficulty,
+//                            question = it.question,
+//                            resources = it.resources
+//                        )
+//                    )
+//                }
+//                R.raw.quizzgeo -> {
+//                    db.quizzGeoDao().insertQuestion(
+//                        QuizzGeoEntity(
+//                            difficulty = it.difficulty,
+//                            question = it.question,
+//                            resources = it.resources
+//                        )
+//                    )
+//                }
+//                R.raw.quizzhistory -> {
+//                    db.quizzHistoryDao().insertQuestion(
+//                        QuizzHistoryEntity(
+//                            difficulty = it.difficulty,
+//                            question = it.question,
+//                            resources = it.resources
+//                        )
+//                    )
+//                }
             }
         }
     }
