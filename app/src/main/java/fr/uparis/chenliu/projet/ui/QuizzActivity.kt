@@ -194,17 +194,15 @@ fun Result(
                 .fillMaxWidth()
                 .weight(4f)
         ) {
-            for ( i in 0..questionHistory.size-1) {
-                items(questionHistory) { question ->
-                    if (answerHistory[i].validity) {
-                        DisplayText(list = font, text = "Question $i: $question", color = Color.Green)
-                        DisplayText(list = font, text = "Réponse: ${answerHistory[i].answer}", color = Color.Green)
-                    }
-                    else {
-                        DisplayText(list = font, text = "Question $i: $question", color = Color.Red)
-                        DisplayText(list = font, text = "Faux : ${answerHistory[i].answer}", color = Color.Red)
-                        DisplayText(list = font, text = "Réponse -> ${goodAnswer[i]}", color = Color.Blue)
-                    }
+            itemsIndexed(questionHistory) { i, question ->
+
+                if (answerHistory[i] == goodAnswer[i]) {
+                    DisplayText(list = font,"Question ${i+1}: $question", color = Color.Black)
+                    DisplayText(list = font,"Réponse -> ${goodAnswer[i]}", color = Color.Green)
+                } else {
+                    DisplayText(list = font,"Question ${i+1}: $question", color = Color.Black)
+                    DisplayText(list = font,"Faux : ${answerHistory[i]}", color = Color.Red)
+                    DisplayText(list = font,"Réponse -> ${goodAnswer[i]}", color = Color.Blue)
                 }
             }
         }
@@ -231,6 +229,7 @@ fun Result(
                     score.intValue = 0
                     answerHistory.clear()
                     questionHistory.clear()
+                    goodAnswer.clear()
                 },
                 modifier = Modifier
                     .padding(8.dp)
