@@ -1,31 +1,21 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
-import android.content.Context
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.gson.Gson
-import fr.uparis.chenliu.projet.R
-import fr.uparis.chenliu.projet.data.dao.QuizzDao
-import fr.uparis.chenliu.projet.data.model.AnswerParameter
-import fr.uparis.chenliu.projet.data.model.QuestionParameter
 import fr.uparis.chenliu.projet.data.database.AppDatabase
-import fr.uparis.chenliu.projet.data.entity.AnswerEntity
-import fr.uparis.chenliu.projet.data.entity.QuestionEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlin.jvm.java
 
 class MainViewModel(application: Application): AndroidViewModel(application) {
     private val db = AppDatabase.getInstance(application)
     private var user = mutableStateOf<UsersEntity?>(null)
 
     var username = mutableStateOf("")
-    val duration = mutableStateOf("")
+    val endDate = mutableStateOf("")
     var loading = mutableStateOf(true)
     var exist = mutableStateOf(false)
 
@@ -37,7 +27,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
             } else {
                 exist.value = true
                 username.value = user.value!!.username
-                duration.value = user.value!!.duration
+                endDate.value = user.value!!.endDate
             }
             delay(3000)
             loading.value = false
@@ -52,9 +42,9 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     username.value = "Joueur"
                 }
 
-                db.usersDao().insertUser(UsersEntity(username = username.value.trim(), subscribe = false, duration = "", games = 0, wins = 0))
+                db.usersDao().insertUser(UsersEntity(username = username.value.trim(), energy = 20, lastTimeEnergy = System.currentTimeMillis(),subscribe = false, endDate = "", games = 0, wins = 0))
                 user.value = db.usersDao().getUser()
-                db.settingsDao().init(SettingsEntity(user.value!!.userId, 1f, 1f, 0, 0, ""))
+                db.settingsDao().init(SettingsEntity(userId = user.value!!.userId, music = 1f, sound = 1f, background = 0, font = 0, preferredTopics = ""))
                 exist.value = true
                 loading.value = false
             }
@@ -64,7 +54,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     fun expireSubscription() {
         viewModelScope.launch {
             db.usersDao().updateSubscribe(userId = user.value!!.userId, subscribe = false)
-            db.usersDao().updateDuration(userId = user.value!!.userId, duration = "")
+            db.usersDao().updateDuration(userId = user.value!!.userId, endDate = "")
         }
     }
 }
