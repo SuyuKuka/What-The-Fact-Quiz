@@ -35,11 +35,10 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val preferredTopics = mutableStateOf("")
 
     val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
-    val fontList = listOf("Police 1", "Police 2", "Police 3")
+    val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
     val saved = mutableStateOf(true)
 
-    val MAX_ENERGY = 20
-    val CYCLE_ENERGY = 2
+    val maxEnergy = mutableIntStateOf(20)
 
     fun init(username: String) {
         this.username.value = username
@@ -53,7 +52,9 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             font.intValue = settings.value!!.font
             preferredTopics.value = settings.value!!.preferredTopics
             while (true) {
+                getUsers()
                 addEnergy()
+                println(background.intValue.toString() + "-------" + font.intValue.toString())
                 delay(1000)
             }
         }
@@ -115,31 +116,30 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun updateSettings() {
+    fun updateUsername() {
         viewModelScope.launch {
-            db.settingsDao().updateSettings(
-                SettingsEntity(
-                    userId = user.value!!.userId,
-                    music = sound.floatValue,
-                    sound = music.floatValue,
-                    background = background.intValue,
-                    font = font.intValue,
-                    preferredTopics = preferredTopics.value
-                )
-            )
+            db.usersDao().updateUsername(userId = user.value!!.userId, username = username.value)
+            getUsers()
         }
     }
 
-    fun translateBackground(): Int {
-        val background = when(background.intValue) {
-            0 -> R.drawable.b0
-            1 -> R.drawable.b1
-            2 -> R.drawable.b2
-            else -> {
-                R.drawable.b0
-            }
+    fun undoUsername() {
+        username.value = user.value!!.username
+    }
+
+    fun updateSettings() {
+        viewModelScope.launch {
+            val newSettings = SettingsEntity(
+                userId = user.value!!.userId,
+                music = sound.floatValue,
+                sound = music.floatValue,
+                background = background.intValue,
+                font = font.intValue,
+                preferredTopics = preferredTopics.value
+            )
+            db.settingsDao().updateSettings(newSettings)
+            settings.value = newSettings
         }
-        return background
     }
 
     fun undoSettings() {
@@ -150,22 +150,55 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         preferredTopics.value = settings.value!!.preferredTopics
     }
 
+    fun translateBackground(): Int{
+        val bg = when(background.intValue) {
+            0 -> R.drawable.b0
+            1 -> R.drawable.b1
+            2 -> R.drawable.b2
+            else -> R.drawable.b0
+        }
+        return bg
+    }
+
+    fun translateFont(): List<Int> {
+        val ft = when(font.intValue) {
+            0 -> 0
+            1 -> R.font.game
+            2 -> R.font.typewritter
+            3 -> R.font.pixel
+            4 -> R.font.pokemon
+            else -> 0
+        }
+
+        // différence de taille entre default et autres (pour avoir meme taille quasiment)
+        val sz = when(font.intValue) {
+            0 -> 0
+            1 -> -1
+            2 -> 1
+            3 -> -5
+            4 -> -2
+            else -> 0
+        }
+        return listOf(ft, sz)
+    }
+
     fun addEnergy() {
         viewModelScope.launch {
             if (user.value == null) return@launch
-            if (energy.intValue >= MAX_ENERGY) return@launch
+            if (energy.intValue >= maxEnergy.intValue) return@launch
 
+            val cycleEnergy = 2
             val now = System.currentTimeMillis()
-            val refill = ((now - lastTimeEnergy.longValue) / 60000L) / CYCLE_ENERGY
-            val time = (((((now - lastTimeEnergy.longValue) / (CYCLE_ENERGY * 60000L) * CYCLE_ENERGY * 60000L) + lastTimeEnergy.longValue) + CYCLE_ENERGY * 60000L) - now) / 1000L
+            val refill = ((now - lastTimeEnergy.longValue) / 60000L) / cycleEnergy
+            val time = (((((now - lastTimeEnergy.longValue) / (cycleEnergy * 60000L) * cycleEnergy * 60000L) + lastTimeEnergy.longValue) + cycleEnergy * 60000L) - now) / 1000L
             timeEnergy.value = "${time / 60L}min ${time % 60L}s"
 
             if (refill <= 0) return@launch
 
             energy.intValue += refill.toInt()
-            if (energy.intValue > MAX_ENERGY) energy.intValue = MAX_ENERGY
+            if (energy.intValue > maxEnergy.intValue) energy.intValue = maxEnergy.intValue
 
-            lastTimeEnergy.longValue += refill.toInt() * CYCLE_ENERGY * 60000L
+            lastTimeEnergy.longValue += refill.toInt() * cycleEnergy * 60000L
 
             db.usersDao().updateEnergy(userId = user.value!!.userId, energy = energy.intValue, lastTimeEnergy = lastTimeEnergy.longValue)
             getUsers()
@@ -177,7 +210,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             viewModelScope.launch {
                 if (energy.intValue <= 0) return@launch
                 energy.intValue -= 1
-                if (energy.intValue == MAX_ENERGY - 1) {
+                if (energy.intValue == maxEnergy.intValue - 1) {
                     db.usersDao().updateEnergy(
                         userId = user.value!!.userId,
                         energy = energy.intValue,

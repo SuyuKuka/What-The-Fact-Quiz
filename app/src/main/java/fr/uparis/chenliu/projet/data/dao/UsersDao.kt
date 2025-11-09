@@ -1,6 +1,5 @@
 package fr.uparis.chenliu.projet.data.dao
 
-import android.health.connect.datatypes.units.Energy
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -17,6 +16,9 @@ interface UsersDao {
 
     @Query("SELECT * FROM UsersEntity LIMIT 1")
     suspend fun getUser(): UsersEntity?
+
+    @Query("UPDATE UsersEntity SET username = :username WHERE userId = :userId")
+    suspend fun updateUsername(userId: Int, username: String)
 
     @Query("UPDATE UsersEntity SET subscribe = :subscribe WHERE userId = :userId")
     suspend fun updateSubscribe(userId: Int, subscribe: Boolean)
