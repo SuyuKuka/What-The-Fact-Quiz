@@ -18,7 +18,9 @@ import fr.uparis.chenliu.projet.data.entity.QuizzInfoEntity
 import fr.uparis.chenliu.projet.data.entity.QuizzMathsEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
+import fr.uparis.chenliu.projet.data.model.AnswerData
 import fr.uparis.chenliu.projet.data.model.AnswerParameter
+import fr.uparis.chenliu.projet.data.model.QuestionData
 import fr.uparis.chenliu.projet.data.model.QuestionParameter
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -72,108 +74,113 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     }
 
     suspend fun initQuizz(c:Context) {
+        quizz(c, R.raw.quizzmaths)
+        quizz(c, R.raw.quizzinfo)
+        quizz(c, R.raw.quizzhistory)
+        quizz(c, R.raw.quizzgeo)
+    }
 
-            var inputStream = c.resources.openRawResource(R.raw.quizzmaths)
-            var jsonString = inputStream.bufferedReader().use { it.readText() }
-            var questionData = Gson().fromJson(jsonString, QuestionParameter::class.java)
-            var qData = questionData.question
-            qData.forEach {
-                db.quizzMathsDao().insertQuestion(
-                    QuizzMathsEntity(
-                        difficulty = it.difficulty,
-                        question = it.question,
-                        resources = it.resources
-                    )
-                )
-            }
-            var answerData = Gson().fromJson(jsonString, AnswerParameter::class.java)
-            var aData = answerData.answer
-            aData.forEach {
-                db.quizzMathsDao().insertAnswer(
-                    AnswerMathsEntity(
-                        idQuestion = it.idQuestion,
-                        answer = it.answer,
-                        validity = it.validity,
-                        position = it.position
-                    )
-                )
-            }
-            inputStream = c.resources.openRawResource(R.raw.quizzinfo)
-            jsonString = inputStream.bufferedReader().use { it.readText() }
-            questionData = Gson().fromJson(jsonString, QuestionParameter::class.java)
-            qData = questionData.question
-            qData.forEach {
-                db.quizzInfoDao().insertQuestion(
-                    QuizzInfoEntity(
-                        difficulty = it.difficulty,
-                        question = it.question,
-                        resources = it.resources
-                    )
-                )
-            }
-            answerData = Gson().fromJson(jsonString, AnswerParameter::class.java)
-            aData = answerData.answer
-            aData.forEach {
-                db.quizzInfoDao().insertAnswer(
-                    AnswerInfoEntity(
-                        idQuestion = it.idQuestion,
-                        answer = it.answer,
-                        validity = it.validity,
-                        position = it.position
-                    )
-                )
-            }
-            inputStream = c.resources.openRawResource(R.raw.quizzhistory)
-            jsonString = inputStream.bufferedReader().use { it.readText() }
-            questionData = Gson().fromJson(jsonString, QuestionParameter::class.java)
-            qData = questionData.question
-            qData.forEach {
-                db.quizzHistoryDao().insertQuestion(
-                    QuizzHistoryEntity(
-                        difficulty = it.difficulty,
-                        question = it.question,
-                        resources = it.resources
-                    )
-                )
-            }
-            answerData = Gson().fromJson(jsonString, AnswerParameter::class.java)
-            aData = answerData.answer
-            aData.forEach {
-                db.quizzHistoryDao().insertAnswer(
-                    AnswerHistoryEntity(
-                        idQuestion = it.idQuestion,
-                        answer = it.answer,
-                        validity = it.validity,
-                        position = it.position
-                    )
-                )
-            }
-            inputStream = c.resources.openRawResource(R.raw.quizzgeo)
-            jsonString = inputStream.bufferedReader().use { it.readText() }
-            questionData = Gson().fromJson(jsonString, QuestionParameter::class.java)
-            qData = questionData.question
-            qData.forEach {
-                db.quizzGeoDao().insertQuestion(
-                    QuizzGeoEntity(
-                        difficulty = it.difficulty,
-                        question = it.question,
-                        resources = it.resources
-                    )
-                )
-            }
-            answerData = Gson().fromJson(jsonString, AnswerParameter::class.java)
-            aData = answerData.answer
-            aData.forEach {
-                db.quizzGeoDao().insertAnswer(
-                    AnswerGeoEntity(
-                        idQuestion = it.idQuestion,
-                        answer = it.answer,
-                        validity = it.validity,
-                        position = it.position
-                    )
-                )
-            }
+    suspend fun quizz(c: Context, quizz: Int) {
+        val inputStream = c.resources.openRawResource(quizz)
+        val jsonString = inputStream.bufferedReader().use { it.readText() }
+        val questionData = Gson().fromJson(jsonString, QuestionParameter::class.java)
+        val qData = questionData.question
 
+        val answerData = Gson().fromJson(jsonString, AnswerParameter::class.java)
+        val aData = answerData.answer
+
+        quizzQuestion(qData, quizz)
+        quizzAnwser(aData, quizz)
+    }
+
+    suspend fun quizzQuestion(qData: List<QuestionData>, quizz: Int) {
+        qData.forEach {
+            when (quizz) {
+                R.raw.quizzmaths -> {
+                    db.quizzMathsDao().insertQuestion(
+                        QuizzMathsEntity(
+                            difficulty = it.difficulty,
+                            question = it.question,
+                            resources = it.resources
+                        )
+                    )
+                }
+                R.raw.quizzinfo -> {
+                    db.quizzInfoDao().insertQuestion(
+                        QuizzInfoEntity(
+                            difficulty = it.difficulty,
+                            question = it.question,
+                            resources = it.resources
+                        )
+                    )
+                }
+                R.raw.quizzgeo -> {
+                    db.quizzGeoDao().insertQuestion(
+                        QuizzGeoEntity(
+                            difficulty = it.difficulty,
+                            question = it.question,
+                            resources = it.resources
+                        )
+                    )
+                }
+                R.raw.quizzhistory -> {
+                    db.quizzHistoryDao().insertQuestion(
+                        QuizzHistoryEntity(
+                            difficulty = it.difficulty,
+                            question = it.question,
+                            resources = it.resources
+                        )
+                    )
+                }
+            }
+        }
+    }
+
+    suspend fun quizzAnwser(aData: List<AnswerData>, quizz: Int) {
+        aData.forEach {
+            when (quizz) {
+                R.raw.quizzmaths -> {
+                    db.quizzMathsDao().insertAnswer(
+                        AnswerMathsEntity(
+                            idQuestion = it.idQuestion,
+                            answer = it.answer,
+                            validity = it.validity,
+                            position = it.position
+                        )
+                    )
+                }
+                R.raw.quizzinfo -> {
+                    db.quizzInfoDao().insertAnswer(
+                        AnswerInfoEntity(
+                            idQuestion = it.idQuestion,
+                            answer = it.answer,
+                            validity = it.validity,
+                            position = it.position
+                        )
+                    )
+                }
+                R.raw.quizzgeo -> {
+                    db.quizzGeoDao().insertAnswer(
+                        AnswerGeoEntity(
+                            idQuestion = it.idQuestion,
+                            answer = it.answer,
+                            validity = it.validity,
+                            position = it.position
+                        )
+                    )
+                }
+                R.raw.quizzhistory -> {
+                    db.quizzHistoryDao().insertAnswer(
+                        AnswerHistoryEntity(
+                            idQuestion = it.idQuestion,
+                            answer = it.answer,
+                            validity = it.validity,
+                            position = it.position
+                        )
+                    )
+                }
+            }
+        }
     }
 
     fun expireSubscription() {
