@@ -3,6 +3,7 @@ package fr.uparis.chenliu.projet.ui.viewmodel
 import android.app.Application
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,6 +11,7 @@ import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 
@@ -20,8 +22,11 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     private var settings = mutableStateOf<SettingsEntity?>(null)
 
     val username = mutableStateOf("")
+    val energy = mutableIntStateOf(0)
+    val lastTimeEnergy = mutableLongStateOf(System.currentTimeMillis())
+    val timeEnergy = mutableStateOf("")
     val subscription = mutableStateOf(false)
-    val duration = mutableStateOf("")
+    val endDate = mutableStateOf("")
 
     val music = mutableFloatStateOf(0f)
     val sound = mutableFloatStateOf(0f)
@@ -44,6 +49,10 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             background.intValue = settings.value!!.background
             font.intValue = settings.value!!.font
             preferredTopics.value = settings.value!!.preferredTopics
+            while (true) {
+                addEnergy()
+                delay(1000)
+            }
         }
     }
 
@@ -64,7 +73,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
                 year += 1
             }
             db.usersDao().updateSubscribe(userId = user.value!!.userId, subscribe = true)
-            db.usersDao().updateDuration(userId = user.value!!.userId, duration = "${day}/${month}/${year}")
+            db.usersDao().updateDuration(userId = user.value!!.userId, endDate = "${day}/${month}/${year}")
             getUsers()
         }
     }
@@ -73,10 +82,10 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch {
             getUsers()
 
-            val duration = duration.value.split("/")
-            val day = duration[0]
-            var month = duration[1].toInt()
-            var year = duration[2].toInt()
+            val endDate = endDate.value.split("/")
+            val day = endDate[0]
+            var month = endDate[1].toInt()
+            var year = endDate[2].toInt()
             if (isMonthly) {
                 if (month == 12) {
                     year += 1
@@ -88,15 +97,18 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
                 year += 1
             }
             db.usersDao().updateSubscribe(userId = user.value!!.userId, subscribe = true)
-            db.usersDao().updateDuration(userId = user.value!!.userId, duration = "${day}/${month}/${year}")
+            db.usersDao().updateDuration(userId = user.value!!.userId, endDate = "${day}/${month}/${year}")
+
         }
     }
 
     fun getUsers() {
         viewModelScope.launch {
             user.value = db.usersDao().getUser()
-            duration.value = user.value!!.duration
+            energy.intValue = user.value!!.energy
+            lastTimeEnergy.longValue = user.value!!.lastTimeEnergy
             subscription.value = user.value!!.subscribe
+            endDate.value = user.value!!.endDate
         }
     }
 
@@ -133,5 +145,42 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         background.intValue = settings.value!!.background
         font.intValue = settings.value!!.font
         preferredTopics.value = settings.value!!.preferredTopics
+    }
+
+    fun addEnergy() {
+        viewModelScope.launch {
+            if (user.value == null) return@launch
+            if (energy.intValue >= 20) return@launch
+
+            val now = System.currentTimeMillis()
+            val refill = ((now - lastTimeEnergy.longValue) / 60000L) / 5
+            val time = (((lastTimeEnergy.longValue + ((now - lastTimeEnergy.longValue) / (5 * 60000L) * 5 * 60000L)) + 5 * 60000L) - now) / 1000L
+            timeEnergy.value = "${time / 60L}min ${time % 60L}s"
+
+            if (refill <= 0) return@launch
+
+            energy.intValue += refill.toInt()
+            if (energy.intValue > 20) energy.intValue = 20
+
+            lastTimeEnergy.longValue += refill.toInt() * 5 * 60000L
+
+            db.usersDao().updateEnergy(userId = user.value!!.userId, energy = energy.intValue, lastTimeEnergy = lastTimeEnergy.longValue)
+            getUsers()
+        }
+    }
+
+    fun removeEnergy() {
+        if (!subscription.value) {
+            viewModelScope.launch {
+                if (energy.intValue <= 0) return@launch
+                energy.intValue -= 1
+                db.usersDao().updateEnergy(
+                    userId = user.value!!.userId,
+                    energy = energy.intValue,
+                    lastTimeEnergy = user.value!!.lastTimeEnergy
+                )
+                getUsers()
+            }
+        }
     }
 }
