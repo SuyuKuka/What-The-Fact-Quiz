@@ -20,10 +20,10 @@ interface QuizzInfoDao {
     @Query("SELECT DISTINCT * FROM QuizzInfoEntity WHERE difficulty = :difficulty ORDER BY RANDOM() LIMIT 1")
     suspend fun getQuestion(difficulty: String): QuizzInfoEntity
 
-    @Query(" SELECT DISTINCT answer, validity FROM AnswerInfoEntity WHERE idQuestion = :idQuestion AND validity = false ORDER BY RANDOM() LIMIT 3")
+    @Query(" SELECT DISTINCT answerId, answer, validity FROM AnswerInfoEntity WHERE idQuestion = :idQuestion AND validity = false ORDER BY RANDOM() LIMIT 3")
     suspend fun getWrongAnswers(idQuestion: Int): List<QuizzViewModel.AnswerSummary>
 
-    @Query(" SELECT answer, validity FROM AnswerInfoEntity WHERE idQuestion = :idQuestion AND validity = true LIMIT 1")
+    @Query(" SELECT answerId, answer, validity FROM AnswerInfoEntity WHERE idQuestion = :idQuestion AND validity = true LIMIT 1")
     suspend fun getCorrectAnswer(idQuestion: Int): List<QuizzViewModel.AnswerSummary>
 
 
