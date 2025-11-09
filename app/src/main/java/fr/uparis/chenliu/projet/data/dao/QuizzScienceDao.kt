@@ -7,7 +7,7 @@ import fr.uparis.chenliu.projet.data.entity.QuizzScienceEntity
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
 @Dao
-interface QuizzMathsDao {
+interface QuizzScienceDao {
 
     @Insert
     suspend fun insertQuestion(question: QuizzScienceEntity)

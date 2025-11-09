@@ -22,53 +22,30 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch {
             when (subject) {
                 "Science" -> {
-                    val currentDao = db.quizzMathsDao()
+                    val currentDao = db.quizzScienceDao()
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
                 }
-//                "Histoire" -> {
-//                    val currentDao = db.quizzHistoryDao()
-//                    val currentQuestion = currentDao.getQuestion(difficulty)
-//                    // question
-//                    question.value = currentQuestion.question
-//                    // responses
-//                    val bad = currentDao.getWrongAnswers(currentQuestion.idQuestion)
-//                    val good = currentDao.getCorrectAnswer(currentQuestion.idQuestion)
-//                    val res = (bad + good).shuffled()
-//                    for (i in 0..res.size - 1) {
-//                        answers[i].value = res[i]
-//                    }
-//                }
-//                "Géographie" -> {
-//                    val currentDao = db.quizzGeoDao()
-//                    val currentQuestion = currentDao.getQuestion(difficulty)
-//                    // question
-//                    question.value = currentQuestion.question
-//                    // responses
-//                    val bad = currentDao.getWrongAnswers(currentQuestion.idQuestion)
-//                    val good = currentDao.getCorrectAnswer(currentQuestion.idQuestion)
-//                    val res = (bad + good).shuffled()
-//                    for (i in 0..res.size - 1) {
-//                        answers[i].value = res[i]
-//                    }
-//                }
-//                "Informatique" -> {
-//                    val currentDao = db.quizzInfoDao()
-//                    val currentQuestion = currentDao.getQuestion(difficulty)
-//                    // question
-//                    question.value = currentQuestion.question
-//                    // responses
-//                    val bad = currentDao.getWrongAnswers(currentQuestion.idQuestion)
-//                    val good = currentDao.getCorrectAnswer(currentQuestion.idQuestion)
-//                    val res = (bad + good).shuffled()
-//                    for (i in 0..res.size - 1) {
-//                        answers[i].value = res[i]
-//                    }
-//                }
-                else -> db.quizzMathsDao()
+                "Gastronomie" -> {
+                    val currentDao = db.quizzGastronomieDao()
+                    val currentQuestion = currentDao.getQuestion(difficulty)
+                    // question
+                    question.value = currentQuestion.question
+                    // responses
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                }
+                "Géographie" -> {
+                    val currentDao = db.quizzGeoDao()
+                    val currentQuestion = currentDao.getQuestion(difficulty)
+                    // question
+                    question.value = currentQuestion.question
+                    // responses
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                }
+                else -> db.quizzScienceDao()
             }
         }
     }

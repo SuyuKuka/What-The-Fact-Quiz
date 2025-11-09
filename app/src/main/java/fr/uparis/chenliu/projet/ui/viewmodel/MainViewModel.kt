@@ -8,6 +8,8 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.data.database.AppDatabase
+import fr.uparis.chenliu.projet.data.entity.QuizzGastronomieEntity
+import fr.uparis.chenliu.projet.data.entity.QuizzGeoEntity
 import fr.uparis.chenliu.projet.data.entity.QuizzScienceEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
@@ -67,9 +69,8 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
     suspend fun initQuizz(c:Context) {
         quizz(c, R.raw.science)
-//        quizz(c, R.raw.quizzinfo)
-//        quizz(c, R.raw.quizzhistory)
-//        quizz(c, R.raw.quizzgeo)
+        quizz(c, R.raw.gastronomie)
+        quizz(c, R.raw.geo)
     }
 
     suspend fun quizz(c: Context, quizz: Int) {
@@ -84,7 +85,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         qData.forEach {
             when (quizz) {
                 R.raw.science -> {
-                    db.quizzMathsDao().insertQuestion(
+                    db.quizzScienceDao().insertQuestion(
                         QuizzScienceEntity(
                             id = it.id,
                             question = it.question,
@@ -94,33 +95,28 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                         )
                     )
                 }
-//                R.raw.quizzinfo -> {
-//                    db.quizzInfoDao().insertQuestion(
-//                        QuizzInfoEntity(
-//                            difficulty = it.difficulty,
-//                            question = it.question,
-//                            resources = it.resources
-//                        )
-//                    )
-//                }
-//                R.raw.quizzgeo -> {
-//                    db.quizzGeoDao().insertQuestion(
-//                        QuizzGeoEntity(
-//                            difficulty = it.difficulty,
-//                            question = it.question,
-//                            resources = it.resources
-//                        )
-//                    )
-//                }
-//                R.raw.quizzhistory -> {
-//                    db.quizzHistoryDao().insertQuestion(
-//                        QuizzHistoryEntity(
-//                            difficulty = it.difficulty,
-//                            question = it.question,
-//                            resources = it.resources
-//                        )
-//                    )
-//                }
+                R.raw.geo -> {
+                    db.quizzGeoDao().insertQuestion(
+                        QuizzGeoEntity(
+                            id = it.id,
+                            question = it.question,
+                            propositions = it.propositions,
+                            answer = it.answer,
+                            difficulty = it.difficulty
+                        )
+                    )
+                }
+                R.raw.gastronomie -> {
+                    db.quizzGastronomieDao().insertQuestion(
+                        QuizzGastronomieEntity(
+                            id = it.id,
+                            question = it.question,
+                            propositions = it.propositions,
+                            answer = it.answer,
+                            difficulty = it.difficulty
+                        )
+                    )
+                }
             }
         }
     }
