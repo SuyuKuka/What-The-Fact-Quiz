@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -24,6 +25,7 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -90,7 +92,7 @@ fun MyScreenMainMenu(username: String, model: MenuViewModel = viewModel()) {
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        topBar = { MonTopBar() },
+        topBar = { MonTopBar(model = model) },
         bottomBar = { MonBottomBar(model = model, backStack = backStack) },
         snackbarHost = { SnackbarHost(hostState = snack) }
     )
@@ -99,7 +101,7 @@ fun MyScreenMainMenu(username: String, model: MenuViewModel = viewModel()) {
             backStack = backStack,
             modifier = Modifier.padding(paddingValues = pad),
             entryProvider = entryProvider{
-                entry<Screen.Profile> { ProfileScreen(model = model)}
+                entry<Screen.Profile> { model.getUsers(); ProfileScreen(model = model)}
                 entry<Screen.Leaderboard> { LeaderboardScreen(model = model) }
                 entry<Screen.Home> { HomeScreen(model = model)}
                 entry<Screen.Shop> { ShopScreen(model = model) }
@@ -115,10 +117,30 @@ fun MyScreenMainMenu(username: String, model: MenuViewModel = viewModel()) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MonTopBar() = TopAppBar(
-    title = { Text(text = "WTF QUIZ", style = MaterialTheme.typography.displayLarge) },
-    colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.secondaryContainer),
-)
+fun MonTopBar(model: MenuViewModel) {
+    val energy = model.energy.intValue
+    val timeEnergy = model.timeEnergy.value
+
+    TopAppBar(
+        title = {
+            Column {
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                    Text(text = "Pseudo : ${model.username.value}", fontSize = 20.sp)
+                    if (model.subscription.value) {
+                        Text(text = "Energie : ∞/20⚡", fontSize = 15.sp)
+                    } else {
+                        if (energy == 20) {
+                            Text(text = "Energie : $energy/20⚡", fontSize = 15.sp)
+                        } else {
+                            Text(text = "Energie : $energy/20⚡ ($timeEnergy)", fontSize = 15.sp)
+                        }
+                    }
+                }
+            }
+        },
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)
+    )
+}
 
 @Composable
 fun MonBottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
@@ -164,7 +186,9 @@ fun MonBottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                 leave()
             },
             title = "Changements Non Sauvegardés",
-            text = "Des modifications n'ont pas été enregistrées. Voulez-vous les conserver?"
+            text = "Des modifications n'ont pas été enregistrées. Voulez-vous les conserver?",
+            onConfirmText = "Oui",
+            onCancelText = "Non"
         )
     }
 }
@@ -177,11 +201,10 @@ fun MonBottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 fun ProfileScreen(model: MenuViewModel) {
     val username = model.username.value
     val subscription = model.subscription.value
-    val duration = model.duration.value
-    val day = LocalDateTime.now().dayOfMonth.toString()
+    val endDate = model.endDate.value.split("/")
+    val day = LocalDateTime.now().dayOfMonth
     val month = LocalDateTime.now().month.value
-    val year = LocalDateTime.now().year.toString()
-
+    val year = LocalDateTime.now().year
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
@@ -192,9 +215,15 @@ fun ProfileScreen(model: MenuViewModel) {
         )
         Column {
             Text(text = "PROFILE")
-            Text(text = "Hello ${username}")
-            Text(text = "Abonné : $subscription")
-            Text(text = "Temps restant : $day/$month/$year -> $duration")
+            Row {
+                Text(text = "Pseudo ")
+                UnderlineTextField(value = username) { model.username.value = it }
+            }
+            if (subscription) {
+                val remaining = (endDate[2].toInt() - year) * 12 * 30 + (endDate[1].toInt() - month) * 30 + (endDate[0].toInt() - day)
+                Text(text = "Abonné 👑")
+                Text(text = "Temps restant : ${remaining}j")
+            }
         }
     }
 }
@@ -218,7 +247,6 @@ fun HomeScreen(model: MenuViewModel) {
     val difficulty = listOf("Facile", "Moyen", "Difficile")
     val subject = listOf("Maths", "Histoire", "Géographie", "Informatique", "Pokémon")
 
-
     val selectedDiff = remember { mutableStateOf(difficulty[0]) }
     val selectedSubj = remember { mutableStateOf(subject[0]) }
     val context = LocalContext.current
@@ -234,6 +262,7 @@ fun HomeScreen(model: MenuViewModel) {
             contentScale = ContentScale.Crop
         )
         Column {
+            Text(text = "WTF QUIZ")
             Row(modifier = Modifier.fillMaxWidth()) {
                 difficulty.forEach { diff ->
                     Button(
@@ -258,7 +287,7 @@ fun HomeScreen(model: MenuViewModel) {
             ) {
                 items(subject) { subj ->
                     Button(
-                        onClick = { selectedSubj.value = subj  },
+                        onClick = { selectedSubj.value = subj },
                         modifier = Modifier
                             .aspectRatio(1f)
                             .padding(8.dp)
@@ -280,7 +309,7 @@ fun HomeScreen(model: MenuViewModel) {
                 horizontalArrangement = Arrangement.Center
             ) {
                 Button(
-                    onClick = { context.startActivity(intent) },
+                    onClick = { model.removeEnergy(); context.startActivity(intent) },
                     modifier = Modifier.fillMaxWidth(0.8f)
                 ) {
                     Text("GOGOGOGOGO")
@@ -293,6 +322,9 @@ fun HomeScreen(model: MenuViewModel) {
 
 @Composable
 fun ShopScreen(model: MenuViewModel) {
+    val showAlertMonth = remember { mutableStateOf(false) }
+    val showAlertYear = remember { mutableStateOf(false) }
+
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = model.translateBackground()),
@@ -300,21 +332,43 @@ fun ShopScreen(model: MenuViewModel) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Text(text = "SHOP")
         Column {
+            Text(text = "SHOP")
             Row {
-                Button(onClick = { manageSubscription(model = model, isMonthly = true)}) {
+                Button(onClick = { showAlertMonth.value = true }) {
                     Text(text = "1.99€/mois")
                 }
-                Button(onClick = { manageSubscription(model = model, isMonthly = false) }) {
+                Button(onClick = { showAlertYear.value = true }) {
                     Text(text = "9.99€/an")
+                }
+
+                if (showAlertMonth.value) {
+                    Alert(
+                        onConfirm = { manageSubscription(model = model, isMonthly = true); showAlertMonth.value = false },
+                        onCancel = { showAlertMonth.value = false },
+                        title = "Confirmer l'abonnement mensuel",
+                        text = "L'abonnement sera actif pendant un mois. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?",
+                        onConfirmText = "Confirmer",
+                        onCancelText = "Annuler"
+                    )
+                }
+
+                if (showAlertYear.value) {
+                    Alert(
+                        onConfirm = { manageSubscription(model = model, isMonthly = false); showAlertYear.value = false },
+                        onCancel = { showAlertYear.value = false },
+                        title = "Confirmer l'abonnement annuel",
+                        text = "L'abonnement sera actif pendant un an. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?",
+                        onConfirmText = "Confirmer",
+                        onCancelText = "Annuler"
+                    )
                 }
             }
         }
     }
 }
 
-fun manageSubscription(model: MenuViewModel,isMonthly: Boolean) {
+fun manageSubscription(model: MenuViewModel, isMonthly: Boolean) {
     if (model.subscription.value) {
         model.extendSubscription(isMonthly = isMonthly)
     } else {
@@ -443,20 +497,36 @@ fun ChoiceField(label: String, choice: Int, onValueChange: (Int) -> Unit, choice
 }
 
 @Composable
-fun Alert(onConfirm: () -> Unit, onCancel: () -> Unit, title: String, text: String) {
+fun Alert(onConfirm: () -> Unit, onCancel: () -> Unit, title: String, text: String, onConfirmText: String, onCancelText: String) {
     AlertDialog(
         onDismissRequest = onCancel,
         title = { Text(text = title) },
-        text = { Text(text) },
+        text = { Text(text = text) },
         confirmButton = {
             Button(onClick = onConfirm) {
-                Text(text = "Oui")
+                Text(text = onConfirmText)
             }
         },
         dismissButton = {
             Button(onClick = onCancel) {
-                Text(text = "Non")
+                Text(text = onCancelText)
             }
         }
     )
+}
+
+@Composable
+fun UnderlineTextField(value: String, onValueChange: (String) -> Unit) {
+    Column {
+        BasicTextField(
+            value = value,
+            onValueChange = onValueChange,
+            modifier = Modifier.fillMaxWidth()
+        )
+        HorizontalDivider(
+            modifier = Modifier.fillMaxWidth(),
+            thickness = 1.dp,
+            color = Color.Black
+        )
+    }
 }

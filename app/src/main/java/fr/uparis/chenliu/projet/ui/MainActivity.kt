@@ -62,14 +62,14 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel(), quizzmo
         LoadingScreen()
     } else {
         if (exist) {
-            if (model.duration.value != "") {
-                val duration = model.duration.value.split("/")
+            if (model.endDate.value != "") {
+                val endDate = model.endDate.value.split("/")
                 val dayToday = LocalDateTime.now().dayOfMonth
                 val monthToday = LocalDateTime.now().month.value
                 val yearToday = LocalDateTime.now().year
-                if (duration[2].toInt() <= yearToday) {
-                    if (duration[1].toInt() < monthToday) {
-                        if (duration[0].toInt() <= dayToday) {
+                if (endDate[2].toInt() <= yearToday) {
+                    if (endDate[1].toInt() < monthToday) {
+                        if (endDate[0].toInt() <= dayToday) {
                             model.expireSubscription()
                         }
                     }

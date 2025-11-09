@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.data.dao
 
+import android.health.connect.datatypes.units.Energy
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -20,8 +21,11 @@ interface UsersDao {
     @Query("UPDATE UsersEntity SET subscribe = :subscribe WHERE userId = :userId")
     suspend fun updateSubscribe(userId: Int, subscribe: Boolean)
 
-    @Query("UPDATE UsersEntity SET duration = :duration WHERE userId = :userId")
-    suspend fun updateDuration(userId: Int, duration: String)
+    @Query("UPDATE UsersEntity SET endDate = :endDate WHERE userId = :userId")
+    suspend fun updateDuration(userId: Int, endDate: String)
+
+    @Query("UPDATE UsersEntity SET energy = :energy, lastTimeEnergy = :lastTimeEnergy WHERE userId = :userId")
+    suspend fun updateEnergy(userId: Int, energy: Int, lastTimeEnergy: Long)
 
     @Query("DELETE FROM UsersEntity")
     suspend fun deleteAllUsers()
