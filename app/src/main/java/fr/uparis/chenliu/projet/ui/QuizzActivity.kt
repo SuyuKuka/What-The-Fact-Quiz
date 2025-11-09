@@ -1,6 +1,7 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.os.Bundle
+import android.util.Log.i
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
@@ -150,9 +151,6 @@ fun Result(
 ) {
     val a = LocalActivity.current
 
-    val triplet = questionHistory.mapIndexed { index,question ->
-        Triple(question, answerHistory[index], goodAnswer[index])
-    }
     Column(
         modifier = Modifier
             .fillMaxSize(),
@@ -166,17 +164,17 @@ fun Result(
                 .fillMaxWidth()
                 .weight(4f)
         ) {
-            itemsIndexed(triplet) { i, (question, answer, good) ->
+            itemsIndexed(questionHistory) { i, question ->
 
             val index = i+1
-            if (answer.validity) {
+            if (answerHistory[i].validity) {
                     Text("Question ${index}: $question", color = Color.Green)
-                    Text("Réponse : ${answer.answer}", color = Color.Green)
+                    Text("Réponse : ${answerHistory[i].answer}", color = Color.Green)
                 }
                 else {
                     Text("Question ${index}: $question", color = Color.Red)
-                    Text("Faux : ${answer.answer}", color = Color.Red)
-                    Text("Réponse -> $good", color = Color.Blue)
+                    Text("Faux : ${answerHistory[i].answer}", color = Color.Red)
+                    Text("Réponse -> ${goodAnswer[i]}", color = Color.Blue)
                 }
 
             }
