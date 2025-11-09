@@ -42,7 +42,6 @@
     { "difficulty": "Moyen", "question": "Qui était Léonard de Vinci ?", "resources": null },
     { "difficulty": "Moyen", "question": "Quel pape a excommunié Martin Luther ?", "resources": null },
 
-
     { "difficulty": "Difficile", "question": "Quelle bataille est considérée comme le tournant de la Seconde Guerre mondiale en Europe ?", "resources": null },
     { "difficulty": "Difficile", "question": "En quelle année l’Empire romain d’Occident s’est-il effondré ?", "resources": null },
     { "difficulty": "Difficile", "question": "Quel traité a mis fin à la guerre de 30 ans en 1648 ?", "resources": null },
@@ -485,7 +484,4 @@
     { "idQuestion": 60, "answer": "L’Autriche", "validity": false },
     { "idQuestion": 60, "answer": "La Russie", "validity": false }
   ]
-
-
-
 }

@@ -4,7 +4,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import fr.uparis.chenliu.projet.data.entity.AnswerHistoryEntity
-
 import fr.uparis.chenliu.projet.data.entity.QuizzHistoryEntity
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 

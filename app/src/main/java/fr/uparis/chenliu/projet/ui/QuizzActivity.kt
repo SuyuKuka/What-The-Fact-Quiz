@@ -145,7 +145,7 @@ fun Result(score: MutableIntState, nbQuestion: MutableIntState) {
                 Text(text = "Maison")
             }
             Button(
-                onClick = { nbQuestion.intValue = 10},
+                onClick = { nbQuestion.intValue = 10; score.intValue = 0},
                 modifier = Modifier
                     .padding(8.dp)
             ) {

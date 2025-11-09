@@ -216,7 +216,7 @@ fun LeaderboardScreen(model: MenuViewModel) {
 fun HomeScreen(model: MenuViewModel) {
     // todo: load depuis la db
     val difficulty = listOf("Facile", "Moyen", "Difficile")
-    val subject = listOf("Maths", "Histoire", "Géographie", "Science")
+    val subject = listOf("Maths", "Histoire", "Géographie", "Informatique", "Pokémon")
 
 
     val selectedDiff = remember { mutableStateOf(difficulty[0]) }
@@ -269,7 +269,7 @@ fun HomeScreen(model: MenuViewModel) {
                             contentColor = Color.White
                         )
                     ) {
-                        Text("QUIZZ DE $subj", textAlign = TextAlign.Center)
+                        Text(subj, textAlign = TextAlign.Center)
                     }
                 }
             }
