@@ -1,245 +1,1354 @@
 {
   "quizz": [
-      {
-        "id": 1,
-        "question": "Quelle carbonade est composée de morceaux de viande mijotés dans une sauce à la bière ?",
-        "propositions": ["Bruxelloise", "Germanique", "Wallone", "Flamande"],
-        "answer": "Flamande",
-        "difficulty": "Facile",
-        "anecdote": "Le mot carbonnade est issu du mot charbon car ce plat était mijoté longuement sur les braises de charbon de bois."
-      },
-      {
-        "id": 2,
-        "question": "Quel pain brioché constellé de pépites de sucre est vendu dans tout le pays ?",
-        "propositions": ["Croustillon", "Merveilleux", "Craquelin", "Gosette"],
-        "answer": "Craquelin",
-        "difficulty": "Facile",
-        "anecdote": "À Grammont, les craquelins sont en forme d'anneaux et sont distribués lors de la fête du feu et du pain de la fin de l'hiver."
-      },
-      {
-        "id": 3,
-        "question": "Quelle pâtisserie chaude est un classique des kermesses et des foires belges ?",
-        "propositions": ["Nid d'oiseau", "Caricole", "Stoemp", "Croustillon"],
-        "answer": "Croustillon",
-        "difficulty": "Facile",
-        "anecdote": "Les croustillons sont constitués de petites bouchées de pâte à beignets cuites dans une friture saupoudrées de sucre glace."
-      },
-      {
-        "id": 4,
-        "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
-        "propositions": ["Gandeuillot", "Fricadelle", "Rosette", "Longeole"],
-        "answer": "Fricadelle",
-        "difficulty": "Facile",
-        "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
-      },
-      {
-        "id": 5,
-        "question": "Quelle gaufre à base de pâte fermentée à la levure avec cannelle présente du sucre perlé ?",
-        "propositions": ["Gaufre de Mons", "Gaufre d'Anvers", "Gaufre de Liège", "Gaufre de Tournai"],
-        "answer": "Gaufre de Liège",
-        "difficulty": "Facile",
-        "anecdote": "Son origine est concomitante de la mise sur le marché du sucre perlé généré au départ du sucre de betterave de Hesbaye."
-      },
-      {
-        "id": 6,
-        "question": "Quelle demi-baguette contient une viande chaude, des frites et de la sauce ?",
-        "propositions": ["Mitraillette", "Truffade", "Rosti", "Frico"],
-        "answer": "Mitraillette",
-        "difficulty": "Facile",
-        "anecdote": "En France, un sandwich similaire est vendu sous le nom d'américain, dans le nord de la France et à la Réunion."
-      },
-      {
-        "id": 7,
-        "question": "Quel mets très populaire en Belgique peut être mariné, nature, à la crème ou à l'ail ?",
-        "propositions": ["Tielle", "Oursinade", "Koulibiak", "Moules-frites"],
-        "answer": "Moules-frites",
-        "difficulty": "Facile",
-        "anecdote": "La portion de moules de un kilogramme par personne est souvent servie à chaque convive dans son récipient de cuisson."
-      },
-      {
-        "id": 8,
-        "question": "Quel plat belge sucré-salé, souvent servi en entrée, est composé de thon ?",
-        "propositions": ["Waterzooï", "Escavèche", "Pêche au thon", "Bouquette"],
-        "answer": "Pêche au thon",
-        "difficulty": "Facile",
-        "anecdote": "Il se compose d'une pêche, farcie avec un mélange de thon et de mayonnaise, parfois agrémenté d'oignon et d'épices."
-      },
-      {
-        "id": 9,
-        "question": "Dans quel gratin les endives sont-elles enroulées dans des tranches de jambon ?",
-        "propositions": ["Chicon-gratin", "Bouchon", "Sarcive", "Croque-monsieur"],
-        "answer": "Chicon-gratin",
-        "difficulty": "Facile",
-        "anecdote": "La dénomination chicon vient du terme utilisé dans le nord de la France et en Belgique pour désigner l'endive."
-      },
-      {
-        "id": 10,
-        "question": "Quelle abaisse en pâte levée est garnie de riz au lait mélangé avec de l'oeuf ?",
-        "propositions": ["Tarte au riz", "Bouquette", "Carmique", "Cougnou"],
-        "answer": "Tarte au riz",
-        "difficulty": "Facile",
-        "anecdote": "Dans certaines régions, des boulangers ajoutent du macaron écrasé au riz au lait qui est alors recouvert d'un autre macaron écrasé."
-      },
-      {
-        "id": 11,
-        "question": "Quels boulets baignent dans une sauce aigre-douce à base d'oignons et de cassonade ?",
-        "propositions": ["À la athoise", "À la liégeoise", "À la montoise", "À la namuroise"],
-        "answer": "À la liégeoise",
-        "difficulty": "Moyen",
-        "anecdote": "Cette sauce porte le nom de sauce lapin, qui ne contient pas de lapin, mais tiendrait son nom de madame Géraldine Lapin."
-      },
-      {
-        "id": 12,
-        "question": "Quel biscuit extrêmement dur est fait de miel caramélisé et de farine ?",
-        "propositions": ["Couque de Dinant", "Zézette", "Craquelin", "Nic-nac"],
-        "answer": "Couque de Dinant",
-        "difficulty": "Moyen",
-        "anecdote": "Difficile à manger, la couque de Dinant est probablement un avatar des préparations faites pour les bateliers de la Meuse."
-      },
-      {
-        "id": 13,
-        "question": "Quelle recette de condiment à base de vinaigre appartient à la famille des pickles ?",
-        "propositions": ["Piccalilli", "Melfor", "Vincotto", "Myrtus"],
-        "answer": "Piccalilli",
-        "difficulty": "Moyen",
-        "anecdote": "Le piccalilli belge, appelé aussi pickles, est une sauce à base de légumes, de vinaigre, de sucre et de moutarde."
-      },
-      {
-        "id": 14,
-        "question": "Quel biscuit à la texture granuleuse est traditionnellement parfumé à la cannelle ?",
-        "propositions": ["Acibadem", "Torta", "Spéculoos", "Kourabie"],
-        "answer": "Spéculoos",
-        "difficulty": "Moyen",
-        "anecdote": "Le spéculoos est le plus souvent consommé lors de l'avent et plus particulièrement lors de la fête de saint Nicolas, le 6 décembre."
-      },
-      {
-        "id": 15,
-        "question": "Quelle spécialité est faite à base de chou vert, d'épices et de viande blanche de porc ?",
-        "propositions": ["Trulle", "Boudin vert", "Enchaud", "Pastrami"],
-        "answer": "Boudin vert",
-        "difficulty": "Moyen",
-        "anecdote": "Sa fabrication est jugée chaque année par les mangeurs de boudin vert qui accordent aux meilleurs des labels fort recherchés."
-      },
-      {
-        "id": 16,
-        "question": "En Belgique, quelle autre nom est donné au chausson aux pommes ?",
-        "propositions": ["Pomette", "Josette", "Cosette", "Gosette"],
-        "answer": "Gosette",
-        "difficulty": "Moyen",
-        "anecdote": "En Belgique, le chausson aux pommes est fait non pas avec de la pâte feuilletée mais avec de la pâte à tarte."
-      },
-      {
-        "id": 17,
-        "question": "Quelle variété de chou peu digeste provoque des ballonnements et des flatulences ?",
-        "propositions": ["Chou cavalier", "Chou de Bruxelles", "Chou frisé", "Chou pommé"],
-        "answer": "Chou de Bruxelles",
-        "difficulty": "Moyen",
-        "anecdote": "Le goût amer de ce légume devrait nous alerter sur sa toxicité, mais certaines personnes ne possèdent pas le gène de détection."
-      },
-      {
-        "id": 18,
-        "question": "Quelle viennoiserie est consommée durant les périodes de la Saint-Nicolas et de Noël ?",
-        "propositions": ["Africain", "Cougnou", "Faluche", "Spéculoos"],
-        "answer": "Cougnou",
-        "difficulty": "Moyen",
-        "anecdote": "Consommé avec un bol de chocolat chaud, ce pain brioché a souvent une forme qui rappelle celle de l'enfant Jésus emmailloté."
-      },
-      {
-        "id": 19,
-        "question": "Quelle roulade de viande farcie est souvent dégustée en Belgique francophone ?",
-        "propositions": ["Hoosh", "Bounarine", "Oiseau sans tête", "Vol-au-vent"],
-        "answer": "Oiseau sans tête",
-        "difficulty": "Moyen",
-        "anecdote": "Sa cuisson aisée, sa saveur et son prix de revient raisonnable en font un mets courant, toutes régions confondues."
-      },
-      {
-        "id": 20,
-        "question": "Quelle sorte de mélasse est issue de la cuisson de jus de pommes et de poires ?",
-        "propositions": ["Sirop de Liège", "Diabolo", "Sirop de batterie", "Sirop d'érable"],
-        "answer": "Sirop de Liège",
-        "difficulty": "Moyen",
-        "anecdote": "Ces siroperies sont principalement centralisées dans le pays de Herve, dans le nord-est de la province de Liège."
-      },
-      {
-        "id": 21,
-        "question": "Quel plat unique de poulet ou de poisson se mange dans un bouillon lié à la crème ?",
-        "propositions": ["Carbonade", "Hochepot", "Waterzooï", "Potjevleesch"],
-        "answer": "Waterzooï",
-        "difficulty": "Difficile",
-        "anecdote": "Dans une version plus évoluée, on ajoute, en fin de cuisson, un demi-verre de bière ou de vin blanc demi-sec et fruité."
-      },
-      {
-        "id": 22,
-        "question": "Quelle confiserie de Malmedy comprend deux meringues soudées par une crème chantilly ?",
-        "propositions": ["Baiser", "Bonnet", "Bigorneau", "Bêtise"],
-        "answer": "Baiser",
-        "difficulty": "Difficile",
-        "anecdote": "Le baiser de Malmedy aurait été inventé au milieu du XIXe siècle par le pâtissier Rodolphe Wiertz, originaire de Hellenthal."
-      },
-      {
-        "id": 23,
-        "question": "Quelle spécialité belge est composée d'un toast nappé de filet américain ?",
-        "propositions": ["Reuben", "Cannibale", "Chivito", "Wrap"],
-        "answer": "Cannibale",
-        "difficulty": "Difficile",
-        "anecdote": "Le cannibale est souvent servi sur une assiette garnie de crudités ou de salade, accompagné de sauce Worcestershire."
-      },
-      {
-        "id": 24,
-        "question": "Quelle purée de pommes de terre est mélangée avec un ou plusieurs légumes ?",
-        "propositions": ["Chupe", "Stoemp", "Ocopa", "Bombine"],
-        "answer": "Stoemp",
-        "difficulty": "Difficile",
-        "anecdote": "Il accompagne traditionnellement des boudins poêlés, du lard rôti, des saucisses de campagne ou des oeufs sur le plat."
-      },
-      {
-        "id": 25,
-        "question": "Quelle anguille conservée dans du vinaigre est typique du Namurois ?",
-        "propositions": ["Frifri", "Escavèche", "Pacade", "Bouillie"],
-        "answer": "Escavèche",
-        "difficulty": "Difficile",
-        "anecdote": "La recette d'origine est à base d'anguille mais peut aussi se concevoir avec d'autres poissons tels que la truite ou le brochet."
-      },
-      {
-        "id": 26,
-        "question": "Quel pot-au-feu flamand est cuisiné à base de queue de boeuf, de lard salé et de légumes ?",
-        "propositions": ["Hochepot", "Tielle", "Stoemp", "Frifri"],
-        "answer": "Hochepot",
-        "difficulty": "Difficile",
-        "anecdote": "Le hochepot était anciennement un mets où entraient de la viande, des châtaignes et des navets cuits avec du bouillon."
-      },
-      {
-        "id": 27,
-        "question": "Quel filet de hareng mariné est enroulé autour d'un oignon ou d'un cornichon vinaigré ?",
-        "propositions": ["Stoemp", "Hochepot", "Potjevleesch", "Rollmops"],
-        "answer": "Rollmops",
-        "difficulty": "Difficile",
-        "anecdote": "Après ouverture de la boîte, les rollmops peuvent être consommés froids, sans les dérouler, ou chauds sur du pain."
-      },
-      {
-        "id": 28,
-        "question": "Quelle spécialité est faite de blettes, de fromage blanc de ferme maigre et de beurre ?",
-        "propositions": ["Tarte al d'jote", "Rombosse", "Touffaye", "Chassart"],
-        "answer": "Tarte al d'jote",
-        "difficulty": "Difficile",
-        "anecdote": "Au début du mois de février de chaque année a lieu dans la ville de Nivelles la remise des labels de qualité (étoiles)."
-      },
-      {
-        "id": 29,
-        "question": "Dans quel plat des morceaux de viande sont pris dans de la gelée légèrement vinaigrée ?",
-        "propositions": ["Potjevleesch", "Oiseau sans tête", "Vergeoise", "Cannibale"],
-        "answer": "Potjevleesch",
-        "difficulty": "Difficile",
-        "anecdote": "Le potjevleesch est servi avec des frites qui font fondre la gelée, ou de manière traditionnelle avec des pommes dunkerquoises."
-      },
-      {
-        "id": 30,
-        "question": "Quelle tarte n'est consommée qu'au moment de la célèbre ducasse d'Ath ?",
-        "propositions": ["Tarte au riz", "Tarte à la gomme", "Tarte à masteilles", "Tarte al d'jote"],
-        "answer": "Tarte à masteilles",
-        "difficulty": "Difficile",
-        "anecdote": "Les ingrédients principaux sont des pains secs, du sucre, du lait, des oeufs, des macarons et des amandes douces et amères."
-      }
-    ]
-  }
-
+    {
+      "id": 1,
+      "question": "Quelle carbonade est composée de morceaux de viande mijotés dans une sauce à la bière ?",
+      "propositions": [
+        "Bruxelloise",
+        "Germanique",
+        "Wallone",
+        "Flamande",
+        "Liégeoise",
+        "Anversoise"
+      ],
+      "answer": "Flamande",
+      "difficulty": "Facile",
+      "anecdote": "Le mot carbonnade est issu du mot charbon car ce plat était mijoté longuement sur les braises de charbon de bois."
+    },
+    {
+      "id": 2,
+      "question": "Quel pain brioché constellé de pépites de sucre est vendu dans tout le pays ?",
+      "propositions": [
+        "Croustillon",
+        "Merveilleux",
+        "Craquelin",
+        "Gosette",
+        "Cougnou",
+        "Bostok"
+      ],
+      "answer": "Craquelin",
+      "difficulty": "Facile",
+      "anecdote": "À Grammont, les craquelins sont en forme d'anneaux et sont distribués lors de la fête du feu et du pain de la fin de l'hiver."
+    },
+    {
+      "id": 3,
+      "question": "Quelle pâtisserie chaude est un classique des kermesses et des foires belges ?",
+      "propositions": [
+        "Nid d'oiseau",
+        "Caricole",
+        "Stoemp",
+        "Croustillon",
+        "Couque de Dinant",
+        "Bouquette"
+      ],
+      "answer": "Croustillon",
+      "difficulty": "Facile",
+      "anecdote": "Les croustillons sont constitués de petites bouchées de pâte à beignets cuites dans une friture saupoudrées de sucre glace."
+    },
+    {
+      "id": 4,
+      "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
+      "propositions": [
+        "Gandeuillot",
+        "Fricadelle",
+        "Rosette",
+        "Longeole",
+        "Boudin noir",
+        "Merguez"
+      ],
+      "answer": "Fricadelle",
+      "difficulty": "Facile",
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
+    },
+    {
+      "id": 5,
+      "question": "Quelle gaufre à base de pâte fermentée à la levure avec cannelle présente du sucre perlé ?",
+      "propositions": [
+        "Gaufre de Mons",
+        "Gaufre d'Anvers",
+        "Gaufre de Liège",
+        "Gaufre de Tournai",
+        "Gaufre de Bruxelles",
+        "Gaufre fourrée"
+      ],
+      "answer": "Gaufre de Liège",
+      "difficulty": "Facile",
+      "anecdote": "Son origine est concomitante de la mise sur le marché du sucre perlé généré au départ du sucre de betterave de Hesbaye."
+    },
+    {
+      "id": 6,
+      "question": "Quelle demi-baguette contient une viande chaude, des frites et de la sauce ?",
+      "propositions": [
+        "Mitraillette",
+        "Truffade",
+        "Rosti",
+        "Frico",
+        "Américain",
+        "Brochette"
+      ],
+      "answer": "Mitraillette",
+      "difficulty": "Facile",
+      "anecdote": "En France, un sandwich similaire est vendu sous le nom d'américain, dans le nord de la France et à la Réunion."
+    },
+    {
+      "id": 7,
+      "question": "Quel mets très populaire en Belgique peut être mariné, nature, à la crème ou à l'ail ?",
+      "propositions": [
+        "Tielle",
+        "Oursinade",
+        "Koulibiak",
+        "Moules-frites",
+        "Carbonades",
+        "Stoemp"
+      ],
+      "answer": "Moules-frites",
+      "difficulty": "Facile",
+      "anecdote": "La portion de moules de un kilogramme par personne est souvent servie à chaque convive dans son récipient de cuisson."
+    },
+    {
+      "id": 8,
+      "question": "Quel plat belge sucré-salé, souvent servi en entrée, est composé de thon ?",
+      "propositions": [
+        "Waterzooï",
+        "Escavèche",
+        "Pêche au thon",
+        "Bouquette",
+        "Tomate-crevette",
+        "Hareng fumé"
+      ],
+      "answer": "Pêche au thon",
+      "difficulty": "Facile",
+      "anecdote": "Il se compose d'une pêche, farcie avec un mélange de thon et de mayonnaise, parfois agrémenté d'oignon et d'épices."
+    },
+    {
+      "id": 9,
+      "question": "Dans quel gratin les endives sont-elles enroulées dans des tranches de jambon ?",
+      "propositions": [
+        "Chicon-gratin",
+        "Bouchon",
+        "Sarcive",
+        "Croque-monsieur",
+        "Tartiflette",
+        "Gratin dauphinois"
+      ],
+      "answer": "Chicon-gratin",
+      "difficulty": "Facile",
+      "anecdote": "La dénomination chicon vient du terme utilisé dans le nord de la France et en Belgique pour désigner l'endive."
+    },
+    {
+      "id": 10,
+      "question": "Quelle abaisse en pâte levée est garnie de riz au lait mélangé avec de l'oeuf ?",
+      "propositions": [
+        "Tarte au riz",
+        "Bouquette",
+        "Carmique",
+        "Cougnou",
+        "Vlaai",
+        "Tarte au maton"
+      ],
+      "answer": "Tarte au riz",
+      "difficulty": "Facile",
+      "anecdote": "Dans certaines régions, des boulangers ajoutent du macaron écrasé au riz au lait qui est alors recouvert d'un autre macaron écrasé."
+    },
+    {
+      "id": 11,
+      "question": "Quels boulets baignent dans une sauce aigre-douce à base d'oignons et de cassonade ?",
+      "propositions": [
+        "À la athoise",
+        "À la liégeoise",
+        "À la montoise",
+        "À la namuroise",
+        "À la bruxelloise",
+        "À la campinoise"
+      ],
+      "answer": "À la liégeoise",
+      "difficulty": "Moyen",
+      "anecdote": "Cette sauce porte le nom de sauce lapin, qui ne contient pas de lapin, mais tiendrait son nom de madame Géraldine Lapin."
+    },
+    {
+      "id": 12,
+      "question": "Quel biscuit extrêmement dur est fait de miel caramélisé et de farine ?",
+      "propositions": [
+        "Couque de Dinant",
+        "Zézette",
+        "Craquelin",
+        "Nic-nac",
+        "Spéculoos",
+        "Pain d'épices"
+      ],
+      "answer": "Couque de Dinant",
+      "difficulty": "Moyen",
+      "anecdote": "Difficile à manger, la couque de Dinant est probablement un avatar des préparations faites pour les bateliers de la Meuse."
+    },
+    {
+      "id": 13,
+      "question": "Quelle recette de condiment à base de vinaigre appartient à la famille des pickles ?",
+      "propositions": [
+        "Piccalilli",
+        "Melfor",
+        "Vincotto",
+        "Myrtus",
+        "Chutney",
+        "Relish"
+      ],
+      "answer": "Piccalilli",
+      "difficulty": "Moyen",
+      "anecdote": "Le piccalilli belge, appelé aussi pickles, est une sauce à base de légumes, de vinaigre, de sucre et de moutarde."
+    },
+    {
+      "id": 14,
+      "question": "Quel biscuit à la texture granuleuse est traditionnellement parfumé à la cannelle ?",
+      "propositions": [
+        "Acibadem",
+        "Torta",
+        "Spéculoos",
+        "Kourabie",
+        "Macaron",
+        "Palet breton"
+      ],
+      "answer": "Spéculoos",
+      "difficulty": "Moyen",
+      "anecdote": "Le spéculoos est le plus souvent consommé lors de l'avent et plus particulièrement lors de la fête de saint Nicolas, le 6 décembre."
+    },
+    {
+      "id": 15,
+      "question": "Quelle spécialité est faite à base de chou vert, d'épices et de viande blanche de porc ?",
+      "propositions": [
+        "Trulle",
+        "Boudin vert",
+        "Enchaud",
+        "Pastrami",
+        "Saucisson de Lyon",
+        "Mortadelle"
+      ],
+      "answer": "Boudin vert",
+      "difficulty": "Moyen",
+      "anecdote": "Sa fabrication est jugée chaque année par les mangeurs de boudin vert qui accordent aux meilleurs des labels fort recherchés."
+    },
+    {
+      "id": 16,
+      "question": "En Belgique, quelle autre nom est donné au chausson aux pommes ?",
+      "propositions": [
+        "Pomette",
+        "Josette",
+        "Cosette",
+        "Gosette",
+        "Rombosse",
+        "Boule de Berlin"
+      ],
+      "answer": "Gosette",
+      "difficulty": "Moyen",
+      "anecdote": "En Belgique, le chausson aux pommes est fait non pas avec de la pâte feuilletée mais avec de la pâte à tarte."
+    },
+    {
+      "id": 17,
+      "question": "Quelle variété de chou peu digeste provoque des ballonnements et des flatulences ?",
+      "propositions": [
+        "Chou cavalier",
+        "Chou de Bruxelles",
+        "Chou frisé",
+        "Chou pommé",
+        "Chou-fleur",
+        "Chou rouge"
+      ],
+      "answer": "Chou de Bruxelles",
+      "difficulty": "Moyen",
+      "anecdote": "Le goût amer de ce légume devrait nous alerter sur sa toxicité, mais certaines personnes ne possèdent pas le gène de détection."
+    },
+    {
+      "id": 18,
+      "question": "Quelle viennoiserie est consommée durant les périodes de la Saint-Nicolas et de Noël ?",
+      "propositions": [
+        "Africain",
+        "Cougnou",
+        "Faluche",
+        "Spéculoos",
+        "Mattentaart",
+        "Galette des Rois"
+      ],
+      "answer": "Cougnou",
+      "difficulty": "Moyen",
+      "anecdote": "Consommé avec un bol de chocolat chaud, ce pain brioché a souvent une forme qui rappelle celle de l'enfant Jésus emmailloté."
+    },
+    {
+      "id": 19,
+      "question": "Quelle roulade de viande farcie est souvent dégustée en Belgique francophone ?",
+      "propositions": [
+        "Hoosh",
+        "Bounarine",
+        "Oiseau sans tête",
+        "Vol-au-vent",
+        "Fricadelle",
+        "Pâté en croûte"
+      ],
+      "answer": "Oiseau sans tête",
+      "difficulty": "Moyen",
+      "anecdote": "Sa cuisson aisée, sa saveur et son prix de revient raisonnable en font un mets courant, toutes régions confondues."
+    },
+    {
+      "id": 20,
+      "question": "Quelle sorte de mélasse est issue de la cuisson de jus de pommes et de poires ?",
+      "propositions": [
+        "Sirop de Liège",
+        "Diabolo",
+        "Sirop de batterie",
+        "Sirop d'érable",
+        "Mélasse de caroube",
+        "Miel de sapin"
+      ],
+      "answer": "Sirop de Liège",
+      "difficulty": "Moyen",
+      "anecdote": "Ces siroperies sont principalement centralisées dans le pays de Herve, dans le nord-est de la province de Liège."
+    },
+    {
+      "id": 21,
+      "question": "Quel plat unique de poulet ou de poisson se mange dans un bouillon lié à la crème ?",
+      "propositions": [
+        "Carbonade",
+        "Hochepot",
+        "Waterzooï",
+        "Potjevleesch",
+        "Vol-au-vent",
+        "Choucroute"
+      ],
+      "answer": "Waterzooï",
+      "difficulty": "Difficile",
+      "anecdote": "Dans une version plus évoluée, on ajoute, en fin de cuisson, un demi-verre de bière ou de vin blanc demi-sec et fruité."
+    },
+    {
+      "id": 22,
+      "question": "Quelle confiserie de Malmedy comprend deux meringues soudées par une crème chantilly ?",
+      "propositions": [
+        "Baiser",
+        "Bonnet",
+        "Bigorneau",
+        "Bêtise",
+        "Merveilleux",
+        "Macaron"
+      ],
+      "answer": "Baiser",
+      "difficulty": "Difficile",
+      "anecdote": "Le baiser de Malmedy aurait été inventé au milieu du XIXe siècle par le pâtissier Rodolphe Wiertz, originaire de Hellenthal."
+    },
+    {
+      "id": 23,
+      "question": "Quelle spécialité belge est composée d'un toast nappé de filet américain ?",
+      "propositions": [
+        "Reuben",
+        "Cannibale",
+        "Chivito",
+        "Wrap",
+        "Tartare de bœuf",
+        "Mitraillette"
+      ],
+      "answer": "Cannibale",
+      "difficulty": "Difficile",
+      "anecdote": "Le cannibale est souvent servi sur une assiette garnie de crudités ou de salade, accompagné de sauce Worcestershire."
+    },
+    {
+      "id": 24,
+      "question": "Quelle purée de pommes de terre est mélangée avec un ou plusieurs légumes ?",
+      "propositions": [
+        "Chupe",
+        "Stoemp",
+        "Ocopa",
+        "Bombine",
+        "Truffade",
+        "Aligot"
+      ],
+      "answer": "Stoemp",
+      "difficulty": "Difficile",
+      "anecdote": "Il accompagne traditionnellement des boudins poêlés, du lard rôti, des saucisses de campagne ou des oeufs sur le plat."
+    },
+    {
+      "id": 25,
+      "question": "Quelle anguille conservée dans du vinaigre est typique du Namurois ?",
+      "propositions": [
+        "Frifri",
+        "Escavèche",
+        "Pacade",
+        "Bouillie",
+        "Waterzooï",
+        "Potjevleesch"
+      ],
+      "answer": "Escavèche",
+      "difficulty": "Difficile",
+      "anecdote": "La recette d'origine est à base d'anguille mais peut aussi se concevoir avec d'autres poissons tels que la truite ou le brochet."
+    },
+    {
+      "id": 26,
+      "question": "Quel pot-au-feu flamand est cuisiné à base de queue de boeuf, de lard salé et de légumes ?",
+      "propositions": [
+        "Hochepot",
+        "Tielle",
+        "Stoemp",
+        "Frifri",
+        "Carbonade",
+        "Potjevleesch"
+      ],
+      "answer": "Hochepot",
+      "difficulty": "Difficile",
+      "anecdote": "Le hochepot était anciennement un mets où entraient de la viande, des châtaignes et des navets cuits avec du bouillon."
+    },
+    {
+      "id": 27,
+      "question": "Quel filet de hareng mariné est enroulé autour d'un oignon ou d'un cornichon vinaigré ?",
+      "propositions": [
+        "Stoemp",
+        "Hochepot",
+        "Potjevleesch",
+        "Rollmops",
+        "Bismarck",
+        "Sild"
+      ],
+      "answer": "Rollmops",
+      "difficulty": "Difficile",
+      "anecdote": "Après ouverture de la boîte, les rollmops peuvent être consommés froids, sans les dérouler, ou chauds sur du pain."
+    },
+    {
+      "id": 28,
+      "question": "Quelle spécialité est faite de blettes, de fromage blanc de ferme maigre et de beurre ?",
+      "propositions": [
+        "Tarte al d'jote",
+        "Rombosse",
+        "Touffaye",
+        "Chassart",
+        "Tarte au maton",
+        "Tarte au sucre"
+      ],
+      "answer": "Tarte al d'jote",
+      "difficulty": "Difficile",
+      "anecdote": "Au début du mois de février de chaque année a lieu dans la ville de Nivelles la remise des labels de qualité (étoiles)."
+    },
+    {
+      "id": 29,
+      "question": "Dans quel plat des morceaux de viande sont pris dans de la gelée légèrement vinaigrée ?",
+      "propositions": [
+        "Potjevleesch",
+        "Oiseau sans tête",
+        "Vergeoise",
+        "Cannibale",
+        "Hochepot",
+        "Terrine"
+      ],
+      "answer": "Potjevleesch",
+      "difficulty": "Difficile",
+      "anecdote": "Le potjevleesch est servi avec des frites qui font fondre la gelée, ou de manière traditionnelle avec des pommes dunkerquoises."
+    },
+    {
+      "id": 30,
+      "question": "Quelle tarte n'est consommée qu'au moment de la célèbre ducasse d'Ath ?",
+      "propositions": [
+        "Tarte au riz",
+        "Tarte à la gomme",
+        "Tarte à masteilles",
+        "Tarte al d'jote",
+        "Tarte au maroilles",
+        "Tarte au chicon"
+      ],
+      "answer": "Tarte à masteilles",
+      "difficulty": "Difficile",
+      "anecdote": "Les ingrédients principaux sont des pains secs, du sucre, du lait, des oeufs, des macarons et des amandes douces et amères."
+    },
+    {
+      "id": 31,
+      "question": "Quel fromage français a été représenté par une jeune fille blonde avec des nattes ?",
+      "propositions": [
+        "Palet du Poitou",
+        "Petit chèvre",
+        "Belle des Champs",
+        "Tomme du Jura",
+        "Bûche de chèvre",
+        "Crottin de Chavignol"
+      ],
+      "answer": "Belle des Champs",
+      "difficulty": "Facile",
+      "anecdote": "Ce fromage à pâte molle et à croûte fleurie, à base de lait de chèvre cru, de forme cylindrique, pèse environ deux kilogrammes."
+    },
+    {
+      "id": 32,
+      "question": "Quel fromage industriel est généralement enrobé de paraffine teinte en rouge ?",
+      "propositions": [
+        "Époisses",
+        "Saint-paulin",
+        "Chavroux",
+        "Babybel",
+        "Vache qui rit",
+        "Mini-cube"
+      ],
+      "answer": "Babybel",
+      "difficulty": "Facile",
+      "anecdote": "La version classique du fromage Babybel est composée de lait de vache (98 %), de sel, de ferments lactiques et de coagulant."
+    },
+    {
+      "id": 33,
+      "question": "Quel fromage est enveloppé dans un papier en aluminium gaufré ?",
+      "propositions": [
+        "Boursin",
+        "Emmental",
+        "Roquefort",
+        "Reblochon",
+        "Vache qui rit",
+        "Kiri"
+      ],
+      "answer": "Boursin",
+      "difficulty": "Facile",
+      "anecdote": "Créé par François Boursin, on ajoute aux laits de vache mélangés et pasteurisés de la crème et un mélange d'ail et de fines herbes."
+    },
+    {
+      "id": 34,
+      "question": "Quel fromage est réputé dans la commune de Meaux en France ?",
+      "propositions": [
+        "Le gruyère",
+        "Le brie",
+        "Le cantal",
+        "Le roquefort",
+        "Le camembert",
+        "Le chaource"
+      ],
+      "answer": "Le brie",
+      "difficulty": "Facile",
+      "anecdote": "Le nom du fromage vient de la région de Brie et de la commune de Meaux en France, remontant probablement à l'époque romaine."
+    },
+    {
+      "id": 35,
+      "question": "Quel fromage français est principalement produit en Franche-Comté ?",
+      "propositions": [
+        "La fourme",
+        "Le comté",
+        "Le demi-sel",
+        "Le chèvre",
+        "Le morbier",
+        "Le mont d'Or"
+      ],
+      "answer": "Le comté",
+      "difficulty": "Facile",
+      "anecdote": "Avec une production de 60 000 tonnes par an, il faut environ 450 litres de lait pour produire une meule de comté (fromage AOP)."
+    },
+    {
+      "id": 36,
+      "question": "Quel est le premier fromage le plus consommé en France ?",
+      "propositions": [
+        "Gruyère",
+        "Roquefort",
+        "Emmental",
+        "Brie",
+        "Camembert",
+        "Chèvre"
+      ],
+      "answer": "Emmental",
+      "difficulty": "Facile",
+      "anecdote": "Produit depuis le Moyen Âge, ce fromage suisse à pâte dure doit son nom à la vallée de l'Emme, située dans le canton de Berne."
+    },
+    {
+      "id": 37,
+      "question": "La pâte de quel fromage français doit avoir des trous de par son appellation ?",
+      "propositions": [
+        "Le beaufort",
+        "Le gruyère",
+        "La figuette",
+        "Le brebis",
+        "L'emmental",
+        "Le comté"
+      ],
+      "answer": "Le gruyère",
+      "difficulty": "Facile",
+      "anecdote": "Le gruyère fait partie de la même famille que le comté, qui s'appelait à l'origine gruyère de comté ou gruyère franc-comtois."
+    },
+    {
+      "id": 38,
+      "question": "Quel fromage a connu son heure de gloire suite à un film de Dany Boon ?",
+      "propositions": [
+        "Le brie",
+        "Le maroilles",
+        "Le gruyère",
+        "Le roquefort",
+        "Le munster",
+        "Le livarot"
+      ],
+      "answer": "Le maroilles",
+      "difficulty": "Facile",
+      "anecdote": "Le film expose la pratique culinaire qu'auraient les habitants du Nord-Pas-de-Calais de tremper du maroilles dans leur café."
+    },
+    {
+      "id": 39,
+      "question": "Quel fromage est présenté sous forme de cylindre de 5 cm de haut ?",
+      "propositions": [
+        "Le petit-suisse",
+        "Le saint-marcellin",
+        "Le coulommiers",
+        "Le maroilles",
+        "Le chabichou",
+        "La tomme"
+      ],
+      "answer": "Le petit-suisse",
+      "difficulty": "Facile",
+      "anecdote": "Frais et crémeux, le petit-suisse sert également dans des plats salés, comme pour farcir les viandes (volaille) ou les recouvrir (lapin)."
+    },
+    {
+      "id": 40,
+      "question": "Quel fromage français est fabriqué dans quelques fermes aux alentours de Bergues ?",
+      "propositions": [
+        "Le savaron",
+        "Le Bergues",
+        "Le livarot",
+        "Le beaufort",
+        "Le Neufchâtel",
+        "Le Pavé de Roubaix"
+      ],
+      "answer": "Le Bergues",
+      "difficulty": "Facile",
+      "anecdote": "La plus ancienne trace de ce fromage à pâte molle se retrouve dans les archives communales de Bergues Saint Winoc, dès 1554."
+    },
+    {
+      "id": 41,
+      "question": "Quel fromage français a été surnommé le Prince des gruyères par Brillat-Savarin ?",
+      "propositions": [
+        "Le beaufort",
+        "Le brie",
+        "Le morbier",
+        "Le munster",
+        "Le comté",
+        "Le reblochon"
+      ],
+      "answer": "Le beaufort",
+      "difficulty": "Moyen",
+      "anecdote": "Le beaufort, bénéficiant d'une AOP, est moulé en forme de meule à talon légèrement concave, avec une base incurvée vers l'intérieur."
+    },
+    {
+      "id": 42,
+      "question": "Lequel de ces fromages français est commercialisé dans une boîte en bois ?",
+      "propositions": [
+        "Époisses",
+        "Petit-suisse",
+        "Roquefort",
+        "Cabécou",
+        "Livarot",
+        "Mont d'Or"
+      ],
+      "answer": "Époisses",
+      "difficulty": "Moyen",
+      "anecdote": "L'époisses est un fromage français renommé, apprécié par Napoléon Bonaparte pour sa saveur puissante et son odeur prononcée."
+    },
+    {
+      "id": 43,
+      "question": "Quel fromage français est aussi appelé boule de Lille de par sa forme ?",
+      "propositions": [
+        "La rigotte",
+        "Le mouflon",
+        "La Mimolette vieille",
+        "Le pavé du Nord",
+        "Le Vieux-Lille",
+        "Le Carré du Vinage"
+      ],
+      "answer": "La Mimolette vieille",
+      "difficulty": "Moyen",
+      "anecdote": "Selon la légende, le fromage aurait été inspiré par les fromages néerlandais, auquel on a donné la spécificité de la croûte orange."
+    },
+    {
+      "id": 44,
+      "question": "Quel fromage doit son nom à un terme savoyard qui signifie traire une deuxième fois ?",
+      "propositions": [
+        "Reblochon",
+        "Gruyère",
+        "Roquefort",
+        "Emmental",
+        "Beaufort",
+        "Abondance"
+      ],
+      "answer": "Reblochon",
+      "difficulty": "Moyen",
+      "anecdote": "Jadis, les vaches étaient traitent une deuxième fois après passage leur chez le seigneur, pour ne pas payer d'impôts sur cette traite."
+    },
+    {
+      "id": 45,
+      "question": "Quel fromage à pâte persillée est élaboré avec des laits crus de brebis ?",
+      "propositions": [
+        "Roquefort",
+        "Beaufort",
+        "Munster",
+        "Brie",
+        "Bleu d'Auvergne",
+        "Gorgonzola"
+      ],
+      "answer": "Roquefort",
+      "difficulty": "Moyen",
+      "anecdote": "De réputation internationale, le roquefort à pâte persillée est associé à l'excellence de l'agriculture française et à sa gastronomie."
+    },
+    {
+      "id": 46,
+      "question": "Quel fromage à la pâte onctueuse doit sa renommée à son goût de noisette ?",
+      "propositions": [
+        "Saint-nectaire",
+        "Roquefort",
+        "Livernon",
+        "Époisses",
+        "Cantal",
+        "Salers"
+      ],
+      "answer": "Saint-nectaire",
+      "difficulty": "Moyen",
+      "anecdote": "Fromage paysan, fabriqué bien souvent par les femmes, le saint-nectaire fut appelé fromage de seigle jusqu'au milieu du XVIIe siècle."
+    },
+    {
+      "id": 47,
+      "question": "Quel fromage affilié au maroilles a un nom de mammifère ?",
+      "propositions": [
+        "Le marsouin",
+        "Le dauphin",
+        "Le wallaby",
+        "Le lapin",
+        "Le chèvre",
+        "Le castor"
+      ],
+      "answer": "Le dauphin",
+      "difficulty": "Moyen",
+      "anecdote": "Aujourd'hui, les agriculteurs emploient majoritairement des formes carrées, rectangulaires ou en losange pour des raisons de coûts."
+    },
+    {
+      "id": 48,
+      "question": "Quel fromage possède un coeur sucré et fruité dû à sa garniture de figues ?",
+      "propositions": [
+        "Figou",
+        "Saint-nectaire",
+        "Tomme de Savoie",
+        "Petit chèvre",
+        "Ficelle picarde",
+        "Fédou"
+      ],
+      "answer": "Figou",
+      "difficulty": "Moyen",
+      "anecdote": "Fabriqué par les éleveurs de chèvres, ce fromage ancien tire son nom du mot figue, en référence à sa forme et à la tradition locale."
+    },
+    {
+      "id": 49,
+      "question": "Quel fromage français du Dauphiné est un proche cousin du saint-félicien ?",
+      "propositions": [
+        "Le saint-siméon",
+        "Le saint-marcellin",
+        "Le saint-julien",
+        "Le saint-paulin",
+        "Le caillé doux",
+        "Le rigotte de Condrieu"
+      ],
+      "answer": "Le saint-marcellin",
+      "difficulty": "Moyen",
+      "anecdote": "Ce petit fromage à base de lait de vache est réalisé avec le lait provenant de 274 communes de l'Isère, de la Drôme et du Rhône."
+    },
+    {
+      "id": 50,
+      "question": "Quel est sans doute le plus ancien des fromages de Savoie ?",
+      "propositions": [
+        "La rigotte",
+        "Le vieux moulin",
+        "La tomme de Savoie",
+        "Le vacherin",
+        "Le beaufort",
+        "L'abondance"
+      ],
+      "answer": "La tomme de Savoie",
+      "difficulty": "Moyen",
+      "anecdote": "La Tomme était fabriquée avec du lait de vache partiellement écrémé, non utilisé pour la production de fromages plus précieux."
+    },
+    {
+      "id": 51,
+      "question": "Quel fromage français est moulé en forme de meule à talon légèrement concave ?",
+      "propositions": [
+        "Reblochon",
+        "Livernon",
+        "Beaufort",
+        "Cantal",
+        "Emmental",
+        "Comté"
+      ],
+      "answer": "Beaufort",
+      "difficulty": "Difficile",
+      "anecdote": "Autrefois, le beaufort représentait une production importante, mais il a payé un lourd tribut à l'exode rural et à son coût de production."
+    },
+    {
+      "id": 52,
+      "question": "Quel fromage triple-crème est produit dans les régions de Normandie et de Bourgogne ?",
+      "propositions": [
+        "Pélardon",
+        "Mélusine",
+        "Brillat-savarin",
+        "Gaperon",
+        "Chaource",
+        "Neufchâtel"
+      ],
+      "answer": "Brillat-savarin",
+      "difficulty": "Difficile",
+      "anecdote": "Le brillat-savarin est un fromage triple-crème au fort taux de matières grasses, doux au palais, qui se mange jeune et bien frais."
+    },
+    {
+      "id": 53,
+      "question": "Quel fromage français actuel est parfois aussi appelé brie petit moule ?",
+      "propositions": [
+        "Le coulommiers",
+        "Le chevrotin",
+        "Le charolais",
+        "Le civray",
+        "Le brie de Meaux",
+        "Le camembert"
+      ],
+      "answer": "Le coulommiers",
+      "difficulty": "Difficile",
+      "anecdote": "Le Coulommiers est un fromage à pâte molle et croûte fleurie, typique de la Brie, plus crémeux et plus doux que le Camembert."
+    },
+    {
+      "id": 54,
+      "question": "Quel fromage est cerclé de trois à cinq bandelettes séchées et découpées ?",
+      "propositions": [
+        "Le montbriac",
+        "Le fédou",
+        "Le livarot",
+        "Le livernon",
+        "Le pont l'évêque",
+        "Le camembert"
+      ],
+      "answer": "Le livarot",
+      "difficulty": "Difficile",
+      "anecdote": "Ces bandelettes, qui servaient à la bonne tenue du fromage lors de l'affinage, sont à l'origine du surnom de colonel du fromage."
+    },
+    {
+      "id": 55,
+      "question": "Quel fromage possède une fine couche de cendre à la saveur douce et fruitée ?",
+      "propositions": [
+        "Trou du Cru",
+        "Morbier",
+        "Vachard",
+        "Savaron",
+        "Sainte-Maure de Touraine",
+        "Chabichou"
+      ],
+      "answer": "Morbier",
+      "difficulty": "Difficile",
+      "anecdote": "Morbier est une appellation d'origine désignant un fromage de lait cru de vache, fabriqué dans le massif du Jura en France."
+    },
+    {
+      "id": 56,
+      "question": "Quel fromage français utilise le taureau comme logotype ?",
+      "propositions": [
+        "Le livarot",
+        "Le laguiole",
+        "Le barousse",
+        "Le fédou",
+        "Le salers",
+        "Le cantal"
+      ],
+      "answer": "Le laguiole",
+      "difficulty": "Difficile",
+      "anecdote": "Le Laguiole est un fromage également associé au célèbre couteau Laguiole, une lame traditionnelle qui a vu le jour dans la région."
+    },
+    {
+      "id": 57,
+      "question": "Combien de litres de lait sont nécessaires pour confectionner une meule de cantal ?",
+      "propositions": [
+        "200",
+        "100",
+        "400",
+        "300",
+        "500",
+        "150"
+      ],
+      "answer": "400",
+      "difficulty": "Difficile",
+      "anecdote": "Il existe trois types de Cantal, chacun ayant des caractéristiques distinctes selon le temps d'affinage : jeune, entre-deux et vieux."
+    },
+    {
+      "id": 58,
+      "question": "Quel fromage de lait de vache se nomme géromé en Lorraine ?",
+      "propositions": [
+        "Le savaron",
+        "Le trou du Cru",
+        "Le morbier",
+        "Le munster",
+        "Le tomme",
+        "Le livarot"
+      ],
+      "answer": "Le munster",
+      "difficulty": "Difficile",
+      "anecdote": "La recette du munster aurait été laissée aux Vosgiens et aux moines cisterciens du IXe siècle par un moine irlandais de passage."
+    },
+    {
+      "id": 59,
+      "question": "Quel fromage présente une ligne orange en-dessous de sa pâte de couleur ivoire ?",
+      "propositions": [
+        "Le barousse",
+        "Le Curé nantais",
+        "Le munster",
+        "Le mouflon",
+        "Le Livarot",
+        "Le Morbier"
+      ],
+      "answer": "Le barousse",
+      "difficulty": "Difficile",
+      "anecdote": "Pendant les deux premières semaines d'affinage, le Barousse est lavé, essuyé et retourné tous les jours pour renforcer ses arômes."
+    },
+    {
+      "id": 60,
+      "question": "Quel fromage a une pâte qui révèle une saveur de lard fumé et un final épicé ?",
+      "propositions": [
+        "La figuette",
+        "Le Curé nantais",
+        "Le charolais",
+        "Le boursin",
+        "Le Saint-Nectaire",
+        "Le Pont-l'Évêque"
+      ],
+      "answer": "Le Curé nantais",
+      "difficulty": "Difficile",
+      "anecdote": "La recette du fromage aurait été transmise au XIXe siècle à Saint-Julien-de-Concelles dans le vignoble nantais par un curé de passage."
+    },
+    {
+      "id": 61,
+      "question": "Quel fromage italien rentre dans la composition du tiramisu ?",
+      "propositions": [
+        "Ricotta",
+        "Grana padano",
+        "Gorgonzola",
+        "Mascarpone",
+        "Mozzarella",
+        "Pecorino"
+      ],
+      "answer": "Mascarpone",
+      "difficulty": "Facile",
+      "anecdote": "Originaire de la région de Lombardie, le mascarpone est fabriqué à partir de crème, ce qui lui confère une texture douce et veloutée."
+    },
+    {
+      "id": 62,
+      "question": "De quel fruit est composée la tarte Tatin, inventée de manière accidentelle ?",
+      "propositions": [
+        "Pomme",
+        "Poire",
+        "Abricot",
+        "Pêche",
+        "Coing",
+        "Fraise"
+      ],
+      "answer": "Pomme",
+      "difficulty": "Facile",
+      "anecdote": "Cette tarte renversée aurait été inventée à la fin du XIXe siècle par deux soeurs, Caroline et Stéphanie Tatin, hôtelières en Sologne."
+    },
+    {
+      "id": 63,
+      "question": "Quel gâteau décore-t-on traditionnellement de sapins et de petits personnages ?",
+      "propositions": [
+        "Galette des Rois",
+        "Forêt noire",
+        "Bûche de Noël",
+        "Palet de dame",
+        "Pain d'épices",
+        "Macaron"
+      ],
+      "answer": "Bûche de Noël",
+      "difficulty": "Facile",
+      "anecdote": "Au Moyen Âge, on avait l'habitude de brûler une véritable bûche de bois dans la cheminée pour symboliser la chaleur et la lumière."
+    },
+    {
+      "id": 64,
+      "question": "Dans quel pays mange-t-on de manière régulière du « plum pudding » ?",
+      "propositions": [
+        "Allemagne",
+        "États-Unis",
+        "Royaume-Uni",
+        "Australie",
+        "Canada",
+        "Irlande"
+      ],
+      "answer": "Royaume-Uni",
+      "difficulty": "Facile",
+      "anecdote": "Le terme plum (prune en anglais) faisait autrefois référence à tous les fruits secs ou sucrés, comme les raisins secs ou les groseilles."
+    },
+    {
+      "id": 65,
+      "question": "Quel synonyme d'excellent est un dessert glacé à base de crème fraîche et d'oeufs ?",
+      "propositions": [
+        "Extra",
+        "Parfait",
+        "Génial",
+        "Super",
+        "Formidable",
+        "Sublime"
+      ],
+      "answer": "Parfait",
+      "difficulty": "Facile",
+      "anecdote": "À l'origine, les parfaits étaient des desserts créés à base de crème glacée et de fruits, souvent servis dans des coupes élégantes."
+    },
+    {
+      "id": 66,
+      "question": "Quel gâteau comporte oeufs, beurre, farine et sucre en quantités égales ?",
+      "propositions": [
+        "Quatre-quarts",
+        "Quatre-gares",
+        "Quatre-parts",
+        "Quatre-fards",
+        "Sablé",
+        "Madeleine"
+      ],
+      "answer": "Quatre-quarts",
+      "difficulty": "Facile",
+      "anecdote": "Ce gâteau a l'avantage d'être facile à réaliser avec des ingrédients de base que l'on trouve dans presque toutes les cuisines."
+    },
+    {
+      "id": 67,
+      "question": "Quel entremets de génoise, fourré de crème au beurre, est parfumé au café ?",
+      "propositions": [
+        "Bavarois",
+        "Religieuse",
+        "Moka",
+        "Diplomate",
+        "Opéra",
+        "Forêt noire"
+      ],
+      "answer": "Moka",
+      "difficulty": "Facile",
+      "anecdote": "La génoise, inventée vers le début du XVIIIe siècle, est un biscuit à pâte battue qui entre dans la composition de nombreux entremets."
+    },
+    {
+      "id": 68,
+      "question": "Quel dessert découpe-t-on traditionnellement à la fin du repas de mariage ?",
+      "propositions": [
+        "Ambassadeur",
+        "Diplomate",
+        "Pièce montée",
+        "Financier",
+        "Tiramisu",
+        "Fraisier"
+      ],
+      "answer": "Pièce montée",
+      "difficulty": "Facile",
+      "anecdote": "L'un des moments mémorables d'un mariage est la première coupe du gâteau, un acte symbolique accompagné de rires et de photos."
+    },
+    {
+      "id": 69,
+      "question": "Quels petits fruits rouges entrent dans la préparation du clafoutis ?",
+      "propositions": [
+        "Framboises",
+        "Cerises",
+        "Groseilles",
+        "Fraises",
+        "Cassis",
+        "Mûres"
+      ],
+      "answer": "Cerises",
+      "difficulty": "Facile",
+      "anecdote": "Pour rester fidèle à la tradition, il est préférable d'utiliser des cerises non dénoyautées, car les noyaux apportent une légère amertume."
+    },
+    {
+      "id": 70,
+      "question": "Traditionnellement, quel alcool utilise-t-on pour fabriquer un baba ?",
+      "propositions": [
+        "Whisky",
+        "Vodka",
+        "Cognac",
+        "Rhum",
+        "Calvados",
+        "Kirsch"
+      ],
+      "answer": "Rhum",
+      "difficulty": "Facile",
+      "anecdote": "Le baba au rhum est un gâteau préparé pour les principales fêtes religieuses (Noël ou Pâques), depuis des temps immémoriaux."
+    },
+    {
+      "id": 71,
+      "question": "Quel parfum vient compléter la vanille et le chocolat dans le véritable banana split ?",
+      "propositions": [
+        "Praliné",
+        "Café",
+        "Fraise",
+        "Caramel",
+        "Pistache",
+        "Citron"
+      ],
+      "answer": "Fraise",
+      "difficulty": "Moyen",
+      "anecdote": "Le choix de la fraise comme troisième parfum a été influencé par l'idée de l'équilibre des saveurs, en ajoutant une note fruitée."
+    },
+    {
+      "id": 72,
+      "question": "Quel dessert italien porte un nom qui peut être traduit par « crème cuite » ?",
+      "propositions": [
+        "Panna cotta",
+        "Panforte",
+        "Tiramisu",
+        "Amatriciana",
+        "Zabaglione",
+        "Cannoli"
+      ],
+      "answer": "Panna cotta",
+      "difficulty": "Moyen",
+      "anecdote": "La panna cotta illustre l'art de la pâtisserie italienne : une combinaison d'ingrédients simples liés à une technique subtile."
+    },
+    {
+      "id": 73,
+      "question": "Quel alcool ajoute-t-on à un sorbet au citron pour en faire un colonel ?",
+      "propositions": [
+        "Rhum",
+        "Vodka",
+        "Gin",
+        "Tequila",
+        "Pastis",
+        "Curaçao"
+      ],
+      "answer": "Vodka",
+      "difficulty": "Moyen",
+      "anecdote": "Le nom de ce cocktail proviendrait du fait qu'il était particulièrement populaire parmi les officiers militaires russes au XXe siècle."
+    },
+    {
+      "id": 74,
+      "question": "Quel plat de présentation permet de proposer des gâteaux sur un ou plusieurs étages ?",
+      "propositions": [
+        "Serviteur",
+        "Valet",
+        "Majordome",
+        "Dévoué",
+        "Présentoir",
+        "Étagère"
+      ],
+      "answer": "Serviteur",
+      "difficulty": "Moyen",
+      "anecdote": "Le serviteur permet de présenter des gâteaux d'anniversaire, des cupcakes ou des pâtisseries de manière élégante et spectaculaire."
+    },
+    {
+      "id": 75,
+      "question": "Quelle viennoiserie légère à pâte levée désigne familièrement un ventre rebondi ?",
+      "propositions": [
+        "Baba",
+        "Beignet",
+        "Bavarois",
+        "Brioche",
+        "Croissant",
+        "Pain au chocolat"
+      ],
+      "answer": "Brioche",
+      "difficulty": "Moyen",
+      "anecdote": "La brioche, comme le boudin, a une texture douce et aérée, résultat de l'action de la levure qui fait lever la pâte dans le four."
+    },
+    {
+      "id": 76,
+      "question": "Quelle crème est traditionnellement utilisée pour préparer une île flottante ?",
+      "propositions": [
+        "Crème chantilly",
+        "Crème pâtissière",
+        "Crème anglaise",
+        "Crème fraîche",
+        "Crème diplomate",
+        "Crème mousseline"
+      ],
+      "answer": "Crème anglaise",
+      "difficulty": "Moyen",
+      "anecdote": "Le contraste entre la douceur de la crème anglaise et la légèreté des blancs en neige fait de l'île flottante un célèbre incontournable."
+    },
+    {
+      "id": 77,
+      "question": "Quelle crème pâtissière garnit communément la galette des Rois ?",
+      "propositions": [
+        "Crème fouettée",
+        "Gélatine",
+        "Meringue",
+        "Frangipane",
+        "Crème chiboust",
+        "Crème d'amande"
+      ],
+      "answer": "Frangipane",
+      "difficulty": "Moyen",
+      "anecdote": "L'emploi de la fève dans la galette des Rois remonte aux Grecs, qui se servaient de fèves pour l'élection de leurs magistrats."
+    },
+    {
+      "id": 78,
+      "question": "Quel fruit compose la garniture la plus classique du Strudel autrichien ?",
+      "propositions": [
+        "Pomme",
+        "Banane",
+        "Pêche",
+        "Poire",
+        "Cerise",
+        "Abricot"
+      ],
+      "answer": "Pomme",
+      "difficulty": "Moyen",
+      "anecdote": "Traditionnellement, il est souvent servi avec une cuillerée de crème fouettée ou de la glace à la vanille pour encore plus de douceur."
+    },
+    {
+      "id": 79,
+      "question": "Quel célèbre gâteau breton est né dans la région de Douarnenez ?",
+      "propositions": [
+        "Krumkake",
+        "Kheer",
+        "Kouglof",
+        "Kouign-amann",
+        "Far breton",
+        "Crêpe dentelle"
+      ],
+      "answer": "Kouign-amann",
+      "difficulty": "Moyen",
+      "anecdote": "Apprécié en Bretagne, sa préparation est toutefois réputée délicate, comme en témoigne ce dicton : « Le fait qui veut, le réussit qui peut »."
+    },
+    {
+      "id": 80,
+      "question": "Quelle pâtisserie alsacienne en forme de huit est saupoudrée de sel et de cumin ?",
+      "propositions": [
+        "Mille-feuille",
+        "Bretzel",
+        "Clafoutis",
+        "Tourte",
+        "Mannele",
+        "Kouglof"
+      ],
+      "answer": "Bretzel",
+      "difficulty": "Moyen",
+      "anecdote": "En forme de huit, ce pain torsadé et doré est une spécialité alsacienne, généralement saupoudrée de sel et parfois de cumin."
+    },
+    {
+      "id": 81,
+      "question": "Dans quelle région de France mange-t-on encore aujourd'hui les treize desserts de Noël ?",
+      "propositions": [
+        "Auvergne",
+        "Provence",
+        "Bretagne",
+        "Alsace",
+        "Occitanie",
+        "Nouvelle-Aquitaine"
+      ],
+      "answer": "Provence",
+      "difficulty": "Difficile",
+      "anecdote": "Les desserts peuvent être bus avec du vin cuit ou du vin muscat, tandis qu'à la fin apparaissent toutes les liqueurs maisons."
+    },
+    {
+      "id": 82,
+      "question": "En pâtisserie, quelle « noix » entre dans la préparation du congolais ?",
+      "propositions": [
+        "Noix de cajou",
+        "Noix de coco",
+        "Noix de pécan",
+        "Noix de muscade",
+        "Noix de Grenoble",
+        "Noisette"
+      ],
+      "answer": "Noix de coco",
+      "difficulty": "Difficile",
+      "anecdote": "Ce petit biscuit, généralement cuit en forme de dôme, est fait principalement de blancs d'oeufs, de sucre et de noix de coco râpée."
+    },
+    {
+      "id": 83,
+      "question": "Qui a dit : « Un dessert sans fromage est une belle à qui il manque un oeil » ?",
+      "propositions": [
+        "Auguste Escoffier",
+        "La Rochefoucauld",
+        "La Bruyère",
+        "Brillat-Savarin",
+        "Antonin Carême",
+        "Paul Bocuse"
+      ],
+      "answer": "Brillat-Savarin",
+      "difficulty": "Difficile",
+      "anecdote": "Brillat-Savarin était un gastronome et écrivain français, connu pour son ouvrage « La Physiologie du goût », publié en 1825."
+    },
+    {
+      "id": 84,
+      "question": "Quelle pâtisserie est attribuée au confiseur italien Gasparini ?",
+      "propositions": [
+        "Cassata",
+        "Meringue",
+        "Panettone",
+        "Amaretti",
+        "Zuccotto",
+        "Tiramisu"
+      ],
+      "answer": "Meringue",
+      "difficulty": "Difficile",
+      "anecdote": "La meringue italienne est préparée avec un sirop de sucre chaud, ce qui lui donne une texture stable et lisse, idéale pour les macarons."
+    },
+    {
+      "id": 85,
+      "question": "En pâtisserie, quel éclair voit son dessus glacé au fondant ou au caramel ?",
+      "propositions": [
+        "Bâton de Jacob",
+        "Concorde",
+        "Chou allongé",
+        "Petite duchesse",
+        "Religieuse",
+        "Salambo"
+      ],
+      "answer": "Bâton de Jacob",
+      "difficulty": "Difficile",
+      "anecdote": "Le nom pourrait faire référence à un ancien symbole religieux ou une ancienne recette qui serait passée de génération en génération."
+    },
+    {
+      "id": 86,
+      "question": "Quelle ville de Lorraine est célèbre pour ses madeleines ?",
+      "propositions": [
+        "Commercy",
+        "Metz",
+        "Nancy",
+        "Verdun",
+        "Épinal",
+        "Toul"
+      ],
+      "answer": "Commercy",
+      "difficulty": "Difficile",
+      "anecdote": "La madeleine aurait été inventée au XVIIIe siècle par une servante nommée Madeleine pour Stanislas Leszczynski, duc de Lorraine."
+    },
+    {
+      "id": 87,
+      "question": "Quelle tarte, élaborée à partir de prunes jaunes, est une spécialité lorraine ?",
+      "propositions": [
+        "Sabayon",
+        "Forêt noire",
+        "Diplomate",
+        "Aux mirabelles",
+        "Aux quetsches",
+        "Aux cerises"
+      ],
+      "answer": "Aux mirabelles",
+      "difficulty": "Difficile",
+      "anecdote": "La tarte aux mirabelles se prépare aussi bien avec une pâte brisée que feuilletée, parfois avec une légère crème d'amande en dessous."
+    },
+    {
+      "id": 88,
+      "question": "Quel beignet soufflé évoque une religieuse plutôt flatulente ?",
+      "propositions": [
+        "Pet de nonne",
+        "Vent de messe",
+        "Gaz de mère",
+        "Feu de dieu",
+        "Chouquette",
+        "Beignet de carnaval"
+      ],
+      "answer": "Pet de nonne",
+      "difficulty": "Difficile",
+      "anecdote": "Le pet de nonne fait partie de la famille des chouquettes et des profiteroles, qui sont tous des exemples de pâte à choux."
+    },
+    {
+      "id": 89,
+      "question": "Quel dessert doit son nom à une opérette de Jacques Offenbach ?",
+      "propositions": [
+        "Baba au rhum",
+        "Poire Belle-Hélène",
+        "Crème Chiboust",
+        "Fraise Melba",
+        "Pêche Melba",
+        "Omelette norvégienne"
+      ],
+      "answer": "Poire Belle-Hélène",
+      "difficulty": "Difficile",
+      "anecdote": "Ce dessert à base de poires pochées dans un sirop est nappé de chocolat chaud accompagné d'une glace à la vanille."
+    },
+    {
+      "id": 90,
+      "question": "De quelle ville de France proviennent les cannelés en forme de petits cylindres striés ?",
+      "propositions": [
+        "Rennes",
+        "Nancy",
+        "Strasbourg",
+        "Bordeaux",
+        "Toulouse",
+        "Lyon"
+      ],
+      "answer": "Bordeaux",
+      "difficulty": "Difficile",
+      "anecdote": "La légende veut que les cannelés soient nés lors du débarquement des bateaux de farine sur les quais de Bordeaux."
+    }
+  ]
+}

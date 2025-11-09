@@ -5,7 +5,6 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -20,7 +19,6 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -45,10 +43,8 @@ import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             ProjetTheme {
-
                 val difficulty = intent.getStringExtra("difficulty")!!
                 val subject = intent.getStringExtra("subject")!!
                 MyQuizzScreen(difficulty, subject)
@@ -198,11 +194,11 @@ fun Result(
 
                 if (answerHistory[i] == goodAnswer[i]) {
                     DisplayText(list = font,"Question ${i+1}: $question", color = Color.Black)
-                    DisplayText(list = font,"Réponse -> ${goodAnswer[i]}", color = Color.Green)
+                    DisplayText(list = font,"Réponse -> ${goodAnswer[i]}\n", color = Color.Green)
                 } else {
                     DisplayText(list = font,"Question ${i+1}: $question", color = Color.Black)
                     DisplayText(list = font,"Faux : ${answerHistory[i]}", color = Color.Red)
-                    DisplayText(list = font,"Réponse -> ${goodAnswer[i]}", color = Color.Blue)
+                    DisplayText(list = font,"Réponse -> ${goodAnswer[i]}\n", color = Color.Blue)
                 }
             }
         }
@@ -216,7 +212,7 @@ fun Result(
                 modifier = Modifier
                     .padding(8.dp)
             ) {
-                DisplayText(list = font, text = "Maison")
+                DisplayText(list = font, text = "Accueil")
             }
             Button(
                 onClick = {
