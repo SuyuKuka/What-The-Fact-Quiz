@@ -29,7 +29,7 @@ import fr.uparis.chenliu.projet.data.entity.UsersEntity
     AnswerMathsEntity::class, QuizzMathsEntity::class,
     AnswerHistoryEntity::class, QuizzHistoryEntity::class,
     AnswerInfoEntity::class, QuizzInfoEntity::class,
-    AnswerGeoEntity::class, QuizzGeoEntity::class], version = 1 )
+    AnswerGeoEntity::class, QuizzGeoEntity::class], version = 2 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun usersDao(): UsersDao
     abstract fun settingsDao(): SettingsDao
