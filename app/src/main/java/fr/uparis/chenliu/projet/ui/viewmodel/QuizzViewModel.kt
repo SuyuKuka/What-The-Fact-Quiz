@@ -52,6 +52,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
         viewModelScope.launch {
+            //todo: a simplifier
             when (subject) {
                 "Science" -> {
                     val currentDao = db.quizzScienceDao()
@@ -60,6 +61,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
                 }
                 "Gastronomie" -> {
                     val currentDao = db.quizzGastronomieDao()
@@ -68,6 +75,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
                 }
                 "Géographie" -> {
                     val currentDao = db.quizzGeoDao()
@@ -76,6 +89,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
                 }
                 else -> db.quizzScienceDao()
             }
