@@ -1,6 +1,7 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
+import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -84,6 +85,48 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                 }
                 "Géographie" -> {
                     val currentDao = db.quizzGeoDao()
+                    val currentQuestion = currentDao.getQuestion(difficulty)
+                    // question
+                    question.value = currentQuestion.question
+                    // responses
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
+                }
+                "Nature" -> {
+                    val currentDao = db.quizzNatureDao()
+                    val currentQuestion = currentDao.getQuestion(difficulty)
+                    // question
+                    question.value = currentQuestion.question
+                    // responses
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
+                }
+                "Dessin anime" -> {
+                    val currentDao = db.quizzDessinAnimeDao()
+                    val currentQuestion = currentDao.getQuestion(difficulty)
+                    // question
+                    question.value = currentQuestion.question
+                    // responses
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
+                }
+                "Informatique" -> {
+                    val currentDao = db.quizzInformatiqueDao()
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question

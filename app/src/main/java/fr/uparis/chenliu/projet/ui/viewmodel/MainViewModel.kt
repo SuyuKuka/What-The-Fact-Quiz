@@ -8,8 +8,11 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.data.database.AppDatabase
+import fr.uparis.chenliu.projet.data.entity.QuizzDessinAnimeEntity
 import fr.uparis.chenliu.projet.data.entity.QuizzGastronomieEntity
 import fr.uparis.chenliu.projet.data.entity.QuizzGeoEntity
+import fr.uparis.chenliu.projet.data.entity.QuizzInformatiqueEntity
+import fr.uparis.chenliu.projet.data.entity.QuizzNatureEntity
 import fr.uparis.chenliu.projet.data.entity.QuizzScienceEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
@@ -51,8 +54,9 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                 if (username.value == "") {
                     username.value = "Joueur"
                 }
-                initUser()
                 initQuizz(context)
+                initUser()
+
 
                 exist.value = true
                 loading.value = false
@@ -71,6 +75,9 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         quizz(c, R.raw.science)
         quizz(c, R.raw.gastronomie)
         quizz(c, R.raw.geo)
+        quizz(c, R.raw.dessinanime)
+        quizz(c, R.raw.informatique)
+        quizz(c, R.raw.nature)
     }
 
     suspend fun quizz(c: Context, quizz: Int) {
@@ -109,6 +116,39 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                 R.raw.gastronomie -> {
                     db.quizzGastronomieDao().insertQuestion(
                         QuizzGastronomieEntity(
+                            id = it.id,
+                            question = it.question,
+                            propositions = it.propositions,
+                            answer = it.answer,
+                            difficulty = it.difficulty
+                        )
+                    )
+                }
+                R.raw.dessinanime -> {
+                    db.quizzDessinAnimeDao().insertQuestion(
+                        QuizzDessinAnimeEntity(
+                            id = it.id,
+                            question = it.question,
+                            propositions = it.propositions,
+                            answer = it.answer,
+                            difficulty = it.difficulty
+                        )
+                    )
+                }
+                R.raw.nature -> {
+                    db.quizzNatureDao().insertQuestion(
+                        QuizzNatureEntity(
+                            id = it.id,
+                            question = it.question,
+                            propositions = it.propositions,
+                            answer = it.answer,
+                            difficulty = it.difficulty
+                        )
+                    )
+                }
+                R.raw.informatique -> {
+                    db.quizzInformatiqueDao().insertQuestion(
+                        QuizzInformatiqueEntity(
                             id = it.id,
                             question = it.question,
                             propositions = it.propositions,
