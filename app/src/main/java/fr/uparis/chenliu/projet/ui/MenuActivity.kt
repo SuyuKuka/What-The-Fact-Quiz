@@ -281,7 +281,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     // todo: load depuis la db
     val alert = remember { mutableStateOf(false) }
     val difficulty = listOf("Facile", "Moyen", "Difficile")
-    val subject = listOf("Maths", "Histoire", "Géographie", "Informatique", "Pokémon")
+    val subject = listOf("Science","Géographie","Gastronomie", "Nature", "Informatique", "Dessin anime")
 
     val selectedDiff = remember { mutableStateOf(difficulty[0]) }
     val selectedSubj = remember { mutableStateOf(subject[0]) }

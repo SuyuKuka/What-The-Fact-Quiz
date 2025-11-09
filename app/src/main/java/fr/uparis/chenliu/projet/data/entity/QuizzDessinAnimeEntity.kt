@@ -4,11 +4,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class AnswerGeoEntity(
+data class QuizzDessinAnimeEntity(
     @PrimaryKey(autoGenerate = true)
-    val answerId: Int = 0,
-    val idQuestion: Int,
+    val id: Int = 0,
+    val question: String,
+    val propositions: List<String>,
     val answer: String,
-    val validity: Boolean,
-    val position: Int?
+    val difficulty: String
 )

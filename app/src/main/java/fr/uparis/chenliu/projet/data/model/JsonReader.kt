@@ -1,22 +1,16 @@
 package fr.uparis.chenliu.projet.data.model
 
-class QuestionParameter(
-    val question: List<QuestionData>
-)
 
-class QuestionData(
-    val difficulty: String,
-    val question: String,
-    val resources: String?
-)
+class JsonReader {
+    class QuizzParameter(
+        val quizz: List<QuizzData>
+    )
 
-class AnswerParameter(
-    val answer: List<AnswerData>
-)
-
-class AnswerData(
-    val idQuestion: Int,
-    val answer: String,
-    val validity: Boolean,
-    val position: Int?
-)
+    class QuizzData(
+        val id: Int,
+        val question: String,
+        val propositions: List<String>,
+        val answer: String,
+        val difficulty: String
+    )
+}

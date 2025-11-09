@@ -1,0 +1,724 @@
+{
+  "quizz": [
+    {
+      "id": 1,
+      "question": "Quel pont de Florence est aussi une rue piétonne et une galerie marchande ?",
+      "propositions": ["San Niccolo", "Vittoria", "Ponte Vecchio", "Santa Trinita", "Ponte alla Carraia", "Ponte Amerigo Vespucci"],
+      "answer": "Ponte Vecchio",
+      "difficulty": "Facile",
+      "anecdote": "Haut lieu de la joaillerie..."
+    },
+    {
+      "id": 2,
+      "question": "Quelle mer les Grecs connaissent-ils sous le nom de Pont Euxin ?",
+      "propositions": ["Mer Adriatique", "Mer Noire", "Mer Ionienne", "Mer Égée", "Mer Méditerranée", "Mer Rouge"],
+      "answer": "Mer Noire",
+      "difficulty": "Facile",
+      "anecdote": "L'adjectif correspondant..."
+    },
+    {
+      "id": 3,
+      "question": "Quel est le pourcentage d'occupation des mers sur la surface du globe ?",
+      "propositions": ["50 %", "80 %", "60 %", "70 %", "45 %", "90 %"],
+      "answer": "70 %",
+      "difficulty": "Facile",
+      "anecdote": "Sur Terre, l'océan Mondial..."
+    },
+    {
+      "id": 4,
+      "question": "Quelle est la nationalité de la presqu'île du Yucatan, dont la capitale est Mérida ?",
+      "propositions": ["Bolivienne", "Colombienne", "Mexicaine", "Cubaine", "Péruvienne", "Guatémaltèque"],
+      "answer": "Mexicaine",
+      "difficulty": "Facile",
+      "anecdote": "Le Yucatan s'étend..."
+    },
+    {
+      "id": 5,
+      "question": "Quel est, avec ses 7 025 kilomètres, le plus long fleuve au monde ?",
+      "propositions": ["Saint-Laurent", "Amazone", "Danube", "Colorado", "Nil", "Yangzi Jiang"],
+      "answer": "Amazone",
+      "difficulty": "Facile",
+      "anecdote": "Le fleuve prend sa source..."
+    },
+    {
+      "id": 6,
+      "question": "Quelle ville portugaise située au bord du Douro a donné son nom à un vin apéritif ?",
+      "propositions": ["Douro", "Porto", "Dao", "Madère", "Lisbonne", "Faro"],
+      "answer": "Porto",
+      "difficulty": "Facile",
+      "anecdote": "Le porto est un vin muté..."
+    },
+    {
+      "id": 7,
+      "question": "Quel viaduc conçu par Norman Foster surplombe la vallée du Tarn ?",
+      "propositions": ["Viaduc du Viaur", "Viaduc de Gien", "Viaduc de Ventabren", "Viaduc de Millau", "Viaduc de Garabit", "Viaduc de Morlaix"],
+      "answer": "Viaduc de Millau",
+      "difficulty": "Facile",
+      "anecdote": "Maillon de l'autoroute A75..."
+    },
+    {
+      "id": 8,
+      "question": "Dans quel département français se trouvent les villes de Quimper, Brest et Morlaix ?",
+      "propositions": ["Finistère", "Morbihan", "Charente", "Aveyron", "Côtes-d'Armor", "Ille-et-Vilaine"],
+      "answer": "Finistère",
+      "difficulty": "Facile",
+      "anecdote": "Le Finistère, situé..."
+    },
+    {
+      "id": 9,
+      "question": "En géographie, quel cours d'eau, grossi par ses affluents, va se jeter dans la mer ?",
+      "propositions": ["Rivière", "Torrent", "Fleuve", "Ruisseau", "Estuaire", "Canal"],
+      "answer": "Fleuve",
+      "difficulty": "Facile",
+      "anecdote": "Les trois plus longs fleuves..."
+    },
+    {
+      "id": 10,
+      "question": "Sur quelle île se trouvait le colosse de la série des sept merveilles du monde ?",
+      "propositions": ["Mykonos", "Lipsi", "Rhodes", "Kassos", "Crète", "Chypre"],
+      "answer": "Rhodes",
+      "difficulty": "Facile",
+      "anecdote": "Le colosse de Rhodes..."
+    },
+    {
+      "id": 11,
+      "question": "Face aux côtes de quel pays se déploie dans l'Océan Indien l'archipel de Zanzibar ?",
+      "propositions": ["Malawi", "Botswana", "Cameroun", "Tanzanie", "Kenya", "Mozambique"],
+      "answer": "Tanzanie",
+      "difficulty": "Moyen",
+      "anecdote": "Le nom de Zanzibar..."
+    },
+    {
+      "id": 12,
+      "question": "À l'est de quel État américain se dresse le massif de la Sierra Nevada ?",
+      "propositions": ["Géorgie", "Californie", "Floride", "Colorado", "Texas", "Arizona"],
+      "answer": "Californie",
+      "difficulty": "Moyen",
+      "anecdote": "La chaîne offre..."
+    },
+    {
+      "id": 13,
+      "question": "Sur quelle île se rendent les vedettes en partance de la pointe de l'Arcouest ?",
+      "propositions": ["Ouessant", "Île de Bréhat", "Île de Ré", "Groix", "Batz", "Belle-Île-en-Mer"],
+      "answer": "Île de Bréhat",
+      "difficulty": "Moyen",
+      "anecdote": "L'île possède..."
+    },
+    {
+      "id": 14,
+      "question": "Quel est le plus grand département français en terme de superficie ?",
+      "propositions": ["Martinique", "Guadeloupe", "La Réunion", "Guyane", "Mayotte", "Nouvelle-Calédonie"],
+      "answer": "Guyane",
+      "difficulty": "Moyen",
+      "anecdote": "C'est le seul territoire..."
+    },
+    {
+      "id": 15,
+      "question": "Quel est le troisième pays qui, avec la Corée et le Japon, donne sur la mer du Japon ?",
+      "propositions": ["Australie", "Inde", "Pakistan", "Russie", "Chine", "Vietnam"],
+      "answer": "Russie",
+      "difficulty": "Moyen",
+      "anecdote": "Au cours des siècles..."
+    },
+    {
+      "id": 16,
+      "question": "Quel volcan culminant à 3 330 mètres d'altitude est le plus grand d'Europe ?",
+      "propositions": ["Krakatoa", "Popocatepetl", "Stromboli", "Etna", "Vésuve", "Mont Elbrouz"],
+      "answer": "Etna",
+      "difficulty": "Moyen",
+      "anecdote": "Il est le plus haut volcan..."
+    },
+    {
+      "id": 17,
+      "question": "Quelle région autonome d'Italie est aussi la plus grande île de la Méditerranée ?",
+      "propositions": ["Sicile", "Sardaigne", "Lombardie", "Toscane", "Campanie", "Vénétie"],
+      "answer": "Sicile",
+      "difficulty": "Moyen",
+      "anecdote": "La Sicile est également..."
+    },
+    {
+      "id": 18,
+      "question": "Avec lequel de ces pays la république islamique d'Iran n'a-t-elle pas de frontière ?",
+      "propositions": ["Afghanistan", "Irak", "Turquie", "Syrie", "Pakistan", "Turkménistan"],
+      "answer": "Syrie",
+      "difficulty": "Moyen",
+      "anecdote": "L'Iran est un pays..."
+    },
+    {
+      "id": 19,
+      "question": "Sur quel continent coule le fleuve Amour, qui se jette dans le détroit de Tatarie ?",
+      "propositions": ["Afrique", "Asie", "Europe", "Océanie", "Amérique du Sud", "Amérique du Nord"],
+      "answer": "Asie",
+      "difficulty": "Moyen",
+      "anecdote": "Long de 4 354 kilomètres..."
+    },
+    {
+      "id": 20,
+      "question": "Quel fleuve né au Tibet forme un immense delta avant de se jeter dans la mer de Chine ?",
+      "propositions": ["Euphrate", "Tigre", "Gange", "Mékong", "Indus", "Irrawaddy"],
+      "answer": "Mékong",
+      "difficulty": "Moyen",
+      "anecdote": "Le fleuve est utilisé..."
+    },
+    {
+      "id": 21,
+      "question": "Quelle capitale de l'Irlande du Nord possède officiellement le statut de cité ?",
+      "propositions": ["Bangor", "Belfast", "Derry", "Larne", "Lisburn", "Newry"],
+      "answer": "Belfast",
+      "difficulty": "Difficile",
+      "anecdote": "Belfast a été un centre..."
+    },
+    {
+      "id": 22,
+      "question": "Quelle rivière longue de 51 kilomètres relie le Lac Sainte-Claire au Lac Érié ?",
+      "propositions": ["Bonnet Plume", "Kazan", "Détroit", "Mattawa", "Rivière Niagara", "Rivière Saint-Louis"],
+      "answer": "Détroit",
+      "difficulty": "Difficile",
+      "anecdote": "Aujourd'hui au patrimoine..."
+    },
+    {
+      "id": 23,
+      "question": "Dans quelle région du Portugal peut-on atterrir à l'aéroport international de Faro ?",
+      "propositions": ["Algarve", "Açores", "Alentejo", "Madère", "Lisbonne et Val de Tage", "Centre"],
+      "answer": "Algarve",
+      "difficulty": "Difficile",
+      "anecdote": "Le trafic 2007..."
+    },
+    {
+      "id": 24,
+      "question": "Dans quel pays se trouvent les déserts Victoria, Simson et Gibson ?",
+      "propositions": ["Chine", "Russie", "Malaisie", "Australie", "Inde", "États-Unis"],
+      "answer": "Australie",
+      "difficulty": "Difficile",
+      "anecdote": "Le grand désert Victoria..."
+    },
+    {
+      "id": 25,
+      "question": "Quelle vague déferlante est capable de remonter l'estuaire d'un fleuve ?",
+      "propositions": ["Atoll", "Mascaret", "Tsunami", "Tourbillon", "Raz-de-marée", "Ressac"],
+      "answer": "Mascaret",
+      "difficulty": "Difficile",
+      "anecdote": "Ce phénomène de brusque..."
+    },
+    {
+      "id": 26,
+      "question": "Quelles sont les plus célèbres îles appartenant à la République d'Équateur ?",
+      "propositions": ["Mariannes", "Kouriles", "Galapagos", "San Juan", "Îles Malouines", "Samoa"],
+      "answer": "Galapagos",
+      "difficulty": "Difficile",
+      "anecdote": "L'archipel des îles..."
+    },
+    {
+      "id": 27,
+      "question": "À l'embouchure de quel fleuve est bâtie la ville portugaise de Lisbonne ?",
+      "propositions": ["Douro", "Tage", "Guadalquivir", "Èbre", "Mondego", "Sado"],
+      "answer": "Tage",
+      "difficulty": "Difficile",
+      "anecdote": "Lisbonne est située..."
+    },
+    {
+      "id": 28,
+      "question": "Quelle est la ville de plus d'un million d'habitants la plus septentrionale au monde ?",
+      "propositions": ["Saint-Petersbourg", "Mourmansk", "Kiev", "Minsk", "Oslo", "Edmonton"],
+      "answer": "Saint-Petersbourg",
+      "difficulty": "Difficile",
+      "anecdote": "Saint-Petersbourg est située..."
+    },
+    {
+      "id": 29,
+      "question": "Dans quelle région d'Espagne se trouve Saint-Jacques-de-Compostelle ?",
+      "propositions": ["Andalousie", "Galice", "Catalogne", "Asturies", "Pays Basque", "Castille-et-León"],
+      "answer": "Galice",
+      "difficulty": "Difficile",
+      "anecdote": "Le pèlerinage..."
+    },
+    {
+      "id": 30,
+      "question": "Sur quelle île peut-on aller bronzer sur les plages de Saint-Florent ?",
+      "propositions": ["Mayotte", "Martinique", "La Réunion", "Corse", "Guadeloupe", "Sardaigne"],
+      "answer": "Corse",
+      "difficulty": "Difficile",
+      "anecdote": "Capitale de l'ancienne province..."
+    },
+    {
+      "id": 31,
+      "question": "À quelle ville de France l'andouillette, le saucisson et Guignol vous font-ils penser ?",
+      "propositions": ["Marseille", "Nice", "Lyon", "Cannes", "Bordeaux", "Toulouse"],
+      "answer": "Lyon",
+      "difficulty": "Facile",
+      "anecdote": "Lyon est en situation de carrefour géographique, au nord du couloir naturel de la vallée du Rhône."
+    },
+    {
+      "id": 32,
+      "question": "Quelle ville, capitale de la Grèce, comprend notamment le port du Pirée ?",
+      "propositions": ["Héraklion", "Patras", "Larissa", "Athènes", "Thessalonique", "Rhodes"],
+      "answer": "Athènes",
+      "difficulty": "Facile",
+      "anecdote": "Athènes est l'une des plus anciennes villes au monde, avec une présence humaine attestée dès le Néolithique."
+    },
+    {
+      "id": 33,
+      "question": "De quelle ville du Sud-Ouest de la France proviennent de célèbres pruneaux AOC ?",
+      "propositions": ["Nérac", "Agen", "Tonneins", "Marmande", "Cahors", "Montauban"],
+      "answer": "Agen",
+      "difficulty": "Facile",
+      "anecdote": "Le nom d'Agen est associé au pruneau, dont la zone de production principale est essentiellement située en Lot-et-Garonne."
+    },
+    {
+      "id": 34,
+      "question": "De quelle couleur sont les cabines téléphoniques de la ville de Londres ?",
+      "propositions": ["Verte", "Blanche", "Jaune", "Rouge", "Bleue", "Noire"],
+      "answer": "Rouge",
+      "difficulty": "Facile",
+      "anecdote": "Ville touristique européenne par excellence, Londres fut fondée il y a presque 2 000 ans par les Romains sous le nom de Londinium."
+    },
+    {
+      "id": 35,
+      "question": "Quelle ville réputée pour la qualité de ses cigares est aussi la capitale de Cuba ?",
+      "propositions": ["La Havane", "Santa Clara", "Guantanamo", "Santiago de Cuba", "Varadero", "Camagüey"],
+      "answer": "La Havane",
+      "difficulty": "Facile",
+      "anecdote": "L'emplacement actuel de la ville de La Havane se situe sur la côte nord de l'île de Cuba et dans la partie ouest de celle-ci."
+    },
+    {
+      "id": 36,
+      "question": "À la fois ville et province, de quel pays Bangkok est-elle la capitale ?",
+      "propositions": ["Birmanie", "Malaisie", "Laos", "Thaïlande", "Vietnam", "Cambodge"],
+      "answer": "Thaïlande",
+      "difficulty": "Facile",
+      "anecdote": "Le boom économique asiatique des années 1980-1990 a amené de nombreuses multinationales à rapidement s'installer à Bangkok."
+    },
+    {
+      "id": 37,
+      "question": "À quelle grande ville d'Afrique l'explorateur Savorgnan de Brazza a-t-il donné son nom ?",
+      "propositions": ["Nairobi", "Brazzaville", "Libreville", "Kinshasa", "Douala", "Luanda"],
+      "answer": "Brazzaville",
+      "difficulty": "Facile",
+      "anecdote": "La ville de Brazzaville a été fondée le 3 octobre 1880 à l'emplacement des anciens bourgs précoloniaux de Nkuna."
+    },
+    {
+      "id": 38,
+      "question": "Quelle capitale est également le centre politique et culturel de la Chine ?",
+      "propositions": ["Hong Kong", "Tokyo", "Shanghai", "Pékin", "Séoul", "Manille"],
+      "answer": "Pékin",
+      "difficulty": "Facile",
+      "anecdote": "Située à proximité de la Grande Muraille, Pékin abrite des monuments célèbres comme la Cité interdite et le Temple du ciel."
+    },
+    {
+      "id": 39,
+      "question": "Laquelle de ces quatre villes espagnoles ne possède pas un port de renom ?",
+      "propositions": ["Barcelone", "Malaga", "Valence", "Madrid", "Bilbao", "Séville"],
+      "answer": "Madrid",
+      "difficulty": "Facile",
+      "anecdote": "Située en plein coeur du royaume d'Espagne, Madrid est la capitale mais aussi la ville la plus peuplée de la Communauté de Madrid."
+    },
+    {
+      "id": 40,
+      "question": "Dans quel pays à forte densité de population la ville de Calcutta est-elle située ?",
+      "propositions": ["Brésil", "Birmanie", "Inde", "Bangladesh", "Indonésie", "Nigeria"],
+      "answer": "Inde",
+      "difficulty": "Facile",
+      "anecdote": "Calcutta est connue pour avoir abrité la fondation de la congrégation religieuse des Missionnaires de la Charité par Mère Teresa."
+    },
+    {
+      "id": 41,
+      "question": "Quelle est la capitale ainsi que la plus grande ville du territoire égyptien ?",
+      "propositions": ["Alexandrie", "Le Caire", "Louxor", "Suez", "Assouan", "Gizeh"],
+      "answer": "Le Caire",
+      "difficulty": "Moyen",
+      "anecdote": "Avec ses seize millions d'habitants, Le Caire est la plus grande ville du Moyen-Orient et la seconde ville d'Afrique derrière Lagos."
+    },
+    {
+      "id": 42,
+      "question": "Célèbre pour son industrie cinématographique, dans quel pays se situe la ville de Bombay ?",
+      "propositions": ["Népal", "Inde", "Sri Lanka", "Pakistan", "Bangladesh", "Afghanistan"],
+      "answer": "Inde",
+      "difficulty": "Moyen",
+      "anecdote": "Bombay forme une agglomération de plus de 18 millions d'habitants."
+    },
+    {
+      "id": 43,
+      "question": "Dans laquelle de ces villes peut-on contempler un célèbre pain de sucre ?",
+      "propositions": ["Rio de Janeiro", "La Havane", "Brazzaville", "Le Caire", "Buenos Aires", "Lima"],
+      "answer": "Rio de Janeiro",
+      "difficulty": "Moyen",
+      "anecdote": "Le Christ Rédempteur domine la ville depuis le mont du Corcovado."
+    },
+    {
+      "id": 44,
+      "question": "Quelle capitale administrative des Pays-Bas est le siège de nombreuses institutions ?",
+      "propositions": ["Amsterdam", "La Haye", "Rotterdam", "Utrecht", "Eindhoven", "Maastricht"],
+      "answer": "La Haye",
+      "difficulty": "Moyen",
+      "anecdote": "La Haye abrite la Cour internationale de justice et la Cour pénale internationale."
+    },
+    {
+      "id": 45,
+      "question": "Combien y a-t-il de communes à Paris situées sur une boucle de la Seine ?",
+      "propositions": ["22", "Une seule", "13", "9", "5", "10"],
+      "answer": "Une seule",
+      "difficulty": "Moyen",
+      "anecdote": "La commune de Paris comptait plus de deux millions d'habitants en 2012."
+    },
+    {
+      "id": 46,
+      "question": "Tripoli est une ville du Liban mais se trouve être aussi la capitale de quel pays ?",
+      "propositions": ["Tunisie", "Soudan", "Libye", "Maroc", "Algérie", "Égypte"],
+      "answer": "Libye",
+      "difficulty": "Moyen",
+      "anecdote": "Tripoli est la plus grande ville et le principal port du pays."
+    },
+    {
+      "id": 47,
+      "question": "Quelle ville est aussi importante pour l'Afrique que pour le monde arabe ?",
+      "propositions": ["Le Caire", "Alexandrie", "Suez", "Assouan", "Casablanca", "Tunis"],
+      "answer": "Le Caire",
+      "difficulty": "Moyen",
+      "anecdote": "La place Tahrir a été l'emblème de la révolution égyptienne de 2011."
+    },
+    {
+      "id": 48,
+      "question": "Avec ses nombreux canaux, sur les rives de quelle mer la ville de Venise est-elle située ?",
+      "propositions": ["Noire", "Adriatique", "Ionienne", "Égée", "Tyrrhénienne", "Baltique"],
+      "answer": "Adriatique",
+      "difficulty": "Moyen",
+      "anecdote": "Venise s'étend sur 118 îles reliées par des ponts."
+    },
+    {
+      "id": 49,
+      "question": "Dans quelle ville recense-t-on à ce jour le plus grand nombre de taxis au monde ?",
+      "propositions": ["New York", "Londres", "Brasilia", "Tokyo", "Moscou", "Mexico"],
+      "answer": "New York",
+      "difficulty": "Moyen",
+      "anecdote": "Les taxis jaunes de New York sont parmi les plus célèbres au monde."
+    },
+    {
+      "id": 50,
+      "question": "Quelle capitale du Népal était une étape bien connue de la communauté hippies ?",
+      "propositions": ["Dharan", "Katmandou", "Pokhara", "Lalitpur", "Bhaktapur", "Janakpur"],
+      "answer": "Katmandou",
+      "difficulty": "Moyen",
+      "anecdote": "Katmandou ne possède pas de réseau souterrain de canalisations."
+    },
+    {
+      "id": 51,
+      "question": "Au bord de quoi la ville américaine de Chicago a-t-elle été construite ?",
+      "propositions": ["Volcan", "Faille", "Lac", "Océan", "Désert", "Gorge"],
+      "answer": "Lac",
+      "difficulty": "Difficile",
+      "anecdote": "Chicago est un grand centre industriel des États-Unis."
+    },
+    {
+      "id": 52,
+      "question": "Quelle est la nationalité des habitants de l'île de Taïwan, aussi appelée Formose ?",
+      "propositions": ["Coréenne", "Chinoise", "Népalaise", "Japonaise", "Vietnamienne", "Malaisienne"],
+      "answer": "Chinoise",
+      "difficulty": "Difficile",
+      "anecdote": "Le climat de Taïwan est tropical au sud et subtropical au nord."
+    },
+    {
+      "id": 53,
+      "question": "Combien y a-t-il environ d'habitants à Mexico, capitale et ville la plus peuplée du Mexique ?",
+      "propositions": ["12 millions", "8 millions", "20 millions", "16 millions", "25 millions", "10 millions"],
+      "answer": "20 millions",
+      "difficulty": "Difficile",
+      "anecdote": "Mexico est une des plus grandes aires urbaines du monde."
+    },
+    {
+      "id": 54,
+      "question": "Dans quelle région historique d'Espagne se situe la célèbre ville de Barcelone ?",
+      "propositions": ["Catalogne", "Andalousie", "Castille", "Galice", "Valence", "Aragon"],
+      "answer": "Catalogne",
+      "difficulty": "Difficile",
+      "anecdote": "Barcelone est la deuxième ville d'Espagne en population."
+    },
+    {
+      "id": 55,
+      "question": "Comment appelle-t-on le quartier arabe ou la médina d'Alger ?",
+      "propositions": ["Bled", "Casbah", "Torah", "Souk", "Riad", "Mellah"],
+      "answer": "Casbah",
+      "difficulty": "Difficile",
+      "anecdote": "La Casbah d'Alger remonte à l'Antiquité."
+    },
+    {
+      "id": 56,
+      "question": "De quel pays Rangoun est-elle la plus grande ville en nombre d'habitants ?",
+      "propositions": ["Laos", "Malaisie", "Birmanie", "Philippines", "Thaïlande", "Cambodge"],
+      "answer": "Birmanie",
+      "difficulty": "Difficile",
+      "anecdote": "Rangoun signifie « fin de la discorde »."
+    },
+    {
+      "id": 57,
+      "question": "Dans quel pays se trouve Hammerfest, la ville la plus au nord de l'Europe ?",
+      "propositions": ["Écosse", "Norvège", "Finlande", "Suède", "Islande", "Danemark"],
+      "answer": "Norvège",
+      "difficulty": "Difficile",
+      "anecdote": "Hammerfest est parfois décrite comme la ville la plus septentrionale du monde."
+    },
+    {
+      "id": 58,
+      "question": "Quelle capitale du Liberia est située au bord de l'océan Atlantique ?",
+      "propositions": ["Monrovia", "Nimba", "Lofa", "Grand Bassa", "Buchanan", "Ganta"],
+      "answer": "Monrovia",
+      "difficulty": "Difficile",
+      "anecdote": "Monrovia assure l’essentiel des exportations de minerai de fer."
+    },
+    {
+      "id": 59,
+      "question": "Dans quel pays peut-on déambuler dans les rues de Constantine, Oran ou encore Annaba ?",
+      "propositions": ["Turquie", "Jordanie", "Tunisie", "Algérie", "Maroc", "Libye"],
+      "answer": "Algérie",
+      "difficulty": "Difficile",
+      "anecdote": "Constantine est surnommée la ville des ponts suspendus."
+    },
+    {
+      "id": 60,
+      "question": "À Hong Kong, quel funiculaire relie le quartier de Central à Victoria Peak ?",
+      "propositions": ["Cross-Harbour", "Tsing Ma", "Peak Tram", "Octopus", "Star Ferry", "MTR"],
+      "answer": "Peak Tram",
+      "difficulty": "Difficile",
+      "anecdote": "Le funiculaire offre une des plus belles vues sur les gratte-ciels de Hong Kong."
+    },
+    {
+      "id": 61,
+      "question": "À quel département Bernadette et Jacques Chirac étaient-ils fortement liés ?",
+      "propositions": ["Landes", "Corrèze", "Pas-de-Calais", "Vosges", "Puy-de-Dôme", "Cantal"],
+      "answer": "Corrèze",
+      "difficulty": "Facile",
+      "anecdote": "Située à l'ouest du Massif central, la Corrèze se compose de la Montagne, des plateaux et du bassin de Brive."
+    },
+    {
+      "id": 62,
+      "question": "Dans quel département Versailles s'est-elle développée autour de son château ?",
+      "propositions": ["Gard", "Aisne", "Yvelines", "Charente", "Val-d'Oise", "Essonne"],
+      "answer": "Yvelines",
+      "difficulty": "Facile",
+      "anecdote": "Le château de Versailles accueille le Parlement lorsqu'il se réunit en Congrès pour adopter une révision de la Constitution."
+    },
+    {
+      "id": 63,
+      "question": "Comment sont nommés les habitants du département de l'Hérault ?",
+      "propositions": ["Héraultais", "Savoie", "Gard", "Morbihan", "Audois", "Vauclusiens"],
+      "answer": "Héraultais",
+      "difficulty": "Facile",
+      "anecdote": "Georges Brassens (Sète), Boby Lapointe (Pézenas), Émilie Simon (Montpellier), Juliette Gréco (Montpellier) étaient héraultais."
+    },
+    {
+      "id": 64,
+      "question": "Quel département français regroupe l'Artois et une partie de l'ancienne Picardie ?",
+      "propositions": ["Pas-de-Calais", "Aisne", "Nord", "Calvados", "Oise", "Somme"],
+      "answer": "Pas-de-Calais",
+      "difficulty": "Facile",
+      "anecdote": "Bien que réunis, ces deux territoires restent encore aujourd'hui assez différents culturellement et économiquement."
+    },
+    {
+      "id": 65,
+      "question": "Quel deuxième aéroport de France se situe dans le département de l'Essone ?",
+      "propositions": ["Paris-Orly", "Creuse", "Gironde", "Jura", "Paris-Charles de Gaulle", "Nice Côte d'Azur"],
+      "answer": "Paris-Orly",
+      "difficulty": "Facile",
+      "anecdote": "Plaque tournante importante du transport aérien, l'aéroport brasse un trafic d'environ 30 millions de passagers chaque année."
+    },
+    {
+      "id": 66,
+      "question": "Quel département tient son nom de la rivière localement appelée le Gardon ?",
+      "propositions": ["Gard", "Charente", "Vaucluse", "Morbihan", "Tarn", "Hérault"],
+      "answer": "Gard",
+      "difficulty": "Facile",
+      "anecdote": "La rivière, navigable en canoë-kayak sur environ 70 km, est franchie par le pont du Gard, pont-aqueduc romain du Ier siècle."
+    },
+    {
+      "id": 67,
+      "question": "Quel département de Bretagne a pour préfecture la ville de Vannes ?",
+      "propositions": ["Côtes-d'Armor", "Ille-et-Vilaine", "Morbihan", "Finistère", "Loire-Atlantique", "Sarthe"],
+      "answer": "Morbihan",
+      "difficulty": "Facile",
+      "anecdote": "Il correspond pour l'essentiel au royaume, devenu comté puis baillie de Broërec et plus anciennement à la cité des Vénètes."
+    },
+    {
+      "id": 68,
+      "question": "Lequel de ces départements a un nom provenant des deux rivières le traversant ?",
+      "propositions": ["Pas-de-Calais", "Loir-et-Cher", "Charente-Maritime", "Puy-de-Dôme", "Haute-Garonne", "Seine-et-Marne"],
+      "answer": "Loir-et-Cher",
+      "difficulty": "Facile",
+      "anecdote": "Le département de Loir-et-Cher est connu en France notamment grâce à la chanson de Michel Delpech écrite en 1977."
+    },
+    {
+      "id": 69,
+      "question": "Quel département est géographiquement situé le plus à l'ouest de la France ?",
+      "propositions": ["Pas-de-Calais", "Dordogne", "Lozère", "Finistère", "Morbihan", "Côtes-d'Armor"],
+      "answer": "Finistère",
+      "difficulty": "Facile",
+      "anecdote": "Premier département côtier de France, le Finistère compte 117 communes littorales sur 282 et près d'un quart du littoral français."
+    },
+    {
+      "id": 70,
+      "question": "Dans quel département mange-t-on le potjevleesch, le waterzooi et le welsh ?",
+      "propositions": ["Nord", "Deux-Sèvres", "Finistère", "Lozère", "Pas-de-Calais", "Ardennes"],
+      "answer": "Nord",
+      "difficulty": "Facile",
+      "anecdote": "Plusieurs chansons parlent du Nord, l'une des plus connues est probablement « Les Corons » de Pierre Bachelet."
+    },
+    {
+      "id": 71,
+      "question": "Dans quel département êtes-vous en vous promenant sur le vieux bassin d'Honfleur ?",
+      "propositions": ["Calvados", "Deux-Sèvres", "Yvelines", "Finistère", "Seine-Maritime", "Manche"],
+      "answer": "Calvados",
+      "difficulty": "Moyen",
+      "anecdote": "Ses étroites maisons en ardoises se reflétant dans le bassin en font la principale attraction touristique d'Honfleur."
+    },
+    {
+      "id": 72,
+      "question": "Dans quel département l'agglomération d'Épinal dépasse-t-elle les 40 000 habitants ?",
+      "propositions": ["Gironde", "Jura", "Vosges", "Aude", "Haute-Saône", "Meurthe-et-Moselle"],
+      "answer": "Vosges",
+      "difficulty": "Moyen",
+      "anecdote": "Connue d'abord pour son imagerie, fondée en 1796 par Pellerin, la ville l'est également pour son château et sa basilique."
+    },
+    {
+      "id": 73,
+      "question": "Quel est le troisième département forestier de France avec 418 000 hectares ?",
+      "propositions": ["Creuse", "Sarthe", "Vosges", "Dordogne", "Landes", "Gironde"],
+      "answer": "Dordogne",
+      "difficulty": "Moyen",
+      "anecdote": "On y trouve Feuillus, conifères, prairies, collines, vallons, vallées, vignes, truffières, falaises, cours d'eau, gorges et grottes."
+    },
+    {
+      "id": 74,
+      "question": "Quel est le plus vaste département de France métropolitaine ?",
+      "propositions": ["Aude", "Yvelines", "Savoie", "Gironde", "Landes", "Alpes-Maritimes"],
+      "answer": "Gironde",
+      "difficulty": "Moyen",
+      "anecdote": "Long de 75 kilomètres et large de 12 kilomètres à son embouchure, l'estuaire de la Gironde est le plus grand estuaire d'Europe."
+    },
+    {
+      "id": 75,
+      "question": "De quel département François Fillon a-t-il été député et sénateur ?",
+      "propositions": ["Sarthe", "Manche", "Lozère", "Finistère", "Vendée", "Mayenne"],
+      "answer": "Sarthe",
+      "difficulty": "Moyen",
+      "anecdote": "Sa campagne fut mise en question par des révélations de la presse, puis des poursuites l'impliquant avec son épouse, Penelope."
+    },
+    {
+      "id": 76,
+      "question": "Dans quel département pouvez-vous assister aux 24 Heures du Mans ?",
+      "propositions": ["Charente", "Sarthe", "Corrèze", "Moselle", "Indre-et-Loire", "Loire-Atlantique"],
+      "answer": "Sarthe",
+      "difficulty": "Moyen",
+      "anecdote": "La compétition, initiée en 1923 et se déroulant chaque année au mois de juin, attire un peu plus de 240 000 spectateurs."
+    },
+    {
+      "id": 77,
+      "question": "Quel département est réputé pour ses vins blancs dont son cépage Savagnin ?",
+      "propositions": ["Corrèze", "Jura", "Yvelines", "Nord", "Ain", "Doubs"],
+      "answer": "Jura",
+      "difficulty": "Moyen",
+      "anecdote": "On trouve également dans le Jura des vins singuliers comme les vins liquoreux que sont le macvin ou le vin de paille."
+    },
+    {
+      "id": 78,
+      "question": "Quel département français est frontalier avec le Luxembourg et l'Allemagne ?",
+      "propositions": ["Moselle", "Manche", "Gironde", "Savoie", "Bas-Rhin", "Ardennes"],
+      "answer": "Moselle",
+      "difficulty": "Moyen",
+      "anecdote": "Au niveau européen, la Moselle fait partie de la Grande Région et de l'Eurodistrict SaarMoselle (pour une partie du département)."
+    },
+    {
+      "id": 79,
+      "question": "Quel département ayant pour code 73 est le plus montagneux de France ?",
+      "propositions": ["Loir-et-Cher", "Calvados", "Savoie", "Creuse", "Haute-Savoie", "Isère"],
+      "answer": "Savoie",
+      "difficulty": "Moyen",
+      "anecdote": "La grande majorité des massifs de la Savoie sont des massifs alpins, auxquels s'ajoute la partie la plus méridionale du Jura."
+    },
+    {
+      "id": 80,
+      "question": "Dans quel département français est situé le mont Ventoux ?",
+      "propositions": ["Gard", "Vaucluse", "Lozère", "Aude", "Drôme", "Bouches-du-Rhône"],
+      "answer": "Vaucluse",
+      "difficulty": "Moyen",
+      "anecdote": "Surnommé le mont Chauve, le mont Ventoux est le point culminant des monts de Vaucluse et le plus haut sommet de Vaucluse."
+    },
+    {
+      "id": 81,
+      "question": "Quel département français a pour emblème un escargot avec des ailes ?",
+      "propositions": ["Manche", "Dordogne", "Vaucluse", "Charente", "Charente-Maritime", "Deux-Sèvres"],
+      "answer": "Charente",
+      "difficulty": "Difficile",
+      "anecdote": "Le département tire son nom du fleuve qui, à l'époque gallo-romaine, était connu sous le nom grec de Kanentelos."
+    },
+    {
+      "id": 82,
+      "question": "De quel département Cherbourg-en-Cotentin est-elle le principal pôle culturel ?",
+      "propositions": ["Calvados", "Manche", "Loir-et-Cher", "Sarthe", "Orne", "Morbihan"],
+      "answer": "Manche",
+      "difficulty": "Difficile",
+      "anecdote": "Le chanteur Allain Leprest, originaire de Lestre, est resté fidèle à son département et à sa mer d'origine qu'il a chantés."
+    },
+    {
+      "id": 83,
+      "question": "Dans quel département fête-t-on le carnaval de Limoux durant plus de dix semaines ?",
+      "propositions": ["Corrèze", "Deux-Sèvres", "Moselle", "Aude", "Pyrénées-Orientales", "Hérault"],
+      "answer": "Aude",
+      "difficulty": "Difficile",
+      "anecdote": "Se déroulant dans la ville de Limoux, sur la place de la République, c'est l'un des plus longs carnavals du monde."
+    },
+    {
+      "id": 84,
+      "question": "Dans quelle ville de la Somme trouve-t-on la Tour Perret et la maison de Jules Verne ?",
+      "propositions": ["Vaucluse", "Amiens", "Jura", "Gard", "Abbeville", "Saint-Quentin"],
+      "answer": "Amiens",
+      "difficulty": "Difficile",
+      "anecdote": "On distingue deux grandes zones riches en sites touristiques : la côte picarde et Abbeville, l'Amiénois et la Haute Somme."
+    },
+    {
+      "id": 85,
+      "question": "Quel est le deuxième département le moins peuplé de France après la Lozère ?",
+      "propositions": ["Creuse", "Dordogne", "Pas-de-Calais", "Vosges", "Ardennes", "Territoire de Belfort"],
+      "answer": "Creuse",
+      "difficulty": "Difficile",
+      "anecdote": "La Creuse est limitrophe des départements de la Corrèze, de la Haute-Vienne, de l'Allier, du Puy-de-Dôme, du Cher et de l'Indre."
+    },
+    {
+      "id": 86,
+      "question": "Quel département français est surnommé le département des sources ?",
+      "propositions": ["Vosges", "Sarthe", "Morbihan", "Lozère", "Haute-Loire", "Isère"],
+      "answer": "Lozère",
+      "difficulty": "Difficile",
+      "anecdote": "C'est le seul département français métropolitain dans lequel toutes les rivières qui s'écoulent prennent également leur source."
+    },
+    {
+      "id": 87,
+      "question": "Quel barrage est situé sur la Truyère, dans le département du Cantal ?",
+      "propositions": ["Tignes", "Grandval", "Pareloup", "Maury", "Vezins", "Saut de Véole"],
+      "answer": "Grandval",
+      "difficulty": "Difficile",
+      "anecdote": "La scène du contrôle de la Feldgendarmerie sur le barrage du film « La Grande Vadrouille » y a été tournée en 1966."
+    },
+    {
+      "id": 88,
+      "question": "Dans quel département la ville de Niort compte-t-elle plus de 50 000 habitants ?",
+      "propositions": ["Moselle", "Nord", "Landes", "Deux-Sèvres", "Charente-Maritime", "Vendée"],
+      "answer": "Deux-Sèvres",
+      "difficulty": "Difficile",
+      "anecdote": "Comparé à la densité de la France métropolitaine, le département des Deux-Sèvres apparaît comme moyennement peuplé."
+    },
+    {
+      "id": 89,
+      "question": "Dans quel département les habitants sont-ils appelés les Axonais ?",
+      "propositions": ["Allier", "Ariège", "Aisne", "Ain", "Ardennes", "Oise"],
+      "answer": "Aisne",
+      "difficulty": "Difficile",
+      "anecdote": "L'Aisne a perdu un peu de sa population dans la seconde moitié du XIXe siècle, en raison de l'exode rural, pourtant limité."
+    },
+    {
+      "id": 90,
+      "question": "Dans quel département la renommée des conditions de surf est-elle mondiale ?",
+      "propositions": ["Gironde", "Landes", "Moselle", "Manche", "Pyrénées-Atlantiques", "Finistère"],
+      "answer": "Landes",
+      "difficulty": "Difficile",
+      "anecdote": "Les Landes sont également réputées culinairement au travers du foie gras, des magrets, des poulets et des vins AOC Tursan."
+    }
+  ]
+}

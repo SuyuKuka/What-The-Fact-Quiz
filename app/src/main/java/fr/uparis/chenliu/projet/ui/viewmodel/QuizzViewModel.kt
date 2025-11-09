@@ -1,12 +1,14 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
+import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import fr.uparis.chenliu.projet.R
+
 import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
@@ -23,12 +25,11 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val font = mutableIntStateOf(0)
 
     var question = mutableStateOf("")
-    val answers: Array<MutableState<AnswerSummary>> = Array(4) { mutableStateOf(AnswerSummary(-1,"",false)) }
+    val answers = mutableStateOf(AnswerSummary(listOf(),""))
 
     data class AnswerSummary(
-        var answerId: Int,
-        var answer: String,
-        var validity: Boolean
+        var propositions: List<String>,
+        var answer: String
     )
 
     fun init() {
@@ -52,32 +53,35 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
         viewModelScope.launch {
+            //todo: a simplifier
             when (subject) {
-                "Maths" -> {
-                    val currentDao = db.quizzMathsDao()
+                "Science" -> {
+                    val currentDao = db.quizzScienceDao()
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
                     // responses
-                    val bad = currentDao.getWrongAnswers(currentQuestion.idQuestion)
-                    val good = currentDao.getCorrectAnswer(currentQuestion.idQuestion)
-                    val res = (bad + good).shuffled()
-                    for (i in 0..res.size - 1) {
-                        answers[i].value = res[i]
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
                     }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
                 }
-                "Histoire" -> {
-                    val currentDao = db.quizzHistoryDao()
+                "Gastronomie" -> {
+                    val currentDao = db.quizzGastronomieDao()
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
                     // responses
-                    val bad = currentDao.getWrongAnswers(currentQuestion.idQuestion)
-                    val good = currentDao.getCorrectAnswer(currentQuestion.idQuestion)
-                    val res = (bad + good).shuffled()
-                    for (i in 0..res.size - 1) {
-                        answers[i].value = res[i]
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
                     }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
                 }
                 "Géographie" -> {
                     val currentDao = db.quizzGeoDao()
@@ -85,27 +89,57 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     // question
                     question.value = currentQuestion.question
                     // responses
-                    val bad = currentDao.getWrongAnswers(currentQuestion.idQuestion)
-                    val good = currentDao.getCorrectAnswer(currentQuestion.idQuestion)
-                    val res = (bad + good).shuffled()
-                    for (i in 0..res.size - 1) {
-                        answers[i].value = res[i]
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
                     }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
                 }
-                "Informatique" -> {
-                    val currentDao = db.quizzInfoDao()
+                "Nature" -> {
+                    val currentDao = db.quizzNatureDao()
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
                     // responses
-                    val bad = currentDao.getWrongAnswers(currentQuestion.idQuestion)
-                    val good = currentDao.getCorrectAnswer(currentQuestion.idQuestion)
-                    val res = (bad + good).shuffled()
-                    for (i in 0..res.size - 1) {
-                        answers[i].value = res[i]
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
                     }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
                 }
-                else -> db.quizzMathsDao()
+                "Dessin anime" -> {
+                    val currentDao = db.quizzDessinAnimeDao()
+                    val currentQuestion = currentDao.getQuestion(difficulty)
+                    // question
+                    question.value = currentQuestion.question
+                    // responses
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
+                }
+                "Informatique" -> {
+                    val currentDao = db.quizzInformatiqueDao()
+                    val currentQuestion = currentDao.getQuestion(difficulty)
+                    // question
+                    question.value = currentQuestion.question
+                    // responses
+                    answers.value = currentDao.getAnswers(currentQuestion.id)
+                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    while (randomPropositions.contains(answers.value.answer)) {
+                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
+                    }
+                    randomPropositions.add(answers.value.answer)
+                    answers.value.propositions = randomPropositions.shuffled()
+                }
+                else -> db.quizzScienceDao()
             }
         }
     }

@@ -61,6 +61,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun buySubscription(isMonthly: Boolean) {
+        addEnergy()
         viewModelScope.launch {
             val today = mutableStateOf<LocalDateTime>(LocalDateTime.now())
             val day = today.value.dayOfMonth.toString().toInt()
@@ -83,9 +84,9 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun extendSubscription(isMonthly: Boolean) {
+        addEnergy()
         viewModelScope.launch {
             getUsers()
-
             val endDate = endDate.value.split("/")
             val day = endDate[0]
             var month = endDate[1].toInt()

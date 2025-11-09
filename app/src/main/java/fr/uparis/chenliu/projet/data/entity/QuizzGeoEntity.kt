@@ -6,8 +6,9 @@ import androidx.room.PrimaryKey
 @Entity
 data class QuizzGeoEntity(
     @PrimaryKey(autoGenerate = true)
-    val idQuestion: Int = 0,
-    val difficulty: String,
+    val id: Int = 0,
     val question: String,
-    val resources: String?
+    val propositions: List<String>,
+    val answer: String,
+    val difficulty: String
 )
