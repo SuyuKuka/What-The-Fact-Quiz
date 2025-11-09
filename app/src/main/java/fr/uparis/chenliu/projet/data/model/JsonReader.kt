@@ -5,7 +5,6 @@ class QuestionParameter(
 )
 
 class QuestionData(
-    val subject: String,
     val difficulty: String,
     val question: String,
     val resources: String?

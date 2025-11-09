@@ -5,66 +5,101 @@ import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import fr.uparis.chenliu.projet.R
-import fr.uparis.chenliu.projet.data.dao.QuizzDao
+import fr.uparis.chenliu.projet.data.dao.QuizzMathsDao
 import fr.uparis.chenliu.projet.data.model.AnswerParameter
 import fr.uparis.chenliu.projet.data.model.QuestionParameter
 import fr.uparis.chenliu.projet.data.database.AppDatabase
-import fr.uparis.chenliu.projet.data.entity.AnswerEntity
-import fr.uparis.chenliu.projet.data.entity.QuestionEntity
-import fr.uparis.chenliu.projet.data.entity.SettingsEntity
-import fr.uparis.chenliu.projet.data.entity.UsersEntity
-import kotlinx.coroutines.delay
+import fr.uparis.chenliu.projet.data.entity.AnswerHistoryEntity
+import fr.uparis.chenliu.projet.data.entity.AnswerMathsEntity
+import fr.uparis.chenliu.projet.data.entity.QuizzHistoryEntity
+import fr.uparis.chenliu.projet.data.entity.QuizzMathsEntity
 import kotlinx.coroutines.launch
 import kotlin.jvm.java
 
 class QuizzViewModel(application: Application): AndroidViewModel(application) {
     private val db = AppDatabase.getInstance(application)
-    var currentQuestion = QuestionEntity(-1,"","","", null)
 
     var question = mutableStateOf("")
-    val answers: Array<MutableState<QuizzDao.AnswerSummary>> = Array(5) { mutableStateOf(QuizzDao.AnswerSummary("",false)) }
+    val answers: Array<MutableState<AnswerSummary>> = Array(4) { mutableStateOf(AnswerSummary("",false)) }
+
+    data class AnswerSummary(
+        var answer: String,
+        var validity: Boolean
+    )
 
     fun initQuizz(c:Context){
         viewModelScope.launch {
-            val inputStream = c.resources.openRawResource(R.raw.quizz)
-            val jsonString = inputStream.bufferedReader().use { it.readText() }
+            var inputStream = c.resources.openRawResource(R.raw.quizzmaths)
+            var jsonString = inputStream.bufferedReader().use { it.readText() }
+            var questionData = Gson().fromJson(jsonString, QuestionParameter::class.java)
 
-            val questionData = Gson().fromJson(jsonString, QuestionParameter::class.java)
-            val qData = questionData.question
+            var qData = questionData.question
             qData.forEach {
-                db.quizzDao().insertQuestion(QuestionEntity(subject = it.subject, difficulty = it.difficulty, question = it.question, resources = it.resources))
+                db.quizzMathsDao().insertQuestion(QuizzMathsEntity( difficulty = it.difficulty, question = it.question, resources = it.resources))
+            }
+            var answerData = Gson().fromJson(jsonString, AnswerParameter::class.java)
+            var aData = answerData.answer
+            aData.forEach {
+                db.quizzMathsDao().insertAnswer(AnswerMathsEntity(idQuestion = it.idQuestion, answer = it.answer, validity = it.validity, position = it.position ))
             }
 
-            val answerData = Gson().fromJson(jsonString, AnswerParameter::class.java)
-            val aData = answerData.answer
+            inputStream = c.resources.openRawResource(R.raw.quizzhistory)
+            jsonString = inputStream.bufferedReader().use { it.readText() }
+            questionData = Gson().fromJson(jsonString, QuestionParameter::class.java)
+
+            qData = questionData.question
+            qData.forEach {
+                db.quizzHistoryDao().insertQuestion(QuizzHistoryEntity( difficulty = it.difficulty, question = it.question, resources = it.resources))
+            }
+            answerData = Gson().fromJson(jsonString, AnswerParameter::class.java)
+            aData = answerData.answer
             aData.forEach {
-                db.quizzDao().insertAnswer(AnswerEntity(idQuestion = it.idQuestion, answer = it.answer, validity = it.validity, position = it.position ))
+                db.quizzHistoryDao().insertAnswer(AnswerHistoryEntity(idQuestion = it.idQuestion, answer = it.answer, validity = it.validity, position = it.position ))
             }
         }
     }
 
+
+
     fun getQuestionAndAnswer(subject: String, difficulty: String){
         viewModelScope.launch {
-            currentQuestion = db.quizzDao().getQuestion(subject, difficulty)
+            when(subject) {
+                "Maths" -> {
+                    val currentDao = db.quizzMathsDao()
+                    val currentQuestion = currentDao.getQuestion(difficulty)
 
-            // question
-            question.value = currentQuestion.question
+                    // question
+                    question.value = currentQuestion.question
+                    // responses
+                    val bad = currentDao.getWrongAnswers(currentQuestion.idQuestion)
+                    val good = currentDao.getCorrectAnswer(currentQuestion.idQuestion)
+                    val res = (bad + good).shuffled()
 
-            // responses
-            val bad = db.quizzDao().getWrongAnswers(currentQuestion.idQuestion)
-            val good = db.quizzDao().getCorrectAnswer(currentQuestion.idQuestion)
+                    Log.d("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", currentQuestion.idQuestion.toString())
 
-            val res = (bad + good).shuffled()
-
-            for (i in 0..res.size-1) {
-                answers[i].value = res[i]
+                    for (i in 0..res.size-1) {
+                        answers[i].value= res[i]
+                    }
+                }
+                "Histoire" -> {
+                    val currentDao = db.quizzHistoryDao()
+                    val currentQuestion = currentDao.getQuestion(difficulty)
+                    // question
+                    question.value = currentQuestion.question
+                    // responses
+                    val bad = currentDao.getWrongAnswers(currentQuestion.idQuestion)
+                    val good = currentDao.getCorrectAnswer(currentQuestion.idQuestion)
+                    val res = (bad + good).shuffled()
+                    for (i in 0..res.size-1) {
+                        answers[i].value= res[i]
+                    }
+                }
+                else -> db.quizzMathsDao()
             }
-
         }
     }
 

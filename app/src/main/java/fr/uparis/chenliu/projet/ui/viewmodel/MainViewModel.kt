@@ -1,24 +1,14 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
-import android.content.Context
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.gson.Gson
-import fr.uparis.chenliu.projet.R
-import fr.uparis.chenliu.projet.data.dao.QuizzDao
-import fr.uparis.chenliu.projet.data.model.AnswerParameter
-import fr.uparis.chenliu.projet.data.model.QuestionParameter
 import fr.uparis.chenliu.projet.data.database.AppDatabase
-import fr.uparis.chenliu.projet.data.entity.AnswerEntity
-import fr.uparis.chenliu.projet.data.entity.QuestionEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlin.jvm.java
 
 class MainViewModel(application: Application): AndroidViewModel(application) {
     private val db = AppDatabase.getInstance(application)
