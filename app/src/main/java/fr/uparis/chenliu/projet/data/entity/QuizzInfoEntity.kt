@@ -4,10 +4,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class QuestionEntity(
+data class QuizzInfoEntity(
     @PrimaryKey(autoGenerate = true)
     val idQuestion: Int = 0,
-    val subject: String,
     val difficulty: String,
     val question: String,
     val resources: String?
