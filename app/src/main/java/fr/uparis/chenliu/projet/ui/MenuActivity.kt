@@ -49,6 +49,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
@@ -104,7 +107,7 @@ fun MyScreenMainMenu(username: String, model: MenuViewModel = viewModel()) {
             entryProvider = entryProvider{
                 entry<Screen.Profile> { model.getUsers(); ProfileScreen(model = model)}
                 entry<Screen.Leaderboard> { LeaderboardScreen(model = model) }
-                entry<Screen.Home> { HomeScreen(model = model)}
+                entry<Screen.Home> { HomeScreen(model = model, backStack)}
                 entry<Screen.Shop> { ShopScreen(model = model) }
                 entry<Screen.Settings> { SettingsScreen(model = model) }
             }
@@ -126,14 +129,14 @@ fun MonTopBar(model: MenuViewModel) {
         title = {
             Column {
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                    Text(text = "Pseudo : ${model.username.value}", fontSize = 20.sp)
+                    DisplayText(list = model.translateFont(), text = "Pseudo : ${model.username.value}", fontSize = 18.sp)
                     if (model.subscription.value) {
-                        Text(text = "Energie : ∞/20⚡", fontSize = 15.sp)
+                        DisplayText(list = model.translateFont(), text = "Energie : ∞/20⚡")
                     } else {
                         if (energy == 20) {
-                            Text(text = "Energie : $energy/20⚡", fontSize = 15.sp)
+                            DisplayText(list = model.translateFont(), text = "Energie : $energy/20⚡")
                         } else {
-                            Text(text = "Energie : $energy/20⚡ ($timeEnergy)", fontSize = 15.sp)
+                            DisplayText(list = model.translateFont(), text = "Energie : $energy/20⚡ ($timeEnergy)")
                         }
                     }
                 }
@@ -178,6 +181,7 @@ fun MonBottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             alert = false
         }
         Alert(
+            list = model.translateFont(),
             onConfirm = {
                 model.updateSettings()
                 leave()
@@ -215,15 +219,15 @@ fun ProfileScreen(model: MenuViewModel) {
             contentScale = ContentScale.Crop
         )
         Column {
-            Text(text = "PROFILE")
+            DisplayText(list = model.translateFont(), text = "PROFILE")
             Row {
-                Text(text = "Pseudo ")
-                UnderlineTextField(value = username) { model.username.value = it }
+                DisplayText(list = model.translateFont(), text = "Pseudo ")
+                UnderlineTextField(list = model.translateFont(), value = username) { model.username.value = it }
             }
             if (subscription) {
                 val remaining = (endDate[2].toInt() - year) * 12 * 30 + (endDate[1].toInt() - month) * 30 + (endDate[0].toInt() - day)
-                Text(text = "Abonné 👑")
-                Text(text = "Temps restant : ${remaining}j")
+                DisplayText(list = model.translateFont(), text = "Abonné 👑")
+                DisplayText(list = model.translateFont(), text = "Temps restant : ${remaining}j")
             }
         }
     }
@@ -238,13 +242,14 @@ fun LeaderboardScreen(model: MenuViewModel) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Text(text = "LEADERBOARD")
+        DisplayText(list = model.translateFont(), text = "LEADERBOARD")
     }
 }
 
 @Composable
-fun HomeScreen(model: MenuViewModel) {
+fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     // todo: load depuis la db
+    val alert = remember { mutableStateOf(false) }
     val difficulty = listOf("Facile", "Moyen", "Difficile")
     val subject = listOf("Maths", "Histoire", "Géographie", "Informatique", "Pokémon")
 
@@ -255,6 +260,23 @@ fun HomeScreen(model: MenuViewModel) {
     intent.putExtra("difficulty", selectedDiff.value)
     intent.putExtra("subject", selectedSubj.value)
 
+    if (alert.value) {
+        Alert(
+            list = model.translateFont(),
+            onConfirm = {
+                alert.value = false
+                backStack += Screen.Shop
+            },
+            onCancel = {
+                alert.value = false
+            },
+            title = "Joue Sans Limite ! 👑",
+            text = "Tu n'as plus d'énergie ! 😱\nNe perds plus ton temps à attendre !\nAchète l'abonnement prenium pour bénéficier de l'énergie A L'INFINI et jouer sans interruption",
+            onConfirmText = "Je m'abonne",
+            onCancelText = "Fermer"
+        )
+    }
+
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = model.translateBackground()),
@@ -263,7 +285,7 @@ fun HomeScreen(model: MenuViewModel) {
             contentScale = ContentScale.Crop
         )
         Column {
-            Text(text = "WTF QUIZ")
+            DisplayText(list = model.translateFont(), text = "WTF QUIZ", fontSize = 24.sp)
             Row(modifier = Modifier.fillMaxWidth()) {
                 difficulty.forEach { diff ->
                     Button(
@@ -276,7 +298,7 @@ fun HomeScreen(model: MenuViewModel) {
                             contentColor = Color.White
                         )
                     ) {
-                        Text(text = diff)
+                        DisplayText(list = model.translateFont(), text = diff)
                     }
                 }
             }
@@ -299,7 +321,7 @@ fun HomeScreen(model: MenuViewModel) {
                             contentColor = Color.White
                         )
                     ) {
-                        Text(subj, textAlign = TextAlign.Center)
+                        DisplayText(list = model.translateFont(), text = subj, textAlign = TextAlign.Center)
                     }
                 }
             }
@@ -310,10 +332,17 @@ fun HomeScreen(model: MenuViewModel) {
                 horizontalArrangement = Arrangement.Center
             ) {
                 Button(
-                    onClick = { model.removeEnergy(); context.startActivity(intent) },
+                    onClick = {
+                        if (model.energy.intValue == 0) {
+                            alert.value = true
+                            return@Button
+                        }
+                        model.removeEnergy()
+                        context.startActivity(intent)
+                    },
                     modifier = Modifier.fillMaxWidth(0.8f)
                 ) {
-                    Text("GOGOGOGOGO")
+                    DisplayText(list = model.translateFont(), text = "Jouer", fontSize = 18.sp)
                 }
             }
         }
@@ -334,17 +363,19 @@ fun ShopScreen(model: MenuViewModel) {
             contentScale = ContentScale.Crop
         )
         Column {
-            Text(text = "SHOP")
+            DisplayText(list = model.translateFont(), text = "SHOP")
             Row {
                 Button(onClick = { showAlertMonth.value = true }) {
-                    Text(text = "1.99€/mois")
+                    DisplayText(list = model.translateFont(), text = "1.99€/mois")
+
                 }
                 Button(onClick = { showAlertYear.value = true }) {
-                    Text(text = "9.99€/an")
+                    DisplayText(list = model.translateFont(), text = "9.99€/an")
                 }
 
                 if (showAlertMonth.value) {
                     Alert(
+                        list = model.translateFont(),
                         onConfirm = { manageSubscription(model = model, isMonthly = true); showAlertMonth.value = false },
                         onCancel = { showAlertMonth.value = false },
                         title = "Confirmer l'abonnement mensuel",
@@ -356,6 +387,7 @@ fun ShopScreen(model: MenuViewModel) {
 
                 if (showAlertYear.value) {
                     Alert(
+                        list = model.translateFont(),
                         onConfirm = { manageSubscription(model = model, isMonthly = false); showAlertYear.value = false },
                         onCancel = { showAlertYear.value = false },
                         title = "Confirmer l'abonnement annuel",
@@ -366,14 +398,6 @@ fun ShopScreen(model: MenuViewModel) {
                 }
             }
         }
-    }
-}
-
-fun manageSubscription(model: MenuViewModel, isMonthly: Boolean) {
-    if (model.subscription.value) {
-        model.extendSubscription(isMonthly = isMonthly)
-    } else {
-        model.buySubscription(isMonthly = isMonthly)
     }
 }
 
@@ -391,24 +415,25 @@ fun SettingsScreen(model: MenuViewModel) {
             contentScale = ContentScale.Crop
         )
         Column {
-            Text(text = "Paramètre")
+            DisplayText(list = model.translateFont(), text = "Paramètre")
             Row {
-                Text(text = "Musique")
-                SliderManage(value = model.music.floatValue) {
+                DisplayText(list = model.translateFont(), text = "Musique")
+                SliderManage(list = model.translateFont(), value = model.music.floatValue) {
                     model.music.floatValue = it
                     model.saved.value = false
                 }
             }
             Row {
-                Text(text = "Son")
-                SliderManage(value = model.sound.floatValue) {
+                DisplayText(list = model.translateFont(), text = "Son")
+                SliderManage(list = model.translateFont(), value = model.sound.floatValue) {
                     model.sound.floatValue = it
                     model.saved.value = false
                 }
             }
             Row {
-                Text(text = "Fond")
+                DisplayText(list = model.translateFont(), text = "Fond")
                 ChoiceField(
+                    model = model,
                     label = "Fond",
                     choice = selectedBackground.intValue,
                     onValueChange = { newValue ->
@@ -418,8 +443,9 @@ fun SettingsScreen(model: MenuViewModel) {
                 )
             }
             Row {
-                Text(text = "Police")
+                DisplayText(list = model.translateFont(), text = "Police")
                 ChoiceField(
+                    model = model,
                     label = "Police",
                     choice = selectedFont.intValue,
                     onValueChange = { newValue ->
@@ -429,7 +455,7 @@ fun SettingsScreen(model: MenuViewModel) {
                 )
             }
             Row {
-                Text(text = "Domaine préféré")
+                DisplayText(list = model.translateFont(), text = "Domaine préféré")
                 WriteField(
                     value = model.preferredTopics.value,
                     onValueChange = {
@@ -442,7 +468,7 @@ fun SettingsScreen(model: MenuViewModel) {
                     onlyNb = false
                 )
             }
-            Button(onClick = { update() }) { Text(text = "Enregistrer") }
+            Button(onClick = { update() }) { DisplayText(list = model.translateFont(), text = "Enregistrer") }
         }
     }
 }
@@ -451,23 +477,32 @@ fun SettingsScreen(model: MenuViewModel) {
 /*                                            Functions                                           */
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+fun manageSubscription(model: MenuViewModel, isMonthly: Boolean) {
+    val isSubscribe = model.subscription.value
+    if (isSubscribe) {
+        model.extendSubscription(isMonthly = isMonthly)
+    } else {
+        model.buySubscription(isMonthly = isMonthly)
+    }
+}
+
 @Composable
-fun SliderManage(value: Float, onValueChange: (Float) -> Unit) {
+fun SliderManage(list: List<Int>, value: Float, onValueChange: (Float) -> Unit) {
     Column {
         Slider(
             value = value,
             onValueChange = onValueChange
         )
-        Text(text = ("%.0f / 100".format(value * 100)))
+        DisplayText(list = list, text = ("%.0f / 100".format(value * 100)))
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ChoiceField(label: String, choice: Int, onValueChange: (Int) -> Unit, choiceList: List<String>) {
+fun ChoiceField(model: MenuViewModel, label: String, choice: Int, onValueChange: (Int) -> Unit, choiceList: List<String>) {
     var expanded by remember { mutableStateOf(value = false) }
     val text = choiceList[choice]
-
+    val selectedFont = model.translateFont()
     ExposedDropdownMenuBox(
         expanded = expanded,
         onExpandedChange = { expanded = !expanded }
@@ -477,10 +512,15 @@ fun ChoiceField(label: String, choice: Int, onValueChange: (Int) -> Unit, choice
             readOnly = true,
             value = text,
             onValueChange = { },
-            label = { Text(text = label + expanded) },
+            label = { DisplayText(list = model.translateFont(), text = label) },
             trailingIcon = {
                 ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
-            }
+            },
+            textStyle = TextStyle(
+                color = Color.Black,
+                fontSize = (16 - selectedFont[1]).sp,
+                fontFamily = FontFamily(Font(selectedFont[0]))
+            )
         )
         ExposedDropdownMenu(
             expanded = expanded,
@@ -492,7 +532,7 @@ fun ChoiceField(label: String, choice: Int, onValueChange: (Int) -> Unit, choice
                         onValueChange(index)
                         expanded = false
                     },
-                    text = { Text(text = c) }
+                    text = { DisplayText(list = model.translateFont(), text = c) }
                 )
             }
         }
@@ -500,31 +540,36 @@ fun ChoiceField(label: String, choice: Int, onValueChange: (Int) -> Unit, choice
 }
 
 @Composable
-fun Alert(onConfirm: () -> Unit, onCancel: () -> Unit, title: String, text: String, onConfirmText: String, onCancelText: String) {
+fun Alert(list: List<Int>, onConfirm: () -> Unit, onCancel: () -> Unit, title: String, text: String, onConfirmText: String, onCancelText: String) {
     AlertDialog(
         onDismissRequest = onCancel,
-        title = { Text(text = title) },
-        text = { Text(text = text) },
+        title = { DisplayText(list = list, text = title) },
+        text = { DisplayText(list = list, text = text) },
         confirmButton = {
             Button(onClick = onConfirm) {
-                Text(text = onConfirmText)
+                DisplayText(list = list, text = onConfirmText)
             }
         },
         dismissButton = {
             Button(onClick = onCancel) {
-                Text(text = onCancelText)
+                DisplayText(list = list, text = onCancelText)
             }
         }
     )
 }
 
 @Composable
-fun UnderlineTextField(value: String, onValueChange: (String) -> Unit) {
+fun UnderlineTextField(list: List<Int>, value: String, onValueChange: (String) -> Unit) {
     Column {
         BasicTextField(
             value = value,
             onValueChange = onValueChange,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            textStyle = TextStyle(
+                fontSize = (16 - list[1]).sp,
+                color = Color.Black,
+                fontFamily = FontFamily(Font(list[0]))
+            )
         )
         HorizontalDivider(
             modifier = Modifier.fillMaxWidth(),
@@ -535,5 +580,18 @@ fun UnderlineTextField(value: String, onValueChange: (String) -> Unit) {
 }
 
 @Composable
-fun DisplayText(text: String, fontSize: TextUnit, font: Int, color: Color) {
+fun DisplayText(
+    list: List<Int>,
+    text: String,
+    fontSize: TextUnit = 16.sp,
+    color: Color = Color.Black,
+    textAlign: TextAlign = TextAlign.Start
+) {
+    Text(
+        text = text,
+        fontSize = (fontSize.value - list[1]).sp,
+        color = color,
+        fontFamily = FontFamily(Font(list[0])),
+        textAlign = textAlign
+    )
 }

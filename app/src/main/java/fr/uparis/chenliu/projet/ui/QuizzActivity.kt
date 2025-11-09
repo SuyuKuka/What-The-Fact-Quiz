@@ -1,7 +1,6 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.os.Bundle
-import android.util.Log.i
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
@@ -21,15 +20,14 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Button
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
@@ -69,20 +67,24 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 
     val question = model.question.value
     val answers = model.answers
+
+    model.init()
+
     LaunchedEffect(subj, diff,nbQuestion.intValue) {
         model.getQuestionAndAnswer(subj, diff)
     }
     Column(modifier = Modifier.padding(top = 24.dp)) {
         if (nbQuestion.intValue > 0) {
-            Game(question, answers, score, nbQuestion, answerHistory,questionHistory,goodAnswer)
+            Game(model.translateFont(), question, answers, score, nbQuestion, answerHistory,questionHistory,goodAnswer)
         } else {
-            Result(score, nbQuestion, answerHistory,questionHistory,goodAnswer)
+            Result(model, model.translateFont(), score, nbQuestion, answerHistory,questionHistory,goodAnswer)
         }
     }
 }
 
 @Composable
 fun Game(
+    font: List<Int>,
     question: String,
     answers: Array<MutableState<QuizzViewModel.AnswerSummary>>,
     score: MutableIntState,
@@ -91,7 +93,6 @@ fun Game(
     questionHistory: SnapshotStateList<String>,
     goodAnswer: SnapshotStateList<String>
 ){
-
     val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
     val good = Toast.makeText(LocalContext.current, "NICE JOB", Toast.LENGTH_SHORT)
 
@@ -104,10 +105,7 @@ fun Game(
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = question,
-                textAlign = TextAlign.Center
-            )
+            DisplayText(list = font, text = question, textAlign = TextAlign.Center)
         }
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
@@ -134,7 +132,7 @@ fun Game(
                         .fillMaxWidth(),
                     shape = RectangleShape
                 ) {
-                    Text(text = ans.value.answer)
+                    DisplayText(list = font, text = ans.value.answer, textAlign = TextAlign.Center)
                 }
             }
         }
@@ -143,6 +141,8 @@ fun Game(
 
 @Composable
 fun Result(
+    model: QuizzViewModel,
+    font: List<Int>,
     score: MutableIntState,
     nbQuestion: MutableIntState,
     answerHistory: SnapshotStateList<QuizzViewModel.AnswerSummary>,
@@ -150,6 +150,24 @@ fun Result(
     goodAnswer: SnapshotStateList<String>
 ) {
     val a = LocalActivity.current
+    val alert = remember { mutableStateOf(false) }
+
+    if (alert.value) {
+        Alert(
+            list = font,
+            onConfirm = {
+                alert.value = false
+                a?.finish()
+            },
+            onCancel = {
+                alert.value = false
+            },
+            title = "Joue Sans Limite ! 👑",
+            text = "Tu n'as plus d'énergie ! 😱\nNe perds plus ton temps à attendre !\nAchète l'abonnement prenium pour bénéficier de l'énergie A L'INFINI et jouer sans interruption",
+            onConfirmText = "Continuer",
+            onCancelText = "Fermer"
+        )
+    }
 
     Column(
         modifier = Modifier
@@ -157,26 +175,25 @@ fun Result(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("RESULTAT", textAlign = TextAlign.Center)
-        Text("Score : ${score.intValue}", textAlign = TextAlign.Center)
+        DisplayText(list = font, text = "RESULTAT", textAlign = TextAlign.Center)
+        DisplayText(list = font, text = "Score : ${score.intValue}", textAlign = TextAlign.Center)
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(4f)
         ) {
-            itemsIndexed(questionHistory) { i, question ->
-
-            val index = i+1
-            if (answerHistory[i].validity) {
-                    Text("Question ${index}: $question", color = Color.Green)
-                    Text("Réponse : ${answerHistory[i].answer}", color = Color.Green)
+            for ( i in 0..questionHistory.size-1) {
+                items(questionHistory) { question ->
+                    if (answerHistory[i].validity) {
+                        DisplayText(list = font, text = "Question $i: $question", color = Color.Green)
+                        DisplayText(list = font, text = "Réponse: ${answerHistory[i].answer}", color = Color.Green)
+                    }
+                    else {
+                        DisplayText(list = font, text = "Question $i: $question", color = Color.Red)
+                        DisplayText(list = font, text = "Faux : ${answerHistory[i].answer}", color = Color.Red)
+                        DisplayText(list = font, text = "Réponse -> ${goodAnswer[i]}", color = Color.Blue)
+                    }
                 }
-                else {
-                    Text("Question ${index}: $question", color = Color.Red)
-                    Text("Faux : ${answerHistory[i].answer}", color = Color.Red)
-                    Text("Réponse -> ${goodAnswer[i]}", color = Color.Blue)
-                }
-
             }
         }
         Row(
@@ -189,14 +206,24 @@ fun Result(
                 modifier = Modifier
                     .padding(8.dp)
             ) {
-                Text(text = "Maison")
+                DisplayText(list = font, text = "Maison")
             }
             Button(
-                onClick = { nbQuestion.intValue = 10; score.intValue = 0; answerHistory.clear(); questionHistory.clear()},
+                onClick = {
+                    if (model.energy.intValue == 0) {
+                        alert.value = true
+                        return@Button
+                    }
+                    model.removeEnergy()
+                    nbQuestion.intValue = 10
+                    score.intValue = 0
+                    answerHistory.clear()
+                    questionHistory.clear()
+                },
                 modifier = Modifier
                     .padding(8.dp)
             ) {
-                Text(text = "Rejouer")
+                DisplayText(list = font, text = "Rejouer")
             }
         }
 
