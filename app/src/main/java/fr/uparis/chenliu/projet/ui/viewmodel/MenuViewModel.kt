@@ -116,6 +116,17 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    fun updateUsername() {
+        viewModelScope.launch {
+            db.usersDao().updateUsername(userId = user.value!!.userId, username = username.value)
+            getUsers()
+        }
+    }
+
+    fun undoUsername() {
+        username.value = user.value!!.username
+    }
+
     fun updateSettings() {
         viewModelScope.launch {
             val newSettings = SettingsEntity(

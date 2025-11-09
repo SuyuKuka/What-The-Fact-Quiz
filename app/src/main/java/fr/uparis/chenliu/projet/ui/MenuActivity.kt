@@ -18,6 +18,8 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -44,6 +46,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
@@ -52,6 +55,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
@@ -183,11 +187,19 @@ fun MonBottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
         Alert(
             list = model.translateFont(),
             onConfirm = {
-                model.updateSettings()
+                if (current == Screen.Settings) {
+                    model.updateSettings()
+                } else if (current == Screen.Profile) {
+                    model.updateUsername()
+                }
                 leave()
             },
             onCancel = {
-                model.undoSettings()
+                if (current == Screen.Settings) {
+                    model.undoSettings()
+                } else if (current == Screen.Profile) {
+                    model.undoUsername()
+                }
                 leave()
             },
             title = "Changements Non Sauvegardés",
@@ -206,6 +218,7 @@ fun MonBottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 fun ProfileScreen(model: MenuViewModel) {
     val username = model.username.value
     val subscription = model.subscription.value
+    val preferredTopics = model.preferredTopics.value
     val endDate = model.endDate.value.split("/")
     val day = LocalDateTime.now().dayOfMonth
     val month = LocalDateTime.now().month.value
@@ -218,17 +231,30 @@ fun ProfileScreen(model: MenuViewModel) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Column {
-            DisplayText(list = model.translateFont(), text = "PROFILE")
+        Column(modifier = Modifier
+            .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            DisplayText(list = model.translateFont(), text = "PROFILE", fontSize = 24.sp, textAlign = TextAlign.Center)
             Row {
                 DisplayText(list = model.translateFont(), text = "Pseudo ")
-                UnderlineTextField(list = model.translateFont(), value = username) { model.username.value = it }
+                UnderlineTextField(
+                    list = model.translateFont(),
+                    value = username,
+                    onValueChange = { model.username.value = it; model.saved.value = false },
+                    onDone = { model.updateUsername(); model.saved.value = true }
+                )
             }
             if (subscription) {
                 val remaining = (endDate[2].toInt() - year) * 12 * 30 + (endDate[1].toInt() - month) * 30 + (endDate[0].toInt() - day)
-                DisplayText(list = model.translateFont(), text = "Abonné 👑")
-                DisplayText(list = model.translateFont(), text = "Temps restant : ${remaining}j")
+                DisplayText(list = model.translateFont(), text = "Abonné 👑", textAlign = TextAlign.Center)
+                DisplayText(list = model.translateFont(), text = "Temps restant : ${remaining}j", textAlign = TextAlign.Center)
             }
+            if (preferredTopics != "") {
+                DisplayText(list = model.translateFont(), text = preferredTopics, textAlign = TextAlign.Center)
+            }
+            Button(onClick = { model.updateUsername(); model.saved.value = true }
+            ) { DisplayText(list = model.translateFont(), text = "Enregistrer")}
         }
     }
 }
@@ -242,7 +268,11 @@ fun LeaderboardScreen(model: MenuViewModel) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        DisplayText(list = model.translateFont(), text = "LEADERBOARD")
+        Column(modifier = Modifier
+            .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            DisplayText(list = model.translateFont(), text = "Classement", fontSize = 24.sp)
+        }
     }
 }
 
@@ -284,7 +314,10 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Column {
+        Column(modifier = Modifier
+            .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             DisplayText(list = model.translateFont(), text = "WTF QUIZ", fontSize = 24.sp)
             Row(modifier = Modifier.fillMaxWidth()) {
                 difficulty.forEach { diff ->
@@ -362,8 +395,11 @@ fun ShopScreen(model: MenuViewModel) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Column {
-            DisplayText(list = model.translateFont(), text = "SHOP")
+        Column(modifier = Modifier
+            .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            DisplayText(list = model.translateFont(), text = "Boutique", fontSize = 24.sp)
             Row {
                 Button(onClick = { showAlertMonth.value = true }) {
                     DisplayText(list = model.translateFont(), text = "1.99€/mois")
@@ -414,8 +450,11 @@ fun SettingsScreen(model: MenuViewModel) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Column {
-            DisplayText(list = model.translateFont(), text = "Paramètre")
+        Column(modifier = Modifier
+            .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            DisplayText(list = model.translateFont(), text = "Paramètre", fontSize = 24.sp)
             Row {
                 DisplayText(list = model.translateFont(), text = "Musique")
                 SliderManage(list = model.translateFont(), value = model.music.floatValue) {
@@ -461,7 +500,7 @@ fun SettingsScreen(model: MenuViewModel) {
                     onValueChange = {
                         model.preferredTopics.value = it; model.saved.value = false
                     },
-                    label = "Entrer votre domaine préféré",
+                    label = "Domaine préféré?",
                     modifier = Modifier.padding(start = 10.dp),
                     fontSize = 18.sp,
                     onDone = { update() },
@@ -559,7 +598,7 @@ fun Alert(list: List<Int>, onConfirm: () -> Unit, onCancel: () -> Unit, title: S
 }
 
 @Composable
-fun UnderlineTextField(list: List<Int>, value: String, onValueChange: (String) -> Unit) {
+fun UnderlineTextField(list: List<Int>, value: String, onValueChange: (String) -> Unit, onDone: () -> Unit) {
     Column {
         BasicTextField(
             value = value,
@@ -569,7 +608,10 @@ fun UnderlineTextField(list: List<Int>, value: String, onValueChange: (String) -
                 fontSize = (16 - list[1]).sp,
                 color = Color.Black,
                 fontFamily = FontFamily(Font(list[0]))
-            )
+            ),
+            singleLine = true,
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+            keyboardActions = KeyboardActions(onDone = { onDone() })
         )
         HorizontalDivider(
             modifier = Modifier.fillMaxWidth(),

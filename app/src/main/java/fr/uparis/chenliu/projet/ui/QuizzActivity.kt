@@ -75,9 +75,24 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
     }
     Column(modifier = Modifier.padding(top = 24.dp)) {
         if (nbQuestion.intValue > 0) {
-            Game(model.translateFont(), question, answers, score, nbQuestion, answerHistory,questionHistory,goodAnswer)
+            Game(
+                font = model.translateFont(),
+                question = question,
+                answers = answers,
+                score = score,
+                nbQuestion = nbQuestion,
+                answerHistory = answerHistory,
+                questionHistory = questionHistory,goodAnswer
+            )
         } else {
-            Result(model, model.translateFont(), score, nbQuestion, answerHistory,questionHistory,goodAnswer)
+            Result(model = model,
+                font = model.translateFont(),
+                score = score,
+                nbQuestion = nbQuestion,
+                answerHistory = answerHistory,
+                questionHistory = questionHistory,
+                goodAnswer = goodAnswer
+            )
         }
     }
 }
@@ -149,7 +164,7 @@ fun Result(
     questionHistory: SnapshotStateList<String>,
     goodAnswer: SnapshotStateList<String>
 ) {
-    val a = LocalActivity.current
+    val activity = LocalActivity.current
     val alert = remember { mutableStateOf(false) }
 
     if (alert.value) {
@@ -157,7 +172,7 @@ fun Result(
             list = font,
             onConfirm = {
                 alert.value = false
-                a?.finish()
+                activity?.finish()
             },
             onCancel = {
                 alert.value = false
@@ -202,7 +217,7 @@ fun Result(
                 .weight(2f)
         ){
             Button(
-                onClick = { a?.finish() },
+                onClick = { activity?.finish() },
                 modifier = Modifier
                     .padding(8.dp)
             ) {
