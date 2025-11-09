@@ -24,12 +24,13 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
             user.value = db.usersDao().getUser()
             if (user.value == null) {
                 exist.value = false
+                delay(1000)
             } else {
                 exist.value = true
                 username.value = user.value!!.username
                 endDate.value = user.value!!.endDate
+                delay(3000)
             }
-            delay(3000)
             loading.value = false
         }
     }
@@ -45,6 +46,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                 db.usersDao().insertUser(UsersEntity(username = username.value.trim(), energy = 20, lastTimeEnergy = System.currentTimeMillis(),subscribe = false, endDate = "", games = 0, wins = 0))
                 user.value = db.usersDao().getUser()
                 db.settingsDao().init(SettingsEntity(userId = user.value!!.userId, music = 1f, sound = 1f, background = 0, font = 0, preferredTopics = ""))
+                delay(3000)
                 exist.value = true
                 loading.value = false
             }

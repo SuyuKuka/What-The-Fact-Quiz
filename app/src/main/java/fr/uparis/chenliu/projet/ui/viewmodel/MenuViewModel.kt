@@ -38,6 +38,9 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val fontList = listOf("Police 1", "Police 2", "Police 3")
     val saved = mutableStateOf(true)
 
+    val MAX_ENERGY = 20
+    val CYCLE_ENERGY = 2
+
     fun init(username: String) {
         this.username.value = username
         viewModelScope.launch {
@@ -150,19 +153,19 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     fun addEnergy() {
         viewModelScope.launch {
             if (user.value == null) return@launch
-            if (energy.intValue >= 20) return@launch
+            if (energy.intValue >= MAX_ENERGY) return@launch
 
             val now = System.currentTimeMillis()
-            val refill = ((now - lastTimeEnergy.longValue) / 60000L) / 5
-            val time = (((lastTimeEnergy.longValue + ((now - lastTimeEnergy.longValue) / (5 * 60000L) * 5 * 60000L)) + 5 * 60000L) - now) / 1000L
+            val refill = ((now - lastTimeEnergy.longValue) / 60000L) / CYCLE_ENERGY
+            val time = (((((now - lastTimeEnergy.longValue) / (CYCLE_ENERGY * 60000L) * CYCLE_ENERGY * 60000L) + lastTimeEnergy.longValue) + CYCLE_ENERGY * 60000L) - now) / 1000L
             timeEnergy.value = "${time / 60L}min ${time % 60L}s"
 
             if (refill <= 0) return@launch
 
             energy.intValue += refill.toInt()
-            if (energy.intValue > 20) energy.intValue = 20
+            if (energy.intValue > MAX_ENERGY) energy.intValue = MAX_ENERGY
 
-            lastTimeEnergy.longValue += refill.toInt() * 5 * 60000L
+            lastTimeEnergy.longValue += refill.toInt() * CYCLE_ENERGY * 60000L
 
             db.usersDao().updateEnergy(userId = user.value!!.userId, energy = energy.intValue, lastTimeEnergy = lastTimeEnergy.longValue)
             getUsers()
@@ -174,11 +177,19 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             viewModelScope.launch {
                 if (energy.intValue <= 0) return@launch
                 energy.intValue -= 1
-                db.usersDao().updateEnergy(
-                    userId = user.value!!.userId,
-                    energy = energy.intValue,
-                    lastTimeEnergy = user.value!!.lastTimeEnergy
-                )
+                if (energy.intValue == MAX_ENERGY - 1) {
+                    db.usersDao().updateEnergy(
+                        userId = user.value!!.userId,
+                        energy = energy.intValue,
+                        lastTimeEnergy = System.currentTimeMillis()
+                    )
+                } else {
+                    db.usersDao().updateEnergy(
+                        userId = user.value!!.userId,
+                        energy = energy.intValue,
+                        lastTimeEnergy = user.value!!.lastTimeEnergy
+                    )
+                }
                 getUsers()
             }
         }

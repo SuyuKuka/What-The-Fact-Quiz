@@ -125,11 +125,15 @@ fun MonTopBar(model: MenuViewModel) {
         title = {
             Column {
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                    Text(text = "Pseudo : ${model.username.value}")
+                    Text(text = "Pseudo : ${model.username.value}", fontSize = 20.sp)
                     if (model.subscription.value) {
-                        Text("Energie : ∞/20⚡")
+                        Text(text = "Energie : ∞/20⚡", fontSize = 15.sp)
                     } else {
-                        Text("Energie : $energy/20⚡ ($timeEnergy)")
+                        if (energy == 20) {
+                            Text(text = "Energie : $energy/20⚡", fontSize = 15.sp)
+                        } else {
+                            Text(text = "Energie : $energy/20⚡ ($timeEnergy)", fontSize = 15.sp)
+                        }
                     }
                 }
             }
