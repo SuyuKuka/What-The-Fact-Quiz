@@ -87,38 +87,39 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
     val score = remember { mutableDoubleStateOf(0.0) }
     val nbQuestion = remember { mutableIntStateOf(10) }
 
-    val question = model.question.value
+    val question = model.question
     val answers = model.answers
+    val loading = model.loading.value
     val type = model.type
 
     model.init()
 
-    LaunchedEffect(subj, diff,nbQuestion.intValue) {
+    if (loading) {
         model.getQuestionAndAnswer(subj, diff)
-    }
-    Column(modifier = Modifier.padding(top = 24.dp)) {
-        if (nbQuestion.intValue > 0) {
-            Game(
-                font = model.translateFont(),
-                question = question,
-                answers = answers,
-                score = score,
-                nbQuestion = nbQuestion,
-                answerHistory = answerHistory,
-                questionHistory = questionHistory,
-                goodAnswer = goodAnswer,
-                type = type.intValue
-            )
-        } else {
-            Result(
-                model = model,
-                font = model.translateFont(),
-                score = score,
-                nbQuestion = nbQuestion,
-                answerHistory = answerHistory,
-                questionHistory = questionHistory,
-                goodAnswer = goodAnswer
-            )
+    } else {
+        Column(modifier = Modifier.padding(top = 24.dp)) {
+            if (nbQuestion.intValue > 0) {
+                Game(
+                    font = model.translateFont(),
+                    question = question,
+                    answers = answers,
+                    score = score,
+                    nbQuestion = nbQuestion,
+                    answerHistory = answerHistory,
+                    questionHistory = questionHistory,
+                    goodAnswer = goodAnswer,
+                    type = type.intValue
+                )
+            } else {
+                Result(model = model,
+                    font = model.translateFont(),
+                    score = score,
+                    nbQuestion = nbQuestion,
+                    answerHistory = answerHistory,
+                    questionHistory = questionHistory,
+                    goodAnswer = goodAnswer
+                )
+            }
         }
     }
 }
@@ -126,8 +127,8 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 @Composable
 fun Game(
     font: List<Int>,
-    question: String,
-    answers: MutableState<QuizzViewModel.AnswerSummary>,
+    question: MutableList<String>,
+    answers: MutableList<QuizzViewModel.AnswerSummary>,
     score: MutableDoubleState,
     nbQuestion: MutableIntState,
     answerHistory: SnapshotStateList<String>,
@@ -155,14 +156,7 @@ fun Game(
             answerHistory = answerHistory,
             questionHistory = questionHistory,
             goodAnswer = goodAnswer) }
-        2 -> { Quizztype2(font = model.translateFont(),
-            question = question,
-            answers = answers,
-            score = score,
-            nbQuestion = nbQuestion,
-            answerHistory = answerHistory,
-            questionHistory = questionHistory,
-            goodAnswer = goodAnswer) }
+        2 -> { Quizztype2() }
         3 -> { Quizztype3() }
         4 -> { Quizztype4() }
     }
@@ -212,7 +206,6 @@ fun Result(
                 .weight(4f)
         ) {
             itemsIndexed(questionHistory) { i, question ->
-
                 if (answerHistory[i] == goodAnswer[i]) {
                     DisplayText(list = font,"Question ${i+1}: $question", color = Color.Black)
                     DisplayText(list = font,"Réponse -> ${goodAnswer[i]}\n", color = Color.Green)
@@ -247,6 +240,7 @@ fun Result(
                     answerHistory.clear()
                     questionHistory.clear()
                     goodAnswer.clear()
+                    model.loading.value = true
                 },
                 modifier = Modifier
                     .padding(8.dp)
@@ -268,9 +262,7 @@ fun Quizztype0 (font: List<Int>,
                 answerHistory: SnapshotStateList<String>,
                 questionHistory: SnapshotStateList<String>,
                 goodAnswer: SnapshotStateList<String>,) {
-    val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
-    val good = Toast.makeText(LocalContext.current, "NICE JOB", Toast.LENGTH_SHORT)
-
+    val i = remember { mutableIntStateOf(0) }
     Column {
         Row(
             modifier = Modifier
@@ -280,7 +272,7 @@ fun Quizztype0 (font: List<Int>,
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            DisplayText(list = font, text = question, textAlign = TextAlign.Center)
+            DisplayText(list = font, text = question[i.intValue], textAlign = TextAlign.Center)
         }
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
@@ -288,14 +280,19 @@ fun Quizztype0 (font: List<Int>,
             modifier = Modifier
                 .weight(1f)
         ) {
-            items(answers.value.propositions) { ans ->
+            items(answers[i.intValue].propositions) { ans ->
                 Button(
                     onClick = {
-                        answerHistory.add(ans[0])
-                        questionHistory.add(question)
-                        goodAnswer.add(answers.value.answer)
-                        if (ans[0] == answers.value.answer) { good.show(); ++score.doubleValue } else { bad.show() }
+                        answerHistory.add(ans[0]) // add le text pos 0 -> text ; pos 1 -> lien
+                        questionHistory.add(question[i.intValue])
+                        goodAnswer.add(answers[i.intValue].answer)
+                        if (ans[0] == answers[i.intValue].answer) { ++score.intValue }
                         nbQuestion.intValue--
+                        if (i.intValue == 9) {
+                            i.intValue == 0
+                        } else {
+                            i.intValue++
+                        }
                     },
                     modifier = Modifier
                         .aspectRatio(1.5f)
@@ -366,134 +363,10 @@ fun Quizztype1 (font: List<Int>,
     }
 }
 
-
-
-//@Composable
-//fun Quizztype1() {
-//    // todo
-//}
-
 @Composable
-fun Quizztype2(font: List<Int>,
-               question: String,
-               answers: MutableState<QuizzViewModel.AnswerSummary>,
-               score: MutableDoubleState,
-               nbQuestion: MutableIntState,
-               answerHistory: SnapshotStateList<String>,
-               questionHistory: SnapshotStateList<String>,
-               goodAnswer: SnapshotStateList<String>,) {
-//    Column (
-//        modifier = Modifier
-//        .fillMaxSize(),
-//        horizontalAlignment = Alignment.CenterHorizontally){
-//        Row(
-//            modifier = Modifier
-//                .fillMaxWidth(0.9f)
-//                .fillMaxHeight(0.8f)
-//                .align(Alignment.CenterHorizontally),
-//            horizontalArrangement = Arrangement.Center,
-//            verticalAlignment = Alignment.CenterVertically
-//        ) {
-//            DisplayText(list = font, text = question, textAlign = TextAlign.Center)
-//
-//        }
-//        Row {
-//            DisplayText(list = font, text = answers.value.propositions[0][0], textAlign = TextAlign.Center)
-//        }
-//        Row {
-//            DisplayText(list = font, text = answers.value.propositions[1][0], textAlign = TextAlign.Center)
-//        }
-//        Row {
-//            DisplayText(list = font, text = answers.value.propositions[2][0], textAlign = TextAlign.Center)
-//        }
-//        Row {
-//            DisplayText(list = font, text = answers.value.propositions[3][0], textAlign = TextAlign.Center)
-//        }
-//        Row {
-//            DisplayText(list = font, text = answers.value.answer, textAlign = TextAlign.Center)
-//        }
-
-
-        val games = remember {
-            mutableStateListOf(
-                "Pokémon Rouge/Bleu",
-                "Pokémon Or/Argent",
-                "Pokémon Rubis/Saphir",
-                "Pokémon Diamant/Perle"
-            )
-        }
-
-        val dropZone = remember { mutableStateListOf<String>() }
-        var draggedItem by remember { mutableStateOf<String?>(null) }
-
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text("Glisse un jeu dans la zone ci-dessous", fontWeight = FontWeight.Bold)
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            // Liste des jeux à drag
-            Column {
-                games.forEach { game ->
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 4.dp)
-                            .background(Color(0xFFFFC107))
-                            .padding(16.dp)
-                            .pointerInput(Unit) {
-                                detectDragGestures(
-                                    onDragStart = { change: PointerInputChange, offset: Offset ->
-                                        draggedItem = game
-                                    } as (Offset) -> Unit,
-                                    onDragEnd = {
-                                        draggedItem = null
-                                    },
-                                    onDragCancel = {
-                                        draggedItem = null
-                                    },
-                                    onDrag = { change, dragAmount ->
-                                        // Ici, tu peux suivre le déplacement si tu veux
-                                        change.consume()
-                                    }
-                                )
-                            }
-                    ) {
-                        Text(game)
-                    }
-                }
-            }
-
-            Spacer(modifier = Modifier.height(32.dp))
-
-            // Zone de drop
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
-                    .background(Color.LightGray)
-                    .padding(8.dp)
-                    .pointerInput(Unit) {
-                        detectTapGestures(
-                            onTap = {
-                                draggedItem?.let { item ->
-                                    dropZone.add(item)
-                                    games.remove(item)
-                                    draggedItem = null
-                                }
-                            }
-                        )
-                    }
-            ) {
-                Column {
-                    dropZone.forEach { dropped ->
-                        Text(dropped, modifier = Modifier.padding(4.dp))
-                    }
-                }
-            }
-        }
-
-    }
-//}
+fun Quizztype2() {
+    // todo
+}
 @Composable
 fun Quizztype3() {
     // todo

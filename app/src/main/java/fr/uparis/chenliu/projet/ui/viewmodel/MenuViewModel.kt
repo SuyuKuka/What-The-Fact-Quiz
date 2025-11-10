@@ -54,7 +54,6 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             while (true) {
                 getUsers()
                 addEnergy()
-                println(background.intValue.toString() + "-------" + font.intValue.toString())
                 delay(1000)
             }
         }

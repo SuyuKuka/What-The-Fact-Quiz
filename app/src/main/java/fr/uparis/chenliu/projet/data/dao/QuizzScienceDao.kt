@@ -12,8 +12,8 @@ interface QuizzScienceDao {
     @Insert
     suspend fun insertQuestion(question: QuizzScienceEntity)
 
-    @Query("SELECT DISTINCT * FROM QuizzScienceEntity WHERE difficulty = :difficulty ORDER BY RANDOM() LIMIT 1")
-    suspend fun getQuestion(difficulty: String): QuizzScienceEntity
+    @Query("SELECT DISTINCT * FROM QuizzScienceEntity WHERE difficulty = :difficulty ORDER BY RANDOM() LIMIT 10")
+    suspend fun getQuestion(difficulty: String): List<QuizzScienceEntity>
 
     @Query(" SELECT DISTINCT propositions, answer FROM QuizzScienceEntity WHERE id = :idQuestion")
     suspend fun getAnswers(idQuestion: Int): QuizzViewModel.AnswerSummary
