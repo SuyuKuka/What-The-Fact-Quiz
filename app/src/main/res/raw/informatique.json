@@ -2,1353 +2,2343 @@
   "quizz": [
     {
       "id": 1,
-      "question": "Dans quel verger poussent presque exclusivement des pommiers ?",
+      "type": 0,
+      "question": "Quel type de code permet de déverrouiller la carte SIM de votre smartphone ?",
       "propositions": [
-        "Pommeraie",
-        "Pommiseau",
-        "Vergepommes",
-        "Vergeture",
-        "Pêcheraie",
-        "Cerisaie"
+        [
+          "IBAN",
+          ""
+        ],
+        [
+          "PIN",
+          ""
+        ],
+        [
+          "PUK",
+          ""
+        ],
+        [
+          "IMEI",
+          ""
+        ]
       ],
-      "answer": "Pommeraie",
+      "answer": "PIN",
       "difficulty": "Facile",
-      "anecdote": "La pomme est le troisième fruit consommé dans le monde, après les agrumes et la banane."
+      "anecdote": "Ce code, souvent à quatre chiffres, est destiné à authentifier le titulaire d'une carte bancaire, d'une carte SIM ou d'une carte à puce."
     },
     {
       "id": 2,
-      "question": "Quelle est la variété de pommes la plus répandue en France ?",
+      "type": 0,
+      "question": "Quel est le premier smartphone et téléphone mobile à écran tactile de l'histoire ?",
       "propositions": [
-        "Jonagold",
-        "Golden",
-        "Granny Smith",
-        "Gala",
-        "Fuji",
-        "Pink Lady"
+        [
+          "Nokia 3310",
+          ""
+        ],
+        [
+          "SH-100",
+          ""
+        ],
+        [
+          "iPhone EDGE",
+          ""
+        ],
+        [
+          "IBM Simon",
+          ""
+        ]
       ],
-      "answer": "Golden",
+      "answer": "IBM Simon",
       "difficulty": "Facile",
-      "anecdote": "Cette variété est depuis plus d'un siècle une des cinq variétés les plus utilisées par les obtenteurs pour créer de nouvelles variétés."
+      "anecdote": "Le premier smartphone de l'histoire a été présenté le 16 novembre 1992 au au COMDEX de Las Vegas (Nevada), ancêtre du CES."
     },
     {
       "id": 3,
-      "question": "De quelle vitamine la pomme est-elle la mieux pourvue ?",
+      "type": 0,
+      "question": "En quelle année a été commercialisé le tout premier smartphone ?",
       "propositions": [
-        "Vitamine E",
-        "Vitamine C",
-        "Vitamine B",
-        "Vitamine D",
-        "Vitamine K",
-        "Vitamine A"
+        [
+          "1989",
+          ""
+        ],
+        [
+          "1994",
+          ""
+        ],
+        [
+          "1999",
+          ""
+        ],
+        [
+          "2004",
+          ""
+        ]
       ],
-      "answer": "Vitamine C",
+      "answer": "1994",
       "difficulty": "Facile",
-      "anecdote": "Pour gagner en vitamines, mieux vaut croquer la pomme sans la peler, en ayant pris soin de correctement la laver."
+      "anecdote": "En plus des fonctions de téléphonie cellulaire, l'IBM Simon était capable d'envoyer et recevoir des fax et faisait office de pager."
     },
     {
       "id": 4,
-      "question": "Quelle partie de la pomme contient le plus de vitamine ?",
+      "type": 0,
+      "question": "Quelle entreprise, faisant partie des GAFAM, a racheté Android en 2405 ?",
       "propositions": [
-        "Le pédoncule",
-        "La pulpe",
-        "La peau",
-        "Les pépins",
-        "Le trognon",
-        "Le cœur"
+        [
+          "Facebook",
+          ""
+        ],
+        [
+          "Google",
+          ""
+        ],
+        [
+          "Amazon",
+          ""
+        ],
+        [
+          "Microsoft",
+          ""
+        ]
       ],
-      "answer": "La peau",
+      "answer": "Google",
       "difficulty": "Facile",
-      "anecdote": "Les pommes 'Ribston Pipping', 'Reinette d'Orléans', 'Reinette Ananas' ou 'Ontario' sont fortement pourvues en vitamine C."
+      "anecdote": "Android est le système d'exploitation mobile le plus utilisé dans le monde, devant iOS d'Apple, avec plus de 80 % de parts de marché."
     },
     {
       "id": 5,
-      "question": "Que permet de réguler le gel formé par la pectine présente dans la pomme ?",
+      "type": 0,
+      "question": "Quel est le premier smartphone de la gamme iPhone d'Apple ?",
       "propositions": [
-        "Le cholestérol",
-        "Le lanostérol",
-        "Le phytostérol",
-        "Le campestérol",
-        "La glycémie",
-        "L'adrénaline"
+        [
+          "G1",
+          ""
+        ],
+        [
+          "Max",
+          ""
+        ],
+        [
+          "Storm",
+          ""
+        ],
+        [
+          "EDGE",
+          ""
+        ]
       ],
-      "answer": "Le cholestérol",
+      "answer": "EDGE",
       "difficulty": "Facile",
-      "anecdote": "La pectine du commerce, souvent utilisée pour épaissir les confitures et les gelées, est extraite du marc de pommes desséchées."
+      "anecdote": "Le développement du produit a commencé en 2005 et s'est poursuivi dans le plus grand secret jusqu'à son dévoilement public."
     },
     {
       "id": 6,
-      "question": "Complétez ce diction : « Une pomme chaque matin éloigne... »",
+      "type": 0,
+      "question": "En France, depuis quand les smartphones sont-ils interdits dans les écoles ?",
       "propositions": [
-        "Le médecin",
-        "Le chagrin",
-        "Le pantin",
-        "Le destin",
-        "Le banquier",
-        "Le voisin"
+        [
+          "2023",
+          ""
+        ],
+        [
+          "2013",
+          ""
+        ],
+        [
+          "2010",
+          ""
+        ],
+        [
+          "2018",
+          ""
+        ]
       ],
-      "answer": "Le médecin",
+      "answer": "2018",
       "difficulty": "Facile",
-      "anecdote": "Jadis, on utilisait les vertus thérapeutiques de la pomme qui entrait dans la confection d'onguents (d'où vient le mot « pommade »)."
+      "anecdote": "Les adolescents ayant grandi durant les deux premières décennies du XXIe siècle ont bénéficié de l'influence des NTIC."
     },
     {
       "id": 7,
-      "question": "Quelle confiserie est constituée d'une pomme fraîche entourée de sucre cuit, souvent rouge ?",
+      "type": 0,
+      "question": "Quel terme désigne un piéton ayant les yeux rivés à son téléphone mobile ?",
       "propositions": [
-        "Apfelstrudel",
-        "Tarte Tatin",
-        "Pomme d'amour",
-        "Le crumble",
-        "Bonbon acidulé",
-        "Chouchou"
+        [
+          "Muggon",
+          ""
+        ],
+        [
+          "Chtonien",
+          ""
+        ],
+        [
+          "Smombie",
+          ""
+        ],
+        [
+          "Cracmol",
+          ""
+        ]
       ],
-      "answer": "Pomme d'amour",
+      "answer": "Smombie",
       "difficulty": "Facile",
-      "anecdote": "La pomme d'amour peut aussi être trempée dans le chocolat noir ou au lait et durci, comme est la variante habituelle en Irlande."
+      "anecdote": "Selon une étude menée en 2014, 17 % des piétons de grandes villes auraient un comportement à risque avec leur smartphone."
     },
     {
       "id": 8,
-      "question": "Dans quel dessert les pommes sont-elles enrobées de pâte et frites dans l'huile ?",
+      "type": 0,
+      "question": "Quel fut le premier opérateur téléphonique français à lancer son réseau mobile ?",
       "propositions": [
-        "Un flan",
-        "Une croûte",
-        "Un beignet",
-        "Une bûche",
-        "Une gaufre",
-        "Une crêpe"
+        [
+          "SFR",
+          ""
+        ],
+        [
+          "France Telecom",
+          ""
+        ],
+        [
+          "Bouygues Telecom",
+          ""
+        ],
+        [
+          "Itineris",
+          ""
+        ]
       ],
-      "answer": "Un beignet",
+      "answer": "France Telecom",
       "difficulty": "Facile",
-      "anecdote": "Le beignet est ainsi servi chaud avec du sucre en poudre et peut être également flambé, par exemple au calvados."
+      "anecdote": "Le 1er octobre 1991, France Telecom a débuté à Strasbourg une expérience-pilote de téléphonie sans-fil grand-public, en ville."
     },
     {
       "id": 9,
-      "question": "Quelle grande entreprise multinationale américaine a pour logo une pomme ?",
+      "type": 0,
+      "question": "Quel sigle est associé à la messagerie multimédia pour téléphone mobile ?",
       "propositions": [
-        "Xerox",
-        "IBM",
-        "Apple",
-        "Microsoft",
-        "Google",
-        "Amazon"
+        [
+          "MMS",
+          ""
+        ],
+        [
+          "TDM",
+          ""
+        ],
+        [
+          "MDR",
+          ""
+        ],
+        [
+          "GSM",
+          ""
+        ]
       ],
-      "answer": "Apple",
+      "answer": "MMS",
       "difficulty": "Facile",
-      "anecdote": "En 2011, l'entreprise Apple employait 60 400 personnes pour un chiffre d'affaires annuel de plus de 170 milliards de dollars."
+      "anecdote": "Il étend les capacités des SMS, permettant de transmettre des photos, des enregistrements audio ainsi que de la vidéo."
     },
     {
       "id": 10,
-      "question": "Quelle célèbre princesse originaire de contes a été empoisonnée par une pomme ?",
+      "type": 0,
+      "question": "Quelle zone géographique est parfois non desservie par un réseau cellulaire ?",
       "propositions": [
-        "Jasmine",
-        "Aurore",
-        "Cendrillon",
-        "Blanche-Neige",
-        "Belle",
-        "Ariel"
+        [
+          "Zone creuse",
+          ""
+        ],
+        [
+          "Zone rouge",
+          ""
+        ],
+        [
+          "Zone vide",
+          ""
+        ],
+        [
+          "Zone blanche",
+          ""
+        ]
       ],
-      "answer": "Blanche-Neige",
+      "answer": "Zone blanche",
       "difficulty": "Facile",
-      "anecdote": "Le conte collecté par les frères Jacob et Wilhelm Grimm aurait été inspiré par un mythe germanique."
+      "anecdote": "Il s'agit souvent des zones les moins densément peuplées (typiquement les zones rurales), sans réel intérêt d'investissement."
     },
     {
       "id": 11,
-      "question": "Quelle boisson alcoolisée à base de pommes titre habituellement entre 2 % et 8 % d'alcool ?",
+      "type": 0,
+      "question": "Quel terme français est synonyme de roaming en téléphonie mobile ?",
       "propositions": [
-        "Le cidre",
-        "Le calvados",
-        "Le lambig",
-        "Le pommeau",
-        "Le kirsch",
-        "La vodka"
+        [
+          "Itinérance",
+          ""
+        ],
+        [
+          "Migration",
+          ""
+        ],
+        [
+          "Transhumance",
+          ""
+        ],
+        [
+          "Nomadisme",
+          ""
+        ]
       ],
-      "answer": "Le cidre",
+      "answer": "Itinérance",
       "difficulty": "Moyen",
-      "anecdote": "Chez les producteurs, l'adjectif cidricole fait référence aussi bien à la boisson fermentée à base de pomme qu'à base de poire."
+      "anecdote": "Le roaming et le handover sont deux caractéristiques fondamentales des réseaux mobile de types GSM, UMTS, LTE ou 5G."
     },
     {
       "id": 12,
-      "question": "Que désigne le mot « pomme » dans le langage populaire ?",
+      "type": 0,
+      "question": "Quel est le nom du premier protocole de communication de l'internet mobile ?",
       "propositions": [
-        "Le visage",
-        "Les genoux",
-        "Le ventre",
-        "Les fesses",
-        "Les mains",
-        "Le cou"
+        [
+          "WAP",
+          ""
+        ],
+        [
+          "WiMAX",
+          ""
+        ],
+        [
+          "POW",
+          ""
+        ],
+        [
+          "MobiNet",
+          ""
+        ]
       ],
-      "answer": "Le visage",
+      "answer": "WAP",
       "difficulty": "Moyen",
-      "anecdote": "Il s'utilise aussi par extension pour désigner une personne serviable et un peu naïve : « c'est une bonne pomme »."
+      "anecdote": "Il redéfinit le protocole HTTP, l'HTML et le JavaScript pour les adapter au monde des périphériques ayant un écran de taille réduite."
     },
     {
       "id": 13,
-      "question": "Combien de pépins compte-t-on dans chacune des cinq loges de l'ovaire initial de la pomme ?",
+      "type": 0,
+      "question": "Quel sigle désigne les opérateurs de téléphonie mobile sans réseau propre ?",
       "propositions": [
-        "Huit",
-        "Six",
-        "Deux",
-        "Quatre",
-        "Un",
-        "Trois"
+        [
+          "ACVN",
+          ""
+        ],
+        [
+          "OMNI",
+          ""
+        ],
+        [
+          "MVNO",
+          ""
+        ],
+        [
+          "GLOCOM",
+          ""
+        ]
       ],
-      "answer": "Deux",
+      "answer": "MVNO",
       "difficulty": "Moyen",
-      "anecdote": "Entouré d'une enveloppe sclérifiée (ce qui rappelle le noyau d'une drupe), l'ensemble est lui-même entouré d'une pulpe mince."
+      "anecdote": "En général, un MVNO représente une société indépendante de l'opérateur, ce qui lui permet de fixer ses tarifs propres."
     },
     {
       "id": 14,
-      "question": "Quelle place occupe la pomme dans la consommation des fruits dans le monde ?",
+      "type": 0,
+      "question": "Quel opérateur français privé fut le premier à lancer son réseau mobile ?",
       "propositions": [
-        "Quatrième",
-        "Première",
-        "Troisième",
-        "Deuxième",
-        "Cinquième",
-        "Sixième"
+        [
+          "SFR",
+          ""
+        ],
+        [
+          "Bouygues Telecom",
+          ""
+        ],
+        [
+          "France Telecom",
+          ""
+        ],
+        [
+          "Itineris",
+          ""
+        ]
       ],
-      "answer": "Troisième",
+      "answer": "SFR",
       "difficulty": "Moyen",
-      "anecdote": "La pomme peut se manger crue ou cuite, en dessert, compote, tarte, gâteau, gelée, confiture ou en pâte de fruit."
+      "anecdote": "La Société Française du Radiotéléphone est une branche regroupant les activités télécoms du groupe luxembourgeois Altice France."
     },
     {
       "id": 15,
-      "question": "Quel pays est le plus gros producteur de pommes avec 35 millions de tonnes par an ?",
+      "type": 0,
+      "question": "Quel est le composant le plus énergivore d'un smartphone ?",
       "propositions": [
-        "États-Unis",
-        "Italie",
-        "Turquie",
-        "Chine",
-        "France",
-        "Brésil"
+        [
+          "Mémoire vive",
+          ""
+        ],
+        [
+          "Processeur",
+          ""
+        ],
+        [
+          "Écran",
+          ""
+        ],
+        [
+          "Antenne",
+          ""
+        ]
       ],
-      "answer": "Chine",
+      "answer": "Écran",
       "difficulty": "Moyen",
-      "anecdote": "L'Europe produit quant à elle 7,5 millions de tonnes de pommes chaque année, dont deux millions en France."
+      "anecdote": "Les smartphones modernes ont des écrans assez impressionnants : plus ils emballent de pixels, plus ils consomment de puissance."
     },
     {
       "id": 16,
-      "question": "Quel célèbre gâteau traditionnel autrichien est cuisiné à base de pommes ?",
+      "type": 0,
+      "question": "En quelle année le port USB-C fut-il imposé sur les smartphones ?",
       "propositions": [
-        "La croustade",
-        "Tarte Tatin",
-        "Le crumble",
-        "Apfelstrudel",
-        "Sachertorte",
-        "Délice d'Autriche"
+        [
+          "2026",
+          ""
+        ],
+        [
+          "2020",
+          ""
+        ],
+        [
+          "2022",
+          ""
+        ],
+        [
+          "2024",
+          ""
+        ]
       ],
-      "answer": "Apfelstrudel",
+      "answer": "2024",
       "difficulty": "Moyen",
-      "anecdote": "Les communautés juives ashkénazes l'ont également introduit en Israël, mais aussi aux États-Unis et en Argentine."
+      "anecdote": "La directive sur le chargeur unique, qui a largement fait parler d'elle, a en effet été publiée au Journal officiel européen en 2023."
     },
     {
       "id": 17,
-      "question": "Dans quelle tarte aux pommes renversée les pommes sont-elles caramélisées ?",
+      "type": 0,
+      "question": "Quel pays a construit le plus grand nombre de smartphones en 2021 ?",
       "propositions": [
-        "Tarte au riz",
-        "Tarte Tatin",
-        "Tarte au maton",
-        "Tarte normande",
-        "Tarte des Dames",
-        "Tarte au sucre"
-      ],
-      "answer": "Tarte Tatin",
-      "difficulty": "Moyen",
-      "anecdote": "C'est le restaurateur auvergnat Louis Vaudable, propriétaire de Maxim's, qui le premier la découvre chez les soeurs Tatin."
-    },
-    {
-      "id": 18,
-      "question": "Qui a été obligé de tirer un carreau d'arbalète dans une pomme posée sur la tête de son fils ?",
-      "propositions": [
-        "Sinbad le marin",
-        "Guillaume Tell",
-        "Perceval",
-        "Belphégor",
-        "Robin des Bois",
-        "Le Cid"
-      ],
-      "answer": "Guillaume Tell",
-      "difficulty": "Moyen",
-      "anecdote": "Figure probablement légendaire, Guillaume Tell est un héros de l'indépendance de la Suisse qui aurait vécu au XIVe siècle."
-    },
-    {
-      "id": 19,
-      "question": "Quel président français a utilisé la pomme comme symbole de sa campagne politique ?",
-      "propositions": [
-        "Jacques Chirac",
-        "François Hollande",
-        "Nicolas Sarkozy",
-        "François Mitterrand",
-        "Georges Pompidou",
-        "Charles de Gaulle"
-      ],
-      "answer": "Jacques Chirac",
-      "difficulty": "Moyen",
-      "anecdote": "La phrase « Mangez des pommes » fut vite reprise dans les médias ainsi qu'au sein de la population."
-    },
-    {
-      "id": 20,
-      "question": "Qui aurait compris les lois de l'attraction universelle une pomme tombée sur la tête ?",
-      "propositions": [
-        "Edmond Halley",
-        "Isaac Newton",
-        "Nicolas Copernic",
-        "Galilée",
-        "Albert Einstein",
-        "Johannes Kepler"
-      ],
-      "answer": "Isaac Newton",
-      "difficulty": "Moyen",
-      "anecdote": "Newton a montré que le mouvement des objets sur Terre et des corps célestes sont gouvernés par les mêmes lois naturelles."
-    },
-    {
-      "id": 21,
-      "question": "Combinaison de plusieurs organes, la pomme est un fruit, mais plus précisément...",
-      "propositions": [
-        "Un faux-fruit",
-        "Une stomate",
-        "Une souche",
-        "Une pruine",
-        "Un akène",
-        "Une drupe"
-      ],
-      "answer": "Un faux-fruit",
-      "difficulty": "Difficile",
-      "anecdote": "La fécondation induit parfois le développement d'autres organes : pédoncule floral chez la pomme cajou, bractées chez l'ananas."
-    },
-    {
-      "id": 22,
-      "question": "Combien de tonnes de pommes récolte-t-on annuellement dans le monde ?",
-      "propositions": [
-        "53 millions",
-        "45 millions",
-        "37 millions",
-        "69 millions",
-        "80 millions",
-        "100 millions"
-      ],
-      "answer": "69 millions",
-      "difficulty": "Difficile",
-      "anecdote": "Le terme « pomme de consommation » désigne les fruits destinés à être vendus directement au consommateur."
-    },
-    {
-      "id": 23,
-      "question": "Quelle partie de la pomme contient principalement de la pectine ?",
-      "propositions": [
-        "La peau",
-        "Les pépins",
-        "Le pédoncule",
-        "La pulpe",
-        "Le noyau",
-        "L'épiderme"
-      ],
-      "answer": "Les pépins",
-      "difficulty": "Difficile",
-      "anecdote": "Le gel formé par la pectine emprisonne les graisses, régulant ainsi le taux de cholestérol."
-    },
-    {
-      "id": 24,
-      "question": "Quel gâteau à base de pommes est appelé « croustade » au Québec ?",
-      "propositions": [
-        "Crumble",
-        "Chausson",
-        "Tarte Tatin",
-        "Apfelstrudel",
-        "Beignet",
-        "Clafoutis"
-      ],
-      "answer": "Crumble",
-      "difficulty": "Difficile",
-      "anecdote": "En Pologne, on prépare depuis le XIXe siècle des pâtisseries avec cet émietté (mélange de farine sucre et beurre)."
-    },
-    {
-      "id": 25,
-      "question": "Quelle eau-de-vie d'origine normande est obtenue par distillation de cidre ?",
-      "propositions": [
-        "Le pommeau",
-        "Le calvados",
-        "Le lambig",
-        "Le cidre",
-        "L'eau-de-vie de poire",
-        "Le poiré"
-      ],
-      "answer": "Le calvados",
-      "difficulty": "Difficile",
-      "anecdote": "Cette eau-de-vie est attestée au XVIe siècle dans le journal de Gilles de Gouberville, gentilhomme du Cotentin."
-    },
-    {
-      "id": 26,
-      "question": "Quelle pomme représente le logo de la maison de disques du groupe anglais The Beatles ?",
-      "propositions": [
-        "Jonagold",
-        "Golden",
-        "Granny Smith",
-        "Gala",
-        "Red Delicious",
-        "Reinette grise"
-      ],
-      "answer": "Granny Smith",
-      "difficulty": "Difficile",
-      "anecdote": "Le nom et le logo proviennent d'un célèbre tableau de René Magritte et le design est complété par le graphiste britannique Gene Mahon."
-    },
-    {
-      "id": 27,
-      "question": "Quel peintre belge a employé une pomme pour appuyer son travail sur les mots ?",
-      "propositions": [
-        "René Magritte",
-        "Paul Delvaux",
-        "Henri Michaux",
-        "James Ensor",
-        "Pierre Alechinsky",
-        "Félicien Rops"
-      ],
-      "answer": "René Magritte",
-      "difficulty": "Difficile",
-      "anecdote": "Parmi les objets qui contribuent à faire de ses toiles d'impénétrables énigmes, une sphère noire apparaît de façon récurrente."
-    },
-    {
-      "id": 28,
-      "question": "Suite à quelle maladie observe-t-on des taches noirâtres sur les feuilles des pommiers ?",
-      "propositions": [
-        "Rouille",
-        "Charbon",
-        "Tavelure",
-        "Galle",
-        "Mildiou",
-        "Oïdium"
-      ],
-      "answer": "Tavelure",
-      "difficulty": "Difficile",
-      "anecdote": "Sur fruits, les manifestations vont jusqu'à la déformation complète, avec crevasses profondes et/ou la chute du fruit."
-    },
-    {
-      "id": 29,
-      "question": "Quel était généralement le jour de la pomme dans le calendrier républicain français ?",
-      "propositions": [
-        "6 décembre",
-        "22 octobre",
-        "11 janvier",
-        "16 novembre",
-        "1er avril",
-        "25 décembre"
-      ],
-      "answer": "22 octobre",
-      "difficulty": "Difficile",
-      "anecdote": "Les noms des mois et des jours furent conçus par le poète Fabre d'Églantine avec l'aide d'André Thouin, jardinier."
-    },
-    {
-      "id": 30,
-      "question": "Quel est le poids d'une pomme calibrée à 60/65 pour la consommation ?",
-      "propositions": [
-        "176-209 g",
-        "108-142 g",
-        "75-108 g",
-        "142-176 g",
-        "50-75 g",
-        "209-242 g"
-      ],
-      "answer": "75-108 g",
-      "difficulty": "Difficile",
-      "anecdote": "La pomme est le premier fruit consommé en France (22,6 %) devant l'orange (12,3 %) et la banane (12,2 %)."
-    },
-    {
-      "id": 31,
-      "question": "Quelle société est la première productrice mondiale de frites surgelées ?",
-      "propositions": [
-        "Mousline",
-        "Vico",
-        "McCain Foods",
-        "Lutosa",
-        "Aviko",
-        "Simplot"
-      ],
-      "answer": "McCain Foods",
-      "difficulty": "Facile",
-      "anecdote": "La société McCain Foods, basée à Toronto, emploie environ 20 000 personnes dans ses 55 usines à travers le monde."
-    },
-    {
-      "id": 32,
-      "question": "Quel jouet pour enfants possède une tête en plastique de forme patatoïde ?",
-      "propositions": [
-        "Monsieur Patate",
-        "Woody",
-        "Zigzag",
-        "Rex",
-        "Barbie",
-        "Mon Petit Poney"
-      ],
-      "answer": "Monsieur Patate",
-      "difficulty": "Facile",
-      "anecdote": "Créé par l'inventeur George Lerner en 1949, Monsieur Patate fut commercialisé aux États-Unis pour la première fois en 1952."
-    },
-    {
-      "id": 33,
-      "question": "Quel tableau de Jean-François Millet aurait dû s'appeler « La Mauvaise Récolte » ?",
-      "propositions": [
-        "Le Semeur",
-        "L'Angélus",
-        "Les Glaneuses",
-        "Un vanneur",
-        "Le Déjeuner",
-        "Le Labourage"
-      ],
-      "answer": "L'Angélus",
-      "difficulty": "Facile",
-      "anecdote": "L'Angélus a largement été reproduit sur des supports tels que des calendriers, des canevas, des meubles ou des cahiers d'écolier."
-    },
-    {
-      "id": 34,
-      "question": "Si vous en avez gros sur la patate, vous en avez probablement gros sur...",
-      "propositions": [
-        "Le nez",
-        "Le foie",
-        "Le dos",
-        "Le coeur",
-        "L'estomac",
-        "Le cerveau"
-      ],
-      "answer": "Le coeur",
-      "difficulty": "Facile",
-      "anecdote": "Le terme patate désigne aussi en français familier une personne que l'on considère comme étant un peu simplette."
-    },
-    {
-      "id": 35,
-      "question": "En Belgique, quelle est la principale entreprise de l'industrie de la pomme de terre ?",
-      "propositions": [
-        "Avebe",
-        "Aviko",
-        "Lutosa",
-        "McCain",
-        "Clarebout",
-        "Agristo"
-      ],
-      "answer": "Lutosa",
-      "difficulty": "Facile",
-      "anecdote": "Lutosa est une entreprise belge spécialisée dans la transformation industrielle de pommes de terre en frites surgelées et réfrigérées."
-    },
-    {
-      "id": 36,
-      "question": "Quelle activité manuelle consiste à servir de pommes de terre comme tampons ?",
-      "propositions": [
-        "Patatogravure",
-        "Sel coloré",
-        "Pâte à sel",
-        "Origami",
-        "Peinture au doigt",
-        "Modelage"
-      ],
-      "answer": "Patatogravure",
-      "difficulty": "Facile",
-      "anecdote": "Cette activité consiste à sculpter dans la chair des pommes de terre des lettres ou des motifs représentant des formes géométriques."
-    },
-    {
-      "id": 37,
-      "question": "Quel épluche-légumes à lame en gouttière facilite l'épluchage de la pomme de terre ?",
-      "propositions": [
-        "Girafe",
-        "Économe",
-        "Canneleur",
-        "Râpe",
-        "Mandoline",
-        "Couteau éminceur"
-      ],
-      "answer": "Économe",
-      "difficulty": "Facile",
-      "anecdote": "Traditionnellement, l'épluchage se pratiquait avec un simple couteau de cuisine, notamment dans le cadre des corvées de patates."
-    },
-    {
-      "id": 38,
-      "question": "Quel roman de Jacques Vaucherot fut adapté au cinéma par Claude Autant-Lara ?",
-      "propositions": [
-        "Les patates",
-        "Douce",
-        "Gloria",
-        "Le Joueur",
-        "La Traversée de Paris",
-        "Le Blé en herbe"
-      ],
-      "answer": "Les patates",
-      "difficulty": "Facile",
-      "anecdote": "Claude Autant-Lara a connu le succès après la Seconde Guerre mondiale avec l'adaptation d'un roman, « Le Diable au corps »."
-    },
-    {
-      "id": 39,
-      "question": "Quelle vitamine apportée par la pomme de terre est utile pour la prévention du scorbut ?",
-      "propositions": [
-        "Vitamine D",
-        "Vitamine B",
-        "Vitamine A",
-        "Vitamine C",
-        "Vitamine E",
-        "Vitamine K"
-      ],
-      "answer": "Vitamine C",
-      "difficulty": "Facile",
-      "anecdote": "Facilitant le transit intestinal, la pomme de terre a aussi des propriétés cicatrisantes, utiles contre les ulcères intestinaux."
-    },
-    {
-      "id": 40,
-      "question": "Quelle patate se renvoie-t-on l'un l'autre face à un problème embarrassant ?",
-      "propositions": [
-        "Froide",
-        "Dure",
-        "Chaude",
-        "Molle",
-        "Cuite",
-        "Crue"
-      ],
-      "answer": "Chaude",
-      "difficulty": "Facile",
-      "anecdote": "Synonyme de se renvoyer la balle, cette expression récente est apparue au Québec dans les années 1970 et en Europe en 1990."
-    },
-    {
-      "id": 41,
-      "question": "Dans quelle ville belge se trouve le seul musée au monde consacré à la frite ?",
-      "propositions": [
-        "Mons",
-        "Courtrai",
-        "Bruges",
-        "Tournai",
-        "Gand",
-        "Anvers"
-      ],
-      "answer": "Bruges",
-      "difficulty": "Moyen",
-      "anecdote": "Ce musée est connu sous le nom de « loge des Génois ». C'était en fait le bureau central des commerçants génois à Bruges."
-    },
-    {
-      "id": 42,
-      "question": "Quel jeu en réalité alternée a utilisé la pomme de terre comme emblème ?",
-      "propositions": [
-        "Team Fortress",
-        "The Orange Box",
-        "Portal 2",
-        "Counter-Strike",
-        "Half-Life",
-        "Left 4 Dead"
-      ],
-      "answer": "Portal 2",
-      "difficulty": "Moyen",
-      "anecdote": "L'intrigue du jeu offre en effet la possibilité d'utiliser la patate comme électrolyte pour la fabrication d'une pile artisanale."
-    },
-    {
-      "id": 43,
-      "question": "Quel poète chilien, prix Nobel de littérature, a chanté la pomme de terre ?",
-      "propositions": [
-        "Armando Uribe",
-        "Nicanor Parra",
-        "Pablo Neruda",
-        "Enrique Lihn",
-        "Isabel Allende",
-        "Roberto Bolaño"
-      ],
-      "answer": "Pablo Neruda",
-      "difficulty": "Moyen",
-      "anecdote": "Pablo Neruda a chanté la pomme de terre et son identité indienne dans son « Oda a la papa » (Odes élémentaires)."
-    },
-    {
-      "id": 44,
-      "question": "Quelle société américaine domine aujourd'hui le marché des chips ?",
-      "propositions": [
-        "Covi",
-        "Frito-Lay",
-        "Quala",
-        "Lunor",
-        "Pringles",
-        "Lay's"
-      ],
-      "answer": "Frito-Lay",
-      "difficulty": "Moyen",
-      "anecdote": "Filiale du groupe Pepsico, elle exploite 67 usines dans 27 pays et transforme annuellement 4 millions de tonnes de pommes de terre."
-    },
-    {
-      "id": 45,
-      "question": "Quel pays est le plus gros consommateur de pommes de terre ?",
-      "propositions": [
-        "Inde",
-        "Chine",
-        "Russie",
-        "Royaume-Uni",
-        "États-Unis",
-        "Allemagne"
+        [
+          "Chine",
+          ""
+        ],
+        [
+          "Taiwan",
+          ""
+        ],
+        [
+          "Japon",
+          ""
+        ],
+        [
+          "Corée du sud",
+          ""
+        ]
       ],
       "answer": "Chine",
       "difficulty": "Moyen",
-      "anecdote": "La consommation moyenne est évaluée à 33,3 kg par habitant et par an, ou bien 91,2 g, soit 62 kcal, par personne et par jour."
+      "anecdote": "La Chine a contribué à 67 % de la production mondiale en 2021, les autres pays n'ayant pas compensé le déclin d'Huawei."
+    },
+    {
+      "id": 18,
+      "type": 0,
+      "question": "Quelle est la signification du premier S du sigle SMS ?",
+      "propositions": [
+        [
+          "Swift",
+          ""
+        ],
+        [
+          "Secure",
+          ""
+        ],
+        [
+          "Short",
+          ""
+        ],
+        [
+          "Speedy",
+          ""
+        ]
+      ],
+      "answer": "Short",
+      "difficulty": "Moyen",
+      "anecdote": "Dans certaines régions du monde comme l'Amérique du Nord, le Royaume-Uni ou les Philippines, on parle de messagerie texte."
+    },
+    {
+      "id": 19,
+      "type": 0,
+      "question": "Quelle est la signification du S présent dans le sigle MMS ?",
+      "propositions": [
+        [
+          "Secure",
+          ""
+        ],
+        [
+          "Service",
+          ""
+        ],
+        [
+          "Short",
+          ""
+        ],
+        [
+          "System",
+          ""
+        ]
+      ],
+      "answer": "Service",
+      "difficulty": "Moyen",
+      "anecdote": "Il étend les capacités des SMS, permettant de transmettre des photos, des enregistrements audio ainsi que de la vidéo."
+    },
+    {
+      "id": 20,
+      "type": 0,
+      "question": "Quel seuil de recharge maximal est optimal pour la batterie de votre smartphone ?",
+      "propositions": [
+        [
+          "85 %",
+          ""
+        ],
+        [
+          "95 %",
+          ""
+        ],
+        [
+          "75 %",
+          ""
+        ],
+        [
+          "65 %",
+          ""
+        ]
+      ],
+      "answer": "85 %",
+      "difficulty": "Moyen",
+      "anecdote": "Une batterie d'accumulateurs permet de stocker l'énergie électrique sous forme chimique et de la restituer en courant continu."
+    },
+    {
+      "id": 21,
+      "type": 0,
+      "question": "Lequel de ces acronymes ne désigne aucune des versions de la norme 2G ?",
+      "propositions": [
+        [
+          "AMPS",
+          ""
+        ],
+        [
+          "GPRS",
+          ""
+        ],
+        [
+          "EDGE",
+          ""
+        ],
+        [
+          "GSM",
+          ""
+        ]
+      ],
+      "answer": "AMPS",
+      "difficulty": "Difficile",
+      "anecdote": "AMPS est un sigle informatique, néologisme basé sur LAMP, reprenant les premières lettres de Apache, MySQL, PHP et Solaris."
+    },
+    {
+      "id": 22,
+      "type": 0,
+      "question": "Lequel de ces acronymes ne désigne aucune des versions de la norme 3G ?",
+      "propositions": [
+        [
+          "HSPA",
+          ""
+        ],
+        [
+          "LTE",
+          ""
+        ],
+        [
+          "HSPA+",
+          ""
+        ],
+        [
+          "UMTS",
+          ""
+        ]
+      ],
+      "answer": "LTE",
+      "difficulty": "Difficile",
+      "anecdote": "La norme LTE, définie par le consortium 3GPP, a d'abord été considérée comme une norme de troisième génération 3.9G."
+    },
+    {
+      "id": 23,
+      "type": 0,
+      "question": "Quel terme désigne le fait de remplacer le système d'exploitation de son mobile ?",
+      "propositions": [
+        [
+          "Format",
+          ""
+        ],
+        [
+          "Defrag",
+          ""
+        ],
+        [
+          "Flash",
+          ""
+        ],
+        [
+          "Override",
+          ""
+        ]
+      ],
+      "answer": "Flash",
+      "difficulty": "Difficile",
+      "anecdote": "La téléphonie cellulaire est un moyen de télécommunication, plus précisément de radiocommunication, par téléphone mobile."
+    },
+    {
+      "id": 24,
+      "type": 0,
+      "question": "Comment est appelé le fichier d'image d'un système d'exploitation mobile ?",
+      "propositions": [
+        [
+          "iOS",
+          ""
+        ],
+        [
+          "ROM",
+          ""
+        ],
+        [
+          "RAR",
+          ""
+        ],
+        [
+          "RAM",
+          ""
+        ]
+      ],
+      "answer": "ROM",
+      "difficulty": "Difficile",
+      "anecdote": "Originellement, l'expression mémoire morte (en anglais, Read-Only Memory : ROM) désignait une mémoire informatique non volatile."
+    },
+    {
+      "id": 25,
+      "type": 0,
+      "question": "Quel est le nom du premier smartphone pliable proposé au grand public ?",
+      "propositions": [
+        [
+          "Find N2",
+          ""
+        ],
+        [
+          "Mate X3",
+          ""
+        ],
+        [
+          "FlexPai",
+          ""
+        ],
+        [
+          "Galaxy X",
+          ""
+        ]
+      ],
+      "answer": "FlexPai",
+      "difficulty": "Difficile",
+      "anecdote": "On attendait Samsung, et c'est finalement Royole qui a grillé la politesse à tout le monde, fabricant chinois de dalles flexibles."
+    },
+    {
+      "id": 26,
+      "type": 0,
+      "question": "En quelle année est sortie la première version de « PUBG » sur mobile ?",
+      "propositions": [
+        [
+          "2014",
+          ""
+        ],
+        [
+          "2018",
+          ""
+        ],
+        [
+          "2012",
+          ""
+        ],
+        [
+          "2016",
+          ""
+        ]
+      ],
+      "answer": "2018",
+      "difficulty": "Difficile",
+      "anecdote": "Le jeu est en effet disponible sur iOS et Android gratuitement depuis mars 2018 sous le titre « PlayerUnknown's Battlegrounds Mobile »."
+    },
+    {
+      "id": 27,
+      "type": 0,
+      "question": "En quelle année est sortie la première version de « Clash of Clans » sur iOS ?",
+      "propositions": [
+        [
+          "2014",
+          ""
+        ],
+        [
+          "2012",
+          ""
+        ],
+        [
+          "2010",
+          ""
+        ],
+        [
+          "2008",
+          ""
+        ]
+      ],
+      "answer": "2012",
+      "difficulty": "Difficile",
+      "anecdote": "Ce jeu vidéo mobile de stratégie en temps réel massivement multijoueur est développé et édité par le studio finlandais Supercell."
+    },
+    {
+      "id": 28,
+      "type": 0,
+      "question": "En quelle année est sortie la première version de « Candy Crush Saga » sur mobile ?",
+      "propositions": [
+        [
+          "2006",
+          ""
+        ],
+        [
+          "2008",
+          ""
+        ],
+        [
+          "2010",
+          ""
+        ],
+        [
+          "2012",
+          ""
+        ]
+      ],
+      "answer": "2012",
+      "difficulty": "Difficile",
+      "anecdote": "« Candy Crush Saga » est préinstallé sur les appareils dotés de base de Windows 10, au même titre que « Solitaire » et « Démineur »."
+    },
+    {
+      "id": 29,
+      "type": 0,
+      "question": "En quelle année est sortie la première version de « Fruit Ninja » sur mobile ?",
+      "propositions": [
+        [
+          "2010",
+          ""
+        ],
+        [
+          "2012",
+          ""
+        ],
+        [
+          "2008",
+          ""
+        ],
+        [
+          "2006",
+          ""
+        ]
+      ],
+      "answer": "2010",
+      "difficulty": "Difficile",
+      "anecdote": "Développé par Halfbrick Studios, « Fruit Ninja » fait partie du kit de démarrage iOS et Xbox 360 (également adapté pour Kinect)."
+    },
+    {
+      "id": 30,
+      "type": 0,
+      "question": "En quelle année est sortie la première version de « 8 Ball Pool » sur mobile ?",
+      "propositions": [
+        [
+          "2012",
+          ""
+        ],
+        [
+          "2008",
+          ""
+        ],
+        [
+          "2014",
+          ""
+        ],
+        [
+          "2010",
+          ""
+        ]
+      ],
+      "answer": "2010",
+      "difficulty": "Difficile",
+      "anecdote": "La version mobile de « 8 Ball Pool » est gérée par Miniclip, une société de jeux basée en Suisse, au Portugal, en Italie et en Angleterre."
+    },
+    {
+      "id": 31,
+      "type": 0,
+      "question": "Quel langage orienté objet a été créé par des employés de Sun Microsystems ?",
+      "propositions": [
+        [
+          "Perl",
+          ""
+        ],
+        [
+          "Python",
+          ""
+        ],
+        [
+          "Java",
+          ""
+        ],
+        [
+          "Ruby",
+          ""
+        ]
+      ],
+      "answer": "Java",
+      "difficulty": "Facile",
+      "anecdote": "Un logiciel écrit en Java a pour particularité d'être compilé vers un code intermédiaire qui peut être exécutée dans une VM."
+    },
+    {
+      "id": 32,
+      "type": 0,
+      "question": "Quel langage de programmation a le même nom qu'une espèce de serpent ?",
+      "propositions": [
+        [
+          "Boa",
+          ""
+        ],
+        [
+          "Python",
+          ""
+        ],
+        [
+          "Vipère",
+          ""
+        ],
+        [
+          "Cobra",
+          ""
+        ]
+      ],
+      "answer": "Python",
+      "difficulty": "Facile",
+      "anecdote": "Python est placé sous une licence libre proche de la licence BSD et fonctionne sur la plupart des plateformes informatiques."
+    },
+    {
+      "id": 33,
+      "type": 0,
+      "question": "Quel langage a permis de créer des sites web comme Facebook et Wikipédia ?",
+      "propositions": [
+        [
+          "Assembleur",
+          ""
+        ],
+        [
+          "Fortran",
+          ""
+        ],
+        [
+          "Scala",
+          ""
+        ],
+        [
+          "PHP",
+          ""
+        ]
+      ],
+      "answer": "PHP",
+      "difficulty": "Facile",
+      "anecdote": "PHP est considéré comme une des bases de la création de sites web dits dynamiques mais également des applications web."
+    },
+    {
+      "id": 34,
+      "type": 0,
+      "question": "Quelle collection d'outils, utiles à la création du design, a été créée par Twitter ?",
+      "propositions": [
+        [
+          "Bootstrap",
+          ""
+        ],
+        [
+          "Flutter",
+          ""
+        ],
+        [
+          "React",
+          ""
+        ],
+        [
+          "Fortran",
+          ""
+        ]
+      ],
+      "answer": "Bootstrap",
+      "difficulty": "Facile",
+      "anecdote": "Avant l'arrivée de Bootstrap, plusieurs bibliothèques existaient, ce qui menait à des incohérences et à un coût de maintenance élevé."
+    },
+    {
+      "id": 35,
+      "type": 0,
+      "question": "Quel langage de programmation compilé est un niveau au-dessus de C ?",
+      "propositions": [
+        [
+          "Go",
+          ""
+        ],
+        [
+          "Java",
+          ""
+        ],
+        [
+          "C++",
+          ""
+        ],
+        [
+          "Perl",
+          ""
+        ]
+      ],
+      "answer": "C++",
+      "difficulty": "Facile",
+      "anecdote": "L'encapsulation permet de faire abstraction du fonctionnement interne d'une classe et de ne se préoccuper que des services rendus."
+    },
+    {
+      "id": 36,
+      "type": 0,
+      "question": "Quel nom donne-t-on à un défaut de conception d'un programme informatique ?",
+      "propositions": [
+        [
+          "Commit",
+          ""
+        ],
+        [
+          "Lisp",
+          ""
+        ],
+        [
+          "Bug",
+          ""
+        ],
+        [
+          "Rollback",
+          ""
+        ]
+      ],
+      "answer": "Bug",
+      "difficulty": "Facile",
+      "anecdote": "La gravité du dysfonctionnement peut aller de bénigne à majeure, tels un plantage du système pouvant entraîner de graves accidents."
+    },
+    {
+      "id": 37,
+      "type": 0,
+      "question": "Quel célèbre langage a été inventé courant 1972 dans les laboratoires Bell ?",
+      "propositions": [
+        [
+          "Fortran",
+          ""
+        ],
+        [
+          "RPG",
+          ""
+        ],
+        [
+          "COBOL",
+          ""
+        ],
+        [
+          "C",
+          ""
+        ]
+      ],
+      "answer": "C",
+      "difficulty": "Facile",
+      "anecdote": "Inventé au début des années 1970 pour réécrire Unix, C est devenu un des langages les plus utilisés, encore de nos jours."
+    },
+    {
+      "id": 38,
+      "type": 0,
+      "question": "Quels mots sont souvent utilisés pour vite tester un logiciel simple sans erreur ?",
+      "propositions": [
+        [
+          "Happy day",
+          ""
+        ],
+        [
+          "Well done",
+          ""
+        ],
+        [
+          "No bug",
+          ""
+        ],
+        [
+          "Hello world",
+          ""
+        ]
+      ],
+      "answer": "Hello world",
+      "difficulty": "Facile",
+      "anecdote": "C'est souvent le programme le plus simple qu'on essaie de faire fonctionner en apprenant un nouveau langage de programmation."
+    },
+    {
+      "id": 39,
+      "type": 0,
+      "question": "Quel EDI propriétaire sous Windows a été créé en 1995 par Borland ?",
+      "propositions": [
+        [
+          "WinDev",
+          ""
+        ],
+        [
+          "Ada",
+          ""
+        ],
+        [
+          "Visual Basic",
+          ""
+        ],
+        [
+          "Delphi",
+          ""
+        ]
+      ],
+      "answer": "Delphi",
+      "difficulty": "Facile",
+      "anecdote": "Delphi est apparu comme une alternative viable pour de nombreux développeurs qui souhaitaient programmer sous Windows."
+    },
+    {
+      "id": 40,
+      "type": 0,
+      "question": "Quel langage de programmation libre utilise les extensions rb et rbw ?",
+      "propositions": [
+        [
+          "Ruby",
+          ""
+        ],
+        [
+          "RPG",
+          ""
+        ],
+        [
+          "Ada",
+          ""
+        ],
+        [
+          "React",
+          ""
+        ]
+      ],
+      "answer": "Ruby",
+      "difficulty": "Facile",
+      "anecdote": "Frustré par son expérience en développement Smalltalk et Lisp, Yukihiro Matsumoto a commencé à créer Ruby en 1993 sous Emacs."
+    },
+    {
+      "id": 41,
+      "type": 0,
+      "question": "Quel langage créé en 1987 par Larry Wall traite de l'information textuelle ?",
+      "propositions": [
+        [
+          "PHP",
+          ""
+        ],
+        [
+          "Python",
+          ""
+        ],
+        [
+          "Perl",
+          ""
+        ],
+        [
+          "Java",
+          ""
+        ]
+      ],
+      "answer": "Perl",
+      "difficulty": "Moyen",
+      "anecdote": "Ce langage s'inspire des structures de contrôle et d'impression du langage C, mais aussi de langages de scripts sed, awk et shell (sh)."
+    },
+    {
+      "id": 42,
+      "type": 0,
+      "question": "Quelle bibliothèque JavaScript libre est développée par Meta depuis 2013 ?",
+      "propositions": [
+        [
+          "Scala",
+          ""
+        ],
+        [
+          "Go",
+          ""
+        ],
+        [
+          "React",
+          ""
+        ],
+        [
+          "Kotlin",
+          ""
+        ]
+      ],
+      "answer": "React",
+      "difficulty": "Moyen",
+      "anecdote": "La bibliothèque se démarque de ses concurrents par sa flexibilité et ses performances, en travaillant avec un DOM virtuel."
+    },
+    {
+      "id": 43,
+      "type": 0,
+      "question": "Quel langage développé par Microsoft a pris fin en 1998 avec la version 6 ?",
+      "propositions": [
+        [
+          "Fortran",
+          ""
+        ],
+        [
+          "Visual Basic",
+          ""
+        ],
+        [
+          "Assembleur",
+          ""
+        ],
+        [
+          "Ruby",
+          ""
+        ]
+      ],
+      "answer": "Visual Basic",
+      "difficulty": "Moyen",
+      "anecdote": "Dans une étude conduite en 2005, 62 % des développeurs interrogés auraient déclaré utiliser l'une ou l'autre forme de Visual Basic."
+    },
+    {
+      "id": 44,
+      "type": 0,
+      "question": "Quel est le langage de plus bas niveau qui représente le langage machine ?",
+      "propositions": [
+        [
+          "Scala",
+          ""
+        ],
+        [
+          "C",
+          ""
+        ],
+        [
+          "Assembleur",
+          ""
+        ],
+        [
+          "C++",
+          ""
+        ]
+      ],
+      "answer": "Assembleur",
+      "difficulty": "Moyen",
+      "anecdote": "Les combinaisons de bits du langage machine sont représentées par des symboles dits mnémoniques, c'est-à-dire faciles à retenir."
+    },
+    {
+      "id": 45,
+      "type": 0,
+      "question": "Quel nom de langage de programmation a été choisi en l'honneur d'Ada Lovelace ?",
+      "propositions": [
+        [
+          "Alo",
+          ""
+        ],
+        [
+          "Lovelace",
+          ""
+        ],
+        [
+          "Ada",
+          ""
+        ],
+        [
+          "Algol",
+          ""
+        ]
+      ],
+      "answer": "Ada",
+      "difficulty": "Moyen",
+      "anecdote": "Augusta Ada King, comtesse de Lovelace, née à Londres le 10 décembre 1815, est une pionnière de la science informatique."
     },
     {
       "id": 46,
-      "question": "Qu'est-il possible de produire avec deux pommes de terre et peu de matériel ?",
+      "type": 0,
+      "question": "Quel atelier de génie logiciel pour applications Windows utilise le Wlangage ?",
       "propositions": [
-        "Vibrations",
-        "Lumière",
-        "Son",
-        "Électricité",
-        "Chaleur",
-        "Magnétisme"
+        [
+          "WebDev",
+          ""
+        ],
+        [
+          "Delphi",
+          ""
+        ],
+        [
+          "Go",
+          ""
+        ],
+        [
+          "WinDev",
+          ""
+        ]
       ],
-      "answer": "Électricité",
+      "answer": "WinDev",
       "difficulty": "Moyen",
-      "anecdote": "En y insérant deux électrodes, l'une en zinc et l'autre en cuivre, la chair de la pomme de terre fait office d'électrolyte."
+      "anecdote": "WebDev et WinDev Mobile utilisent le WLangage et les mêmes concepts pour la génération de sites Web et d'applications mobiles."
     },
     {
       "id": 47,
-      "question": "Que peut-on produire après fermentation et distillation de l'amidon de la pomme de terre ?",
+      "type": 0,
+      "question": "Quelle société a annoncé en 2015 le passage en open source du langage Swift ?",
       "propositions": [
-        "Ouzo",
-        "Raki",
-        "Éthanol",
-        "Absinthe",
-        "Méthanol",
-        "Acide lactique"
+        [
+          "Facebook",
+          ""
+        ],
+        [
+          "Twitter",
+          ""
+        ],
+        [
+          "Google",
+          ""
+        ],
+        [
+          "Apple",
+          ""
+        ]
       ],
-      "answer": "Éthanol",
+      "answer": "Apple",
       "difficulty": "Moyen",
-      "anecdote": "Liquide incolore, inflammable et miscible à l'eau, l'éthanol est un psychotrope et l'une des plus anciennes drogues récréatives."
+      "anecdote": "Jugé plus simple et plus concis que l'Objective-C, Swift a été bien accueilli par les développeurs habitués aux technologies d'Apple."
     },
     {
       "id": 48,
-      "question": "À partir du XVIe siècle, l'alcool de pomme de terre a servi à confectionner quel alcool ?",
+      "type": 0,
+      "question": "Quel logiciel de gestion de versions décentralisé a été créé par Linus Torvalds ?",
       "propositions": [
-        "Calvados",
-        "Tequila",
-        "Armagnac",
-        "Vodka",
-        "Whisky",
-        "Rhum"
+        [
+          "Monotone",
+          ""
+        ],
+        [
+          "Mercurial",
+          ""
+        ],
+        [
+          "Git",
+          ""
+        ],
+        [
+          "Bazaar",
+          ""
+        ]
       ],
-      "answer": "Vodka",
+      "answer": "Git",
       "difficulty": "Moyen",
-      "anecdote": "La vodka peut être issue de la transformation de presque toutes les matières d'origine agricole, les plus connues étant les céréales."
+      "anecdote": "Depuis les années 2010, il s'agit du logiciel de gestion de versions le plus populaire dans le développement logiciel et web."
     },
     {
       "id": 49,
-      "question": "Quel pays est le premier exportateur mondial de pommes de terre de conservation ?",
+      "type": 0,
+      "question": "Quel langage fut utilisé dès les premières générations d'IBM AS/400 ?",
       "propositions": [
-        "Belgique",
-        "France",
-        "Pays-Bas",
-        "Allemagne",
-        "Canada",
-        "Chine"
+        [
+          "RPG",
+          ""
+        ],
+        [
+          "Ruby",
+          ""
+        ],
+        [
+          "Java",
+          ""
+        ],
+        [
+          "Python",
+          ""
+        ]
       ],
-      "answer": "France",
+      "answer": "RPG",
       "difficulty": "Moyen",
-      "anecdote": "Pour les pommes de terre surgelées, les principaux pays exportateurs sont la Belgique, les Pays-Bas et le Canada."
+      "anecdote": "Destiné aux entreprises et laboratoires, le langage RPG est né en 1959 et se pratiquait sur les systèmes 3 ou sur IBM/360 (1965)."
     },
     {
       "id": 50,
-      "question": "Quel nom est également donné à l'amidon de pomme de terre ?",
+      "type": 0,
+      "question": "Quelle entité informatique permet d'encapsuler une portion de code ?",
       "propositions": [
-        "Gélose",
-        "Purée",
-        "Sirop",
-        "Fécule",
-        "Gomme",
-        "Amylase"
+        [
+          "Variable",
+          ""
+        ],
+        [
+          "Routine",
+          ""
+        ],
+        [
+          "Constante",
+          ""
+        ],
+        [
+          "Extension",
+          ""
+        ]
       ],
-      "answer": "Fécule",
+      "answer": "Routine",
       "difficulty": "Moyen",
-      "anecdote": "La fécule de pomme de terre a de multiples applications dans l'industrie, en particulier pour le couchage du papier."
+      "anecdote": "Les routines permettent de structurer la programmation d'un problème en décomposant le programme en portions de code."
     },
     {
       "id": 51,
-      "question": "Quelle année a été déclarée année de la pomme de terre par l'ONU ?",
+      "type": 0,
+      "question": "Quel langage de programmation est utilisé dans les applications Microsoft Office ?",
       "propositions": [
-        "1988",
-        "2008",
-        "2018",
-        "1998",
-        "2000",
-        "2015"
+        [
+          "JavaScript",
+          ""
+        ],
+        [
+          "Visual Basic",
+          ""
+        ],
+        [
+          "Lisp",
+          ""
+        ],
+        [
+          "Go",
+          ""
+        ]
       ],
-      "answer": "2008",
+      "answer": "Visual Basic",
       "difficulty": "Difficile",
-      "anecdote": "Cette déclaration a été faite par l'ONU pour sensibiliser le monde entier sur son rôle et promouvoir sa mise en oeuvre."
+      "anecdote": "Dans une étude conduite en 2005, 62 % des développeurs interrogés auraient déclaré utiliser l'une ou l'autre forme de Visual Basic."
     },
     {
       "id": 52,
-      "question": "Quelle variété est utilisée pour la préparation des frites McDonald's ?",
+      "type": 0,
+      "question": "Quel nouveau logiciel peut être créé à partir du code source d'un logiciel existant ?",
       "propositions": [
-        "Red Pontiac",
-        "Shepody",
-        "Yukon Gold",
-        "Russet Burbank",
-        "Bintje",
-        "Charlotte"
+        [
+          "Scrub",
+          ""
+        ],
+        [
+          "Prank",
+          ""
+        ],
+        [
+          "Grab",
+          ""
+        ],
+        [
+          "Fork",
+          ""
+        ]
       ],
-      "answer": "Russet Burbank",
+      "answer": "Fork",
       "difficulty": "Difficile",
-      "anecdote": "Quand on utilise cette pomme de terre pour faire des chips, il se produit une coloration foncée due au phénomène de caramélisation."
+      "anecdote": "Les forks sont courants dans les logiciels libres, dont les licences permettent l'utilisation, la modification et la redistribution du code."
     },
     {
       "id": 53,
-      "question": "Quel entrepreneur nippo-américain est surnommé le roi de la pomme de terre ?",
+      "type": 0,
+      "question": "Créé en 1957, quel fut le premier langage de programmation de haut niveau ?",
       "propositions": [
-        "George Shima",
-        "Daniel Inouye",
-        "Steve Aoki",
-        "Eddie Imazu",
-        "Yoko Ono",
-        "Masayoshi Son"
+        [
+          "Algol",
+          ""
+        ],
+        [
+          "Lisp",
+          ""
+        ],
+        [
+          "Fortran",
+          ""
+        ],
+        [
+          "COBOL",
+          ""
+        ]
       ],
-      "answer": "George Shima",
+      "answer": "Fortran",
       "difficulty": "Difficile",
-      "anecdote": "À une époque, George Shima produisait 85% de la récolte de pommes de terre de Californie, ce qui lui valut ce surnom."
+      "anecdote": "Quickstart Fortran permet d'installer facilement Fortran sous Microsoft Windows, sans nécessiter les droits d'administration."
     },
     {
       "id": 54,
-      "question": "De quel État américain la pomme de terre est-elle l'emblème officiel ?",
+      "type": 0,
+      "question": "Quel est le langage de programmation possédant le plus large écosystème ?",
       "propositions": [
-        "Montana",
-        "Vermont",
-        "Idaho",
-        "Géorgie",
-        "Washington",
-        "Oregon"
+        [
+          "Python",
+          ""
+        ],
+        [
+          "JavaScript",
+          ""
+        ],
+        [
+          "Java",
+          ""
+        ],
+        [
+          "RPG",
+          ""
+        ]
       ],
-      "answer": "Idaho",
+      "answer": "JavaScript",
       "difficulty": "Difficile",
-      "anecdote": "Cet État, surnommé le « Potato State », est le principal producteur de ce tubercule aux États-Unis (28% de la production nationale)."
+      "anecdote": "Le langage a été créé en dix jours en mai 1995 pour le compte de la Netscape Communications Corporation par Brendan Eich."
     },
     {
       "id": 55,
-      "question": "Quel terme du quechua désigne la pomme de terre dans les pays d'Amérique latine ?",
+      "type": 0,
+      "question": "Quel langage intègre programmation orientée objet et fonctionnelle ?",
       "propositions": [
-        "Baba",
-        "Dada",
-        "Papa",
-        "Mama",
-        "Oca",
-        "Yuca"
+        [
+          "Perl",
+          ""
+        ],
+        [
+          "Scala",
+          ""
+        ],
+        [
+          "PHP",
+          ""
+        ],
+        [
+          "Go",
+          ""
+        ]
       ],
-      "answer": "Papa",
+      "answer": "Scala",
       "difficulty": "Difficile",
-      "anecdote": "Dans cette langue  véhiculaire de l'empire Inca, papa désignait tout type de tubercule à l'exception de l'oca."
+      "anecdote": "Il concilie ainsi ces deux paradigmes opposés et offre au développeur la possibilité de choisir le paradigme le plus approprié."
     },
     {
       "id": 56,
-      "question": "Quel extrait de la pomme de terre est utilisé comme apprêt pour la raideur du linge ?",
+      "type": 0,
+      "question": "Quel langage, développé par Google, est inspiré de C et de Pascal ?",
       "propositions": [
-        "Synthon",
-        "Empois",
-        "Dipôle",
-        "Prontosil",
-        "Amidon",
-        "Pectine"
+        [
+          "Go",
+          ""
+        ],
+        [
+          "Ruby",
+          ""
+        ],
+        [
+          "Scala",
+          ""
+        ],
+        [
+          "Fortran",
+          ""
+        ]
       ],
-      "answer": "Empois",
+      "answer": "Go",
       "difficulty": "Difficile",
-      "anecdote": "Résultant de l'agitation de la poudre d'amidon dans de l'eau chaude, l'empois devient visqueux selon la concentration d'amidon."
+      "anecdote": "En raison de sa simplicité, il est concevable de l'utiliser aussi bien pour écrire des applications, des scripts ou de grands systèmes."
     },
     {
       "id": 57,
-      "question": "En Pologne, quel ratio de pomme de terre est produit pour la consommation animale ?",
+      "type": 0,
+      "question": "Quel anglicisme désigne l'enregistrement effectif d'une transaction ?",
       "propositions": [
-        "Une sur trois",
-        "Une sur neuf",
-        "Une sur sept",
-        "Une sur cinq",
-        "Une sur deux",
-        "Une sur dix"
+        [
+          "Rollback",
+          ""
+        ],
+        [
+          "Fallin",
+          ""
+        ],
+        [
+          "Commit",
+          ""
+        ],
+        [
+          "Backup",
+          ""
+        ]
       ],
-      "answer": "Une sur trois",
+      "answer": "Commit",
       "difficulty": "Difficile",
-      "anecdote": "Les pommes de terre données à certains animaux monogastriques (porcs et volailles) doivent être cuites pour être digestibles."
+      "anecdote": "Le terme anglais fait référence à la commande éponyme présente dans la plupart des systèmes de gestion de base de données."
     },
     {
       "id": 58,
-      "question": "Quel plat traditionnel des Pays-Bas consiste en une purée mélangée avec des légumes ?",
+      "type": 0,
+      "question": "Quel langage doit son nom à une île située près de Saint-Pétersbourg ?",
       "propositions": [
-        "Potaye",
-        "Stamppot",
-        "Lefse",
-        "Frico",
-        "Hutspot",
-        "Bami Goreng"
+        [
+          "Wolin",
+          ""
+        ],
+        [
+          "Kotlin",
+          ""
+        ],
+        [
+          "Mohni",
+          ""
+        ],
+        [
+          "Uznam",
+          ""
+        ]
       ],
-      "answer": "Stamppot",
+      "answer": "Kotlin",
       "difficulty": "Difficile",
-      "anecdote": "Ces légumes d'accompagnement sont souvent la choucroute, la scarole, le chou frisé, ou un mélange carottes et oignons."
+      "anecdote": "Kotlin est devenu officiellement en 2019 le langage de programmation voulu et recommandé par le géant américain Google."
     },
     {
       "id": 59,
-      "question": "Au Pérou, combien existe-t-il environ de variétés de pommes de terre ?",
+      "type": 0,
+      "question": "Quel kit de développement logiciel open-source a été créé par Google ?",
       "propositions": [
-        "2 000",
-        "3 000",
-        "1 000",
-        "4 000",
-        "500",
-        "10 000"
+        [
+          "Tinder",
+          ""
+        ],
+        [
+          "Twitter",
+          ""
+        ],
+        [
+          "Flutter",
+          ""
+        ],
+        [
+          "Flubber",
+          ""
+        ]
       ],
-      "answer": "3 000",
+      "answer": "Flutter",
       "difficulty": "Difficile",
-      "anecdote": "Elle entre dans la composition de très nombreux plats comme la papa a la huancaina, la papa rellena, l'ocopa et la carapulcra."
+      "anecdote": "Flutter génère des applications pour Android, iOS, Linux, Mac, Windows, Google Fuchsia et le web à partir d'une base de code."
     },
     {
       "id": 60,
-      "question": "Quel mets québécois se compose de frites, de cheddar en grains et de sauce brune ?",
+      "type": 0,
+      "question": "Quel fut le premier système d'exploitation à utiliser Objective-C ?",
       "propositions": [
-        "Trempette",
-        "Poutine",
-        "Cipaille",
-        "Gibelotte",
-        "Tire d'érable",
-        "Tourtière"
+        [
+          "GeoWorks",
+          ""
+        ],
+        [
+          "JavaOS",
+          ""
+        ],
+        [
+          "NeXTSTEP",
+          ""
+        ],
+        [
+          "AmigaOS",
+          ""
+        ]
       ],
-      "answer": "Poutine",
+      "answer": "NeXTSTEP",
       "difficulty": "Difficile",
-      "anecdote": "Mets longtemps utilisé pour représenter de manière caricaturale la société québécoise, la poutine est maintenant en vogue."
+      "anecdote": "Objective-C est beaucoup utilisé sur Macintosh, notamment pour les API Cocoa de Mac OS X et, plus récemment pour les iPhone."
     },
     {
       "id": 61,
-      "question": "Que stockent les cactus dans leurs tissus pour faire plus efficacement face à la sécheresse ?",
+      "type": 0,
+      "question": "Sur quel noyau le système d'exploitation mobile Android est-il basé ?",
       "propositions": [
-        "Terre",
-        "Suc",
-        "Sel",
-        "Épines",
-        "Sable",
-        "Minéraux"
+        [
+          "Accent",
+          ""
+        ],
+        [
+          "Linux",
+          ""
+        ],
+        [
+          "Windows NT",
+          ""
+        ],
+        [
+          "BSD",
+          ""
+        ]
       ],
-      "answer": "Suc",
+      "answer": "Linux",
       "difficulty": "Facile",
-      "anecdote": "Ce sont presque toutes des plantes grasses ou succulentes, c'est-à-dire des plantes xérophytes qui stockent des réserves de suc."
+      "anecdote": "Le noyau Linux est un logiciel libre développé essentiellement en langage C par des milliers de bénévoles sur Internet."
     },
     {
       "id": 62,
-      "question": "Combien d'espèces environ comprend la famille des Cactaceae ?",
+      "type": 0,
+      "question": "Par quelle société le système Android est-il actuellement développé ?",
       "propositions": [
-        "2 500",
-        "1 500",
-        "3 500",
-        "4 500",
-        "500",
-        "10 000"
+        [
+          "Google",
+          ""
+        ],
+        [
+          "HP",
+          ""
+        ],
+        [
+          "Apple",
+          ""
+        ],
+        [
+          "Microsoft",
+          ""
+        ]
       ],
-      "answer": "2 500",
+      "answer": "Google",
       "difficulty": "Facile",
-      "anecdote": "Dans le langage courant, le mot cactus désigne souvent le figuier de Barbarie, plante commune sur les bords de la Méditerranée."
+      "anecdote": "Le système d'exploitation Android fut lancé en juin 2007 à la suite du rachat par Google en 2005 de la startup du même nom."
     },
     {
       "id": 63,
-      "question": "Quelle forme de cactus est souvent appréciée des collectionneurs ?",
+      "type": 0,
+      "question": "Quel petit robot vert est utilisé par Google pour présenter son système Android ?",
       "propositions": [
-        "Monstrueuse",
-        "Arbustive",
-        "Grimpante",
-        "Globulaire",
-        "Plate",
-        "Élancée"
+        [
+          "Tux",
+          ""
+        ],
+        [
+          "Archie",
+          ""
+        ],
+        [
+          "Bugdroid",
+          ""
+        ],
+        [
+          "Woody",
+          ""
+        ]
       ],
-      "answer": "Monstrueuse",
+      "answer": "Bugdroid",
       "difficulty": "Facile",
-      "anecdote": "L'origine du phénomène est inconnue, probablement due à des mutations réparties en deux catégories : fasciation et cristation."
+      "anecdote": "Bugdroid, le logo d'Android, serait en fait un personnage d'un jeu des années 1990 sur Atari : « Gauntlet: The Third Encounter »."
     },
     {
       "id": 64,
-      "question": "Avec ses raquettes, de quel pays est originaire le figuier de Barbarie ?",
+      "type": 0,
+      "question": "Quelle boutique en ligne permet l'achat d'applications pour Android ?",
       "propositions": [
-        "Mexique",
-        "Espagne",
-        "Grèce",
-        "Australie",
-        "Pérou",
-        "Chili"
+        [
+          "Steam",
+          ""
+        ],
+        [
+          "App Store",
+          ""
+        ],
+        [
+          "Impulse",
+          ""
+        ],
+        [
+          "Google Play",
+          ""
+        ]
       ],
-      "answer": "Mexique",
+      "answer": "Google Play",
       "difficulty": "Facile",
-      "anecdote": "L'espèce est en effet originaire du Mexique, où elle est appelée nopal, et figure de plus dans les armoiries du drapeau mexicain."
+      "anecdote": "Bien que non inclus dans les sources d'Android, Google Play joue un rôle essentiel pour la popularité d'Android."
     },
     {
       "id": 65,
-      "question": "À quel moment de la journée les cactus absorbent-ils le dioxyde de carbone ?",
+      "type": 0,
+      "question": "Comment est nommé le navigateur web intégré par défaut à Android ?",
       "propositions": [
-        "Le jour",
-        "Jour et nuit",
-        "Jamais",
-        "La nuit",
-        "Au crépuscule",
-        "Au petit matin"
+        [
+          "Surfeur",
+          ""
+        ],
+        [
+          "Web",
+          ""
+        ],
+        [
+          "Internet",
+          ""
+        ],
+        [
+          "Galerie",
+          ""
+        ]
       ],
-      "answer": "La nuit",
+      "answer": "Internet",
       "difficulty": "Facile",
-      "anecdote": "Contrairement à la plupart des plantes, les cactus ont un métabolisme acide crassulacéen permettant de fixer le carbone."
+      "anecdote": "Android AOSP (code source) comporte de nombreuses applications incorporées : Téléphone, Contacts, E-Mail, Agenda, ..."
     },
     {
       "id": 66,
-      "question": "Qui a ramené les premiers cactus en Europe (des Melocactus) ?",
+      "type": 0,
+      "question": "Sur quel type de carte pouvez-vous déplacer des applications Android ?",
       "propositions": [
-        "Diogo Gomes",
-        "Pedro de Sintra",
-        "Christophe Colomb",
-        "Afonso de Paiva",
-        "Vasco de Gama",
-        "Amerigo Vespucci"
+        [
+          "MicroSD",
+          ""
+        ],
+        [
+          "Réseau",
+          ""
+        ],
+        [
+          "Graphique",
+          ""
+        ],
+        [
+          "Wi-Fi",
+          ""
+        ]
       ],
-      "answer": "Christophe Colomb",
+      "answer": "MicroSD",
       "difficulty": "Facile",
-      "anecdote": "Cactus en forme de melon (d'où leur nom), ils sont originaires des Caraïbes, des Antilles et du nord de l'Amérique du Sud."
+      "anecdote": "Cette possibilité repose sur les permissions et paramètres contenus dans le fichier manifeste de l'application qui l'autorise."
     },
     {
       "id": 67,
-      "question": "Idéalement, à quelle fréquence est-il nécessaire de rempoter un cactus ?",
+      "type": 0,
+      "question": "Quel téléphone de Google fut le premier à bénéficier d'Android 2.2 (Froyo) ?",
       "propositions": [
-        "Tous les 4 ans",
-        "Tous les 8 ans",
-        "Tous les 16 ans",
-        "Tous les 12 ans",
-        "Tous les ans",
-        "Tous les 6 mois"
+        [
+          "Nexus Galaxy",
+          ""
+        ],
+        [
+          "Nexus S",
+          ""
+        ],
+        [
+          "Nexus One",
+          ""
+        ],
+        [
+          "Nexus Pixel",
+          ""
+        ]
       ],
-      "answer": "Tous les 4 ans",
+      "answer": "Nexus One",
       "difficulty": "Facile",
-      "anecdote": "Les cactées n'aimant pas l'excès de nourriture, le cactus se développera si le volume du pot ne dépasse pas celui de la plante."
+      "anecdote": "Ses ventes ne furent pas exceptionnelles avec seulement environ 20 000 exemplaires vendus la semaine de sa sortie."
     },
     {
       "id": 68,
-      "question": "Quelle est la température la plus adéquate pour le repos hivernal du cactus ?",
+      "type": 0,
+      "question": "Quel modèle Samsung est devenu une référence en matière de tablettes Android ?",
       "propositions": [
-        "7° C",
-        "22° C",
-        "17° C",
-        "12° C",
-        "25° C",
-        "0° C"
+        [
+          "GamePad",
+          ""
+        ],
+        [
+          "Galaxy Tab",
+          ""
+        ],
+        [
+          "Padphone",
+          ""
+        ],
+        [
+          "Nook",
+          ""
+        ]
       ],
-      "answer": "7° C",
+      "answer": "Galaxy Tab",
       "difficulty": "Facile",
-      "anecdote": "Durant l'été, un bon arrosage une fois par semaine suffit, bien que les cactus puissent aisément se passer d'eau fort longtemps."
+      "anecdote": "À l'origine livrée sous Android 2.2, deux mois après sa sortie, la Samsung Galaxy Tab fut vendue à plus de 600 000 exemplaires."
     },
     {
       "id": 69,
-      "question": "De quelle quantité de lumière un cactus a-t-il besoin pour s'épanouir ?",
+      "type": 0,
+      "question": "Quel nom a été donné à la version 8 du système d'exploitation Android ?",
       "propositions": [
-        "Un peu",
-        "Beaucoup",
-        "Aucune",
-        "Le maximum",
-        "Lumière tamisée",
-        "Mi-ombre"
+        [
+          "Marshmallow",
+          ""
+        ],
+        [
+          "Oreo",
+          ""
+        ],
+        [
+          "Nougat",
+          ""
+        ],
+        [
+          "Lollipop",
+          ""
+        ]
       ],
-      "answer": "Le maximum",
+      "answer": "Oreo",
       "difficulty": "Facile",
-      "anecdote": "Cependant, après l'hivernage, n'exposez pas directement vos cactus en plein soleil mais privilégiez un retour progressif à la lumière."
+      "anecdote": "Cette version du système Android est disponible depuis le 21 août 2017 et porte le nom de la marque de biscuits Oreo."
     },
     {
       "id": 70,
-      "question": "Dans quelles régions du globe les cactus poussent-ils le mieux ?",
+      "type": 0,
+      "question": "Quel pourcentage environ d'applications du Google Play sont gratuites ?",
       "propositions": [
-        "Prairies",
-        "Montagnes",
-        "Plaines",
-        "Déserts",
-        "Forêts tropicales",
-        "Toundra"
+        [
+          "45 %",
+          ""
+        ],
+        [
+          "55 %",
+          ""
+        ],
+        [
+          "35 %",
+          ""
+        ],
+        [
+          "65 %",
+          ""
+        ]
       ],
-      "answer": "Déserts",
+      "answer": "65 %",
       "difficulty": "Facile",
-      "anecdote": "On retrouve principalement les cactus au Mexique, aux États-Unis, sur le pourtour méditerranéen ainsi qu'au Sahara et en Australie."
+      "anecdote": "Google Play permet de télécharger des applications, des livres, des films ou de la musique, payants ou non."
     },
     {
       "id": 71,
-      "question": "Combien de loges comporte la baie du fruit du cactus ?",
+      "type": 0,
+      "question": "Avant mars 2012, quel était le précédent nom donné au Google Play Store ?",
       "propositions": [
-        "Trois",
-        "Deux",
-        "Quatre",
-        "Une seule",
-        "Cinq",
-        "Zéro"
+        [
+          "Android Market",
+          ""
+        ],
+        [
+          "3DSWare",
+          ""
+        ],
+        [
+          "Galaxy Apps",
+          ""
+        ],
+        [
+          "Zeebo",
+          ""
+        ]
       ],
-      "answer": "Une seule",
+      "answer": "Android Market",
       "difficulty": "Moyen",
-      "anecdote": "Le fruit du cactus doit être une baie à une seule loge car il n'existe de cloisons internes séparant les graines ou les groupes de graines."
+      "anecdote": "Début 2013, Google Play était fort de 800 000 applications, ce qui en faisait déjà le plus gros magasin d'applications au monde."
     },
     {
       "id": 72,
-      "question": "Quel cactus était autrefois utilisé à des fins rituelles par les Amérindiens ?",
+      "type": 0,
+      "question": "Quel smartphone fut commercialisé dans le monde sous le nom de Motorola Milestone ?",
       "propositions": [
-        "San Pedro",
-        "Peyotl",
-        "Hylocereus",
-        "Cereus",
-        "Opuntia",
-        "Gymnocalycium"
+        [
+          "Droid",
+          ""
+        ],
+        [
+          "Galaxy S",
+          ""
+        ],
+        [
+          "Xperia",
+          ""
+        ],
+        [
+          "Nexus",
+          ""
+        ]
       ],
-      "answer": "Peyotl",
+      "answer": "Droid",
       "difficulty": "Moyen",
-      "anecdote": "Ce cactus contient plusieurs alcaloïdes dont la mescaline, utilisée pour ses propriétés enthéogènes, psychotropes et hallucinogènes."
+      "anecdote": "Premier téléphone muni de la version 2.0 d'Android, l'appareil trouva 250 000 acheteurs une semaine après son lancement."
     },
     {
       "id": 73,
-      "question": "Que signifie le mot grec ancien kaktos, d'où provient le nom cactus ?",
+      "type": 0,
+      "question": "Que faut-il dans son smartphone pour accéder au magasin d'applications Tegra ?",
       "propositions": [
-        "Épine",
-        "Résine",
-        "Chardon",
-        "Soleil",
-        "Desert",
-        "Fleur"
+        [
+          "iOS",
+          ""
+        ],
+        [
+          "Clé SSL",
+          ""
+        ],
+        [
+          "Bitcoins",
+          ""
+        ],
+        [
+          "Puce Tegra",
+          ""
+        ]
       ],
-      "answer": "Chardon",
+      "answer": "Puce Tegra",
       "difficulty": "Moyen",
-      "anecdote": "Il a été utilisé comme le nom du premier genre de ces plantes par Carl von Linné, avant que d'autres en soient séparés."
+      "anecdote": "Ce magasin permet notamment de télécharger des applications très haute définition (THD) dédiées aux téléphones sous Tegra."
     },
     {
       "id": 74,
-      "question": "En combien de genres sont réparties les 2 500 espèces de cactus connues ?",
+      "type": 0,
+      "question": "Quel service d'applications libres a été créé par la Free Software Foundation ?",
       "propositions": [
-        "70",
-        "30",
-        "50",
-        "90",
-        "120",
-        "150"
+        [
+          "F-Droid",
+          ""
+        ],
+        [
+          "Android Market",
+          ""
+        ],
+        [
+          "Appslib",
+          ""
+        ],
+        [
+          "Zeebo",
+          ""
+        ]
       ],
-      "answer": "90",
+      "answer": "F-Droid",
       "difficulty": "Moyen",
-      "anecdote": "En systématique, le genre est un rang taxinomique qui regroupe un ensemble d'espèces ayant en commun des caractères similaires."
+      "anecdote": "Les applications peuvent être installées via l'application F-Droid, mais peuvent également être chargées depuis le site web."
     },
     {
       "id": 75,
-      "question": "Quels cactus ont gardé l'aspect d'arbustes classiques ainsi que leurs vraies feuilles ?",
+      "type": 0,
+      "question": "En France, quelle société a commercialisé le premier mobile sous Android ?",
       "propositions": [
-        "Primitifs",
-        "Épiphytes",
-        "Globuleux",
-        "Colonnaires",
-        "Atypiques",
-        "Sukkulentes"
+        [
+          "Free Mobile",
+          ""
+        ],
+        [
+          "SFR",
+          ""
+        ],
+        [
+          "Orange",
+          ""
+        ],
+        [
+          "Bouygues Telecom",
+          ""
+        ]
       ],
-      "answer": "Primitifs",
+      "answer": "Orange",
       "difficulty": "Moyen",
-      "anecdote": "Pereskia est un genre de cactus des zones tropicales d'Amérique qui a la particularité rare de porter des feuilles apparentes."
+      "anecdote": "Après le HTC Dream, le HTC Magic est arrivé début mai 2009 chez SFR, suivi par le Samsung Galaxy (ou i7500) chez Bouygues."
     },
     {
       "id": 76,
-      "question": "En combien de types morphologiques peuvent être regroupés les cactus ?",
+      "type": 0,
+      "question": "Quel smartphone proposé en octobre 2011, fut le premier fonctionnant sous Android 4 ?",
       "propositions": [
-        "Quatre",
-        "Sept",
-        "Cinq",
-        "Six",
-        "Trois",
-        "Deux"
+        [
+          "Galaxy Nexus",
+          ""
+        ],
+        [
+          "Xperia Play",
+          ""
+        ],
+        [
+          "Moto E",
+          ""
+        ],
+        [
+          "Xiaomi Mi 4",
+          ""
+        ]
       ],
-      "answer": "Cinq",
+      "answer": "Galaxy Nexus",
       "difficulty": "Moyen",
-      "anecdote": "Cactus primitifs, oponces, cactus colonnaires, cactus globuleux et cactus épiphytes à tiges aplaties sont les cinq types morphologiques."
+      "anecdote": "Celui-ci intègre le déverrouillage par reconnaissance faciale, les boutons virtuels et une reconnaissance vocale avancée."
     },
     {
       "id": 77,
-      "question": "Dans quel pays le fait de ramasser des cactus est-il puni de prison ?",
+      "type": 0,
+      "question": "Quelle version d'Android pouvait-on retrouver sur le Nexus 6 de Google ?",
       "propositions": [
-        "Algérie",
-        "Argentine",
-        "Inde",
-        "Mexique",
-        "Australie",
-        "États-Unis"
+        [
+          "KitKat",
+          ""
+        ],
+        [
+          "Honeycomb",
+          ""
+        ],
+        [
+          "Jelly Bean",
+          ""
+        ],
+        [
+          "Lollipop",
+          ""
+        ]
       ],
-      "answer": "Mexique",
+      "answer": "Lollipop",
       "difficulty": "Moyen",
-      "anecdote": "Certains pays ont une attitude contradictoire pour la protection des espèces, mais les extensions urbaines détruisent des sites de cactus."
+      "anecdote": "Les changements les plus importants d'Android 5.0 sont sa disponibilité sur les plateformes Android TV et Android Auto."
     },
     {
       "id": 78,
-      "question": "Pour quel élevage l'Opuntia a-t-il été importé en Australie ?",
+      "type": 0,
+      "question": "En quelle année fut dévoilée la première télévision sous Android ?",
       "propositions": [
-        "Coléoptères",
-        "Cloportes",
-        "Coccinelles",
-        "Cochenilles",
-        "Sauterelles",
-        "Punaises"
+        [
+          "2016",
+          ""
+        ],
+        [
+          "2014",
+          ""
+        ],
+        [
+          "2010",
+          ""
+        ],
+        [
+          "2012",
+          ""
+        ]
       ],
-      "answer": "Cochenilles",
+      "answer": "2010",
       "difficulty": "Moyen",
-      "anecdote": "Philip Miller a attribué le nom d'Opuntia à une plante appelée figuier d'Inde par référence à la ville grecque ancienne d'Oponte."
+      "anecdote": "Scandinavia, développée par l'entreprise suédoise People of Lava, possédait un navigateur Web ainsi qu'un client de messagerie."
     },
     {
       "id": 79,
-      "question": "Quelle technique permet facilement la multiplication des cactus ?",
+      "type": 0,
+      "question": "Quel smartphone Google, équipé d'Android 4.4, fut le premier à supporter la 4G ?",
       "propositions": [
-        "Bouturage",
-        "Marcottage",
-        "Cernage",
-        "Tuteurage",
-        "Greffage",
-        "Marquage"
+        [
+          "Nexus 4",
+          ""
+        ],
+        [
+          "Nexus 6P",
+          ""
+        ],
+        [
+          "Nexus 5X",
+          ""
+        ],
+        [
+          "Nexus 5",
+          ""
+        ]
       ],
-      "answer": "Bouturage",
+      "answer": "Nexus 5",
       "difficulty": "Moyen",
-      "anecdote": "Le bouturage consiste à donner naissance à un nouvel individu à partir d'un organe ou d'un fragment d'organe isolé."
+      "anecdote": "Succédant au Nexus 4, le Nexus 5 est l'un des deux modèles de la gamme Nexus 2013 de Google, avec la tablette Nexus 7."
     },
     {
       "id": 80,
-      "question": "Quelle marque de voiture française propose un modèle baptisé cactus ?",
+      "type": 0,
+      "question": "Comment se nomme la première tablette de Google en partenariat avec Asus ?",
       "propositions": [
-        "Citroën C4",
-        "Nissan Juke",
-        "Peugeot P4",
-        "Audi Q2",
-        "Renault Captur",
-        "Dacia Sandero"
+        [
+          "Nexus 7",
+          ""
+        ],
+        [
+          "Nook 7",
+          ""
+        ],
+        [
+          "Galaxy Tab 7",
+          ""
+        ],
+        [
+          "Xperia 7",
+          ""
+        ]
       ],
-      "answer": "Citroën C4",
+      "answer": "Nexus 7",
       "difficulty": "Moyen",
-      "anecdote": "La C4 Cactus est une berline compacte, initialement typée crossover, présentée le 5 février 2014, date anniversaire d'André Citroën."
+      "anecdote": "Elle coûtait, en 2012, 199 euros TTC dans sa version 16 Go et 249 euros toutes taxes comprises pour la version 32 Go."
     },
     {
       "id": 81,
-      "question": "Quel naturaliste a regroupé en 1753 les 22 espèces connues de cactus ?",
+      "type": 0,
+      "question": "Quel ancien CEO de Danger Inc est aussi le cofondateur du système Android ?",
       "propositions": [
-        "Carl von Linné",
-        "Daniel Rolander",
-        "Olof Celsius",
-        "Erik Acharius",
-        "Alexander von Humboldt",
-        "Charles Darwin"
+        [
+          "Chad Hurley",
+          ""
+        ],
+        [
+          "Andy Rubin",
+          ""
+        ],
+        [
+          "Matt Cutts",
+          ""
+        ],
+        [
+          "John Doerr",
+          ""
+        ]
       ],
-      "answer": "Carl von Linné",
+      "answer": "Andy Rubin",
       "difficulty": "Difficile",
-      "anecdote": "Ce naturaliste suédois, qui a consacré sa vie aux êtres vivants, a fondé les bases du système moderne de la nomenclature binominale."
+      "anecdote": "En mai 2017, la société Essential Products créée par Andy Rubin a annoncé la sortie du smartphone Essential PH-1."
     },
     {
       "id": 82,
-      "question": "Combien d'espèces de cactus ont aujourd'hui un usage médicinal et/ou vétérinaire ?",
+      "type": 0,
+      "question": "Quelle machine virtuelle était incluse jusqu'à la version 4.4 d'Android ?",
       "propositions": [
-        "64",
-        "34",
-        "4",
-        "94",
-        "100",
-        "10"
+        [
+          "Beam",
+          ""
+        ],
+        [
+          "Dalvik",
+          ""
+        ],
+        [
+          "Parrot",
+          ""
+        ],
+        [
+          "Pugs",
+          ""
+        ]
       ],
-      "answer": "64",
+      "answer": "Dalvik",
       "difficulty": "Difficile",
-      "anecdote": "64 % des cactus menacés sont utilisés par l'homme sous l'une de ces formes et 57 % (236 espèces) en l'horticulture."
+      "anecdote": "C'est une machine virtuelle conçue dès le départ pour les appareils mobiles et leurs ressources réduites."
     },
     {
       "id": 83,
-      "question": "En botanique, quel signe distinctif différencie les Cactaceae des autres familles ?",
+      "type": 0,
+      "question": "Quel service indépendant de chez Arkos permet de télécharger des apps Android ?",
       "propositions": [
-        "Radicule",
-        "Aréole",
-        "Lenticelle",
-        "Chalaze",
-        "Épiderme",
-        "Stomate"
+        [
+          "F-Droid",
+          ""
+        ],
+        [
+          "App Store",
+          ""
+        ],
+        [
+          "Galaxy Apps",
+          ""
+        ],
+        [
+          "Appslib",
+          ""
+        ]
       ],
-      "answer": "Aréole",
+      "answer": "Appslib",
       "difficulty": "Difficile",
-      "anecdote": "Les aréoles sont des petites excroissances de la plante à partir desquelles partent en faisceau les épines, les poils et les fleurs."
+      "anecdote": "Appslib permet ainsi à Archos de ne pas remplir les critères de Google autorisant l'intégration de Google Play à un appareil."
     },
     {
       "id": 84,
-      "question": "Quelle est la plus haute espèce de cactus connue à ce jour ?",
+      "type": 0,
+      "question": "Avec quel système la société HP a-t-elle concurrencé Android jusqu'en août 2011 ?",
       "propositions": [
-        "Pachycereus pringlei",
-        "Rhipsalis russellii",
-        "Harrisia fragrans",
-        "Opuntia rufida",
-        "Carnegiea gigantea",
-        "Cereus jamacaru"
+        [
+          "webOS",
+          ""
+        ],
+        [
+          "Symbian",
+          ""
+        ],
+        [
+          "Firefox OS",
+          ""
+        ],
+        [
+          "iOS",
+          ""
+        ]
       ],
-      "answer": "Pachycereus pringlei",
+      "answer": "webOS",
       "difficulty": "Difficile",
-      "anecdote": "Avec un tronc d'un mètre de diamètre, ses fleurs blanches en forme d'entonnoir de 8 cm de long n'apparaissent que chez les adultes."
+      "anecdote": "Depuis 2013, suite à une position quasi dominante de Google, HP utilise aussi Android sur sa gamme de tablettes Slate."
     },
     {
       "id": 85,
-      "question": "Comment appelle-t-on une croissance anormale du sommet d'une tige de cactus ?",
+      "type": 0,
+      "question": "Quel droit faut-il avoir pour installer une version alternative d'Android ?",
       "propositions": [
-        "Sérotinie",
-        "Cristation",
-        "Résupination",
-        "Ostiole",
-        "Fasciation",
-        "Mutation"
+        [
+          "Flac",
+          ""
+        ],
+        [
+          "Root",
+          ""
+        ],
+        [
+          "Next",
+          ""
+        ],
+        [
+          "Join",
+          ""
+        ]
       ],
-      "answer": "Cristation",
+      "answer": "Root",
       "difficulty": "Difficile",
-      "anecdote": "La cristation désigne une forme de tératologie végétale qui consiste en la croissance anormale du sommet d'une tige."
+      "anecdote": "Entraînant généralement un risque de perte de garantie, l'Union européenne a voté des directives protectrices à ce sujet."
     },
     {
       "id": 86,
-      "question": "Quel cactus colonnaire est connu pour contenir de la mescaline ?",
+      "type": 0,
+      "question": "Quelle ROM Android était précédemment connue sous le nom de CyanogenMod ?",
       "propositions": [
-        "Oroya",
-        "Ferocactus",
-        "Parodia",
-        "San Pedro",
-        "Mammillaria",
-        "Echinopsis"
+        [
+          "LineageOS",
+          ""
+        ],
+        [
+          "Oreo",
+          ""
+        ],
+        [
+          "Wear OS",
+          ""
+        ],
+        [
+          "Baidu",
+          ""
+        ]
       ],
-      "answer": "San Pedro",
+      "answer": "LineageOS",
       "difficulty": "Difficile",
-      "anecdote": "Ce cactus colonnaire à croissance rapide, originaire des Andes péruviennes, pousse entre 2 000 et 3 000 m d'altitude."
+      "anecdote": "Compatible avec de nombreux modèles du marché, LineageOS offre une alternative épurée de certaines fonctionnalités malveillantes."
     },
     {
       "id": 87,
-      "question": "Quelle vallée est l'un des plus riches sites de cactus dans le monde ?",
+      "type": 0,
+      "question": "Quel environnement d'exécution a remplacé la machine virtuelle Dalvik ?",
       "propositions": [
-        "Vallée de Joux",
-        "Vallée de Baïgorry",
-        "Vallée de Tehuacan",
-        "Vallée des Usines",
-        "Vallée de la Mort",
-        "Vallée du Rift"
+        [
+          "APK",
+          ""
+        ],
+        [
+          "ALE",
+          ""
+        ],
+        [
+          "AVO",
+          ""
+        ],
+        [
+          "ART",
+          ""
+        ]
       ],
-      "answer": "Vallée de Tehuacan",
+      "answer": "ART",
       "difficulty": "Difficile",
-      "anecdote": "D'autres cactus (notamment les Opuntias) se sont acclimatés sur les autres continents après avoir été introduits par l'homme."
+      "anecdote": "Avec ART, contrairement à la machine virtuelle java, les fichiers .apk ne sont plus lancés directement but décompressés."
     },
     {
       "id": 88,
-      "question": "Quel cactus produit le pitaya, également appelé le fruit du dragon ?",
+      "type": 0,
+      "question": "Quel fut le tout premier téléphone commercialisé sous Android ?",
       "propositions": [
-        "Hylocereus",
-        "San Pedro",
-        "Peyotl",
-        "Cereus",
-        "Opuntia",
-        "Rebutia"
+        [
+          "Sony Arc",
+          ""
+        ],
+        [
+          "HTC G1/Dream",
+          ""
+        ],
+        [
+          "LG G3",
+          ""
+        ],
+        [
+          "Xiaomi Mi",
+          ""
+        ]
       ],
-      "answer": "Hylocereus",
+      "answer": "HTC G1/Dream",
       "difficulty": "Difficile",
-      "anecdote": "La chair du pitaya est comestible et ressemble par sa texture et la présence de petits pépins noirs à celle du kiwi, au goût plus doux."
+      "anecdote": "Produit par la firme Taïwanaise HTC, le HTC G1 fut lancé aux États-Unis sur le réseau T-Mobile le 22 octobre 2008."
     },
     {
       "id": 89,
-      "question": "Quelle est la plus petite espèce de cactus connue à ce jour ?",
+      "type": 0,
+      "question": "Quelle ROM Android, orientée 100 % libre, ne contient aucun paquet propriétaire ?",
       "propositions": [
-        "Aztekium ritteri",
-        "Echinopsis oxygona",
-        "Cereus jamacaru",
-        "Blossfeldia liliputiana",
-        "Mammillaria microcarpa",
-        "Rebutia minuscula"
+        [
+          "OmniROM",
+          ""
+        ],
+        [
+          "Replicant",
+          ""
+        ],
+        [
+          "Timescape",
+          ""
+        ],
+        [
+          "Iconia",
+          ""
+        ]
       ],
-      "answer": "Blossfeldia liliputiana",
+      "answer": "Replicant",
       "difficulty": "Difficile",
-      "anecdote": "Cette espèce de cactus porte le nom du pays légendaire de Liliput, l'appellation liliputana étant parfois utilisée mais non validée."
+      "anecdote": "Soutenu par la Free Software Foundation, le nom Replicant est tiré des androïdes du même nom dans le film « Blade Runner »."
     },
     {
       "id": 90,
-      "question": "Quelle série de BD humoristique est dessinée par Philippe Bercovici ?",
+      "type": 0,
+      "question": "Quelle console de jeu portable fabriquée par Nvidia tourne sous Android ?",
       "propositions": [
-        "Red Cactus",
-        "Cactus Man",
-        "Circus Cactus",
-        "Cactus Club",
-        "Les Femmes en blanc",
-        "L'élève Ducobu"
+        [
+          "Pandora",
+          ""
+        ],
+        [
+          "SupaBoy",
+          ""
+        ],
+        [
+          "Nvidia Shield",
+          ""
+        ],
+        [
+          "Tapwave",
+          ""
+        ]
       ],
-      "answer": "Cactus Club",
+      "answer": "Nvidia Shield",
       "difficulty": "Difficile",
-      "anecdote": "Dans un club de vacances, l'animateur Phil, G.O. en chef, est chargé de s'occuper de tous les caprices de ses clients."
+      "anecdote": "Outre des caractéristiques de premier ordre, un de ses principaux atouts consiste en sa capacité à diffuser les jeux d'un PC."
     }
   ]
 }
