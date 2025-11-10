@@ -28,7 +28,7 @@ import fr.uparis.chenliu.projet.data.entity.UsersEntity
 @Database(entities = [
     UsersEntity::class, SettingsEntity::class, QuizzScienceEntity::class,
     QuizzGastronomieEntity::class, QuizzGeoEntity::class, QuizzNatureEntity::class,
-    QuizzInformatiqueEntity::class, QuizzDessinAnimeEntity::class], version = 7 )
+    QuizzInformatiqueEntity::class, QuizzDessinAnimeEntity::class], version = 8 )
 @TypeConverters(Converter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun usersDao(): UsersDao

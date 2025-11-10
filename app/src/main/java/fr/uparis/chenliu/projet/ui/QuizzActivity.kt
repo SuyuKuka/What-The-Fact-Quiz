@@ -128,10 +128,10 @@ fun Game(
             items(answers.value.propositions) { ans ->
                 Button(
                     onClick = {
-                        answerHistory.add(ans)
+                        answerHistory.add(ans[0])
                         questionHistory.add(question)
                         goodAnswer.add(answers.value.answer)
-                        if (ans == answers.value.answer) { good.show(); ++score.intValue } else { bad.show() }
+                        if (ans[0] == answers.value.answer) { good.show(); ++score.intValue } else { bad.show() }
                         nbQuestion.intValue--
                               },
                     modifier = Modifier
@@ -140,7 +140,7 @@ fun Game(
                         .fillMaxWidth(),
                     shape = RectangleShape
                 ) {
-                    DisplayText(list = font, text = ans, textAlign = TextAlign.Center)
+                    DisplayText(list = font, text = ans[0], textAlign = TextAlign.Center)
                 }
             }
         }
