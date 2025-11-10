@@ -30,7 +30,9 @@
           ""
         ]
       ],
-      "answer": "Flamande",
+      "answer": [
+        "Flamande"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le mot carbonnade est issu du mot charbon car ce plat était mijoté longuement sur les braises de charbon de bois."
     },
@@ -64,7 +66,9 @@
           ""
         ]
       ],
-      "answer": "Craquelin",
+      "answer": [
+        "Craquelin"
+      ],
       "difficulty": "Facile",
       "anecdote": "À Grammont, les craquelins sont en forme d'anneaux et sont distribués lors de la fête du feu et du pain de la fin de l'hiver."
     },
@@ -98,7 +102,9 @@
           ""
         ]
       ],
-      "answer": "Croustillon",
+      "answer": [
+        "Croustillon"
+      ],
       "difficulty": "Facile",
       "anecdote": "Les croustillons sont constitués de petites bouchées de pâte à beignets cuites dans une friture saupoudrées de sucre glace."
     },
@@ -132,7 +138,9 @@
           ""
         ]
       ],
-      "answer": "Fricadelle",
+      "answer": [
+        "Fricadelle"
+      ],
       "difficulty": "Facile",
       "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
@@ -166,7 +174,9 @@
           ""
         ]
       ],
-      "answer": "Gaufre de Liège",
+      "answer": [
+        "Gaufre de Liège"
+      ],
       "difficulty": "Facile",
       "anecdote": "Son origine est concomitante de la mise sur le marché du sucre perlé généré au départ du sucre de betterave de Hesbaye."
     },
@@ -200,7 +210,9 @@
           ""
         ]
       ],
-      "answer": "Mitraillette",
+      "answer": [
+        "Mitraillette"
+      ],
       "difficulty": "Facile",
       "anecdote": "En France, un sandwich similaire est vendu sous le nom d'américain, dans le nord de la France et à la Réunion."
     },
@@ -234,7 +246,9 @@
           ""
         ]
       ],
-      "answer": "Moules-frites",
+      "answer": [
+        "Moules-frites"
+      ],
       "difficulty": "Facile",
       "anecdote": "La portion de moules de un kilogramme par personne est souvent servie à chaque convive dans son récipient de cuisson."
     },
@@ -268,7 +282,9 @@
           ""
         ]
       ],
-      "answer": "Pêche au thon",
+      "answer": [
+        "Pêche au thon"
+      ],
       "difficulty": "Facile",
       "anecdote": "Il se compose d'une pêche, farcie avec un mélange de thon et de mayonnaise, parfois agrémenté d'oignon et d'épices."
     },
@@ -302,7 +318,9 @@
           ""
         ]
       ],
-      "answer": "Chicon-gratin",
+      "answer": [
+        "Chicon-gratin"
+      ],
       "difficulty": "Facile",
       "anecdote": "La dénomination chicon vient du terme utilisé dans le nord de la France et en Belgique pour désigner l'endive."
     },
@@ -336,7 +354,9 @@
           ""
         ]
       ],
-      "answer": "Tarte au riz",
+      "answer": [
+        "Tarte au riz"
+      ],
       "difficulty": "Facile",
       "anecdote": "Dans certaines régions, des boulangers ajoutent du macaron écrasé au riz au lait qui est alors recouvert d'un autre macaron écrasé."
     },
@@ -370,7 +390,9 @@
           ""
         ]
       ],
-      "answer": "À la liégeoise",
+      "answer": [
+        "À la liégeoise"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Cette sauce porte le nom de sauce lapin, qui ne contient pas de lapin, mais tiendrait son nom de madame Géraldine Lapin."
     },
@@ -404,7 +426,9 @@
           ""
         ]
       ],
-      "answer": "Couque de Dinant",
+      "answer": [
+        "Couque de Dinant"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Difficile à manger, la couque de Dinant est probablement un avatar des préparations faites pour les bateliers de la Meuse."
     },
@@ -438,7 +462,9 @@
           ""
         ]
       ],
-      "answer": "Piccalilli",
+      "answer": [
+        "Piccalilli"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le piccalilli belge, appelé aussi pickles, est une sauce à base de légumes, de vinaigre, de sucre et de moutarde."
     },
@@ -472,7 +498,9 @@
           ""
         ]
       ],
-      "answer": "Spéculoos",
+      "answer": [
+        "Spéculoos"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le spéculoos est le plus souvent consommé lors de l'avent et plus particulièrement lors de la fête de saint Nicolas, le 6 décembre."
     },
@@ -506,7 +534,9 @@
           ""
         ]
       ],
-      "answer": "Boudin vert",
+      "answer": [
+        "Boudin vert"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Sa fabrication est jugée chaque année par les mangeurs de boudin vert qui accordent aux meilleurs des labels fort recherchés."
     },
@@ -540,7 +570,9 @@
           ""
         ]
       ],
-      "answer": "Gosette",
+      "answer": [
+        "Gosette"
+      ],
       "difficulty": "Moyen",
       "anecdote": "En Belgique, le chausson aux pommes est fait non pas avec de la pâte feuilletée mais avec de la pâte à tarte."
     },
@@ -574,7 +606,9 @@
           ""
         ]
       ],
-      "answer": "Chou de Bruxelles",
+      "answer": [
+        "Chou de Bruxelles"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le goût amer de ce légume devrait nous alerter sur sa toxicité, mais certaines personnes ne possèdent pas le gène de détection."
     },
@@ -608,7 +642,9 @@
           ""
         ]
       ],
-      "answer": "Cougnou",
+      "answer": [
+        "Cougnou"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Consommé avec un bol de chocolat chaud, ce pain brioché a souvent une forme qui rappelle celle de l'enfant Jésus emmailloté."
     },
@@ -642,7 +678,9 @@
           ""
         ]
       ],
-      "answer": "Oiseau sans tête",
+      "answer": [
+        "Oiseau sans tête"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Sa cuisson aisée, sa saveur et son prix de revient raisonnable en font un mets courant, toutes régions confondues."
     },
@@ -676,7 +714,9 @@
           ""
         ]
       ],
-      "answer": "Sirop de Liège",
+      "answer": [
+        "Sirop de Liège"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Ces siroperies sont principalement centralisées dans le pays de Herve, dans le nord-est de la province de Liège."
     },
@@ -710,7 +750,9 @@
           ""
         ]
       ],
-      "answer": "Waterzooï",
+      "answer": [
+        "Waterzooï"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Dans une version plus évoluée, on ajoute, en fin de cuisson, un demi-verre de bière ou de vin blanc demi-sec et fruité."
     },
@@ -744,7 +786,9 @@
           ""
         ]
       ],
-      "answer": "Baiser",
+      "answer": [
+        "Baiser"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le baiser de Malmedy aurait été inventé au milieu du XIXe siècle par le pâtissier Rodolphe Wiertz, originaire de Hellenthal."
     },
@@ -778,7 +822,9 @@
           ""
         ]
       ],
-      "answer": "Cannibale",
+      "answer": [
+        "Cannibale"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le cannibale est souvent servi sur une assiette garnie de crudités ou de salade, accompagné de sauce Worcestershire."
     },
@@ -812,7 +858,9 @@
           ""
         ]
       ],
-      "answer": "Stoemp",
+      "answer": [
+        "Stoemp"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Il accompagne traditionnellement des boudins poêlés, du lard rôti, des saucisses de campagne ou des oeufs sur le plat."
     },
@@ -846,7 +894,9 @@
           ""
         ]
       ],
-      "answer": "Escavèche",
+      "answer": [
+        "Escavèche"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La recette d'origine est à base d'anguille mais peut aussi se concevoir avec d'autres poissons tels que la truite ou le brochet."
     },
@@ -880,7 +930,9 @@
           ""
         ]
       ],
-      "answer": "Hochepot",
+      "answer": [
+        "Hochepot"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le hochepot était anciennement un mets où entraient de la viande, des châtaignes et des navets cuits avec du bouillon."
     },
@@ -914,7 +966,9 @@
           ""
         ]
       ],
-      "answer": "Rollmops",
+      "answer": [
+        "Rollmops"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Après ouverture de la boîte, les rollmops peuvent être consommés froids, sans les dérouler, ou chauds sur du pain."
     },
@@ -948,7 +1002,9 @@
           ""
         ]
       ],
-      "answer": "Tarte al d'jote",
+      "answer": [
+        "Tarte al d'jote"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Au début du mois de février de chaque année a lieu dans la ville de Nivelles la remise des labels de qualité (étoiles)."
     },
@@ -982,7 +1038,9 @@
           ""
         ]
       ],
-      "answer": "Potjevleesch",
+      "answer": [
+        "Potjevleesch"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le potjevleesch est servi avec des frites qui font fondre la gelée, ou de manière traditionnelle avec des pommes dunkerquoises."
     },
@@ -1016,7 +1074,9 @@
           ""
         ]
       ],
-      "answer": "Tarte à masteilles",
+      "answer": [
+        "Tarte à masteilles"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Les ingrédients principaux sont des pains secs, du sucre, du lait, des oeufs, des macarons et des amandes douces et amères."
     },
@@ -1050,7 +1110,9 @@
           ""
         ]
       ],
-      "answer": "Belle des Champs",
+      "answer": [
+        "Belle des Champs"
+      ],
       "difficulty": "Facile",
       "anecdote": "Ce fromage à pâte molle et à croûte fleurie, à base de lait de chèvre cru, de forme cylindrique, pèse environ deux kilogrammes."
     },
@@ -1084,7 +1146,9 @@
           ""
         ]
       ],
-      "answer": "Babybel",
+      "answer": [
+        "Babybel"
+      ],
       "difficulty": "Facile",
       "anecdote": "La version classique du fromage Babybel est composée de lait de vache (98 %), de sel, de ferments lactiques et de coagulant."
     },
@@ -1118,7 +1182,9 @@
           ""
         ]
       ],
-      "answer": "Boursin",
+      "answer": [
+        "Boursin"
+      ],
       "difficulty": "Facile",
       "anecdote": "Créé par François Boursin, on ajoute aux laits de vache mélangés et pasteurisés de la crème et un mélange d'ail et de fines herbes."
     },
@@ -1152,7 +1218,9 @@
           ""
         ]
       ],
-      "answer": "Le brie",
+      "answer": [
+        "Le brie"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le nom du fromage vient de la région de Brie et de la commune de Meaux en France, remontant probablement à l'époque romaine."
     },
@@ -1186,7 +1254,9 @@
           ""
         ]
       ],
-      "answer": "Le comté",
+      "answer": [
+        "Le comté"
+      ],
       "difficulty": "Facile",
       "anecdote": "Avec une production de 60 000 tonnes par an, il faut environ 450 litres de lait pour produire une meule de comté (fromage AOP)."
     },
@@ -1220,7 +1290,9 @@
           ""
         ]
       ],
-      "answer": "Emmental",
+      "answer": [
+        "Emmental"
+      ],
       "difficulty": "Facile",
       "anecdote": "Produit depuis le Moyen Âge, ce fromage suisse à pâte dure doit son nom à la vallée de l'Emme, située dans le canton de Berne."
     },
@@ -1254,7 +1326,9 @@
           ""
         ]
       ],
-      "answer": "Le gruyère",
+      "answer": [
+        "Le gruyère"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le gruyère fait partie de la même famille que le comté, qui s'appelait à l'origine gruyère de comté ou gruyère franc-comtois."
     },
@@ -1288,7 +1362,9 @@
           ""
         ]
       ],
-      "answer": "Le maroilles",
+      "answer": [
+        "Le maroilles"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le film expose la pratique culinaire qu'auraient les habitants du Nord-Pas-de-Calais de tremper du maroilles dans leur café."
     },
@@ -1322,7 +1398,9 @@
           ""
         ]
       ],
-      "answer": "Le petit-suisse",
+      "answer": [
+        "Le petit-suisse"
+      ],
       "difficulty": "Facile",
       "anecdote": "Frais et crémeux, le petit-suisse sert également dans des plats salés, comme pour farcir les viandes (volaille) ou les recouvrir (lapin)."
     },
@@ -1356,7 +1434,9 @@
           ""
         ]
       ],
-      "answer": "Le Bergues",
+      "answer": [
+        "Le Bergues"
+      ],
       "difficulty": "Facile",
       "anecdote": "La plus ancienne trace de ce fromage à pâte molle se retrouve dans les archives communales de Bergues Saint Winoc, dès 1554."
     },
@@ -1390,7 +1470,9 @@
           ""
         ]
       ],
-      "answer": "Le beaufort",
+      "answer": [
+        "Le beaufort"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le beaufort, bénéficiant d'une AOP, est moulé en forme de meule à talon légèrement concave, avec une base incurvée vers l'intérieur."
     },
@@ -1424,7 +1506,9 @@
           ""
         ]
       ],
-      "answer": "Époisses",
+      "answer": [
+        "Époisses"
+      ],
       "difficulty": "Moyen",
       "anecdote": "L'époisses est un fromage français renommé, apprécié par Napoléon Bonaparte pour sa saveur puissante et son odeur prononcée."
     },
@@ -1458,7 +1542,9 @@
           ""
         ]
       ],
-      "answer": "La Mimolette vieille",
+      "answer": [
+        "La Mimolette vieille"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Selon la légende, le fromage aurait été inspiré par les fromages néerlandais, auquel on a donné la spécificité de la croûte orange."
     },
@@ -1492,7 +1578,9 @@
           ""
         ]
       ],
-      "answer": "Reblochon",
+      "answer": [
+        "Reblochon"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Jadis, les vaches étaient traitent une deuxième fois après passage leur chez le seigneur, pour ne pas payer d'impôts sur cette traite."
     },
@@ -1526,7 +1614,9 @@
           ""
         ]
       ],
-      "answer": "Roquefort",
+      "answer": [
+        "Roquefort"
+      ],
       "difficulty": "Moyen",
       "anecdote": "De réputation internationale, le roquefort à pâte persillée est associé à l'excellence de l'agriculture française et à sa gastronomie."
     },
@@ -1560,7 +1650,9 @@
           ""
         ]
       ],
-      "answer": "Saint-nectaire",
+      "answer": [
+        "Saint-nectaire"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Fromage paysan, fabriqué bien souvent par les femmes, le saint-nectaire fut appelé fromage de seigle jusqu'au milieu du XVIIe siècle."
     },
@@ -1594,7 +1686,9 @@
           ""
         ]
       ],
-      "answer": "Le dauphin",
+      "answer": [
+        "Le dauphin"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Aujourd'hui, les agriculteurs emploient majoritairement des formes carrées, rectangulaires ou en losange pour des raisons de coûts."
     },
@@ -1628,7 +1722,9 @@
           ""
         ]
       ],
-      "answer": "Figou",
+      "answer": [
+        "Figou"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Fabriqué par les éleveurs de chèvres, ce fromage ancien tire son nom du mot figue, en référence à sa forme et à la tradition locale."
     },
@@ -1662,7 +1758,9 @@
           ""
         ]
       ],
-      "answer": "Le saint-marcellin",
+      "answer": [
+        "Le saint-marcellin"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Ce petit fromage à base de lait de vache est réalisé avec le lait provenant de 274 communes de l'Isère, de la Drôme et du Rhône."
     },
@@ -1696,7 +1794,9 @@
           ""
         ]
       ],
-      "answer": "La tomme de Savoie",
+      "answer": [
+        "La tomme de Savoie"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La Tomme était fabriquée avec du lait de vache partiellement écrémé, non utilisé pour la production de fromages plus précieux."
     },
@@ -1730,7 +1830,9 @@
           ""
         ]
       ],
-      "answer": "Beaufort",
+      "answer": [
+        "Beaufort"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Autrefois, le beaufort représentait une production importante, mais il a payé un lourd tribut à l'exode rural et à son coût de production."
     },
@@ -1764,7 +1866,9 @@
           ""
         ]
       ],
-      "answer": "Brillat-savarin",
+      "answer": [
+        "Brillat-savarin"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le brillat-savarin est un fromage triple-crème au fort taux de matières grasses, doux au palais, qui se mange jeune et bien frais."
     },
@@ -1798,7 +1902,9 @@
           ""
         ]
       ],
-      "answer": "Le coulommiers",
+      "answer": [
+        "Le coulommiers"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le Coulommiers est un fromage à pâte molle et croûte fleurie, typique de la Brie, plus crémeux et plus doux que le Camembert."
     },
@@ -1832,7 +1938,9 @@
           ""
         ]
       ],
-      "answer": "Le livarot",
+      "answer": [
+        "Le livarot"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Ces bandelettes, qui servaient à la bonne tenue du fromage lors de l'affinage, sont à l'origine du surnom de colonel du fromage."
     },
@@ -1866,7 +1974,9 @@
           ""
         ]
       ],
-      "answer": "Morbier",
+      "answer": [
+        "Morbier"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Morbier est une appellation d'origine désignant un fromage de lait cru de vache, fabriqué dans le massif du Jura en France."
     },
@@ -1900,7 +2010,9 @@
           ""
         ]
       ],
-      "answer": "Le laguiole",
+      "answer": [
+        "Le laguiole"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le Laguiole est un fromage également associé au célèbre couteau Laguiole, une lame traditionnelle qui a vu le jour dans la région."
     },
@@ -1934,7 +2046,9 @@
           ""
         ]
       ],
-      "answer": "400",
+      "answer": [
+        "400"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Il existe trois types de Cantal, chacun ayant des caractéristiques distinctes selon le temps d'affinage : jeune, entre-deux et vieux."
     },
@@ -1968,7 +2082,9 @@
           ""
         ]
       ],
-      "answer": "Le munster",
+      "answer": [
+        "Le munster"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La recette du munster aurait été laissée aux Vosgiens et aux moines cisterciens du IXe siècle par un moine irlandais de passage."
     },
@@ -2002,7 +2118,9 @@
           ""
         ]
       ],
-      "answer": "Le barousse",
+      "answer": [
+        "Le barousse"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Pendant les deux premières semaines d'affinage, le Barousse est lavé, essuyé et retourné tous les jours pour renforcer ses arômes."
     },
@@ -2036,7 +2154,9 @@
           ""
         ]
       ],
-      "answer": "Le Curé nantais",
+      "answer": [
+        "Le Curé nantais"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La recette du fromage aurait été transmise au XIXe siècle à Saint-Julien-de-Concelles dans le vignoble nantais par un curé de passage."
     },
@@ -2070,7 +2190,9 @@
           ""
         ]
       ],
-      "answer": "Mascarpone",
+      "answer": [
+        "Mascarpone"
+      ],
       "difficulty": "Facile",
       "anecdote": "Originaire de la région de Lombardie, le mascarpone est fabriqué à partir de crème, ce qui lui confère une texture douce et veloutée."
     },
@@ -2104,7 +2226,9 @@
           ""
         ]
       ],
-      "answer": "Pomme",
+      "answer": [
+        "Pomme"
+      ],
       "difficulty": "Facile",
       "anecdote": "Cette tarte renversée aurait été inventée à la fin du XIXe siècle par deux soeurs, Caroline et Stéphanie Tatin, hôtelières en Sologne."
     },
@@ -2138,7 +2262,9 @@
           ""
         ]
       ],
-      "answer": "Bûche de Noël",
+      "answer": [
+        "Bûche de Noël"
+      ],
       "difficulty": "Facile",
       "anecdote": "Au Moyen Âge, on avait l'habitude de brûler une véritable bûche de bois dans la cheminée pour symboliser la chaleur et la lumière."
     },
@@ -2172,7 +2298,9 @@
           ""
         ]
       ],
-      "answer": "Royaume-Uni",
+      "answer": [
+        "Royaume-Uni"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le terme plum (prune en anglais) faisait autrefois référence à tous les fruits secs ou sucrés, comme les raisins secs ou les groseilles."
     },
@@ -2206,7 +2334,9 @@
           ""
         ]
       ],
-      "answer": "Parfait",
+      "answer": [
+        "Parfait"
+      ],
       "difficulty": "Facile",
       "anecdote": "À l'origine, les parfaits étaient des desserts créés à base de crème glacée et de fruits, souvent servis dans des coupes élégantes."
     },
@@ -2240,7 +2370,9 @@
           ""
         ]
       ],
-      "answer": "Quatre-quarts",
+      "answer": [
+        "Quatre-quarts"
+      ],
       "difficulty": "Facile",
       "anecdote": "Ce gâteau a l'avantage d'être facile à réaliser avec des ingrédients de base que l'on trouve dans presque toutes les cuisines."
     },
@@ -2274,7 +2406,9 @@
           ""
         ]
       ],
-      "answer": "Moka",
+      "answer": [
+        "Moka"
+      ],
       "difficulty": "Facile",
       "anecdote": "La génoise, inventée vers le début du XVIIIe siècle, est un biscuit à pâte battue qui entre dans la composition de nombreux entremets."
     },
@@ -2308,7 +2442,9 @@
           ""
         ]
       ],
-      "answer": "Pièce montée",
+      "answer": [
+        "Pièce montée"
+      ],
       "difficulty": "Facile",
       "anecdote": "L'un des moments mémorables d'un mariage est la première coupe du gâteau, un acte symbolique accompagné de rires et de photos."
     },
@@ -2342,7 +2478,9 @@
           ""
         ]
       ],
-      "answer": "Cerises",
+      "answer": [
+        "Cerises"
+      ],
       "difficulty": "Facile",
       "anecdote": "Pour rester fidèle à la tradition, il est préférable d'utiliser des cerises non dénoyautées, car les noyaux apportent une légère amertume."
     },
@@ -2376,7 +2514,9 @@
           ""
         ]
       ],
-      "answer": "Rhum",
+      "answer": [
+        "Rhum"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le baba au rhum est un gâteau préparé pour les principales fêtes religieuses (Noël ou Pâques), depuis des temps immémoriaux."
     },
@@ -2410,7 +2550,9 @@
           ""
         ]
       ],
-      "answer": "Fraise",
+      "answer": [
+        "Fraise"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le choix de la fraise comme troisième parfum a été influencé par l'idée de l'équilibre des saveurs, en ajoutant une note fruitée."
     },
@@ -2444,7 +2586,9 @@
           ""
         ]
       ],
-      "answer": "Panna cotta",
+      "answer": [
+        "Panna cotta"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La panna cotta illustre l'art de la pâtisserie italienne : une combinaison d'ingrédients simples liés à une technique subtile."
     },
@@ -2478,7 +2622,9 @@
           ""
         ]
       ],
-      "answer": "Vodka",
+      "answer": [
+        "Vodka"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le nom de ce cocktail proviendrait du fait qu'il était particulièrement populaire parmi les officiers militaires russes au XXe siècle."
     },
@@ -2512,7 +2658,9 @@
           ""
         ]
       ],
-      "answer": "Serviteur",
+      "answer": [
+        "Serviteur"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le serviteur permet de présenter des gâteaux d'anniversaire, des cupcakes ou des pâtisseries de manière élégante et spectaculaire."
     },
@@ -2546,7 +2694,9 @@
           ""
         ]
       ],
-      "answer": "Brioche",
+      "answer": [
+        "Brioche"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La brioche, comme le boudin, a une texture douce et aérée, résultat de l'action de la levure qui fait lever la pâte dans le four."
     },
@@ -2580,7 +2730,9 @@
           ""
         ]
       ],
-      "answer": "Crème anglaise",
+      "answer": [
+        "Crème anglaise"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le contraste entre la douceur de la crème anglaise et la légèreté des blancs en neige fait de l'île flottante un célèbre incontournable."
     },
@@ -2614,7 +2766,9 @@
           ""
         ]
       ],
-      "answer": "Frangipane",
+      "answer": [
+        "Frangipane"
+      ],
       "difficulty": "Moyen",
       "anecdote": "L'emploi de la fève dans la galette des Rois remonte aux Grecs, qui se servaient de fèves pour l'élection de leurs magistrats."
     },
@@ -2648,7 +2802,9 @@
           ""
         ]
       ],
-      "answer": "Pomme",
+      "answer": [
+        "Pomme"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Traditionnellement, il est souvent servi avec une cuillerée de crème fouettée ou de la glace à la vanille pour encore plus de douceur."
     },
@@ -2682,7 +2838,9 @@
           ""
         ]
       ],
-      "answer": "Kouign-amann",
+      "answer": [
+        "Kouign-amann"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Apprécié en Bretagne, sa préparation est toutefois réputée délicate, comme en témoigne ce dicton : « Le fait qui veut, le réussit qui peut »."
     },
@@ -2716,7 +2874,9 @@
           ""
         ]
       ],
-      "answer": "Bretzel",
+      "answer": [
+        "Bretzel"
+      ],
       "difficulty": "Moyen",
       "anecdote": "En forme de huit, ce pain torsadé et doré est une spécialité alsacienne, généralement saupoudrée de sel et parfois de cumin."
     },
@@ -2750,7 +2910,9 @@
           ""
         ]
       ],
-      "answer": "Provence",
+      "answer": [
+        "Provence"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Les desserts peuvent être bus avec du vin cuit ou du vin muscat, tandis qu'à la fin apparaissent toutes les liqueurs maisons."
     },
@@ -2784,7 +2946,9 @@
           ""
         ]
       ],
-      "answer": "Noix de coco",
+      "answer": [
+        "Noix de coco"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Ce petit biscuit, généralement cuit en forme de dôme, est fait principalement de blancs d'oeufs, de sucre et de noix de coco râpée."
     },
@@ -2818,7 +2982,9 @@
           ""
         ]
       ],
-      "answer": "Brillat-Savarin",
+      "answer": [
+        "Brillat-Savarin"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Brillat-Savarin était un gastronome et écrivain français, connu pour son ouvrage « La Physiologie du goût », publié en 1825."
     },
@@ -2852,7 +3018,9 @@
           ""
         ]
       ],
-      "answer": "Meringue",
+      "answer": [
+        "Meringue"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La meringue italienne est préparée avec un sirop de sucre chaud, ce qui lui donne une texture stable et lisse, idéale pour les macarons."
     },
@@ -2886,7 +3054,9 @@
           ""
         ]
       ],
-      "answer": "Bâton de Jacob",
+      "answer": [
+        "Bâton de Jacob"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le nom pourrait faire référence à un ancien symbole religieux ou une ancienne recette qui serait passée de génération en génération."
     },
@@ -2920,7 +3090,9 @@
           ""
         ]
       ],
-      "answer": "Commercy",
+      "answer": [
+        "Commercy"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La madeleine aurait été inventée au XVIIIe siècle par une servante nommée Madeleine pour Stanislas Leszczynski, duc de Lorraine."
     },
@@ -2954,7 +3126,9 @@
           ""
         ]
       ],
-      "answer": "Aux mirabelles",
+      "answer": [
+        "Aux mirabelles"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La tarte aux mirabelles se prépare aussi bien avec une pâte brisée que feuilletée, parfois avec une légère crème d'amande en dessous."
     },
@@ -2988,7 +3162,9 @@
           ""
         ]
       ],
-      "answer": "Pet de nonne",
+      "answer": [
+        "Pet de nonne"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le pet de nonne fait partie de la famille des chouquettes et des profiteroles, qui sont tous des exemples de pâte à choux."
     },
@@ -3022,7 +3198,9 @@
           ""
         ]
       ],
-      "answer": "Poire Belle-Hélène",
+      "answer": [
+        "Poire Belle-Hélène"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Ce dessert à base de poires pochées dans un sirop est nappé de chocolat chaud accompagné d'une glace à la vanille."
     },
@@ -3056,7 +3234,9 @@
           ""
         ]
       ],
-      "answer": "Bordeaux",
+      "answer": [
+        "Bordeaux"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La légende veut que les cannelés soient nés lors du débarquement des bateaux de farine sur les quais de Bordeaux."
     }

@@ -1,9 +1,10 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.R.attr.data
-import android.R.attr.font
 import android.app.Application
-import android.util.Log
+import android.util.Log.i
+import androidx.compose.runtime.MutableIntState
+import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
@@ -14,26 +15,206 @@ import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.launch
+import kotlin.math.abs
 
 class QuizzViewModel(application: Application): AndroidViewModel(application) {
+
+    data class AnswerSummary(
+        var propositions: List<List<String>>,
+        var answer: List<String>
+    )
+
+    data class Data(    // les info récupéré depuis la db
+        val question : MutableList<String>,
+        val answers: MutableList<AnswerSummary>,
+        val type : MutableIntState
+    )
+
+    data class GameData(    // les info pendant la partie
+        val answerHistory : MutableList<String>,
+        val goodAnswer : MutableList<String>,
+        val questionHistory : MutableList<String>,
+        val nbQuestion : MutableIntState,
+    )
+
     private val db = AppDatabase.getInstance(application)
     private var user = mutableStateOf<UsersEntity?>(null)
     private var settings = mutableStateOf<SettingsEntity?>(null)
 
+    // autour de la partie
     val energy = mutableIntStateOf(0)
     val subscription = mutableStateOf(false)
-
     val font = mutableIntStateOf(0)
+    val score = mutableDoubleStateOf(0.0)
 
+
+    // loading des quiz
     var question = mutableListOf<String>()
     val answers = mutableListOf<AnswerSummary>()
     val type = mutableIntStateOf(-1)
+
+    val answerHistory = mutableListOf<String>()
+    val goodAnswer = mutableListOf<String>()
+    val questionHistory = mutableListOf<String>()
+    val nbQuestion = mutableIntStateOf(10)
+
     val loading = mutableStateOf(true)
 
-    data class AnswerSummary(
-        var propositions: List<List<String>>,
-        var answer: String
-    )
+
+
+    fun getQuestionAndAnswer(subject: String, difficulty: String) {
+        viewModelScope.launch {
+            question.clear()
+            answers.clear()
+            when (subject) {
+                "Science" -> { fetchScienceData(difficulty); return@launch }
+                "Gastronomie" -> { fetchGastronomieData(difficulty); return@launch }
+                "Géographie" -> { fetchGeographieData(difficulty); return@launch }
+                "Nature" -> { fetchNatureData(difficulty); return@launch }
+                "Dessin anime" -> { fetchDessinAnimeData(difficulty); return@launch }
+                "Informatique" -> { fetchInformatiqueData(difficulty); return@launch }
+            }
+        }
+    }
+    suspend fun fetchScienceData(difficulty: String) {
+        // on fetch les data
+        val currentDao = db.quizzScienceDao()
+        val allQuestion = currentDao.getQuestion(difficulty)
+        for (i in 0..allQuestion.size-1) {
+            // question
+            question.add(allQuestion[i].question)
+            // type
+            type.intValue = allQuestion[i].type
+            // responses
+            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)    // pas simplifiable ya le currentdao
+            val currentPropositions = shuffle(currentAnswer)
+            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+        }
+        loading.value = false
+    }
+    suspend fun fetchGastronomieData(difficulty: String) {
+        val currentDao = db.quizzGastronomieDao()
+        val allQuestion = currentDao.getQuestion(difficulty)
+        for (i in 0..allQuestion.size-1) {
+            // question
+            question.add(allQuestion[i].question)
+            // type
+            type.intValue = allQuestion[i].type
+            // responses
+            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+            val currentPropositions = shuffle(currentAnswer)
+            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+        }
+        loading.value = false
+    }
+    suspend fun fetchGeographieData(difficulty: String) {
+        val currentDao = db.quizzGeoDao()
+        val allQuestion = currentDao.getQuestion(difficulty)
+        for (i in 0..allQuestion.size-1) {
+            // question
+            question.add(allQuestion[i].question)
+            // type
+            type.intValue = allQuestion[i].type
+            // responses
+            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+            val currentPropositions = shuffle(currentAnswer)
+            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+        }
+        loading.value = false
+    }
+    suspend fun fetchNatureData(difficulty: String) {
+        val currentDao = db.quizzNatureDao()
+        val allQuestion = currentDao.getQuestion(difficulty)
+        for (i in 0..allQuestion.size-1) {
+            // question
+            question.add(allQuestion[i].question)
+            // type
+            type.intValue = allQuestion[i].type
+            // responses
+            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+            val currentPropositions = shuffle(currentAnswer)
+            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+        }
+        loading.value = false
+    }
+    suspend fun fetchDessinAnimeData(difficulty: String) {
+        val currentDao = db.quizzDessinAnimeDao()
+        val allQuestion = currentDao.getQuestion(difficulty)
+        for (i in 0..allQuestion.size-1) {
+            // question
+            question.add(allQuestion[i].question)
+            // type
+            type.intValue = allQuestion[i].type
+            // responses
+            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+            val currentPropositions =
+                if (type.intValue == 0) {
+                    shuffle(currentAnswer)
+                } else {
+                    currentAnswer.propositions
+                }
+            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+        }
+        loading.value = false
+    }
+    suspend fun fetchInformatiqueData(difficulty: String) {
+        val currentDao = db.quizzInformatiqueDao()
+        val allQuestion = currentDao.getQuestion(difficulty)
+        for (i in 0..allQuestion.size-1) {
+            // question
+            question.add(allQuestion[i].question)
+            // type
+            type.intValue = allQuestion[i].type
+            // responses
+            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+            val currentPropositions = shuffle(currentAnswer)
+            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+        }
+        loading.value = false
+    }
+
+    // permet de rendre les propositions aléatoire
+    fun shuffle(value: AnswerSummary): List<List<String>> {
+        var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
+        var shuffling = true
+        while (shuffling) {
+            randomPropositions = value.propositions.shuffled().take(4)
+            for (p in randomPropositions) {
+                if (p[0] == value.answer[0]) {
+                    shuffling = false   // answer fait partie des proposition
+                }
+            }// si ya pas la réponse parmis les propositions
+        }
+        return randomPropositions.shuffled()
+    }
+
+    // todo: améliorer
+    fun calcScore(text: String, aim: String): Double {
+        if (abs(aim.toInt() - text.toInt()) <= 1) {
+            return 0.5
+        }
+        return 0.0
+    }
+
+    fun updateGame(ans: List<String>, index: Int): Int {
+        var i = index
+        answerHistory.add(ans[0]) // add le text pos 0 -> text ; pos 1 -> lien
+        questionHistory.add(question[i])
+        goodAnswer.add(answers[i].answer[0])
+        if (ans[0] == answers[i].answer[0]) { ++score.doubleValue }
+        nbQuestion.intValue--
+        if (i == 9) { i == 0 } else { i++ }
+        return i
+    }
+    fun resetStats(gameData: GameData) {
+        removeEnergy()
+        gameData.nbQuestion.intValue = 10
+        score.doubleValue = 0.0
+        gameData.answerHistory.clear()
+        gameData.questionHistory.clear()
+        gameData.goodAnswer.clear()
+        loading.value = true
+    }
 
     fun init() {
         viewModelScope.launch {
@@ -44,125 +225,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             settings.value = db.settingsDao().getSetting()
             font.intValue = settings.value!!.font
         }
-    }
-
-    fun getUsers() {
-        viewModelScope.launch {
-            user.value = db.usersDao().getUser()
-            energy.intValue = user.value!!.energy
-            subscription.value = user.value!!.subscribe
-        }
-    }
-
-    fun getQuestionAndAnswer(subject: String, difficulty: String) {
-        viewModelScope.launch {
-            question.clear()
-            answers.clear()
-            when (subject) {
-                "Science" -> {
-                    // on fetch les data
-                    val currentDao = db.quizzScienceDao()
-                    val allQuestion = currentDao.getQuestion(difficulty)
-                    for (i in 0..9) {
-                        // question
-                        question.add(allQuestion[i].question)
-                        // responses
-                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)    // pas simplifiable ya le currentdao
-                        val currentPropositions = shuffle(currentAnswer)
-                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-                    }
-                    Log.d("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", question.size.toString())
-                    loading.value = false
-                    return@launch
-                }
-                "Gastronomie" -> {
-                    val currentDao = db.quizzGastronomieDao()
-                    val allQuestion = currentDao.getQuestion(difficulty)
-                    for (i in 0..9) {
-                        // question
-                        question.add(allQuestion[i].question)
-                        // responses
-                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-                        val currentPropositions = shuffle(currentAnswer)
-                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-                    }
-                    loading.value = false
-                    return@launch
-                }
-                "Géographie" -> {
-                    val currentDao = db.quizzGeoDao()
-                    val allQuestion = currentDao.getQuestion(difficulty)
-                    for (i in 0..9) {
-                        // question
-                        question.add(allQuestion[i].question)
-                        // responses
-                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-                        val currentPropositions = shuffle(currentAnswer)
-                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-                    }
-                    loading.value = false
-                    return@launch
-                }
-                "Nature" -> {
-                    val currentDao = db.quizzNatureDao()
-                    val allQuestion = currentDao.getQuestion(difficulty)
-                    for (i in 0..9) {
-                        // question
-                        question.add(allQuestion[i].question)
-                        // responses
-                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-                        val currentPropositions = shuffle(currentAnswer)
-                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-                    }
-                    loading.value = false
-                    return@launch
-                }
-                "Dessin anime" -> {
-                    val currentDao = db.quizzDessinAnimeDao()
-                    val allQuestion = currentDao.getQuestion(difficulty)
-                    for (i in 0..9) {
-                        // question
-                        question.add(allQuestion[i].question)
-                        // responses
-                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-                        val currentPropositions = shuffle(currentAnswer)
-                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-                    }
-                    loading.value = false
-                    return@launch
-                }
-                "Informatique" -> {
-                    val currentDao = db.quizzInformatiqueDao()
-                    val allQuestion = currentDao.getQuestion(difficulty)
-                    for (i in 0..9) {
-                        // question
-                        question.add(allQuestion[i].question)
-                        // responses
-                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-                        val currentPropositions = shuffle(currentAnswer)
-                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-                    }
-                    loading.value = false
-                    return@launch
-                }
-                else -> db.quizzScienceDao()
-            }
-        }
-    }
-
-    // permet de rendre les propositions aléatoire
-    fun shuffle(value: AnswerSummary): List<List<String>> {
-        var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
-        var shuffling = true
-        while (shuffling) {
-            for (p in randomPropositions) {
-                if (p[0] == value.answer) {
-                    shuffling = false   // answer fait partie des proposition
-                }
-            }// si ya pas la réponse parmis les propositions
-            randomPropositions = value.propositions.shuffled().take(4)
-        }
-        return randomPropositions.shuffled()
     }
 
     fun removeEnergy() {
@@ -186,6 +248,14 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                 }
                 getUsers()
             }
+        }
+    }
+
+    fun getUsers() {
+        viewModelScope.launch {
+            user.value = db.usersDao().getUser()
+            energy.intValue = user.value!!.energy
+            subscription.value = user.value!!.subscribe
         }
     }
 

@@ -30,7 +30,9 @@
           ""
         ]
       ],
-      "answer": "Ponte Vecchio",
+      "answer": [
+        "Ponte Vecchio"
+      ],
       "difficulty": "Facile",
       "anecdote": "Haut lieu de la joaillerie..."
     },
@@ -64,7 +66,9 @@
           ""
         ]
       ],
-      "answer": "Mer Noire",
+      "answer": [
+        "Mer Noire"
+      ],
       "difficulty": "Facile",
       "anecdote": "L'adjectif correspondant..."
     },
@@ -98,7 +102,9 @@
           ""
         ]
       ],
-      "answer": "70 %",
+      "answer": [
+        "70 %"
+      ],
       "difficulty": "Facile",
       "anecdote": "Sur Terre, l'océan Mondial..."
     },
@@ -132,7 +138,9 @@
           ""
         ]
       ],
-      "answer": "Mexicaine",
+      "answer": [
+        "Mexicaine"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le Yucatan s'étend..."
     },
@@ -166,7 +174,9 @@
           ""
         ]
       ],
-      "answer": "Amazone",
+      "answer": [
+        "Amazone"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le fleuve prend sa source..."
     },
@@ -200,7 +210,9 @@
           ""
         ]
       ],
-      "answer": "Porto",
+      "answer": [
+        "Porto"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le porto est un vin muté..."
     },
@@ -234,7 +246,9 @@
           ""
         ]
       ],
-      "answer": "Viaduc de Millau",
+      "answer": [
+        "Viaduc de Millau"
+      ],
       "difficulty": "Facile",
       "anecdote": "Maillon de l'autoroute A75..."
     },
@@ -268,7 +282,9 @@
           ""
         ]
       ],
-      "answer": "Finistère",
+      "answer": [
+        "Finistère"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le Finistère, situé..."
     },
@@ -302,7 +318,9 @@
           ""
         ]
       ],
-      "answer": "Fleuve",
+      "answer": [
+        "Fleuve"
+      ],
       "difficulty": "Facile",
       "anecdote": "Les trois plus longs fleuves..."
     },
@@ -336,7 +354,9 @@
           ""
         ]
       ],
-      "answer": "Rhodes",
+      "answer": [
+        "Rhodes"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le colosse de Rhodes..."
     },
@@ -370,7 +390,9 @@
           ""
         ]
       ],
-      "answer": "Tanzanie",
+      "answer": [
+        "Tanzanie"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le nom de Zanzibar..."
     },
@@ -404,7 +426,9 @@
           ""
         ]
       ],
-      "answer": "Californie",
+      "answer": [
+        "Californie"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La chaîne offre..."
     },
@@ -438,7 +462,9 @@
           ""
         ]
       ],
-      "answer": "Île de Bréhat",
+      "answer": [
+        "Île de Bréhat"
+      ],
       "difficulty": "Moyen",
       "anecdote": "L'île possède..."
     },
@@ -472,7 +498,9 @@
           ""
         ]
       ],
-      "answer": "Guyane",
+      "answer": [
+        "Guyane"
+      ],
       "difficulty": "Moyen",
       "anecdote": "C'est le seul territoire..."
     },
@@ -506,7 +534,9 @@
           ""
         ]
       ],
-      "answer": "Russie",
+      "answer": [
+        "Russie"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Au cours des siècles..."
     },
@@ -540,7 +570,9 @@
           ""
         ]
       ],
-      "answer": "Etna",
+      "answer": [
+        "Etna"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Il est le plus haut volcan..."
     },
@@ -574,7 +606,9 @@
           ""
         ]
       ],
-      "answer": "Sicile",
+      "answer": [
+        "Sicile"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La Sicile est également..."
     },
@@ -608,7 +642,9 @@
           ""
         ]
       ],
-      "answer": "Syrie",
+      "answer": [
+        "Syrie"
+      ],
       "difficulty": "Moyen",
       "anecdote": "L'Iran est un pays..."
     },
@@ -642,7 +678,9 @@
           ""
         ]
       ],
-      "answer": "Asie",
+      "answer": [
+        "Asie"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Long de 4 354 kilomètres..."
     },
@@ -676,7 +714,9 @@
           ""
         ]
       ],
-      "answer": "Mékong",
+      "answer": [
+        "Mékong"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le fleuve est utilisé..."
     },
@@ -710,7 +750,9 @@
           ""
         ]
       ],
-      "answer": "Belfast",
+      "answer": [
+        "Belfast"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Belfast a été un centre..."
     },
@@ -744,7 +786,9 @@
           ""
         ]
       ],
-      "answer": "Détroit",
+      "answer": [
+        "Détroit"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Aujourd'hui au patrimoine..."
     },
@@ -778,7 +822,9 @@
           ""
         ]
       ],
-      "answer": "Algarve",
+      "answer": [
+        "Algarve"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le trafic 2007..."
     },
@@ -812,7 +858,9 @@
           ""
         ]
       ],
-      "answer": "Australie",
+      "answer": [
+        "Australie"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le grand désert Victoria..."
     },
@@ -846,7 +894,9 @@
           ""
         ]
       ],
-      "answer": "Mascaret",
+      "answer": [
+        "Mascaret"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Ce phénomène de brusque..."
     },
@@ -880,7 +930,9 @@
           ""
         ]
       ],
-      "answer": "Galapagos",
+      "answer": [
+        "Galapagos"
+      ],
       "difficulty": "Difficile",
       "anecdote": "L'archipel des îles..."
     },
@@ -914,7 +966,9 @@
           ""
         ]
       ],
-      "answer": "Tage",
+      "answer": [
+        "Tage"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Lisbonne est située..."
     },
@@ -948,7 +1002,9 @@
           ""
         ]
       ],
-      "answer": "Saint-Petersbourg",
+      "answer": [
+        "Saint-Petersbourg"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Saint-Petersbourg est située..."
     },
@@ -982,7 +1038,9 @@
           ""
         ]
       ],
-      "answer": "Galice",
+      "answer": [
+        "Galice"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le pèlerinage..."
     },
@@ -1016,7 +1074,9 @@
           ""
         ]
       ],
-      "answer": "Corse",
+      "answer": [
+        "Corse"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Capitale de l'ancienne province..."
     },
@@ -1050,7 +1110,9 @@
           ""
         ]
       ],
-      "answer": "Lyon",
+      "answer": [
+        "Lyon"
+      ],
       "difficulty": "Facile",
       "anecdote": "Lyon est en situation de carrefour géographique, au nord du couloir naturel de la vallée du Rhône."
     },
@@ -1084,7 +1146,9 @@
           ""
         ]
       ],
-      "answer": "Athènes",
+      "answer": [
+        "Athènes"
+      ],
       "difficulty": "Facile",
       "anecdote": "Athènes est l'une des plus anciennes villes au monde, avec une présence humaine attestée dès le Néolithique."
     },
@@ -1118,7 +1182,9 @@
           ""
         ]
       ],
-      "answer": "Agen",
+      "answer": [
+        "Agen"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le nom d'Agen est associé au pruneau, dont la zone de production principale est essentiellement située en Lot-et-Garonne."
     },
@@ -1152,7 +1218,9 @@
           ""
         ]
       ],
-      "answer": "Rouge",
+      "answer": [
+        "Rouge"
+      ],
       "difficulty": "Facile",
       "anecdote": "Ville touristique européenne par excellence, Londres fut fondée il y a presque 2 000 ans par les Romains sous le nom de Londinium."
     },
@@ -1186,7 +1254,9 @@
           ""
         ]
       ],
-      "answer": "La Havane",
+      "answer": [
+        "La Havane"
+      ],
       "difficulty": "Facile",
       "anecdote": "L'emplacement actuel de la ville de La Havane se situe sur la côte nord de l'île de Cuba et dans la partie ouest de celle-ci."
     },
@@ -1220,7 +1290,9 @@
           ""
         ]
       ],
-      "answer": "Thaïlande",
+      "answer": [
+        "Thaïlande"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le boom économique asiatique des années 1980-1990 a amené de nombreuses multinationales à rapidement s'installer à Bangkok."
     },
@@ -1254,7 +1326,9 @@
           ""
         ]
       ],
-      "answer": "Brazzaville",
+      "answer": [
+        "Brazzaville"
+      ],
       "difficulty": "Facile",
       "anecdote": "La ville de Brazzaville a été fondée le 3 octobre 1880 à l'emplacement des anciens bourgs précoloniaux de Nkuna."
     },
@@ -1288,7 +1362,9 @@
           ""
         ]
       ],
-      "answer": "Pékin",
+      "answer": [
+        "Pékin"
+      ],
       "difficulty": "Facile",
       "anecdote": "Située à proximité de la Grande Muraille, Pékin abrite des monuments célèbres comme la Cité interdite et le Temple du ciel."
     },
@@ -1322,7 +1398,9 @@
           ""
         ]
       ],
-      "answer": "Madrid",
+      "answer": [
+        "Madrid"
+      ],
       "difficulty": "Facile",
       "anecdote": "Située en plein coeur du royaume d'Espagne, Madrid est la capitale mais aussi la ville la plus peuplée de la Communauté de Madrid."
     },
@@ -1356,7 +1434,9 @@
           ""
         ]
       ],
-      "answer": "Inde",
+      "answer": [
+        "Inde"
+      ],
       "difficulty": "Facile",
       "anecdote": "Calcutta est connue pour avoir abrité la fondation de la congrégation religieuse des Missionnaires de la Charité par Mère Teresa."
     },
@@ -1390,7 +1470,9 @@
           ""
         ]
       ],
-      "answer": "Le Caire",
+      "answer": [
+        "Le Caire"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Avec ses seize millions d'habitants, Le Caire est la plus grande ville du Moyen-Orient et la seconde ville d'Afrique derrière Lagos."
     },
@@ -1424,7 +1506,9 @@
           ""
         ]
       ],
-      "answer": "Inde",
+      "answer": [
+        "Inde"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Bombay forme une agglomération de plus de 18 millions d'habitants."
     },
@@ -1458,7 +1542,9 @@
           ""
         ]
       ],
-      "answer": "Rio de Janeiro",
+      "answer": [
+        "Rio de Janeiro"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le Christ Rédempteur domine la ville depuis le mont du Corcovado."
     },
@@ -1492,7 +1578,9 @@
           ""
         ]
       ],
-      "answer": "La Haye",
+      "answer": [
+        "La Haye"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La Haye abrite la Cour internationale de justice et la Cour pénale internationale."
     },
@@ -1526,7 +1614,9 @@
           ""
         ]
       ],
-      "answer": "Une seule",
+      "answer": [
+        "Une seule"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La commune de Paris comptait plus de deux millions d'habitants en 2012."
     },
@@ -1560,7 +1650,9 @@
           ""
         ]
       ],
-      "answer": "Libye",
+      "answer": [
+        "Libye"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Tripoli est la plus grande ville et le principal port du pays."
     },
@@ -1594,7 +1686,9 @@
           ""
         ]
       ],
-      "answer": "Le Caire",
+      "answer": [
+        "Le Caire"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La place Tahrir a été l'emblème de la révolution égyptienne de 2011."
     },
@@ -1628,7 +1722,9 @@
           ""
         ]
       ],
-      "answer": "Adriatique",
+      "answer": [
+        "Adriatique"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Venise s'étend sur 118 îles reliées par des ponts."
     },
@@ -1662,7 +1758,9 @@
           ""
         ]
       ],
-      "answer": "New York",
+      "answer": [
+        "New York"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Les taxis jaunes de New York sont parmi les plus célèbres au monde."
     },
@@ -1696,7 +1794,9 @@
           ""
         ]
       ],
-      "answer": "Katmandou",
+      "answer": [
+        "Katmandou"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Katmandou ne possède pas de réseau souterrain de canalisations."
     },
@@ -1730,7 +1830,9 @@
           ""
         ]
       ],
-      "answer": "Lac",
+      "answer": [
+        "Lac"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Chicago est un grand centre industriel des États-Unis."
     },
@@ -1764,7 +1866,9 @@
           ""
         ]
       ],
-      "answer": "Chinoise",
+      "answer": [
+        "Chinoise"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le climat de Taïwan est tropical au sud et subtropical au nord."
     },
@@ -1798,7 +1902,9 @@
           ""
         ]
       ],
-      "answer": "20 millions",
+      "answer": [
+        "20 millions"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Mexico est une des plus grandes aires urbaines du monde."
     },
@@ -1832,7 +1938,9 @@
           ""
         ]
       ],
-      "answer": "Catalogne",
+      "answer": [
+        "Catalogne"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Barcelone est la deuxième ville d'Espagne en population."
     },
@@ -1866,7 +1974,9 @@
           ""
         ]
       ],
-      "answer": "Casbah",
+      "answer": [
+        "Casbah"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La Casbah d'Alger remonte à l'Antiquité."
     },
@@ -1900,7 +2010,9 @@
           ""
         ]
       ],
-      "answer": "Birmanie",
+      "answer": [
+        "Birmanie"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Rangoun signifie « fin de la discorde »."
     },
@@ -1934,7 +2046,9 @@
           ""
         ]
       ],
-      "answer": "Norvège",
+      "answer": [
+        "Norvège"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Hammerfest est parfois décrite comme la ville la plus septentrionale du monde."
     },
@@ -1968,7 +2082,9 @@
           ""
         ]
       ],
-      "answer": "Monrovia",
+      "answer": [
+        "Monrovia"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Monrovia assure l’essentiel des exportations de minerai de fer."
     },
@@ -2002,7 +2118,9 @@
           ""
         ]
       ],
-      "answer": "Algérie",
+      "answer": [
+        "Algérie"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Constantine est surnommée la ville des ponts suspendus."
     },
@@ -2036,7 +2154,9 @@
           ""
         ]
       ],
-      "answer": "Peak Tram",
+      "answer": [
+        "Peak Tram"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le funiculaire offre une des plus belles vues sur les gratte-ciels de Hong Kong."
     },
@@ -2070,7 +2190,9 @@
           ""
         ]
       ],
-      "answer": "Corrèze",
+      "answer": [
+        "Corrèze"
+      ],
       "difficulty": "Facile",
       "anecdote": "Située à l'ouest du Massif central, la Corrèze se compose de la Montagne, des plateaux et du bassin de Brive."
     },
@@ -2104,7 +2226,9 @@
           ""
         ]
       ],
-      "answer": "Yvelines",
+      "answer": [
+        "Yvelines"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le château de Versailles accueille le Parlement lorsqu'il se réunit en Congrès pour adopter une révision de la Constitution."
     },
@@ -2138,7 +2262,9 @@
           ""
         ]
       ],
-      "answer": "Héraultais",
+      "answer": [
+        "Héraultais"
+      ],
       "difficulty": "Facile",
       "anecdote": "Georges Brassens (Sète), Boby Lapointe (Pézenas), Émilie Simon (Montpellier), Juliette Gréco (Montpellier) étaient héraultais."
     },
@@ -2172,7 +2298,9 @@
           ""
         ]
       ],
-      "answer": "Pas-de-Calais",
+      "answer": [
+        "Pas-de-Calais"
+      ],
       "difficulty": "Facile",
       "anecdote": "Bien que réunis, ces deux territoires restent encore aujourd'hui assez différents culturellement et économiquement."
     },
@@ -2206,7 +2334,9 @@
           ""
         ]
       ],
-      "answer": "Paris-Orly",
+      "answer": [
+        "Paris-Orly"
+      ],
       "difficulty": "Facile",
       "anecdote": "Plaque tournante importante du transport aérien, l'aéroport brasse un trafic d'environ 30 millions de passagers chaque année."
     },
@@ -2240,7 +2370,9 @@
           ""
         ]
       ],
-      "answer": "Gard",
+      "answer": [
+        "Gard"
+      ],
       "difficulty": "Facile",
       "anecdote": "La rivière, navigable en canoë-kayak sur environ 70 km, est franchie par le pont du Gard, pont-aqueduc romain du Ier siècle."
     },
@@ -2274,7 +2406,9 @@
           ""
         ]
       ],
-      "answer": "Morbihan",
+      "answer": [
+        "Morbihan"
+      ],
       "difficulty": "Facile",
       "anecdote": "Il correspond pour l'essentiel au royaume, devenu comté puis baillie de Broërec et plus anciennement à la cité des Vénètes."
     },
@@ -2308,7 +2442,9 @@
           ""
         ]
       ],
-      "answer": "Loir-et-Cher",
+      "answer": [
+        "Loir-et-Cher"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le département de Loir-et-Cher est connu en France notamment grâce à la chanson de Michel Delpech écrite en 1977."
     },
@@ -2342,7 +2478,9 @@
           ""
         ]
       ],
-      "answer": "Finistère",
+      "answer": [
+        "Finistère"
+      ],
       "difficulty": "Facile",
       "anecdote": "Premier département côtier de France, le Finistère compte 117 communes littorales sur 282 et près d'un quart du littoral français."
     },
@@ -2376,7 +2514,9 @@
           ""
         ]
       ],
-      "answer": "Nord",
+      "answer": [
+        "Nord"
+      ],
       "difficulty": "Facile",
       "anecdote": "Plusieurs chansons parlent du Nord, l'une des plus connues est probablement « Les Corons » de Pierre Bachelet."
     },
@@ -2410,7 +2550,9 @@
           ""
         ]
       ],
-      "answer": "Calvados",
+      "answer": [
+        "Calvados"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Ses étroites maisons en ardoises se reflétant dans le bassin en font la principale attraction touristique d'Honfleur."
     },
@@ -2444,7 +2586,9 @@
           ""
         ]
       ],
-      "answer": "Vosges",
+      "answer": [
+        "Vosges"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Connue d'abord pour son imagerie, fondée en 1796 par Pellerin, la ville l'est également pour son château et sa basilique."
     },
@@ -2478,7 +2622,9 @@
           ""
         ]
       ],
-      "answer": "Dordogne",
+      "answer": [
+        "Dordogne"
+      ],
       "difficulty": "Moyen",
       "anecdote": "On y trouve Feuillus, conifères, prairies, collines, vallons, vallées, vignes, truffières, falaises, cours d'eau, gorges et grottes."
     },
@@ -2512,7 +2658,9 @@
           ""
         ]
       ],
-      "answer": "Gironde",
+      "answer": [
+        "Gironde"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Long de 75 kilomètres et large de 12 kilomètres à son embouchure, l'estuaire de la Gironde est le plus grand estuaire d'Europe."
     },
@@ -2546,7 +2694,9 @@
           ""
         ]
       ],
-      "answer": "Sarthe",
+      "answer": [
+        "Sarthe"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Sa campagne fut mise en question par des révélations de la presse, puis des poursuites l'impliquant avec son épouse, Penelope."
     },
@@ -2580,7 +2730,9 @@
           ""
         ]
       ],
-      "answer": "Sarthe",
+      "answer": [
+        "Sarthe"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La compétition, initiée en 1923 et se déroulant chaque année au mois de juin, attire un peu plus de 240 000 spectateurs."
     },
@@ -2614,7 +2766,9 @@
           ""
         ]
       ],
-      "answer": "Jura",
+      "answer": [
+        "Jura"
+      ],
       "difficulty": "Moyen",
       "anecdote": "On trouve également dans le Jura des vins singuliers comme les vins liquoreux que sont le macvin ou le vin de paille."
     },
@@ -2648,7 +2802,9 @@
           ""
         ]
       ],
-      "answer": "Moselle",
+      "answer": [
+        "Moselle"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Au niveau européen, la Moselle fait partie de la Grande Région et de l'Eurodistrict SaarMoselle (pour une partie du département)."
     },
@@ -2682,7 +2838,9 @@
           ""
         ]
       ],
-      "answer": "Savoie",
+      "answer": [
+        "Savoie"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La grande majorité des massifs de la Savoie sont des massifs alpins, auxquels s'ajoute la partie la plus méridionale du Jura."
     },
@@ -2716,7 +2874,9 @@
           ""
         ]
       ],
-      "answer": "Vaucluse",
+      "answer": [
+        "Vaucluse"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Surnommé le mont Chauve, le mont Ventoux est le point culminant des monts de Vaucluse et le plus haut sommet de Vaucluse."
     },
@@ -2750,7 +2910,9 @@
           ""
         ]
       ],
-      "answer": "Charente",
+      "answer": [
+        "Charente"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le département tire son nom du fleuve qui, à l'époque gallo-romaine, était connu sous le nom grec de Kanentelos."
     },
@@ -2784,7 +2946,9 @@
           ""
         ]
       ],
-      "answer": "Manche",
+      "answer": [
+        "Manche"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le chanteur Allain Leprest, originaire de Lestre, est resté fidèle à son département et à sa mer d'origine qu'il a chantés."
     },
@@ -2818,7 +2982,9 @@
           ""
         ]
       ],
-      "answer": "Aude",
+      "answer": [
+        "Aude"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Se déroulant dans la ville de Limoux, sur la place de la République, c'est l'un des plus longs carnavals du monde."
     },
@@ -2852,7 +3018,9 @@
           ""
         ]
       ],
-      "answer": "Amiens",
+      "answer": [
+        "Amiens"
+      ],
       "difficulty": "Difficile",
       "anecdote": "On distingue deux grandes zones riches en sites touristiques : la côte picarde et Abbeville, l'Amiénois et la Haute Somme."
     },
@@ -2886,7 +3054,9 @@
           ""
         ]
       ],
-      "answer": "Creuse",
+      "answer": [
+        "Creuse"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La Creuse est limitrophe des départements de la Corrèze, de la Haute-Vienne, de l'Allier, du Puy-de-Dôme, du Cher et de l'Indre."
     },
@@ -2920,7 +3090,9 @@
           ""
         ]
       ],
-      "answer": "Lozère",
+      "answer": [
+        "Lozère"
+      ],
       "difficulty": "Difficile",
       "anecdote": "C'est le seul département français métropolitain dans lequel toutes les rivières qui s'écoulent prennent également leur source."
     },
@@ -2954,7 +3126,9 @@
           ""
         ]
       ],
-      "answer": "Grandval",
+      "answer": [
+        "Grandval"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La scène du contrôle de la Feldgendarmerie sur le barrage du film « La Grande Vadrouille » y a été tournée en 1966."
     },
@@ -2988,7 +3162,9 @@
           ""
         ]
       ],
-      "answer": "Deux-Sèvres",
+      "answer": [
+        "Deux-Sèvres"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Comparé à la densité de la France métropolitaine, le département des Deux-Sèvres apparaît comme moyennement peuplé."
     },
@@ -3022,7 +3198,9 @@
           ""
         ]
       ],
-      "answer": "Aisne",
+      "answer": [
+        "Aisne"
+      ],
       "difficulty": "Difficile",
       "anecdote": "L'Aisne a perdu un peu de sa population dans la seconde moitié du XIXe siècle, en raison de l'exode rural, pourtant limité."
     },
@@ -3056,7 +3234,9 @@
           ""
         ]
       ],
-      "answer": "Landes",
+      "answer": [
+        "Landes"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Les Landes sont également réputées culinairement au travers du foie gras, des magrets, des poulets et des vins AOC Tursan."
     }

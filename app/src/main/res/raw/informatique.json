@@ -22,7 +22,9 @@
           ""
         ]
       ],
-      "answer": "PIN",
+      "answer": [
+        "PIN"
+      ],
       "difficulty": "Facile",
       "anecdote": "Ce code, souvent à quatre chiffres, est destiné à authentifier le titulaire d'une carte bancaire, d'une carte SIM ou d'une carte à puce."
     },
@@ -48,7 +50,9 @@
           ""
         ]
       ],
-      "answer": "IBM Simon",
+      "answer": [
+        "IBM Simon"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le premier smartphone de l'histoire a été présenté le 16 novembre 1992 au au COMDEX de Las Vegas (Nevada), ancêtre du CES."
     },
@@ -74,7 +78,9 @@
           ""
         ]
       ],
-      "answer": "1994",
+      "answer": [
+        "1994"
+      ],
       "difficulty": "Facile",
       "anecdote": "En plus des fonctions de téléphonie cellulaire, l'IBM Simon était capable d'envoyer et recevoir des fax et faisait office de pager."
     },
@@ -100,7 +106,9 @@
           ""
         ]
       ],
-      "answer": "Google",
+      "answer": [
+        "Google"
+      ],
       "difficulty": "Facile",
       "anecdote": "Android est le système d'exploitation mobile le plus utilisé dans le monde, devant iOS d'Apple, avec plus de 80 % de parts de marché."
     },
@@ -126,7 +134,9 @@
           ""
         ]
       ],
-      "answer": "EDGE",
+      "answer": [
+        "EDGE"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le développement du produit a commencé en 2005 et s'est poursuivi dans le plus grand secret jusqu'à son dévoilement public."
     },
@@ -152,7 +162,9 @@
           ""
         ]
       ],
-      "answer": "2018",
+      "answer": [
+        "2018"
+      ],
       "difficulty": "Facile",
       "anecdote": "Les adolescents ayant grandi durant les deux premières décennies du XXIe siècle ont bénéficié de l'influence des NTIC."
     },
@@ -178,7 +190,9 @@
           ""
         ]
       ],
-      "answer": "Smombie",
+      "answer": [
+        "Smombie"
+      ],
       "difficulty": "Facile",
       "anecdote": "Selon une étude menée en 2014, 17 % des piétons de grandes villes auraient un comportement à risque avec leur smartphone."
     },
@@ -204,7 +218,9 @@
           ""
         ]
       ],
-      "answer": "France Telecom",
+      "answer": [
+        "France Telecom"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le 1er octobre 1991, France Telecom a débuté à Strasbourg une expérience-pilote de téléphonie sans-fil grand-public, en ville."
     },
@@ -230,7 +246,9 @@
           ""
         ]
       ],
-      "answer": "MMS",
+      "answer": [
+        "MMS"
+      ],
       "difficulty": "Facile",
       "anecdote": "Il étend les capacités des SMS, permettant de transmettre des photos, des enregistrements audio ainsi que de la vidéo."
     },
@@ -256,7 +274,9 @@
           ""
         ]
       ],
-      "answer": "Zone blanche",
+      "answer": [
+        "Zone blanche"
+      ],
       "difficulty": "Facile",
       "anecdote": "Il s'agit souvent des zones les moins densément peuplées (typiquement les zones rurales), sans réel intérêt d'investissement."
     },
@@ -282,7 +302,9 @@
           ""
         ]
       ],
-      "answer": "Itinérance",
+      "answer": [
+        "Itinérance"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le roaming et le handover sont deux caractéristiques fondamentales des réseaux mobile de types GSM, UMTS, LTE ou 5G."
     },
@@ -308,7 +330,9 @@
           ""
         ]
       ],
-      "answer": "WAP",
+      "answer": [
+        "WAP"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Il redéfinit le protocole HTTP, l'HTML et le JavaScript pour les adapter au monde des périphériques ayant un écran de taille réduite."
     },
@@ -334,7 +358,9 @@
           ""
         ]
       ],
-      "answer": "MVNO",
+      "answer": [
+        "MVNO"
+      ],
       "difficulty": "Moyen",
       "anecdote": "En général, un MVNO représente une société indépendante de l'opérateur, ce qui lui permet de fixer ses tarifs propres."
     },
@@ -360,7 +386,9 @@
           ""
         ]
       ],
-      "answer": "SFR",
+      "answer": [
+        "SFR"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La Société Française du Radiotéléphone est une branche regroupant les activités télécoms du groupe luxembourgeois Altice France."
     },
@@ -386,7 +414,9 @@
           ""
         ]
       ],
-      "answer": "Écran",
+      "answer": [
+        "Écran"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Les smartphones modernes ont des écrans assez impressionnants : plus ils emballent de pixels, plus ils consomment de puissance."
     },
@@ -412,7 +442,9 @@
           ""
         ]
       ],
-      "answer": "2024",
+      "answer": [
+        "2024"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La directive sur le chargeur unique, qui a largement fait parler d'elle, a en effet été publiée au Journal officiel européen en 2023."
     },
@@ -438,7 +470,9 @@
           ""
         ]
       ],
-      "answer": "Chine",
+      "answer": [
+        "Chine"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La Chine a contribué à 67 % de la production mondiale en 2021, les autres pays n'ayant pas compensé le déclin d'Huawei."
     },
@@ -464,7 +498,9 @@
           ""
         ]
       ],
-      "answer": "Short",
+      "answer": [
+        "Short"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Dans certaines régions du monde comme l'Amérique du Nord, le Royaume-Uni ou les Philippines, on parle de messagerie texte."
     },
@@ -490,7 +526,9 @@
           ""
         ]
       ],
-      "answer": "Service",
+      "answer": [
+        "Service"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Il étend les capacités des SMS, permettant de transmettre des photos, des enregistrements audio ainsi que de la vidéo."
     },
@@ -516,7 +554,9 @@
           ""
         ]
       ],
-      "answer": "85 %",
+      "answer": [
+        "85 %"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Une batterie d'accumulateurs permet de stocker l'énergie électrique sous forme chimique et de la restituer en courant continu."
     },
@@ -542,7 +582,9 @@
           ""
         ]
       ],
-      "answer": "AMPS",
+      "answer": [
+        "AMPS"
+      ],
       "difficulty": "Difficile",
       "anecdote": "AMPS est un sigle informatique, néologisme basé sur LAMP, reprenant les premières lettres de Apache, MySQL, PHP et Solaris."
     },
@@ -568,7 +610,9 @@
           ""
         ]
       ],
-      "answer": "LTE",
+      "answer": [
+        "LTE"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La norme LTE, définie par le consortium 3GPP, a d'abord été considérée comme une norme de troisième génération 3.9G."
     },
@@ -594,7 +638,9 @@
           ""
         ]
       ],
-      "answer": "Flash",
+      "answer": [
+        "Flash"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La téléphonie cellulaire est un moyen de télécommunication, plus précisément de radiocommunication, par téléphone mobile."
     },
@@ -620,7 +666,9 @@
           ""
         ]
       ],
-      "answer": "ROM",
+      "answer": [
+        "ROM"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Originellement, l'expression mémoire morte (en anglais, Read-Only Memory : ROM) désignait une mémoire informatique non volatile."
     },
@@ -646,7 +694,9 @@
           ""
         ]
       ],
-      "answer": "FlexPai",
+      "answer": [
+        "FlexPai"
+      ],
       "difficulty": "Difficile",
       "anecdote": "On attendait Samsung, et c'est finalement Royole qui a grillé la politesse à tout le monde, fabricant chinois de dalles flexibles."
     },
@@ -672,7 +722,9 @@
           ""
         ]
       ],
-      "answer": "2018",
+      "answer": [
+        "2018"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le jeu est en effet disponible sur iOS et Android gratuitement depuis mars 2018 sous le titre « PlayerUnknown's Battlegrounds Mobile »."
     },
@@ -698,7 +750,9 @@
           ""
         ]
       ],
-      "answer": "2012",
+      "answer": [
+        "2012"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Ce jeu vidéo mobile de stratégie en temps réel massivement multijoueur est développé et édité par le studio finlandais Supercell."
     },
@@ -724,7 +778,9 @@
           ""
         ]
       ],
-      "answer": "2012",
+      "answer": [
+        "2012"
+      ],
       "difficulty": "Difficile",
       "anecdote": "« Candy Crush Saga » est préinstallé sur les appareils dotés de base de Windows 10, au même titre que « Solitaire » et « Démineur »."
     },
@@ -750,7 +806,9 @@
           ""
         ]
       ],
-      "answer": "2010",
+      "answer": [
+        "2010"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Développé par Halfbrick Studios, « Fruit Ninja » fait partie du kit de démarrage iOS et Xbox 360 (également adapté pour Kinect)."
     },
@@ -776,7 +834,9 @@
           ""
         ]
       ],
-      "answer": "2010",
+      "answer": [
+        "2010"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La version mobile de « 8 Ball Pool » est gérée par Miniclip, une société de jeux basée en Suisse, au Portugal, en Italie et en Angleterre."
     },
@@ -802,7 +862,9 @@
           ""
         ]
       ],
-      "answer": "Java",
+      "answer": [
+        "Java"
+      ],
       "difficulty": "Facile",
       "anecdote": "Un logiciel écrit en Java a pour particularité d'être compilé vers un code intermédiaire qui peut être exécutée dans une VM."
     },
@@ -828,7 +890,9 @@
           ""
         ]
       ],
-      "answer": "Python",
+      "answer": [
+        "Python"
+      ],
       "difficulty": "Facile",
       "anecdote": "Python est placé sous une licence libre proche de la licence BSD et fonctionne sur la plupart des plateformes informatiques."
     },
@@ -854,7 +918,9 @@
           ""
         ]
       ],
-      "answer": "PHP",
+      "answer": [
+        "PHP"
+      ],
       "difficulty": "Facile",
       "anecdote": "PHP est considéré comme une des bases de la création de sites web dits dynamiques mais également des applications web."
     },
@@ -880,7 +946,9 @@
           ""
         ]
       ],
-      "answer": "Bootstrap",
+      "answer": [
+        "Bootstrap"
+      ],
       "difficulty": "Facile",
       "anecdote": "Avant l'arrivée de Bootstrap, plusieurs bibliothèques existaient, ce qui menait à des incohérences et à un coût de maintenance élevé."
     },
@@ -906,7 +974,9 @@
           ""
         ]
       ],
-      "answer": "C++",
+      "answer": [
+        "C++"
+      ],
       "difficulty": "Facile",
       "anecdote": "L'encapsulation permet de faire abstraction du fonctionnement interne d'une classe et de ne se préoccuper que des services rendus."
     },
@@ -932,7 +1002,9 @@
           ""
         ]
       ],
-      "answer": "Bug",
+      "answer": [
+        "Bug"
+      ],
       "difficulty": "Facile",
       "anecdote": "La gravité du dysfonctionnement peut aller de bénigne à majeure, tels un plantage du système pouvant entraîner de graves accidents."
     },
@@ -958,7 +1030,9 @@
           ""
         ]
       ],
-      "answer": "C",
+      "answer": [
+        "C"
+      ],
       "difficulty": "Facile",
       "anecdote": "Inventé au début des années 1970 pour réécrire Unix, C est devenu un des langages les plus utilisés, encore de nos jours."
     },
@@ -984,7 +1058,9 @@
           ""
         ]
       ],
-      "answer": "Hello world",
+      "answer": [
+        "Hello world"
+      ],
       "difficulty": "Facile",
       "anecdote": "C'est souvent le programme le plus simple qu'on essaie de faire fonctionner en apprenant un nouveau langage de programmation."
     },
@@ -1010,7 +1086,9 @@
           ""
         ]
       ],
-      "answer": "Delphi",
+      "answer": [
+        "Delphi"
+      ],
       "difficulty": "Facile",
       "anecdote": "Delphi est apparu comme une alternative viable pour de nombreux développeurs qui souhaitaient programmer sous Windows."
     },
@@ -1036,7 +1114,9 @@
           ""
         ]
       ],
-      "answer": "Ruby",
+      "answer": [
+        "Ruby"
+      ],
       "difficulty": "Facile",
       "anecdote": "Frustré par son expérience en développement Smalltalk et Lisp, Yukihiro Matsumoto a commencé à créer Ruby en 1993 sous Emacs."
     },
@@ -1062,7 +1142,9 @@
           ""
         ]
       ],
-      "answer": "Perl",
+      "answer": [
+        "Perl"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Ce langage s'inspire des structures de contrôle et d'impression du langage C, mais aussi de langages de scripts sed, awk et shell (sh)."
     },
@@ -1088,7 +1170,9 @@
           ""
         ]
       ],
-      "answer": "React",
+      "answer": [
+        "React"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La bibliothèque se démarque de ses concurrents par sa flexibilité et ses performances, en travaillant avec un DOM virtuel."
     },
@@ -1114,7 +1198,9 @@
           ""
         ]
       ],
-      "answer": "Visual Basic",
+      "answer": [
+        "Visual Basic"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Dans une étude conduite en 2005, 62 % des développeurs interrogés auraient déclaré utiliser l'une ou l'autre forme de Visual Basic."
     },
@@ -1140,7 +1226,9 @@
           ""
         ]
       ],
-      "answer": "Assembleur",
+      "answer": [
+        "Assembleur"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Les combinaisons de bits du langage machine sont représentées par des symboles dits mnémoniques, c'est-à-dire faciles à retenir."
     },
@@ -1166,7 +1254,9 @@
           ""
         ]
       ],
-      "answer": "Ada",
+      "answer": [
+        "Ada"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Augusta Ada King, comtesse de Lovelace, née à Londres le 10 décembre 1815, est une pionnière de la science informatique."
     },
@@ -1192,7 +1282,9 @@
           ""
         ]
       ],
-      "answer": "WinDev",
+      "answer": [
+        "WinDev"
+      ],
       "difficulty": "Moyen",
       "anecdote": "WebDev et WinDev Mobile utilisent le WLangage et les mêmes concepts pour la génération de sites Web et d'applications mobiles."
     },
@@ -1218,7 +1310,9 @@
           ""
         ]
       ],
-      "answer": "Apple",
+      "answer": [
+        "Apple"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Jugé plus simple et plus concis que l'Objective-C, Swift a été bien accueilli par les développeurs habitués aux technologies d'Apple."
     },
@@ -1244,7 +1338,9 @@
           ""
         ]
       ],
-      "answer": "Git",
+      "answer": [
+        "Git"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Depuis les années 2010, il s'agit du logiciel de gestion de versions le plus populaire dans le développement logiciel et web."
     },
@@ -1270,7 +1366,9 @@
           ""
         ]
       ],
-      "answer": "RPG",
+      "answer": [
+        "RPG"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Destiné aux entreprises et laboratoires, le langage RPG est né en 1959 et se pratiquait sur les systèmes 3 ou sur IBM/360 (1965)."
     },
@@ -1296,7 +1394,9 @@
           ""
         ]
       ],
-      "answer": "Routine",
+      "answer": [
+        "Routine"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Les routines permettent de structurer la programmation d'un problème en décomposant le programme en portions de code."
     },
@@ -1322,7 +1422,9 @@
           ""
         ]
       ],
-      "answer": "Visual Basic",
+      "answer": [
+        "Visual Basic"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Dans une étude conduite en 2005, 62 % des développeurs interrogés auraient déclaré utiliser l'une ou l'autre forme de Visual Basic."
     },
@@ -1348,7 +1450,9 @@
           ""
         ]
       ],
-      "answer": "Fork",
+      "answer": [
+        "Fork"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Les forks sont courants dans les logiciels libres, dont les licences permettent l'utilisation, la modification et la redistribution du code."
     },
@@ -1374,7 +1478,9 @@
           ""
         ]
       ],
-      "answer": "Fortran",
+      "answer": [
+        "Fortran"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Quickstart Fortran permet d'installer facilement Fortran sous Microsoft Windows, sans nécessiter les droits d'administration."
     },
@@ -1400,7 +1506,9 @@
           ""
         ]
       ],
-      "answer": "JavaScript",
+      "answer": [
+        "JavaScript"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le langage a été créé en dix jours en mai 1995 pour le compte de la Netscape Communications Corporation par Brendan Eich."
     },
@@ -1426,7 +1534,9 @@
           ""
         ]
       ],
-      "answer": "Scala",
+      "answer": [
+        "Scala"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Il concilie ainsi ces deux paradigmes opposés et offre au développeur la possibilité de choisir le paradigme le plus approprié."
     },
@@ -1452,7 +1562,9 @@
           ""
         ]
       ],
-      "answer": "Go",
+      "answer": [
+        "Go"
+      ],
       "difficulty": "Difficile",
       "anecdote": "En raison de sa simplicité, il est concevable de l'utiliser aussi bien pour écrire des applications, des scripts ou de grands systèmes."
     },
@@ -1478,7 +1590,9 @@
           ""
         ]
       ],
-      "answer": "Commit",
+      "answer": [
+        "Commit"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le terme anglais fait référence à la commande éponyme présente dans la plupart des systèmes de gestion de base de données."
     },
@@ -1504,7 +1618,9 @@
           ""
         ]
       ],
-      "answer": "Kotlin",
+      "answer": [
+        "Kotlin"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Kotlin est devenu officiellement en 2019 le langage de programmation voulu et recommandé par le géant américain Google."
     },
@@ -1530,7 +1646,9 @@
           ""
         ]
       ],
-      "answer": "Flutter",
+      "answer": [
+        "Flutter"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Flutter génère des applications pour Android, iOS, Linux, Mac, Windows, Google Fuchsia et le web à partir d'une base de code."
     },
@@ -1556,7 +1674,9 @@
           ""
         ]
       ],
-      "answer": "NeXTSTEP",
+      "answer": [
+        "NeXTSTEP"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Objective-C est beaucoup utilisé sur Macintosh, notamment pour les API Cocoa de Mac OS X et, plus récemment pour les iPhone."
     },
@@ -1582,7 +1702,9 @@
           ""
         ]
       ],
-      "answer": "Linux",
+      "answer": [
+        "Linux"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le noyau Linux est un logiciel libre développé essentiellement en langage C par des milliers de bénévoles sur Internet."
     },
@@ -1608,7 +1730,9 @@
           ""
         ]
       ],
-      "answer": "Google",
+      "answer": [
+        "Google"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le système d'exploitation Android fut lancé en juin 2007 à la suite du rachat par Google en 2005 de la startup du même nom."
     },
@@ -1634,7 +1758,9 @@
           ""
         ]
       ],
-      "answer": "Bugdroid",
+      "answer": [
+        "Bugdroid"
+      ],
       "difficulty": "Facile",
       "anecdote": "Bugdroid, le logo d'Android, serait en fait un personnage d'un jeu des années 1990 sur Atari : « Gauntlet: The Third Encounter »."
     },
@@ -1660,7 +1786,9 @@
           ""
         ]
       ],
-      "answer": "Google Play",
+      "answer": [
+        "Google Play"
+      ],
       "difficulty": "Facile",
       "anecdote": "Bien que non inclus dans les sources d'Android, Google Play joue un rôle essentiel pour la popularité d'Android."
     },
@@ -1686,7 +1814,9 @@
           ""
         ]
       ],
-      "answer": "Internet",
+      "answer": [
+        "Internet"
+      ],
       "difficulty": "Facile",
       "anecdote": "Android AOSP (code source) comporte de nombreuses applications incorporées : Téléphone, Contacts, E-Mail, Agenda, ..."
     },
@@ -1712,7 +1842,9 @@
           ""
         ]
       ],
-      "answer": "MicroSD",
+      "answer": [
+        "MicroSD"
+      ],
       "difficulty": "Facile",
       "anecdote": "Cette possibilité repose sur les permissions et paramètres contenus dans le fichier manifeste de l'application qui l'autorise."
     },
@@ -1738,7 +1870,9 @@
           ""
         ]
       ],
-      "answer": "Nexus One",
+      "answer": [
+        "Nexus One"
+      ],
       "difficulty": "Facile",
       "anecdote": "Ses ventes ne furent pas exceptionnelles avec seulement environ 20 000 exemplaires vendus la semaine de sa sortie."
     },
@@ -1764,7 +1898,9 @@
           ""
         ]
       ],
-      "answer": "Galaxy Tab",
+      "answer": [
+        "Galaxy Tab"
+      ],
       "difficulty": "Facile",
       "anecdote": "À l'origine livrée sous Android 2.2, deux mois après sa sortie, la Samsung Galaxy Tab fut vendue à plus de 600 000 exemplaires."
     },
@@ -1790,7 +1926,9 @@
           ""
         ]
       ],
-      "answer": "Oreo",
+      "answer": [
+        "Oreo"
+      ],
       "difficulty": "Facile",
       "anecdote": "Cette version du système Android est disponible depuis le 21 août 2017 et porte le nom de la marque de biscuits Oreo."
     },
@@ -1816,7 +1954,9 @@
           ""
         ]
       ],
-      "answer": "65 %",
+      "answer": [
+        "65 %"
+      ],
       "difficulty": "Facile",
       "anecdote": "Google Play permet de télécharger des applications, des livres, des films ou de la musique, payants ou non."
     },
@@ -1842,7 +1982,9 @@
           ""
         ]
       ],
-      "answer": "Android Market",
+      "answer": [
+        "Android Market"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Début 2013, Google Play était fort de 800 000 applications, ce qui en faisait déjà le plus gros magasin d'applications au monde."
     },
@@ -1868,7 +2010,9 @@
           ""
         ]
       ],
-      "answer": "Droid",
+      "answer": [
+        "Droid"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Premier téléphone muni de la version 2.0 d'Android, l'appareil trouva 250 000 acheteurs une semaine après son lancement."
     },
@@ -1894,7 +2038,9 @@
           ""
         ]
       ],
-      "answer": "Puce Tegra",
+      "answer": [
+        "Puce Tegra"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Ce magasin permet notamment de télécharger des applications très haute définition (THD) dédiées aux téléphones sous Tegra."
     },
@@ -1920,7 +2066,9 @@
           ""
         ]
       ],
-      "answer": "F-Droid",
+      "answer": [
+        "F-Droid"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Les applications peuvent être installées via l'application F-Droid, mais peuvent également être chargées depuis le site web."
     },
@@ -1946,7 +2094,9 @@
           ""
         ]
       ],
-      "answer": "Orange",
+      "answer": [
+        "Orange"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Après le HTC Dream, le HTC Magic est arrivé début mai 2009 chez SFR, suivi par le Samsung Galaxy (ou i7500) chez Bouygues."
     },
@@ -1972,7 +2122,9 @@
           ""
         ]
       ],
-      "answer": "Galaxy Nexus",
+      "answer": [
+        "Galaxy Nexus"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Celui-ci intègre le déverrouillage par reconnaissance faciale, les boutons virtuels et une reconnaissance vocale avancée."
     },
@@ -1998,7 +2150,9 @@
           ""
         ]
       ],
-      "answer": "Lollipop",
+      "answer": [
+        "Lollipop"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Les changements les plus importants d'Android 5.0 sont sa disponibilité sur les plateformes Android TV et Android Auto."
     },
@@ -2024,7 +2178,9 @@
           ""
         ]
       ],
-      "answer": "2010",
+      "answer": [
+        "2010"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Scandinavia, développée par l'entreprise suédoise People of Lava, possédait un navigateur Web ainsi qu'un client de messagerie."
     },
@@ -2050,7 +2206,9 @@
           ""
         ]
       ],
-      "answer": "Nexus 5",
+      "answer": [
+        "Nexus 5"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Succédant au Nexus 4, le Nexus 5 est l'un des deux modèles de la gamme Nexus 2013 de Google, avec la tablette Nexus 7."
     },
@@ -2076,7 +2234,9 @@
           ""
         ]
       ],
-      "answer": "Nexus 7",
+      "answer": [
+        "Nexus 7"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Elle coûtait, en 2012, 199 euros TTC dans sa version 16 Go et 249 euros toutes taxes comprises pour la version 32 Go."
     },
@@ -2102,7 +2262,9 @@
           ""
         ]
       ],
-      "answer": "Andy Rubin",
+      "answer": [
+        "Andy Rubin"
+      ],
       "difficulty": "Difficile",
       "anecdote": "En mai 2017, la société Essential Products créée par Andy Rubin a annoncé la sortie du smartphone Essential PH-1."
     },
@@ -2128,7 +2290,9 @@
           ""
         ]
       ],
-      "answer": "Dalvik",
+      "answer": [
+        "Dalvik"
+      ],
       "difficulty": "Difficile",
       "anecdote": "C'est une machine virtuelle conçue dès le départ pour les appareils mobiles et leurs ressources réduites."
     },
@@ -2154,7 +2318,9 @@
           ""
         ]
       ],
-      "answer": "Appslib",
+      "answer": [
+        "Appslib"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Appslib permet ainsi à Archos de ne pas remplir les critères de Google autorisant l'intégration de Google Play à un appareil."
     },
@@ -2180,7 +2346,9 @@
           ""
         ]
       ],
-      "answer": "webOS",
+      "answer": [
+        "webOS"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Depuis 2013, suite à une position quasi dominante de Google, HP utilise aussi Android sur sa gamme de tablettes Slate."
     },
@@ -2206,7 +2374,9 @@
           ""
         ]
       ],
-      "answer": "Root",
+      "answer": [
+        "Root"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Entraînant généralement un risque de perte de garantie, l'Union européenne a voté des directives protectrices à ce sujet."
     },
@@ -2232,7 +2402,9 @@
           ""
         ]
       ],
-      "answer": "LineageOS",
+      "answer": [
+        "LineageOS"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Compatible avec de nombreux modèles du marché, LineageOS offre une alternative épurée de certaines fonctionnalités malveillantes."
     },
@@ -2258,7 +2430,9 @@
           ""
         ]
       ],
-      "answer": "ART",
+      "answer": [
+        "ART"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Avec ART, contrairement à la machine virtuelle java, les fichiers .apk ne sont plus lancés directement but décompressés."
     },
@@ -2284,7 +2458,9 @@
           ""
         ]
       ],
-      "answer": "HTC G1/Dream",
+      "answer": [
+        "HTC G1/Dream"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Produit par la firme Taïwanaise HTC, le HTC G1 fut lancé aux États-Unis sur le réseau T-Mobile le 22 octobre 2008."
     },
@@ -2310,7 +2486,9 @@
           ""
         ]
       ],
-      "answer": "Replicant",
+      "answer": [
+        "Replicant"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Soutenu par la Free Software Foundation, le nom Replicant est tiré des androïdes du même nom dans le film « Blade Runner »."
     },
@@ -2336,7 +2514,9 @@
           ""
         ]
       ],
-      "answer": "Nvidia Shield",
+      "answer": [
+        "Nvidia Shield"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Outre des caractéristiques de premier ordre, un de ses principaux atouts consiste en sa capacité à diffuser les jeux d'un PC."
     }
