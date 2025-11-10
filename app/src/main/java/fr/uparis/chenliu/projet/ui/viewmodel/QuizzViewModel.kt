@@ -153,17 +153,22 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     type.intValue = currentQuestion.type
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                    var reshuffle = true
-                    while (reshuffle && type.intValue == 0) {
-                        randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                        for (p in randomPropositions) {
-                            if (p[0] == answers.value.answer) {
-                                reshuffle = false
+
+                    if (type.intValue == 0 ) {
+                        var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
+                        var reshuffle = true
+
+                        while (reshuffle) {
+                            randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
+                            for (p in randomPropositions) {
+                                if (p[0] == answers.value.answer) {
+                                    reshuffle = false
+                                }
                             }
                         }
+                        answers.value.propositions = randomPropositions
                     }
-                    answers.value.propositions = randomPropositions
+
                 }
                 "Informatique" -> {
                     val currentDao = db.quizzInformatiqueDao()

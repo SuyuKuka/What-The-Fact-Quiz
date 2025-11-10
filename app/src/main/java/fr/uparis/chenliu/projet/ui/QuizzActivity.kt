@@ -1,18 +1,28 @@
 package fr.uparis.chenliu.projet.ui
 
+import android.R.attr.text
+import android.content.ClipData
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.detectDragGestures
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -39,9 +49,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.input.pointer.PointerInputChange
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -141,7 +155,14 @@ fun Game(
             answerHistory = answerHistory,
             questionHistory = questionHistory,
             goodAnswer = goodAnswer) }
-        2 -> { Quizztype2() }
+        2 -> { Quizztype2(font = model.translateFont(),
+            question = question,
+            answers = answers,
+            score = score,
+            nbQuestion = nbQuestion,
+            answerHistory = answerHistory,
+            questionHistory = questionHistory,
+            goodAnswer = goodAnswer) }
         3 -> { Quizztype3() }
         4 -> { Quizztype4() }
     }
@@ -304,7 +325,7 @@ fun Quizztype1 (font: List<Int>,
     Column {
         Row(
             modifier = Modifier
-                .fillMaxWidth(0.5f)
+                .fillMaxWidth(0.9f)
                 .fillMaxHeight(0.5f)
                 .align(Alignment.CenterHorizontally),
             horizontalArrangement = Arrangement.Center,
@@ -345,21 +366,134 @@ fun Quizztype1 (font: List<Int>,
     }
 }
 
-fun calcScore(text: String, aim: String): Double {
-    if (abs(aim.toInt() - text.toInt()) <= 1) {
-        return 0.5
-    }
-        return 0.0
-}
+
 
 //@Composable
 //fun Quizztype1() {
 //    // todo
 //}
+
 @Composable
-fun Quizztype2() {
-    // todo
-}
+fun Quizztype2(font: List<Int>,
+               question: String,
+               answers: MutableState<QuizzViewModel.AnswerSummary>,
+               score: MutableDoubleState,
+               nbQuestion: MutableIntState,
+               answerHistory: SnapshotStateList<String>,
+               questionHistory: SnapshotStateList<String>,
+               goodAnswer: SnapshotStateList<String>,) {
+//    Column (
+//        modifier = Modifier
+//        .fillMaxSize(),
+//        horizontalAlignment = Alignment.CenterHorizontally){
+//        Row(
+//            modifier = Modifier
+//                .fillMaxWidth(0.9f)
+//                .fillMaxHeight(0.8f)
+//                .align(Alignment.CenterHorizontally),
+//            horizontalArrangement = Arrangement.Center,
+//            verticalAlignment = Alignment.CenterVertically
+//        ) {
+//            DisplayText(list = font, text = question, textAlign = TextAlign.Center)
+//
+//        }
+//        Row {
+//            DisplayText(list = font, text = answers.value.propositions[0][0], textAlign = TextAlign.Center)
+//        }
+//        Row {
+//            DisplayText(list = font, text = answers.value.propositions[1][0], textAlign = TextAlign.Center)
+//        }
+//        Row {
+//            DisplayText(list = font, text = answers.value.propositions[2][0], textAlign = TextAlign.Center)
+//        }
+//        Row {
+//            DisplayText(list = font, text = answers.value.propositions[3][0], textAlign = TextAlign.Center)
+//        }
+//        Row {
+//            DisplayText(list = font, text = answers.value.answer, textAlign = TextAlign.Center)
+//        }
+
+
+        val games = remember {
+            mutableStateListOf(
+                "Pokémon Rouge/Bleu",
+                "Pokémon Or/Argent",
+                "Pokémon Rubis/Saphir",
+                "Pokémon Diamant/Perle"
+            )
+        }
+
+        val dropZone = remember { mutableStateListOf<String>() }
+        var draggedItem by remember { mutableStateOf<String?>(null) }
+
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text("Glisse un jeu dans la zone ci-dessous", fontWeight = FontWeight.Bold)
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Liste des jeux à drag
+            Column {
+                games.forEach { game ->
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 4.dp)
+                            .background(Color(0xFFFFC107))
+                            .padding(16.dp)
+                            .pointerInput(Unit) {
+                                detectDragGestures(
+                                    onDragStart = { change: PointerInputChange, offset: Offset ->
+                                        draggedItem = game
+                                    } as (Offset) -> Unit,
+                                    onDragEnd = {
+                                        draggedItem = null
+                                    },
+                                    onDragCancel = {
+                                        draggedItem = null
+                                    },
+                                    onDrag = { change, dragAmount ->
+                                        // Ici, tu peux suivre le déplacement si tu veux
+                                        change.consume()
+                                    }
+                                )
+                            }
+                    ) {
+                        Text(game)
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(32.dp))
+
+            // Zone de drop
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp)
+                    .background(Color.LightGray)
+                    .padding(8.dp)
+                    .pointerInput(Unit) {
+                        detectTapGestures(
+                            onTap = {
+                                draggedItem?.let { item ->
+                                    dropZone.add(item)
+                                    games.remove(item)
+                                    draggedItem = null
+                                }
+                            }
+                        )
+                    }
+            ) {
+                Column {
+                    dropZone.forEach { dropped ->
+                        Text(dropped, modifier = Modifier.padding(4.dp))
+                    }
+                }
+            }
+        }
+
+    }
+//}
 @Composable
 fun Quizztype3() {
     // todo
@@ -367,4 +501,11 @@ fun Quizztype3() {
 @Composable
 fun Quizztype4() {
     // todo
+}
+
+fun calcScore(text: String, aim: String): Double {
+    if (abs(aim.toInt() - text.toInt()) <= 1) {
+        return 0.5
+    }
+    return 0.0
 }
