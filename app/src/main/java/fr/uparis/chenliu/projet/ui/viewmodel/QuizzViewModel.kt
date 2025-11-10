@@ -27,7 +27,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val loading = mutableStateOf(true)
 
     data class AnswerSummary(
-        var propositions: List<String>,
+        var propositions: List<List<String>>,
         var answer: String
     )
 
@@ -54,16 +54,16 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch {
             question.clear()
             answers.clear()
-            //todo: a simplifier
             when (subject) {
                 "Science" -> {
+                    // on fetch les data
                     val currentDao = db.quizzScienceDao()
                     val allQuestion = currentDao.getQuestion(difficulty)
                     for (i in 0..9) {
                         // question
                         question.add(allQuestion[i].question)
                         // responses
-                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)    // pas simplifiable ya le currentdao
                         val currentPropositions = shuffle(currentAnswer)
                         answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
                     }
@@ -145,9 +145,16 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun shuffle(value: AnswerSummary): List<String> {
-        var randomPropositions = value.propositions.shuffled().take(4)
-        while (!randomPropositions.contains(value.answer)) {
+    // permet de rendre les propositions aléatoire
+    fun shuffle(value: AnswerSummary): List<List<String>> {
+        var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
+        var shuffling = true
+        while (shuffling) {
+            for (p in randomPropositions) {
+                if (p[0] == value.answer) {
+                    shuffling = false   // answer fait partie des proposition
+                }
+            }// si ya pas la réponse parmis les propositions
             randomPropositions = value.propositions.shuffled().take(4)
         }
         return randomPropositions.shuffled()

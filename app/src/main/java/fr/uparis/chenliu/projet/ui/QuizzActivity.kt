@@ -124,10 +124,10 @@ fun Game(
             items(answers[i.intValue].propositions) { ans ->
                 Button(
                     onClick = {
-                        answerHistory.add(ans)
+                        answerHistory.add(ans[0]) // add le text pos 0 -> text ; pos 1 -> lien
                         questionHistory.add(question[i.intValue])
                         goodAnswer.add(answers[i.intValue].answer)
-                        if (ans == answers[i.intValue].answer) { ++score.intValue }
+                        if (ans[0] == answers[i.intValue].answer) { ++score.intValue }
                         nbQuestion.intValue--
                         if (i.intValue == 9) {
                             i.intValue == 0
@@ -141,7 +141,7 @@ fun Game(
                         .fillMaxWidth(),
                     shape = RectangleShape
                 ) {
-                    DisplayText(list = font, text = ans, textAlign = TextAlign.Center)
+                    DisplayText(list = font, text = ans[0], textAlign = TextAlign.Center)
                 }
             }
         }
