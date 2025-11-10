@@ -3,6 +3,7 @@ package fr.uparis.chenliu.projet.ui.viewmodel
 import android.R.attr.data
 import android.R.attr.font
 import android.app.Application
+import android.util.Log
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
@@ -70,6 +71,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                         val currentPropositions = shuffle(currentAnswer)
                         answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
                     }
+                    Log.d("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", question.size.toString())
                     loading.value = false
                     return@launch
                 }

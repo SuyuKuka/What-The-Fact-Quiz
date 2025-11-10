@@ -1,28 +1,19 @@
 package fr.uparis.chenliu.projet.ui
 
-import android.R.attr.text
-import android.content.ClipData
+import android.R.attr.font
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.detectDragGestures
-import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -35,10 +26,8 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
@@ -49,13 +38,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.input.pointer.PointerInputChange
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -147,15 +132,7 @@ fun Game(
             answerHistory = answerHistory,
             questionHistory = questionHistory,
             goodAnswer = goodAnswer) }
-        1 -> { Quizztype1(
-            font = model.translateFont(),
-            question = question,
-            answers = answers,
-            score = score,
-            nbQuestion = nbQuestion,
-            answerHistory = answerHistory,
-            questionHistory = questionHistory,
-            goodAnswer = goodAnswer) }
+        1 -> { Quizztype1() }
         2 -> { Quizztype2() }
         3 -> { Quizztype3() }
         4 -> { Quizztype4() }
@@ -254,14 +231,15 @@ fun Result(
 
 
 @Composable
-fun Quizztype0 (font: List<Int>,
-                question: String,
-                answers: MutableState<QuizzViewModel.AnswerSummary>,
-                score: MutableDoubleState,
-                nbQuestion: MutableIntState,
-                answerHistory: SnapshotStateList<String>,
-                questionHistory: SnapshotStateList<String>,
-                goodAnswer: SnapshotStateList<String>,) {
+fun Quizztype0 (
+    font: List<Int>,
+    question: MutableList<String>,
+    answers: MutableList<QuizzViewModel.AnswerSummary>,
+    score: MutableDoubleState,
+    nbQuestion: MutableIntState,
+    answerHistory: SnapshotStateList<String>,
+    questionHistory: SnapshotStateList<String>,
+    goodAnswer: SnapshotStateList<String>,) {
     val i = remember { mutableIntStateOf(0) }
     Column {
         Row(
@@ -286,7 +264,7 @@ fun Quizztype0 (font: List<Int>,
                         answerHistory.add(ans[0]) // add le text pos 0 -> text ; pos 1 -> lien
                         questionHistory.add(question[i.intValue])
                         goodAnswer.add(answers[i.intValue].answer)
-                        if (ans[0] == answers[i.intValue].answer) { ++score.intValue }
+                        if (ans[0] == answers[i.intValue].answer) { ++score.doubleValue }
                         nbQuestion.intValue--
                         if (i.intValue == 9) {
                             i.intValue == 0
@@ -308,59 +286,8 @@ fun Quizztype0 (font: List<Int>,
 }
 
 @Composable
-fun Quizztype1 (font: List<Int>,
-                question: String,
-                answers: MutableState<QuizzViewModel.AnswerSummary>,
-                score: MutableDoubleState,
-                nbQuestion: MutableIntState,
-                answerHistory: SnapshotStateList<String>,
-                questionHistory: SnapshotStateList<String>,
-                goodAnswer: SnapshotStateList<String>,) {
-    val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
-    val good = Toast.makeText(LocalContext.current, "NICE JOB", Toast.LENGTH_SHORT)
-
-    Column {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth(0.9f)
-                .fillMaxHeight(0.5f)
-                .align(Alignment.CenterHorizontally),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            DisplayText(list = font, text = question, textAlign = TextAlign.Center)
-        }
-        var text by remember { mutableStateOf("") }
-
-        OutlinedTextField(
-            value = text,
-            onValueChange = { newValue ->
-                if (newValue.all { it.isDigit() }) {
-                    text = newValue
-                }
-            },
-            label = { Text("Nombre") },
-            keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Number,
-                imeAction = ImeAction.Done
-            ),
-            keyboardActions = KeyboardActions(
-                onDone = {
-                    val number = text.toIntOrNull()
-                    if (number != null) {
-                        if (text == answers.value.answer) {
-                            good.show()
-                            score.doubleValue++
-                        } else {
-                            bad.show()
-                            score.doubleValue = score.doubleValue + calcScore(text,answers.value.answer)
-                        }
-                        nbQuestion.intValue = 0
-                    }
-                }
-            )
-        )
-    }
+fun Quizztype1 () {
+    // todo
 }
 
 @Composable
