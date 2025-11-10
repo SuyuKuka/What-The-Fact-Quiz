@@ -19,26 +19,37 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
+import kotlin.math.abs
 
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,11 +70,12 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
     val answerHistory = remember { mutableStateListOf<String>() }
     val goodAnswer = remember { mutableStateListOf<String>() }
     val questionHistory = remember { mutableStateListOf<String>() }
-    val score = remember { mutableIntStateOf(0) }
+    val score = remember { mutableDoubleStateOf(0.0) }
     val nbQuestion = remember { mutableIntStateOf(10) }
 
     val question = model.question.value
     val answers = model.answers
+    val type = model.type
 
     model.init()
 
@@ -79,10 +91,13 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
                 score = score,
                 nbQuestion = nbQuestion,
                 answerHistory = answerHistory,
-                questionHistory = questionHistory,goodAnswer
+                questionHistory = questionHistory,
+                goodAnswer = goodAnswer,
+                type = type.intValue
             )
         } else {
-            Result(model = model,
+            Result(
+                model = model,
                 font = model.translateFont(),
                 score = score,
                 nbQuestion = nbQuestion,
@@ -99,51 +114,36 @@ fun Game(
     font: List<Int>,
     question: String,
     answers: MutableState<QuizzViewModel.AnswerSummary>,
-    score: MutableIntState,
+    score: MutableDoubleState,
     nbQuestion: MutableIntState,
     answerHistory: SnapshotStateList<String>,
     questionHistory: SnapshotStateList<String>,
     goodAnswer: SnapshotStateList<String>,
+    model: QuizzViewModel = viewModel(),
+    type: Int
 ){
-    val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
-    val good = Toast.makeText(LocalContext.current, "NICE JOB", Toast.LENGTH_SHORT)
-
-    Column {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth(0.5f)
-                .fillMaxHeight(0.5f)
-                .align(Alignment.CenterHorizontally),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            DisplayText(list = font, text = question, textAlign = TextAlign.Center)
-        }
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(2),
-            contentPadding = PaddingValues(8.dp),
-            modifier = Modifier
-                .weight(1f)
-        ) {
-            items(answers.value.propositions) { ans ->
-                Button(
-                    onClick = {
-                        answerHistory.add(ans[0])
-                        questionHistory.add(question)
-                        goodAnswer.add(answers.value.answer)
-                        if (ans[0] == answers.value.answer) { good.show(); ++score.intValue } else { bad.show() }
-                        nbQuestion.intValue--
-                              },
-                    modifier = Modifier
-                        .aspectRatio(1.5f)
-                        .padding(8.dp)
-                        .fillMaxWidth(),
-                    shape = RectangleShape
-                ) {
-                    DisplayText(list = font, text = ans[0], textAlign = TextAlign.Center)
-                }
-            }
-        }
+    when(type) {
+        0 -> { Quizztype0(
+            font = model.translateFont(),
+            question = question,
+            answers = answers,
+            score = score,
+            nbQuestion = nbQuestion,
+            answerHistory = answerHistory,
+            questionHistory = questionHistory,
+            goodAnswer = goodAnswer) }
+        1 -> { Quizztype1(
+            font = model.translateFont(),
+            question = question,
+            answers = answers,
+            score = score,
+            nbQuestion = nbQuestion,
+            answerHistory = answerHistory,
+            questionHistory = questionHistory,
+            goodAnswer = goodAnswer) }
+        2 -> { Quizztype2() }
+        3 -> { Quizztype3() }
+        4 -> { Quizztype4() }
     }
 }
 
@@ -151,7 +151,7 @@ fun Game(
 fun Result(
     model: QuizzViewModel,
     font: List<Int>,
-    score: MutableIntState,
+    score: MutableDoubleState,
     nbQuestion: MutableIntState,
     answerHistory: SnapshotStateList<String>,
     questionHistory: SnapshotStateList<String>,
@@ -184,7 +184,7 @@ fun Result(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         DisplayText(list = font, text = "RESULTAT", textAlign = TextAlign.Center)
-        DisplayText(list = font, text = "Score : ${score.intValue}", textAlign = TextAlign.Center)
+        DisplayText(list = font, text = "Score : ${score.doubleValue}", textAlign = TextAlign.Center)
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth()
@@ -222,7 +222,7 @@ fun Result(
                     }
                     model.removeEnergy()
                     nbQuestion.intValue = 10
-                    score.intValue = 0
+                    score.doubleValue = 0.0
                     answerHistory.clear()
                     questionHistory.clear()
                     goodAnswer.clear()
@@ -237,3 +237,134 @@ fun Result(
     }
 }
 
+
+@Composable
+fun Quizztype0 (font: List<Int>,
+                question: String,
+                answers: MutableState<QuizzViewModel.AnswerSummary>,
+                score: MutableDoubleState,
+                nbQuestion: MutableIntState,
+                answerHistory: SnapshotStateList<String>,
+                questionHistory: SnapshotStateList<String>,
+                goodAnswer: SnapshotStateList<String>,) {
+    val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
+    val good = Toast.makeText(LocalContext.current, "NICE JOB", Toast.LENGTH_SHORT)
+
+    Column {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.5f)
+                .fillMaxHeight(0.5f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            DisplayText(list = font, text = question, textAlign = TextAlign.Center)
+        }
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            contentPadding = PaddingValues(8.dp),
+            modifier = Modifier
+                .weight(1f)
+        ) {
+            items(answers.value.propositions) { ans ->
+                Button(
+                    onClick = {
+                        answerHistory.add(ans[0])
+                        questionHistory.add(question)
+                        goodAnswer.add(answers.value.answer)
+                        if (ans[0] == answers.value.answer) { good.show(); ++score.doubleValue } else { bad.show() }
+                        nbQuestion.intValue--
+                    },
+                    modifier = Modifier
+                        .aspectRatio(1.5f)
+                        .padding(8.dp)
+                        .fillMaxWidth(),
+                    shape = RectangleShape
+                ) {
+                    DisplayText(list = font, text = ans[0], textAlign = TextAlign.Center)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun Quizztype1 (font: List<Int>,
+                question: String,
+                answers: MutableState<QuizzViewModel.AnswerSummary>,
+                score: MutableDoubleState,
+                nbQuestion: MutableIntState,
+                answerHistory: SnapshotStateList<String>,
+                questionHistory: SnapshotStateList<String>,
+                goodAnswer: SnapshotStateList<String>,) {
+    val bad = Toast.makeText(LocalContext.current, "NAAAAAAH", Toast.LENGTH_SHORT)
+    val good = Toast.makeText(LocalContext.current, "NICE JOB", Toast.LENGTH_SHORT)
+
+    Column {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.5f)
+                .fillMaxHeight(0.5f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            DisplayText(list = font, text = question, textAlign = TextAlign.Center)
+        }
+        var text by remember { mutableStateOf("") }
+
+        OutlinedTextField(
+            value = text,
+            onValueChange = { newValue ->
+                if (newValue.all { it.isDigit() }) {
+                    text = newValue
+                }
+            },
+            label = { Text("Nombre") },
+            keyboardOptions = KeyboardOptions(
+                keyboardType = KeyboardType.Number,
+                imeAction = ImeAction.Done
+            ),
+            keyboardActions = KeyboardActions(
+                onDone = {
+                    val number = text.toIntOrNull()
+                    if (number != null) {
+                        if (text == answers.value.answer) {
+                            good.show()
+                            score.doubleValue++
+                        } else {
+                            bad.show()
+                            score.doubleValue = score.doubleValue + calcScore(text,answers.value.answer)
+                        }
+                        nbQuestion.intValue = 0
+                    }
+                }
+            )
+        )
+    }
+}
+
+fun calcScore(text: String, aim: String): Double {
+    if (abs(aim.toInt() - text.toInt()) <= 1) {
+        return 0.5
+    }
+        return 0.0
+}
+
+//@Composable
+//fun Quizztype1() {
+//    // todo
+//}
+@Composable
+fun Quizztype2() {
+    // todo
+}
+@Composable
+fun Quizztype3() {
+    // todo
+}
+@Composable
+fun Quizztype4() {
+    // todo
+}

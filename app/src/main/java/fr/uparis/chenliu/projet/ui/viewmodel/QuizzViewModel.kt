@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
+import android.R.attr.data
 import android.R.attr.font
 import android.app.Application
 import android.util.Log
@@ -28,6 +29,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     var question = mutableStateOf("")
     val answers = mutableStateOf(AnswerSummary(listOf(),""))
+    val type = mutableIntStateOf(-1)
 
     data class AnswerSummary(
         var propositions: List<List<String>>,
@@ -62,6 +64,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
+                    // type
+                    type.intValue = currentQuestion.type
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
 
@@ -82,6 +86,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
+                    // type
+                    type.intValue = currentQuestion.type
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
                     var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
@@ -101,6 +107,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
+                    // type
+                    type.intValue = currentQuestion.type
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
                     var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
@@ -120,6 +128,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
+                    // type
+                    type.intValue = currentQuestion.type
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
                     var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
@@ -139,11 +149,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
+                    // type
+                    type.intValue = currentQuestion.type
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
                     var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
                     var reshuffle = true
-                    while (reshuffle) {
+                    while (reshuffle && type.intValue == 0) {
                         randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
                         for (p in randomPropositions) {
                             if (p[0] == answers.value.answer) {
@@ -158,6 +170,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     val currentQuestion = currentDao.getQuestion(difficulty)
                     // question
                     question.value = currentQuestion.question
+                    // type
+                    type.intValue = currentQuestion.type
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
                     var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
@@ -172,7 +186,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     }
                     answers.value.propositions = randomPropositions
                 }
-                else -> db.quizzScienceDao()
             }
         }
     }
