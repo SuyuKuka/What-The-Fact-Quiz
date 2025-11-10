@@ -22,8 +22,9 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     val font = mutableIntStateOf(0)
 
-    var question = mutableStateOf("")
-    val answers = mutableStateOf(AnswerSummary(listOf(),""))
+    var question = mutableListOf<String>()
+    val answers = mutableListOf<AnswerSummary>()
+    val loading = mutableStateOf(true)
 
     data class AnswerSummary(
         var propositions: List<String>,
@@ -51,61 +52,93 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
         viewModelScope.launch {
+            question.clear()
+            answers.clear()
             //todo: a simplifier
             when (subject) {
                 "Science" -> {
                     val currentDao = db.quizzScienceDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    answers.value.propositions = shuffle(answers.value)
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+                    }
+                    loading.value = false
+                    return@launch
                 }
                 "Gastronomie" -> {
                     val currentDao = db.quizzGastronomieDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    answers.value.propositions = shuffle(answers.value)
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+                    }
+                    loading.value = false
+                    return@launch
                 }
                 "Géographie" -> {
                     val currentDao = db.quizzGeoDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    answers.value.propositions = shuffle(answers.value)
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+                    }
+                    loading.value = false
+                    return@launch
                 }
                 "Nature" -> {
                     val currentDao = db.quizzNatureDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    answers.value.propositions = shuffle(answers.value)
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+                    }
+                    loading.value = false
+                    return@launch
                 }
                 "Dessin anime" -> {
                     val currentDao = db.quizzDessinAnimeDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    answers.value.propositions = shuffle(answers.value)
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+                    }
+                    loading.value = false
+                    return@launch
                 }
                 "Informatique" -> {
                     val currentDao = db.quizzInformatiqueDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    answers.value.propositions = shuffle(answers.value)
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+                    }
+                    loading.value = false
+                    return@launch
                 }
                 else -> db.quizzScienceDao()
             }
