@@ -1,8 +1,6 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
-import android.util.Log
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
@@ -62,12 +60,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    while (randomPropositions.contains(answers.value.answer)) {
-                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    }
-                    randomPropositions.add(answers.value.answer)
-                    answers.value.propositions = randomPropositions.shuffled()
+                    answers.value.propositions = shuffle(answers.value)
                 }
                 "Gastronomie" -> {
                     val currentDao = db.quizzGastronomieDao()
@@ -76,12 +69,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    while (randomPropositions.contains(answers.value.answer)) {
-                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    }
-                    randomPropositions.add(answers.value.answer)
-                    answers.value.propositions = randomPropositions.shuffled()
+                    answers.value.propositions = shuffle(answers.value)
                 }
                 "Géographie" -> {
                     val currentDao = db.quizzGeoDao()
@@ -90,12 +78,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    while (randomPropositions.contains(answers.value.answer)) {
-                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    }
-                    randomPropositions.add(answers.value.answer)
-                    answers.value.propositions = randomPropositions.shuffled()
+                    answers.value.propositions = shuffle(answers.value)
                 }
                 "Nature" -> {
                     val currentDao = db.quizzNatureDao()
@@ -104,12 +87,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    while (randomPropositions.contains(answers.value.answer)) {
-                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    }
-                    randomPropositions.add(answers.value.answer)
-                    answers.value.propositions = randomPropositions.shuffled()
+                    answers.value.propositions = shuffle(answers.value)
                 }
                 "Dessin anime" -> {
                     val currentDao = db.quizzDessinAnimeDao()
@@ -118,12 +96,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    while (randomPropositions.contains(answers.value.answer)) {
-                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    }
-                    randomPropositions.add(answers.value.answer)
-                    answers.value.propositions = randomPropositions.shuffled()
+                    answers.value.propositions = shuffle(answers.value)
                 }
                 "Informatique" -> {
                     val currentDao = db.quizzInformatiqueDao()
@@ -132,16 +105,19 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                     question.value = currentQuestion.question
                     // responses
                     answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    while (randomPropositions.contains(answers.value.answer)) {
-                        randomPropositions = answers.value.propositions.shuffled().take(3).toMutableList()
-                    }
-                    randomPropositions.add(answers.value.answer)
-                    answers.value.propositions = randomPropositions.shuffled()
+                    answers.value.propositions = shuffle(answers.value)
                 }
                 else -> db.quizzScienceDao()
             }
         }
+    }
+
+    fun shuffle(value: AnswerSummary): List<String> {
+        var randomPropositions = value.propositions.shuffled().take(4)
+        while (!randomPropositions.contains(value.answer)) {
+            randomPropositions = value.propositions.shuffled().take(4)
+        }
+        return randomPropositions.shuffled()
     }
 
     fun removeEnergy() {
