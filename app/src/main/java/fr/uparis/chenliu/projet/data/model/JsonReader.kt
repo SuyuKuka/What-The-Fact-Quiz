@@ -8,8 +8,9 @@ class JsonReader {
 
     class QuizzData(
         val id: Int,
+        val type: Int,
         val question: String,
-        val propositions: List<String>,
+        val propositions: List<List<String>>,
         val answer: String,
         val difficulty: String
     )

@@ -2,14 +2,33 @@
   "quizz": [
     {
       "id": 1,
+      "type": 0,
       "question": "Combien de Pokémon un dresseur peut-il transporter ?",
       "propositions": [
-        "4",
-        "6",
-        "10",
-        "1",
-        "3",
-        "5"
+        [
+          "4",
+          ""
+        ],
+        [
+          "6",
+          ""
+        ],
+        [
+          "10",
+          ""
+        ],
+        [
+          "1",
+          ""
+        ],
+        [
+          "3",
+          ""
+        ],
+        [
+          "5",
+          ""
+        ]
       ],
       "answer": "6",
       "difficulty": "Facile",
@@ -17,14 +36,33 @@
     },
     {
       "id": 2,
+      "type": 0,
       "question": "Sur quel animal se base la forme de Laporeille, Pokémon de la quatrième génération ?",
       "propositions": [
-        "Lapin",
-        "Girafe",
-        "Blaireau",
-        "Éléphant",
-        "Chien",
-        "Écureuil"
+        [
+          "Lapin",
+          ""
+        ],
+        [
+          "Girafe",
+          ""
+        ],
+        [
+          "Blaireau",
+          ""
+        ],
+        [
+          "Éléphant",
+          ""
+        ],
+        [
+          "Chien",
+          ""
+        ],
+        [
+          "Écureuil",
+          ""
+        ]
       ],
       "answer": "Lapin",
       "difficulty": "Facile",
@@ -32,14 +70,33 @@
     },
     {
       "id": 3,
+      "type": 0,
       "question": "Quel est le jeu « Pokémon » le plus vendu de tous les temps sur la console Game Boy Advance ?",
       "propositions": [
-        "Émeraude",
-        "Rouge Feu",
-        "Rubis",
-        "Platine",
-        "Saphir",
-        "Vert Feuille"
+        [
+          "Émeraude",
+          ""
+        ],
+        [
+          "Rouge Feu",
+          ""
+        ],
+        [
+          "Rubis",
+          ""
+        ],
+        [
+          "Platine",
+          ""
+        ],
+        [
+          "Saphir",
+          ""
+        ],
+        [
+          "Vert Feuille",
+          ""
+        ]
       ],
       "answer": "Rubis",
       "difficulty": "Facile",
@@ -47,14 +104,33 @@
     },
     {
       "id": 4,
+      "type": 0,
       "question": "Quels sont les types de Dracaufeu, que l'on retrouve sur des jaquettes des jeux « Pokémon » ?",
       "propositions": [
-        "Vol / Dragon",
-        "Feu / Combat",
-        "Feu / Vol",
-        "Feu / Dragon",
-        "Dragon / Sol",
-        "Feu / Électrik"
+        [
+          "Vol / Dragon",
+          ""
+        ],
+        [
+          "Feu / Combat",
+          ""
+        ],
+        [
+          "Feu / Vol",
+          ""
+        ],
+        [
+          "Feu / Dragon",
+          ""
+        ],
+        [
+          "Dragon / Sol",
+          ""
+        ],
+        [
+          "Feu / Électrik",
+          ""
+        ]
       ],
       "answer": "Feu / Vol",
       "difficulty": "Facile",
@@ -62,14 +138,33 @@
     },
     {
       "id": 5,
+      "type": 0,
       "question": "Comment se prénomme le jeune garçon, héros du dessin animé « Pokémon » ?",
       "propositions": [
-        "Pierre",
-        "Sacha",
-        "Jacky",
-        "Florent",
-        "Régis",
-        "Chen"
+        [
+          "Pierre",
+          ""
+        ],
+        [
+          "Sacha",
+          ""
+        ],
+        [
+          "Jacky",
+          ""
+        ],
+        [
+          "Florent",
+          ""
+        ],
+        [
+          "Régis",
+          ""
+        ],
+        [
+          "Chen",
+          ""
+        ]
       ],
       "answer": "Sacha",
       "difficulty": "Facile",
@@ -77,14 +172,33 @@
     },
     {
       "id": 6,
+      "type": 0,
       "question": "Comment traduire Pokémon, générateur de nombreux produits dérivés ?",
       "propositions": [
-        "Mega pouvoirs",
-        "Monstres de poche",
-        "Chasse aux dragons",
-        "Petit animal",
-        "Guerriers magiques",
-        "Évolutions cachées"
+        [
+          "Mega pouvoirs",
+          ""
+        ],
+        [
+          "Monstres de poche",
+          ""
+        ],
+        [
+          "Chasse aux dragons",
+          ""
+        ],
+        [
+          "Petit animal",
+          ""
+        ],
+        [
+          "Guerriers magiques",
+          ""
+        ],
+        [
+          "Évolutions cachées",
+          ""
+        ]
       ],
       "answer": "Monstres de poche",
       "difficulty": "Facile",
@@ -92,14 +206,33 @@
     },
     {
       "id": 7,
+      "type": 0,
       "question": "Quel est l'âge du jeune Sacha Ketchum au début de la série « Pokémon » ?",
       "propositions": [
-        "9 ans",
-        "12 ans",
-        "11 ans",
-        "10 ans",
-        "8 ans",
-        "13 ans"
+        [
+          "9 ans",
+          ""
+        ],
+        [
+          "12 ans",
+          ""
+        ],
+        [
+          "11 ans",
+          ""
+        ],
+        [
+          "10 ans",
+          ""
+        ],
+        [
+          "8 ans",
+          ""
+        ],
+        [
+          "13 ans",
+          ""
+        ]
       ],
       "answer": "10 ans",
       "difficulty": "Facile",
@@ -107,14 +240,33 @@
     },
     {
       "id": 8,
+      "type": 0,
       "question": "De quelle famille de Pokémon Pikachu, Rattatac et Sabelette font-ils partie ?",
       "propositions": [
-        "Souris",
-        "Chiots",
-        "Brebis",
-        "Oeufs",
-        "Insectes",
-        "Oiseaux"
+        [
+          "Souris",
+          ""
+        ],
+        [
+          "Chiots",
+          ""
+        ],
+        [
+          "Brebis",
+          ""
+        ],
+        [
+          "Oeufs",
+          ""
+        ],
+        [
+          "Insectes",
+          ""
+        ],
+        [
+          "Oiseaux",
+          ""
+        ]
       ],
       "answer": "Souris",
       "difficulty": "Facile",
@@ -122,14 +274,33 @@
     },
     {
       "id": 9,
+      "type": 0,
       "question": "Dans « Pokémon », que peut-on voir sur le ventre de Ptitard et de ses évolutions ?",
       "propositions": [
-        "Un cercle",
-        "Un carré",
-        "Une étoile",
-        "Une spirale",
-        "Un éclair",
-        "Un triangle"
+        [
+          "Un cercle",
+          ""
+        ],
+        [
+          "Un carré",
+          ""
+        ],
+        [
+          "Une étoile",
+          ""
+        ],
+        [
+          "Une spirale",
+          ""
+        ],
+        [
+          "Un éclair",
+          ""
+        ],
+        [
+          "Un triangle",
+          ""
+        ]
       ],
       "answer": "Une spirale",
       "difficulty": "Facile",
@@ -137,14 +308,33 @@
     },
     {
       "id": 10,
+      "type": 0,
       "question": "Quel nom avait été initialement choisi au moment du lancement du jeu « Pokémon » ?",
       "propositions": [
-        "Sacha's Quest",
-        "Red Balls",
-        "Mega Monsters",
-        "Capsule Monsters",
-        "Pocket Fighters",
-        "Monster Balls"
+        [
+          "Sacha's Quest",
+          ""
+        ],
+        [
+          "Red Balls",
+          ""
+        ],
+        [
+          "Mega Monsters",
+          ""
+        ],
+        [
+          "Capsule Monsters",
+          ""
+        ],
+        [
+          "Pocket Fighters",
+          ""
+        ],
+        [
+          "Monster Balls",
+          ""
+        ]
       ],
       "answer": "Capsule Monsters",
       "difficulty": "Facile",
@@ -152,14 +342,33 @@
     },
     {
       "id": 11,
+      "type": 0,
       "question": "Quelle est la couleur du Pokémon baptisé Insécateur, de double type Insecte et Vol ?",
       "propositions": [
-        "Verte",
-        "Jaune",
-        "Bleue",
-        "Rouge",
-        "Marron",
-        "Noire"
+        [
+          "Verte",
+          ""
+        ],
+        [
+          "Jaune",
+          ""
+        ],
+        [
+          "Bleue",
+          ""
+        ],
+        [
+          "Rouge",
+          ""
+        ],
+        [
+          "Marron",
+          ""
+        ],
+        [
+          "Noire",
+          ""
+        ]
       ],
       "answer": "Verte",
       "difficulty": "Moyen",
@@ -167,14 +376,33 @@
     },
     {
       "id": 12,
+      "type": 0,
       "question": "Lequel de ces Pokémon porte en guise de casque le crâne de sa mère morte ?",
       "propositions": [
-        "Eoko",
-        "Evoli",
-        "Osselait",
-        "Ludicolo",
-        "Ossatueur",
-        "Porygon"
+        [
+          "Eoko",
+          ""
+        ],
+        [
+          "Evoli",
+          ""
+        ],
+        [
+          "Osselait",
+          ""
+        ],
+        [
+          "Ludicolo",
+          ""
+        ],
+        [
+          "Ossatueur",
+          ""
+        ],
+        [
+          "Porygon",
+          ""
+        ]
       ],
       "answer": "Osselait",
       "difficulty": "Moyen",
@@ -182,14 +410,33 @@
     },
     {
       "id": 13,
+      "type": 0,
       "question": "Qu'est-ce que Canarticho tient constamment dans sa main ou dans son aile ?",
       "propositions": [
-        "Un poireau",
-        "Un artichaut",
-        "Du persil",
-        "Une carotte",
-        "Une pomme",
-        "Un bâton"
+        [
+          "Un poireau",
+          ""
+        ],
+        [
+          "Un artichaut",
+          ""
+        ],
+        [
+          "Du persil",
+          ""
+        ],
+        [
+          "Une carotte",
+          ""
+        ],
+        [
+          "Une pomme",
+          ""
+        ],
+        [
+          "Un bâton",
+          ""
+        ]
       ],
       "answer": "Un poireau",
       "difficulty": "Moyen",
@@ -197,14 +444,33 @@
     },
     {
       "id": 14,
+      "type": 0,
       "question": "Qu'est-ce qui a inspiré Satoshi Tajiri pour créer les Pokémon et le concept qui va autour ?",
       "propositions": [
-        "Des criquets",
-        "Des escargots",
-        "Des souris",
-        "Des coqs",
-        "Des fourmis",
-        "Des araignées"
+        [
+          "Des criquets",
+          ""
+        ],
+        [
+          "Des escargots",
+          ""
+        ],
+        [
+          "Des souris",
+          ""
+        ],
+        [
+          "Des coqs",
+          ""
+        ],
+        [
+          "Des fourmis",
+          ""
+        ],
+        [
+          "Des araignées",
+          ""
+        ]
       ],
       "answer": "Des criquets",
       "difficulty": "Moyen",
@@ -212,14 +478,33 @@
     },
     {
       "id": 15,
+      "type": 0,
       "question": "Dans le premier épisode de « Pokemon », combien de fois Sacha est-il électrocuté par Pikachu ?",
       "propositions": [
-        "Deux fois",
-        "Une fois",
-        "Trois fois",
-        "Quatre fois",
-        "Cinq fois",
-        "Zéro fois"
+        [
+          "Deux fois",
+          ""
+        ],
+        [
+          "Une fois",
+          ""
+        ],
+        [
+          "Trois fois",
+          ""
+        ],
+        [
+          "Quatre fois",
+          ""
+        ],
+        [
+          "Cinq fois",
+          ""
+        ],
+        [
+          "Zéro fois",
+          ""
+        ]
       ],
       "answer": "Deux fois",
       "difficulty": "Moyen",
@@ -227,14 +512,33 @@
     },
     {
       "id": 16,
+      "type": 0,
       "question": "Qui est le chef de la Team Rocket, organisation criminelle dans « Pokémon » ?",
       "propositions": [
-        "Sacha",
-        "Hélio",
-        "Max",
-        "Giovanni",
-        "Jessie",
-        "James"
+        [
+          "Sacha",
+          ""
+        ],
+        [
+          "Hélio",
+          ""
+        ],
+        [
+          "Max",
+          ""
+        ],
+        [
+          "Giovanni",
+          ""
+        ],
+        [
+          "Jessie",
+          ""
+        ],
+        [
+          "James",
+          ""
+        ]
       ],
       "answer": "Giovanni",
       "difficulty": "Moyen",
@@ -242,14 +546,33 @@
     },
     {
       "id": 17,
+      "type": 0,
       "question": "Lequel de ces Pokémon est l'un des seuls à avoir le même nom dans toutes les langues ?",
       "propositions": [
-        "Smogo",
-        "Osselait",
-        "Canarticho",
-        "Pikachu",
-        "Mewtwo",
-        "Arceus"
+        [
+          "Smogo",
+          ""
+        ],
+        [
+          "Osselait",
+          ""
+        ],
+        [
+          "Canarticho",
+          ""
+        ],
+        [
+          "Pikachu",
+          ""
+        ],
+        [
+          "Mewtwo",
+          ""
+        ],
+        [
+          "Arceus",
+          ""
+        ]
       ],
       "answer": "Pikachu",
       "difficulty": "Moyen",
@@ -257,14 +580,33 @@
     },
     {
       "id": 18,
+      "type": 0,
       "question": "De quel pays la géographie des lieux visités dans « Pokémon » est-elle inspirée ?",
       "propositions": [
-        "Du Japon",
-        "Du Canada",
-        "De la Chine",
-        "De l'Inde",
-        "Des États-Unis",
-        "De la Corée"
+        [
+          "Du Japon",
+          ""
+        ],
+        [
+          "Du Canada",
+          ""
+        ],
+        [
+          "De la Chine",
+          ""
+        ],
+        [
+          "De l'Inde",
+          ""
+        ],
+        [
+          "Des États-Unis",
+          ""
+        ],
+        [
+          "De la Corée",
+          ""
+        ]
       ],
       "answer": "Du Japon",
       "difficulty": "Moyen",
@@ -272,14 +614,33 @@
     },
     {
       "id": 19,
+      "type": 0,
       "question": "En dehors du Japon, par quelle couleur la cartouche Pokemon verte fut-elle remplacée ?",
       "propositions": [
-        "Argent",
-        "Jaune",
-        "Rouge",
-        "Bleue",
-        "Or",
-        "Violette"
+        [
+          "Argent",
+          ""
+        ],
+        [
+          "Jaune",
+          ""
+        ],
+        [
+          "Rouge",
+          ""
+        ],
+        [
+          "Bleue",
+          ""
+        ],
+        [
+          "Or",
+          ""
+        ],
+        [
+          "Violette",
+          ""
+        ]
       ],
       "answer": "Bleue",
       "difficulty": "Moyen",
@@ -287,14 +648,33 @@
     },
     {
       "id": 20,
+      "type": 0,
       "question": "Complétez cette phrase de la Team Rocket: « Afin de préserver le monde de la...",
       "propositions": [
-        "Désolation",
-        "Dévastation",
-        "Solarisation",
-        "Déforestation",
-        "Destruction",
-        "Misère"
+        [
+          "Désolation",
+          ""
+        ],
+        [
+          "Dévastation",
+          ""
+        ],
+        [
+          "Solarisation",
+          ""
+        ],
+        [
+          "Déforestation",
+          ""
+        ],
+        [
+          "Destruction",
+          ""
+        ],
+        [
+          "Misère",
+          ""
+        ]
       ],
       "answer": "Dévastation",
       "difficulty": "Moyen",
@@ -302,14 +682,33 @@
     },
     {
       "id": 21,
+      "type": 0,
       "question": "Le spectre de quel pokémon hante le 5e étage de la Tour Pokémon, immeuble de Lavanville ?",
       "propositions": [
-        "Fantominus",
-        "Ossatueur",
-        "Spectrum",
-        "Smogo",
-        "Ectoplasma",
-        "Melofée"
+        [
+          "Fantominus",
+          ""
+        ],
+        [
+          "Ossatueur",
+          ""
+        ],
+        [
+          "Spectrum",
+          ""
+        ],
+        [
+          "Smogo",
+          ""
+        ],
+        [
+          "Ectoplasma",
+          ""
+        ],
+        [
+          "Melofée",
+          ""
+        ]
       ],
       "answer": "Ossatueur",
       "difficulty": "Difficile",
@@ -317,14 +716,33 @@
     },
     {
       "id": 22,
+      "type": 0,
       "question": "Dans l'univers de « Pokémon », laquelle de ces baies guérit la confusion ?",
       "propositions": [
-        "Wiki",
-        "Kika",
-        "Sitrus",
-        "Oran",
-        "Pêcha",
-        "Mepo"
+        [
+          "Wiki",
+          ""
+        ],
+        [
+          "Kika",
+          ""
+        ],
+        [
+          "Sitrus",
+          ""
+        ],
+        [
+          "Oran",
+          ""
+        ],
+        [
+          "Pêcha",
+          ""
+        ],
+        [
+          "Mepo",
+          ""
+        ]
       ],
       "answer": "Kika",
       "difficulty": "Difficile",
@@ -332,14 +750,33 @@
     },
     {
       "id": 23,
+      "type": 0,
       "question": "Dans les versions américaines et japonaises de « Pokémon », à qui fait référence Hitmonlee ?",
       "propositions": [
-        "Hong Xiguan",
-        "Bruce Lee",
-        "Jackie Chan",
-        "Yang Luchan",
-        "Jet Li",
-        "Donnie Yen"
+        [
+          "Hong Xiguan",
+          ""
+        ],
+        [
+          "Bruce Lee",
+          ""
+        ],
+        [
+          "Jackie Chan",
+          ""
+        ],
+        [
+          "Yang Luchan",
+          ""
+        ],
+        [
+          "Jet Li",
+          ""
+        ],
+        [
+          "Donnie Yen",
+          ""
+        ]
       ],
       "answer": "Bruce Lee",
       "difficulty": "Difficile",
@@ -347,14 +784,33 @@
     },
     {
       "id": 24,
+      "type": 0,
       "question": "De quel animal Soporifik, qui peut empêcher un Pokémon de s'endormir, est-il inspiré ?",
       "propositions": [
-        "Le serpent",
-        "L'éléphant",
-        "Le tapir",
-        "Le koala",
-        "Le panda",
-        "Le paresseux"
+        [
+          "Le serpent",
+          ""
+        ],
+        [
+          "L'éléphant",
+          ""
+        ],
+        [
+          "Le tapir",
+          ""
+        ],
+        [
+          "Le koala",
+          ""
+        ],
+        [
+          "Le panda",
+          ""
+        ],
+        [
+          "Le paresseux",
+          ""
+        ]
       ],
       "answer": "Le tapir",
       "difficulty": "Difficile",
@@ -362,14 +818,33 @@
     },
     {
       "id": 25,
+      "type": 0,
       "question": "Quel est le premier Pokémon à avoir été imaginé par les créateurs de la franchise ?",
       "propositions": [
-        "Lugia",
-        "Rhinoféros",
-        "Pikachu",
-        "Melofée",
-        "Dracaufeu",
-        "Mew"
+        [
+          "Lugia",
+          ""
+        ],
+        [
+          "Rhinoféros",
+          ""
+        ],
+        [
+          "Pikachu",
+          ""
+        ],
+        [
+          "Melofée",
+          ""
+        ],
+        [
+          "Dracaufeu",
+          ""
+        ],
+        [
+          "Mew",
+          ""
+        ]
       ],
       "answer": "Rhinoféros",
       "difficulty": "Difficile",
@@ -377,14 +852,33 @@
     },
     {
       "id": 26,
+      "type": 0,
       "question": "Selon la légende, quel Pokémon aurait créé l'univers Pokémon avec ses mille bras ?",
       "propositions": [
-        "Dialga",
-        "Arceus",
-        "Palkia",
-        "Giratina",
-        "Mewtwo",
-        "Rayquaza"
+        [
+          "Dialga",
+          ""
+        ],
+        [
+          "Arceus",
+          ""
+        ],
+        [
+          "Palkia",
+          ""
+        ],
+        [
+          "Giratina",
+          ""
+        ],
+        [
+          "Mewtwo",
+          ""
+        ],
+        [
+          "Rayquaza",
+          ""
+        ]
       ],
       "answer": "Arceus",
       "difficulty": "Difficile",
@@ -392,14 +886,33 @@
     },
     {
       "id": 27,
+      "type": 0,
       "question": "Quel Pokémon les joueurs pouvaient-ils télécharger au « Tokyo Game Show » en 1997 ?",
       "propositions": [
-        "Arceus",
-        "Alakazam",
-        "Mew",
-        "Ectoplasma",
-        "Lugia",
-        "Celebi"
+        [
+          "Arceus",
+          ""
+        ],
+        [
+          "Alakazam",
+          ""
+        ],
+        [
+          "Mew",
+          ""
+        ],
+        [
+          "Ectoplasma",
+          ""
+        ],
+        [
+          "Lugia",
+          ""
+        ],
+        [
+          "Celebi",
+          ""
+        ]
       ],
       "answer": "Mew",
       "difficulty": "Difficile",
@@ -407,14 +920,33 @@
     },
     {
       "id": 28,
+      "type": 0,
       "question": "Quel pokémon a été le premier enregistré dans le Pokédex National ?",
       "propositions": [
-        "Bulbizarre",
-        "Chenipan",
-        "Carapuce",
-        "Salamèche",
-        "Pikachu",
-        "Rattata"
+        [
+          "Bulbizarre",
+          ""
+        ],
+        [
+          "Chenipan",
+          ""
+        ],
+        [
+          "Carapuce",
+          ""
+        ],
+        [
+          "Salamèche",
+          ""
+        ],
+        [
+          "Pikachu",
+          ""
+        ],
+        [
+          "Rattata",
+          ""
+        ]
       ],
       "answer": "Bulbizarre",
       "difficulty": "Difficile",
@@ -422,14 +954,33 @@
     },
     {
       "id": 29,
+      "type": 0,
       "question": "À l'origine, quel Pokémon Sacha devait-il recevoir au moment de partir à l'aventure ?",
       "propositions": [
-        "Pikachu",
-        "Bulbizarre",
-        "Mew",
-        "Melofée",
-        "Carapuce",
-        "Salamèche"
+        [
+          "Pikachu",
+          ""
+        ],
+        [
+          "Bulbizarre",
+          ""
+        ],
+        [
+          "Mew",
+          ""
+        ],
+        [
+          "Melofée",
+          ""
+        ],
+        [
+          "Carapuce",
+          ""
+        ],
+        [
+          "Salamèche",
+          ""
+        ]
       ],
       "answer": "Melofée",
       "difficulty": "Difficile",
@@ -437,14 +988,33 @@
     },
     {
       "id": 30,
+      "type": 0,
       "question": "Quels sont les numéros respectifs de Pikachu et Miaouss dans le Pokédex National ?",
       "propositions": [
-        "25 et 52",
-        "47 et 74",
-        "12 et 21",
-        "32 et 223",
-        "151 et 150",
-        "1 et 10"
+        [
+          "25 et 52",
+          ""
+        ],
+        [
+          "47 et 74",
+          ""
+        ],
+        [
+          "12 et 21",
+          ""
+        ],
+        [
+          "32 et 223",
+          ""
+        ],
+        [
+          "151 et 150",
+          ""
+        ],
+        [
+          "1 et 10",
+          ""
+        ]
       ],
       "answer": "25 et 52",
       "difficulty": "Difficile",
@@ -452,14 +1022,33 @@
     },
     {
       "id": 31,
+      "type": 0,
       "question": "Quel mangaka, né à Kumamoto en 1975, est l'auteur du manga « One Piece » ?",
       "propositions": [
-        "Naoki Urasawa",
-        "Hayao Miyazaki",
-        "Akira Toriyama",
-        "Eiichiro Oda",
-        "Masashi Kishimoto",
-        "Tite Kubo"
+        [
+          "Naoki Urasawa",
+          ""
+        ],
+        [
+          "Hayao Miyazaki",
+          ""
+        ],
+        [
+          "Akira Toriyama",
+          ""
+        ],
+        [
+          "Eiichiro Oda",
+          ""
+        ],
+        [
+          "Masashi Kishimoto",
+          ""
+        ],
+        [
+          "Tite Kubo",
+          ""
+        ]
       ],
       "answer": "Eiichiro Oda",
       "difficulty": "Facile",
@@ -467,14 +1056,33 @@
     },
     {
       "id": 32,
+      "type": 0,
       "question": "Qui occupe le rôle de navigateur au sein de l'équipage du chapeau de paille ?",
       "propositions": [
-        "Usopp",
-        "Robin",
-        "Nami",
-        "Zoro",
-        "Sanji",
-        "Chopper"
+        [
+          "Usopp",
+          ""
+        ],
+        [
+          "Robin",
+          ""
+        ],
+        [
+          "Nami",
+          ""
+        ],
+        [
+          "Zoro",
+          ""
+        ],
+        [
+          "Sanji",
+          ""
+        ],
+        [
+          "Chopper",
+          ""
+        ]
       ],
       "answer": "Nami",
       "difficulty": "Facile",
@@ -482,14 +1090,33 @@
     },
     {
       "id": 33,
+      "type": 0,
       "question": "Quel type de fruit du démon permet de se transformer en animal ?",
       "propositions": [
-        "Zoan",
-        "Logia",
-        "Toki",
-        "Paramecia",
-        "Kirin",
-        "Shichibukai"
+        [
+          "Zoan",
+          ""
+        ],
+        [
+          "Logia",
+          ""
+        ],
+        [
+          "Toki",
+          ""
+        ],
+        [
+          "Paramecia",
+          ""
+        ],
+        [
+          "Kirin",
+          ""
+        ],
+        [
+          "Shichibukai",
+          ""
+        ]
       ],
       "answer": "Zoan",
       "difficulty": "Facile",
@@ -497,14 +1124,33 @@
     },
     {
       "id": 34,
+      "type": 0,
       "question": "Dans « One Piece », sous quel autre nom est connu Marshall D. Teach ?",
       "propositions": [
-        "Shanks",
-        "Big Mom",
-        "Barbe Blanche",
-        "Barbe Noire",
-        "Kaido",
-        "Charlotte Linlin"
+        [
+          "Shanks",
+          ""
+        ],
+        [
+          "Big Mom",
+          ""
+        ],
+        [
+          "Barbe Blanche",
+          ""
+        ],
+        [
+          "Barbe Noire",
+          ""
+        ],
+        [
+          "Kaido",
+          ""
+        ],
+        [
+          "Charlotte Linlin",
+          ""
+        ]
       ],
       "answer": "Barbe Noire",
       "difficulty": "Facile",
@@ -512,14 +1158,33 @@
     },
     {
       "id": 35,
+      "type": 0,
       "question": "Qui était à la tête du Baroque Works, mystérieuse organisation dans « One Piece » ?",
       "propositions": [
-        "Crocodile",
-        "Doflamingo",
-        "Bon Clay",
-        "Nico Robin",
-        "Mr. 1",
-        "Miss All Sunday"
+        [
+          "Crocodile",
+          ""
+        ],
+        [
+          "Doflamingo",
+          ""
+        ],
+        [
+          "Bon Clay",
+          ""
+        ],
+        [
+          "Nico Robin",
+          ""
+        ],
+        [
+          "Mr. 1",
+          ""
+        ],
+        [
+          "Miss All Sunday",
+          ""
+        ]
       ],
       "answer": "Crocodile",
       "difficulty": "Facile",
@@ -527,14 +1192,33 @@
     },
     {
       "id": 36,
+      "type": 0,
       "question": "De quel équipage pirate Yasopp, le père d'Usopp, est-il membre ?",
       "propositions": [
-        "Barbe Blanche",
-        "Kaido",
-        "Gol D. Roger",
-        "Shanks",
-        "Big Mom",
-        "Kidd"
+        [
+          "Barbe Blanche",
+          ""
+        ],
+        [
+          "Kaido",
+          ""
+        ],
+        [
+          "Gol D. Roger",
+          ""
+        ],
+        [
+          "Shanks",
+          ""
+        ],
+        [
+          "Big Mom",
+          ""
+        ],
+        [
+          "Kidd",
+          ""
+        ]
       ],
       "answer": "Shanks",
       "difficulty": "Facile",
@@ -542,14 +1226,33 @@
     },
     {
       "id": 37,
+      "type": 0,
       "question": "Dans « One Piece », comment se nomme le capitaine de l'équipage du Heart ?",
       "propositions": [
-        "Big Mom",
-        "Kid",
-        "Baggy",
-        "Law",
-        "Luffy",
-        "Aokiji"
+        [
+          "Big Mom",
+          ""
+        ],
+        [
+          "Kid",
+          ""
+        ],
+        [
+          "Baggy",
+          ""
+        ],
+        [
+          "Law",
+          ""
+        ],
+        [
+          "Luffy",
+          ""
+        ],
+        [
+          "Aokiji",
+          ""
+        ]
       ],
       "answer": "Law",
       "difficulty": "Facile",
@@ -557,14 +1260,33 @@
     },
     {
       "id": 38,
+      "type": 0,
       "question": "Quelle île, située à la fin de Grand Line, abriterait le fameux One Piece ?",
       "propositions": [
-        "Little Garden",
-        "Mont Corvo",
-        "Marie-Joie",
-        "Laught Tale",
-        "Fish-Man Island",
-        "Wano Kuni"
+        [
+          "Little Garden",
+          ""
+        ],
+        [
+          "Mont Corvo",
+          ""
+        ],
+        [
+          "Marie-Joie",
+          ""
+        ],
+        [
+          "Laught Tale",
+          ""
+        ],
+        [
+          "Fish-Man Island",
+          ""
+        ],
+        [
+          "Wano Kuni",
+          ""
+        ]
       ],
       "answer": "Laught Tale",
       "difficulty": "Facile",
@@ -572,14 +1294,33 @@
     },
     {
       "id": 39,
+      "type": 0,
       "question": "De quelle race font partie Dorry et Broggy, rencontrés sur Little Garden ?",
       "propositions": [
-        "Géants",
-        "Shandias",
-        "Minks",
-        "Hommes-Poissons",
-        "Cyborgs",
-        "Long-bras"
+        [
+          "Géants",
+          ""
+        ],
+        [
+          "Shandias",
+          ""
+        ],
+        [
+          "Minks",
+          ""
+        ],
+        [
+          "Hommes-Poissons",
+          ""
+        ],
+        [
+          "Cyborgs",
+          ""
+        ],
+        [
+          "Long-bras",
+          ""
+        ]
       ],
       "answer": "Géants",
       "difficulty": "Facile",
@@ -587,14 +1328,33 @@
     },
     {
       "id": 40,
+      "type": 0,
       "question": "Dans « One Piece », qui est la seule femme à avoir été Grand Corsaire ?",
       "propositions": [
-        "Stussy",
-        "Big Mom",
-        "Boa Hancock",
-        "Ivankov",
-        "Tashigi",
-        "Vivi"
+        [
+          "Stussy",
+          ""
+        ],
+        [
+          "Big Mom",
+          ""
+        ],
+        [
+          "Boa Hancock",
+          ""
+        ],
+        [
+          "Ivankov",
+          ""
+        ],
+        [
+          "Tashigi",
+          ""
+        ],
+        [
+          "Vivi",
+          ""
+        ]
       ],
       "answer": "Boa Hancock",
       "difficulty": "Facile",
@@ -602,14 +1362,33 @@
     },
     {
       "id": 41,
+      "type": 0,
       "question": "Dans quel restaurant travaillait Sanji avant de rejoindre Luffy ?",
       "propositions": [
-        "Oro Jackson",
-        "Moby Dick",
-        "Vogue Merry",
-        "Baratie",
-        "Thousand Sunny",
-        "Sabaody Park"
+        [
+          "Oro Jackson",
+          ""
+        ],
+        [
+          "Moby Dick",
+          ""
+        ],
+        [
+          "Vogue Merry",
+          ""
+        ],
+        [
+          "Baratie",
+          ""
+        ],
+        [
+          "Thousand Sunny",
+          ""
+        ],
+        [
+          "Sabaody Park",
+          ""
+        ]
       ],
       "answer": "Baratie",
       "difficulty": "Moyen",
@@ -617,14 +1396,33 @@
     },
     {
       "id": 42,
+      "type": 0,
       "question": "Combien d'années dura l'ellipse survenue après les événements de Marinefod ?",
       "propositions": [
-        "2 ans",
-        "10 ans",
-        "5 ans",
-        "3 ans",
-        "6 mois",
-        "4 ans"
+        [
+          "2 ans",
+          ""
+        ],
+        [
+          "10 ans",
+          ""
+        ],
+        [
+          "5 ans",
+          ""
+        ],
+        [
+          "3 ans",
+          ""
+        ],
+        [
+          "6 mois",
+          ""
+        ],
+        [
+          "4 ans",
+          ""
+        ]
       ],
       "answer": "2 ans",
       "difficulty": "Moyen",
@@ -632,14 +1430,33 @@
     },
     {
       "id": 43,
+      "type": 0,
       "question": "Qui était le commandant de la troisième division de Barbe Blanche ?",
       "propositions": [
-        "Joz",
-        "Marco",
-        "Vista",
-        "Ace",
-        "Thatch",
-        "Izo"
+        [
+          "Joz",
+          ""
+        ],
+        [
+          "Marco",
+          ""
+        ],
+        [
+          "Vista",
+          ""
+        ],
+        [
+          "Ace",
+          ""
+        ],
+        [
+          "Thatch",
+          ""
+        ],
+        [
+          "Izo",
+          ""
+        ]
       ],
       "answer": "Joz",
       "difficulty": "Moyen",
@@ -647,14 +1464,33 @@
     },
     {
       "id": 44,
+      "type": 0,
       "question": "Quel est le rôle de de Crocus dans l'équipage de Gol D. Roger ?",
       "propositions": [
-        "Médecin de bord",
-        "Musicien",
-        "Cuisinier",
-        "Navigateur",
-        "Timonier",
-        "Canonnier"
+        [
+          "Médecin de bord",
+          ""
+        ],
+        [
+          "Musicien",
+          ""
+        ],
+        [
+          "Cuisinier",
+          ""
+        ],
+        [
+          "Navigateur",
+          ""
+        ],
+        [
+          "Timonier",
+          ""
+        ],
+        [
+          "Canonnier",
+          ""
+        ]
       ],
       "answer": "Médecin de bord",
       "difficulty": "Moyen",
@@ -662,14 +1498,33 @@
     },
     {
       "id": 45,
+      "type": 0,
       "question": "Dans quelle zone maritime de « One Piece » se situe Arlong Park ?",
       "propositions": [
-        "West Blue",
-        "South Blue",
-        "East Blue",
-        "North Blue",
-        "Grand Line",
-        "Nouveau Monde"
+        [
+          "West Blue",
+          ""
+        ],
+        [
+          "South Blue",
+          ""
+        ],
+        [
+          "East Blue",
+          ""
+        ],
+        [
+          "North Blue",
+          ""
+        ],
+        [
+          "Grand Line",
+          ""
+        ],
+        [
+          "Nouveau Monde",
+          ""
+        ]
       ],
       "answer": "East Blue",
       "difficulty": "Moyen",
@@ -677,14 +1532,33 @@
     },
     {
       "id": 46,
+      "type": 0,
       "question": "Quel film « One Piece » est centré sur le personnage de Shiki, le Lion d'Or ?",
       "propositions": [
-        "Red",
-        "Stampede",
-        "Gold",
-        "Strong World",
-        "Z",
-        "Baron Omatsuri et l'Île Secrète"
+        [
+          "Red",
+          ""
+        ],
+        [
+          "Stampede",
+          ""
+        ],
+        [
+          "Gold",
+          ""
+        ],
+        [
+          "Strong World",
+          ""
+        ],
+        [
+          "Z",
+          ""
+        ],
+        [
+          "Baron Omatsuri et l'Île Secrète",
+          ""
+        ]
       ],
       "answer": "Strong World",
       "difficulty": "Moyen",
@@ -692,14 +1566,33 @@
     },
     {
       "id": 47,
+      "type": 0,
       "question": "Quel personnage de « One Piece » s'est autoproclamé Barbe Blanche Junior ?",
       "propositions": [
-        "Machvise",
-        "Raizo",
-        "Albion",
-        "Weeble",
-        "Sickle",
-        "Scopper Gaban"
+        [
+          "Machvise",
+          ""
+        ],
+        [
+          "Raizo",
+          ""
+        ],
+        [
+          "Albion",
+          ""
+        ],
+        [
+          "Weeble",
+          ""
+        ],
+        [
+          "Sickle",
+          ""
+        ],
+        [
+          "Scopper Gaban",
+          ""
+        ]
       ],
       "answer": "Weeble",
       "difficulty": "Moyen",
@@ -707,14 +1600,33 @@
     },
     {
       "id": 48,
+      "type": 0,
       "question": "Quel est le membre le plus âgé de l'équipage de Don Quichotte Dolfamingo ?",
       "propositions": [
-        "Lao G",
-        "Jora",
-        "Señor Pink",
-        "Trébol",
-        "Pica",
-        "Vergo"
+        [
+          "Lao G",
+          ""
+        ],
+        [
+          "Jora",
+          ""
+        ],
+        [
+          "Señor Pink",
+          ""
+        ],
+        [
+          "Trébol",
+          ""
+        ],
+        [
+          "Pica",
+          ""
+        ],
+        [
+          "Vergo",
+          ""
+        ]
       ],
       "answer": "Lao G",
       "difficulty": "Moyen",
@@ -722,14 +1634,33 @@
     },
     {
       "id": 49,
+      "type": 0,
       "question": "Comment se prénomme le père de Nefertari Vivi, dont la mère est Titi ?",
       "propositions": [
-        "Cobra",
-        "Chaka",
-        "Igaram",
-        "Pell",
-        "Dalton",
-        "Koza"
+        [
+          "Cobra",
+          ""
+        ],
+        [
+          "Chaka",
+          ""
+        ],
+        [
+          "Igaram",
+          ""
+        ],
+        [
+          "Pell",
+          ""
+        ],
+        [
+          "Dalton",
+          ""
+        ],
+        [
+          "Koza",
+          ""
+        ]
       ],
       "answer": "Cobra",
       "difficulty": "Moyen",
@@ -737,14 +1668,33 @@
     },
     {
       "id": 50,
+      "type": 0,
       "question": "Quel dragon céleste au large visage obèse fut frappé par Luffy à Sabaody ?",
       "propositions": [
-        "Saint Mjosgard",
-        "Saint Camael",
-        "Saint Charlos",
-        "Saint Rosward",
-        "Saint Jalmack",
-        "Saint Figarland"
+        [
+          "Saint Mjosgard",
+          ""
+        ],
+        [
+          "Saint Camael",
+          ""
+        ],
+        [
+          "Saint Charlos",
+          ""
+        ],
+        [
+          "Saint Rosward",
+          ""
+        ],
+        [
+          "Saint Jalmack",
+          ""
+        ],
+        [
+          "Saint Figarland",
+          ""
+        ]
       ],
       "answer": "Saint Charlos",
       "difficulty": "Moyen",
@@ -752,14 +1702,33 @@
     },
     {
       "id": 51,
+      "type": 0,
       "question": "Quel personnage devint directeur d'Impel Down, après rétrogradation de Magellan ?",
       "propositions": [
-        "Domino",
-        "Hannyabal",
-        "Shiliew",
-        "Sadi",
-        "Ivankov",
-        "Inazuma"
+        [
+          "Domino",
+          ""
+        ],
+        [
+          "Hannyabal",
+          ""
+        ],
+        [
+          "Shiliew",
+          ""
+        ],
+        [
+          "Sadi",
+          ""
+        ],
+        [
+          "Ivankov",
+          ""
+        ],
+        [
+          "Inazuma",
+          ""
+        ]
       ],
       "answer": "Hannyabal",
       "difficulty": "Difficile",
@@ -767,14 +1736,33 @@
     },
     {
       "id": 52,
+      "type": 0,
       "question": "De quelle organisation faisait partie Nero, la loutre de mer ?",
       "propositions": [
-        "La Pègre",
-        "Les révolutionnaires",
-        "Cipher Pol",
-        "Baroque Works",
-        "Marine",
-        "Pirates de l'Équipage de Kaido"
+        [
+          "La Pègre",
+          ""
+        ],
+        [
+          "Les révolutionnaires",
+          ""
+        ],
+        [
+          "Cipher Pol",
+          ""
+        ],
+        [
+          "Baroque Works",
+          ""
+        ],
+        [
+          "Marine",
+          ""
+        ],
+        [
+          "Pirates de l'Équipage de Kaido",
+          ""
+        ]
       ],
       "answer": "Cipher Pol",
       "difficulty": "Difficile",
@@ -782,14 +1770,33 @@
     },
     {
       "id": 53,
+      "type": 0,
       "question": "Babanuki, directeur de la mine au Pays des Wa, a mangé le SMILE de quel animal ?",
       "propositions": [
-        "Mouton",
-        "Éléphant",
-        "Cheval",
-        "Lion",
-        "Girafe",
-        "Ours"
+        [
+          "Mouton",
+          ""
+        ],
+        [
+          "Éléphant",
+          ""
+        ],
+        [
+          "Cheval",
+          ""
+        ],
+        [
+          "Lion",
+          ""
+        ],
+        [
+          "Girafe",
+          ""
+        ],
+        [
+          "Ours",
+          ""
+        ]
       ],
       "answer": "Éléphant",
       "difficulty": "Difficile",
@@ -797,14 +1804,33 @@
     },
     {
       "id": 54,
+      "type": 0,
       "question": "Quel jeu vidéo One Piece, sorti en 2023, est un jeu de rôle au tour par tour ?",
       "propositions": [
-        "Gear Spirit",
-        "Odyssey",
-        "Romance Dawn",
-        "World Seeker",
-        "Burning Blood",
-        "Pirate Warriors"
+        [
+          "Gear Spirit",
+          ""
+        ],
+        [
+          "Odyssey",
+          ""
+        ],
+        [
+          "Romance Dawn",
+          ""
+        ],
+        [
+          "World Seeker",
+          ""
+        ],
+        [
+          "Burning Blood",
+          ""
+        ],
+        [
+          "Pirate Warriors",
+          ""
+        ]
       ],
       "answer": "Odyssey",
       "difficulty": "Difficile",
@@ -812,14 +1838,33 @@
     },
     {
       "id": 55,
+      "type": 0,
       "question": "Dans « One Piece », qui a mangé le Hira Hira no Mi, fruit du vol-au-vent ?",
       "propositions": [
-        "Bellamy",
-        "Smoker",
-        "Kuzan",
-        "Diamante",
-        "Trafalgar Law",
-        "Sugar"
+        [
+          "Bellamy",
+          ""
+        ],
+        [
+          "Smoker",
+          ""
+        ],
+        [
+          "Kuzan",
+          ""
+        ],
+        [
+          "Diamante",
+          ""
+        ],
+        [
+          "Trafalgar Law",
+          ""
+        ],
+        [
+          "Sugar",
+          ""
+        ]
       ],
       "answer": "Diamante",
       "difficulty": "Difficile",
@@ -827,14 +1872,33 @@
     },
     {
       "id": 56,
+      "type": 0,
       "question": "Quel enfant de la famille Charlotte fut vaincu par Urouge et perdit son grade de général ?",
       "propositions": [
-        "Snack",
-        "Katakuri",
-        "Cracker",
-        "Smoothie",
-        "Perospero",
-        "Daifuku"
+        [
+          "Snack",
+          ""
+        ],
+        [
+          "Katakuri",
+          ""
+        ],
+        [
+          "Cracker",
+          ""
+        ],
+        [
+          "Smoothie",
+          ""
+        ],
+        [
+          "Perospero",
+          ""
+        ],
+        [
+          "Daifuku",
+          ""
+        ]
       ],
       "answer": "Snack",
       "difficulty": "Difficile",
@@ -842,14 +1906,33 @@
     },
     {
       "id": 57,
+      "type": 0,
       "question": "Quel commandant de l'armée révolutionnaire a la charge de l'armée du nord ?",
       "propositions": [
-        "Morley",
-        "Lindbergh",
-        "Karasu",
-        "Betty",
-        "Sabo",
-        "Koala"
+        [
+          "Morley",
+          ""
+        ],
+        [
+          "Lindbergh",
+          ""
+        ],
+        [
+          "Karasu",
+          ""
+        ],
+        [
+          "Betty",
+          ""
+        ],
+        [
+          "Sabo",
+          ""
+        ],
+        [
+          "Koala",
+          ""
+        ]
       ],
       "answer": "Karasu",
       "difficulty": "Difficile",
@@ -857,14 +1940,33 @@
     },
     {
       "id": 58,
+      "type": 0,
       "question": "Quel grade occupait Smoker entre les événements d'Alabasta et ceux de l'ellipse ?",
       "propositions": [
-        "Vice-Amiral",
-        "Capitaine",
-        "Contre-Amiral",
-        "Sous-Amiral",
-        "Amiral",
-        "Enseigne"
+        [
+          "Vice-Amiral",
+          ""
+        ],
+        [
+          "Capitaine",
+          ""
+        ],
+        [
+          "Contre-Amiral",
+          ""
+        ],
+        [
+          "Sous-Amiral",
+          ""
+        ],
+        [
+          "Amiral",
+          ""
+        ],
+        [
+          "Enseigne",
+          ""
+        ]
       ],
       "answer": "Contre-Amiral",
       "difficulty": "Difficile",
@@ -872,14 +1974,33 @@
     },
     {
       "id": 59,
+      "type": 0,
       "question": "Quel est le nom du troisième opening de l'anime, intégré aux épisodes 116 à 168 ?",
       "propositions": [
-        "Hikari E",
-        "Strong Word",
-        "We are",
-        "Believe",
-        "Hope",
-        "Share the World"
+        [
+          "Hikari E",
+          ""
+        ],
+        [
+          "Strong Word",
+          ""
+        ],
+        [
+          "We are",
+          ""
+        ],
+        [
+          "Believe",
+          ""
+        ],
+        [
+          "Hope",
+          ""
+        ],
+        [
+          "Share the World",
+          ""
+        ]
       ],
       "answer": "Hikari E",
       "difficulty": "Difficile",
@@ -887,14 +2008,33 @@
     },
     {
       "id": 60,
+      "type": 0,
       "question": "Quel pirate de l'équipage de Rocks fut ressuscité par Gecko Moria ?",
       "propositions": [
-        "Perona",
-        "Absalom",
-        "John",
-        "Ryuma",
-        "Oz",
-        "Hogback"
+        [
+          "Perona",
+          ""
+        ],
+        [
+          "Absalom",
+          ""
+        ],
+        [
+          "John",
+          ""
+        ],
+        [
+          "Ryuma",
+          ""
+        ],
+        [
+          "Oz",
+          ""
+        ],
+        [
+          "Hogback",
+          ""
+        ]
       ],
       "answer": "John",
       "difficulty": "Difficile",
@@ -902,14 +2042,33 @@
     },
     {
       "id": 61,
+      "type": 0,
       "question": "Où sont placés les deux propulseurs d'Astro le petit robot ?",
       "propositions": [
-        "Sous ses bras",
-        "À la ceinture",
-        "Dans le dos",
-        "Dans ses pieds",
-        "Dans ses mains",
-        "Sous ses oreilles"
+        [
+          "Sous ses bras",
+          ""
+        ],
+        [
+          "À la ceinture",
+          ""
+        ],
+        [
+          "Dans le dos",
+          ""
+        ],
+        [
+          "Dans ses pieds",
+          ""
+        ],
+        [
+          "Dans ses mains",
+          ""
+        ],
+        [
+          "Sous ses oreilles",
+          ""
+        ]
       ],
       "answer": "Dans ses pieds",
       "difficulty": "Facile",
@@ -917,14 +2076,33 @@
     },
     {
       "id": 62,
+      "type": 0,
       "question": "Qui n'en finit plus de mourir dans les premières saisons de South Park ?",
       "propositions": [
-        "Kyle",
-        "Eric",
-        "Stan",
-        "Kenny",
-        "Butters",
-        "Chef"
+        [
+          "Kyle",
+          ""
+        ],
+        [
+          "Eric",
+          ""
+        ],
+        [
+          "Stan",
+          ""
+        ],
+        [
+          "Kenny",
+          ""
+        ],
+        [
+          "Butters",
+          ""
+        ],
+        [
+          "Chef",
+          ""
+        ]
       ],
       "answer": "Kenny",
       "difficulty": "Facile",
@@ -932,14 +2110,33 @@
     },
     {
       "id": 63,
+      "type": 0,
       "question": "Avec lequel des garçons de sa bande fait habituellement équipe Scoubidou ?",
       "propositions": [
-        "Fred",
-        "Logan",
-        "Roger",
-        "Sammy",
-        "Daphné",
-        "Véra"
+        [
+          "Fred",
+          ""
+        ],
+        [
+          "Logan",
+          ""
+        ],
+        [
+          "Roger",
+          ""
+        ],
+        [
+          "Sammy",
+          ""
+        ],
+        [
+          "Daphné",
+          ""
+        ],
+        [
+          "Véra",
+          ""
+        ]
       ],
       "answer": "Sammy",
       "difficulty": "Facile",
@@ -947,14 +2144,33 @@
     },
     {
       "id": 64,
+      "type": 0,
       "question": "Qui est le plus âgé des enfants de la famille Simpson ?",
       "propositions": [
-        "Maggie",
-        "Marge",
-        "Lisa",
-        "Bart",
-        "Homer",
-        "Patty"
+        [
+          "Maggie",
+          ""
+        ],
+        [
+          "Marge",
+          ""
+        ],
+        [
+          "Lisa",
+          ""
+        ],
+        [
+          "Bart",
+          ""
+        ],
+        [
+          "Homer",
+          ""
+        ],
+        [
+          "Patty",
+          ""
+        ]
       ],
       "answer": "Bart",
       "difficulty": "Facile",
@@ -962,14 +2178,33 @@
     },
     {
       "id": 65,
+      "type": 0,
       "question": "Quel animal est Capucin, le petit compagnon de Candy ?",
       "propositions": [
-        "Lapin",
-        "Chat",
-        "Hamster",
-        "Raton laveur",
-        "Écureuil",
-        "Chiot"
+        [
+          "Lapin",
+          ""
+        ],
+        [
+          "Chat",
+          ""
+        ],
+        [
+          "Hamster",
+          ""
+        ],
+        [
+          "Raton laveur",
+          ""
+        ],
+        [
+          "Écureuil",
+          ""
+        ],
+        [
+          "Chiot",
+          ""
+        ]
       ],
       "answer": "Raton laveur",
       "difficulty": "Facile",
@@ -977,14 +2212,33 @@
     },
     {
       "id": 66,
+      "type": 0,
       "question": "Comment qualifier le manège de Margotte, Zébulon et Pollux ?",
       "propositions": [
-        "Hanté",
-        "Embrumé",
-        "Encerclé",
-        "Enchanté",
-        "Magique",
-        "Fantastique"
+        [
+          "Hanté",
+          ""
+        ],
+        [
+          "Embrumé",
+          ""
+        ],
+        [
+          "Encerclé",
+          ""
+        ],
+        [
+          "Enchanté",
+          ""
+        ],
+        [
+          "Magique",
+          ""
+        ],
+        [
+          "Fantastique",
+          ""
+        ]
       ],
       "answer": "Enchanté",
       "difficulty": "Facile",
@@ -992,14 +2246,33 @@
     },
     {
       "id": 67,
+      "type": 0,
       "question": "Qui est rond comme un ballon et plus jaune qu'un citron ?",
       "propositions": [
-        "Digger",
-        "Fruity",
-        "Pengo",
-        "Pac-Man",
-        "Sonic",
-        "Mario"
+        [
+          "Digger",
+          ""
+        ],
+        [
+          "Fruity",
+          ""
+        ],
+        [
+          "Pengo",
+          ""
+        ],
+        [
+          "Pac-Man",
+          ""
+        ],
+        [
+          "Sonic",
+          ""
+        ],
+        [
+          "Mario",
+          ""
+        ]
       ],
       "answer": "Pac-Man",
       "difficulty": "Facile",
@@ -1007,14 +2280,33 @@
     },
     {
       "id": 68,
+      "type": 0,
       "question": "Quel pivert possède le rire le plus reconnaissable de la télévision ?",
       "propositions": [
-        "Oscar Rapace",
-        "Falco Lombardi",
-        "Génius",
-        "Woody Woodpecker",
-        "Pico le Pivert",
-        "Le Grand Corbeau"
+        [
+          "Oscar Rapace",
+          ""
+        ],
+        [
+          "Falco Lombardi",
+          ""
+        ],
+        [
+          "Génius",
+          ""
+        ],
+        [
+          "Woody Woodpecker",
+          ""
+        ],
+        [
+          "Pico le Pivert",
+          ""
+        ],
+        [
+          "Le Grand Corbeau",
+          ""
+        ]
       ],
       "answer": "Woody Woodpecker",
       "difficulty": "Facile",
@@ -1022,14 +2314,33 @@
     },
     {
       "id": 69,
+      "type": 0,
       "question": "De quelle saga cinématographique « Clone Wars » est-il dérivé ?",
       "propositions": [
-        "Star Wars",
-        "Voraces",
-        "Star Trek",
-        "Harry Potter",
-        "Indiana Jones",
-        "Le Seigneur des Anneaux"
+        [
+          "Star Wars",
+          ""
+        ],
+        [
+          "Voraces",
+          ""
+        ],
+        [
+          "Star Trek",
+          ""
+        ],
+        [
+          "Harry Potter",
+          ""
+        ],
+        [
+          "Indiana Jones",
+          ""
+        ],
+        [
+          "Le Seigneur des Anneaux",
+          ""
+        ]
       ],
       "answer": "Star Wars",
       "difficulty": "Facile",
@@ -1037,14 +2348,33 @@
     },
     {
       "id": 70,
+      "type": 0,
       "question": "Qui est le meilleur ami de Tom Sayer à Saint-Petersburg ?",
       "propositions": [
-        "Huckleberry Finn",
-        "Benjamin Rogers",
-        "Muff Potter",
-        "Jim Hollis",
-        "Sid Sawyer",
-        "Joe Harper"
+        [
+          "Huckleberry Finn",
+          ""
+        ],
+        [
+          "Benjamin Rogers",
+          ""
+        ],
+        [
+          "Muff Potter",
+          ""
+        ],
+        [
+          "Jim Hollis",
+          ""
+        ],
+        [
+          "Sid Sawyer",
+          ""
+        ],
+        [
+          "Joe Harper",
+          ""
+        ]
       ],
       "answer": "Huckleberry Finn",
       "difficulty": "Facile",
@@ -1052,14 +2382,33 @@
     },
     {
       "id": 71,
+      "type": 0,
       "question": "Grâce à quel objet Gigi arrive-t-elle à se transformer en jeune femme ?",
       "propositions": [
-        "Pendentif",
-        "Parapluie",
-        "Chapeau",
-        "Ceinture",
-        "Baguette magique",
-        "Bague"
+        [
+          "Pendentif",
+          ""
+        ],
+        [
+          "Parapluie",
+          ""
+        ],
+        [
+          "Chapeau",
+          ""
+        ],
+        [
+          "Ceinture",
+          ""
+        ],
+        [
+          "Baguette magique",
+          ""
+        ],
+        [
+          "Bague",
+          ""
+        ]
       ],
       "answer": "Pendentif",
       "difficulty": "Moyen",
@@ -1067,14 +2416,33 @@
     },
     {
       "id": 72,
+      "type": 0,
       "question": "Qu'utilise le lutin Tofffsy pour savoir si on lui dit la vérité ?",
       "propositions": [
-        "Clé magique",
-        "Grimoire",
-        "Diamant bleu",
-        "Herbe musicale",
-        "Miroir magique",
-        "Cristal"
+        [
+          "Clé magique",
+          ""
+        ],
+        [
+          "Grimoire",
+          ""
+        ],
+        [
+          "Diamant bleu",
+          ""
+        ],
+        [
+          "Herbe musicale",
+          ""
+        ],
+        [
+          "Miroir magique",
+          ""
+        ],
+        [
+          "Cristal",
+          ""
+        ]
       ],
       "answer": "Herbe musicale",
       "difficulty": "Moyen",
@@ -1082,14 +2450,33 @@
     },
     {
       "id": 73,
+      "type": 0,
       "question": "Quel jeune héros de série télé âgé de 10 ans utilise l'Omnitrix ?",
       "propositions": [
-        "Ben 10",
-        "Kenny",
-        "Yogi",
-        "Astro",
-        "Jimmy Neutron",
-        "Dexter"
+        [
+          "Ben 10",
+          ""
+        ],
+        [
+          "Kenny",
+          ""
+        ],
+        [
+          "Yogi",
+          ""
+        ],
+        [
+          "Astro",
+          ""
+        ],
+        [
+          "Jimmy Neutron",
+          ""
+        ],
+        [
+          "Dexter",
+          ""
+        ]
       ],
       "answer": "Ben 10",
       "difficulty": "Moyen",
@@ -1097,14 +2484,33 @@
     },
     {
       "id": 74,
+      "type": 0,
       "question": "Grâce à quel objet Sophie communique-t-elle avec Finot dans « Inspecteur Gadget » ?",
       "propositions": [
-        "Bague",
-        "Montre",
-        "Poupée",
-        "Téléphone",
-        "Écouteur",
-        "Talkie-walkie"
+        [
+          "Bague",
+          ""
+        ],
+        [
+          "Montre",
+          ""
+        ],
+        [
+          "Poupée",
+          ""
+        ],
+        [
+          "Téléphone",
+          ""
+        ],
+        [
+          "Écouteur",
+          ""
+        ],
+        [
+          "Talkie-walkie",
+          ""
+        ]
       ],
       "answer": "Montre",
       "difficulty": "Moyen",
@@ -1112,14 +2518,33 @@
     },
     {
       "id": 75,
+      "type": 0,
       "question": "Que pilotent Satanas et Diabolo pour attraper le messager Zéphyrin ?",
       "propositions": [
-        "Autobus",
-        "Fusée",
-        "Biplan",
-        "Moto",
-        "Hélicoptère",
-        "Sous-marin"
+        [
+          "Autobus",
+          ""
+        ],
+        [
+          "Fusée",
+          ""
+        ],
+        [
+          "Biplan",
+          ""
+        ],
+        [
+          "Moto",
+          ""
+        ],
+        [
+          "Hélicoptère",
+          ""
+        ],
+        [
+          "Sous-marin",
+          ""
+        ]
       ],
       "answer": "Biplan",
       "difficulty": "Moyen",
@@ -1127,14 +2552,33 @@
     },
     {
       "id": 76,
+      "type": 0,
       "question": "Pour quelle raison Calimero est-il le seul poussin de couleur noire autour de lui ?",
       "propositions": [
-        "Il est furieux",
-        "Il est sale",
-        "Il est malade",
-        "Il est brûlé",
-        "Il est teint",
-        "Il est différent"
+        [
+          "Il est furieux",
+          ""
+        ],
+        [
+          "Il est sale",
+          ""
+        ],
+        [
+          "Il est malade",
+          ""
+        ],
+        [
+          "Il est brûlé",
+          ""
+        ],
+        [
+          "Il est teint",
+          ""
+        ],
+        [
+          "Il est différent",
+          ""
+        ]
       ],
       "answer": "Il est sale",
       "difficulty": "Moyen",
@@ -1142,14 +2586,33 @@
     },
     {
       "id": 77,
+      "type": 0,
       "question": "Quelle est la particularité vestimentaire de Yogi l'ours ?",
       "propositions": [
-        "Cravate et chapeau",
-        "Casquette et short",
-        "Cape et collants",
-        "Tee-shirt et tongs",
-        "Écharpe et bonnet",
-        "Lunettes et veste"
+        [
+          "Cravate et chapeau",
+          ""
+        ],
+        [
+          "Casquette et short",
+          ""
+        ],
+        [
+          "Cape et collants",
+          ""
+        ],
+        [
+          "Tee-shirt et tongs",
+          ""
+        ],
+        [
+          "Écharpe et bonnet",
+          ""
+        ],
+        [
+          "Lunettes et veste",
+          ""
+        ]
       ],
       "answer": "Cravate et chapeau",
       "difficulty": "Moyen",
@@ -1157,14 +2620,33 @@
     },
     {
       "id": 78,
+      "type": 0,
       "question": "Quel animal est Saturnin, héros de la série créée par Jean Tourane ?",
       "propositions": [
-        "Un zèbre",
-        "Un éléphant",
-        "Un caneton",
-        "Un raton laveur",
-        "Un chaton",
-        "Un chiot"
+        [
+          "Un zèbre",
+          ""
+        ],
+        [
+          "Un éléphant",
+          ""
+        ],
+        [
+          "Un caneton",
+          ""
+        ],
+        [
+          "Un raton laveur",
+          ""
+        ],
+        [
+          "Un chaton",
+          ""
+        ],
+        [
+          "Un chiot",
+          ""
+        ]
       ],
       "answer": "Un caneton",
       "difficulty": "Moyen",
@@ -1172,14 +2654,33 @@
     },
     {
       "id": 79,
+      "type": 0,
       "question": "Par quel procédé d'animation le clown Kiri a-t-il été créé ?",
       "propositions": [
-        "Papier carton",
-        "Plasticine",
-        "Marionnettes",
-        "Mosaïques",
-        "Dessin animé classique",
-        "Stop motion"
+        [
+          "Papier carton",
+          ""
+        ],
+        [
+          "Plasticine",
+          ""
+        ],
+        [
+          "Marionnettes",
+          ""
+        ],
+        [
+          "Mosaïques",
+          ""
+        ],
+        [
+          "Dessin animé classique",
+          ""
+        ],
+        [
+          "Stop motion",
+          ""
+        ]
       ],
       "answer": "Marionnettes",
       "difficulty": "Moyen",
@@ -1187,14 +2688,33 @@
     },
     {
       "id": 80,
+      "type": 0,
       "question": "Quelle héroïne de dessin animé a été la star des studios Fleischer avec Popeye ?",
       "propositions": [
-        "Dora Marquez",
-        "Manny",
-        "Charlotte",
-        "Betty Boop",
-        "Minnie Mouse",
-        "Olive Oyl"
+        [
+          "Dora Marquez",
+          ""
+        ],
+        [
+          "Manny",
+          ""
+        ],
+        [
+          "Charlotte",
+          ""
+        ],
+        [
+          "Betty Boop",
+          ""
+        ],
+        [
+          "Minnie Mouse",
+          ""
+        ],
+        [
+          "Olive Oyl",
+          ""
+        ]
       ],
       "answer": "Betty Boop",
       "difficulty": "Moyen",
@@ -1202,14 +2722,33 @@
     },
     {
       "id": 81,
+      "type": 0,
       "question": "Quelle est la chaîne jeunesse dont le slogan a été « La télé qui remue toute la famille » ?",
       "propositions": [
-        "HD1",
-        "W9",
-        "Cstar",
-        "Gulli",
-        "Canal J",
-        "Tiji"
+        [
+          "HD1",
+          ""
+        ],
+        [
+          "W9",
+          ""
+        ],
+        [
+          "Cstar",
+          ""
+        ],
+        [
+          "Gulli",
+          ""
+        ],
+        [
+          "Canal J",
+          ""
+        ],
+        [
+          "Tiji",
+          ""
+        ]
       ],
       "answer": "Gulli",
       "difficulty": "Difficile",
@@ -1217,14 +2756,33 @@
     },
     {
       "id": 82,
+      "type": 0,
       "question": "Quels personnages sautillent en s'engouffrant dans leur poche ?",
       "propositions": [
-        "Entrechats",
-        "Tifins",
-        "Bisounours",
-        "Popples",
-        "Télétubbies",
-        "Fous du volant"
+        [
+          "Entrechats",
+          ""
+        ],
+        [
+          "Tifins",
+          ""
+        ],
+        [
+          "Bisounours",
+          ""
+        ],
+        [
+          "Popples",
+          ""
+        ],
+        [
+          "Télétubbies",
+          ""
+        ],
+        [
+          "Fous du volant",
+          ""
+        ]
       ],
       "answer": "Popples",
       "difficulty": "Difficile",
@@ -1232,14 +2790,33 @@
     },
     {
       "id": 83,
+      "type": 0,
       "question": "De quelle série télévisée d'animation le jeune Yugo est-il le héros ?",
       "propositions": [
-        "Code Lyoko",
-        "Molusco",
-        "Star Butterfly",
-        "Wakfu",
-        "Dofus",
-        "Ogrest"
+        [
+          "Code Lyoko",
+          ""
+        ],
+        [
+          "Molusco",
+          ""
+        ],
+        [
+          "Star Butterfly",
+          ""
+        ],
+        [
+          "Wakfu",
+          ""
+        ],
+        [
+          "Dofus",
+          ""
+        ],
+        [
+          "Ogrest",
+          ""
+        ]
       ],
       "answer": "Wakfu",
       "difficulty": "Difficile",
@@ -1247,14 +2824,33 @@
     },
     {
       "id": 84,
+      "type": 0,
       "question": "Qui est probablement le plus célèbre shérif de l'espace ?",
       "propositions": [
-        "Xender",
-        "Xerox",
-        "X-Man",
-        "X-Or",
-        "Capitaine Flam",
-        "Albator"
+        [
+          "Xender",
+          ""
+        ],
+        [
+          "Xerox",
+          ""
+        ],
+        [
+          "X-Man",
+          ""
+        ],
+        [
+          "X-Or",
+          ""
+        ],
+        [
+          "Capitaine Flam",
+          ""
+        ],
+        [
+          "Albator",
+          ""
+        ]
       ],
       "answer": "X-Or",
       "difficulty": "Difficile",
@@ -1262,14 +2858,33 @@
     },
     {
       "id": 85,
+      "type": 0,
       "question": "Comment se nomme le renard et ennemi d'Aglaé et Sidonie ?",
       "propositions": [
-        "Agénor",
-        "Saturnin",
-        "Hugo",
-        "Croquetou",
-        "Barnabé",
-        "Finot"
+        [
+          "Agénor",
+          ""
+        ],
+        [
+          "Saturnin",
+          ""
+        ],
+        [
+          "Hugo",
+          ""
+        ],
+        [
+          "Croquetou",
+          ""
+        ],
+        [
+          "Barnabé",
+          ""
+        ],
+        [
+          "Finot",
+          ""
+        ]
       ],
       "answer": "Croquetou",
       "difficulty": "Difficile",
@@ -1277,14 +2892,33 @@
     },
     {
       "id": 86,
+      "type": 0,
       "question": "Quel animal était Monsieur Ed dans la série éponyme américaine destinée aux enfants ?",
       "propositions": [
-        "Cheval",
-        "Ane",
-        "Lion",
-        "Hibou",
-        "Chien",
-        "Poney"
+        [
+          "Cheval",
+          ""
+        ],
+        [
+          "Ane",
+          ""
+        ],
+        [
+          "Lion",
+          ""
+        ],
+        [
+          "Hibou",
+          ""
+        ],
+        [
+          "Chien",
+          ""
+        ],
+        [
+          "Poney",
+          ""
+        ]
       ],
       "answer": "Cheval",
       "difficulty": "Difficile",
@@ -1292,14 +2926,33 @@
     },
     {
       "id": 87,
+      "type": 0,
       "question": "Quel est le métier de Picolo, personnage créé pour Radio-Canada ?",
       "propositions": [
-        "Peintre",
-        "Boulanger",
-        "Banquier",
-        "Plombier",
-        "Cuisinier",
-        "Musicien"
+        [
+          "Peintre",
+          ""
+        ],
+        [
+          "Boulanger",
+          ""
+        ],
+        [
+          "Banquier",
+          ""
+        ],
+        [
+          "Plombier",
+          ""
+        ],
+        [
+          "Cuisinier",
+          ""
+        ],
+        [
+          "Musicien",
+          ""
+        ]
       ],
       "answer": "Peintre",
       "difficulty": "Difficile",
@@ -1307,14 +2960,33 @@
     },
     {
       "id": 88,
+      "type": 0,
       "question": "Combien sont les héros des Petites Canailles apparues en 1962 ?",
       "propositions": [
-        "Huit",
-        "Cinq",
-        "Six",
-        "Sept",
-        "Quatre",
-        "Trois"
+        [
+          "Huit",
+          ""
+        ],
+        [
+          "Cinq",
+          ""
+        ],
+        [
+          "Six",
+          ""
+        ],
+        [
+          "Sept",
+          ""
+        ],
+        [
+          "Quatre",
+          ""
+        ],
+        [
+          "Trois",
+          ""
+        ]
       ],
       "answer": "Cinq",
       "difficulty": "Difficile",
@@ -1322,14 +2994,33 @@
     },
     {
       "id": 89,
+      "type": 0,
       "question": "Lequel de ces dessins animés n'a pas été produit par Hanna-Barbera ?",
       "propositions": [
-        "Capitaine Caverne",
-        "Calimero",
-        "Scoubidou",
-        "Les Pierrafeu",
-        "Yogi l'ours",
-        "Les Fous du volant"
+        [
+          "Capitaine Caverne",
+          ""
+        ],
+        [
+          "Calimero",
+          ""
+        ],
+        [
+          "Scoubidou",
+          ""
+        ],
+        [
+          "Les Pierrafeu",
+          ""
+        ],
+        [
+          "Yogi l'ours",
+          ""
+        ],
+        [
+          "Les Fous du volant",
+          ""
+        ]
       ],
       "answer": "Calimero",
       "difficulty": "Difficile",
@@ -1337,14 +3028,33 @@
     },
     {
       "id": 90,
+      "type": 0,
       "question": "Quel petit animal est Hamtaro dans le manga créé par Ritsuko Kawai ?",
       "propositions": [
-        "Cheval",
-        "Caneton",
-        "Hamster",
-        "Raton laveur",
-        "Souris",
-        "Gerbille"
+        [
+          "Cheval",
+          ""
+        ],
+        [
+          "Caneton",
+          ""
+        ],
+        [
+          "Hamster",
+          ""
+        ],
+        [
+          "Raton laveur",
+          ""
+        ],
+        [
+          "Souris",
+          ""
+        ],
+        [
+          "Gerbille",
+          ""
+        ]
       ],
       "answer": "Hamster",
       "difficulty": "Difficile",

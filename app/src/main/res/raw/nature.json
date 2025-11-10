@@ -2,14 +2,33 @@
   "quizz": [
     {
       "id": 1,
+      "type": 0,
       "question": "Que stockent les cactus dans leurs tissus pour faire plus efficacement face à la sécheresse ?",
       "propositions": [
-        "Terre",
-        "Suc",
-        "Sel",
-        "Épines",
-        "Carbone",
-        "Sable"
+        [
+          "Terre",
+          ""
+        ],
+        [
+          "Suc",
+          ""
+        ],
+        [
+          "Sel",
+          ""
+        ],
+        [
+          "Épines",
+          ""
+        ],
+        [
+          "Carbone",
+          ""
+        ],
+        [
+          "Sable",
+          ""
+        ]
       ],
       "answer": "Suc",
       "difficulty": "Facile",
@@ -17,14 +36,33 @@
     },
     {
       "id": 2,
+      "type": 0,
       "question": "Combien d'espèces environ comprend la famille des Cactaceae ?",
       "propositions": [
-        "2 500",
-        "1 500",
-        "3 500",
-        "4 500",
-        "500",
-        "10 000"
+        [
+          "2 500",
+          ""
+        ],
+        [
+          "1 500",
+          ""
+        ],
+        [
+          "3 500",
+          ""
+        ],
+        [
+          "4 500",
+          ""
+        ],
+        [
+          "500",
+          ""
+        ],
+        [
+          "10 000",
+          ""
+        ]
       ],
       "answer": "2 500",
       "difficulty": "Facile",
@@ -32,14 +70,33 @@
     },
     {
       "id": 3,
+      "type": 0,
       "question": "Quelle forme de cactus est souvent appréciée des collectionneurs ?",
       "propositions": [
-        "Monstrueuse",
-        "Arbustive",
-        "Grimpante",
-        "Globulaire",
-        "Plate",
-        "Cylindrique"
+        [
+          "Monstrueuse",
+          ""
+        ],
+        [
+          "Arbustive",
+          ""
+        ],
+        [
+          "Grimpante",
+          ""
+        ],
+        [
+          "Globulaire",
+          ""
+        ],
+        [
+          "Plate",
+          ""
+        ],
+        [
+          "Cylindrique",
+          ""
+        ]
       ],
       "answer": "Monstrueuse",
       "difficulty": "Facile",
@@ -47,14 +104,33 @@
     },
     {
       "id": 4,
+      "type": 0,
       "question": "Avec ses raquettes, de quel pays est originaire le figuier de Barbarie ?",
       "propositions": [
-        "Mexique",
-        "Espagne",
-        "Grèce",
-        "Australie",
-        "Maroc",
-        "Argentine"
+        [
+          "Mexique",
+          ""
+        ],
+        [
+          "Espagne",
+          ""
+        ],
+        [
+          "Grèce",
+          ""
+        ],
+        [
+          "Australie",
+          ""
+        ],
+        [
+          "Maroc",
+          ""
+        ],
+        [
+          "Argentine",
+          ""
+        ]
       ],
       "answer": "Mexique",
       "difficulty": "Facile",
@@ -62,14 +138,33 @@
     },
     {
       "id": 5,
+      "type": 0,
       "question": "À quel moment de la journée les cactus absorbent-ils le dioxyde de carbone ?",
       "propositions": [
-        "Le jour",
-        "Jour et nuit",
-        "Jamais",
-        "La nuit",
-        "Au crépuscule",
-        "À l'aube"
+        [
+          "Le jour",
+          ""
+        ],
+        [
+          "Jour et nuit",
+          ""
+        ],
+        [
+          "Jamais",
+          ""
+        ],
+        [
+          "La nuit",
+          ""
+        ],
+        [
+          "Au crépuscule",
+          ""
+        ],
+        [
+          "À l'aube",
+          ""
+        ]
       ],
       "answer": "La nuit",
       "difficulty": "Facile",
@@ -77,14 +172,33 @@
     },
     {
       "id": 6,
+      "type": 0,
       "question": "Qui a ramené les premiers cactus en Europe (des Melocactus) ?",
       "propositions": [
-        "Diogo Gomes",
-        "Pedro de Sintra",
-        "Christophe Colomb",
-        "Afonso de Paiva",
-        "Vasco de Gama",
-        "Fernand de Magellan"
+        [
+          "Diogo Gomes",
+          ""
+        ],
+        [
+          "Pedro de Sintra",
+          ""
+        ],
+        [
+          "Christophe Colomb",
+          ""
+        ],
+        [
+          "Afonso de Paiva",
+          ""
+        ],
+        [
+          "Vasco de Gama",
+          ""
+        ],
+        [
+          "Fernand de Magellan",
+          ""
+        ]
       ],
       "answer": "Christophe Colomb",
       "difficulty": "Facile",
@@ -92,14 +206,33 @@
     },
     {
       "id": 7,
+      "type": 0,
       "question": "Idéalement, à quelle fréquence est-il nécessaire de rempoter un cactus ?",
       "propositions": [
-        "Tous les 4 ans",
-        "Tous les 8 ans",
-        "Tous les 16 ans",
-        "Tous les 12 ans",
-        "Chaque année",
-        "Tous les 2 ans"
+        [
+          "Tous les 4 ans",
+          ""
+        ],
+        [
+          "Tous les 8 ans",
+          ""
+        ],
+        [
+          "Tous les 16 ans",
+          ""
+        ],
+        [
+          "Tous les 12 ans",
+          ""
+        ],
+        [
+          "Chaque année",
+          ""
+        ],
+        [
+          "Tous les 2 ans",
+          ""
+        ]
       ],
       "answer": "Tous les 4 ans",
       "difficulty": "Facile",
@@ -107,14 +240,33 @@
     },
     {
       "id": 8,
+      "type": 0,
       "question": "Quelle est la température la plus adéquate pour le repos hivernal du cactus ?",
       "propositions": [
-        "7° C",
-        "22° C",
-        "17° C",
-        "12° C",
-        "30° C",
-        "0° C"
+        [
+          "7° C",
+          ""
+        ],
+        [
+          "22° C",
+          ""
+        ],
+        [
+          "17° C",
+          ""
+        ],
+        [
+          "12° C",
+          ""
+        ],
+        [
+          "30° C",
+          ""
+        ],
+        [
+          "0° C",
+          ""
+        ]
       ],
       "answer": "7° C",
       "difficulty": "Facile",
@@ -122,14 +274,33 @@
     },
     {
       "id": 9,
+      "type": 0,
       "question": "De quelle quantité de lumière un cactus a-t-il besoin pour s'épanouir ?",
       "propositions": [
-        "Un peu",
-        "Beaucoup",
-        "Aucune",
-        "Le maximum",
-        "Lumière indirecte",
-        "Mi-ombre"
+        [
+          "Un peu",
+          ""
+        ],
+        [
+          "Beaucoup",
+          ""
+        ],
+        [
+          "Aucune",
+          ""
+        ],
+        [
+          "Le maximum",
+          ""
+        ],
+        [
+          "Lumière indirecte",
+          ""
+        ],
+        [
+          "Mi-ombre",
+          ""
+        ]
       ],
       "answer": "Le maximum",
       "difficulty": "Facile",
@@ -137,14 +308,33 @@
     },
     {
       "id": 10,
+      "type": 0,
       "question": "Dans quelles régions du globe les cactus poussent-ils le mieux ?",
       "propositions": [
-        "Prairies",
-        "Montagnes",
-        "Plaines",
-        "Déserts",
-        "Forêts tropicales",
-        "Zones humides"
+        [
+          "Prairies",
+          ""
+        ],
+        [
+          "Montagnes",
+          ""
+        ],
+        [
+          "Plaines",
+          ""
+        ],
+        [
+          "Déserts",
+          ""
+        ],
+        [
+          "Forêts tropicales",
+          ""
+        ],
+        [
+          "Zones humides",
+          ""
+        ]
       ],
       "answer": "Déserts",
       "difficulty": "Facile",
@@ -152,14 +342,33 @@
     },
     {
       "id": 11,
+      "type": 0,
       "question": "Combien de loges comporte la baie du fruit du cactus ?",
       "propositions": [
-        "Trois",
-        "Deux",
-        "Quatre",
-        "Une seule",
-        "Cinq",
-        "Six"
+        [
+          "Trois",
+          ""
+        ],
+        [
+          "Deux",
+          ""
+        ],
+        [
+          "Quatre",
+          ""
+        ],
+        [
+          "Une seule",
+          ""
+        ],
+        [
+          "Cinq",
+          ""
+        ],
+        [
+          "Six",
+          ""
+        ]
       ],
       "answer": "Une seule",
       "difficulty": "Moyen",
@@ -167,14 +376,33 @@
     },
     {
       "id": 12,
+      "type": 0,
       "question": "Quel cactus était autrefois utilisé à des fins rituelles par les Amérindiens ?",
       "propositions": [
-        "San Pedro",
-        "Peyotl",
-        "Hylocereus",
-        "Cereus",
-        "Echinopsis",
-        "Opuntia"
+        [
+          "San Pedro",
+          ""
+        ],
+        [
+          "Peyotl",
+          ""
+        ],
+        [
+          "Hylocereus",
+          ""
+        ],
+        [
+          "Cereus",
+          ""
+        ],
+        [
+          "Echinopsis",
+          ""
+        ],
+        [
+          "Opuntia",
+          ""
+        ]
       ],
       "answer": "Peyotl",
       "difficulty": "Moyen",
@@ -182,14 +410,33 @@
     },
     {
       "id": 13,
+      "type": 0,
       "question": "Que signifie le mot grec ancien kaktos, d'où provient le nom cactus ?",
       "propositions": [
-        "Épine",
-        "Résine",
-        "Chardon",
-        "Soleil",
-        "Eau",
-        "Gros"
+        [
+          "Épine",
+          ""
+        ],
+        [
+          "Résine",
+          ""
+        ],
+        [
+          "Chardon",
+          ""
+        ],
+        [
+          "Soleil",
+          ""
+        ],
+        [
+          "Eau",
+          ""
+        ],
+        [
+          "Gros",
+          ""
+        ]
       ],
       "answer": "Chardon",
       "difficulty": "Moyen",
@@ -197,14 +444,33 @@
     },
     {
       "id": 14,
+      "type": 0,
       "question": "En combien de genres sont réparties les 2 500 espèces de cactus connues ?",
       "propositions": [
-        "70",
-        "30",
-        "50",
-        "90",
-        "120",
-        "10"
+        [
+          "70",
+          ""
+        ],
+        [
+          "30",
+          ""
+        ],
+        [
+          "50",
+          ""
+        ],
+        [
+          "90",
+          ""
+        ],
+        [
+          "120",
+          ""
+        ],
+        [
+          "10",
+          ""
+        ]
       ],
       "answer": "90",
       "difficulty": "Moyen",
@@ -212,14 +478,33 @@
     },
     {
       "id": 15,
+      "type": 0,
       "question": "Quels cactus ont gardé l'aspect d'arbustes classiques ainsi que leurs vraies feuilles ?",
       "propositions": [
-        "Primitifs",
-        "Épiphytes",
-        "Globuleux",
-        "Colonnaires",
-        "Grands",
-        "Miniatures"
+        [
+          "Primitifs",
+          ""
+        ],
+        [
+          "Épiphytes",
+          ""
+        ],
+        [
+          "Globuleux",
+          ""
+        ],
+        [
+          "Colonnaires",
+          ""
+        ],
+        [
+          "Grands",
+          ""
+        ],
+        [
+          "Miniatures",
+          ""
+        ]
       ],
       "answer": "Primitifs",
       "difficulty": "Moyen",
@@ -227,14 +512,33 @@
     },
     {
       "id": 16,
+      "type": 0,
       "question": "En combien de types morphologiques peuvent être regroupés les cactus ?",
       "propositions": [
-        "Quatre",
-        "Sept",
-        "Cinq",
-        "Six",
-        "Trois",
-        "Huit"
+        [
+          "Quatre",
+          ""
+        ],
+        [
+          "Sept",
+          ""
+        ],
+        [
+          "Cinq",
+          ""
+        ],
+        [
+          "Six",
+          ""
+        ],
+        [
+          "Trois",
+          ""
+        ],
+        [
+          "Huit",
+          ""
+        ]
       ],
       "answer": "Cinq",
       "difficulty": "Moyen",
@@ -242,14 +546,33 @@
     },
     {
       "id": 17,
+      "type": 0,
       "question": "Dans quel pays le fait de ramasser des cactus est-il puni de prison ?",
       "propositions": [
-        "Algérie",
-        "Argentine",
-        "Inde",
-        "Mexique",
-        "États-Unis",
-        "Brésil"
+        [
+          "Algérie",
+          ""
+        ],
+        [
+          "Argentine",
+          ""
+        ],
+        [
+          "Inde",
+          ""
+        ],
+        [
+          "Mexique",
+          ""
+        ],
+        [
+          "États-Unis",
+          ""
+        ],
+        [
+          "Brésil",
+          ""
+        ]
       ],
       "answer": "Mexique",
       "difficulty": "Moyen",
@@ -257,14 +580,33 @@
     },
     {
       "id": 18,
+      "type": 0,
       "question": "Pour quel élevage l'Opuntia a-t-il été importé en Australie ?",
       "propositions": [
-        "Coléoptères",
-        "Cloportes",
-        "Coccinelles",
-        "Cochenilles",
-        "Papillons",
-        "Abeilles"
+        [
+          "Coléoptères",
+          ""
+        ],
+        [
+          "Cloportes",
+          ""
+        ],
+        [
+          "Coccinelles",
+          ""
+        ],
+        [
+          "Cochenilles",
+          ""
+        ],
+        [
+          "Papillons",
+          ""
+        ],
+        [
+          "Abeilles",
+          ""
+        ]
       ],
       "answer": "Cochenilles",
       "difficulty": "Moyen",
@@ -272,14 +614,33 @@
     },
     {
       "id": 19,
+      "type": 0,
       "question": "Quelle technique permet facilement la multiplication des cactus ?",
       "propositions": [
-        "Bouturage",
-        "Marcottage",
-        "Cernage",
-        "Tuteurage",
-        "Greffage",
-        "Semis"
+        [
+          "Bouturage",
+          ""
+        ],
+        [
+          "Marcottage",
+          ""
+        ],
+        [
+          "Cernage",
+          ""
+        ],
+        [
+          "Tuteurage",
+          ""
+        ],
+        [
+          "Greffage",
+          ""
+        ],
+        [
+          "Semis",
+          ""
+        ]
       ],
       "answer": "Bouturage",
       "difficulty": "Moyen",
@@ -287,14 +648,33 @@
     },
     {
       "id": 20,
+      "type": 0,
       "question": "Quelle marque de voiture française propose un modèle baptisé cactus ?",
       "propositions": [
-        "Citroën C4",
-        "Nissan Juke",
-        "Peugeot P4",
-        "Audi Q2",
-        "Renault Captur",
-        "Dacia Duster"
+        [
+          "Citroën C4",
+          ""
+        ],
+        [
+          "Nissan Juke",
+          ""
+        ],
+        [
+          "Peugeot P4",
+          ""
+        ],
+        [
+          "Audi Q2",
+          ""
+        ],
+        [
+          "Renault Captur",
+          ""
+        ],
+        [
+          "Dacia Duster",
+          ""
+        ]
       ],
       "answer": "Citroën C4",
       "difficulty": "Moyen",
@@ -302,14 +682,33 @@
     },
     {
       "id": 21,
+      "type": 0,
       "question": "Quel naturaliste a regroupé en 1753 les 22 espèces connues de cactus ?",
       "propositions": [
-        "Carl von Linné",
-        "Daniel Rolander",
-        "Olof Celsius",
-        "Erik Acharius",
-        "Alexander von Humboldt",
-        "Charles Darwin"
+        [
+          "Carl von Linné",
+          ""
+        ],
+        [
+          "Daniel Rolander",
+          ""
+        ],
+        [
+          "Olof Celsius",
+          ""
+        ],
+        [
+          "Erik Acharius",
+          ""
+        ],
+        [
+          "Alexander von Humboldt",
+          ""
+        ],
+        [
+          "Charles Darwin",
+          ""
+        ]
       ],
       "answer": "Carl von Linné",
       "difficulty": "Difficile",
@@ -317,14 +716,33 @@
     },
     {
       "id": 22,
+      "type": 0,
       "question": "Combien d'espèces de cactus ont aujourd'hui un usage médicinal et/ou vétérinaire ?",
       "propositions": [
-        "64",
-        "34",
-        "4",
-        "94",
-        "128",
-        "10"
+        [
+          "64",
+          ""
+        ],
+        [
+          "34",
+          ""
+        ],
+        [
+          "4",
+          ""
+        ],
+        [
+          "94",
+          ""
+        ],
+        [
+          "128",
+          ""
+        ],
+        [
+          "10",
+          ""
+        ]
       ],
       "answer": "64",
       "difficulty": "Difficile",
@@ -332,14 +750,33 @@
     },
     {
       "id": 23,
+      "type": 0,
       "question": "En botanique, quel signe distinctif différencie les Cactaceae des autres familles ?",
       "propositions": [
-        "Radicule",
-        "Aréole",
-        "Lenticelle",
-        "Chalaze",
-        "Stomate",
-        "Pédoncule"
+        [
+          "Radicule",
+          ""
+        ],
+        [
+          "Aréole",
+          ""
+        ],
+        [
+          "Lenticelle",
+          ""
+        ],
+        [
+          "Chalaze",
+          ""
+        ],
+        [
+          "Stomate",
+          ""
+        ],
+        [
+          "Pédoncule",
+          ""
+        ]
       ],
       "answer": "Aréole",
       "difficulty": "Difficile",
@@ -347,14 +784,33 @@
     },
     {
       "id": 24,
+      "type": 0,
       "question": "Quelle est la plus haute espèce de cactus connue à ce jour ?",
       "propositions": [
-        "Pachycereus pringlei",
-        "Rhipsalis russellii",
-        "Harrisia fragrans",
-        "Opuntia rufida",
-        "Saguaro",
-        "Echinocactus grusonii"
+        [
+          "Pachycereus pringlei",
+          ""
+        ],
+        [
+          "Rhipsalis russellii",
+          ""
+        ],
+        [
+          "Harrisia fragrans",
+          ""
+        ],
+        [
+          "Opuntia rufida",
+          ""
+        ],
+        [
+          "Saguaro",
+          ""
+        ],
+        [
+          "Echinocactus grusonii",
+          ""
+        ]
       ],
       "answer": "Pachycereus pringlei",
       "difficulty": "Difficile",
@@ -362,14 +818,33 @@
     },
     {
       "id": 25,
+      "type": 0,
       "question": "Comment appelle-t-on une croissance anormale du sommet d'une tige de cactus ?",
       "propositions": [
-        "Sérotinie",
-        "Cristation",
-        "Résupination",
-        "Ostiole",
-        "Fasciation",
-        "Étiolation"
+        [
+          "Sérotinie",
+          ""
+        ],
+        [
+          "Cristation",
+          ""
+        ],
+        [
+          "Résupination",
+          ""
+        ],
+        [
+          "Ostiole",
+          ""
+        ],
+        [
+          "Fasciation",
+          ""
+        ],
+        [
+          "Étiolation",
+          ""
+        ]
       ],
       "answer": "Cristation",
       "difficulty": "Difficile",
@@ -377,14 +852,33 @@
     },
     {
       "id": 26,
+      "type": 0,
       "question": "Quel cactus colonnaire est connu pour contenir de la mescaline ?",
       "propositions": [
-        "Oroya",
-        "Ferocactus",
-        "Parodia",
-        "San Pedro",
-        "Opuntia ficus-indica",
-        "Carnegiea gigantea"
+        [
+          "Oroya",
+          ""
+        ],
+        [
+          "Ferocactus",
+          ""
+        ],
+        [
+          "Parodia",
+          ""
+        ],
+        [
+          "San Pedro",
+          ""
+        ],
+        [
+          "Opuntia ficus-indica",
+          ""
+        ],
+        [
+          "Carnegiea gigantea",
+          ""
+        ]
       ],
       "answer": "San Pedro",
       "difficulty": "Difficile",
@@ -392,14 +886,33 @@
     },
     {
       "id": 27,
+      "type": 0,
       "question": "Quelle vallée est l'un des plus riches sites de cactus dans le monde ?",
       "propositions": [
-        "Vallée de Joux",
-        "Vallée de Baïgorry",
-        "Vallée de Tehuacan",
-        "Vallée des Usines",
-        "Vallée de la Mort",
-        "Vallée du Rift"
+        [
+          "Vallée de Joux",
+          ""
+        ],
+        [
+          "Vallée de Baïgorry",
+          ""
+        ],
+        [
+          "Vallée de Tehuacan",
+          ""
+        ],
+        [
+          "Vallée des Usines",
+          ""
+        ],
+        [
+          "Vallée de la Mort",
+          ""
+        ],
+        [
+          "Vallée du Rift",
+          ""
+        ]
       ],
       "answer": "Vallée de Tehuacan",
       "difficulty": "Difficile",
@@ -407,14 +920,33 @@
     },
     {
       "id": 28,
+      "type": 0,
       "question": "Quel cactus produit le pitaya, également appelé le fruit du dragon ?",
       "propositions": [
-        "Hylocereus",
-        "San Pedro",
-        "Peyotl",
-        "Cereus",
-        "Mammillaria",
-        "Gymnocalycium"
+        [
+          "Hylocereus",
+          ""
+        ],
+        [
+          "San Pedro",
+          ""
+        ],
+        [
+          "Peyotl",
+          ""
+        ],
+        [
+          "Cereus",
+          ""
+        ],
+        [
+          "Mammillaria",
+          ""
+        ],
+        [
+          "Gymnocalycium",
+          ""
+        ]
       ],
       "answer": "Hylocereus",
       "difficulty": "Difficile",
@@ -422,14 +954,33 @@
     },
     {
       "id": 29,
+      "type": 0,
       "question": "Quelle est la plus petite espèce de cactus connue à ce jour ?",
       "propositions": [
-        "Aztekium ritteri",
-        "Echinopsis oxygona",
-        "Cereus jamacaru",
-        "Blossfeldia liliputiana",
-        "Mammillaria microcarpa",
-        "Rebutia minuscula"
+        [
+          "Aztekium ritteri",
+          ""
+        ],
+        [
+          "Echinopsis oxygona",
+          ""
+        ],
+        [
+          "Cereus jamacaru",
+          ""
+        ],
+        [
+          "Blossfeldia liliputiana",
+          ""
+        ],
+        [
+          "Mammillaria microcarpa",
+          ""
+        ],
+        [
+          "Rebutia minuscula",
+          ""
+        ]
       ],
       "answer": "Blossfeldia liliputiana",
       "difficulty": "Difficile",
@@ -437,14 +988,33 @@
     },
     {
       "id": 30,
+      "type": 0,
       "question": "Quelle série de BD humoristique est dessinée par Philippe Bercovici ?",
       "propositions": [
-        "Red Cactus",
-        "Cactus Man",
-        "Circus Cactus",
-        "Cactus Club",
-        "Les Femmes en blanc",
-        "Les Profs"
+        [
+          "Red Cactus",
+          ""
+        ],
+        [
+          "Cactus Man",
+          ""
+        ],
+        [
+          "Circus Cactus",
+          ""
+        ],
+        [
+          "Cactus Club",
+          ""
+        ],
+        [
+          "Les Femmes en blanc",
+          ""
+        ],
+        [
+          "Les Profs",
+          ""
+        ]
       ],
       "answer": "Cactus Club",
       "difficulty": "Difficile",
@@ -452,14 +1022,33 @@
     },
     {
       "id": 31,
+      "type": 0,
       "question": "Dans quel verger poussent presque exclusivement des pommiers ?",
       "propositions": [
-        "Pommeraie",
-        "Pommiseau",
-        "Vergepommes",
-        "Vergeture",
-        "Vignoble",
-        "Pêcheraie"
+        [
+          "Pommeraie",
+          ""
+        ],
+        [
+          "Pommiseau",
+          ""
+        ],
+        [
+          "Vergepommes",
+          ""
+        ],
+        [
+          "Vergeture",
+          ""
+        ],
+        [
+          "Vignoble",
+          ""
+        ],
+        [
+          "Pêcheraie",
+          ""
+        ]
       ],
       "answer": "Pommeraie",
       "difficulty": "Facile",
@@ -467,14 +1056,33 @@
     },
     {
       "id": 32,
+      "type": 0,
       "question": "Quelle est la variété de pommes la plus répandue en France ?",
       "propositions": [
-        "Jonagold",
-        "Golden",
-        "Granny Smith",
-        "Gala",
-        "Fuji",
-        "Reinette"
+        [
+          "Jonagold",
+          ""
+        ],
+        [
+          "Golden",
+          ""
+        ],
+        [
+          "Granny Smith",
+          ""
+        ],
+        [
+          "Gala",
+          ""
+        ],
+        [
+          "Fuji",
+          ""
+        ],
+        [
+          "Reinette",
+          ""
+        ]
       ],
       "answer": "Golden",
       "difficulty": "Facile",
@@ -482,14 +1090,33 @@
     },
     {
       "id": 33,
+      "type": 0,
       "question": "De quelle vitamine la pomme est-elle la mieux pourvue ?",
       "propositions": [
-        "Vitamine E",
-        "Vitamine C",
-        "Vitamine B",
-        "Vitamine D",
-        "Vitamine A",
-        "Vitamine K"
+        [
+          "Vitamine E",
+          ""
+        ],
+        [
+          "Vitamine C",
+          ""
+        ],
+        [
+          "Vitamine B",
+          ""
+        ],
+        [
+          "Vitamine D",
+          ""
+        ],
+        [
+          "Vitamine A",
+          ""
+        ],
+        [
+          "Vitamine K",
+          ""
+        ]
       ],
       "answer": "Vitamine C",
       "difficulty": "Facile",
@@ -497,14 +1124,33 @@
     },
     {
       "id": 34,
+      "type": 0,
       "question": "Quelle partie de la pomme contient le plus de vitamine ?",
       "propositions": [
-        "Le pédoncule",
-        "La pulpe",
-        "La peau",
-        "Les pépins",
-        "Le trognon",
-        "Le cœur"
+        [
+          "Le pédoncule",
+          ""
+        ],
+        [
+          "La pulpe",
+          ""
+        ],
+        [
+          "La peau",
+          ""
+        ],
+        [
+          "Les pépins",
+          ""
+        ],
+        [
+          "Le trognon",
+          ""
+        ],
+        [
+          "Le cœur",
+          ""
+        ]
       ],
       "answer": "La peau",
       "difficulty": "Facile",
@@ -512,14 +1158,33 @@
     },
     {
       "id": 35,
+      "type": 0,
       "question": "Que permet de réguler le gel formé par la pectine présente dans la pomme ?",
       "propositions": [
-        "Le cholestérol",
-        "Le lanostérol",
-        "Le phytostérol",
-        "Le campestérol",
-        "La glycémie",
-        "La tension artérielle"
+        [
+          "Le cholestérol",
+          ""
+        ],
+        [
+          "Le lanostérol",
+          ""
+        ],
+        [
+          "Le phytostérol",
+          ""
+        ],
+        [
+          "Le campestérol",
+          ""
+        ],
+        [
+          "La glycémie",
+          ""
+        ],
+        [
+          "La tension artérielle",
+          ""
+        ]
       ],
       "answer": "Le cholestérol",
       "difficulty": "Facile",
@@ -527,14 +1192,33 @@
     },
     {
       "id": 36,
+      "type": 0,
       "question": "Complétez ce diction : « Une pomme chaque matin éloigne... »",
       "propositions": [
-        "Le médecin",
-        "Le chagrin",
-        "Le pantin",
-        "Le destin",
-        "Le dentiste",
-        "Le pharmacien"
+        [
+          "Le médecin",
+          ""
+        ],
+        [
+          "Le chagrin",
+          ""
+        ],
+        [
+          "Le pantin",
+          ""
+        ],
+        [
+          "Le destin",
+          ""
+        ],
+        [
+          "Le dentiste",
+          ""
+        ],
+        [
+          "Le pharmacien",
+          ""
+        ]
       ],
       "answer": "Le médecin",
       "difficulty": "Facile",
@@ -542,14 +1226,33 @@
     },
     {
       "id": 37,
+      "type": 0,
       "question": "Quelle confiserie est constituée d'une pomme fraîche entourée de sucre cuit, souvent rouge ?",
       "propositions": [
-        "Apfelstrudel",
-        "Tarte Tatin",
-        "Pomme d'amour",
-        "Le crumble",
-        "Chausson aux pommes",
-        "Tarte normande"
+        [
+          "Apfelstrudel",
+          ""
+        ],
+        [
+          "Tarte Tatin",
+          ""
+        ],
+        [
+          "Pomme d'amour",
+          ""
+        ],
+        [
+          "Le crumble",
+          ""
+        ],
+        [
+          "Chausson aux pommes",
+          ""
+        ],
+        [
+          "Tarte normande",
+          ""
+        ]
       ],
       "answer": "Pomme d'amour",
       "difficulty": "Facile",
@@ -557,14 +1260,33 @@
     },
     {
       "id": 38,
+      "type": 0,
       "question": "Dans quel dessert les pommes sont-elles enrobées de pâte et frites dans l'huile ?",
       "propositions": [
-        "Un flan",
-        "Une croûte",
-        "Un beignet",
-        "Une bûche",
-        "Un clafoutis",
-        "Un délice"
+        [
+          "Un flan",
+          ""
+        ],
+        [
+          "Une croûte",
+          ""
+        ],
+        [
+          "Un beignet",
+          ""
+        ],
+        [
+          "Une bûche",
+          ""
+        ],
+        [
+          "Un clafoutis",
+          ""
+        ],
+        [
+          "Un délice",
+          ""
+        ]
       ],
       "answer": "Un beignet",
       "difficulty": "Facile",
@@ -572,14 +1294,33 @@
     },
     {
       "id": 39,
+      "type": 0,
       "question": "Quelle grande entreprise multinationale américaine a pour logo une pomme ?",
       "propositions": [
-        "Xerox",
-        "IBM",
-        "Apple",
-        "Microsoft",
-        "Samsung",
-        "Sony"
+        [
+          "Xerox",
+          ""
+        ],
+        [
+          "IBM",
+          ""
+        ],
+        [
+          "Apple",
+          ""
+        ],
+        [
+          "Microsoft",
+          ""
+        ],
+        [
+          "Samsung",
+          ""
+        ],
+        [
+          "Sony",
+          ""
+        ]
       ],
       "answer": "Apple",
       "difficulty": "Facile",
@@ -587,14 +1328,33 @@
     },
     {
       "id": 40,
+      "type": 0,
       "question": "Quelle célèbre princesse originaire de contes a été empoisonnée par une pomme ?",
       "propositions": [
-        "Jasmine",
-        "Aurore",
-        "Cendrillon",
-        "Blanche-Neige",
-        "Raiponce",
-        "Belle"
+        [
+          "Jasmine",
+          ""
+        ],
+        [
+          "Aurore",
+          ""
+        ],
+        [
+          "Cendrillon",
+          ""
+        ],
+        [
+          "Blanche-Neige",
+          ""
+        ],
+        [
+          "Raiponce",
+          ""
+        ],
+        [
+          "Belle",
+          ""
+        ]
       ],
       "answer": "Blanche-Neige",
       "difficulty": "Facile",
@@ -602,14 +1362,33 @@
     },
     {
       "id": 41,
+      "type": 0,
       "question": "Quelle boisson alcoolisée à base de pommes titre habituellement entre 2 % et 8 % d'alcool ?",
       "propositions": [
-        "Le cidre",
-        "Le calvados",
-        "Le lambig",
-        "Le pommeau",
-        "Le poiré",
-        "Le kirsch"
+        [
+          "Le cidre",
+          ""
+        ],
+        [
+          "Le calvados",
+          ""
+        ],
+        [
+          "Le lambig",
+          ""
+        ],
+        [
+          "Le pommeau",
+          ""
+        ],
+        [
+          "Le poiré",
+          ""
+        ],
+        [
+          "Le kirsch",
+          ""
+        ]
       ],
       "answer": "Le cidre",
       "difficulty": "Moyen",
@@ -617,14 +1396,33 @@
     },
     {
       "id": 42,
+      "type": 0,
       "question": "Que désigne le mot « pomme » dans le langage populaire ?",
       "propositions": [
-        "Le visage",
-        "Les genoux",
-        "Le ventre",
-        "Les fesses",
-        "Le pied",
-        "Le coude"
+        [
+          "Le visage",
+          ""
+        ],
+        [
+          "Les genoux",
+          ""
+        ],
+        [
+          "Le ventre",
+          ""
+        ],
+        [
+          "Les fesses",
+          ""
+        ],
+        [
+          "Le pied",
+          ""
+        ],
+        [
+          "Le coude",
+          ""
+        ]
       ],
       "answer": "Le visage",
       "difficulty": "Moyen",
@@ -632,14 +1430,33 @@
     },
     {
       "id": 43,
+      "type": 0,
       "question": "Combien de pépins compte-t-on dans chacune des cinq loges de l'ovaire initial de la pomme ?",
       "propositions": [
-        "Huit",
-        "Six",
-        "Deux",
-        "Quatre",
-        "Un",
-        "Trois"
+        [
+          "Huit",
+          ""
+        ],
+        [
+          "Six",
+          ""
+        ],
+        [
+          "Deux",
+          ""
+        ],
+        [
+          "Quatre",
+          ""
+        ],
+        [
+          "Un",
+          ""
+        ],
+        [
+          "Trois",
+          ""
+        ]
       ],
       "answer": "Deux",
       "difficulty": "Moyen",
@@ -647,14 +1464,33 @@
     },
     {
       "id": 44,
+      "type": 0,
       "question": "Quelle place occupe la pomme dans la consommation des fruits dans le monde ?",
       "propositions": [
-        "Quatrième",
-        "Première",
-        "Troisième",
-        "Deuxième",
-        "Cinquième",
-        "Sixième"
+        [
+          "Quatrième",
+          ""
+        ],
+        [
+          "Première",
+          ""
+        ],
+        [
+          "Troisième",
+          ""
+        ],
+        [
+          "Deuxième",
+          ""
+        ],
+        [
+          "Cinquième",
+          ""
+        ],
+        [
+          "Sixième",
+          ""
+        ]
       ],
       "answer": "Troisième",
       "difficulty": "Moyen",
@@ -662,14 +1498,33 @@
     },
     {
       "id": 45,
+      "type": 0,
       "question": "Quel pays est le plus gros producteur de pommes avec 35 millions de tonnes par an ?",
       "propositions": [
-        "États-Unis",
-        "Italie",
-        "Turquie",
-        "Chine",
-        "France",
-        "Pologne"
+        [
+          "États-Unis",
+          ""
+        ],
+        [
+          "Italie",
+          ""
+        ],
+        [
+          "Turquie",
+          ""
+        ],
+        [
+          "Chine",
+          ""
+        ],
+        [
+          "France",
+          ""
+        ],
+        [
+          "Pologne",
+          ""
+        ]
       ],
       "answer": "Chine",
       "difficulty": "Moyen",
@@ -677,29 +1532,67 @@
     },
     {
       "id": 46,
+      "type": 0,
       "question": "Quel célèbre gâteau traditionnel autrichien est cuisiné à base de pommes ?",
       "propositions": [
-        "La croustade",
-        "Tarte Tatin",
-        "Le crumble",
-        "Apfelstrudel",
-        "Sachertorte",
-        "Linzertorte"
+        [
+          "La croustade",
+          ""
+        ],
+        [
+          "Tarte Tatin",
+          ""
+        ],
+        [
+          "Le crumble",
+          ""
+        ],
+        [
+          "Apfelstrudel",
+          ""
+        ],
+        [
+          "Sachertorte",
+          ""
+        ],
+        [
+          "Linzertorte",
+          ""
+        ]
       ],
       "answer": "Apfelstrudel",
       "difficulty": "Moyen",
-      "anecdote": "Les communautés juives ashkénazes l'ont également introduit en Israël, mais aussi aux États-Unis et en Argentine."
+      "anecdote": "Les communautés juives ashkénazes l'ont également introduit en Israël, but aussi aux États-Unis et en Argentine."
     },
     {
       "id": 47,
+      "type": 0,
       "question": "Dans quelle tarte aux pommes renversée les pommes sont-elles caramélisées ?",
       "propositions": [
-        "Tarte au riz",
-        "Tarte Tatin",
-        "Tarte au maton",
-        "Tarte normande",
-        "Tarte Bourdaloue",
-        "Tarte aux Daims"
+        [
+          "Tarte au riz",
+          ""
+        ],
+        [
+          "Tarte Tatin",
+          ""
+        ],
+        [
+          "Tarte au maton",
+          ""
+        ],
+        [
+          "Tarte normande",
+          ""
+        ],
+        [
+          "Tarte Bourdaloue",
+          ""
+        ],
+        [
+          "Tarte aux Daims",
+          ""
+        ]
       ],
       "answer": "Tarte Tatin",
       "difficulty": "Moyen",
@@ -707,14 +1600,33 @@
     },
     {
       "id": 48,
+      "type": 0,
       "question": "Qui a été obligé de tirer un carreau d'arbalète dans une pomme posée sur la tête de son fils ?",
       "propositions": [
-        "Sinbad le marin",
-        "Guillaume Tell",
-        "Perceval",
-        "Belphégor",
-        "Robin des Bois",
-        "Ulysse"
+        [
+          "Sinbad le marin",
+          ""
+        ],
+        [
+          "Guillaume Tell",
+          ""
+        ],
+        [
+          "Perceval",
+          ""
+        ],
+        [
+          "Belphégor",
+          ""
+        ],
+        [
+          "Robin des Bois",
+          ""
+        ],
+        [
+          "Ulysse",
+          ""
+        ]
       ],
       "answer": "Guillaume Tell",
       "difficulty": "Moyen",
@@ -722,14 +1634,33 @@
     },
     {
       "id": 49,
+      "type": 0,
       "question": "Quel président français a utilisé la pomme comme symbole de sa campagne politique ?",
       "propositions": [
-        "Jacques Chirac",
-        "François Hollande",
-        "Nicolas Sarkozy",
-        "François Mitterrand",
-        "Valéry Giscard d'Estaing",
-        "Emmanuel Macron"
+        [
+          "Jacques Chirac",
+          ""
+        ],
+        [
+          "François Hollande",
+          ""
+        ],
+        [
+          "Nicolas Sarkozy",
+          ""
+        ],
+        [
+          "François Mitterrand",
+          ""
+        ],
+        [
+          "Valéry Giscard d'Estaing",
+          ""
+        ],
+        [
+          "Emmanuel Macron",
+          ""
+        ]
       ],
       "answer": "Jacques Chirac",
       "difficulty": "Moyen",
@@ -737,14 +1668,33 @@
     },
     {
       "id": 50,
+      "type": 0,
       "question": "Qui aurait compris les lois de l'attraction universelle une pomme tombée sur la tête ?",
       "propositions": [
-        "Edmond Halley",
-        "Isaac Newton",
-        "Nicolas Copernic",
-        "Galilée",
-        "Albert Einstein",
-        "Stephen Hawking"
+        [
+          "Edmond Halley",
+          ""
+        ],
+        [
+          "Isaac Newton",
+          ""
+        ],
+        [
+          "Nicolas Copernic",
+          ""
+        ],
+        [
+          "Galilée",
+          ""
+        ],
+        [
+          "Albert Einstein",
+          ""
+        ],
+        [
+          "Stephen Hawking",
+          ""
+        ]
       ],
       "answer": "Isaac Newton",
       "difficulty": "Moyen",
@@ -752,14 +1702,33 @@
     },
     {
       "id": 51,
+      "type": 0,
       "question": "Combinaison de plusieurs organes, la pomme est un fruit, mais plus précisément...",
       "propositions": [
-        "Un faux-fruit",
-        "Une stomate",
-        "Une souche",
-        "Une pruine",
-        "Un akène",
-        "Une drupéole"
+        [
+          "Un faux-fruit",
+          ""
+        ],
+        [
+          "Une stomate",
+          ""
+        ],
+        [
+          "Une souche",
+          ""
+        ],
+        [
+          "Une pruine",
+          ""
+        ],
+        [
+          "Un akène",
+          ""
+        ],
+        [
+          "Une drupéole",
+          ""
+        ]
       ],
       "answer": "Un faux-fruit",
       "difficulty": "Difficile",
@@ -767,14 +1736,33 @@
     },
     {
       "id": 52,
+      "type": 0,
       "question": "Combien de tonnes de pommes récolte-t-on annuellement dans le monde ?",
       "propositions": [
-        "53 millions",
-        "45 millions",
-        "37 millions",
-        "69 millions",
-        "80 millions",
-        "25 millions"
+        [
+          "53 millions",
+          ""
+        ],
+        [
+          "45 millions",
+          ""
+        ],
+        [
+          "37 millions",
+          ""
+        ],
+        [
+          "69 millions",
+          ""
+        ],
+        [
+          "80 millions",
+          ""
+        ],
+        [
+          "25 millions",
+          ""
+        ]
       ],
       "answer": "69 millions",
       "difficulty": "Difficile",
@@ -782,14 +1770,33 @@
     },
     {
       "id": 53,
+      "type": 0,
       "question": "Quelle partie de la pomme contient principalement de la pectine ?",
       "propositions": [
-        "La peau",
-        "Les pépins",
-        "Le pédoncule",
-        "La pulpe",
-        "Le trognon",
-        "L'épiderme"
+        [
+          "La peau",
+          ""
+        ],
+        [
+          "Les pépins",
+          ""
+        ],
+        [
+          "Le pédoncule",
+          ""
+        ],
+        [
+          "La pulpe",
+          ""
+        ],
+        [
+          "Le trognon",
+          ""
+        ],
+        [
+          "L'épiderme",
+          ""
+        ]
       ],
       "answer": "Les pépins",
       "difficulty": "Difficile",
@@ -797,14 +1804,33 @@
     },
     {
       "id": 54,
+      "type": 0,
       "question": "Quel gâteau à base de pommes est appelé « croustade » au Québec ?",
       "propositions": [
-        "Crumble",
-        "Chausson",
-        "Tarte Tatin",
-        "Apfelstrudel",
-        "Galette",
-        "Beignet"
+        [
+          "Crumble",
+          ""
+        ],
+        [
+          "Chausson",
+          ""
+        ],
+        [
+          "Tarte Tatin",
+          ""
+        ],
+        [
+          "Apfelstrudel",
+          ""
+        ],
+        [
+          "Galette",
+          ""
+        ],
+        [
+          "Beignet",
+          ""
+        ]
       ],
       "answer": "Crumble",
       "difficulty": "Difficile",
@@ -812,14 +1838,33 @@
     },
     {
       "id": 55,
+      "type": 0,
       "question": "Quelle eau-de-vie d'origine normande est obtenue par distillation de cidre ?",
       "propositions": [
-        "Le pommeau",
-        "Le calvados",
-        "Le lambig",
-        "Le cidre",
-        "Le poiré",
-        "Le kirsch"
+        [
+          "Le pommeau",
+          ""
+        ],
+        [
+          "Le calvados",
+          ""
+        ],
+        [
+          "Le lambig",
+          ""
+        ],
+        [
+          "Le cidre",
+          ""
+        ],
+        [
+          "Le poiré",
+          ""
+        ],
+        [
+          "Le kirsch",
+          ""
+        ]
       ],
       "answer": "Le calvados",
       "difficulty": "Difficile",
@@ -827,14 +1872,33 @@
     },
     {
       "id": 56,
+      "type": 0,
       "question": "Quelle pomme représente le logo de la maison de disques du groupe anglais The Beatles ?",
       "propositions": [
-        "Jonagold",
-        "Golden",
-        "Granny Smith",
-        "Gala",
-        "Red Delicious",
-        "Pink Lady"
+        [
+          "Jonagold",
+          ""
+        ],
+        [
+          "Golden",
+          ""
+        ],
+        [
+          "Granny Smith",
+          ""
+        ],
+        [
+          "Gala",
+          ""
+        ],
+        [
+          "Red Delicious",
+          ""
+        ],
+        [
+          "Pink Lady",
+          ""
+        ]
       ],
       "answer": "Granny Smith",
       "difficulty": "Difficile",
@@ -842,14 +1906,33 @@
     },
     {
       "id": 57,
+      "type": 0,
       "question": "Quel peintre belge a employé une pomme pour appuyer son travail sur les mots ?",
       "propositions": [
-        "René Magritte",
-        "Paul Delvaux",
-        "Henri Michaux",
-        "James Ensor",
-        "Salvador Dalí",
-        "Andy Warhol"
+        [
+          "René Magritte",
+          ""
+        ],
+        [
+          "Paul Delvaux",
+          ""
+        ],
+        [
+          "Henri Michaux",
+          ""
+        ],
+        [
+          "James Ensor",
+          ""
+        ],
+        [
+          "Salvador Dalí",
+          ""
+        ],
+        [
+          "Andy Warhol",
+          ""
+        ]
       ],
       "answer": "René Magritte",
       "difficulty": "Difficile",
@@ -857,14 +1940,33 @@
     },
     {
       "id": 58,
+      "type": 0,
       "question": "Suite à quelle maladie observe-t-on des taches noirâtres sur les feuilles des pommiers ?",
       "propositions": [
-        "Rouille",
-        "Charbon",
-        "Tavelure",
-        "Galle",
-        "Mildiou",
-        "Oïdium"
+        [
+          "Rouille",
+          ""
+        ],
+        [
+          "Charbon",
+          ""
+        ],
+        [
+          "Tavelure",
+          ""
+        ],
+        [
+          "Galle",
+          ""
+        ],
+        [
+          "Mildiou",
+          ""
+        ],
+        [
+          "Oïdium",
+          ""
+        ]
       ],
       "answer": "Tavelure",
       "difficulty": "Difficile",
@@ -872,14 +1974,33 @@
     },
     {
       "id": 59,
+      "type": 0,
       "question": "Quel était généralement le jour de la pomme dans le calendrier républicain français ?",
       "propositions": [
-        "6 décembre",
-        "22 octobre",
-        "11 janvier",
-        "16 novembre",
-        "10 septembre",
-        "3 mars"
+        [
+          "6 décembre",
+          ""
+        ],
+        [
+          "22 octobre",
+          ""
+        ],
+        [
+          "11 janvier",
+          ""
+        ],
+        [
+          "16 novembre",
+          ""
+        ],
+        [
+          "10 septembre",
+          ""
+        ],
+        [
+          "3 mars",
+          ""
+        ]
       ],
       "answer": "22 octobre",
       "difficulty": "Difficile",
@@ -887,14 +2008,33 @@
     },
     {
       "id": 60,
+      "type": 0,
       "question": "Quel est le poids d'une pomme calibrée à 60/65 pour la consommation ?",
       "propositions": [
-        "176-209 g",
-        "108-142 g",
-        "75-108 g",
-        "142-176 g",
-        "209-242 g",
-        "50-75 g"
+        [
+          "176-209 g",
+          ""
+        ],
+        [
+          "108-142 g",
+          ""
+        ],
+        [
+          "75-108 g",
+          ""
+        ],
+        [
+          "142-176 g",
+          ""
+        ],
+        [
+          "209-242 g",
+          ""
+        ],
+        [
+          "50-75 g",
+          ""
+        ]
       ],
       "answer": "75-108 g",
       "difficulty": "Difficile",
@@ -902,14 +2042,33 @@
     },
     {
       "id": 61,
+      "type": 0,
       "question": "Quelle société est la première productrice mondiale de frites surgelées ?",
       "propositions": [
-        "Mousline",
-        "Vico",
-        "McCain Foods",
-        "Lutosa",
-        "Aviko",
-        "Nestlé"
+        [
+          "Mousline",
+          ""
+        ],
+        [
+          "Vico",
+          ""
+        ],
+        [
+          "McCain Foods",
+          ""
+        ],
+        [
+          "Lutosa",
+          ""
+        ],
+        [
+          "Aviko",
+          ""
+        ],
+        [
+          "Nestlé",
+          ""
+        ]
       ],
       "answer": "McCain Foods",
       "difficulty": "Facile",
@@ -917,14 +2076,33 @@
     },
     {
       "id": 62,
+      "type": 0,
       "question": "Quel jouet pour enfants possède une tête en plastique de forme patatoïde ?",
       "propositions": [
-        "Monsieur Patate",
-        "Woody",
-        "Zigzag",
-        "Rex",
-        "Buzz l'Éclair",
-        "Slinky"
+        [
+          "Monsieur Patate",
+          ""
+        ],
+        [
+          "Woody",
+          ""
+        ],
+        [
+          "Zigzag",
+          ""
+        ],
+        [
+          "Rex",
+          ""
+        ],
+        [
+          "Buzz l'Éclair",
+          ""
+        ],
+        [
+          "Slinky",
+          ""
+        ]
       ],
       "answer": "Monsieur Patate",
       "difficulty": "Facile",
@@ -932,14 +2110,33 @@
     },
     {
       "id": 63,
+      "type": 0,
       "question": "Quel tableau de Jean-François Millet aurait dû s'appeler « La Mauvaise Récolte » ?",
       "propositions": [
-        "Le Semeur",
-        "L'Angélus",
-        "Les Glaneuses",
-        "Un vanneur",
-        "Le Repas du soir",
-        "La Méridienne"
+        [
+          "Le Semeur",
+          ""
+        ],
+        [
+          "L'Angélus",
+          ""
+        ],
+        [
+          "Les Glaneuses",
+          ""
+        ],
+        [
+          "Un vanneur",
+          ""
+        ],
+        [
+          "Le Repas du soir",
+          ""
+        ],
+        [
+          "La Méridienne",
+          ""
+        ]
       ],
       "answer": "L'Angélus",
       "difficulty": "Facile",
@@ -947,14 +2144,33 @@
     },
     {
       "id": 64,
+      "type": 0,
       "question": "Si vous en avez gros sur la patate, vous en avez probablement gros sur...",
       "propositions": [
-        "Le nez",
-        "Le foie",
-        "Le dos",
-        "Le coeur",
-        "L'estomac",
-        "La tête"
+        [
+          "Le nez",
+          ""
+        ],
+        [
+          "Le foie",
+          ""
+        ],
+        [
+          "Le dos",
+          ""
+        ],
+        [
+          "Le coeur",
+          ""
+        ],
+        [
+          "L'estomac",
+          ""
+        ],
+        [
+          "La tête",
+          ""
+        ]
       ],
       "answer": "Le coeur",
       "difficulty": "Facile",
@@ -962,14 +2178,33 @@
     },
     {
       "id": 65,
+      "type": 0,
       "question": "En Belgique, quelle est la principale entreprise de l'industrie de la pomme de terre ?",
       "propositions": [
-        "Avebe",
-        "Aviko",
-        "Lutosa",
-        "McCain",
-        "Clarebout",
-        "Agristo"
+        [
+          "Avebe",
+          ""
+        ],
+        [
+          "Aviko",
+          ""
+        ],
+        [
+          "Lutosa",
+          ""
+        ],
+        [
+          "McCain",
+          ""
+        ],
+        [
+          "Clarebout",
+          ""
+        ],
+        [
+          "Agristo",
+          ""
+        ]
       ],
       "answer": "Lutosa",
       "difficulty": "Facile",
@@ -977,14 +2212,33 @@
     },
     {
       "id": 66,
+      "type": 0,
       "question": "Quelle activité manuelle consiste à servir de pommes de terre comme tampons ?",
       "propositions": [
-        "Patatogravure",
-        "Sel coloré",
-        "Pâte à sel",
-        "Origami",
-        "Mosaïque",
-        "Découpage"
+        [
+          "Patatogravure",
+          ""
+        ],
+        [
+          "Sel coloré",
+          ""
+        ],
+        [
+          "Pâte à sel",
+          ""
+        ],
+        [
+          "Origami",
+          ""
+        ],
+        [
+          "Mosaïque",
+          ""
+        ],
+        [
+          "Découpage",
+          ""
+        ]
       ],
       "answer": "Patatogravure",
       "difficulty": "Facile",
@@ -992,14 +2246,33 @@
     },
     {
       "id": 67,
+      "type": 0,
       "question": "Quel épluche-légumes à lame en gouttière facilite l'épluchage de la pomme de terre ?",
       "propositions": [
-        "Girafe",
-        "Économe",
-        "Canneleur",
-        "Râpe",
-        "Mandoline",
-        "Couteau d'office"
+        [
+          "Girafe",
+          ""
+        ],
+        [
+          "Économe",
+          ""
+        ],
+        [
+          "Canneleur",
+          ""
+        ],
+        [
+          "Râpe",
+          ""
+        ],
+        [
+          "Mandoline",
+          ""
+        ],
+        [
+          "Couteau d'office",
+          ""
+        ]
       ],
       "answer": "Économe",
       "difficulty": "Facile",
@@ -1007,14 +2280,33 @@
     },
     {
       "id": 68,
+      "type": 0,
       "question": "Quel roman de Jacques Vaucherot fut adapté au cinéma par Claude Autant-Lara ?",
       "propositions": [
-        "Les patates",
-        "Douce",
-        "Gloria",
-        "Le Joueur",
-        "La Traversée de Paris",
-        "Le Diable au corps"
+        [
+          "Les patates",
+          ""
+        ],
+        [
+          "Douce",
+          ""
+        ],
+        [
+          "Gloria",
+          ""
+        ],
+        [
+          "Le Joueur",
+          ""
+        ],
+        [
+          "La Traversée de Paris",
+          ""
+        ],
+        [
+          "Le Diable au corps",
+          ""
+        ]
       ],
       "answer": "Les patates",
       "difficulty": "Facile",
@@ -1022,14 +2314,33 @@
     },
     {
       "id": 69,
+      "type": 0,
       "question": "Quelle vitamine apportée par la pomme de terre est utile pour la prévention du scorbut ?",
       "propositions": [
-        "Vitamine D",
-        "Vitamine B",
-        "Vitamine A",
-        "Vitamine C",
-        "Vitamine E",
-        "Vitamine K"
+        [
+          "Vitamine D",
+          ""
+        ],
+        [
+          "Vitamine B",
+          ""
+        ],
+        [
+          "Vitamine A",
+          ""
+        ],
+        [
+          "Vitamine C",
+          ""
+        ],
+        [
+          "Vitamine E",
+          ""
+        ],
+        [
+          "Vitamine K",
+          ""
+        ]
       ],
       "answer": "Vitamine C",
       "difficulty": "Facile",
@@ -1037,14 +2348,33 @@
     },
     {
       "id": 70,
+      "type": 0,
       "question": "Quelle patate se renvoie-t-on l'un l'autre face à un problème embarrassant ?",
       "propositions": [
-        "Froide",
-        "Dure",
-        "Chaude",
-        "Molle",
-        "Pourrie",
-        "Vicieuse"
+        [
+          "Froide",
+          ""
+        ],
+        [
+          "Dure",
+          ""
+        ],
+        [
+          "Chaude",
+          ""
+        ],
+        [
+          "Molle",
+          ""
+        ],
+        [
+          "Pourrie",
+          ""
+        ],
+        [
+          "Vicieuse",
+          ""
+        ]
       ],
       "answer": "Chaude",
       "difficulty": "Facile",
@@ -1052,14 +2382,33 @@
     },
     {
       "id": 71,
+      "type": 0,
       "question": "Dans quelle ville belge se trouve le seul musée au monde consacré à la frite ?",
       "propositions": [
-        "Mons",
-        "Courtrai",
-        "Bruges",
-        "Tournai",
-        "Bruxelles",
-        "Anvers"
+        [
+          "Mons",
+          ""
+        ],
+        [
+          "Courtrai",
+          ""
+        ],
+        [
+          "Bruges",
+          ""
+        ],
+        [
+          "Tournai",
+          ""
+        ],
+        [
+          "Bruxelles",
+          ""
+        ],
+        [
+          "Anvers",
+          ""
+        ]
       ],
       "answer": "Bruges",
       "difficulty": "Moyen",
@@ -1067,14 +2416,33 @@
     },
     {
       "id": 72,
+      "type": 0,
       "question": "Quel jeu en réalité alternée a utilisé la pomme de terre comme emblème ?",
       "propositions": [
-        "Team Fortress",
-        "The Orange Box",
-        "Portal 2",
-        "Counter-Strike",
-        "Half-Life",
-        "Left 4 Dead"
+        [
+          "Team Fortress",
+          ""
+        ],
+        [
+          "The Orange Box",
+          ""
+        ],
+        [
+          "Portal 2",
+          ""
+        ],
+        [
+          "Counter-Strike",
+          ""
+        ],
+        [
+          "Half-Life",
+          ""
+        ],
+        [
+          "Left 4 Dead",
+          ""
+        ]
       ],
       "answer": "Portal 2",
       "difficulty": "Moyen",
@@ -1082,14 +2450,33 @@
     },
     {
       "id": 73,
+      "type": 0,
       "question": "Quel poète chilien, prix Nobel de littérature, a chanté la pomme de terre ?",
       "propositions": [
-        "Armando Uribe",
-        "Nicanor Parra",
-        "Pablo Neruda",
-        "Enrique Lihn",
-        "Vicente Huidobro",
-        "Gabriela Mistral"
+        [
+          "Armando Uribe",
+          ""
+        ],
+        [
+          "Nicanor Parra",
+          ""
+        ],
+        [
+          "Pablo Neruda",
+          ""
+        ],
+        [
+          "Enrique Lihn",
+          ""
+        ],
+        [
+          "Vicente Huidobro",
+          ""
+        ],
+        [
+          "Gabriela Mistral",
+          ""
+        ]
       ],
       "answer": "Pablo Neruda",
       "difficulty": "Moyen",
@@ -1097,14 +2484,33 @@
     },
     {
       "id": 74,
+      "type": 0,
       "question": "Quelle société américaine domine aujourd'hui le marché des chips ?",
       "propositions": [
-        "Covi",
-        "Frito-Lay",
-        "Quala",
-        "Lunor",
-        "Walkers",
-        "Lay's"
+        [
+          "Covi",
+          ""
+        ],
+        [
+          "Frito-Lay",
+          ""
+        ],
+        [
+          "Quala",
+          ""
+        ],
+        [
+          "Lunor",
+          ""
+        ],
+        [
+          "Walkers",
+          ""
+        ],
+        [
+          "Lay's",
+          ""
+        ]
       ],
       "answer": "Frito-Lay",
       "difficulty": "Moyen",
@@ -1112,14 +2518,33 @@
     },
     {
       "id": 75,
+      "type": 0,
       "question": "Quel pays est le plus gros consommateur de pommes de terre ?",
       "propositions": [
-        "Inde",
-        "Chine",
-        "Russie",
-        "Royaume-Uni",
-        "États-Unis",
-        "Allemagne"
+        [
+          "Inde",
+          ""
+        ],
+        [
+          "Chine",
+          ""
+        ],
+        [
+          "Russie",
+          ""
+        ],
+        [
+          "Royaume-Uni",
+          ""
+        ],
+        [
+          "États-Unis",
+          ""
+        ],
+        [
+          "Allemagne",
+          ""
+        ]
       ],
       "answer": "Chine",
       "difficulty": "Moyen",
@@ -1127,14 +2552,33 @@
     },
     {
       "id": 76,
+      "type": 0,
       "question": "Qu'est-il possible de produire avec deux pommes de terre et peu de matériel ?",
       "propositions": [
-        "Vibrations",
-        "Lumière",
-        "Son",
-        "Électricité",
-        "Chaleur",
-        "Odeur"
+        [
+          "Vibrations",
+          ""
+        ],
+        [
+          "Lumière",
+          ""
+        ],
+        [
+          "Son",
+          ""
+        ],
+        [
+          "Électricité",
+          ""
+        ],
+        [
+          "Chaleur",
+          ""
+        ],
+        [
+          "Odeur",
+          ""
+        ]
       ],
       "answer": "Électricité",
       "difficulty": "Moyen",
@@ -1142,14 +2586,33 @@
     },
     {
       "id": 77,
+      "type": 0,
       "question": "Que peut-on produire après fermentation et distillation de l'amidon de la pomme de terre ?",
       "propositions": [
-        "Ouzo",
-        "Raki",
-        "Éthanol",
-        "Absinthe",
-        "Moutarde",
-        "Vinaigre"
+        [
+          "Ouzo",
+          ""
+        ],
+        [
+          "Raki",
+          ""
+        ],
+        [
+          "Éthanol",
+          ""
+        ],
+        [
+          "Absinthe",
+          ""
+        ],
+        [
+          "Moutarde",
+          ""
+        ],
+        [
+          "Vinaigre",
+          ""
+        ]
       ],
       "answer": "Éthanol",
       "difficulty": "Moyen",
@@ -1157,14 +2620,33 @@
     },
     {
       "id": 78,
+      "type": 0,
       "question": "À partir du XVIe siècle, l'alcool de pomme de terre a servi à confectionner quel alcool ?",
       "propositions": [
-        "Calvados",
-        "Tequila",
-        "Armagnac",
-        "Vodka",
-        "Rhum",
-        "Gin"
+        [
+          "Calvados",
+          ""
+        ],
+        [
+          "Tequila",
+          ""
+        ],
+        [
+          "Armagnac",
+          ""
+        ],
+        [
+          "Vodka",
+          ""
+        ],
+        [
+          "Rhum",
+          ""
+        ],
+        [
+          "Gin",
+          ""
+        ]
       ],
       "answer": "Vodka",
       "difficulty": "Moyen",
@@ -1172,14 +2654,33 @@
     },
     {
       "id": 79,
+      "type": 0,
       "question": "Quel pays est le premier exportateur mondial de pommes de terre de conservation ?",
       "propositions": [
-        "Belgique",
-        "France",
-        "Pays-Bas",
-        "Allemagne",
-        "Canada",
-        "Chine"
+        [
+          "Belgique",
+          ""
+        ],
+        [
+          "France",
+          ""
+        ],
+        [
+          "Pays-Bas",
+          ""
+        ],
+        [
+          "Allemagne",
+          ""
+        ],
+        [
+          "Canada",
+          ""
+        ],
+        [
+          "Chine",
+          ""
+        ]
       ],
       "answer": "France",
       "difficulty": "Moyen",
@@ -1187,14 +2688,33 @@
     },
     {
       "id": 80,
+      "type": 0,
       "question": "Quel nom est également donné à l'amidon de pomme de terre ?",
       "propositions": [
-        "Gélose",
-        "Purée",
-        "Sirop",
-        "Fécule",
-        "Maltose",
-        "Dextrine"
+        [
+          "Gélose",
+          ""
+        ],
+        [
+          "Purée",
+          ""
+        ],
+        [
+          "Sirop",
+          ""
+        ],
+        [
+          "Fécule",
+          ""
+        ],
+        [
+          "Maltose",
+          ""
+        ],
+        [
+          "Dextrine",
+          ""
+        ]
       ],
       "answer": "Fécule",
       "difficulty": "Moyen",
@@ -1202,14 +2722,33 @@
     },
     {
       "id": 81,
+      "type": 0,
       "question": "Quelle année a été déclarée année de la pomme de terre par l'ONU ?",
       "propositions": [
-        "1988",
-        "2008",
-        "2018",
-        "1998",
-        "2000",
-        "2010"
+        [
+          "1988",
+          ""
+        ],
+        [
+          "2008",
+          ""
+        ],
+        [
+          "2018",
+          ""
+        ],
+        [
+          "1998",
+          ""
+        ],
+        [
+          "2000",
+          ""
+        ],
+        [
+          "2010",
+          ""
+        ]
       ],
       "answer": "2008",
       "difficulty": "Difficile",
@@ -1217,14 +2756,33 @@
     },
     {
       "id": 82,
+      "type": 0,
       "question": "Quelle variété est utilisée pour la préparation des frites McDonald's ?",
       "propositions": [
-        "Red Pontiac",
-        "Shepody",
-        "Yukon Gold",
-        "Russet Burbank",
-        "Bintje",
-        "Charlotte"
+        [
+          "Red Pontiac",
+          ""
+        ],
+        [
+          "Shepody",
+          ""
+        ],
+        [
+          "Yukon Gold",
+          ""
+        ],
+        [
+          "Russet Burbank",
+          ""
+        ],
+        [
+          "Bintje",
+          ""
+        ],
+        [
+          "Charlotte",
+          ""
+        ]
       ],
       "answer": "Russet Burbank",
       "difficulty": "Difficile",
@@ -1232,14 +2790,33 @@
     },
     {
       "id": 83,
+      "type": 0,
       "question": "Quel entrepreneur nippo-américain est surnommé le roi de la pomme de terre ?",
       "propositions": [
-        "George Shima",
-        "Daniel Inouye",
-        "Steve Aoki",
-        "Eddie Imazu",
-        "Yoko Ono",
-        "Bill Gates"
+        [
+          "George Shima",
+          ""
+        ],
+        [
+          "Daniel Inouye",
+          ""
+        ],
+        [
+          "Steve Aoki",
+          ""
+        ],
+        [
+          "Eddie Imazu",
+          ""
+        ],
+        [
+          "Yoko Ono",
+          ""
+        ],
+        [
+          "Bill Gates",
+          ""
+        ]
       ],
       "answer": "George Shima",
       "difficulty": "Difficile",
@@ -1247,14 +2824,33 @@
     },
     {
       "id": 84,
+      "type": 0,
       "question": "De quel État américain la pomme de terre est-elle l'emblème officiel ?",
       "propositions": [
-        "Montana",
-        "Vermont",
-        "Idaho",
-        "Géorgie",
-        "Washington",
-        "Maine"
+        [
+          "Montana",
+          ""
+        ],
+        [
+          "Vermont",
+          ""
+        ],
+        [
+          "Idaho",
+          ""
+        ],
+        [
+          "Géorgie",
+          ""
+        ],
+        [
+          "Washington",
+          ""
+        ],
+        [
+          "Maine",
+          ""
+        ]
       ],
       "answer": "Idaho",
       "difficulty": "Difficile",
@@ -1262,29 +2858,67 @@
     },
     {
       "id": 85,
+      "type": 0,
       "question": "Quel terme du quechua désigne la pomme de terre dans les pays d'Amérique latine ?",
       "propositions": [
-        "Baba",
-        "Dada",
-        "Papa",
-        "Mama",
-        "Oca",
-        "Yuca"
+        [
+          "Baba",
+          ""
+        ],
+        [
+          "Dada",
+          ""
+        ],
+        [
+          "Papa",
+          ""
+        ],
+        [
+          "Mama",
+          ""
+        ],
+        [
+          "Oca",
+          ""
+        ],
+        [
+          "Yuca",
+          ""
+        ]
       ],
       "answer": "Papa",
       "difficulty": "Difficile",
-      "anecdote": "Dans cette langue  véhiculaire de l'empire Inca, papa désignait tout type de tubercule à l'exception de l'oca."
+      "anecdote": "Dans cette langue véhiculaire de l'empire Inca, papa désignait tout type de tubercule à l'exception de l'oca."
     },
     {
       "id": 86,
+      "type": 0,
       "question": "Quel extrait de la pomme de terre est utilisé comme apprêt pour la raideur du linge ?",
       "propositions": [
-        "Synthon",
-        "Empois",
-        "Dipôle",
-        "Prontosil",
-        "Gélatine",
-        "Lait de chaux"
+        [
+          "Synthon",
+          ""
+        ],
+        [
+          "Empois",
+          ""
+        ],
+        [
+          "Dipôle",
+          ""
+        ],
+        [
+          "Prontosil",
+          ""
+        ],
+        [
+          "Gélatine",
+          ""
+        ],
+        [
+          "Lait de chaux",
+          ""
+        ]
       ],
       "answer": "Empois",
       "difficulty": "Difficile",
@@ -1292,14 +2926,33 @@
     },
     {
       "id": 87,
+      "type": 0,
       "question": "En Pologne, quel ratio de pomme de terre est produit pour la consommation animale ?",
       "propositions": [
-        "Une sur trois",
-        "Une sur neuf",
-        "Une sur sept",
-        "Une sur cinq",
-        "Une sur deux",
-        "Une sur quatre"
+        [
+          "Une sur trois",
+          ""
+        ],
+        [
+          "Une sur neuf",
+          ""
+        ],
+        [
+          "Une sur sept",
+          ""
+        ],
+        [
+          "Une sur cinq",
+          ""
+        ],
+        [
+          "Une sur deux",
+          ""
+        ],
+        [
+          "Une sur quatre",
+          ""
+        ]
       ],
       "answer": "Une sur trois",
       "difficulty": "Difficile",
@@ -1307,14 +2960,33 @@
     },
     {
       "id": 88,
+      "type": 0,
       "question": "Quel plat traditionnel des Pays-Bas consiste en une purée mélangée avec des légumes ?",
       "propositions": [
-        "Potaye",
-        "Stamppot",
-        "Lefse",
-        "Frico",
-        "Hutspot",
-        "Bitterballen"
+        [
+          "Potaye",
+          ""
+        ],
+        [
+          "Stamppot",
+          ""
+        ],
+        [
+          "Lefse",
+          ""
+        ],
+        [
+          "Frico",
+          ""
+        ],
+        [
+          "Hutspot",
+          ""
+        ],
+        [
+          "Bitterballen",
+          ""
+        ]
       ],
       "answer": "Stamppot",
       "difficulty": "Difficile",
@@ -1322,14 +2994,33 @@
     },
     {
       "id": 89,
+      "type": 0,
       "question": "Au Pérou, combien existe-t-il environ de variétés de pommes de terre ?",
       "propositions": [
-        "2 000",
-        "3 000",
-        "1 000",
-        "4 000",
-        "500",
-        "5 000"
+        [
+          "2 000",
+          ""
+        ],
+        [
+          "3 000",
+          ""
+        ],
+        [
+          "1 000",
+          ""
+        ],
+        [
+          "4 000",
+          ""
+        ],
+        [
+          "500",
+          ""
+        ],
+        [
+          "5 000",
+          ""
+        ]
       ],
       "answer": "3 000",
       "difficulty": "Difficile",
@@ -1337,14 +3028,33 @@
     },
     {
       "id": 90,
+      "type": 0,
       "question": "Quel mets québécois se compose de frites, de cheddar en grains et de sauce brune ?",
       "propositions": [
-        "Trempette",
-        "Poutine",
-        "Cipaille",
-        "Gibelotte",
-        "Tire sur neige",
-        "BeaverTails"
+        [
+          "Trempette",
+          ""
+        ],
+        [
+          "Poutine",
+          ""
+        ],
+        [
+          "Cipaille",
+          ""
+        ],
+        [
+          "Gibelotte",
+          ""
+        ],
+        [
+          "Tire sur neige",
+          ""
+        ],
+        [
+          "BeaverTails",
+          ""
+        ]
       ],
       "answer": "Poutine",
       "difficulty": "Difficile",

@@ -2,14 +2,33 @@
   "quizz": [
     {
       "id": 1,
+      "type": 0,
       "question": "Quelle carbonade est composée de morceaux de viande mijotés dans une sauce à la bière ?",
       "propositions": [
-        "Bruxelloise",
-        "Germanique",
-        "Wallone",
-        "Flamande",
-        "Liégeoise",
-        "Anversoise"
+        [
+          "Bruxelloise",
+          ""
+        ],
+        [
+          "Germanique",
+          ""
+        ],
+        [
+          "Wallone",
+          ""
+        ],
+        [
+          "Flamande",
+          ""
+        ],
+        [
+          "Liégeoise",
+          ""
+        ],
+        [
+          "Anversoise",
+          ""
+        ]
       ],
       "answer": "Flamande",
       "difficulty": "Facile",
@@ -17,14 +36,33 @@
     },
     {
       "id": 2,
+      "type": 0,
       "question": "Quel pain brioché constellé de pépites de sucre est vendu dans tout le pays ?",
       "propositions": [
-        "Croustillon",
-        "Merveilleux",
-        "Craquelin",
-        "Gosette",
-        "Cougnou",
-        "Bostok"
+        [
+          "Croustillon",
+          ""
+        ],
+        [
+          "Merveilleux",
+          ""
+        ],
+        [
+          "Craquelin",
+          ""
+        ],
+        [
+          "Gosette",
+          ""
+        ],
+        [
+          "Cougnou",
+          ""
+        ],
+        [
+          "Bostok",
+          ""
+        ]
       ],
       "answer": "Craquelin",
       "difficulty": "Facile",
@@ -32,14 +70,33 @@
     },
     {
       "id": 3,
+      "type": 0,
       "question": "Quelle pâtisserie chaude est un classique des kermesses et des foires belges ?",
       "propositions": [
-        "Nid d'oiseau",
-        "Caricole",
-        "Stoemp",
-        "Croustillon",
-        "Couque de Dinant",
-        "Bouquette"
+        [
+          "Nid d'oiseau",
+          ""
+        ],
+        [
+          "Caricole",
+          ""
+        ],
+        [
+          "Stoemp",
+          ""
+        ],
+        [
+          "Croustillon",
+          ""
+        ],
+        [
+          "Couque de Dinant",
+          ""
+        ],
+        [
+          "Bouquette",
+          ""
+        ]
       ],
       "answer": "Croustillon",
       "difficulty": "Facile",
@@ -47,14 +104,33 @@
     },
     {
       "id": 4,
+      "type": 0,
       "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
       "propositions": [
-        "Gandeuillot",
-        "Fricadelle",
-        "Rosette",
-        "Longeole",
-        "Boudin noir",
-        "Merguez"
+        [
+          "Gandeuillot",
+          ""
+        ],
+        [
+          "Fricadelle",
+          ""
+        ],
+        [
+          "Rosette",
+          ""
+        ],
+        [
+          "Longeole",
+          ""
+        ],
+        [
+          "Boudin noir",
+          ""
+        ],
+        [
+          "Merguez",
+          ""
+        ]
       ],
       "answer": "Fricadelle",
       "difficulty": "Facile",
@@ -62,14 +138,33 @@
     },
     {
       "id": 5,
+      "type": 0,
       "question": "Quelle gaufre à base de pâte fermentée à la levure avec cannelle présente du sucre perlé ?",
       "propositions": [
-        "Gaufre de Mons",
-        "Gaufre d'Anvers",
-        "Gaufre de Liège",
-        "Gaufre de Tournai",
-        "Gaufre de Bruxelles",
-        "Gaufre fourrée"
+        [
+          "Gaufre de Mons",
+          ""
+        ],
+        [
+          "Gaufre d'Anvers",
+          ""
+        ],
+        [
+          "Gaufre de Liège",
+          ""
+        ],
+        [
+          "Gaufre de Tournai",
+          ""
+        ],
+        [
+          "Gaufre de Bruxelles",
+          ""
+        ],
+        [
+          "Gaufre fourrée",
+          ""
+        ]
       ],
       "answer": "Gaufre de Liège",
       "difficulty": "Facile",
@@ -77,14 +172,33 @@
     },
     {
       "id": 6,
+      "type": 0,
       "question": "Quelle demi-baguette contient une viande chaude, des frites et de la sauce ?",
       "propositions": [
-        "Mitraillette",
-        "Truffade",
-        "Rosti",
-        "Frico",
-        "Américain",
-        "Brochette"
+        [
+          "Mitraillette",
+          ""
+        ],
+        [
+          "Truffade",
+          ""
+        ],
+        [
+          "Rosti",
+          ""
+        ],
+        [
+          "Frico",
+          ""
+        ],
+        [
+          "Américain",
+          ""
+        ],
+        [
+          "Brochette",
+          ""
+        ]
       ],
       "answer": "Mitraillette",
       "difficulty": "Facile",
@@ -92,14 +206,33 @@
     },
     {
       "id": 7,
+      "type": 0,
       "question": "Quel mets très populaire en Belgique peut être mariné, nature, à la crème ou à l'ail ?",
       "propositions": [
-        "Tielle",
-        "Oursinade",
-        "Koulibiak",
-        "Moules-frites",
-        "Carbonades",
-        "Stoemp"
+        [
+          "Tielle",
+          ""
+        ],
+        [
+          "Oursinade",
+          ""
+        ],
+        [
+          "Koulibiak",
+          ""
+        ],
+        [
+          "Moules-frites",
+          ""
+        ],
+        [
+          "Carbonades",
+          ""
+        ],
+        [
+          "Stoemp",
+          ""
+        ]
       ],
       "answer": "Moules-frites",
       "difficulty": "Facile",
@@ -107,14 +240,33 @@
     },
     {
       "id": 8,
+      "type": 0,
       "question": "Quel plat belge sucré-salé, souvent servi en entrée, est composé de thon ?",
       "propositions": [
-        "Waterzooï",
-        "Escavèche",
-        "Pêche au thon",
-        "Bouquette",
-        "Tomate-crevette",
-        "Hareng fumé"
+        [
+          "Waterzooï",
+          ""
+        ],
+        [
+          "Escavèche",
+          ""
+        ],
+        [
+          "Pêche au thon",
+          ""
+        ],
+        [
+          "Bouquette",
+          ""
+        ],
+        [
+          "Tomate-crevette",
+          ""
+        ],
+        [
+          "Hareng fumé",
+          ""
+        ]
       ],
       "answer": "Pêche au thon",
       "difficulty": "Facile",
@@ -122,14 +274,33 @@
     },
     {
       "id": 9,
+      "type": 0,
       "question": "Dans quel gratin les endives sont-elles enroulées dans des tranches de jambon ?",
       "propositions": [
-        "Chicon-gratin",
-        "Bouchon",
-        "Sarcive",
-        "Croque-monsieur",
-        "Tartiflette",
-        "Gratin dauphinois"
+        [
+          "Chicon-gratin",
+          ""
+        ],
+        [
+          "Bouchon",
+          ""
+        ],
+        [
+          "Sarcive",
+          ""
+        ],
+        [
+          "Croque-monsieur",
+          ""
+        ],
+        [
+          "Tartiflette",
+          ""
+        ],
+        [
+          "Gratin dauphinois",
+          ""
+        ]
       ],
       "answer": "Chicon-gratin",
       "difficulty": "Facile",
@@ -137,14 +308,33 @@
     },
     {
       "id": 10,
+      "type": 0,
       "question": "Quelle abaisse en pâte levée est garnie de riz au lait mélangé avec de l'oeuf ?",
       "propositions": [
-        "Tarte au riz",
-        "Bouquette",
-        "Carmique",
-        "Cougnou",
-        "Vlaai",
-        "Tarte au maton"
+        [
+          "Tarte au riz",
+          ""
+        ],
+        [
+          "Bouquette",
+          ""
+        ],
+        [
+          "Carmique",
+          ""
+        ],
+        [
+          "Cougnou",
+          ""
+        ],
+        [
+          "Vlaai",
+          ""
+        ],
+        [
+          "Tarte au maton",
+          ""
+        ]
       ],
       "answer": "Tarte au riz",
       "difficulty": "Facile",
@@ -152,14 +342,33 @@
     },
     {
       "id": 11,
+      "type": 0,
       "question": "Quels boulets baignent dans une sauce aigre-douce à base d'oignons et de cassonade ?",
       "propositions": [
-        "À la athoise",
-        "À la liégeoise",
-        "À la montoise",
-        "À la namuroise",
-        "À la bruxelloise",
-        "À la campinoise"
+        [
+          "À la athoise",
+          ""
+        ],
+        [
+          "À la liégeoise",
+          ""
+        ],
+        [
+          "À la montoise",
+          ""
+        ],
+        [
+          "À la namuroise",
+          ""
+        ],
+        [
+          "À la bruxelloise",
+          ""
+        ],
+        [
+          "À la campinoise",
+          ""
+        ]
       ],
       "answer": "À la liégeoise",
       "difficulty": "Moyen",
@@ -167,14 +376,33 @@
     },
     {
       "id": 12,
+      "type": 0,
       "question": "Quel biscuit extrêmement dur est fait de miel caramélisé et de farine ?",
       "propositions": [
-        "Couque de Dinant",
-        "Zézette",
-        "Craquelin",
-        "Nic-nac",
-        "Spéculoos",
-        "Pain d'épices"
+        [
+          "Couque de Dinant",
+          ""
+        ],
+        [
+          "Zézette",
+          ""
+        ],
+        [
+          "Craquelin",
+          ""
+        ],
+        [
+          "Nic-nac",
+          ""
+        ],
+        [
+          "Spéculoos",
+          ""
+        ],
+        [
+          "Pain d'épices",
+          ""
+        ]
       ],
       "answer": "Couque de Dinant",
       "difficulty": "Moyen",
@@ -182,14 +410,33 @@
     },
     {
       "id": 13,
+      "type": 0,
       "question": "Quelle recette de condiment à base de vinaigre appartient à la famille des pickles ?",
       "propositions": [
-        "Piccalilli",
-        "Melfor",
-        "Vincotto",
-        "Myrtus",
-        "Chutney",
-        "Relish"
+        [
+          "Piccalilli",
+          ""
+        ],
+        [
+          "Melfor",
+          ""
+        ],
+        [
+          "Vincotto",
+          ""
+        ],
+        [
+          "Myrtus",
+          ""
+        ],
+        [
+          "Chutney",
+          ""
+        ],
+        [
+          "Relish",
+          ""
+        ]
       ],
       "answer": "Piccalilli",
       "difficulty": "Moyen",
@@ -197,14 +444,33 @@
     },
     {
       "id": 14,
+      "type": 0,
       "question": "Quel biscuit à la texture granuleuse est traditionnellement parfumé à la cannelle ?",
       "propositions": [
-        "Acibadem",
-        "Torta",
-        "Spéculoos",
-        "Kourabie",
-        "Macaron",
-        "Palet breton"
+        [
+          "Acibadem",
+          ""
+        ],
+        [
+          "Torta",
+          ""
+        ],
+        [
+          "Spéculoos",
+          ""
+        ],
+        [
+          "Kourabie",
+          ""
+        ],
+        [
+          "Macaron",
+          ""
+        ],
+        [
+          "Palet breton",
+          ""
+        ]
       ],
       "answer": "Spéculoos",
       "difficulty": "Moyen",
@@ -212,14 +478,33 @@
     },
     {
       "id": 15,
+      "type": 0,
       "question": "Quelle spécialité est faite à base de chou vert, d'épices et de viande blanche de porc ?",
       "propositions": [
-        "Trulle",
-        "Boudin vert",
-        "Enchaud",
-        "Pastrami",
-        "Saucisson de Lyon",
-        "Mortadelle"
+        [
+          "Trulle",
+          ""
+        ],
+        [
+          "Boudin vert",
+          ""
+        ],
+        [
+          "Enchaud",
+          ""
+        ],
+        [
+          "Pastrami",
+          ""
+        ],
+        [
+          "Saucisson de Lyon",
+          ""
+        ],
+        [
+          "Mortadelle",
+          ""
+        ]
       ],
       "answer": "Boudin vert",
       "difficulty": "Moyen",
@@ -227,14 +512,33 @@
     },
     {
       "id": 16,
+      "type": 0,
       "question": "En Belgique, quelle autre nom est donné au chausson aux pommes ?",
       "propositions": [
-        "Pomette",
-        "Josette",
-        "Cosette",
-        "Gosette",
-        "Rombosse",
-        "Boule de Berlin"
+        [
+          "Pomette",
+          ""
+        ],
+        [
+          "Josette",
+          ""
+        ],
+        [
+          "Cosette",
+          ""
+        ],
+        [
+          "Gosette",
+          ""
+        ],
+        [
+          "Rombosse",
+          ""
+        ],
+        [
+          "Boule de Berlin",
+          ""
+        ]
       ],
       "answer": "Gosette",
       "difficulty": "Moyen",
@@ -242,14 +546,33 @@
     },
     {
       "id": 17,
+      "type": 0,
       "question": "Quelle variété de chou peu digeste provoque des ballonnements et des flatulences ?",
       "propositions": [
-        "Chou cavalier",
-        "Chou de Bruxelles",
-        "Chou frisé",
-        "Chou pommé",
-        "Chou-fleur",
-        "Chou rouge"
+        [
+          "Chou cavalier",
+          ""
+        ],
+        [
+          "Chou de Bruxelles",
+          ""
+        ],
+        [
+          "Chou frisé",
+          ""
+        ],
+        [
+          "Chou pommé",
+          ""
+        ],
+        [
+          "Chou-fleur",
+          ""
+        ],
+        [
+          "Chou rouge",
+          ""
+        ]
       ],
       "answer": "Chou de Bruxelles",
       "difficulty": "Moyen",
@@ -257,14 +580,33 @@
     },
     {
       "id": 18,
+      "type": 0,
       "question": "Quelle viennoiserie est consommée durant les périodes de la Saint-Nicolas et de Noël ?",
       "propositions": [
-        "Africain",
-        "Cougnou",
-        "Faluche",
-        "Spéculoos",
-        "Mattentaart",
-        "Galette des Rois"
+        [
+          "Africain",
+          ""
+        ],
+        [
+          "Cougnou",
+          ""
+        ],
+        [
+          "Faluche",
+          ""
+        ],
+        [
+          "Spéculoos",
+          ""
+        ],
+        [
+          "Mattentaart",
+          ""
+        ],
+        [
+          "Galette des Rois",
+          ""
+        ]
       ],
       "answer": "Cougnou",
       "difficulty": "Moyen",
@@ -272,14 +614,33 @@
     },
     {
       "id": 19,
+      "type": 0,
       "question": "Quelle roulade de viande farcie est souvent dégustée en Belgique francophone ?",
       "propositions": [
-        "Hoosh",
-        "Bounarine",
-        "Oiseau sans tête",
-        "Vol-au-vent",
-        "Fricadelle",
-        "Pâté en croûte"
+        [
+          "Hoosh",
+          ""
+        ],
+        [
+          "Bounarine",
+          ""
+        ],
+        [
+          "Oiseau sans tête",
+          ""
+        ],
+        [
+          "Vol-au-vent",
+          ""
+        ],
+        [
+          "Fricadelle",
+          ""
+        ],
+        [
+          "Pâté en croûte",
+          ""
+        ]
       ],
       "answer": "Oiseau sans tête",
       "difficulty": "Moyen",
@@ -287,14 +648,33 @@
     },
     {
       "id": 20,
+      "type": 0,
       "question": "Quelle sorte de mélasse est issue de la cuisson de jus de pommes et de poires ?",
       "propositions": [
-        "Sirop de Liège",
-        "Diabolo",
-        "Sirop de batterie",
-        "Sirop d'érable",
-        "Mélasse de caroube",
-        "Miel de sapin"
+        [
+          "Sirop de Liège",
+          ""
+        ],
+        [
+          "Diabolo",
+          ""
+        ],
+        [
+          "Sirop de batterie",
+          ""
+        ],
+        [
+          "Sirop d'érable",
+          ""
+        ],
+        [
+          "Mélasse de caroube",
+          ""
+        ],
+        [
+          "Miel de sapin",
+          ""
+        ]
       ],
       "answer": "Sirop de Liège",
       "difficulty": "Moyen",
@@ -302,14 +682,33 @@
     },
     {
       "id": 21,
+      "type": 0,
       "question": "Quel plat unique de poulet ou de poisson se mange dans un bouillon lié à la crème ?",
       "propositions": [
-        "Carbonade",
-        "Hochepot",
-        "Waterzooï",
-        "Potjevleesch",
-        "Vol-au-vent",
-        "Choucroute"
+        [
+          "Carbonade",
+          ""
+        ],
+        [
+          "Hochepot",
+          ""
+        ],
+        [
+          "Waterzooï",
+          ""
+        ],
+        [
+          "Potjevleesch",
+          ""
+        ],
+        [
+          "Vol-au-vent",
+          ""
+        ],
+        [
+          "Choucroute",
+          ""
+        ]
       ],
       "answer": "Waterzooï",
       "difficulty": "Difficile",
@@ -317,14 +716,33 @@
     },
     {
       "id": 22,
+      "type": 0,
       "question": "Quelle confiserie de Malmedy comprend deux meringues soudées par une crème chantilly ?",
       "propositions": [
-        "Baiser",
-        "Bonnet",
-        "Bigorneau",
-        "Bêtise",
-        "Merveilleux",
-        "Macaron"
+        [
+          "Baiser",
+          ""
+        ],
+        [
+          "Bonnet",
+          ""
+        ],
+        [
+          "Bigorneau",
+          ""
+        ],
+        [
+          "Bêtise",
+          ""
+        ],
+        [
+          "Merveilleux",
+          ""
+        ],
+        [
+          "Macaron",
+          ""
+        ]
       ],
       "answer": "Baiser",
       "difficulty": "Difficile",
@@ -332,14 +750,33 @@
     },
     {
       "id": 23,
+      "type": 0,
       "question": "Quelle spécialité belge est composée d'un toast nappé de filet américain ?",
       "propositions": [
-        "Reuben",
-        "Cannibale",
-        "Chivito",
-        "Wrap",
-        "Tartare de bœuf",
-        "Mitraillette"
+        [
+          "Reuben",
+          ""
+        ],
+        [
+          "Cannibale",
+          ""
+        ],
+        [
+          "Chivito",
+          ""
+        ],
+        [
+          "Wrap",
+          ""
+        ],
+        [
+          "Tartare de bœuf",
+          ""
+        ],
+        [
+          "Mitraillette",
+          ""
+        ]
       ],
       "answer": "Cannibale",
       "difficulty": "Difficile",
@@ -347,14 +784,33 @@
     },
     {
       "id": 24,
+      "type": 0,
       "question": "Quelle purée de pommes de terre est mélangée avec un ou plusieurs légumes ?",
       "propositions": [
-        "Chupe",
-        "Stoemp",
-        "Ocopa",
-        "Bombine",
-        "Truffade",
-        "Aligot"
+        [
+          "Chupe",
+          ""
+        ],
+        [
+          "Stoemp",
+          ""
+        ],
+        [
+          "Ocopa",
+          ""
+        ],
+        [
+          "Bombine",
+          ""
+        ],
+        [
+          "Truffade",
+          ""
+        ],
+        [
+          "Aligot",
+          ""
+        ]
       ],
       "answer": "Stoemp",
       "difficulty": "Difficile",
@@ -362,14 +818,33 @@
     },
     {
       "id": 25,
+      "type": 0,
       "question": "Quelle anguille conservée dans du vinaigre est typique du Namurois ?",
       "propositions": [
-        "Frifri",
-        "Escavèche",
-        "Pacade",
-        "Bouillie",
-        "Waterzooï",
-        "Potjevleesch"
+        [
+          "Frifri",
+          ""
+        ],
+        [
+          "Escavèche",
+          ""
+        ],
+        [
+          "Pacade",
+          ""
+        ],
+        [
+          "Bouillie",
+          ""
+        ],
+        [
+          "Waterzooï",
+          ""
+        ],
+        [
+          "Potjevleesch",
+          ""
+        ]
       ],
       "answer": "Escavèche",
       "difficulty": "Difficile",
@@ -377,14 +852,33 @@
     },
     {
       "id": 26,
+      "type": 0,
       "question": "Quel pot-au-feu flamand est cuisiné à base de queue de boeuf, de lard salé et de légumes ?",
       "propositions": [
-        "Hochepot",
-        "Tielle",
-        "Stoemp",
-        "Frifri",
-        "Carbonade",
-        "Potjevleesch"
+        [
+          "Hochepot",
+          ""
+        ],
+        [
+          "Tielle",
+          ""
+        ],
+        [
+          "Stoemp",
+          ""
+        ],
+        [
+          "Frifri",
+          ""
+        ],
+        [
+          "Carbonade",
+          ""
+        ],
+        [
+          "Potjevleesch",
+          ""
+        ]
       ],
       "answer": "Hochepot",
       "difficulty": "Difficile",
@@ -392,14 +886,33 @@
     },
     {
       "id": 27,
+      "type": 0,
       "question": "Quel filet de hareng mariné est enroulé autour d'un oignon ou d'un cornichon vinaigré ?",
       "propositions": [
-        "Stoemp",
-        "Hochepot",
-        "Potjevleesch",
-        "Rollmops",
-        "Bismarck",
-        "Sild"
+        [
+          "Stoemp",
+          ""
+        ],
+        [
+          "Hochepot",
+          ""
+        ],
+        [
+          "Potjevleesch",
+          ""
+        ],
+        [
+          "Rollmops",
+          ""
+        ],
+        [
+          "Bismarck",
+          ""
+        ],
+        [
+          "Sild",
+          ""
+        ]
       ],
       "answer": "Rollmops",
       "difficulty": "Difficile",
@@ -407,14 +920,33 @@
     },
     {
       "id": 28,
+      "type": 0,
       "question": "Quelle spécialité est faite de blettes, de fromage blanc de ferme maigre et de beurre ?",
       "propositions": [
-        "Tarte al d'jote",
-        "Rombosse",
-        "Touffaye",
-        "Chassart",
-        "Tarte au maton",
-        "Tarte au sucre"
+        [
+          "Tarte al d'jote",
+          ""
+        ],
+        [
+          "Rombosse",
+          ""
+        ],
+        [
+          "Touffaye",
+          ""
+        ],
+        [
+          "Chassart",
+          ""
+        ],
+        [
+          "Tarte au maton",
+          ""
+        ],
+        [
+          "Tarte au sucre",
+          ""
+        ]
       ],
       "answer": "Tarte al d'jote",
       "difficulty": "Difficile",
@@ -422,14 +954,33 @@
     },
     {
       "id": 29,
+      "type": 0,
       "question": "Dans quel plat des morceaux de viande sont pris dans de la gelée légèrement vinaigrée ?",
       "propositions": [
-        "Potjevleesch",
-        "Oiseau sans tête",
-        "Vergeoise",
-        "Cannibale",
-        "Hochepot",
-        "Terrine"
+        [
+          "Potjevleesch",
+          ""
+        ],
+        [
+          "Oiseau sans tête",
+          ""
+        ],
+        [
+          "Vergeoise",
+          ""
+        ],
+        [
+          "Cannibale",
+          ""
+        ],
+        [
+          "Hochepot",
+          ""
+        ],
+        [
+          "Terrine",
+          ""
+        ]
       ],
       "answer": "Potjevleesch",
       "difficulty": "Difficile",
@@ -437,14 +988,33 @@
     },
     {
       "id": 30,
+      "type": 0,
       "question": "Quelle tarte n'est consommée qu'au moment de la célèbre ducasse d'Ath ?",
       "propositions": [
-        "Tarte au riz",
-        "Tarte à la gomme",
-        "Tarte à masteilles",
-        "Tarte al d'jote",
-        "Tarte au maroilles",
-        "Tarte au chicon"
+        [
+          "Tarte au riz",
+          ""
+        ],
+        [
+          "Tarte à la gomme",
+          ""
+        ],
+        [
+          "Tarte à masteilles",
+          ""
+        ],
+        [
+          "Tarte al d'jote",
+          ""
+        ],
+        [
+          "Tarte au maroilles",
+          ""
+        ],
+        [
+          "Tarte au chicon",
+          ""
+        ]
       ],
       "answer": "Tarte à masteilles",
       "difficulty": "Difficile",
@@ -452,14 +1022,33 @@
     },
     {
       "id": 31,
+      "type": 0,
       "question": "Quel fromage français a été représenté par une jeune fille blonde avec des nattes ?",
       "propositions": [
-        "Palet du Poitou",
-        "Petit chèvre",
-        "Belle des Champs",
-        "Tomme du Jura",
-        "Bûche de chèvre",
-        "Crottin de Chavignol"
+        [
+          "Palet du Poitou",
+          ""
+        ],
+        [
+          "Petit chèvre",
+          ""
+        ],
+        [
+          "Belle des Champs",
+          ""
+        ],
+        [
+          "Tomme du Jura",
+          ""
+        ],
+        [
+          "Bûche de chèvre",
+          ""
+        ],
+        [
+          "Crottin de Chavignol",
+          ""
+        ]
       ],
       "answer": "Belle des Champs",
       "difficulty": "Facile",
@@ -467,14 +1056,33 @@
     },
     {
       "id": 32,
+      "type": 0,
       "question": "Quel fromage industriel est généralement enrobé de paraffine teinte en rouge ?",
       "propositions": [
-        "Époisses",
-        "Saint-paulin",
-        "Chavroux",
-        "Babybel",
-        "Vache qui rit",
-        "Mini-cube"
+        [
+          "Époisses",
+          ""
+        ],
+        [
+          "Saint-paulin",
+          ""
+        ],
+        [
+          "Chavroux",
+          ""
+        ],
+        [
+          "Babybel",
+          ""
+        ],
+        [
+          "Vache qui rit",
+          ""
+        ],
+        [
+          "Mini-cube",
+          ""
+        ]
       ],
       "answer": "Babybel",
       "difficulty": "Facile",
@@ -482,14 +1090,33 @@
     },
     {
       "id": 33,
+      "type": 0,
       "question": "Quel fromage est enveloppé dans un papier en aluminium gaufré ?",
       "propositions": [
-        "Boursin",
-        "Emmental",
-        "Roquefort",
-        "Reblochon",
-        "Vache qui rit",
-        "Kiri"
+        [
+          "Boursin",
+          ""
+        ],
+        [
+          "Emmental",
+          ""
+        ],
+        [
+          "Roquefort",
+          ""
+        ],
+        [
+          "Reblochon",
+          ""
+        ],
+        [
+          "Vache qui rit",
+          ""
+        ],
+        [
+          "Kiri",
+          ""
+        ]
       ],
       "answer": "Boursin",
       "difficulty": "Facile",
@@ -497,14 +1124,33 @@
     },
     {
       "id": 34,
+      "type": 0,
       "question": "Quel fromage est réputé dans la commune de Meaux en France ?",
       "propositions": [
-        "Le gruyère",
-        "Le brie",
-        "Le cantal",
-        "Le roquefort",
-        "Le camembert",
-        "Le chaource"
+        [
+          "Le gruyère",
+          ""
+        ],
+        [
+          "Le brie",
+          ""
+        ],
+        [
+          "Le cantal",
+          ""
+        ],
+        [
+          "Le roquefort",
+          ""
+        ],
+        [
+          "Le camembert",
+          ""
+        ],
+        [
+          "Le chaource",
+          ""
+        ]
       ],
       "answer": "Le brie",
       "difficulty": "Facile",
@@ -512,14 +1158,33 @@
     },
     {
       "id": 35,
+      "type": 0,
       "question": "Quel fromage français est principalement produit en Franche-Comté ?",
       "propositions": [
-        "La fourme",
-        "Le comté",
-        "Le demi-sel",
-        "Le chèvre",
-        "Le morbier",
-        "Le mont d'Or"
+        [
+          "La fourme",
+          ""
+        ],
+        [
+          "Le comté",
+          ""
+        ],
+        [
+          "Le demi-sel",
+          ""
+        ],
+        [
+          "Le chèvre",
+          ""
+        ],
+        [
+          "Le morbier",
+          ""
+        ],
+        [
+          "Le mont d'Or",
+          ""
+        ]
       ],
       "answer": "Le comté",
       "difficulty": "Facile",
@@ -527,14 +1192,33 @@
     },
     {
       "id": 36,
+      "type": 0,
       "question": "Quel est le premier fromage le plus consommé en France ?",
       "propositions": [
-        "Gruyère",
-        "Roquefort",
-        "Emmental",
-        "Brie",
-        "Camembert",
-        "Chèvre"
+        [
+          "Gruyère",
+          ""
+        ],
+        [
+          "Roquefort",
+          ""
+        ],
+        [
+          "Emmental",
+          ""
+        ],
+        [
+          "Brie",
+          ""
+        ],
+        [
+          "Camembert",
+          ""
+        ],
+        [
+          "Chèvre",
+          ""
+        ]
       ],
       "answer": "Emmental",
       "difficulty": "Facile",
@@ -542,14 +1226,33 @@
     },
     {
       "id": 37,
+      "type": 0,
       "question": "La pâte de quel fromage français doit avoir des trous de par son appellation ?",
       "propositions": [
-        "Le beaufort",
-        "Le gruyère",
-        "La figuette",
-        "Le brebis",
-        "L'emmental",
-        "Le comté"
+        [
+          "Le beaufort",
+          ""
+        ],
+        [
+          "Le gruyère",
+          ""
+        ],
+        [
+          "La figuette",
+          ""
+        ],
+        [
+          "Le brebis",
+          ""
+        ],
+        [
+          "L'emmental",
+          ""
+        ],
+        [
+          "Le comté",
+          ""
+        ]
       ],
       "answer": "Le gruyère",
       "difficulty": "Facile",
@@ -557,14 +1260,33 @@
     },
     {
       "id": 38,
+      "type": 0,
       "question": "Quel fromage a connu son heure de gloire suite à un film de Dany Boon ?",
       "propositions": [
-        "Le brie",
-        "Le maroilles",
-        "Le gruyère",
-        "Le roquefort",
-        "Le munster",
-        "Le livarot"
+        [
+          "Le brie",
+          ""
+        ],
+        [
+          "Le maroilles",
+          ""
+        ],
+        [
+          "Le gruyère",
+          ""
+        ],
+        [
+          "Le roquefort",
+          ""
+        ],
+        [
+          "Le munster",
+          ""
+        ],
+        [
+          "Le livarot",
+          ""
+        ]
       ],
       "answer": "Le maroilles",
       "difficulty": "Facile",
@@ -572,14 +1294,33 @@
     },
     {
       "id": 39,
+      "type": 0,
       "question": "Quel fromage est présenté sous forme de cylindre de 5 cm de haut ?",
       "propositions": [
-        "Le petit-suisse",
-        "Le saint-marcellin",
-        "Le coulommiers",
-        "Le maroilles",
-        "Le chabichou",
-        "La tomme"
+        [
+          "Le petit-suisse",
+          ""
+        ],
+        [
+          "Le saint-marcellin",
+          ""
+        ],
+        [
+          "Le coulommiers",
+          ""
+        ],
+        [
+          "Le maroilles",
+          ""
+        ],
+        [
+          "Le chabichou",
+          ""
+        ],
+        [
+          "La tomme",
+          ""
+        ]
       ],
       "answer": "Le petit-suisse",
       "difficulty": "Facile",
@@ -587,14 +1328,33 @@
     },
     {
       "id": 40,
+      "type": 0,
       "question": "Quel fromage français est fabriqué dans quelques fermes aux alentours de Bergues ?",
       "propositions": [
-        "Le savaron",
-        "Le Bergues",
-        "Le livarot",
-        "Le beaufort",
-        "Le Neufchâtel",
-        "Le Pavé de Roubaix"
+        [
+          "Le savaron",
+          ""
+        ],
+        [
+          "Le Bergues",
+          ""
+        ],
+        [
+          "Le livarot",
+          ""
+        ],
+        [
+          "Le beaufort",
+          ""
+        ],
+        [
+          "Le Neufchâtel",
+          ""
+        ],
+        [
+          "Le Pavé de Roubaix",
+          ""
+        ]
       ],
       "answer": "Le Bergues",
       "difficulty": "Facile",
@@ -602,14 +1362,33 @@
     },
     {
       "id": 41,
+      "type": 0,
       "question": "Quel fromage français a été surnommé le Prince des gruyères par Brillat-Savarin ?",
       "propositions": [
-        "Le beaufort",
-        "Le brie",
-        "Le morbier",
-        "Le munster",
-        "Le comté",
-        "Le reblochon"
+        [
+          "Le beaufort",
+          ""
+        ],
+        [
+          "Le brie",
+          ""
+        ],
+        [
+          "Le morbier",
+          ""
+        ],
+        [
+          "Le munster",
+          ""
+        ],
+        [
+          "Le comté",
+          ""
+        ],
+        [
+          "Le reblochon",
+          ""
+        ]
       ],
       "answer": "Le beaufort",
       "difficulty": "Moyen",
@@ -617,14 +1396,33 @@
     },
     {
       "id": 42,
+      "type": 0,
       "question": "Lequel de ces fromages français est commercialisé dans une boîte en bois ?",
       "propositions": [
-        "Époisses",
-        "Petit-suisse",
-        "Roquefort",
-        "Cabécou",
-        "Livarot",
-        "Mont d'Or"
+        [
+          "Époisses",
+          ""
+        ],
+        [
+          "Petit-suisse",
+          ""
+        ],
+        [
+          "Roquefort",
+          ""
+        ],
+        [
+          "Cabécou",
+          ""
+        ],
+        [
+          "Livarot",
+          ""
+        ],
+        [
+          "Mont d'Or",
+          ""
+        ]
       ],
       "answer": "Époisses",
       "difficulty": "Moyen",
@@ -632,14 +1430,33 @@
     },
     {
       "id": 43,
+      "type": 0,
       "question": "Quel fromage français est aussi appelé boule de Lille de par sa forme ?",
       "propositions": [
-        "La rigotte",
-        "Le mouflon",
-        "La Mimolette vieille",
-        "Le pavé du Nord",
-        "Le Vieux-Lille",
-        "Le Carré du Vinage"
+        [
+          "La rigotte",
+          ""
+        ],
+        [
+          "Le mouflon",
+          ""
+        ],
+        [
+          "La Mimolette vieille",
+          ""
+        ],
+        [
+          "Le pavé du Nord",
+          ""
+        ],
+        [
+          "Le Vieux-Lille",
+          ""
+        ],
+        [
+          "Le Carré du Vinage",
+          ""
+        ]
       ],
       "answer": "La Mimolette vieille",
       "difficulty": "Moyen",
@@ -647,14 +1464,33 @@
     },
     {
       "id": 44,
+      "type": 0,
       "question": "Quel fromage doit son nom à un terme savoyard qui signifie traire une deuxième fois ?",
       "propositions": [
-        "Reblochon",
-        "Gruyère",
-        "Roquefort",
-        "Emmental",
-        "Beaufort",
-        "Abondance"
+        [
+          "Reblochon",
+          ""
+        ],
+        [
+          "Gruyère",
+          ""
+        ],
+        [
+          "Roquefort",
+          ""
+        ],
+        [
+          "Emmental",
+          ""
+        ],
+        [
+          "Beaufort",
+          ""
+        ],
+        [
+          "Abondance",
+          ""
+        ]
       ],
       "answer": "Reblochon",
       "difficulty": "Moyen",
@@ -662,14 +1498,33 @@
     },
     {
       "id": 45,
+      "type": 0,
       "question": "Quel fromage à pâte persillée est élaboré avec des laits crus de brebis ?",
       "propositions": [
-        "Roquefort",
-        "Beaufort",
-        "Munster",
-        "Brie",
-        "Bleu d'Auvergne",
-        "Gorgonzola"
+        [
+          "Roquefort",
+          ""
+        ],
+        [
+          "Beaufort",
+          ""
+        ],
+        [
+          "Munster",
+          ""
+        ],
+        [
+          "Brie",
+          ""
+        ],
+        [
+          "Bleu d'Auvergne",
+          ""
+        ],
+        [
+          "Gorgonzola",
+          ""
+        ]
       ],
       "answer": "Roquefort",
       "difficulty": "Moyen",
@@ -677,14 +1532,33 @@
     },
     {
       "id": 46,
+      "type": 0,
       "question": "Quel fromage à la pâte onctueuse doit sa renommée à son goût de noisette ?",
       "propositions": [
-        "Saint-nectaire",
-        "Roquefort",
-        "Livernon",
-        "Époisses",
-        "Cantal",
-        "Salers"
+        [
+          "Saint-nectaire",
+          ""
+        ],
+        [
+          "Roquefort",
+          ""
+        ],
+        [
+          "Livernon",
+          ""
+        ],
+        [
+          "Époisses",
+          ""
+        ],
+        [
+          "Cantal",
+          ""
+        ],
+        [
+          "Salers",
+          ""
+        ]
       ],
       "answer": "Saint-nectaire",
       "difficulty": "Moyen",
@@ -692,14 +1566,33 @@
     },
     {
       "id": 47,
+      "type": 0,
       "question": "Quel fromage affilié au maroilles a un nom de mammifère ?",
       "propositions": [
-        "Le marsouin",
-        "Le dauphin",
-        "Le wallaby",
-        "Le lapin",
-        "Le chèvre",
-        "Le castor"
+        [
+          "Le marsouin",
+          ""
+        ],
+        [
+          "Le dauphin",
+          ""
+        ],
+        [
+          "Le wallaby",
+          ""
+        ],
+        [
+          "Le lapin",
+          ""
+        ],
+        [
+          "Le chèvre",
+          ""
+        ],
+        [
+          "Le castor",
+          ""
+        ]
       ],
       "answer": "Le dauphin",
       "difficulty": "Moyen",
@@ -707,14 +1600,33 @@
     },
     {
       "id": 48,
+      "type": 0,
       "question": "Quel fromage possède un coeur sucré et fruité dû à sa garniture de figues ?",
       "propositions": [
-        "Figou",
-        "Saint-nectaire",
-        "Tomme de Savoie",
-        "Petit chèvre",
-        "Ficelle picarde",
-        "Fédou"
+        [
+          "Figou",
+          ""
+        ],
+        [
+          "Saint-nectaire",
+          ""
+        ],
+        [
+          "Tomme de Savoie",
+          ""
+        ],
+        [
+          "Petit chèvre",
+          ""
+        ],
+        [
+          "Ficelle picarde",
+          ""
+        ],
+        [
+          "Fédou",
+          ""
+        ]
       ],
       "answer": "Figou",
       "difficulty": "Moyen",
@@ -722,14 +1634,33 @@
     },
     {
       "id": 49,
+      "type": 0,
       "question": "Quel fromage français du Dauphiné est un proche cousin du saint-félicien ?",
       "propositions": [
-        "Le saint-siméon",
-        "Le saint-marcellin",
-        "Le saint-julien",
-        "Le saint-paulin",
-        "Le caillé doux",
-        "Le rigotte de Condrieu"
+        [
+          "Le saint-siméon",
+          ""
+        ],
+        [
+          "Le saint-marcellin",
+          ""
+        ],
+        [
+          "Le saint-julien",
+          ""
+        ],
+        [
+          "Le saint-paulin",
+          ""
+        ],
+        [
+          "Le caillé doux",
+          ""
+        ],
+        [
+          "Le rigotte de Condrieu",
+          ""
+        ]
       ],
       "answer": "Le saint-marcellin",
       "difficulty": "Moyen",
@@ -737,14 +1668,33 @@
     },
     {
       "id": 50,
+      "type": 0,
       "question": "Quel est sans doute le plus ancien des fromages de Savoie ?",
       "propositions": [
-        "La rigotte",
-        "Le vieux moulin",
-        "La tomme de Savoie",
-        "Le vacherin",
-        "Le beaufort",
-        "L'abondance"
+        [
+          "La rigotte",
+          ""
+        ],
+        [
+          "Le vieux moulin",
+          ""
+        ],
+        [
+          "La tomme de Savoie",
+          ""
+        ],
+        [
+          "Le vacherin",
+          ""
+        ],
+        [
+          "Le beaufort",
+          ""
+        ],
+        [
+          "L'abondance",
+          ""
+        ]
       ],
       "answer": "La tomme de Savoie",
       "difficulty": "Moyen",
@@ -752,14 +1702,33 @@
     },
     {
       "id": 51,
+      "type": 0,
       "question": "Quel fromage français est moulé en forme de meule à talon légèrement concave ?",
       "propositions": [
-        "Reblochon",
-        "Livernon",
-        "Beaufort",
-        "Cantal",
-        "Emmental",
-        "Comté"
+        [
+          "Reblochon",
+          ""
+        ],
+        [
+          "Livernon",
+          ""
+        ],
+        [
+          "Beaufort",
+          ""
+        ],
+        [
+          "Cantal",
+          ""
+        ],
+        [
+          "Emmental",
+          ""
+        ],
+        [
+          "Comté",
+          ""
+        ]
       ],
       "answer": "Beaufort",
       "difficulty": "Difficile",
@@ -767,14 +1736,33 @@
     },
     {
       "id": 52,
+      "type": 0,
       "question": "Quel fromage triple-crème est produit dans les régions de Normandie et de Bourgogne ?",
       "propositions": [
-        "Pélardon",
-        "Mélusine",
-        "Brillat-savarin",
-        "Gaperon",
-        "Chaource",
-        "Neufchâtel"
+        [
+          "Pélardon",
+          ""
+        ],
+        [
+          "Mélusine",
+          ""
+        ],
+        [
+          "Brillat-savarin",
+          ""
+        ],
+        [
+          "Gaperon",
+          ""
+        ],
+        [
+          "Chaource",
+          ""
+        ],
+        [
+          "Neufchâtel",
+          ""
+        ]
       ],
       "answer": "Brillat-savarin",
       "difficulty": "Difficile",
@@ -782,14 +1770,33 @@
     },
     {
       "id": 53,
+      "type": 0,
       "question": "Quel fromage français actuel est parfois aussi appelé brie petit moule ?",
       "propositions": [
-        "Le coulommiers",
-        "Le chevrotin",
-        "Le charolais",
-        "Le civray",
-        "Le brie de Meaux",
-        "Le camembert"
+        [
+          "Le coulommiers",
+          ""
+        ],
+        [
+          "Le chevrotin",
+          ""
+        ],
+        [
+          "Le charolais",
+          ""
+        ],
+        [
+          "Le civray",
+          ""
+        ],
+        [
+          "Le brie de Meaux",
+          ""
+        ],
+        [
+          "Le camembert",
+          ""
+        ]
       ],
       "answer": "Le coulommiers",
       "difficulty": "Difficile",
@@ -797,14 +1804,33 @@
     },
     {
       "id": 54,
+      "type": 0,
       "question": "Quel fromage est cerclé de trois à cinq bandelettes séchées et découpées ?",
       "propositions": [
-        "Le montbriac",
-        "Le fédou",
-        "Le livarot",
-        "Le livernon",
-        "Le pont l'évêque",
-        "Le camembert"
+        [
+          "Le montbriac",
+          ""
+        ],
+        [
+          "Le fédou",
+          ""
+        ],
+        [
+          "Le livarot",
+          ""
+        ],
+        [
+          "Le livernon",
+          ""
+        ],
+        [
+          "Le pont l'évêque",
+          ""
+        ],
+        [
+          "Le camembert",
+          ""
+        ]
       ],
       "answer": "Le livarot",
       "difficulty": "Difficile",
@@ -812,14 +1838,33 @@
     },
     {
       "id": 55,
+      "type": 0,
       "question": "Quel fromage possède une fine couche de cendre à la saveur douce et fruitée ?",
       "propositions": [
-        "Trou du Cru",
-        "Morbier",
-        "Vachard",
-        "Savaron",
-        "Sainte-Maure de Touraine",
-        "Chabichou"
+        [
+          "Trou du Cru",
+          ""
+        ],
+        [
+          "Morbier",
+          ""
+        ],
+        [
+          "Vachard",
+          ""
+        ],
+        [
+          "Savaron",
+          ""
+        ],
+        [
+          "Sainte-Maure de Touraine",
+          ""
+        ],
+        [
+          "Chabichou",
+          ""
+        ]
       ],
       "answer": "Morbier",
       "difficulty": "Difficile",
@@ -827,14 +1872,33 @@
     },
     {
       "id": 56,
+      "type": 0,
       "question": "Quel fromage français utilise le taureau comme logotype ?",
       "propositions": [
-        "Le livarot",
-        "Le laguiole",
-        "Le barousse",
-        "Le fédou",
-        "Le salers",
-        "Le cantal"
+        [
+          "Le livarot",
+          ""
+        ],
+        [
+          "Le laguiole",
+          ""
+        ],
+        [
+          "Le barousse",
+          ""
+        ],
+        [
+          "Le fédou",
+          ""
+        ],
+        [
+          "Le salers",
+          ""
+        ],
+        [
+          "Le cantal",
+          ""
+        ]
       ],
       "answer": "Le laguiole",
       "difficulty": "Difficile",
@@ -842,14 +1906,33 @@
     },
     {
       "id": 57,
+      "type": 0,
       "question": "Combien de litres de lait sont nécessaires pour confectionner une meule de cantal ?",
       "propositions": [
-        "200",
-        "100",
-        "400",
-        "300",
-        "500",
-        "150"
+        [
+          "200",
+          ""
+        ],
+        [
+          "100",
+          ""
+        ],
+        [
+          "400",
+          ""
+        ],
+        [
+          "300",
+          ""
+        ],
+        [
+          "500",
+          ""
+        ],
+        [
+          "150",
+          ""
+        ]
       ],
       "answer": "400",
       "difficulty": "Difficile",
@@ -857,14 +1940,33 @@
     },
     {
       "id": 58,
+      "type": 0,
       "question": "Quel fromage de lait de vache se nomme géromé en Lorraine ?",
       "propositions": [
-        "Le savaron",
-        "Le trou du Cru",
-        "Le morbier",
-        "Le munster",
-        "Le tomme",
-        "Le livarot"
+        [
+          "Le savaron",
+          ""
+        ],
+        [
+          "Le trou du Cru",
+          ""
+        ],
+        [
+          "Le morbier",
+          ""
+        ],
+        [
+          "Le munster",
+          ""
+        ],
+        [
+          "Le tomme",
+          ""
+        ],
+        [
+          "Le livarot",
+          ""
+        ]
       ],
       "answer": "Le munster",
       "difficulty": "Difficile",
@@ -872,14 +1974,33 @@
     },
     {
       "id": 59,
+      "type": 0,
       "question": "Quel fromage présente une ligne orange en-dessous de sa pâte de couleur ivoire ?",
       "propositions": [
-        "Le barousse",
-        "Le Curé nantais",
-        "Le munster",
-        "Le mouflon",
-        "Le Livarot",
-        "Le Morbier"
+        [
+          "Le barousse",
+          ""
+        ],
+        [
+          "Le Curé nantais",
+          ""
+        ],
+        [
+          "Le munster",
+          ""
+        ],
+        [
+          "Le mouflon",
+          ""
+        ],
+        [
+          "Livarot",
+          ""
+        ],
+        [
+          "Le Morbier",
+          ""
+        ]
       ],
       "answer": "Le barousse",
       "difficulty": "Difficile",
@@ -887,14 +2008,33 @@
     },
     {
       "id": 60,
+      "type": 0,
       "question": "Quel fromage a une pâte qui révèle une saveur de lard fumé et un final épicé ?",
       "propositions": [
-        "La figuette",
-        "Le Curé nantais",
-        "Le charolais",
-        "Le boursin",
-        "Le Saint-Nectaire",
-        "Le Pont-l'Évêque"
+        [
+          "La figuette",
+          ""
+        ],
+        [
+          "Le Curé nantais",
+          ""
+        ],
+        [
+          "Le charolais",
+          ""
+        ],
+        [
+          "Le boursin",
+          ""
+        ],
+        [
+          "Le Saint-Nectaire",
+          ""
+        ],
+        [
+          "Le Pont-l'Évêque",
+          ""
+        ]
       ],
       "answer": "Le Curé nantais",
       "difficulty": "Difficile",
@@ -902,14 +2042,33 @@
     },
     {
       "id": 61,
+      "type": 0,
       "question": "Quel fromage italien rentre dans la composition du tiramisu ?",
       "propositions": [
-        "Ricotta",
-        "Grana padano",
-        "Gorgonzola",
-        "Mascarpone",
-        "Mozzarella",
-        "Pecorino"
+        [
+          "Ricotta",
+          ""
+        ],
+        [
+          "Grana padano",
+          ""
+        ],
+        [
+          "Gorgonzola",
+          ""
+        ],
+        [
+          "Mascarpone",
+          ""
+        ],
+        [
+          "Mozzarella",
+          ""
+        ],
+        [
+          "Pecorino",
+          ""
+        ]
       ],
       "answer": "Mascarpone",
       "difficulty": "Facile",
@@ -917,14 +2076,33 @@
     },
     {
       "id": 62,
+      "type": 0,
       "question": "De quel fruit est composée la tarte Tatin, inventée de manière accidentelle ?",
       "propositions": [
-        "Pomme",
-        "Poire",
-        "Abricot",
-        "Pêche",
-        "Coing",
-        "Fraise"
+        [
+          "Pomme",
+          ""
+        ],
+        [
+          "Poire",
+          ""
+        ],
+        [
+          "Abricot",
+          ""
+        ],
+        [
+          "Pêche",
+          ""
+        ],
+        [
+          "Coing",
+          ""
+        ],
+        [
+          "Fraise",
+          ""
+        ]
       ],
       "answer": "Pomme",
       "difficulty": "Facile",
@@ -932,14 +2110,33 @@
     },
     {
       "id": 63,
+      "type": 0,
       "question": "Quel gâteau décore-t-on traditionnellement de sapins et de petits personnages ?",
       "propositions": [
-        "Galette des Rois",
-        "Forêt noire",
-        "Bûche de Noël",
-        "Palet de dame",
-        "Pain d'épices",
-        "Macaron"
+        [
+          "Galette des Rois",
+          ""
+        ],
+        [
+          "Forêt noire",
+          ""
+        ],
+        [
+          "Bûche de Noël",
+          ""
+        ],
+        [
+          "Palet de dame",
+          ""
+        ],
+        [
+          "Pain d'épices",
+          ""
+        ],
+        [
+          "Macaron",
+          ""
+        ]
       ],
       "answer": "Bûche de Noël",
       "difficulty": "Facile",
@@ -947,14 +2144,33 @@
     },
     {
       "id": 64,
+      "type": 0,
       "question": "Dans quel pays mange-t-on de manière régulière du « plum pudding » ?",
       "propositions": [
-        "Allemagne",
-        "États-Unis",
-        "Royaume-Uni",
-        "Australie",
-        "Canada",
-        "Irlande"
+        [
+          "Allemagne",
+          ""
+        ],
+        [
+          "États-Unis",
+          ""
+        ],
+        [
+          "Royaume-Uni",
+          ""
+        ],
+        [
+          "Australie",
+          ""
+        ],
+        [
+          "Canada",
+          ""
+        ],
+        [
+          "Irlande",
+          ""
+        ]
       ],
       "answer": "Royaume-Uni",
       "difficulty": "Facile",
@@ -962,14 +2178,33 @@
     },
     {
       "id": 65,
+      "type": 0,
       "question": "Quel synonyme d'excellent est un dessert glacé à base de crème fraîche et d'oeufs ?",
       "propositions": [
-        "Extra",
-        "Parfait",
-        "Génial",
-        "Super",
-        "Formidable",
-        "Sublime"
+        [
+          "Extra",
+          ""
+        ],
+        [
+          "Parfait",
+          ""
+        ],
+        [
+          "Génial",
+          ""
+        ],
+        [
+          "Super",
+          ""
+        ],
+        [
+          "Formidable",
+          ""
+        ],
+        [
+          "Sublime",
+          ""
+        ]
       ],
       "answer": "Parfait",
       "difficulty": "Facile",
@@ -977,14 +2212,33 @@
     },
     {
       "id": 66,
+      "type": 0,
       "question": "Quel gâteau comporte oeufs, beurre, farine et sucre en quantités égales ?",
       "propositions": [
-        "Quatre-quarts",
-        "Quatre-gares",
-        "Quatre-parts",
-        "Quatre-fards",
-        "Sablé",
-        "Madeleine"
+        [
+          "Quatre-quarts",
+          ""
+        ],
+        [
+          "Quatre-gares",
+          ""
+        ],
+        [
+          "Quatre-parts",
+          ""
+        ],
+        [
+          "Quatre-fards",
+          ""
+        ],
+        [
+          "Sablé",
+          ""
+        ],
+        [
+          "Madeleine",
+          ""
+        ]
       ],
       "answer": "Quatre-quarts",
       "difficulty": "Facile",
@@ -992,14 +2246,33 @@
     },
     {
       "id": 67,
+      "type": 0,
       "question": "Quel entremets de génoise, fourré de crème au beurre, est parfumé au café ?",
       "propositions": [
-        "Bavarois",
-        "Religieuse",
-        "Moka",
-        "Diplomate",
-        "Opéra",
-        "Forêt noire"
+        [
+          "Bavarois",
+          ""
+        ],
+        [
+          "Religieuse",
+          ""
+        ],
+        [
+          "Moka",
+          ""
+        ],
+        [
+          "Diplomate",
+          ""
+        ],
+        [
+          "Opéra",
+          ""
+        ],
+        [
+          "Forêt noire",
+          ""
+        ]
       ],
       "answer": "Moka",
       "difficulty": "Facile",
@@ -1007,14 +2280,33 @@
     },
     {
       "id": 68,
+      "type": 0,
       "question": "Quel dessert découpe-t-on traditionnellement à la fin du repas de mariage ?",
       "propositions": [
-        "Ambassadeur",
-        "Diplomate",
-        "Pièce montée",
-        "Financier",
-        "Tiramisu",
-        "Fraisier"
+        [
+          "Ambassadeur",
+          ""
+        ],
+        [
+          "Diplomate",
+          ""
+        ],
+        [
+          "Pièce montée",
+          ""
+        ],
+        [
+          "Financier",
+          ""
+        ],
+        [
+          "Tiramisu",
+          ""
+        ],
+        [
+          "Fraisier",
+          ""
+        ]
       ],
       "answer": "Pièce montée",
       "difficulty": "Facile",
@@ -1022,14 +2314,33 @@
     },
     {
       "id": 69,
+      "type": 0,
       "question": "Quels petits fruits rouges entrent dans la préparation du clafoutis ?",
       "propositions": [
-        "Framboises",
-        "Cerises",
-        "Groseilles",
-        "Fraises",
-        "Cassis",
-        "Mûres"
+        [
+          "Framboises",
+          ""
+        ],
+        [
+          "Cerises",
+          ""
+        ],
+        [
+          "Groseilles",
+          ""
+        ],
+        [
+          "Fraises",
+          ""
+        ],
+        [
+          "Cassis",
+          ""
+        ],
+        [
+          "Mûres",
+          ""
+        ]
       ],
       "answer": "Cerises",
       "difficulty": "Facile",
@@ -1037,14 +2348,33 @@
     },
     {
       "id": 70,
+      "type": 0,
       "question": "Traditionnellement, quel alcool utilise-t-on pour fabriquer un baba ?",
       "propositions": [
-        "Whisky",
-        "Vodka",
-        "Cognac",
-        "Rhum",
-        "Calvados",
-        "Kirsch"
+        [
+          "Whisky",
+          ""
+        ],
+        [
+          "Vodka",
+          ""
+        ],
+        [
+          "Cognac",
+          ""
+        ],
+        [
+          "Rhum",
+          ""
+        ],
+        [
+          "Calvados",
+          ""
+        ],
+        [
+          "Kirsch",
+          ""
+        ]
       ],
       "answer": "Rhum",
       "difficulty": "Facile",
@@ -1052,14 +2382,33 @@
     },
     {
       "id": 71,
+      "type": 0,
       "question": "Quel parfum vient compléter la vanille et le chocolat dans le véritable banana split ?",
       "propositions": [
-        "Praliné",
-        "Café",
-        "Fraise",
-        "Caramel",
-        "Pistache",
-        "Citron"
+        [
+          "Praliné",
+          ""
+        ],
+        [
+          "Café",
+          ""
+        ],
+        [
+          "Fraise",
+          ""
+        ],
+        [
+          "Caramel",
+          ""
+        ],
+        [
+          "Pistache",
+          ""
+        ],
+        [
+          "Citron",
+          ""
+        ]
       ],
       "answer": "Fraise",
       "difficulty": "Moyen",
@@ -1067,14 +2416,33 @@
     },
     {
       "id": 72,
+      "type": 0,
       "question": "Quel dessert italien porte un nom qui peut être traduit par « crème cuite » ?",
       "propositions": [
-        "Panna cotta",
-        "Panforte",
-        "Tiramisu",
-        "Amatriciana",
-        "Zabaglione",
-        "Cannoli"
+        [
+          "Panna cotta",
+          ""
+        ],
+        [
+          "Panforte",
+          ""
+        ],
+        [
+          "Tiramisu",
+          ""
+        ],
+        [
+          "Amatriciana",
+          ""
+        ],
+        [
+          "Zabaglione",
+          ""
+        ],
+        [
+          "Cannoli",
+          ""
+        ]
       ],
       "answer": "Panna cotta",
       "difficulty": "Moyen",
@@ -1082,14 +2450,33 @@
     },
     {
       "id": 73,
+      "type": 0,
       "question": "Quel alcool ajoute-t-on à un sorbet au citron pour en faire un colonel ?",
       "propositions": [
-        "Rhum",
-        "Vodka",
-        "Gin",
-        "Tequila",
-        "Pastis",
-        "Curaçao"
+        [
+          "Rhum",
+          ""
+        ],
+        [
+          "Vodka",
+          ""
+        ],
+        [
+          "Gin",
+          ""
+        ],
+        [
+          "Tequila",
+          ""
+        ],
+        [
+          "Pastis",
+          ""
+        ],
+        [
+          "Curaçao",
+          ""
+        ]
       ],
       "answer": "Vodka",
       "difficulty": "Moyen",
@@ -1097,14 +2484,33 @@
     },
     {
       "id": 74,
+      "type": 0,
       "question": "Quel plat de présentation permet de proposer des gâteaux sur un ou plusieurs étages ?",
       "propositions": [
-        "Serviteur",
-        "Valet",
-        "Majordome",
-        "Dévoué",
-        "Présentoir",
-        "Étagère"
+        [
+          "Serviteur",
+          ""
+        ],
+        [
+          "Valet",
+          ""
+        ],
+        [
+          "Majordome",
+          ""
+        ],
+        [
+          "Dévoué",
+          ""
+        ],
+        [
+          "Présentoir",
+          ""
+        ],
+        [
+          "Étagère",
+          ""
+        ]
       ],
       "answer": "Serviteur",
       "difficulty": "Moyen",
@@ -1112,14 +2518,33 @@
     },
     {
       "id": 75,
+      "type": 0,
       "question": "Quelle viennoiserie légère à pâte levée désigne familièrement un ventre rebondi ?",
       "propositions": [
-        "Baba",
-        "Beignet",
-        "Bavarois",
-        "Brioche",
-        "Croissant",
-        "Pain au chocolat"
+        [
+          "Baba",
+          ""
+        ],
+        [
+          "Beignet",
+          ""
+        ],
+        [
+          "Bavarois",
+          ""
+        ],
+        [
+          "Brioche",
+          ""
+        ],
+        [
+          "Croissant",
+          ""
+        ],
+        [
+          "Pain au chocolat",
+          ""
+        ]
       ],
       "answer": "Brioche",
       "difficulty": "Moyen",
@@ -1127,14 +2552,33 @@
     },
     {
       "id": 76,
+      "type": 0,
       "question": "Quelle crème est traditionnellement utilisée pour préparer une île flottante ?",
       "propositions": [
-        "Crème chantilly",
-        "Crème pâtissière",
-        "Crème anglaise",
-        "Crème fraîche",
-        "Crème diplomate",
-        "Crème mousseline"
+        [
+          "Crème chantilly",
+          ""
+        ],
+        [
+          "Crème pâtissière",
+          ""
+        ],
+        [
+          "Crème anglaise",
+          ""
+        ],
+        [
+          "Crème fraîche",
+          ""
+        ],
+        [
+          "Crème diplomate",
+          ""
+        ],
+        [
+          "Crème mousseline",
+          ""
+        ]
       ],
       "answer": "Crème anglaise",
       "difficulty": "Moyen",
@@ -1142,14 +2586,33 @@
     },
     {
       "id": 77,
+      "type": 0,
       "question": "Quelle crème pâtissière garnit communément la galette des Rois ?",
       "propositions": [
-        "Crème fouettée",
-        "Gélatine",
-        "Meringue",
-        "Frangipane",
-        "Crème chiboust",
-        "Crème d'amande"
+        [
+          "Crème fouettée",
+          ""
+        ],
+        [
+          "Gélatine",
+          ""
+        ],
+        [
+          "Meringue",
+          ""
+        ],
+        [
+          "Frangipane",
+          ""
+        ],
+        [
+          "Crème chiboust",
+          ""
+        ],
+        [
+          "Crème d'amande",
+          ""
+        ]
       ],
       "answer": "Frangipane",
       "difficulty": "Moyen",
@@ -1157,14 +2620,33 @@
     },
     {
       "id": 78,
+      "type": 0,
       "question": "Quel fruit compose la garniture la plus classique du Strudel autrichien ?",
       "propositions": [
-        "Pomme",
-        "Banane",
-        "Pêche",
-        "Poire",
-        "Cerise",
-        "Abricot"
+        [
+          "Pomme",
+          ""
+        ],
+        [
+          "Banane",
+          ""
+        ],
+        [
+          "Pêche",
+          ""
+        ],
+        [
+          "Poire",
+          ""
+        ],
+        [
+          "Cerise",
+          ""
+        ],
+        [
+          "Abricot",
+          ""
+        ]
       ],
       "answer": "Pomme",
       "difficulty": "Moyen",
@@ -1172,14 +2654,33 @@
     },
     {
       "id": 79,
+      "type": 0,
       "question": "Quel célèbre gâteau breton est né dans la région de Douarnenez ?",
       "propositions": [
-        "Krumkake",
-        "Kheer",
-        "Kouglof",
-        "Kouign-amann",
-        "Far breton",
-        "Crêpe dentelle"
+        [
+          "Krumkake",
+          ""
+        ],
+        [
+          "Kheer",
+          ""
+        ],
+        [
+          "Kouglof",
+          ""
+        ],
+        [
+          "Kouign-amann",
+          ""
+        ],
+        [
+          "Far breton",
+          ""
+        ],
+        [
+          "Crêpe dentelle",
+          ""
+        ]
       ],
       "answer": "Kouign-amann",
       "difficulty": "Moyen",
@@ -1187,14 +2688,33 @@
     },
     {
       "id": 80,
+      "type": 0,
       "question": "Quelle pâtisserie alsacienne en forme de huit est saupoudrée de sel et de cumin ?",
       "propositions": [
-        "Mille-feuille",
-        "Bretzel",
-        "Clafoutis",
-        "Tourte",
-        "Mannele",
-        "Kouglof"
+        [
+          "Mille-feuille",
+          ""
+        ],
+        [
+          "Bretzel",
+          ""
+        ],
+        [
+          "Clafoutis",
+          ""
+        ],
+        [
+          "Tourte",
+          ""
+        ],
+        [
+          "Mannele",
+          ""
+        ],
+        [
+          "Kouglof",
+          ""
+        ]
       ],
       "answer": "Bretzel",
       "difficulty": "Moyen",
@@ -1202,14 +2722,33 @@
     },
     {
       "id": 81,
+      "type": 0,
       "question": "Dans quelle région de France mange-t-on encore aujourd'hui les treize desserts de Noël ?",
       "propositions": [
-        "Auvergne",
-        "Provence",
-        "Bretagne",
-        "Alsace",
-        "Occitanie",
-        "Nouvelle-Aquitaine"
+        [
+          "Auvergne",
+          ""
+        ],
+        [
+          "Provence",
+          ""
+        ],
+        [
+          "Bretagne",
+          ""
+        ],
+        [
+          "Alsace",
+          ""
+        ],
+        [
+          "Occitanie",
+          ""
+        ],
+        [
+          "Nouvelle-Aquitaine",
+          ""
+        ]
       ],
       "answer": "Provence",
       "difficulty": "Difficile",
@@ -1217,14 +2756,33 @@
     },
     {
       "id": 82,
+      "type": 0,
       "question": "En pâtisserie, quelle « noix » entre dans la préparation du congolais ?",
       "propositions": [
-        "Noix de cajou",
-        "Noix de coco",
-        "Noix de pécan",
-        "Noix de muscade",
-        "Noix de Grenoble",
-        "Noisette"
+        [
+          "Noix de cajou",
+          ""
+        ],
+        [
+          "Noix de coco",
+          ""
+        ],
+        [
+          "Noix de pécan",
+          ""
+        ],
+        [
+          "Noix de muscade",
+          ""
+        ],
+        [
+          "Noix de Grenoble",
+          ""
+        ],
+        [
+          "Noisette",
+          ""
+        ]
       ],
       "answer": "Noix de coco",
       "difficulty": "Difficile",
@@ -1232,14 +2790,33 @@
     },
     {
       "id": 83,
+      "type": 0,
       "question": "Qui a dit : « Un dessert sans fromage est une belle à qui il manque un oeil » ?",
       "propositions": [
-        "Auguste Escoffier",
-        "La Rochefoucauld",
-        "La Bruyère",
-        "Brillat-Savarin",
-        "Antonin Carême",
-        "Paul Bocuse"
+        [
+          "Auguste Escoffier",
+          ""
+        ],
+        [
+          "La Rochefoucauld",
+          ""
+        ],
+        [
+          "La Bruyère",
+          ""
+        ],
+        [
+          "Brillat-Savarin",
+          ""
+        ],
+        [
+          "Antonin Carême",
+          ""
+        ],
+        [
+          "Paul Bocuse",
+          ""
+        ]
       ],
       "answer": "Brillat-Savarin",
       "difficulty": "Difficile",
@@ -1247,14 +2824,33 @@
     },
     {
       "id": 84,
+      "type": 0,
       "question": "Quelle pâtisserie est attribuée au confiseur italien Gasparini ?",
       "propositions": [
-        "Cassata",
-        "Meringue",
-        "Panettone",
-        "Amaretti",
-        "Zuccotto",
-        "Tiramisu"
+        [
+          "Cassata",
+          ""
+        ],
+        [
+          "Meringue",
+          ""
+        ],
+        [
+          "Panettone",
+          ""
+        ],
+        [
+          "Amaretti",
+          ""
+        ],
+        [
+          "Zuccotto",
+          ""
+        ],
+        [
+          "Tiramisu",
+          ""
+        ]
       ],
       "answer": "Meringue",
       "difficulty": "Difficile",
@@ -1262,14 +2858,33 @@
     },
     {
       "id": 85,
+      "type": 0,
       "question": "En pâtisserie, quel éclair voit son dessus glacé au fondant ou au caramel ?",
       "propositions": [
-        "Bâton de Jacob",
-        "Concorde",
-        "Chou allongé",
-        "Petite duchesse",
-        "Religieuse",
-        "Salambo"
+        [
+          "Bâton de Jacob",
+          ""
+        ],
+        [
+          "Concorde",
+          ""
+        ],
+        [
+          "Chou allongé",
+          ""
+        ],
+        [
+          "Petite duchesse",
+          ""
+        ],
+        [
+          "Religieuse",
+          ""
+        ],
+        [
+          "Salambo",
+          ""
+        ]
       ],
       "answer": "Bâton de Jacob",
       "difficulty": "Difficile",
@@ -1277,14 +2892,33 @@
     },
     {
       "id": 86,
+      "type": 0,
       "question": "Quelle ville de Lorraine est célèbre pour ses madeleines ?",
       "propositions": [
-        "Commercy",
-        "Metz",
-        "Nancy",
-        "Verdun",
-        "Épinal",
-        "Toul"
+        [
+          "Commercy",
+          ""
+        ],
+        [
+          "Metz",
+          ""
+        ],
+        [
+          "Nancy",
+          ""
+        ],
+        [
+          "Verdun",
+          ""
+        ],
+        [
+          "Épinal",
+          ""
+        ],
+        [
+          "Toul",
+          ""
+        ]
       ],
       "answer": "Commercy",
       "difficulty": "Difficile",
@@ -1292,14 +2926,33 @@
     },
     {
       "id": 87,
+      "type": 0,
       "question": "Quelle tarte, élaborée à partir de prunes jaunes, est une spécialité lorraine ?",
       "propositions": [
-        "Sabayon",
-        "Forêt noire",
-        "Diplomate",
-        "Aux mirabelles",
-        "Aux quetsches",
-        "Aux cerises"
+        [
+          "Sabayon",
+          ""
+        ],
+        [
+          "Forêt noire",
+          ""
+        ],
+        [
+          "Diplomate",
+          ""
+        ],
+        [
+          "Aux mirabelles",
+          ""
+        ],
+        [
+          "Aux quetsches",
+          ""
+        ],
+        [
+          "Aux cerises",
+          ""
+        ]
       ],
       "answer": "Aux mirabelles",
       "difficulty": "Difficile",
@@ -1307,14 +2960,33 @@
     },
     {
       "id": 88,
+      "type": 0,
       "question": "Quel beignet soufflé évoque une religieuse plutôt flatulente ?",
       "propositions": [
-        "Pet de nonne",
-        "Vent de messe",
-        "Gaz de mère",
-        "Feu de dieu",
-        "Chouquette",
-        "Beignet de carnaval"
+        [
+          "Pet de nonne",
+          ""
+        ],
+        [
+          "Vent de messe",
+          ""
+        ],
+        [
+          "Gaz de mère",
+          ""
+        ],
+        [
+          "Feu de dieu",
+          ""
+        ],
+        [
+          "Chouquette",
+          ""
+        ],
+        [
+          "Beignet de carnaval",
+          ""
+        ]
       ],
       "answer": "Pet de nonne",
       "difficulty": "Difficile",
@@ -1322,14 +2994,33 @@
     },
     {
       "id": 89,
+      "type": 0,
       "question": "Quel dessert doit son nom à une opérette de Jacques Offenbach ?",
       "propositions": [
-        "Baba au rhum",
-        "Poire Belle-Hélène",
-        "Crème Chiboust",
-        "Fraise Melba",
-        "Pêche Melba",
-        "Omelette norvégienne"
+        [
+          "Baba au rhum",
+          ""
+        ],
+        [
+          "Poire Belle-Hélène",
+          ""
+        ],
+        [
+          "Crème Chiboust",
+          ""
+        ],
+        [
+          "Fraise Melba",
+          ""
+        ],
+        [
+          "Pêche Melba",
+          ""
+        ],
+        [
+          "Omelette norvégienne",
+          ""
+        ]
       ],
       "answer": "Poire Belle-Hélène",
       "difficulty": "Difficile",
@@ -1337,14 +3028,33 @@
     },
     {
       "id": 90,
+      "type": 0,
       "question": "De quelle ville de France proviennent les cannelés en forme de petits cylindres striés ?",
       "propositions": [
-        "Rennes",
-        "Nancy",
-        "Strasbourg",
-        "Bordeaux",
-        "Toulouse",
-        "Lyon"
+        [
+          "Rennes",
+          ""
+        ],
+        [
+          "Nancy",
+          ""
+        ],
+        [
+          "Strasbourg",
+          ""
+        ],
+        [
+          "Bordeaux",
+          ""
+        ],
+        [
+          "Toulouse",
+          ""
+        ],
+        [
+          "Lyon",
+          ""
+        ]
       ],
       "answer": "Bordeaux",
       "difficulty": "Difficile",

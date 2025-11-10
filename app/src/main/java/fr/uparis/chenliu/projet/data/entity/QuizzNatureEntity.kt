@@ -7,8 +7,9 @@ import androidx.room.PrimaryKey
 data class QuizzNatureEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
+    val type: Int,
     val question: String,
-    val propositions: List<String>,
+    val propositions: List<List<String>>,
     val answer: String,
     val difficulty: String
 )

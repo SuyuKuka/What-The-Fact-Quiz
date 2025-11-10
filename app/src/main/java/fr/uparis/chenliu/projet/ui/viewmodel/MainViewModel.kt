@@ -95,6 +95,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     db.quizzScienceDao().insertQuestion(
                         QuizzScienceEntity(
                             id = it.id,
+                            type = it.type,
                             question = it.question,
                             propositions = it.propositions,
                             answer = it.answer,
@@ -106,6 +107,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     db.quizzGeoDao().insertQuestion(
                         QuizzGeoEntity(
                             id = it.id,
+                            type = it.type,
                             question = it.question,
                             propositions = it.propositions,
                             answer = it.answer,
@@ -117,6 +119,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     db.quizzGastronomieDao().insertQuestion(
                         QuizzGastronomieEntity(
                             id = it.id,
+                            type = it.type,
                             question = it.question,
                             propositions = it.propositions,
                             answer = it.answer,
@@ -128,6 +131,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     db.quizzDessinAnimeDao().insertQuestion(
                         QuizzDessinAnimeEntity(
                             id = it.id,
+                            type = it.type,
                             question = it.question,
                             propositions = it.propositions,
                             answer = it.answer,
@@ -139,6 +143,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     db.quizzNatureDao().insertQuestion(
                         QuizzNatureEntity(
                             id = it.id,
+                            type = it.type,
                             question = it.question,
                             propositions = it.propositions,
                             answer = it.answer,
@@ -150,6 +155,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     db.quizzInformatiqueDao().insertQuestion(
                         QuizzInformatiqueEntity(
                             id = it.id,
+                            type = it.type,
                             question = it.question,
                             propositions = it.propositions,
                             answer = it.answer,
