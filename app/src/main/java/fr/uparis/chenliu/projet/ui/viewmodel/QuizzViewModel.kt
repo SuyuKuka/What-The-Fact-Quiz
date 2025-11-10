@@ -17,11 +17,14 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     private var user = mutableStateOf<UsersEntity?>(null)
     private var settings = mutableStateOf<SettingsEntity?>(null)
 
+    // Users
     val energy = mutableIntStateOf(0)
     val subscription = mutableStateOf(false)
 
+    // Settings
     val font = mutableIntStateOf(0)
 
+    // Quizz
     var question = mutableListOf<String>()
     val answers = mutableListOf<AnswerSummary>()
     val loading = mutableStateOf(true)

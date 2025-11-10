@@ -21,6 +21,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     private var user = mutableStateOf<UsersEntity?>(null)
     private var settings = mutableStateOf<SettingsEntity?>(null)
 
+    // Users
     val username = mutableStateOf("")
     val energy = mutableIntStateOf(0)
     val lastTimeEnergy = mutableLongStateOf(System.currentTimeMillis())
@@ -28,16 +29,17 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val subscription = mutableStateOf(false)
     val endDate = mutableStateOf("")
 
+    // Settings
     val music = mutableFloatStateOf(0f)
     val sound = mutableFloatStateOf(0f)
     val background = mutableIntStateOf(0)
     val font = mutableIntStateOf(0)
     val preferredTopics = mutableStateOf("")
 
+    // Others
     val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
     val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
     val saved = mutableStateOf(true)
-
     val maxEnergy = mutableIntStateOf(20)
 
     fun init(username: String) {
@@ -150,7 +152,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         preferredTopics.value = settings.value!!.preferredTopics
     }
 
-    fun translateBackground(): Int{
+    fun intToBackground(): Int{
         val bg = when(background.intValue) {
             0 -> R.drawable.b0
             1 -> R.drawable.b1
@@ -160,7 +162,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         return bg
     }
 
-    fun translateFont(): List<Int> {
+    fun intToFont(): List<Int> {
         val ft = when(font.intValue) {
             0 -> 0
             1 -> R.font.game
