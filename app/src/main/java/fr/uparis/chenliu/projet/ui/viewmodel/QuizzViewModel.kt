@@ -1,10 +1,6 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
-import android.R.attr.font
 import android.app.Application
-import android.util.Log
-import android.util.Log.e
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
@@ -26,8 +22,9 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     val font = mutableIntStateOf(0)
 
-    var question = mutableStateOf("")
-    val answers = mutableStateOf(AnswerSummary(listOf(),""))
+    var question = mutableListOf<String>()
+    val answers = mutableListOf<AnswerSummary>()
+    val loading = mutableStateOf(true)
 
     data class AnswerSummary(
         var propositions: List<List<String>>,
@@ -55,126 +52,112 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
         viewModelScope.launch {
-            //todo: a simplifier
+            question.clear()
+            answers.clear()
             when (subject) {
                 "Science" -> {
+                    // on fetch les data
                     val currentDao = db.quizzScienceDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-
-                    var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                    var reshuffle = true
-                    while (reshuffle) {
-                        randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                        for (p in randomPropositions) {
-                            if (p[0] == answers.value.answer) {
-                                reshuffle = false
-                            }
-                        }
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)    // pas simplifiable ya le currentdao
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
                     }
-                    answers.value.propositions = randomPropositions
+                    loading.value = false
+                    return@launch
                 }
                 "Gastronomie" -> {
                     val currentDao = db.quizzGastronomieDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                    var reshuffle = true
-                    while (reshuffle) {
-                        randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                        for (p in randomPropositions) {
-                            if (p[0] == answers.value.answer) {
-                                reshuffle = false
-                            }
-                        }
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
                     }
-                    answers.value.propositions = randomPropositions
+                    loading.value = false
+                    return@launch
                 }
                 "Géographie" -> {
                     val currentDao = db.quizzGeoDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                    var reshuffle = true
-                    while (reshuffle) {
-                        randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                        for (p in randomPropositions) {
-                            if (p[0] == answers.value.answer) {
-                                reshuffle = false
-                            }
-                        }
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
                     }
-                    answers.value.propositions = randomPropositions
+                    loading.value = false
+                    return@launch
                 }
                 "Nature" -> {
                     val currentDao = db.quizzNatureDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                    var reshuffle = true
-                    while (reshuffle) {
-                        randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                        for (p in randomPropositions) {
-                            if (p[0] == answers.value.answer) {
-                                reshuffle = false
-                            }
-                        }
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
                     }
-                    answers.value.propositions = randomPropositions
+                    loading.value = false
+                    return@launch
                 }
                 "Dessin anime" -> {
                     val currentDao = db.quizzDessinAnimeDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                    var reshuffle = true
-                    while (reshuffle) {
-                        randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                        for (p in randomPropositions) {
-                            if (p[0] == answers.value.answer) {
-                                reshuffle = false
-                            }
-                        }
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
                     }
-                    answers.value.propositions = randomPropositions
+                    loading.value = false
+                    return@launch
                 }
                 "Informatique" -> {
                     val currentDao = db.quizzInformatiqueDao()
-                    val currentQuestion = currentDao.getQuestion(difficulty)
-                    // question
-                    question.value = currentQuestion.question
-                    // responses
-                    answers.value = currentDao.getAnswers(currentQuestion.id)
-                    var randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                    var reshuffle = true
-                    while (reshuffle) {
-                        randomPropositions = answers.value.propositions.shuffled().take(4).toMutableList()
-                        for (p in randomPropositions) {
-                            if (p[0] == answers.value.answer) {
-                                reshuffle = false
-                            }
-                        }
+                    val allQuestion = currentDao.getQuestion(difficulty)
+                    for (i in 0..9) {
+                        // question
+                        question.add(allQuestion[i].question)
+                        // responses
+                        val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+                        val currentPropositions = shuffle(currentAnswer)
+                        answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
                     }
-                    answers.value.propositions = randomPropositions
+                    loading.value = false
+                    return@launch
                 }
                 else -> db.quizzScienceDao()
             }
         }
+    }
+
+    // permet de rendre les propositions aléatoire
+    fun shuffle(value: AnswerSummary): List<List<String>> {
+        var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
+        var shuffling = true
+        while (shuffling) {
+            for (p in randomPropositions) {
+                if (p[0] == value.answer) {
+                    shuffling = false   // answer fait partie des proposition
+                }
+            }// si ya pas la réponse parmis les propositions
+            randomPropositions = value.propositions.shuffled().take(4)
+        }
+        return randomPropositions.shuffled()
     }
 
     fun removeEnergy() {
