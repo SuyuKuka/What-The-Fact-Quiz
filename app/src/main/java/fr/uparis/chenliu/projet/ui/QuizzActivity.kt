@@ -17,11 +17,13 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -141,10 +143,12 @@ fun Game(
     println(data.types.toString())
     val i = remember { mutableIntStateOf(0) }
 
+    val buildAnswer = remember { MutableList(4) { "" } }
+
     when (data.types[i.intValue]) {
         0 -> Quizztype0(model.translateFont(), data, i, model)
         1 -> Quizztype1(model.translateFont(), data, i, model)
-        2 -> Quizztype2(model.translateFont(), data, i, model)
+        2 -> Quizztype2(model.translateFont(), data, i, model, buildAnswer)
         3 -> Quizztype3()
         4 -> Quizztype4()
     }
@@ -240,14 +244,14 @@ fun Quizztype1 (
 
 @OptIn(ExperimentalGlideComposeApi::class)  // on prend ici
 @Composable
-fun DragImage(url: String) {
+fun DragImage(answer: String, url: String) {
     GlideImage(
         model = url,
         contentDescription = "Dragged Image",
         modifier = Modifier
             .fillMaxSize()
             .dragAndDropSource { _ ->
-            DragAndDropTransferData(ClipData.newPlainText("image Url", url),)
+            DragAndDropTransferData(ClipData.newPlainText(answer, url),)
         },
         loading = placeholder { Color.Red }
     )
@@ -255,32 +259,19 @@ fun DragImage(url: String) {
 
 @OptIn(ExperimentalGlideComposeApi::class) // on pose ici
 @Composable
-fun DropTargetImage(intValue: Int, font: List<Int>) {
+fun DropTargetImage(intValue: Int, font: List<Int>, buildAnswer: MutableList<String>) {
+
     val urlState = remember {mutableStateOf("")}
     val dndTarget = remember{
         object : DragAndDropTarget{
             override fun onDrop(event: DragAndDropEvent): Boolean {
                 val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
+                val answer = event.toAndroidDragEvent().clipData.description.label
+                buildAnswer.add(intValue,answer.toString()) // add a l'index intValue
+
+                println(buildAnswer)
                 urlState.value = draggedData.toString()
                 return true
-            }
-            override fun onStarted(event: DragAndDropEvent) {
-                super.onStarted(event)
-            }
-            override fun onChanged(event: DragAndDropEvent) {
-                super.onChanged(event)
-            }
-            override fun onEnded(event: DragAndDropEvent) {
-                super.onEnded(event)
-            }
-            override fun onEntered(event: DragAndDropEvent) {
-                super.onEntered(event)
-            }
-            override fun onExited(event: DragAndDropEvent) {
-                super.onExited(event)
-            }
-            override fun onMoved(event: DragAndDropEvent) {
-                super.onMoved(event)
             }
         }
     }
@@ -310,7 +301,7 @@ fun DropTargetImage(intValue: Int, font: List<Int>) {
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
                 ) {
-                    DisplayText(list = font, text = intValue.toString(), fontSize = 26.sp)
+                    DisplayText(list = font, text = (intValue+1).toString(), fontSize = 26.sp)
                 }
             }
         }
@@ -322,8 +313,10 @@ fun Quizztype2(
     font: List<Int>,
     data: QuizzViewModel.Data,
     i: MutableIntState,
-    model: QuizzViewModel
+    model: QuizzViewModel,
+    buildAnswer: MutableList<String>
 ) {
+
     Column {
         Row(
             modifier = Modifier
@@ -347,10 +340,20 @@ fun Quizztype2(
                         .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
                         .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
                 ) {
-                    DropTargetImage(data.answers[i.intValue].propositions.indexOf(ans)+1, model.translateFont())
+                    DropTargetImage(data.answers[i.intValue].propositions.indexOf(ans), model.translateFont(), buildAnswer)
                 }
 
             }
+        }
+        Row (
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+        ){
+            Button(onClick = {  }, shape = RectangleShape) { DisplayText(list = font, text = "reset", textAlign = TextAlign.Center) }
+            Spacer(modifier = Modifier.width(200.dp))
+            Button(onClick = {  }, shape = RectangleShape) { DisplayText(list = font, text = "valider", textAlign = TextAlign.Center) }
         }
 
         LazyVerticalGrid(
@@ -364,7 +367,7 @@ fun Quizztype2(
                         .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
                         .background(Color.Black)
                 ) {
-                    DragImage(url = ans[1])
+                    DragImage(answer = ans[0],url = ans[1])
                 }
             }
         }
