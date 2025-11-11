@@ -1,5 +1,7 @@
 package fr.uparis.chenliu.projet.ui
 
+import android.annotation.SuppressLint
+import android.app.Activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
@@ -19,22 +21,32 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.snapshots.SnapshotStateList
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
+import kotlinx.coroutines.delay
 
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,44 +61,54 @@ class QuizzActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MyTopBar(gameData: QuizzViewModel.GameData) {
+
+    var isRunning = true
+
+    if (gameData.gameEnded.value) {
+        isRunning = false
+    }
+
+    TopAppBar(
+        title = {
+            Row {
+                Text("Score : ${gameData.score.doubleValue} ")
+                Text("Temps :" + chronometer(isRunning, gameData.time))
+            }
+        },
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red) // tmp
+    )
+}
+
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel()){
     // todo:simplifier tout ca
-    val answerHistory = remember { mutableStateListOf<String>() }
-    val goodAnswer = remember { mutableStateListOf<String>() }
-    val questionHistory = remember { mutableStateListOf<String>() }
-    val score = remember { mutableIntStateOf(0) }
-    val nbQuestion = remember { mutableIntStateOf(10) }
 
-    val question = model.question
-    val answers = model.answers
+    val data = model.data
+
+    val gameData = model.gameData
+
     val loading = model.loading.value
 
-    model.init()
-
-    if (loading) {
-        model.getQuestionAndAnswer(subj, diff)
-    } else {
-        Column(modifier = Modifier.padding(top = 24.dp)) {
-            if (nbQuestion.intValue > 0) {
-                Game(
-                    font = model.translateFont(),
-                    question = question,
-                    answers = answers,
-                    score = score,
-                    nbQuestion = nbQuestion,
-                    answerHistory = answerHistory,
-                    questionHistory = questionHistory,goodAnswer
-                )
-            } else {
-                Result(model = model,
-                    font = model.translateFont(),
-                    score = score,
-                    nbQuestion = nbQuestion,
-                    answerHistory = answerHistory,
-                    questionHistory = questionHistory,
-                    goodAnswer = goodAnswer
-                )
+    model.init() // pour l'energie
+    Scaffold(
+        topBar = {
+            MyTopBar(gameData)
+        },
+        containerColor = Color.LightGray // tmp
+    ) { innerPadding ->
+        if (loading) {
+            model.getQuestionAndAnswer(subj, diff)
+        } else {
+            Column(modifier = Modifier.padding(innerPadding)) {
+                if (!gameData.gameEnded.value) {
+                    Game(data)
+                } else {
+                    Result(model.translateFont(), gameData)
+                }
             }
         }
     }
@@ -94,16 +116,28 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 
 @Composable
 fun Game(
-    font: List<Int>,
-    question: MutableList<String>,
-    answers: MutableList<QuizzViewModel.AnswerSummary>,
-    score: MutableIntState,
-    nbQuestion: MutableIntState,
-    answerHistory: SnapshotStateList<String>,
-    questionHistory: SnapshotStateList<String>,
-    goodAnswer: SnapshotStateList<String>,
+    data: QuizzViewModel.Data,
+    model: QuizzViewModel = viewModel(),
 ){
+    println(data.question.toString())
+    println(data.types.toString())
     val i = remember { mutableIntStateOf(0) }
+
+    when (data.types[i.intValue]) {
+        0 -> Quizztype0(model.translateFont(), data, i,)
+        1 -> Quizztype1(model.translateFont(), data, i,)
+
+    }
+}
+
+@Composable
+fun Quizztype0 (
+    font: List<Int>,
+    data: QuizzViewModel.Data,
+    i: MutableIntState,
+    model: QuizzViewModel = viewModel()
+) {
+
     Column {
         Row(
             modifier = Modifier
@@ -113,32 +147,17 @@ fun Game(
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            DisplayText(list = font, text = question[i.intValue], textAlign = TextAlign.Center)
+            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
         }
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             contentPadding = PaddingValues(8.dp),
-            modifier = Modifier
-                .weight(1f)
+            modifier = Modifier.weight(1f)
         ) {
-            items(answers[i.intValue].propositions) { ans ->
+            items(data.answers[i.intValue].propositions) { ans ->
                 Button(
-                    onClick = {
-                        answerHistory.add(ans[0]) // add le text pos 0 -> text ; pos 1 -> lien
-                        questionHistory.add(question[i.intValue])
-                        goodAnswer.add(answers[i.intValue].answer)
-                        if (ans[0] == answers[i.intValue].answer) { ++score.intValue }
-                        nbQuestion.intValue--
-                        if (i.intValue == 9) {
-                            i.intValue == 0
-                        } else {
-                            i.intValue++
-                        }
-                    },
-                    modifier = Modifier
-                        .aspectRatio(1.5f)
-                        .padding(8.dp)
-                        .fillMaxWidth(),
+                    onClick = { i.intValue = model.updateGame(ans[0], i.intValue) },
+                    modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
                     shape = RectangleShape
                 ) {
                     DisplayText(list = font, text = ans[0], textAlign = TextAlign.Center)
@@ -149,68 +168,122 @@ fun Game(
 }
 
 @Composable
-fun Result(
-    model: QuizzViewModel,
+fun Quizztype1 (
     font: List<Int>,
-    score: MutableIntState,
-    nbQuestion: MutableIntState,
-    answerHistory: SnapshotStateList<String>,
-    questionHistory: SnapshotStateList<String>,
-    goodAnswer: SnapshotStateList<String>,
+    data: QuizzViewModel.Data,
+    i: MutableIntState,
+    model: QuizzViewModel = viewModel()
+) {
+    var text by remember { mutableStateOf("") }
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.9f)
+                .fillMaxHeight(0.5f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
+        }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.9f)
+                .fillMaxHeight(0.5f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            WriteField(
+                value = text,
+                onValueChange = { newValue ->
+                    if (newValue.all { it.isDigit() }) {
+                        text = newValue
+                    }
+                },
+                label = "Nombre",
+                modifier = Modifier,
+                fontSize = 16.sp,
+                onDone = {
+                    val number = text.toIntOrNull()
+                    if (number != null) {
+                        i.intValue = model.updateGame(text, i.intValue)
+                    }
+                },
+                onlyNb = true
+            )
+        }
+    }
+}
+
+@Composable
+fun Quizztype2() {
+    Text("22222222222222222222222222222222")
+}
+@Composable
+fun Quizztype3() {
+    Text("333333333333333333333333333333333333333")
+}
+@Composable
+fun Quizztype4() {
+    Text("4444444444444444444444444444444444444")
+}
+@Composable
+fun chronometer(isRunning: Boolean, time: MutableDoubleState): String {
+    LaunchedEffect(isRunning) {
+        if (isRunning) {
+            while (true) {
+                delay(1)
+                time.doubleValue = time.doubleValue + 0.001
+            }
+        }
+    }
+    return "%.3f".format(time.doubleValue)
+}
+
+
+@Composable
+fun Result(
+    font: List<Int>,
+    gameData: QuizzViewModel.GameData,
+    model: QuizzViewModel = viewModel()
 ) {
     val activity = LocalActivity.current
     val alert = remember { mutableStateOf(false) }
 
-    if (alert.value) {
-        Alert(
-            list = font,
-            onConfirm = {
-                alert.value = false
-                activity?.finish()
-            },
-            onCancel = {
-                alert.value = false
-            },
-            title = "Joue Sans Limite ! 👑",
-            text = "Tu n'as plus d'énergie ! 😱\nNe perds plus ton temps à attendre !\nAchète l'abonnement prenium pour bénéficier de l'énergie A L'INFINI et jouer sans interruption",
-            onConfirmText = "Continuer",
-            onCancelText = "Fermer"
-        )
+    if (alert.value) {  // alerte le manque d'energie
+        ShowAlert(font, alert, activity)
     }
 
     Column(
-        modifier = Modifier
-            .fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         DisplayText(list = font, text = "RESULTAT", textAlign = TextAlign.Center)
-        DisplayText(list = font, text = "Score : ${score.intValue}", textAlign = TextAlign.Center)
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(4f)
-        ) {
-            itemsIndexed(questionHistory) { i, question ->
-                if (answerHistory[i] == goodAnswer[i]) {
+        DisplayText(list = font, text = "Score : ${gameData.score.doubleValue}", textAlign = TextAlign.Center)
+
+        LazyColumn(modifier = Modifier.fillMaxWidth().weight(4f)) {
+
+            itemsIndexed(gameData.questionHistory) { i, question ->
+                if (gameData.answerHistory[i] == gameData.goodAnswer[i]) {
                     DisplayText(list = font,"Question ${i+1}: $question", color = Color.Black)
-                    DisplayText(list = font,"Réponse -> ${goodAnswer[i]}\n", color = Color.Green)
+                    DisplayText(list = font,"Réponse -> ${gameData.goodAnswer[i]}\n", color = Color.Green)
                 } else {
                     DisplayText(list = font,"Question ${i+1}: $question", color = Color.Black)
-                    DisplayText(list = font,"Faux : ${answerHistory[i]}", color = Color.Red)
-                    DisplayText(list = font,"Réponse -> ${goodAnswer[i]}\n", color = Color.Blue)
+                    DisplayText(list = font,"Faux : ${gameData.answerHistory[i]}", color = Color.Red)
+                    DisplayText(list = font,"Réponse -> ${gameData.goodAnswer[i]}\n", color = Color.Blue)
                 }
             }
         }
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(2f)
-        ){
+
+        Row(modifier = Modifier.fillMaxWidth().weight(2f)){
             Button(
                 onClick = { activity?.finish() },
-                modifier = Modifier
-                    .padding(8.dp)
+                modifier = Modifier.padding(8.dp)
             ) {
                 DisplayText(list = font, text = "Accueil")
             }
@@ -220,21 +293,30 @@ fun Result(
                         alert.value = true
                         return@Button
                     }
-                    model.removeEnergy()
-                    nbQuestion.intValue = 10
-                    score.intValue = 0
-                    answerHistory.clear()
-                    questionHistory.clear()
-                    goodAnswer.clear()
-                    model.loading.value = true
+                    model.resetStats(gameData)
                 },
-                modifier = Modifier
-                    .padding(8.dp)
+                modifier = Modifier.padding(8.dp)
             ) {
                 DisplayText(list = font, text = "Rejouer")
             }
         }
-
     }
 }
 
+@Composable
+fun ShowAlert(font: List<Int>, alert: MutableState<Boolean>, activity: Activity?, ) {
+    Alert(
+        list = font,
+        onConfirm = { alert.value = false ; activity?.finish() },
+        onCancel = { alert.value = false },
+        title = "Joue Sans Limite ! 👑",
+        text =
+            """
+Tu n'as plus d'énergie ! 😱
+Ne perds plus ton temps à attendre !
+Achète l'abonnement prenium pour bénéficier de l'énergie A L'INFINI et jouer sans interruption
+            """,
+        onConfirmText = "Continuer",
+        onCancelText = "Fermer"
+    )
+}

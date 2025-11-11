@@ -10,6 +10,6 @@ data class QuizzDessinAnimeEntity(
     val type: Int,
     val question: String,
     val propositions: List<List<String>>,
-    val answer: String,
+    val answer: List<String>,
     val difficulty: String
 )

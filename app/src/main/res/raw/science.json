@@ -30,7 +30,9 @@
           ""
         ]
       ],
-      "answer": "Rouge",
+      "answer": [
+        "Rouge"
+      ],
       "difficulty": "Facile",
       "anecdote": "Cette couleur apparente est due à l'abondance de l'hématite amorphe ou oxyde de fer à sa surface."
     },
@@ -64,7 +66,9 @@
           ""
         ]
       ],
-      "answer": "Seul sur Mars",
+      "answer": [
+        "Seul sur Mars"
+      ],
       "difficulty": "Facile",
       "anecdote": "Matt Damon a accepté d'interpréter le personnage de Mark Watney, deux jours après avoir reçu le scénario."
     },
@@ -98,7 +102,9 @@
           ""
         ]
       ],
-      "answer": "Quatrième",
+      "answer": [
+        "Quatrième"
+      ],
       "difficulty": "Facile",
       "anecdote": "Son éloignement au Soleil est compris entre 1,381 et 1,666 UA, soit 206,6 à 249,2 millions de kilomètres."
     },
@@ -132,7 +138,9 @@
           ""
         ]
       ],
-      "answer": "Déimos",
+      "answer": [
+        "Déimos"
+      ],
       "difficulty": "Facile",
       "anecdote": "De même nature que Phobos, Déimos orbite à un peu plus de 23 000 km d'altitude, sur une orbite quasiment circulaire."
     },
@@ -166,7 +174,9 @@
           ""
         ]
       ],
-      "answer": "Mars Attacks!",
+      "answer": [
+        "Mars Attacks!"
+      ],
       "difficulty": "Facile",
       "anecdote": "Par de nombreux aspects, le film « Mars Attacks! » rappelle le film « Les soucoupes volantes attaquent » de 1956."
     },
@@ -200,7 +210,9 @@
           ""
         ]
       ],
-      "answer": "Poussière",
+      "answer": [
+        "Poussière"
+      ],
       "difficulty": "Facile",
       "anecdote": "Cette poussière, responsable de la teinte ocre, est continuellement injectée dans l'atmosphère par des tourbillons de poussière."
     },
@@ -234,7 +246,9 @@
           ""
         ]
       ],
-      "answer": "De Vénus",
+      "answer": [
+        "De Vénus"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le spectacle et le livre (essai américain paru en 1992) traitent les relations du couple sous leur angle très caricaturé."
     },
@@ -268,7 +282,9 @@
           ""
         ]
       ],
-      "answer": "Total Recall",
+      "answer": [
+        "Total Recall"
+      ],
       "difficulty": "Facile",
       "anecdote": "Colin Farrell a repris le rôle rendu célèbre par Schwarzenegger dans le remake « Total Recall : Mémoires programmées »."
     },
@@ -302,7 +318,9 @@
           ""
         ]
       ],
-      "answer": "Printemps",
+      "answer": [
+        "Printemps"
+      ],
       "difficulty": "Facile",
       "anecdote": "La saison la plus longue est le printemps (198 jours), qui excède la plus courte (l'automne, 146 jours) de 35 %."
     },
@@ -336,7 +354,9 @@
           ""
         ]
       ],
-      "answer": "Planète rouge",
+      "answer": [
+        "Planète rouge"
+      ],
       "difficulty": "Facile",
       "anecdote": "Dans le film, une éruption solaire oblige l'équipage à atterrir en catastrophe, transformant l'expédition en véritable mission suicide."
     },
@@ -370,7 +390,9 @@
           ""
         ]
       ],
-      "answer": "Spirit",
+      "answer": [
+        "Spirit"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Spirit a pour objectif principal l'étude géologique de la surface de Mars d'une région jugée susceptible d'avoir été autrefois irriguée."
     },
@@ -404,7 +426,9 @@
           ""
         ]
       ],
-      "answer": "Deux ans",
+      "answer": [
+        "Deux ans"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Mars est une planète tellurique moitié moins grande que la Terre et près de dix fois moins massive que celle-ci."
     },
@@ -438,7 +462,9 @@
           ""
         ]
       ],
-      "answer": "John Carter",
+      "answer": [
+        "John Carter"
+      ],
       "difficulty": "Moyen",
       "anecdote": "« John Carter » est la deuxième adaptation à l'écran des romans mettant en scène John Carter, après « Les Chroniques de Mars »."
     },
@@ -472,7 +498,9 @@
           ""
         ]
       ],
-      "answer": "Mariner 4",
+      "answer": [
+        "Mariner 4"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Dès 1965, Mariner 4 permit de découvrir une planète dépourvue de champ magnétique global avec une atmosphère ténue."
     },
@@ -506,7 +534,9 @@
           ""
         ]
       ],
-      "answer": "Mission to Mars",
+      "answer": [
+        "Mission to Mars"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Brian De Palma a voulu réaliser avec le film « Mission to Mars » une approche ultra-réaliste et plausible d'un point de vue scientifique."
     },
@@ -540,7 +570,9 @@
           ""
         ]
       ],
-      "answer": "-63 °C",
+      "answer": [
+        "-63 °C"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Malgré la faible inertie thermique, Viking 1 Lander a toutefois relevé des variations diurnes allant typiquement de -89 à -31 °C."
     },
@@ -574,7 +606,9 @@
           ""
         ]
       ],
-      "answer": "Mariner 9",
+      "answer": [
+        "Mariner 9"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Ce sont les données recueillies à cette occasion sur lesquelles se sont notamment fondées les missions Viking 1 et Viking 2."
     },
@@ -608,7 +642,9 @@
           ""
         ]
       ],
-      "answer": "Volvo",
+      "answer": [
+        "Volvo"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le cercle avec une flèche pointant vers le nord-est marque son association avec le fer, et donc l'industrie sidérurgique."
     },
@@ -642,7 +678,9 @@
           ""
         ]
       ],
-      "answer": "Doom",
+      "answer": [
+        "Doom"
+      ],
       "difficulty": "Moyen",
       "anecdote": "« Doom » fait partie des premiers jeux vidéo à utiliser un graphisme en 3D immersive et un mode jeu multijoueur en réseau."
     },
@@ -676,7 +714,9 @@
           ""
         ]
       ],
-      "answer": "Opportunity",
+      "answer": [
+        "Opportunity"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Depuis le 10 juin 2018, suite à une importante tempête ayant touché la planète Mars, Opportunity n'émet plus aucun signal."
     },
@@ -710,7 +750,9 @@
           ""
         ]
       ],
-      "answer": "Olympus Mons",
+      "answer": [
+        "Olympus Mons"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Olympus Mons s'élève à 22,5 km en moyenne au-dessus des plaines environnantes, dont l'altitude est inférieure au niveau de référence."
     },
@@ -744,7 +786,9 @@
           ""
         ]
       ],
-      "answer": "Phoenix",
+      "answer": [
+        "Phoenix"
+      ],
       "difficulty": "Difficile",
       "anecdote": "L'engin qui s'est posé sur le sol de Mars a une masse de 350 kg et dispose de deux petits laboratoires d'analyse chimique."
     },
@@ -778,7 +822,9 @@
           ""
         ]
       ],
-      "answer": "2050",
+      "answer": [
+        "2050"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Un rapprochement encore un peu plus resserré est prévu le 28 août 2287, avec une distance de 55,688 millions de kilomètres."
     },
@@ -812,7 +858,9 @@
           ""
         ]
       ],
-      "answer": "Percival Lowell",
+      "answer": [
+        "Percival Lowell"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Astronome amateur inspiré et entreprenant, Lowell a fondé un observatoire qui porte son nom à Flagstaff, en Arizona."
     },
@@ -846,7 +894,9 @@
           ""
         ]
       ],
-      "answer": "Hellas Planitia",
+      "answer": [
+        "Hellas Planitia"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Ce bassin d'impact d'environ 2 200 km de diamètre et 9 500 m de profondeur est situé dans l'hémisphère sud de la planète Mars."
     },
@@ -880,7 +930,9 @@
           ""
         ]
       ],
-      "answer": "Noachien",
+      "answer": [
+        "Noachien"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Cette échelle repose essentiellement sur la comparaison quantitative de la cratérisation des différents types de terrains martiens."
     },
@@ -914,7 +966,9 @@
           ""
         ]
       ],
-      "answer": "Alba Mons",
+      "answer": [
+        "Alba Mons"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Avec des restes de coulées de laves s'étendant jusqu'à 1 350 km de son sommet, sa taille est comparable à celle des États-Unis."
     },
@@ -948,7 +1002,9 @@
           ""
         ]
       ],
-      "answer": "Johannes Kepler",
+      "answer": [
+        "Johannes Kepler"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Après six ans de calcul, Kepler définira sa première loi qu'il publiera en 1609 dans son ouvrage « Astronomia nova »."
     },
@@ -982,7 +1038,9 @@
           ""
         ]
       ],
-      "answer": "Greg Bear",
+      "answer": [
+        "Greg Bear"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Greg Bear a été journaliste, dessinateur de science-fiction, libraire et conseiller technique pour quelques séries télévisées."
     },
@@ -1016,7 +1074,9 @@
           ""
         ]
       ],
-      "answer": "Aménophis IV",
+      "answer": [
+        "Aménophis IV"
+      ],
       "difficulty": "Difficile",
       "anecdote": "« Aménophis IV » est une série de bande dessinée française scénarisée par Dieter et dessinée par Étienne Le Roux."
     },
@@ -1050,7 +1110,9 @@
           ""
         ]
       ],
-      "answer": "Enigma",
+      "answer": [
+        "Enigma"
+      ],
       "difficulty": "Facile",
       "anecdote": "Enigma est une machine électromécanique portable servant au chiffrement et au déchiffrement de l'information."
     },
@@ -1084,7 +1146,9 @@
           ""
         ]
       ],
-      "answer": "Machine de Turing",
+      "answer": [
+        "Machine de Turing"
+      ],
       "difficulty": "Facile",
       "anecdote": "Ces expériences de pensée prendront tout leur sens avec la diffusion des ordinateurs, dans la seconde moitié du XXe siècle."
     },
@@ -1118,7 +1182,9 @@
           ""
         ]
       ],
-      "answer": "Pomme",
+      "answer": [
+        "Pomme"
+      ],
       "difficulty": "Facile",
       "anecdote": "L'autopsie du corps conclut à un suicide par empoisonnement au cyanure, même si sa mère tenta d'écarter cette thèse."
     },
@@ -1152,7 +1218,9 @@
           ""
         ]
       ],
-      "answer": "Jeu d'échecs",
+      "answer": [
+        "Jeu d'échecs"
+      ],
       "difficulty": "Facile",
       "anecdote": "Ne disposant pas d'un ordinateur assez puissant pour l'exécuter, Alan Turing a simulé les calculs de la machine."
     },
@@ -1186,7 +1254,9 @@
           ""
         ]
       ],
-      "answer": "Albert Einstein",
+      "answer": [
+        "Albert Einstein"
+      ],
       "difficulty": "Facile",
       "anecdote": "Les travaux d'Einstein remettaient en cause les axiomes d'Euclide et les lois de la mécanique céleste de Galilée et Newton."
     },
@@ -1220,7 +1290,9 @@
           ""
         ]
       ],
-      "answer": "UNIX",
+      "answer": [
+        "UNIX"
+      ],
       "difficulty": "Facile",
       "anecdote": "Cette commande intégrée a été utilisée par des laboratoires civils et militaires qui croyaient protéger ainsi leurs communications."
     },
@@ -1254,7 +1326,9 @@
           ""
         ]
       ],
-      "answer": "Alimentation externe",
+      "answer": [
+        "Alimentation externe"
+      ],
       "difficulty": "Facile",
       "anecdote": "Quoique son nom de machine puisse conduire à croire le contraire, une machine de Turing est un concept abstrait."
     },
@@ -1288,7 +1362,9 @@
           ""
         ]
       ],
-      "answer": "Enigma",
+      "answer": [
+        "Enigma"
+      ],
       "difficulty": "Facile",
       "anecdote": "Enigma fut utilisée principalement par les Allemands (Die Chiffriermaschine Enigma) pendant la Seconde Guerre mondiale."
     },
@@ -1322,7 +1398,9 @@
           ""
         ]
       ],
-      "answer": "SQL",
+      "answer": [
+        "SQL"
+      ],
       "difficulty": "Facile",
       "anecdote": "Un langage est dit Turing-complet s'il permet de représenter toutes les fonctions calculables au sens de Turing et Church."
     },
@@ -1356,7 +1434,9 @@
           ""
         ]
       ],
-      "answer": "Deep Blue",
+      "answer": [
+        "Deep Blue"
+      ],
       "difficulty": "Facile",
       "anecdote": "L'Intelligence Artificielle démarre dans les années 1950 avec les travaux d'Alan Turing, qui se demande si une machine peut penser."
     },
@@ -1390,7 +1470,9 @@
           ""
         ]
       ],
-      "answer": "Conversation",
+      "answer": [
+        "Conversation"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le test de Turing est une proposition de test d'IA fondée sur la faculté d'une machine à imiter la conversation humaine."
     },
@@ -1424,7 +1506,9 @@
           ""
         ]
       ],
-      "answer": "Thèse de Church",
+      "answer": [
+        "Thèse de Church"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Dans sa forme physique, elle affirme que la notion physique de la calculabilité est exprimée par un ensemble de règles de calcul."
     },
@@ -1458,7 +1542,9 @@
           ""
         ]
       ],
-      "answer": "Son homosexualité",
+      "answer": [
+        "Son homosexualité"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Pour éviter la prison suite à un fait divers lié à son homosexualité, Alan Turing a choisi la castration chimique par prise d'oestrogènes."
     },
@@ -1492,7 +1578,9 @@
           ""
         ]
       ],
-      "answer": "Empoisonné",
+      "answer": [
+        "Empoisonné"
+      ],
       "difficulty": "Moyen",
       "anecdote": "En 1954, à l'âge de seulement 41 ans, Alan Turing a été retrouvé dans sa chambre, mort d'un empoisonnement au cyanure."
     },
@@ -1526,7 +1614,9 @@
           ""
         ]
       ],
-      "answer": "Jeannot Szwarc",
+      "answer": [
+        "Jeannot Szwarc"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le film « Enigma » propose une belle affiche avec, entre autres, Martin Sheen, Brigitte Fossey, Sam Neill et Michael Lonsdale."
     },
@@ -1560,7 +1650,9 @@
           ""
         ]
       ],
-      "answer": "David Lagercrantz",
+      "answer": [
+        "David Lagercrantz"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Lagercrantz est connu pour avoir écrit une biographie de Zlatan Ibrahimovic ainsi que le roman policier « Ce qui ne me tue pas »."
     },
@@ -1594,7 +1686,9 @@
           ""
         ]
       ],
-      "answer": "Londres",
+      "answer": [
+        "Londres"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Il est né du fonctionnaire d'administration coloniale Julius Mathison Turing et de sa femme Ethel Sarah Turing (née Stoney)."
     },
@@ -1628,7 +1722,9 @@
           ""
         ]
       ],
-      "answer": "3 semaines",
+      "answer": [
+        "3 semaines"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Très tôt, le jeune Turing montra les signes de son génie ainsi qu'une affinité précoce pour les chiffres et la résolution d'énigmes."
     },
@@ -1662,7 +1758,9 @@
           ""
         ]
       ],
-      "answer": "Bletchley Park",
+      "answer": [
+        "Bletchley Park"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Bletchley Park y hébergeait pendant la Seconde Guerre mondiale une station secrète d'interception radio et une station d'émission."
     },
@@ -1696,7 +1794,9 @@
           ""
         ]
       ],
-      "answer": "Hut 8",
+      "answer": [
+        "Hut 8"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Alan Turing dira : « J'ai traité ce problème parce que personne d'autre ne s'en occupait et que je pouvais l'avoir pour moi seul »."
     },
@@ -1730,7 +1830,9 @@
           ""
         ]
       ],
-      "answer": "1966",
+      "answer": [
+        "1966"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le prix est décerné à des personnes ayant apporté une contribution scientifique significative au domaine de la recherche informatique."
     },
@@ -1764,7 +1866,9 @@
           ""
         ]
       ],
-      "answer": "30 000 euros",
+      "answer": [
+        "30 000 euros"
+      ],
       "difficulty": "Difficile",
       "anecdote": "C'est finalement l'Enigma-D qui deviendra le modèle le plus répandu après son adoption par la Marine allemande en 1926."
     },
@@ -1798,7 +1902,9 @@
           ""
         ]
       ],
-      "answer": "Delilah",
+      "answer": [
+        "Delilah"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Turing a découvert en 1943 les progrès des technologies électroniques en partant en mission de cryptanalyste."
     },
@@ -1832,7 +1938,9 @@
           ""
         ]
       ],
-      "answer": "Morphogenèse",
+      "answer": [
+        "Morphogenèse"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La morphogenèse est l'ensemble des lois qui déterminent la forme et la structure des tissus, des organes et des organismes."
     },
@@ -1866,7 +1974,9 @@
           ""
         ]
       ],
-      "answer": "2013",
+      "answer": [
+        "2013"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Suite au déchiffrage de la machine Enigma, Alan Turing ne sera reconnu comme héros de guerre que 55 ans après sa mort."
     },
@@ -1900,7 +2010,9 @@
           ""
         ]
       ],
-      "answer": "56",
+      "answer": [
+        "56"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Alan Turing avait légué ses papiers comprenant des réflexions sur la notation de Leibniz au mathématicien Robin Gandy."
     },
@@ -1934,7 +2046,9 @@
           ""
         ]
       ],
-      "answer": "Gordon Welchman",
+      "answer": [
+        "Gordon Welchman"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Une fois fabriquée, la bombe devint l'outil fondamental le plus automatisé de l'attaque des messages chiffrés par Enigma."
     },
@@ -1968,7 +2082,9 @@
           ""
         ]
       ],
-      "answer": "ACE",
+      "answer": [
+        "ACE"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Turing ne parviendra toutefois pas à s'entendre avec les ingénieurs électroniciens du NPL chargés de construire cette machine."
     },
@@ -2002,7 +2118,9 @@
           ""
         ]
       ],
-      "answer": "Colossus",
+      "answer": [
+        "Colossus"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Construit en onze mois, Colossus était constitué de 1 500 puis 2 400 tubes à vide et réalisait 5 000 opérations par seconde."
     },
@@ -2036,7 +2154,9 @@
           ""
         ]
       ],
-      "answer": "Hugh Alexander",
+      "answer": [
+        "Hugh Alexander"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Après la Seconde Guerre mondiale, Hugh Alexander fut pendant vingt ans le chef de la section H (cryptanalyse) du GCHQ."
     },
@@ -2070,7 +2190,9 @@
           ""
         ]
       ],
-      "answer": "Le bassin",
+      "answer": [
+        "Le bassin"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le bassin constitue la jonction entre la colonne vertébrale mobile (axe du tronc) et les membres inférieurs."
     },
@@ -2104,7 +2226,9 @@
           ""
         ]
       ],
-      "answer": "14 milliards",
+      "answer": [
+        "14 milliards"
+      ],
       "difficulty": "Facile",
       "anecdote": "Un neurone est une cellule excitable constituant l'unité fonctionnelle de base du système nerveux."
     },
@@ -2138,7 +2262,9 @@
           ""
         ]
       ],
-      "answer": "L'étrier",
+      "answer": [
+        "L'étrier"
+      ],
       "difficulty": "Facile",
       "anecdote": "L'étrier s'articule avec l'enclume (ou incus) et la fenêtre ovale du vestibule."
     },
@@ -2172,7 +2298,9 @@
           ""
         ]
       ],
-      "answer": "Aucun",
+      "answer": [
+        "Aucun"
+      ],
       "difficulty": "Facile",
       "anecdote": "Les oreilles et le bout du nez n'ont pas d'os et sont soutenus par du cartilage."
     },
@@ -2206,9 +2334,11 @@
           ""
         ]
       ],
-      "answer": "12",
+      "answer": [
+        "12"
+      ],
       "difficulty": "Facile",
-      "anecdote": "Les vertèbres thoraciques présentent la structure générale des vertèbres mais avec des caractères spécifiques."
+      "anecdote": "Les vertèbres thoraciques présentent la structure générale des vertèbres but avec des caractères spécifiques."
     },
     {
       "id": 66,
@@ -2240,7 +2370,9 @@
           ""
         ]
       ],
-      "answer": "Quatre",
+      "answer": [
+        "Quatre"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le grand droit, le grand oblique, le petit oblique et le muscle transverse."
     },
@@ -2274,7 +2406,9 @@
           ""
         ]
       ],
-      "answer": "La peau",
+      "answer": [
+        "La peau"
+      ],
       "difficulty": "Facile",
       "anecdote": "La peau est la première barrière de protection de l'organisme des animaux vertébrés."
     },
@@ -2308,7 +2442,9 @@
           ""
         ]
       ],
-      "answer": "20",
+      "answer": [
+        "20"
+      ],
       "difficulty": "Facile",
       "anecdote": "Chez certaines espèces, toute ou partie des dents temporaires sont perdues durant la vie intra-utérine."
     },
@@ -2342,7 +2478,9 @@
           ""
         ]
       ],
-      "answer": "12",
+      "answer": [
+        "12"
+      ],
       "difficulty": "Facile",
       "anecdote": "Avec le sternum et les vertèbres thoraciques, les côtes forment la cage thoracique qui protège le coeur et les poumons."
     },
@@ -2376,7 +2514,9 @@
           ""
         ]
       ],
-      "answer": "Coccyx",
+      "answer": [
+        "Coccyx"
+      ],
       "difficulty": "Facile",
       "anecdote": "Le coccyx est considéré comme une structure vestigiale, reliquat d'une queue que possédaient les ancêtres de l'Homme."
     },
@@ -2410,7 +2550,9 @@
           ""
         ]
       ],
-      "answer": "35 %",
+      "answer": [
+        "35 %"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le muscle constitue l'un des quatre types principaux de tissus biologiques animaux (épithélial, conjonctif et nerveux)."
     },
@@ -2444,7 +2586,9 @@
           ""
         ]
       ],
-      "answer": "5 000 000",
+      "answer": [
+        "5 000 000"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le sang est constitué d'un liquide presque incolore très riche en eau, le plasma."
     },
@@ -2478,7 +2622,9 @@
           ""
         ]
       ],
-      "answer": "4 mois",
+      "answer": [
+        "4 mois"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La biosynthèse des globules rouges commence au stade embryonnaire, à partir de la troisième semaine de développement."
     },
@@ -2512,7 +2658,9 @@
           ""
         ]
       ],
-      "answer": "500 kilos",
+      "answer": [
+        "500 kilos"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Alimentaire ou spirituelle, la nourriture désigne ce qui entretient la vie d'un organisme en lui procurant des substances à assimiler."
     },
@@ -2546,7 +2694,9 @@
           ""
         ]
       ],
-      "answer": "165 km/h",
+      "answer": [
+        "165 km/h"
+      ],
       "difficulty": "Moyen",
       "anecdote": "L'éternuement est un mécanisme de défense permettant de nettoyer le nez de ses impuretés en les expulsant."
     },
@@ -2580,7 +2730,9 @@
           ""
         ]
       ],
-      "answer": "1 litre",
+      "answer": [
+        "1 litre"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Un courant d'eau ou d'air doit assurer le renouvellement du fluide riche en O2 : il s'agit de ventilation."
     },
@@ -2614,7 +2766,9 @@
           ""
         ]
       ],
-      "answer": "1 million",
+      "answer": [
+        "1 million"
+      ],
       "difficulty": "Moyen",
       "anecdote": "La peau est la première barrière de protection de l'organisme des animaux vertébrés."
     },
@@ -2648,7 +2802,9 @@
           ""
         ]
       ],
-      "answer": "Sarin",
+      "answer": [
+        "Sarin"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Le sarin est une substance inodore, incolore et volatile, un neurotoxique pour l'homme et l'animal."
     },
@@ -2682,9 +2838,11 @@
           ""
         ]
       ],
-      "answer": "80",
+      "answer": [
+        "80"
+      ],
       "difficulty": "Moyen",
-      "anecdote": "Les cheveux ne poussent pas continuellement mais selon un rythme cyclique et périodique qui peut varier selon l'individu."
+      "anecdote": "Les cheveux ne poussent pas continuellement but selon un rythme cyclique et périodique qui peut varier selon l'individu."
     },
     {
       "id": 80,
@@ -2716,7 +2874,9 @@
           ""
         ]
       ],
-      "answer": "26",
+      "answer": [
+        "26"
+      ],
       "difficulty": "Moyen",
       "anecdote": "Chez l'Homme, la main est un organe extrêmement développé et important, elle dispose d'une palette d'actions très large."
     },
@@ -2750,7 +2910,9 @@
           ""
         ]
       ],
-      "answer": "350",
+      "answer": [
+        "350"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Les os vont se souder par la suite pour ne plus former que 206 os chez le squelette humain adulte."
     },
@@ -2784,7 +2946,9 @@
           ""
         ]
       ],
-      "answer": "2 000 000",
+      "answer": [
+        "2 000 000"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le sang transporte le dioxygène (O2) et les éléments nutritifs nécessaires aux processus vitaux de tous les tissus du corps."
     },
@@ -2818,7 +2982,9 @@
           ""
         ]
       ],
-      "answer": "Sartorius",
+      "answer": [
+        "Sartorius"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Il permet de prendre la position en tailleur d'où son nom en ancienne nomenclature (muscle couturier)."
     },
@@ -2852,7 +3018,9 @@
           ""
         ]
       ],
-      "answer": "1 minute",
+      "answer": [
+        "1 minute"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Chez l'adulte, les globules rouges sont élaborés dans la moelle osseuse dite moelle hématopoïétique."
     },
@@ -2886,7 +3054,9 @@
           ""
         ]
       ],
-      "answer": "1,5",
+      "answer": [
+        "1,5"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La salive joue un double rôle d'humidification des muqueuses et de préparation des aliments pour leur digestion."
     },
@@ -2920,7 +3090,9 @@
           ""
         ]
       ],
-      "answer": "Stapédien",
+      "answer": [
+        "Stapédien"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le muscle stapédien est tendu entre le rocher de l'os temporal et l'étrier de la chaîne ossiculaire de l'oreille."
     },
@@ -2954,7 +3126,9 @@
           ""
         ]
       ],
-      "answer": "6",
+      "answer": [
+        "6"
+      ],
       "difficulty": "Difficile",
       "anecdote": "L'oxygène est nécessaire au métabolisme de l'organisme, et le dioxyde de carbone doit être évacué."
     },
@@ -2988,7 +3162,9 @@
           ""
         ]
       ],
-      "answer": "600",
+      "answer": [
+        "600"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Le système musculaire comporte 600 muscles squelettiques constants, ajoutés aux muscles inconstants ou accessoires."
     },
@@ -3022,7 +3198,9 @@
           ""
         ]
       ],
-      "answer": "3 milliards",
+      "answer": [
+        "3 milliards"
+      ],
       "difficulty": "Difficile",
       "anecdote": "La fréquence cardiaque au repos est de 60 à 80 battements par minute, pour un débit de 4,5 à 5 litres de sang par minute."
     },
@@ -3056,7 +3234,9 @@
           ""
         ]
       ],
-      "answer": "5 ans",
+      "answer": [
+        "5 ans"
+      ],
       "difficulty": "Difficile",
       "anecdote": "Nous avons de 100 000 à 150 000 cheveux. La densité est d'environ 150 à 200 cheveux par centimètre carré."
     }

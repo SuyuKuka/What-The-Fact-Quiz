@@ -111,7 +111,8 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
 fun WriteField(
     value: String,
     onValueChange: (String) -> Unit,
-    label: String, modifier: Modifier,
+    label: String,
+    modifier: Modifier,
     fontSize: TextUnit,
     onDone: () -> Unit,
     onlyNb: Boolean = false
