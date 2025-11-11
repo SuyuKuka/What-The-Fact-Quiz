@@ -258,6 +258,8 @@ fun Result(
         ShowAlert(font, alert, activity)
     }
 
+    model.insertLeaderboard()
+
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
