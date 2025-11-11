@@ -39,7 +39,6 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val preferredTopics = mutableStateOf("")
 
     // Leaderboard
-    val subjectList = listOf("Science", "Gastronomie", "Géographie", "Nature", "Dessin anime", "Informatique")
     val usernameLeaderboard = mutableListOf<String?>()
     val score = mutableListOf<Double?>()
     val bestTime = mutableListOf<Double?>()
@@ -48,6 +47,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     // Others
     val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
     val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
+    val subjectList = listOf("Science", "Gastronomie", "Géographie", "Nature", "Dessin anime", "Informatique")
     val saved = mutableStateOf(true)
     val maxEnergy = mutableIntStateOf(20)
     val loading = mutableStateOf(true)
