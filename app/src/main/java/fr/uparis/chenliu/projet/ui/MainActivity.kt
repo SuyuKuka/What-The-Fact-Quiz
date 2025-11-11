@@ -48,7 +48,6 @@ class MainActivity : ComponentActivity() {
             ProjetTheme {
                 val permission = android.Manifest.permission.POST_NOTIFICATIONS
                 val permissionCheckResult = ContextCompat.checkSelfPermission(this, permission)
-                println(permissionCheckResult != PackageManager.PERMISSION_GRANTED)
                 if (permissionCheckResult != PackageManager.PERMISSION_GRANTED) {
                     if (!shouldShowRequestPermissionRationale(permission)) {
                         requestPermissions(
