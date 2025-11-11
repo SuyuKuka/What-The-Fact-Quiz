@@ -35,9 +35,6 @@ fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                     } else {
                         backStack += it
                     }
-                    if (backStack[0] == Screen.Leaderboard) {
-                        model.update.value = true
-                    }
                 },
                 icon = { Icon(imageVector = it.icon, contentDescription = "$it") }
             )

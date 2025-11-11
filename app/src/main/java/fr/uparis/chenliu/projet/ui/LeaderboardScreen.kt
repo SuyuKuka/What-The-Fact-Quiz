@@ -28,13 +28,6 @@ fun LeaderboardScreen(model: MenuViewModel) {
     val changed = model.changed
     val subjectList = model.subjectList
     val currentSubject = model.subject
-    val update = model.update
-
-    if (update.value) {
-        model.changeSubject(subjectList[0])
-        changed.value = true
-        update.value = false
-    }
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(

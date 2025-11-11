@@ -52,7 +52,6 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val maxEnergy = mutableIntStateOf(20)
     val loading = mutableStateOf(true)
     val changed = mutableStateOf(false)
-    val update = mutableStateOf(false)
 
     fun init(username: String) {
         this.username.value = username

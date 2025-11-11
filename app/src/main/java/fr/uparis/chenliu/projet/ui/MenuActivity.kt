@@ -98,7 +98,7 @@ fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
             modifier = Modifier.padding(paddingValues = pad),
             entryProvider = entryProvider{
                 entry<Screen.Profile> { model.getUsers(); ProfileScreen(model = model) }
-                entry<Screen.Leaderboard> { LeaderboardScreen(model = model) }
+                entry<Screen.Leaderboard> { model.changeSubject("Science"); model.changed.value = true; LeaderboardScreen(model = model) }
                 entry<Screen.Home> { HomeScreen(model = model, backStack = backStack) }
                 entry<Screen.Shop> { ShopScreen(model = model) }
                 entry<Screen.Settings> { SettingsScreen(model = model) }
