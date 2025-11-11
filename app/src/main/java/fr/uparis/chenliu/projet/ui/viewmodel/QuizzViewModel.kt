@@ -12,6 +12,7 @@ import androidx.lifecycle.viewModelScope
 import fr.uparis.chenliu.projet.R
 
 import fr.uparis.chenliu.projet.data.database.AppDatabase
+import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.launch
@@ -42,8 +43,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     )
 
     private val db = AppDatabase.getInstance(application)
-    private var user = mutableStateOf<UsersEntity?>(null)
-    private var settings = mutableStateOf<SettingsEntity?>(null)
+    private val user = mutableStateOf<UsersEntity?>(null)
+    private val settings = mutableStateOf<SettingsEntity?>(null)
 
     // Users
     val energy = mutableIntStateOf(0)
@@ -53,6 +54,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val font = mutableIntStateOf(0)
 
     // Quizz
+    val subject = mutableStateOf("")
     var question = mutableListOf<String>()
     val answers = mutableListOf<AnswerSummary>()
     val loading = mutableStateOf(true)
@@ -78,6 +80,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     )
 
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
+        this.subject.value = subject
         viewModelScope.launch {
             data.question.clear()
             data.answers.clear()
@@ -299,5 +302,11 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             else -> 0
         }
         return listOf(ft, sz)
+    }
+
+    fun insertLeaderboard() {
+        viewModelScope.launch {
+            db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.doubleValue, time = gameData.time.doubleValue, subject = subject.value))
+        }
     }
 }

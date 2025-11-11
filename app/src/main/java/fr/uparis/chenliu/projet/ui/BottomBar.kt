@@ -28,12 +28,15 @@ fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                     if (current == it) {
                         return@NavigationBarItem
                     }
-
+                    backStack.clear()
                     if (!model.saved.value) {
                         destination = it
                         alert = true
                     } else {
                         backStack += it
+                    }
+                    if (backStack[0] == Screen.Leaderboard) {
+                        model.update.value = true
                     }
                 },
                 icon = { Icon(imageVector = it.icon, contentDescription = "$it") }

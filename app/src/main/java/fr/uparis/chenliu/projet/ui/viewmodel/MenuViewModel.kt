@@ -9,6 +9,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.data.database.AppDatabase
+import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.delay
@@ -18,8 +19,9 @@ import java.time.LocalDateTime
 class MenuViewModel(application: Application): AndroidViewModel(application) {
 
     private val db = AppDatabase.getInstance(application)
-    private var user = mutableStateOf<UsersEntity?>(null)
-    private var settings = mutableStateOf<SettingsEntity?>(null)
+    private val user = mutableStateOf<UsersEntity?>(null)
+    private val settings = mutableStateOf<SettingsEntity?>(null)
+    private var leaderboard = mutableListOf<LeaderboardEntity?>(null)
 
     // Users
     val username = mutableStateOf("")
@@ -36,12 +38,21 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val font = mutableIntStateOf(0)
     val preferredTopics = mutableStateOf("")
 
+    // Leaderboard
+    val usernameLeaderboard = mutableListOf<String?>()
+    val score = mutableListOf<Double?>()
+    val bestTime = mutableListOf<Double?>()
+    val subject = mutableStateOf("")
+
     // Others
     val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
     val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
+    val subjectList = listOf("Science", "Gastronomie", "Géographie", "Nature", "Dessin anime", "Informatique")
     val saved = mutableStateOf(true)
     val maxEnergy = mutableIntStateOf(20)
     val loading = mutableStateOf(true)
+    val changed = mutableStateOf(false)
+    val update = mutableStateOf(false)
 
     fun init(username: String) {
         this.username.value = username
@@ -54,6 +65,11 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             background.intValue = settings.value!!.background
             font.intValue = settings.value!!.font
             preferredTopics.value = settings.value!!.preferredTopics
+
+            leaderboard = db.leaderboardDao().getLeaderboard(subjectList[0])
+            changeSubject(subjectList[0])
+            subject.value = "Science"
+
             while (true) {
                 getUsers()
                 addEnergy()
@@ -230,6 +246,28 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
                 }
                 getUsers()
             }
+        }
+    }
+
+    fun changeSubject(subject: String) {
+        usernameLeaderboard.clear()
+        score.clear()
+        bestTime.clear()
+        this.subject.value = subject
+        viewModelScope.launch {
+            leaderboard = db.leaderboardDao().getLeaderboard(subject)
+            if (leaderboard.isNotEmpty()) {
+                for (i in 0..leaderboard.size - 1) {
+                    if (leaderboard[i]?.userId != null) {
+                        usernameLeaderboard.add(db.usersDao().getUsername(leaderboard[i]!!.userId))
+                        score.add(leaderboard[i]!!.score)
+                        bestTime.add(leaderboard[i]!!.time)
+                    } else {
+                        usernameLeaderboard[i] = null
+                    }
+                }
+            }
+            changed.value = false
         }
     }
 }
