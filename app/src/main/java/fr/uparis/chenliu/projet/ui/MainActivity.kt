@@ -1,9 +1,11 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -37,11 +39,16 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MainViewModel
 import java.time.LocalDateTime
 
 class MainActivity : ComponentActivity() {
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ProjetTheme {
-                MyScreen(this)
+                requestPermissions(
+                    arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
+                    0
+                )
+                MyScreen(activity = this)
             }
         }
     }
@@ -50,7 +57,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
     val context = LocalContext.current
-    val intent = Intent(context, MainMenuActivity::class.java)
+    val intent = Intent(context, MenuActivity::class.java)
     val username = model.username.value
     val loading = model.loading.value
     val exist = model.exist.value
@@ -86,15 +93,11 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                     fontSize = 25.sp,
                     onDone = { model.insertData(context) }
                 )
-                Button(onClick = {model.insertData(context) } ) { Text(text = "Continuer") }
+                Button(onClick = { model.insertData(context) }) { Text(text = "Continuer") }
             }
         }
     }
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-/*                                            Functions                                           */
-////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @Composable
 fun WriteField(

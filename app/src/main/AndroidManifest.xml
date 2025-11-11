@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
+        android:label="Quiz"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,9 +19,9 @@
             android:label="@string/title_activity_quizz"
             android:theme="@style/Theme.Projet" />
         <activity
-            android:name=".ui.MainMenuActivity"
+            android:name=".ui.MenuActivity"
             android:exported="false"
-            android:label="@string/title_activity_main_menu"
+            android:label="@string/title_activity_menu"
             android:theme="@style/Theme.Projet" />
         <activity
             android:name=".ui.MainActivity"
