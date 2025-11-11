@@ -9,7 +9,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
-
 import androidx.compose.foundation.border
 import androidx.compose.foundation.draganddrop.dragAndDropSource
 import androidx.compose.foundation.draganddrop.dragAndDropTarget
@@ -60,6 +59,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
+import com.bumptech.glide.integration.compose.placeholder
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 import kotlinx.coroutines.delay
@@ -107,16 +107,18 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 
     val gameData = model.gameData
 
-    val loading = model.loading.value
+    val loading = model.loading
 
     model.init() // pour l'energie
+
     Scaffold(
         topBar = {
             MyTopBar(gameData)
         },
         containerColor = Color.LightGray // tmp
     ) { innerPadding ->
-        if (loading) {
+        if (loading.value) {
+            //LoadingScreen()
             model.getQuestionAndAnswer(subj, diff)
         } else {
             Column(modifier = Modifier.padding(innerPadding)) {
@@ -246,13 +248,14 @@ fun DragImage(url: String) {
             .fillMaxSize()
             .dragAndDropSource { _ ->
             DragAndDropTransferData(ClipData.newPlainText("image Url", url),)
-        }
+        },
+        loading = placeholder { Color.Red }
     )
 }
 
 @OptIn(ExperimentalGlideComposeApi::class) // on pose ici
 @Composable
-fun DropTargetImage(intValue: Int) {
+fun DropTargetImage(intValue: Int, font: List<Int>) {
     val urlState = remember {mutableStateOf("")}
     val dndTarget = remember{
         object : DragAndDropTarget{
@@ -297,21 +300,20 @@ fun DropTargetImage(intValue: Int) {
                     target = dndTarget
                 )
         )
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center
+        if (urlState.value.isEmpty()) {
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
             ) {
-                Text(intValue.toString())
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    DisplayText(list = font, text = intValue.toString(), fontSize = 26.sp)
+                }
             }
         }
-
-
-
     }
 }
 
@@ -345,7 +347,7 @@ fun Quizztype2(
                         .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
                         .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
                 ) {
-                    DropTargetImage(data.answers[i.intValue].propositions.indexOf(ans)+1)
+                    DropTargetImage(data.answers[i.intValue].propositions.indexOf(ans)+1, model.translateFont())
                 }
 
             }
@@ -364,7 +366,6 @@ fun Quizztype2(
                 ) {
                     DragImage(url = ans[1])
                 }
-
             }
         }
     }

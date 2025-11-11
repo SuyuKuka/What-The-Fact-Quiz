@@ -83,13 +83,14 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             data.answers.clear()
             data.types.clear()
             when (subject) {
-                "Science" -> { fetchScienceData(difficulty); return@launch }
-                "Gastronomie" -> { fetchGastronomieData(difficulty); return@launch }
-                "Géographie" -> { fetchGeographieData(difficulty); return@launch }
-                "Nature" -> { fetchNatureData(difficulty); return@launch }
-                "Dessin anime" -> { fetchDessinAnimeData(difficulty); return@launch }
-                "Informatique" -> { fetchInformatiqueData(difficulty); return@launch }
+                "Science" -> { fetchScienceData(difficulty) }
+                "Gastronomie" -> { fetchGastronomieData(difficulty) }
+                "Géographie" -> { fetchGeographieData(difficulty) }
+                "Nature" -> { fetchNatureData(difficulty) }
+                "Dessin anime" -> { fetchDessinAnimeData(difficulty) }
+                "Informatique" -> { fetchInformatiqueData(difficulty) }
             }
+            loading.value = false
         }
     }
     suspend fun fetchScienceData(difficulty: String) {
@@ -106,7 +107,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchGastronomieData(difficulty: String) {
         val currentDao = db.quizzGastronomieDao()
@@ -121,7 +121,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchGeographieData(difficulty: String) {
         val currentDao = db.quizzGeoDao()
@@ -136,7 +135,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchNatureData(difficulty: String) {
         val currentDao = db.quizzNatureDao()
@@ -151,7 +149,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchDessinAnimeData(difficulty: String) {
         val currentDao = db.quizzDessinAnimeDao()
@@ -171,7 +168,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                 }
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchInformatiqueData(difficulty: String) {
         val currentDao = db.quizzInformatiqueDao()
@@ -186,7 +182,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
 
     // permet de rendre les propositions aléatoire

@@ -43,7 +43,7 @@ android {
 
 dependencies {
     implementation("io.coil-kt:coil-compose:2.6.0")
-    implementation("com.github.bumptech.glide:compose:1.0.0-beta01")
+    implementation("com.github.bumptech.glide:compose:1.0.0-beta08")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
