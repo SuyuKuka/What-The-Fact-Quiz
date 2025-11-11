@@ -57,7 +57,6 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                 initQuizz(context)
                 initUser()
 
-
                 exist.value = true
                 loading.value = false
             }

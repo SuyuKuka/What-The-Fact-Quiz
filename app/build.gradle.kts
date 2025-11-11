@@ -58,6 +58,8 @@ dependencies {
     implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.gson)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.androidx.datastore.preferences)
     ksp(libs.androidx.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

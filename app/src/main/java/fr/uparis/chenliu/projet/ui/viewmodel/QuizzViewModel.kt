@@ -45,10 +45,16 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     private var user = mutableStateOf<UsersEntity?>(null)
     private var settings = mutableStateOf<SettingsEntity?>(null)
 
-    // autour de la partie
+    // Users
     val energy = mutableIntStateOf(0)
     val subscription = mutableStateOf(false)
+
+    // Settings
     val font = mutableIntStateOf(0)
+
+    // Quizz
+    var question = mutableListOf<String>()
+    val answers = mutableListOf<AnswerSummary>()
     val loading = mutableStateOf(true)
 
 
@@ -188,7 +194,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
         var shuffling = true
         while (shuffling) {
-   
+
             randomPropositions = value.propositions.shuffled().take(4)
             for (p in randomPropositions) {
                 if (p[0] == value.answer[0]) {
