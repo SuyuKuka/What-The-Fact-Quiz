@@ -54,7 +54,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val font = mutableIntStateOf(0)
 
     // Quizz
-    val subject = mutableStateOf<String>("")
+    val subject = mutableStateOf("")
     var question = mutableListOf<String>()
     val answers = mutableListOf<AnswerSummary>()
     val loading = mutableStateOf(true)
