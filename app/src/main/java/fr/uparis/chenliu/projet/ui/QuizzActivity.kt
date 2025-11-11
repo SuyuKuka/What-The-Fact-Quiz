@@ -143,7 +143,7 @@ fun Game(
     println(data.types.toString())
     val i = remember { mutableIntStateOf(0) }
 
-    val buildAnswer = remember { MutableList(4) { "" } }
+    val buildAnswer = remember { Array(4) { "" } }
 
     when (data.types[i.intValue]) {
         0 -> Quizztype0(model.translateFont(), data, i, model)
@@ -179,7 +179,7 @@ fun Quizztype0 (
         ) {
             items(data.answers[i.intValue].propositions) { ans ->
                 Button(
-                    onClick = { i.intValue = model.updateGame(ans[0], i.intValue) },
+                    onClick = { i.intValue = model.updateGame01(ans[0], i.intValue) },
                     modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
                     shape = RectangleShape
                 ) {
@@ -233,7 +233,7 @@ fun Quizztype1 (
                 onDone = {
                     val number = text.toIntOrNull()
                     if (number != null) {
-                        i.intValue = model.updateGame(text, i.intValue)
+                        i.intValue = model.updateGame01(text, i.intValue)
                     }
                 },
                 onlyNb = true
@@ -259,7 +259,7 @@ fun DragImage(answer: String, url: String) {
 
 @OptIn(ExperimentalGlideComposeApi::class) // on pose ici
 @Composable
-fun DropTargetImage(intValue: Int, font: List<Int>, buildAnswer: MutableList<String>) {
+fun DropTargetImage(intValue: Int, font: List<Int>, buildAnswer: Array<String>) {
 
     val urlState = remember {mutableStateOf("")}
     val dndTarget = remember{
@@ -267,9 +267,7 @@ fun DropTargetImage(intValue: Int, font: List<Int>, buildAnswer: MutableList<Str
             override fun onDrop(event: DragAndDropEvent): Boolean {
                 val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
                 val answer = event.toAndroidDragEvent().clipData.description.label
-                buildAnswer.add(intValue,answer.toString()) // add a l'index intValue
-
-                println(buildAnswer)
+                buildAnswer[intValue] = answer.toString() // add a l'index intValue
                 urlState.value = draggedData.toString()
                 return true
             }
@@ -314,7 +312,7 @@ fun Quizztype2(
     data: QuizzViewModel.Data,
     i: MutableIntState,
     model: QuizzViewModel,
-    buildAnswer: MutableList<String>
+    buildAnswer: Array<String>
 ) {
 
     Column {
@@ -353,7 +351,9 @@ fun Quizztype2(
         ){
             Button(onClick = {  }, shape = RectangleShape) { DisplayText(list = font, text = "reset", textAlign = TextAlign.Center) }
             Spacer(modifier = Modifier.width(200.dp))
-            Button(onClick = {  }, shape = RectangleShape) { DisplayText(list = font, text = "valider", textAlign = TextAlign.Center) }
+            Button(onClick = {
+                i.intValue = model.updateGame2(buildAnswer.toList(), data.answers[i.intValue].answer.toList(), i.intValue)
+                             }, shape = RectangleShape) { DisplayText(list = font, text = "valider", textAlign = TextAlign.Center) }
         }
 
         LazyVerticalGrid(

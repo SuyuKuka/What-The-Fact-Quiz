@@ -208,13 +208,25 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         return 0.0
     }
 
-    fun updateGame(ans: String, index: Int): Int {
+    fun updateGame01(ans: String, index: Int): Int {
         var i = index
         // add la réponses du joueur
         gameData.answerHistory.add(ans) // add le text pos 0 -> text ; pos 1 -> lien
         gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(data.answers[i].answer[0]) // connaitre la bonne réponse
         if (ans == data.answers[i].answer[0]) { ++gameData.score.doubleValue } // si bonne réponse
+        gameData.nbQuestion.intValue--      // reduire le nb de question
+        gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
+        if (i == 9) { i == 0 } else { i++ }
+        return i
+    }
+
+    fun updateGame2(answerlist: List<String>, verify: List<String>, index: Int): Int {
+        var i = index
+        gameData.answerHistory.add(answerlist.toString())
+        gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
+        gameData.goodAnswer.add(data.answers[i].answer.toString()) // connaitre la bonne réponse
+        if (answerlist == verify) { ++gameData.score.doubleValue }
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
         if (i == 9) { i == 0 } else { i++ }
