@@ -5,13 +5,9 @@ import android.app.Activity
 import android.content.ClipData
 import android.content.ClipDescription
 import android.os.Bundle
-import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.MarqueeDefaults.Spacing
 import androidx.compose.foundation.background
 
 import androidx.compose.foundation.border
@@ -26,23 +22,16 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -53,7 +42,6 @@ import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -64,19 +52,12 @@ import androidx.compose.ui.draganddrop.DragAndDropTarget
 import androidx.compose.ui.draganddrop.DragAndDropTransferData
 import androidx.compose.ui.draganddrop.mimeTypes
 import androidx.compose.ui.draganddrop.toAndroidDragEvent
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import coil.compose.AsyncImage
-import coil.compose.rememberAsyncImagePainter
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
@@ -152,7 +133,7 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 @Composable
 fun Game(
     data: QuizzViewModel.Data,
-    model: QuizzViewModel
+    model: QuizzViewModel = viewModel()
 ){
     println(data.question.toString())
     println(data.types.toString())
@@ -262,7 +243,7 @@ fun DragImage(url: String) {
         model = url,
         contentDescription = "Dragged Image",
         modifier = Modifier
-            .size(80.dp)
+            .fillMaxSize()
             .dragAndDropSource { _ ->
             DragAndDropTransferData(ClipData.newPlainText("image Url", url),)
         }
@@ -271,7 +252,7 @@ fun DragImage(url: String) {
 
 @OptIn(ExperimentalGlideComposeApi::class) // on pose ici
 @Composable
-fun DropTargetImage() {
+fun DropTargetImage(intValue: Int) {
     val urlState = remember {mutableStateOf("")}
     val dndTarget = remember{
         object : DragAndDropTarget{
@@ -307,7 +288,7 @@ fun DropTargetImage() {
             model = urlState.value,
             contentDescription = "Dropped Image",
             modifier = Modifier
-                .size(80.dp)
+                .fillMaxSize()
                 .dragAndDropTarget(
                     shouldStartDragAndDrop = { event ->
                         event.mimeTypes()
@@ -316,38 +297,78 @@ fun DropTargetImage() {
                     target = dndTarget
                 )
         )
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(intValue.toString())
+            }
+        }
+
+
+
     }
 }
 
 @Composable
 fun Quizztype2(
     font: List<Int>,
-   data: QuizzViewModel.Data,
-   i: MutableIntState,
-   model: QuizzViewModel
+    data: QuizzViewModel.Data,
+    i: MutableIntState,
+    model: QuizzViewModel
 ) {
-    Text("22222222222222222222222222222222222")
-
-    Column (
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Row {
-            DropTargetImage()
-            DropTargetImage()
-            DropTargetImage()
-            DropTargetImage()
+    Column {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.5f)
+                .fillMaxHeight(0.1f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
         }
-        Row {
-            DragImage(url = "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png")
-            DragImage(url = "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png")
-            DragImage(url = "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png")
-            DragImage(url = "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png")
+
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            contentPadding = PaddingValues(8.dp),
+            modifier = Modifier.weight(1f)
+        ) {
+            items(data.answers[i.intValue].propositions) { ans ->
+                Box (
+                    modifier = Modifier
+                        .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
+                        .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+                ) {
+                    DropTargetImage(data.answers[i.intValue].propositions.indexOf(ans)+1)
+                }
+
+            }
+        }
+
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            contentPadding = PaddingValues(8.dp),
+            modifier = Modifier.weight(1f)
+        ) {
+            items(data.answers[i.intValue].propositions) { ans ->
+                Box (
+                    modifier = Modifier
+                        .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
+                        .background(Color.Black)
+                ) {
+                    DragImage(url = ans[1])
+                }
+
+            }
         }
     }
 }
-
 
 @Composable
 fun Quizztype3() {
