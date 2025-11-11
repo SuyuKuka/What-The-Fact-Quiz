@@ -43,6 +43,7 @@ android {
 
 dependencies {
     implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation("com.github.bumptech.glide:compose:1.0.0-beta01")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -58,6 +59,7 @@ dependencies {
     implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.gson)
+    implementation(libs.androidx.compose.foundation)
     ksp(libs.androidx.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

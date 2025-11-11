@@ -1,10 +1,21 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.app.Activity
+import android.content.ClipData
+import android.content.ClipDescription
 import android.os.Bundle
+import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.MarqueeDefaults.Spacing
+import androidx.compose.foundation.background
+
+import androidx.compose.foundation.border
+import androidx.compose.foundation.draganddrop.dragAndDropSource
+import androidx.compose.foundation.draganddrop.dragAndDropTarget
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,15 +25,20 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -37,6 +53,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draganddrop.DragAndDropEvent
+import androidx.compose.ui.draganddrop.DragAndDropTarget
+import androidx.compose.ui.draganddrop.DragAndDropTransferData
+import androidx.compose.ui.draganddrop.mimeTypes
+import androidx.compose.ui.draganddrop.toAndroidDragEvent
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
@@ -46,6 +69,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
+import coil.compose.rememberAsyncImagePainter
+import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
+import com.bumptech.glide.integration.compose.GlideImage
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
@@ -209,6 +235,70 @@ fun Quizztype1 (
     }
 }
 
+@OptIn(ExperimentalGlideComposeApi::class)  // on prend ici
+@Composable
+fun DragImage(url: String) {
+    GlideImage(
+        model = url,
+        contentDescription = "Dragged Image",
+        modifier = Modifier
+            .size(80.dp)
+            .dragAndDropSource { _ ->
+            DragAndDropTransferData(ClipData.newPlainText("image Url", url),)
+        }
+    )
+}
+
+@OptIn(ExperimentalGlideComposeApi::class) // on pose ici
+@Composable
+fun DropTargetImage() {
+    val urlState = remember {mutableStateOf("")}
+    val dndTarget = remember{
+        object : DragAndDropTarget{
+            override fun onDrop(event: DragAndDropEvent): Boolean {
+                val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
+                urlState.value = draggedData.toString()
+                return true
+            }
+            override fun onStarted(event: DragAndDropEvent) {
+                super.onStarted(event)
+            }
+            override fun onChanged(event: DragAndDropEvent) {
+                super.onChanged(event)
+            }
+            override fun onEnded(event: DragAndDropEvent) {
+                super.onEnded(event)
+            }
+            override fun onEntered(event: DragAndDropEvent) {
+                super.onEntered(event)
+            }
+            override fun onExited(event: DragAndDropEvent) {
+                super.onExited(event)
+            }
+            override fun onMoved(event: DragAndDropEvent) {
+                super.onMoved(event)
+            }
+        }
+    }
+    Box(
+        Modifier.border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+    ) {
+        GlideImage(
+            model = urlState.value,
+            contentDescription = "Dropped Image",
+            modifier = Modifier
+                .size(80.dp)
+                .dragAndDropTarget(
+                    shouldStartDragAndDrop = { event ->
+                        event.mimeTypes()
+                            .contains(ClipDescription.MIMETYPE_TEXT_PLAIN)
+                    },
+                    target = dndTarget
+                )
+        )
+    }
+}
+
 @Composable
 fun Quizztype2(
     font: List<Int>,
@@ -216,44 +306,29 @@ fun Quizztype2(
    i: MutableIntState,
    model: QuizzViewModel
 ) {
-    val order = remember { mutableStateListOf<String>() }
+    Text("22222222222222222222222222222222222")
 
-
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth(0.5f)
-                .fillMaxHeight(0.5f)
-                .align(Alignment.CenterHorizontally),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
+    Column (
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Row {
+            DropTargetImage()
+            DropTargetImage()
+            DropTargetImage()
+            DropTargetImage()
         }
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(2),
-            contentPadding = PaddingValues(8.dp),
-            modifier = Modifier.weight(1f)
-        ) {
-            items(data.answers[i.intValue].propositions) { ans ->
-                Box(contentAlignment = Alignment.Center) {
-                    AsyncImage(
-                        model = ans[1],
-                        contentDescription = ans[0],
-                        modifier = Modifier.fillMaxSize(),
-                        contentScale = ContentScale.Fit
-                    )
-                }
-            }
-        }
-        Button(
-            onClick = { i.intValue = model.updateGame(order, i.intValue) },
-            shape = RectangleShape
-        ) {
-            DisplayText(list = font, text = "Valider")
+        Row {
+            DragImage(url = "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png")
+            DragImage(url = "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png")
+            DragImage(url = "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png")
+            DragImage(url = "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png")
         }
     }
 }
+
+
 @Composable
 fun Quizztype3() {
     Text("333333333333333333333333333333333333333")
