@@ -1,6 +1,7 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -32,6 +33,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
@@ -44,10 +46,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ProjetTheme {
-                requestPermissions(
-                    arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
-                    0
-                )
+                val permission = android.Manifest.permission.POST_NOTIFICATIONS
+                val permissionCheckResult = ContextCompat.checkSelfPermission(this, permission)
+                println(permissionCheckResult != PackageManager.PERMISSION_GRANTED)
+                if (permissionCheckResult != PackageManager.PERMISSION_GRANTED) {
+                    if (!shouldShowRequestPermissionRationale(permission)) {
+                        requestPermissions(
+                            arrayOf(permission),
+                            0
+                        )
+                    }
+                }
                 MyScreen(activity = this)
             }
         }
