@@ -21,6 +21,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     private var user = mutableStateOf<UsersEntity?>(null)
     private var settings = mutableStateOf<SettingsEntity?>(null)
 
+    // Users
     val username = mutableStateOf("")
     val energy = mutableIntStateOf(0)
     val lastTimeEnergy = mutableLongStateOf(System.currentTimeMillis())
@@ -28,17 +29,19 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val subscription = mutableStateOf(false)
     val endDate = mutableStateOf("")
 
+    // Settings
     val music = mutableFloatStateOf(0f)
     val sound = mutableFloatStateOf(0f)
     val background = mutableIntStateOf(0)
     val font = mutableIntStateOf(0)
     val preferredTopics = mutableStateOf("")
 
+    // Others
     val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
     val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
     val saved = mutableStateOf(true)
-
     val maxEnergy = mutableIntStateOf(20)
+    val loading = mutableStateOf(true)
 
     fun init(username: String) {
         this.username.value = username
@@ -55,13 +58,18 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
                 getUsers()
                 addEnergy()
                 delay(1000)
+                if (loading.value) {
+                    delay(1000)
+                    loading.value = false
+                }
             }
         }
     }
 
     fun buySubscription(isMonthly: Boolean) {
-        addEnergy()
         viewModelScope.launch {
+            db.usersDao().updateEnergy(userId = user.value!!.userId, energy = 20, lastTimeEnergy = System.currentTimeMillis())
+            getUsers()
             val today = mutableStateOf<LocalDateTime>(LocalDateTime.now())
             val day = today.value.dayOfMonth.toString().toInt()
             var month = today.value.month.value.toString().toInt()
@@ -83,8 +91,8 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun extendSubscription(isMonthly: Boolean) {
-        addEnergy()
         viewModelScope.launch {
+            db.usersDao().updateEnergy(userId = user.value!!.userId, energy = 20, lastTimeEnergy = System.currentTimeMillis())
             getUsers()
             val endDate = endDate.value.split("/")
             val day = endDate[0]
@@ -150,9 +158,8 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         preferredTopics.value = settings.value!!.preferredTopics
     }
 
-    fun translateBackground(): Int{
+    fun intToBackground(): Int{
         val bg = when(background.intValue) {
-            0 -> R.drawable.b0
             1 -> R.drawable.b1
             2 -> R.drawable.b2
             else -> R.drawable.b0
@@ -160,9 +167,8 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         return bg
     }
 
-    fun translateFont(): List<Int> {
+    fun intToFont(): List<Int> {
         val ft = when(font.intValue) {
-            0 -> 0
             1 -> R.font.game
             2 -> R.font.typewritter
             3 -> R.font.pixel
@@ -172,7 +178,6 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
 
         // différence de taille entre default et autres (pour avoir meme taille quasiment)
         val sz = when(font.intValue) {
-            0 -> 0
             1 -> -1
             2 -> 1
             3 -> -5

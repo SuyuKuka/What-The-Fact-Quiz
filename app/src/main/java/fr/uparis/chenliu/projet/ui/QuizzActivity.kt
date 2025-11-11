@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ClipData
 import android.content.ClipDescription
@@ -38,10 +39,15 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
@@ -67,6 +73,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import coil.compose.rememberAsyncImagePainter
@@ -74,6 +81,7 @@ import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
+import kotlinx.coroutines.delay
 
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -88,38 +96,54 @@ class QuizzActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MyTopBar(gameData: QuizzViewModel.GameData) {
+
+    var isRunning = true
+
+    if (gameData.gameEnded.value) {
+        isRunning = false
+    }
+
+    TopAppBar(
+        title = {
+            Row {
+                Text("Score : ${gameData.score.doubleValue} ")
+                Text("Temps :" + chronometer(isRunning, gameData.time))
+            }
+        },
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red) // tmp
+    )
+}
+
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel()){
     // todo:simplifier tout ca
 
-    val data = QuizzViewModel.Data(
-        question = model.question,
-        answers =  model.answers,
-        types = model.types
-    )
+    val data = model.data
 
-    val gameData = QuizzViewModel.GameData(
-        answerHistory = model.answerHistory,
-        goodAnswer = model.goodAnswer,
-        questionHistory = model.questionHistory,
-        nbQuestion = model.nbQuestion
-    )
-
-    val score = model.score
+    val gameData = model.gameData
 
     val loading = model.loading.value
 
     model.init() // pour l'energie
-
-    if (loading) {
-        model.getQuestionAndAnswer(subj, diff)
-    } else {
-
-        Column(modifier = Modifier.padding(top = 24.dp)) {
-            if (gameData.nbQuestion.intValue > 0) {
-                Game(data, model)
-            } else {
-                Result(model.translateFont(), score, gameData)
+    Scaffold(
+        topBar = {
+            MyTopBar(gameData)
+        },
+        containerColor = Color.LightGray // tmp
+    ) { innerPadding ->
+        if (loading) {
+            model.getQuestionAndAnswer(subj, diff)
+        } else {
+            Column(modifier = Modifier.padding(innerPadding)) {
+                if (!gameData.gameEnded.value) {
+                    Game(data)
+                } else {
+                    Result(model.translateFont(), gameData)
+                }
             }
         }
     }
@@ -168,7 +192,7 @@ fun Quizztype0 (
         ) {
             items(data.answers[i.intValue].propositions) { ans ->
                 Button(
-                    onClick = { i.intValue = model.updateGame(ans, i.intValue) },
+                    onClick = { i.intValue = model.updateGame(ans[0], i.intValue) },
                     modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
                     shape = RectangleShape
                 ) {
@@ -209,28 +233,24 @@ fun Quizztype1 (
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            OutlinedTextField(
+            WriteField(
                 value = text,
                 onValueChange = { newValue ->
                     if (newValue.all { it.isDigit() }) {
                         text = newValue
                     }
                 },
-                label = { Text("Nombre") },
-                keyboardOptions = KeyboardOptions(
-                    keyboardType = KeyboardType.Number,
-                    imeAction = ImeAction.Done
-                ),
-                keyboardActions = KeyboardActions(
-                    onDone = {
-                        val number = text.toIntOrNull()
-                        if (number != null) {
-                            i.intValue = model.updateGame(listOf(text), i.intValue)
-                        }
+                label = "Nombre",
+                modifier = Modifier,
+                fontSize = 16.sp,
+                onDone = {
+                    val number = text.toIntOrNull()
+                    if (number != null) {
+                        i.intValue = model.updateGame(text, i.intValue)
                     }
-                )
+                },
+                onlyNb = true
             )
-
         }
     }
 }
@@ -337,11 +357,23 @@ fun Quizztype3() {
 fun Quizztype4() {
     Text("4444444444444444444444444444444444444")
 }
+@Composable
+fun chronometer(isRunning: Boolean, time: MutableDoubleState): String {
+    LaunchedEffect(isRunning) {
+        if (isRunning) {
+            while (true) {
+                delay(1)
+                time.doubleValue = time.doubleValue + 0.001
+            }
+        }
+    }
+    return "%.3f".format(time.doubleValue)
+}
+
 
 @Composable
 fun Result(
     font: List<Int>,
-    score: MutableDoubleState,
     gameData: QuizzViewModel.GameData,
     model: QuizzViewModel = viewModel()
 ) {
@@ -358,7 +390,7 @@ fun Result(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         DisplayText(list = font, text = "RESULTAT", textAlign = TextAlign.Center)
-        DisplayText(list = font, text = "Score : ${score.doubleValue}", textAlign = TextAlign.Center)
+        DisplayText(list = font, text = "Score : ${gameData.score.doubleValue}", textAlign = TextAlign.Center)
 
         LazyColumn(modifier = Modifier.fillMaxWidth().weight(4f)) {
 

@@ -1,7 +1,9 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
+import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -30,42 +32,56 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     )
 
     data class GameData(    // les info pendant la partie
-        val answerHistory : MutableList<String>,
-        val goodAnswer : MutableList<String>,
-        val questionHistory : MutableList<String>,
-        val nbQuestion : MutableIntState,
+        val answerHistory: MutableList<String>,
+        val goodAnswer: MutableList<String>,
+        val questionHistory: MutableList<String>,
+        val nbQuestion: MutableIntState,
+        val gameEnded: MutableState<Boolean>,
+        val time: MutableDoubleState,
+        val score: MutableDoubleState
     )
 
     private val db = AppDatabase.getInstance(application)
     private var user = mutableStateOf<UsersEntity?>(null)
     private var settings = mutableStateOf<SettingsEntity?>(null)
 
-    // autour de la partie
+    // Users
     val energy = mutableIntStateOf(0)
     val subscription = mutableStateOf(false)
+
+    // Settings
     val font = mutableIntStateOf(0)
-    val score = mutableDoubleStateOf(0.0)
 
-
-    // loading des quiz
+    // Quizz
     var question = mutableListOf<String>()
     val answers = mutableListOf<AnswerSummary>()
-    val types = mutableListOf<Int>()
-
-    val answerHistory = mutableListOf<String>()
-    val goodAnswer = mutableListOf<String>()
-    val questionHistory = mutableListOf<String>()
-    val nbQuestion = mutableIntStateOf(10)
-
     val loading = mutableStateOf(true)
 
 
 
+    // loading des quiz
+    val data = Data(
+        listOf<String>().toMutableList(),
+        listOf<AnswerSummary>().toMutableList(),
+        listOf<Int>().toMutableList()
+    )
+
+    // la partie
+    val gameData = GameData(
+        answerHistory = mutableListOf(),
+        goodAnswer = mutableListOf(),
+        questionHistory = mutableListOf(),
+        nbQuestion = mutableIntStateOf(10),
+        gameEnded = mutableStateOf(false),
+        time = mutableDoubleStateOf(0.0),
+        score = mutableDoubleStateOf(0.0)
+    )
+
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
         viewModelScope.launch {
-            question.clear()
-            answers.clear()
-            types.clear()
+            data.question.clear()
+            data.answers.clear()
+            data.types.clear()
             when (subject) {
                 "Science" -> { fetchScienceData(difficulty); return@launch }
                 "Gastronomie" -> { fetchGastronomieData(difficulty); return@launch }
@@ -82,13 +98,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         val allQuestion = currentDao.getQuestion(difficulty)
         for (i in 0..allQuestion.size-1) {
             // question
-            question.add(allQuestion[i].question)
+            data.question.add(allQuestion[i].question)
             // type
-            types.add(allQuestion[i].type)
+            data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)    // pas simplifiable ya le currentdao
             val currentPropositions = shuffle(currentAnswer)
-            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
         loading.value = false
     }
@@ -97,13 +113,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         val allQuestion = currentDao.getQuestion(difficulty)
         for (i in 0..allQuestion.size-1) {
             // question
-            question.add(allQuestion[i].question)
+            data.question.add(allQuestion[i].question)
             // type
-            types.add(allQuestion[i].type)
+            data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions = shuffle(currentAnswer)
-            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
         loading.value = false
     }
@@ -112,13 +128,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         val allQuestion = currentDao.getQuestion(difficulty)
         for (i in 0..allQuestion.size-1) {
             // question
-            question.add(allQuestion[i].question)
+            data.question.add(allQuestion[i].question)
             // type
-            types.add(allQuestion[i].type)
+            data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions = shuffle(currentAnswer)
-            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
         loading.value = false
     }
@@ -127,13 +143,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         val allQuestion = currentDao.getQuestion(difficulty)
         for (i in 0..allQuestion.size-1) {
             // question
-            question.add(allQuestion[i].question)
+            data.question.add(allQuestion[i].question)
             // type
-            types.add(allQuestion[i].type)
+            data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions = shuffle(currentAnswer)
-            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
         loading.value = false
     }
@@ -142,22 +158,18 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         val allQuestion = currentDao.getQuestion(difficulty)
         for (i in 0..allQuestion.size-1) {
             // question
-            question.add(allQuestion[i].question)
+            data.question.add(allQuestion[i].question)
             // type
-            types.add(allQuestion[i].type)
+            data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions =
-                if (types[i] == 0) {
-                    println(types)
-                    println(types)
-                    println(types)
-                    println(types)
+                if (data.types[i] == 0) {
                     shuffle(currentAnswer)
                 } else {
                     currentAnswer.propositions
                 }
-            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
         loading.value = false
     }
@@ -166,13 +178,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         val allQuestion = currentDao.getQuestion(difficulty)
         for (i in 0..allQuestion.size-1) {
             // question
-            question.add(allQuestion[i].question)
+            data.question.add(allQuestion[i].question)
             // type
-            types.add(allQuestion[i].type)
+            data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions = shuffle(currentAnswer)
-            answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
         loading.value = false
     }
@@ -182,7 +194,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
         var shuffling = true
         while (shuffling) {
-   
+
             randomPropositions = value.propositions.shuffled().take(4)
             for (p in randomPropositions) {
                 if (p[0] == value.answer[0]) {
@@ -201,24 +213,27 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         return 0.0
     }
 
-    fun updateGame(ans: List<String>, index: Int): Int {
+    fun updateGame(ans: String, index: Int): Int {
         var i = index
         // add la réponses du joueur
-        answerHistory.add(ans[0]) // add le text pos 0 -> text ; pos 1 -> lien
-        questionHistory.add(question[i])
-        goodAnswer.add(answers[i].answer[0])
-        if (ans[0] == answers[i].answer[0]) { ++score.doubleValue }
-        nbQuestion.intValue--
+        gameData.answerHistory.add(ans) // add le text pos 0 -> text ; pos 1 -> lien
+        gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
+        gameData.goodAnswer.add(data.answers[i].answer[0]) // connaitre la bonne réponse
+        if (ans == data.answers[i].answer[0]) { ++gameData.score.doubleValue } // si bonne réponse
+        gameData.nbQuestion.intValue--      // reduire le nb de question
+        gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
         if (i == 9) { i == 0 } else { i++ }
         return i
     }
     fun resetStats(gameData: GameData) {
         removeEnergy()
         gameData.nbQuestion.intValue = 10
-        score.doubleValue = 0.0
+        gameData.score.doubleValue = 0.0
         gameData.answerHistory.clear()
         gameData.questionHistory.clear()
         gameData.goodAnswer.clear()
+        gameData.gameEnded.value = false
+        gameData.time.doubleValue = 0.0
         loading.value = true
     }
 
