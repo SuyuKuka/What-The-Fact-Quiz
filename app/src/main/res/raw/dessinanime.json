@@ -2,147 +2,141 @@
   "quizz": [
     {
       "id": 1,
-      "type": 1,
-      "question": "Combien de Pokémon un dresseur peut-il transporter ?",
-      "propositions": [[""]],
-      "answer": ["6"],
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
+      "propositions": [
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
+      ],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 2,
-      "type": 1,
-      "question": "Combien de Pokémon un dresseur peut-il transporter22 ?",
-      "propositions": [[""]],
-      "answer": ["6"],
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
+      "propositions": [
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
+      ],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 3,
-      "type": 0,
-      "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
-        ["Gandeuillot", ""],
-        ["Fricadelle", ""],
-        ["Rosette", ""],
-        ["Longeole", ""],
-        ["Boudin noir", ""],
-        ["Merguez", ""]
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Fricadelle"],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
       "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 4,
-      "type": 0,
-      "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
-        ["Gandeuillot", ""],
-        ["Fricadelle", ""],
-        ["Rosette", ""],
-        ["Longeole", ""],
-        ["Boudin noir", ""],
-        ["Merguez", ""]
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Fricadelle"],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
       "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 5,
-      "type": 0,
-      "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
-        ["Gandeuillot", ""],
-        ["Fricadelle", ""],
-        ["Rosette", ""],
-        ["Longeole", ""],
-        ["Boudin noir", ""],
-        ["Merguez", ""]
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Fricadelle"],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
       "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 6,
-      "type": 0,
-      "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
-        ["Gandeuillot", ""],
-        ["Fricadelle", ""],
-        ["Rosette", ""],
-        ["Longeole", ""],
-        ["Boudin noir", ""],
-        ["Merguez", ""]
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Fricadelle"],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
       "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 7,
-      "type": 0,
-      "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
-        ["Gandeuillot", ""],
-        ["Fricadelle", ""],
-        ["Rosette", ""],
-        ["Longeole", ""],
-        ["Boudin noir", ""],
-        ["Merguez", ""]
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Fricadelle"],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
       "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 8,
-      "type": 0,
-      "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
-        ["Gandeuillot", ""],
-        ["Fricadelle", ""],
-        ["Rosette", ""],
-        ["Longeole", ""],
-        ["Boudin noir", ""],
-        ["Merguez", ""]
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Fricadelle"],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
       "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 9,
-      "type": 0,
-      "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
-        ["Gandeuillot", ""],
-        ["Fricadelle", ""],
-        ["Rosette", ""],
-        ["Longeole", ""],
-        ["Boudin noir", ""],
-        ["Merguez", ""]
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Fricadelle"],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
       "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 10,
-      "type": 0,
-      "question": "En Belgique, quelle saucisse panée et épicée est souvent servie dans les friteries ?",
+      "type": 2,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
-        ["Gandeuillot", ""],
-        ["Fricadelle", ""],
-        ["Rosette", ""],
-        ["Longeole", ""],
-        ["Boudin noir", ""],
-        ["Merguez", ""]
+        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Fricadelle"],
+      "answer": ["Mewtwo", "Dracaufeu", "Rayquaza", "Amphinobi"],
       "difficulty": "Facile",
       "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     }

@@ -1,9 +1,6 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
-import android.R.attr.data
-import android.R.attr.type
 import android.app.Application
-import android.util.Log.i
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
@@ -204,13 +201,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         return 0.0
     }
 
-    fun updateGame(ans: String, index: Int): Int {
+    fun updateGame(ans: List<String>, index: Int): Int {
         var i = index
         // add la réponses du joueur
-        answerHistory.add(ans) // add le text pos 0 -> text ; pos 1 -> lien
+        answerHistory.add(ans[0]) // add le text pos 0 -> text ; pos 1 -> lien
         questionHistory.add(question[i])
         goodAnswer.add(answers[i].answer[0])
-        if (ans == answers[i].answer[0]) { ++score.doubleValue }
+        if (ans[0] == answers[i].answer[0]) { ++score.doubleValue }
         nbQuestion.intValue--
         if (i == 9) { i == 0 } else { i++ }
         return i

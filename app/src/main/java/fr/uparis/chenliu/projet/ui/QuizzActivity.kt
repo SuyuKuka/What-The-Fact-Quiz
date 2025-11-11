@@ -1,15 +1,12 @@
 package fr.uparis.chenliu.projet.ui
 
-import android.R.attr.data
-import android.R.attr.font
 import android.app.Activity
 import android.os.Bundle
-import android.util.Log
-import android.util.Log.i
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -34,6 +31,7 @@ import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -41,11 +39,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.AsyncImage
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
@@ -91,7 +91,7 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 
         Column(modifier = Modifier.padding(top = 24.dp)) {
             if (gameData.nbQuestion.intValue > 0) {
-                Game(data)
+                Game(data, model)
             } else {
                 Result(model.translateFont(), score, gameData)
             }
@@ -102,16 +102,18 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 @Composable
 fun Game(
     data: QuizzViewModel.Data,
-    model: QuizzViewModel = viewModel(),
+    model: QuizzViewModel
 ){
     println(data.question.toString())
     println(data.types.toString())
     val i = remember { mutableIntStateOf(0) }
 
     when (data.types[i.intValue]) {
-        0 -> Quizztype0(model.translateFont(), data, i,)
-        1 -> Quizztype1(model.translateFont(), data, i,)
-
+        0 -> Quizztype0(model.translateFont(), data, i, model)
+        1 -> Quizztype1(model.translateFont(), data, i, model)
+        2 -> Quizztype2(model.translateFont(), data, i, model)
+        3 -> Quizztype3()
+        4 -> Quizztype4()
     }
 }
 
@@ -120,9 +122,8 @@ fun Quizztype0 (
     font: List<Int>,
     data: QuizzViewModel.Data,
     i: MutableIntState,
-    model: QuizzViewModel = viewModel()
+    model: QuizzViewModel
 ) {
-
     Column {
         Row(
             modifier = Modifier
@@ -141,7 +142,7 @@ fun Quizztype0 (
         ) {
             items(data.answers[i.intValue].propositions) { ans ->
                 Button(
-                    onClick = { i.intValue = model.updateGame(ans[0], i.intValue) },
+                    onClick = { i.intValue = model.updateGame(ans, i.intValue) },
                     modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
                     shape = RectangleShape
                 ) {
@@ -198,7 +199,7 @@ fun Quizztype1 (
                     onDone = {
                         val number = text.toIntOrNull()
                         if (number != null) {
-                            i.intValue = model.updateGame(text, i.intValue)
+                            i.intValue = model.updateGame(listOf(text), i.intValue)
                         }
                     }
                 )
@@ -209,8 +210,49 @@ fun Quizztype1 (
 }
 
 @Composable
-fun Quizztype2() {
-    Text("22222222222222222222222222222222")
+fun Quizztype2(
+    font: List<Int>,
+   data: QuizzViewModel.Data,
+   i: MutableIntState,
+   model: QuizzViewModel
+) {
+    val order = remember { mutableStateListOf<String>() }
+
+
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.5f)
+                .fillMaxHeight(0.5f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
+        }
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            contentPadding = PaddingValues(8.dp),
+            modifier = Modifier.weight(1f)
+        ) {
+            items(data.answers[i.intValue].propositions) { ans ->
+                Box(contentAlignment = Alignment.Center) {
+                    AsyncImage(
+                        model = ans[1],
+                        contentDescription = ans[0],
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Fit
+                    )
+                }
+            }
+        }
+        Button(
+            onClick = { i.intValue = model.updateGame(order, i.intValue) },
+            shape = RectangleShape
+        ) {
+            DisplayText(list = font, text = "Valider")
+        }
+    }
 }
 @Composable
 fun Quizztype3() {
@@ -281,7 +323,7 @@ fun Result(
 }
 
 @Composable
-fun ShowAlert(font: List<Int>, alert: MutableState<Boolean>, activity: Activity?, ) {
+fun ShowAlert(font: List<Int>, alert: MutableState<Boolean>, activity: Activity?) {
     Alert(
         list = font,
         onConfirm = { alert.value = false ; activity?.finish() },
