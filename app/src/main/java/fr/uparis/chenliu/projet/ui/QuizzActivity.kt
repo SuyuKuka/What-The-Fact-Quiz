@@ -5,6 +5,7 @@ import android.R.attr.font
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import android.util.Log.i
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
@@ -22,18 +23,26 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableDoubleState
+import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -60,7 +69,7 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
     val data = QuizzViewModel.Data(
         question = model.question,
         answers =  model.answers,
-        type = model.type
+        types = model.types
     )
 
     val gameData = QuizzViewModel.GameData(
@@ -95,13 +104,121 @@ fun Game(
     data: QuizzViewModel.Data,
     model: QuizzViewModel = viewModel(),
 ){
-    when(data.type.intValue) {
-        0 -> { Quizztype0(model.translateFont(),data) }
-        1 -> { Quizztype1() }
-        2 -> { Quizztype2() }
-        3 -> { Quizztype3() }
-        4 -> { Quizztype4() }
+    println(data.question.toString())
+    println(data.types.toString())
+    val i = remember { mutableIntStateOf(0) }
+
+    when (data.types[i.intValue]) {
+        0 -> Quizztype0(model.translateFont(), data, i,)
+        1 -> Quizztype1(model.translateFont(), data, i,)
+
     }
+}
+
+@Composable
+fun Quizztype0 (
+    font: List<Int>,
+    data: QuizzViewModel.Data,
+    i: MutableIntState,
+    model: QuizzViewModel = viewModel()
+) {
+
+    Column {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.5f)
+                .fillMaxHeight(0.5f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
+        }
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            contentPadding = PaddingValues(8.dp),
+            modifier = Modifier.weight(1f)
+        ) {
+            items(data.answers[i.intValue].propositions) { ans ->
+                Button(
+                    onClick = { i.intValue = model.updateGame(ans[0], i.intValue) },
+                    modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
+                    shape = RectangleShape
+                ) {
+                    DisplayText(list = font, text = ans[0], textAlign = TextAlign.Center)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun Quizztype1 (
+    font: List<Int>,
+    data: QuizzViewModel.Data,
+    i: MutableIntState,
+    model: QuizzViewModel = viewModel()
+) {
+    var text by remember { mutableStateOf("") }
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.9f)
+                .fillMaxHeight(0.5f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
+        }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.9f)
+                .fillMaxHeight(0.5f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            OutlinedTextField(
+                value = text,
+                onValueChange = { newValue ->
+                    if (newValue.all { it.isDigit() }) {
+                        text = newValue
+                    }
+                },
+                label = { Text("Nombre") },
+                keyboardOptions = KeyboardOptions(
+                    keyboardType = KeyboardType.Number,
+                    imeAction = ImeAction.Done
+                ),
+                keyboardActions = KeyboardActions(
+                    onDone = {
+                        val number = text.toIntOrNull()
+                        if (number != null) {
+                            i.intValue = model.updateGame(text, i.intValue)
+                        }
+                    }
+                )
+            )
+
+        }
+    }
+}
+
+@Composable
+fun Quizztype2() {
+    Text("22222222222222222222222222222222")
+}
+@Composable
+fun Quizztype3() {
+    Text("333333333333333333333333333333333333333")
+}
+@Composable
+fun Quizztype4() {
+    Text("4444444444444444444444444444444444444")
 }
 
 @Composable
@@ -161,59 +278,6 @@ fun Result(
             }
         }
     }
-}
-
-@Composable
-fun Quizztype0 (
-    font: List<Int>,
-    data: QuizzViewModel.Data,
-    model: QuizzViewModel = viewModel()
-) {
-    val i = remember { mutableIntStateOf(0) }
-    Column {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth(0.5f)
-                .fillMaxHeight(0.5f)
-                .align(Alignment.CenterHorizontally),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
-        }
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(2),
-            contentPadding = PaddingValues(8.dp),
-            modifier = Modifier.weight(1f)
-        ) {
-            items(data.answers[i.intValue].propositions) { ans ->
-                Button(
-                    onClick = { i.intValue = model.updateGame(ans, i.intValue) },
-                    modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
-                    shape = RectangleShape
-                ) {
-                    DisplayText(list = font, text = ans[0], textAlign = TextAlign.Center)
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun Quizztype1 () {
-    Text("11111111111111111111111")
-}
-@Composable
-fun Quizztype2() {
-    Text("22222222222222222222222222222222")
-}
-@Composable
-fun Quizztype3() {
-    Text("333333333333333333333333333333333333333")
-}
-@Composable
-fun Quizztype4() {
-    Text("4444444444444444444444444444444444444")
 }
 
 @Composable

@@ -1,6 +1,7 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.R.attr.data
+import android.R.attr.type
 import android.app.Application
 import android.util.Log.i
 import androidx.compose.runtime.MutableIntState
@@ -15,6 +16,7 @@ import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.launch
+import kotlin.collections.mutableListOf
 import kotlin.math.abs
 
 class QuizzViewModel(application: Application): AndroidViewModel(application) {
@@ -27,7 +29,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     data class Data(    // les info récupéré depuis la db
         val question : MutableList<String>,
         val answers: MutableList<AnswerSummary>,
-        val type : MutableIntState
+        val types : MutableList<Int>
     )
 
     data class GameData(    // les info pendant la partie
@@ -51,7 +53,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     // loading des quiz
     var question = mutableListOf<String>()
     val answers = mutableListOf<AnswerSummary>()
-    val type = mutableIntStateOf(-1)
+    val types = mutableListOf<Int>()
 
     val answerHistory = mutableListOf<String>()
     val goodAnswer = mutableListOf<String>()
@@ -66,6 +68,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch {
             question.clear()
             answers.clear()
+            types.clear()
             when (subject) {
                 "Science" -> { fetchScienceData(difficulty); return@launch }
                 "Gastronomie" -> { fetchGastronomieData(difficulty); return@launch }
@@ -84,7 +87,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             // question
             question.add(allQuestion[i].question)
             // type
-            type.intValue = allQuestion[i].type
+            types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)    // pas simplifiable ya le currentdao
             val currentPropositions = shuffle(currentAnswer)
@@ -99,7 +102,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             // question
             question.add(allQuestion[i].question)
             // type
-            type.intValue = allQuestion[i].type
+            types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions = shuffle(currentAnswer)
@@ -114,7 +117,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             // question
             question.add(allQuestion[i].question)
             // type
-            type.intValue = allQuestion[i].type
+            types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions = shuffle(currentAnswer)
@@ -129,7 +132,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             // question
             question.add(allQuestion[i].question)
             // type
-            type.intValue = allQuestion[i].type
+            types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions = shuffle(currentAnswer)
@@ -144,11 +147,15 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             // question
             question.add(allQuestion[i].question)
             // type
-            type.intValue = allQuestion[i].type
+            types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions =
-                if (type.intValue == 0) {
+                if (types[i] == 0) {
+                    println(types)
+                    println(types)
+                    println(types)
+                    println(types)
                     shuffle(currentAnswer)
                 } else {
                     currentAnswer.propositions
@@ -164,7 +171,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             // question
             question.add(allQuestion[i].question)
             // type
-            type.intValue = allQuestion[i].type
+            types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions = shuffle(currentAnswer)
@@ -178,6 +185,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
         var shuffling = true
         while (shuffling) {
+   
             randomPropositions = value.propositions.shuffled().take(4)
             for (p in randomPropositions) {
                 if (p[0] == value.answer[0]) {
@@ -196,12 +204,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         return 0.0
     }
 
-    fun updateGame(ans: List<String>, index: Int): Int {
+    fun updateGame(ans: String, index: Int): Int {
         var i = index
-        answerHistory.add(ans[0]) // add le text pos 0 -> text ; pos 1 -> lien
+        // add la réponses du joueur
+        answerHistory.add(ans) // add le text pos 0 -> text ; pos 1 -> lien
         questionHistory.add(question[i])
         goodAnswer.add(answers[i].answer[0])
-        if (ans[0] == answers[i].answer[0]) { ++score.doubleValue }
+        if (ans == answers[i].answer[0]) { ++score.doubleValue }
         nbQuestion.intValue--
         if (i == 9) { i == 0 } else { i++ }
         return i
