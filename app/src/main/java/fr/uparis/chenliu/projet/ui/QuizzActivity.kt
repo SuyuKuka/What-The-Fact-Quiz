@@ -1,11 +1,8 @@
 package fr.uparis.chenliu.projet.ui
 
-import android.R.attr.data
-import android.R.attr.font
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
-import android.util.Log
-import android.util.Log.i
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
@@ -26,9 +23,14 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
@@ -48,6 +50,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
+import kotlinx.coroutines.delay
 
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,38 +65,54 @@ class QuizzActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MyTopBar(gameData: QuizzViewModel.GameData) {
+
+    var isRunning = true
+
+    if (gameData.gameEnded.value) {
+        isRunning = false
+    }
+
+    TopAppBar(
+        title = {
+            Row {
+                Text("Score : ${gameData.score.doubleValue} ")
+                Text("Temps :" + chronometer(isRunning, gameData.time))
+            }
+        },
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red) // tmp
+    )
+}
+
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel()){
     // todo:simplifier tout ca
 
-    val data = QuizzViewModel.Data(
-        question = model.question,
-        answers =  model.answers,
-        types = model.types
-    )
+    val data = model.data
 
-    val gameData = QuizzViewModel.GameData(
-        answerHistory = model.answerHistory,
-        goodAnswer = model.goodAnswer,
-        questionHistory = model.questionHistory,
-        nbQuestion = model.nbQuestion
-    )
-
-    val score = model.score
+    val gameData = model.gameData
 
     val loading = model.loading.value
 
     model.init() // pour l'energie
-
-    if (loading) {
-        model.getQuestionAndAnswer(subj, diff)
-    } else {
-
-        Column(modifier = Modifier.padding(top = 24.dp)) {
-            if (gameData.nbQuestion.intValue > 0) {
-                Game(data)
-            } else {
-                Result(model.translateFont(), score, gameData)
+    Scaffold(
+        topBar = {
+            MyTopBar(gameData)
+        },
+        containerColor = Color.LightGray // tmp
+    ) { innerPadding ->
+        if (loading) {
+            model.getQuestionAndAnswer(subj, diff)
+        } else {
+            Column(modifier = Modifier.padding(innerPadding)) {
+                if (!gameData.gameEnded.value) {
+                    Game(data)
+                } else {
+                    Result(model.translateFont(), gameData)
+                }
             }
         }
     }
@@ -220,11 +239,23 @@ fun Quizztype3() {
 fun Quizztype4() {
     Text("4444444444444444444444444444444444444")
 }
+@Composable
+fun chronometer(isRunning: Boolean, time: MutableDoubleState): String {
+    LaunchedEffect(isRunning) {
+        if (isRunning) {
+            while (true) {
+                delay(1)
+                time.doubleValue = time.doubleValue + 0.001
+            }
+        }
+    }
+    return "%.3f".format(time.doubleValue)
+}
+
 
 @Composable
 fun Result(
     font: List<Int>,
-    score: MutableDoubleState,
     gameData: QuizzViewModel.GameData,
     model: QuizzViewModel = viewModel()
 ) {
@@ -241,7 +272,7 @@ fun Result(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         DisplayText(list = font, text = "RESULTAT", textAlign = TextAlign.Center)
-        DisplayText(list = font, text = "Score : ${score.doubleValue}", textAlign = TextAlign.Center)
+        DisplayText(list = font, text = "Score : ${gameData.score.doubleValue}", textAlign = TextAlign.Center)
 
         LazyColumn(modifier = Modifier.fillMaxWidth().weight(4f)) {
 
