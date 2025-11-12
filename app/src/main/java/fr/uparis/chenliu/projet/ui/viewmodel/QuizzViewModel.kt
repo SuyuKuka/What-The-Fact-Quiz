@@ -237,11 +237,11 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.answerHistory.add(answerList.toList().toString())
         gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
-        resetDragDrop()
-        if (answerList == verify) { ++gameData.score.doubleValue }
+        if (answerList.toList().toString() == verify.toList().toString()) { ++gameData.score.doubleValue }
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
         if (i == 9) { i = 0 } else { i++ }
+        resetDragDrop()
         return i
     }
     fun resetStats(gameData: GameData) {

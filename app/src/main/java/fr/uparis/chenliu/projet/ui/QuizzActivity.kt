@@ -89,15 +89,15 @@ fun MyTopBar(gameData: QuizzViewModel.GameData) {
         isRunning = false
     }
 
-    TopAppBar(
-        title = {
-            Row {
-                Text("Score : ${gameData.score.doubleValue} ")
-                Text("Temps :" + chronometer(isRunning, gameData.time))
-            }
-        },
-        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red) // tmp
-    )
+//    TopAppBar(
+//        title = {
+//            Row {
+//                Text("Score : ${gameData.score.doubleValue} ")
+//                Text("Temps :" + chronometer(isRunning, gameData.time))
+//            }
+//        },
+//        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red) // tmp
+//    )
 }
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -256,7 +256,6 @@ fun DragImage(answer: String, url: String) {
 @OptIn(ExperimentalGlideComposeApi::class) // on pose ici
 @Composable
 fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel) {
-    val buildAnswer = model.buildAnswer
     val imageAnswer = model.imageAnswer
     val currentImageAnswer = model.imageAnswer[intValue]
 
@@ -276,16 +275,17 @@ fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel) {
                     val i = draggedData.toString().toInt()
                     model.swapAnswers(i, intValue)
                 } else {
-                    if (buildAnswer.contains(answer)) {
+                    if (model.buildAnswer.contains(answer)) {
                         for (i in 0..3) {
-                            if (buildAnswer[i] == answer) {
-                                buildAnswer[i] = ""
+                            if (model.buildAnswer[i] == answer) {
+                                model.buildAnswer[i] = ""
                                 imageAnswer[i] = ""
                                 break
                             }
                         }
                     }
-                    buildAnswer[intValue] = answer.toString() // add a l'index intValue
+                    model.buildAnswer[intValue] = answer.toString() // add a l'index intValue
+                    println(model.buildAnswer)
                     imageAnswer[intValue] = draggedData.toString()
                 }
                 return true
@@ -333,7 +333,6 @@ fun Quizztype2(
     i: MutableIntState,
     model: QuizzViewModel
 ) {
-    val buildAnswer = model.buildAnswer
 
     Column {
         Row(
@@ -372,7 +371,7 @@ fun Quizztype2(
             Button(onClick = { model.resetDragDrop() }, shape = RectangleShape) { DisplayText(list = font, text = "reset", textAlign = TextAlign.Center) }
             Spacer(modifier = Modifier.width(200.dp))
             Button(onClick = {
-                i.intValue = model.updateGame2(buildAnswer, data.answers[i.intValue].answer.toList(), i.intValue)
+                i.intValue = model.updateGame2(model.buildAnswer, data.answers[i.intValue].answer.toList(), i.intValue)
                              }, shape = RectangleShape) { DisplayText(list = font, text = "valider", textAlign = TextAlign.Center) }
         }
 
