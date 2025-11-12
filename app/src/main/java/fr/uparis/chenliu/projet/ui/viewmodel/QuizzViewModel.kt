@@ -60,6 +60,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val answers = mutableStateListOf<AnswerSummary>()
     val buildAnswer = mutableStateListOf("", "", "", "")
     var imageAnswer = mutableStateListOf("", "", "", "")
+    val current = mutableIntStateOf(1)
     val loading = mutableStateOf(true)
 
 
@@ -237,13 +238,28 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.answerHistory.add(answerList.toList().toString())
         gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
-        resetDragDrop()
-        if (answerList == verify) { ++gameData.score.doubleValue }
+        if (answerList.toList() == verify) { ++gameData.score.doubleValue }
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
         if (i == 9) { i = 0 } else { i++ }
+        resetDragDrop()
         return i
     }
+
+    fun updateGame4(answerList: List<String>, verify: List<String>, index: Int): Int {
+        var i = index
+        gameData.answerHistory.add(answerList.toList().toString())
+        gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
+        gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
+        if (answerList.toList() == verify) { ++gameData.score.doubleValue }
+        gameData.nbQuestion.intValue--      // reduire le nb de question
+        gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
+        current.intValue = 1
+        if (i == 9) { i = 0 } else { i++ }
+        resetDragDrop()
+        return i
+    }
+
     fun resetStats(gameData: GameData) {
         removeEnergy()
         gameData.nbQuestion.intValue = 10
@@ -258,7 +274,35 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun resetDragDrop() {
-        for(i in 0..3) { buildAnswer[i] = ""; imageAnswer[i] = "" }
+        current.intValue = 1
+        for(i in 0..buildAnswer.size - 1) { buildAnswer[i] = ""; imageAnswer[i] = "" }
+    }
+
+    fun replaceAnswer(answer: String, draggedData: String, intValue: Int) {
+        if (buildAnswer.contains(answer)) {
+            for (i in 0..3) {
+                if (buildAnswer[i] == answer) {
+                    buildAnswer[i] = ""
+                    imageAnswer[i] = ""
+                    break
+                }
+            }
+        }
+        buildAnswer[intValue] = answer
+        imageAnswer[intValue] = draggedData
+        current.intValue++
+    }
+
+    fun insertAnswer(answer: String, url: String, insertionIndex: Int) {
+        if (insertionIndex <= buildAnswer.size) {
+            for (i in 0..buildAnswer.size - 2 - insertionIndex) {
+                buildAnswer[buildAnswer.size - 1 - i] = buildAnswer[buildAnswer.size - 2 - i]
+                imageAnswer[imageAnswer.size - 1 - i] = imageAnswer[imageAnswer.size - 2 - i]
+            }
+            buildAnswer[insertionIndex] = answer
+            imageAnswer[insertionIndex] = url
+            current.intValue++
+        }
     }
 
     fun init() {

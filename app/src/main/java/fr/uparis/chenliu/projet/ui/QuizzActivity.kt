@@ -22,9 +22,11 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -146,7 +148,7 @@ fun Game(
         1 -> Quizztype1(model.translateFont(), data, i, model)
         2 -> Quizztype2(model.translateFont(), data, i, model)
         3 -> Quizztype3()
-        4 -> Quizztype4()
+        4 -> Quizztype4(model.translateFont(), data, i, model)
     }
 }
 
@@ -255,11 +257,8 @@ fun DragImage(answer: String, url: String) {
 
 @OptIn(ExperimentalGlideComposeApi::class) // on pose ici
 @Composable
-fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel) {
-    val buildAnswer = model.buildAnswer
-    val imageAnswer = model.imageAnswer
+fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type: Int) {
     val currentImageAnswer = model.imageAnswer[intValue]
-
     val drag = if (currentImageAnswer.isNotEmpty()) {
         Modifier.dragAndDropSource { _ -> DragAndDropTransferData(ClipData.newPlainText("swap", intValue.toString())) }
     } else {
@@ -276,17 +275,11 @@ fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel) {
                     val i = draggedData.toString().toInt()
                     model.swapAnswers(i, intValue)
                 } else {
-                    if (buildAnswer.contains(answer)) {
-                        for (i in 0..3) {
-                            if (buildAnswer[i] == answer) {
-                                buildAnswer[i] = ""
-                                imageAnswer[i] = ""
-                                break
-                            }
-                        }
+                    if (type == 2 || type == 3) {
+                        model.replaceAnswer(answer.toString(), draggedData.toString(), intValue)
+                    } else {
+                        model.insertAnswer(answer.toString(), draggedData.toString(), intValue)
                     }
-                    buildAnswer[intValue] = answer.toString() // add a l'index intValue
-                    imageAnswer[intValue] = draggedData.toString()
                 }
                 return true
             }
@@ -358,9 +351,8 @@ fun Quizztype2(
                         .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
                         .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
                 ) {
-                    DropTargetImage(data.answers[i.intValue].propositions.indexOf(ans), model.translateFont(), model)
+                    DropTargetImage(data.answers[i.intValue].propositions.indexOf(ans), model.translateFont(), model, 2)
                 }
-
             }
         }
         Row (
@@ -399,9 +391,126 @@ fun Quizztype3() {
     Text("33333333333333333333333333333333333333333")
 }
 @Composable
-fun Quizztype4() {
-    Text("4444444444444444444444444444444444444")
+fun Quizztype4(
+    font: List<Int>, data:
+    QuizzViewModel.Data,
+    i: MutableIntState,
+    model: QuizzViewModel
+) {
+    val buildAnswer = model.buildAnswer
+    val imageAnswer = model.imageAnswer
+    val current = model.current
+    val ans: List<String> = if (current.intValue < buildAnswer.size) {
+        data.answers[i.intValue].propositions[current.intValue]
+    } else {
+        data.answers[i.intValue].propositions[current.intValue - 1]
+    }
+
+    if (current.intValue == 1) {
+        buildAnswer[0] = data.answers[i.intValue].propositions[0][0]
+        imageAnswer[0] = data.answers[i.intValue].propositions[0][1]
+    }
+
+    Column {
+        // QUESTION HAUT
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.5f)
+                .fillMaxHeight(0.1f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
+        }
+
+        // EN HAUT
+        LazyRow(
+            modifier = Modifier.fillMaxWidth().weight(1f).padding(start = 16.dp).padding(end = 16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            items(count = current.intValue) { index ->
+                if (index < buildAnswer.size) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        if (index == 0) {
+                            InsertionDropTarget(index = 0, model = model)
+                        }
+                        Box(
+                            modifier = Modifier
+                                .width(250.dp)
+                                .aspectRatio(1.5f)
+                                .padding(8.dp)
+                                .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+                        ) {
+                            DropTargetImage(intValue = index, font = model.translateFont(), model = model, type = 4)
+                        }
+                        if (index != current.intValue) {
+                            InsertionDropTarget(index = index + 1, model = model)
+                        } else {
+                            InsertionDropTarget(index = index, model = model)
+                        }
+                    }
+                }
+            }
+        }
+
+        // BOUTON MILIEU
+        Row (
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+        ){
+            Button(onClick = { model.resetDragDrop() }, shape = RectangleShape) { DisplayText(list = font, text = "reset", textAlign = TextAlign.Center) }
+            Spacer(modifier = Modifier.width(200.dp))
+            Button(onClick = {
+                i.intValue = model.updateGame4(buildAnswer, data.answers[i.intValue].answer.toList(), i.intValue)
+            }, shape = RectangleShape) { DisplayText(list = font, text = "valider", textAlign = TextAlign.Center) }
+        }
+
+        // EN BAS
+        Box(
+            contentAlignment = Alignment.Center,
+            modifier = Modifier
+                .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
+                .background(Color.Black)
+        ) {
+            if (current.intValue < buildAnswer.size) {
+                DragImage(answer = ans[0], url = ans[1])
+            } else {
+                DisplayText(list = font, text = "C'est tout!", color = Color.White, fontSize = 32.sp,textAlign = TextAlign.Center)
+            }
+        }
+    }
 }
+
+@Composable
+fun InsertionDropTarget(index: Int, model: QuizzViewModel) {
+    val dndTarget = remember(index) {
+        object : DragAndDropTarget {
+            override fun onDrop(event: DragAndDropEvent): Boolean {
+                val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
+                val answer = event.toAndroidDragEvent().clipData.description.label
+                if (answer != "swap") {
+                    model.insertAnswer(answer.toString(), draggedData.toString(), index)
+                    return true
+                }
+                return false
+            }
+        }
+    }
+
+    Spacer(
+        modifier = Modifier
+            .width(20.dp)
+            .height(200.dp)
+            .dragAndDropTarget(
+                shouldStartDragAndDrop = { event -> event.mimeTypes().contains(ClipDescription.MIMETYPE_TEXT_PLAIN) },
+                target = dndTarget
+            )
+    )
+}
+
 @Composable
 fun chronometer(isRunning: Boolean, time: MutableDoubleState): String {
     LaunchedEffect(isRunning) {
@@ -414,7 +523,6 @@ fun chronometer(isRunning: Boolean, time: MutableDoubleState): String {
     }
     return "%.3f".format(time.doubleValue)
 }
-
 
 @Composable
 fun Result(
