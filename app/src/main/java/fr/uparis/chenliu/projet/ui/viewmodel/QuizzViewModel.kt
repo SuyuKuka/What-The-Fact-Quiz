@@ -6,6 +6,7 @@ import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -43,8 +44,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     )
 
     private val db = AppDatabase.getInstance(application)
-    private val user = mutableStateOf<UsersEntity?>(null)
-    private val settings = mutableStateOf<SettingsEntity?>(null)
+    private var user = mutableStateOf<UsersEntity?>(null)
+    private var settings = mutableStateOf<SettingsEntity?>(null)
 
     // Users
     val energy = mutableIntStateOf(0)
@@ -55,8 +56,10 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     // Quizz
     val subject = mutableStateOf("")
-    var question = mutableListOf<String>()
-    val answers = mutableListOf<AnswerSummary>()
+    var question = mutableStateListOf<String>()
+    val answers = mutableStateListOf<AnswerSummary>()
+    val buildAnswer = mutableStateListOf("", "", "", "")
+    var imageAnswer = mutableStateListOf("", "", "", "")
     val loading = mutableStateOf(true)
 
 
@@ -86,13 +89,14 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             data.answers.clear()
             data.types.clear()
             when (subject) {
-                "Science" -> { fetchScienceData(difficulty); return@launch }
-                "Gastronomie" -> { fetchGastronomieData(difficulty); return@launch }
-                "Géographie" -> { fetchGeographieData(difficulty); return@launch }
-                "Nature" -> { fetchNatureData(difficulty); return@launch }
-                "Dessin anime" -> { fetchDessinAnimeData(difficulty); return@launch }
-                "Informatique" -> { fetchInformatiqueData(difficulty); return@launch }
+                "Science" -> { fetchScienceData(difficulty) }
+                "Gastronomie" -> { fetchGastronomieData(difficulty) }
+                "Géographie" -> { fetchGeographieData(difficulty) }
+                "Nature" -> { fetchNatureData(difficulty) }
+                "Dessin anime" -> { fetchDessinAnimeData(difficulty) }
+                "Informatique" -> { fetchInformatiqueData(difficulty) }
             }
+            loading.value = false
         }
     }
     suspend fun fetchScienceData(difficulty: String) {
@@ -109,7 +113,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchGastronomieData(difficulty: String) {
         val currentDao = db.quizzGastronomieDao()
@@ -124,7 +127,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchGeographieData(difficulty: String) {
         val currentDao = db.quizzGeoDao()
@@ -139,7 +141,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchNatureData(difficulty: String) {
         val currentDao = db.quizzNatureDao()
@@ -154,7 +155,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchDessinAnimeData(difficulty: String) {
         val currentDao = db.quizzDessinAnimeDao()
@@ -174,7 +174,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                 }
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
     suspend fun fetchInformatiqueData(difficulty: String) {
         val currentDao = db.quizzInformatiqueDao()
@@ -189,7 +188,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             val currentPropositions = shuffle(currentAnswer)
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-        loading.value = false
     }
 
     // permet de rendre les propositions aléatoire
@@ -216,7 +214,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         return 0.0
     }
 
-    fun updateGame(ans: String, index: Int): Int {
+    fun swapAnswers(i: Int, j: Int) {
+        buildAnswer[i] = buildAnswer[j].also { buildAnswer[j] = buildAnswer[i] }
+        imageAnswer[i] = imageAnswer[j].also { imageAnswer[j] = imageAnswer[i] }
+    }
+
+    fun updateGame01(ans: String, index: Int): Int {
         var i = index
         // add la réponses du joueur
         gameData.answerHistory.add(ans) // add le text pos 0 -> text ; pos 1 -> lien
@@ -225,7 +228,20 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         if (ans == data.answers[i].answer[0]) { ++gameData.score.doubleValue } // si bonne réponse
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
-        if (i == 9) { i == 0 } else { i++ }
+        if (i == 9) { i = 0 } else { i++ }
+        return i
+    }
+
+    fun updateGame2(answerList: List<String>, verify: List<String>, index: Int): Int {
+        var i = index
+        gameData.answerHistory.add(answerList.toList().toString())
+        gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
+        gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
+        resetDragDrop()
+        if (answerList == verify) { ++gameData.score.doubleValue }
+        gameData.nbQuestion.intValue--      // reduire le nb de question
+        gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
+        if (i == 9) { i = 0 } else { i++ }
         return i
     }
     fun resetStats(gameData: GameData) {
@@ -237,7 +253,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.goodAnswer.clear()
         gameData.gameEnded.value = false
         gameData.time.doubleValue = 0.0
+        resetDragDrop()
         loading.value = true
+    }
+
+    fun resetDragDrop() {
+        for(i in 0..3) { buildAnswer[i] = ""; imageAnswer[i] = "" }
     }
 
     fun init() {

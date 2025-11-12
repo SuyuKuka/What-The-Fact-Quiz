@@ -2,24 +2,34 @@ package fr.uparis.chenliu.projet.ui
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.ClipData
+import android.content.ClipDescription
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.draganddrop.dragAndDropSource
+import androidx.compose.foundation.draganddrop.dragAndDropTarget
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -38,12 +48,20 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draganddrop.DragAndDropEvent
+import androidx.compose.ui.draganddrop.DragAndDropTarget
+import androidx.compose.ui.draganddrop.DragAndDropTransferData
+import androidx.compose.ui.draganddrop.mimeTypes
+import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
+import com.bumptech.glide.integration.compose.GlideImage
+import com.bumptech.glide.integration.compose.placeholder
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 import kotlinx.coroutines.delay
@@ -91,16 +109,18 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 
     val gameData = model.gameData
 
-    val loading = model.loading.value
+    val loading = model.loading
 
     model.init() // pour l'energie
+
     Scaffold(
         topBar = {
             MyTopBar(gameData)
         },
         containerColor = Color.LightGray // tmp
     ) { innerPadding ->
-        if (loading) {
+        if (loading.value) {
+            //LoadingScreen()
             model.getQuestionAndAnswer(subj, diff)
         } else {
             Column(modifier = Modifier.padding(innerPadding)) {
@@ -117,14 +137,16 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
 @Composable
 fun Game(
     data: QuizzViewModel.Data,
-    model: QuizzViewModel = viewModel(),
+    model: QuizzViewModel = viewModel()
 ){
     val i = remember { mutableIntStateOf(0) }
 
     when (data.types[i.intValue]) {
-        0 -> Quizztype0(model.translateFont(), data, i,)
-        1 -> Quizztype1(model.translateFont(), data, i,)
-
+        0 -> Quizztype0(model.translateFont(), data, i, model)
+        1 -> Quizztype1(model.translateFont(), data, i, model)
+        2 -> Quizztype2(model.translateFont(), data, i, model)
+        3 -> Quizztype3()
+        4 -> Quizztype4()
     }
 }
 
@@ -133,9 +155,8 @@ fun Quizztype0 (
     font: List<Int>,
     data: QuizzViewModel.Data,
     i: MutableIntState,
-    model: QuizzViewModel = viewModel()
+    model: QuizzViewModel
 ) {
-
     Column {
         Row(
             modifier = Modifier
@@ -154,7 +175,7 @@ fun Quizztype0 (
         ) {
             items(data.answers[i.intValue].propositions) { ans ->
                 Button(
-                    onClick = { i.intValue = model.updateGame(ans[0], i.intValue) },
+                    onClick = { i.intValue = model.updateGame01(ans[0], i.intValue) },
                     modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
                     shape = RectangleShape
                 ) {
@@ -170,7 +191,7 @@ fun Quizztype1 (
     font: List<Int>,
     data: QuizzViewModel.Data,
     i: MutableIntState,
-    model: QuizzViewModel = viewModel()
+    model: QuizzViewModel
 ) {
     var text by remember { mutableStateOf("") }
     Column(
@@ -208,7 +229,7 @@ fun Quizztype1 (
                 onDone = {
                     val number = text.toIntOrNull()
                     if (number != null) {
-                        i.intValue = model.updateGame(text, i.intValue)
+                        i.intValue = model.updateGame01(text, i.intValue)
                     }
                 },
                 onlyNb = true
@@ -217,13 +238,165 @@ fun Quizztype1 (
     }
 }
 
+@OptIn(ExperimentalGlideComposeApi::class)  // on prend ici
 @Composable
-fun Quizztype2() {
-    Text("22222222222222222222222222222222")
+fun DragImage(answer: String, url: String) {
+    GlideImage(
+        model = url,
+        contentDescription = "Dragged Image",
+        modifier = Modifier
+            .fillMaxSize()
+            .dragAndDropSource { _ ->
+            DragAndDropTransferData(ClipData.newPlainText(answer, url))
+        },
+        loading = placeholder { Color.Red }
+    )
 }
+
+@OptIn(ExperimentalGlideComposeApi::class) // on pose ici
+@Composable
+fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel) {
+    val buildAnswer = model.buildAnswer
+    val imageAnswer = model.imageAnswer
+    val currentImageAnswer = model.imageAnswer[intValue]
+
+    val drag = if (currentImageAnswer.isNotEmpty()) {
+        Modifier.dragAndDropSource { _ -> DragAndDropTransferData(ClipData.newPlainText("swap", intValue.toString())) }
+    } else {
+        Modifier
+    }
+
+    val dndTarget = remember(intValue) {
+        object : DragAndDropTarget {
+            override fun onDrop(event: DragAndDropEvent): Boolean {
+                val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
+                val answer = event.toAndroidDragEvent().clipData.description.label
+
+                if (answer == "swap") {
+                    val i = draggedData.toString().toInt()
+                    model.swapAnswers(i, intValue)
+                } else {
+                    if (buildAnswer.contains(answer)) {
+                        for (i in 0..3) {
+                            if (buildAnswer[i] == answer) {
+                                buildAnswer[i] = ""
+                                imageAnswer[i] = ""
+                                break
+                            }
+                        }
+                    }
+                    buildAnswer[intValue] = answer.toString() // add a l'index intValue
+                    imageAnswer[intValue] = draggedData.toString()
+                }
+                return true
+            }
+        }
+    }
+    Box(
+        Modifier.border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+            .then(drag)
+    ) {
+        GlideImage(
+            model = currentImageAnswer,
+            contentDescription = "Dropped Image",
+            modifier = Modifier
+                .fillMaxSize()
+                .dragAndDropTarget(
+                    shouldStartDragAndDrop = { event ->
+                        event.mimeTypes()
+                            .contains(ClipDescription.MIMETYPE_TEXT_PLAIN)
+                    },
+                    target = dndTarget
+                )
+        )
+        if (currentImageAnswer.isEmpty()) {
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    DisplayText(list = font, text = (intValue+1).toString(), fontSize = 26.sp)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun Quizztype2(
+    font: List<Int>,
+    data: QuizzViewModel.Data,
+    i: MutableIntState,
+    model: QuizzViewModel
+) {
+    val buildAnswer = model.buildAnswer
+
+    Column {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(0.5f)
+                .fillMaxHeight(0.1f)
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            DisplayText(list = font, text = data.question[i.intValue], textAlign = TextAlign.Center)
+        }
+
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            contentPadding = PaddingValues(8.dp),
+            modifier = Modifier.weight(1f)
+        ) {
+            items(data.answers[i.intValue].propositions) { ans ->
+                Box (
+                    modifier = Modifier
+                        .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
+                        .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+                ) {
+                    DropTargetImage(data.answers[i.intValue].propositions.indexOf(ans), model.translateFont(), model)
+                }
+
+            }
+        }
+        Row (
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally),
+            horizontalArrangement = Arrangement.Center,
+        ){
+            Button(onClick = { model.resetDragDrop() }, shape = RectangleShape) { DisplayText(list = font, text = "reset", textAlign = TextAlign.Center) }
+            Spacer(modifier = Modifier.width(200.dp))
+            Button(onClick = {
+                i.intValue = model.updateGame2(buildAnswer, data.answers[i.intValue].answer.toList(), i.intValue)
+                             }, shape = RectangleShape) { DisplayText(list = font, text = "valider", textAlign = TextAlign.Center) }
+        }
+
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            contentPadding = PaddingValues(8.dp),
+            modifier = Modifier.weight(1f)
+        ) {
+            items(data.answers[i.intValue].propositions) { ans ->
+                Box (
+                    modifier = Modifier
+                        .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
+                        .background(Color.Black)
+                ) {
+                    DragImage(answer = ans[0],url = ans[1])
+                }
+            }
+        }
+    }
+}
+
 @Composable
 fun Quizztype3() {
-    Text("333333333333333333333333333333333333333")
+    Text("33333333333333333333333333333333333333333")
 }
 @Composable
 fun Quizztype4() {
@@ -304,7 +477,7 @@ fun Result(
 }
 
 @Composable
-fun ShowAlert(font: List<Int>, alert: MutableState<Boolean>, activity: Activity?, ) {
+fun ShowAlert(font: List<Int>, alert: MutableState<Boolean>, activity: Activity?) {
     Alert(
         list = font,
         onConfirm = { alert.value = false ; activity?.finish() },
