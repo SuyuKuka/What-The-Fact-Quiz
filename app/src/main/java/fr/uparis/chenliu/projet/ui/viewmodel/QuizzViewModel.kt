@@ -225,7 +225,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         if (ans == data.answers[i].answer[0]) { ++gameData.score.doubleValue } // si bonne réponse
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
-        if (i == 9) { i == 0 } else { i++ }
+        if (i == 9) { i = 0 } else { i++ }
         return i
     }
 
@@ -238,7 +238,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         if (answerList == verify) { ++gameData.score.doubleValue }
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
-        if (i == 9) { i == 0 } else { i++ }
+        if (i == 9) { i = 0 } else { i++ }
         return i
     }
     fun resetStats(gameData: GameData) {
