@@ -6,6 +6,7 @@ import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -53,8 +54,10 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val font = mutableIntStateOf(0)
 
     // Quizz
-    var question = mutableListOf<String>()
-    val answers = mutableListOf<AnswerSummary>()
+    var question = mutableStateListOf<String>()
+    val answers = mutableStateListOf<AnswerSummary>()
+    val buildAnswer = mutableStateListOf("", "", "", "")
+    var imageAnswer = mutableStateListOf("", "", "", "")
     val loading = mutableStateOf(true)
 
 
@@ -221,12 +224,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         return i
     }
 
-    fun updateGame2(answerlist: List<String>, verify: List<String>, index: Int): Int {
+    fun updateGame2(answerList: List<String>, verify: List<String>, index: Int): Int {
         var i = index
-        gameData.answerHistory.add(answerlist.toString())
+        gameData.answerHistory.add(answerList.toString())
         gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(data.answers[i].answer.toString()) // connaitre la bonne réponse
-        if (answerlist == verify) { ++gameData.score.doubleValue }
+        if (answerList == verify) { ++gameData.score.doubleValue }
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
         if (i == 9) { i == 0 } else { i++ }
