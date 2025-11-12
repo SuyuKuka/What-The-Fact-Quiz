@@ -1,4 +1,4 @@
-package fr.uparis.chenliu.projet.ui
+package fr.uparis.chenliu.projet.ui.menu
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -68,7 +68,7 @@ fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        topBar = { TopBar(model = model) },
+        topBar = { TopBarMenu(model = model) },
         bottomBar = { BottomBar(model = model, backStack = backStack) },
         snackbarHost = { SnackbarHost(hostState = snack) }
     )
@@ -78,7 +78,10 @@ fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
             modifier = Modifier.padding(paddingValues = pad),
             entryProvider = entryProvider{
                 entry<Screen.Profile> { model.getUsers(); ProfileScreen(model = model) }
-                entry<Screen.Leaderboard> { model.changeSubject("Science"); model.changed.value = true; LeaderboardScreen(model = model) }
+                entry<Screen.Leaderboard> { model.changeSubject("Science"); model.changed.value = true; LeaderboardScreen(
+                    model = model
+                )
+                }
                 entry<Screen.Home> { HomeScreen(model = model, backStack = backStack) }
                 entry<Screen.Shop> { ShopScreen(model = model) }
                 entry<Screen.Settings> { SettingsScreen(model = model) }

@@ -2,59 +2,56 @@
   "quizz": [
     {
       "id": 1,
-      "type": 4,
-      "question": "Mettre les pokemons selon les plus lourds ?",
+      "type": 1,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
-        ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
-        ["Cosmovum", "https://www.pokepedia.fr/images/thumb/1/12/Cosmovum-SL.png/250px-Cosmovum-SL.png"],
-        ["Kangourex", "https://www.pokepedia.fr/images/thumb/7/78/Kangourex-RFVF.png/250px-Kangourex-RFVF.png"],
-        ["Leviator", "https://www.pokepedia.fr/images/thumb/f/f2/L%C3%A9viator-LPZA.png/250px-L%C3%A9viator-LPZA.png"]
+        []
       ],
-      "answer": ["Cosmovum", "Leviator", "Dracaufeu", "Kangourex"],
+      "answer": ["6"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 2,
-      "type": 4,
-      "question": "Mettre les pokemons selon les plus lourds ?",
+      "type": 2,
+      "question": "LE + FORT",
       "propositions": [
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
         ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
-        ["Cosmovum", "https://www.pokepedia.fr/images/thumb/1/12/Cosmovum-SL.png/250px-Cosmovum-SL.png"],
-        ["Kangourex", "https://www.pokepedia.fr/images/thumb/7/78/Kangourex-RFVF.png/250px-Kangourex-RFVF.png"],
-        ["Leviator", "https://www.pokepedia.fr/images/thumb/f/f2/L%C3%A9viator-LPZA.png/250px-L%C3%A9viator-LPZA.png"]
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Cosmovum", "Leviator", "Dracaufeu", "Kangourex"],
+      "answer": [ "Rayquaza","Amphinobi","Dracaufeu","Mewtwo"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 3,
-      "type": 4,
-      "question": "Mettre les pokemons selon les plus lourds ?",
+      "type": 3,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
         ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
-        ["Cosmovum", "https://www.pokepedia.fr/images/thumb/1/12/Cosmovum-SL.png/250px-Cosmovum-SL.png"],
-        ["Kangourex", "https://www.pokepedia.fr/images/thumb/7/78/Kangourex-RFVF.png/250px-Kangourex-RFVF.png"],
-        ["Leviator", "https://www.pokepedia.fr/images/thumb/f/f2/L%C3%A9viator-LPZA.png/250px-L%C3%A9viator-LPZA.png"]
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Cosmovum", "Leviator", "Dracaufeu", "Kangourex"],
+      "answer": [ "Amphinobi","Dracaufeu","Rayquaza","Mewtwo"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 4,
-      "type": 4,
-      "question": "Mettre les pokemons selon les plus lourds ?",
+      "type": 3,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
         ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
-        ["Cosmovum", "https://www.pokepedia.fr/images/thumb/1/12/Cosmovum-SL.png/250px-Cosmovum-SL.png"],
-        ["Kangourex", "https://www.pokepedia.fr/images/thumb/7/78/Kangourex-RFVF.png/250px-Kangourex-RFVF.png"],
-        ["Leviator", "https://www.pokepedia.fr/images/thumb/f/f2/L%C3%A9viator-LPZA.png/250px-L%C3%A9viator-LPZA.png"]
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Cosmovum", "Leviator", "Dracaufeu", "Kangourex"],
+      "answer": [ "Amphinobi","Dracaufeu","Rayquaza","Mewtwo"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 5,
@@ -72,73 +69,73 @@
     },
     {
       "id": 6,
-      "type": 4,
-      "question": "Mettre les pokemons selon les plus lourds ?",
+      "type": 3,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
         ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
-        ["Cosmovum", "https://www.pokepedia.fr/images/thumb/1/12/Cosmovum-SL.png/250px-Cosmovum-SL.png"],
-        ["Kangourex", "https://www.pokepedia.fr/images/thumb/7/78/Kangourex-RFVF.png/250px-Kangourex-RFVF.png"],
-        ["Leviator", "https://www.pokepedia.fr/images/thumb/f/f2/L%C3%A9viator-LPZA.png/250px-L%C3%A9viator-LPZA.png"]
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Cosmovum", "Leviator", "Dracaufeu", "Kangourex"],
+      "answer": [ "Amphinobi","Dracaufeu","Rayquaza","Mewtwo"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 7,
-      "type": 4,
-      "question": "Mettre les pokemons selon les plus lourds ?",
+      "type": 3,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
         ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
-        ["Cosmovum", "https://www.pokepedia.fr/images/thumb/1/12/Cosmovum-SL.png/250px-Cosmovum-SL.png"],
-        ["Kangourex", "https://www.pokepedia.fr/images/thumb/7/78/Kangourex-RFVF.png/250px-Kangourex-RFVF.png"],
-        ["Leviator", "https://www.pokepedia.fr/images/thumb/f/f2/L%C3%A9viator-LPZA.png/250px-L%C3%A9viator-LPZA.png"]
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Cosmovum", "Leviator", "Dracaufeu", "Kangourex"],
+      "answer": [ "Amphinobi","Dracaufeu","Rayquaza","Mewtwo"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 8,
-      "type": 4,
-      "question": "Mettre les pokemons selon les plus lourds ?",
+      "type": 3,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
         ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
-        ["Cosmovum", "https://www.pokepedia.fr/images/thumb/1/12/Cosmovum-SL.png/250px-Cosmovum-SL.png"],
-        ["Kangourex", "https://www.pokepedia.fr/images/thumb/7/78/Kangourex-RFVF.png/250px-Kangourex-RFVF.png"],
-        ["Leviator", "https://www.pokepedia.fr/images/thumb/f/f2/L%C3%A9viator-LPZA.png/250px-L%C3%A9viator-LPZA.png"]
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Cosmovum", "Leviator", "Dracaufeu", "Kangourex"],
+      "answer": [ "Amphinobi","Dracaufeu","Rayquaza","Mewtwo"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 9,
-      "type": 4,
-      "question": "Mettre les pokemons selon les plus lourds ?",
+      "type": 3,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
         ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
-        ["Cosmovum", "https://www.pokepedia.fr/images/thumb/1/12/Cosmovum-SL.png/250px-Cosmovum-SL.png"],
-        ["Kangourex", "https://www.pokepedia.fr/images/thumb/7/78/Kangourex-RFVF.png/250px-Kangourex-RFVF.png"],
-        ["Leviator", "https://www.pokepedia.fr/images/thumb/f/f2/L%C3%A9viator-LPZA.png/250px-L%C3%A9viator-LPZA.png"]
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Cosmovum", "Leviator", "Dracaufeu", "Kangourex"],
+      "answer": [ "Amphinobi","Dracaufeu","Rayquaza","Mewtwo"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     },
     {
       "id": 10,
-      "type": 4,
-      "question": "Mettre les pokemons selon les plus lourds ?",
+      "type": 3,
+      "question": "Les GOAT du moins au plus",
       "propositions": [
+        ["Amphinobi", "https://www.pokepedia.fr/images/thumb/7/75/Amphinobi-XY.png/250px-Amphinobi-XY.png"],
         ["Dracaufeu", "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/250px-Dracaufeu-RFVF.png"],
-        ["Cosmovum", "https://www.pokepedia.fr/images/thumb/1/12/Cosmovum-SL.png/250px-Cosmovum-SL.png"],
-        ["Kangourex", "https://www.pokepedia.fr/images/thumb/7/78/Kangourex-RFVF.png/250px-Kangourex-RFVF.png"],
-        ["Leviator", "https://www.pokepedia.fr/images/thumb/f/f2/L%C3%A9viator-LPZA.png/250px-L%C3%A9viator-LPZA.png"]
+        ["Mewtwo", "https://www.pokepedia.fr/images/thumb/d/db/Mewtwo-RFVF.png/250px-Mewtwo-RFVF.png"],
+        ["Rayquaza", "https://www.pokepedia.fr/images/thumb/9/92/Rayquaza-RS.png/250px-Rayquaza-RS.png"]
       ],
-      "answer": ["Cosmovum", "Leviator", "Dracaufeu", "Kangourex"],
+      "answer": [ "Amphinobi","Dracaufeu","Rayquaza","Mewtwo"],
       "difficulty": "Facile",
-      "anecdote": "Un dresseur de Pokémon est une personne qui capture et entraîne des Pokémon en vue de les faire combattre."
+      "anecdote": "Cuites à l'huile dans une friteuse ou à la poêle, les fricadelles constituent un des ingrédients de base de la mitraillette."
     }
   ]
 }

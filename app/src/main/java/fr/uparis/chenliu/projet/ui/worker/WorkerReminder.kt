@@ -9,7 +9,7 @@ import androidx.core.app.NotificationCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import fr.uparis.chenliu.projet.R
-import fr.uparis.chenliu.projet.ui.CHANNEL_ID
+import fr.uparis.chenliu.projet.ui.menu.CHANNEL_ID
 import fr.uparis.chenliu.projet.ui.MainActivity
 
 class WorkerReminder(val context: Context, params: WorkerParameters): Worker(context, params) {

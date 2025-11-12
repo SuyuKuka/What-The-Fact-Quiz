@@ -15,12 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet">
         <activity
-            android:name=".ui.QuizzActivity"
+            android:name=".ui.quizz.QuizzActivity"
             android:exported="false"
             android:label="@string/title_activity_quizz"
             android:theme="@style/Theme.Projet" />
         <activity
-            android:name=".ui.MenuActivity"
+            android:name=".ui.menu.MenuActivity"
             android:exported="false"
             android:label="@string/title_activity_menu"
             android:theme="@style/Theme.Projet" />

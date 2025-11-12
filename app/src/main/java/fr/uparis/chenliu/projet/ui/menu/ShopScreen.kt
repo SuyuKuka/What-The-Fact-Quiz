@@ -1,4 +1,4 @@
-package fr.uparis.chenliu.projet.ui
+package fr.uparis.chenliu.projet.ui.menu
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -47,7 +47,12 @@ fun ShopScreen(model: MenuViewModel) {
                 if (showAlertMonth.value) {
                     Alert(
                         list = currentFont,
-                        onConfirm = { manageSubscription(model = model, isMonthly = true); showAlertMonth.value = false },
+                        onConfirm = {
+                            manageSubscription(
+                                model = model,
+                                isMonthly = true
+                            ); showAlertMonth.value = false
+                        },
                         onCancel = { showAlertMonth.value = false },
                         title = "Confirmer l'abonnement mensuel",
                         text = "L'abonnement sera actif pendant un mois. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?",
@@ -59,7 +64,12 @@ fun ShopScreen(model: MenuViewModel) {
                 if (showAlertYear.value) {
                     Alert(
                         list = currentFont,
-                        onConfirm = { manageSubscription(model = model, isMonthly = false); showAlertYear.value = false },
+                        onConfirm = {
+                            manageSubscription(
+                                model = model,
+                                isMonthly = false
+                            ); showAlertYear.value = false
+                        },
                         onCancel = { showAlertYear.value = false },
                         title = "Confirmer l'abonnement annuel",
                         text = "L'abonnement sera actif pendant un an. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?",

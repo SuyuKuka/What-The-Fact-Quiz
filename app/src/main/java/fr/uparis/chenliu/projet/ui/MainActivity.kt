@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.R
+import fr.uparis.chenliu.projet.ui.menu.MenuActivity
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MainViewModel
 import java.time.LocalDateTime

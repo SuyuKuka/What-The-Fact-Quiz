@@ -16,6 +16,7 @@ import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.collections.mutableListOf
 import kotlin.math.abs
@@ -60,7 +61,11 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val answers = mutableStateListOf<AnswerSummary>()
     val buildAnswer = mutableStateListOf("", "", "", "")
     var imageAnswer = mutableStateListOf("", "", "", "")
-    val current = mutableIntStateOf(1)
+    val currentQuestion = mutableIntStateOf(0)
+    val currentImage = mutableIntStateOf(0)
+    var isRunning = mutableStateOf(true)
+
+    // Others
     val loading = mutableStateOf(true)
 
 
@@ -99,6 +104,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             }
             loading.value = false
         }
+        chronometer()
     }
     suspend fun fetchScienceData(difficulty: String) {
         // on fetch les data
@@ -220,44 +226,16 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         imageAnswer[i] = imageAnswer[j].also { imageAnswer[j] = imageAnswer[i] }
     }
 
-    fun updateGame01(ans: String, index: Int): Int {
-        var i = index
-        // add la réponses du joueur
-        gameData.answerHistory.add(ans) // add le text pos 0 -> text ; pos 1 -> lien
-        gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
-        gameData.goodAnswer.add(data.answers[i].answer[0]) // connaitre la bonne réponse
-        if (ans == data.answers[i].answer[0]) { ++gameData.score.doubleValue } // si bonne réponse
-        gameData.nbQuestion.intValue--      // reduire le nb de question
-        gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
-        if (i == 9) { i = 0 } else { i++ }
-        return i
-    }
-
-    fun updateGame2(answerList: List<String>, verify: List<String>, index: Int): Int {
-        var i = index
+    fun updateGame(answerList: List<String>, verify: List<String>) {
         gameData.answerHistory.add(answerList.toList().toString())
-        gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
+        gameData.questionHistory.add(data.question[currentQuestion.intValue]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
         if (answerList.toList() == verify) { ++gameData.score.doubleValue }
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
-        if (i == 9) { i = 0 } else { i++ }
+        if (currentQuestion.intValue == 9) { currentQuestion.intValue = 0 } else { currentQuestion.intValue++ }
         resetDragDrop()
-        return i
-    }
-
-    fun updateGame4(answerList: List<String>, verify: List<String>, index: Int): Int {
-        var i = index
-        gameData.answerHistory.add(answerList.toList().toString())
-        gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
-        gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
-        if (answerList.toList() == verify) { ++gameData.score.doubleValue }
-        gameData.nbQuestion.intValue--      // reduire le nb de question
-        gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
-        current.intValue = 1
-        if (i == 9) { i = 0 } else { i++ }
-        resetDragDrop()
-        return i
+        currentImage.intValue = 0
     }
 
     fun resetStats(gameData: GameData) {
@@ -270,11 +248,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.gameEnded.value = false
         gameData.time.doubleValue = 0.0
         resetDragDrop()
+        currentQuestion.intValue = 0
+        currentImage.intValue = 0
         loading.value = true
     }
 
     fun resetDragDrop() {
-        current.intValue = 1
         for(i in 0..buildAnswer.size - 1) { buildAnswer[i] = ""; imageAnswer[i] = "" }
     }
 
@@ -290,7 +269,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         }
         buildAnswer[intValue] = answer
         imageAnswer[intValue] = draggedData
-        current.intValue++
+        currentImage.intValue++
     }
 
     fun insertAnswer(answer: String, url: String, insertionIndex: Int) {
@@ -301,7 +280,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             }
             buildAnswer[insertionIndex] = answer
             imageAnswer[insertionIndex] = url
-            current.intValue++
+            currentImage.intValue++
         }
     }
 
@@ -371,7 +350,25 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun insertLeaderboard() {
         viewModelScope.launch {
+            println(gameData.score.doubleValue)
             db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.doubleValue, time = gameData.time.doubleValue, subject = subject.value))
+        }
+    }
+
+    fun chronometer() {
+        viewModelScope.launch {
+            val start = System.currentTimeMillis()
+            delay(1000L)
+            while (isRunning.value) {
+                if (gameData.gameEnded.value) {
+                    isRunning.value = false
+                    break
+                }
+                val now = System.currentTimeMillis()
+                val diff = now - start
+                gameData.time.doubleValue = diff / 1000.0
+                delay(50L)
+            }
         }
     }
 }
