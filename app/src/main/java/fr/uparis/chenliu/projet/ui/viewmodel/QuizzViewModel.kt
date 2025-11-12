@@ -231,9 +231,9 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun updateGame2(answerList: List<String>, verify: List<String>, index: Int): Int {
         var i = index
-        gameData.answerHistory.add(answerList.toString())
+        gameData.answerHistory.add(answerList.toList().toString())
         gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
-        gameData.goodAnswer.add(data.answers[i].answer.toString()) // connaitre la bonne réponse
+        gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
         resetDragDrop()
         if (answerList == verify) { ++gameData.score.doubleValue }
         gameData.nbQuestion.intValue--      // reduire le nb de question
