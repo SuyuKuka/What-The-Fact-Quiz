@@ -396,7 +396,7 @@ fun Quizztype2(
 
 @Composable
 fun Quizztype3() {
-    Text("333333333333333333333333333333333333333")
+    Text("33333333333333333333333333333333333333333")
 }
 @Composable
 fun Quizztype4() {

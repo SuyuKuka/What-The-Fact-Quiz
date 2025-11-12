@@ -55,6 +55,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val font = mutableIntStateOf(0)
 
     // Quizz
+    val subject = mutableStateOf("")
     var question = mutableStateListOf<String>()
     val answers = mutableStateListOf<AnswerSummary>()
     val buildAnswer = mutableStateListOf("", "", "", "")
@@ -82,6 +83,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     )
 
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
+        this.subject.value = subject
         viewModelScope.launch {
             data.question.clear()
             data.answers.clear()
