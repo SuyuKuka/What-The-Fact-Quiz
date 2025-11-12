@@ -91,15 +91,15 @@ fun MyTopBar(gameData: QuizzViewModel.GameData) {
         isRunning = false
     }
 
-    TopAppBar(
-        title = {
-            Row {
-                Text("Score : ${gameData.score.doubleValue} ")
-                Text("Temps :" + chronometer(isRunning, gameData.time))
-            }
-        },
-        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red) // tmp
-    )
+//    TopAppBar(
+//        title = {
+//            Row {
+//                Text("Score : ${gameData.score.doubleValue} ")
+//                Text("Temps :" + chronometer(isRunning, gameData.time))
+//            }
+//        },
+//        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red) // tmp
+//    )
 }
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -326,7 +326,6 @@ fun Quizztype2(
     i: MutableIntState,
     model: QuizzViewModel
 ) {
-    val buildAnswer = model.buildAnswer
 
     Column {
         Row(
@@ -364,7 +363,7 @@ fun Quizztype2(
             Button(onClick = { model.resetDragDrop() }, shape = RectangleShape) { DisplayText(list = font, text = "reset", textAlign = TextAlign.Center) }
             Spacer(modifier = Modifier.width(200.dp))
             Button(onClick = {
-                i.intValue = model.updateGame2(buildAnswer, data.answers[i.intValue].answer.toList(), i.intValue)
+                i.intValue = model.updateGame2(model.buildAnswer, data.answers[i.intValue].answer.toList(), i.intValue)
                              }, shape = RectangleShape) { DisplayText(list = font, text = "valider", textAlign = TextAlign.Center) }
         }
 
