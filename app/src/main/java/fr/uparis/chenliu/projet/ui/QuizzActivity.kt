@@ -261,19 +261,42 @@ fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel) {
     val buildAnswer = model.buildAnswer
     val imageAnswer = model.imageAnswer
     val currentImageAnswer = model.imageAnswer[intValue]
-    val dndTarget = remember {
-        object : DragAndDropTarget{
+
+    val drag = if (currentImageAnswer.isNotEmpty()) {
+        Modifier.dragAndDropSource { _ -> DragAndDropTransferData(ClipData.newPlainText("swap", intValue.toString())) }
+    } else {
+        Modifier
+    }
+
+    val dndTarget = remember(intValue) {
+        object : DragAndDropTarget {
             override fun onDrop(event: DragAndDropEvent): Boolean {
                 val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
                 val answer = event.toAndroidDragEvent().clipData.description.label
-                buildAnswer[intValue] = answer.toString() // add a l'index intValue
-                imageAnswer[intValue] = draggedData.toString()
+
+                if (answer == "swap") {
+                    val i = draggedData.toString().toInt()
+                    model.swapAnswers(i, intValue)
+                } else {
+                    if (buildAnswer.contains(answer)) {
+                        for (i in 0..3) {
+                            if (buildAnswer[i] == answer) {
+                                buildAnswer[i] = ""
+                                imageAnswer[i] = ""
+                                break
+                            }
+                        }
+                    }
+                    buildAnswer[intValue] = answer.toString() // add a l'index intValue
+                    imageAnswer[intValue] = draggedData.toString()
+                }
                 return true
             }
         }
     }
     Box(
         Modifier.border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+            .then(drag)
     ) {
         GlideImage(
             model = currentImageAnswer,
@@ -313,7 +336,6 @@ fun Quizztype2(
     model: QuizzViewModel
 ) {
     val buildAnswer = model.buildAnswer
-    val imageAnswer = model.imageAnswer
 
     Column {
         Row(
@@ -349,7 +371,7 @@ fun Quizztype2(
                 .align(Alignment.CenterHorizontally),
             horizontalArrangement = Arrangement.Center,
         ){
-            Button(onClick = { for(i in 0..3) { buildAnswer[i] = ""; imageAnswer[i] = "" } }, shape = RectangleShape) { DisplayText(list = font, text = "reset", textAlign = TextAlign.Center) }
+            Button(onClick = { model.resetDragDrop() }, shape = RectangleShape) { DisplayText(list = font, text = "reset", textAlign = TextAlign.Center) }
             Spacer(modifier = Modifier.width(200.dp))
             Button(onClick = {
                 i.intValue = model.updateGame2(buildAnswer, data.answers[i.intValue].answer.toList(), i.intValue)

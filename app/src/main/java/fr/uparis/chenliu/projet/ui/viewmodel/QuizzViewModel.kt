@@ -211,6 +211,11 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         return 0.0
     }
 
+    fun swapAnswers(i: Int, j: Int) {
+        buildAnswer[i] = buildAnswer[j].also { buildAnswer[j] = buildAnswer[i] }
+        imageAnswer[i] = imageAnswer[j].also { imageAnswer[j] = imageAnswer[i] }
+    }
+
     fun updateGame01(ans: String, index: Int): Int {
         var i = index
         // add la réponses du joueur
@@ -229,6 +234,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.answerHistory.add(answerList.toString())
         gameData.questionHistory.add(data.question[i]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(data.answers[i].answer.toString()) // connaitre la bonne réponse
+        resetDragDrop()
         if (answerList == verify) { ++gameData.score.doubleValue }
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
@@ -244,7 +250,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.goodAnswer.clear()
         gameData.gameEnded.value = false
         gameData.time.doubleValue = 0.0
+        resetDragDrop()
         loading.value = true
+    }
+
+    fun resetDragDrop() {
+        for(i in 0..3) { buildAnswer[i] = ""; imageAnswer[i] = "" }
     }
 
     fun init() {
