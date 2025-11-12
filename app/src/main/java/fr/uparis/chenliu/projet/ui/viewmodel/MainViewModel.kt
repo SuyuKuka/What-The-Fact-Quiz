@@ -24,7 +24,7 @@ import kotlin.jvm.java
 
 class MainViewModel(application: Application): AndroidViewModel(application) {
     private val db = AppDatabase.getInstance(application)
-    private var user = mutableStateOf<UsersEntity?>(null)
+    private val user = mutableStateOf<UsersEntity?>(null)
 
     var username = mutableStateOf("")
     val endDate = mutableStateOf("")

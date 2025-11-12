@@ -38,8 +38,12 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     // todo: load depuis la db
     val alert = remember { mutableStateOf(false) }
-    val difficulty = listOf("Facile", "Moyen", "Difficile")
-    val subject = listOf("Science","Géographie","Gastronomie", "Nature", "Informatique", "Dessin anime")
+    val difficulty = model.difficultyList
+    val subject = model.subjectList
+    val energy = model.energy
+    val subscribe = model.subscription
+    val lastTimeEnergy = model.lastTimeEnergy
+    val now = System.currentTimeMillis()
 
     val selectedDiff = remember { mutableStateOf(difficulty[0]) }
     val selectedSubj = remember { mutableStateOf(subject[0]) }
@@ -50,6 +54,18 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 
     val currentBackground = model.intToBackground()
     val currentFont = model.intToFont()
+
+    val sendNotification = {
+        if (!subscribe.value) {
+            val remainingTime = 120L - ((now - lastTimeEnergy.longValue) / 1000L)
+            if (energy.intValue == 0) {
+                gainEnergyRemind(context = context, remainingTime = remainingTime)
+            }
+            if (energy.intValue < 20) {
+                fullEnergyRemind(context = context, currentEnergy = energy.intValue, remainingTime = remainingTime)
+            }
+        }
+    }
 
     if (alert.value) {
         Alert(
@@ -138,6 +154,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                         }
                         model.removeEnergy()
                         context.startActivity(intent)
+                        sendNotification()
                     },
                     modifier = Modifier.fillMaxWidth(0.8f)
                 ) {

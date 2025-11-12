@@ -139,8 +139,6 @@ fun Game(
     data: QuizzViewModel.Data,
     model: QuizzViewModel = viewModel()
 ){
-    println(data.question.toString())
-    println(data.types.toString())
     val i = remember { mutableIntStateOf(0) }
 
     when (data.types[i.intValue]) {
@@ -430,6 +428,8 @@ fun Result(
     if (alert.value) {  // alerte le manque d'energie
         ShowAlert(font, alert, activity)
     }
+
+    model.insertLeaderboard()
 
     Column(
         modifier = Modifier.fillMaxSize(),

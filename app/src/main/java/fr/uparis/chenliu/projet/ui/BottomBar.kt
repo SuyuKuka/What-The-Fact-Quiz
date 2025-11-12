@@ -28,7 +28,7 @@ fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                     if (current == it) {
                         return@NavigationBarItem
                     }
-
+                    backStack.clear()
                     if (!model.saved.value) {
                         destination = it
                         alert = true

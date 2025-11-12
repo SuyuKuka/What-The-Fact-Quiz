@@ -19,7 +19,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
@@ -61,30 +60,11 @@ class MenuActivity : ComponentActivity() {
 
 @Composable
 fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
-    val context = LocalContext.current
     val backStack = rememberNavBackStack(Screen.Home)
     val snack = remember { SnackbarHostState() }
-    val energy = model.energy
-    val subscribe = model.subscription
-    val loading = model.loading
-    val lastTimeEnergy = model.lastTimeEnergy
-    val now = System.currentTimeMillis()
 
     model.init(username)
     DailyRemind()
-
-    if (!loading.value) {
-        if (!subscribe.value) {
-            val remainingTime = 120L - ((now - lastTimeEnergy.longValue) / 1000L)
-            if (energy.intValue == 0) {
-                gainEnergyRemind(context = context, remainingTime = remainingTime)
-            }
-            if (energy.intValue < 20) {
-                fullEnergyRemind(context = context, currentEnergy = energy.intValue, remainingTime = remainingTime)
-            }
-        }
-    }
-
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -98,7 +78,7 @@ fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
             modifier = Modifier.padding(paddingValues = pad),
             entryProvider = entryProvider{
                 entry<Screen.Profile> { model.getUsers(); ProfileScreen(model = model) }
-                entry<Screen.Leaderboard> { LeaderboardScreen(model = model) }
+                entry<Screen.Leaderboard> { model.changeSubject("Science"); model.changed.value = true; LeaderboardScreen(model = model) }
                 entry<Screen.Home> { HomeScreen(model = model, backStack = backStack) }
                 entry<Screen.Shop> { ShopScreen(model = model) }
                 entry<Screen.Settings> { SettingsScreen(model = model) }
@@ -150,12 +130,12 @@ fun createChannel(context: Context) {
     notificationManager.createNotificationChannel(channel)
 }
 
-private fun gainEnergyRemind(context: Context, remainingTime: Long) {
+fun gainEnergyRemind(context: Context, remainingTime: Long) {
     val req = OneTimeWorkRequestBuilder<WorkerReminder>().setInitialDelay(remainingTime, TimeUnit.SECONDS).addTag("GAIN_ENERGY_REMINDER").build()
     WorkManager.getInstance(context).enqueue(req)
 }
 
-private fun fullEnergyRemind(context: Context, currentEnergy: Int, remainingTime: Long) {
+fun fullEnergyRemind(context: Context, currentEnergy: Int, remainingTime: Long) {
     val maxEnergy = 20
     val remainingSeconds = ((maxEnergy - 1) - currentEnergy) * 122L
     val time = remainingTime + remainingSeconds

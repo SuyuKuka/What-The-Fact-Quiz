@@ -13,6 +13,7 @@ import androidx.lifecycle.viewModelScope
 import fr.uparis.chenliu.projet.R
 
 import fr.uparis.chenliu.projet.data.database.AppDatabase
+import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.launch
@@ -320,5 +321,11 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             else -> 0
         }
         return listOf(ft, sz)
+    }
+
+    fun insertLeaderboard() {
+        viewModelScope.launch {
+            db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.doubleValue, time = gameData.time.doubleValue, subject = subject.value))
+        }
     }
 }
