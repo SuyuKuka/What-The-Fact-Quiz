@@ -48,9 +48,9 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
     val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
     val subjectList = listOf("Science", "Gastronomie", "Géographie", "Nature", "Dessin anime", "Informatique")
+    val difficultyList = listOf("Facile", "Moyen", "Difficile")
     val saved = mutableStateOf(true)
     val maxEnergy = mutableIntStateOf(20)
-    val loading = mutableStateOf(true)
     val changed = mutableStateOf(false)
 
     fun init(username: String) {
@@ -73,10 +73,6 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
                 getUsers()
                 addEnergy()
                 delay(1000)
-                if (loading.value) {
-                    delay(1000)
-                    loading.value = false
-                }
             }
         }
     }
