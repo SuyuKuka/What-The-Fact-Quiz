@@ -1,4 +1,4 @@
-package fr.uparis.chenliu.projet.ui
+package fr.uparis.chenliu.projet.ui.menu
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -28,6 +28,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import fr.uparis.chenliu.projet.ui.WriteField
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
 @Composable
@@ -102,7 +103,12 @@ fun SettingsScreen(model: MenuViewModel) {
                     onlyNb = false
                 )
             }
-            Button(onClick = { update() }) { DisplayText(list = model.intToFont(), text = "Enregistrer") }
+            Button(onClick = { update() }) {
+                DisplayText(
+                    list = model.intToFont(),
+                    text = "Enregistrer"
+                )
+            }
         }
     }
 }

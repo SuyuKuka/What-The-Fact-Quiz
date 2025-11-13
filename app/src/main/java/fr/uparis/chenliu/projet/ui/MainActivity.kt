@@ -54,6 +54,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.R
+import fr.uparis.chenliu.projet.ui.menu.MenuActivity
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MainViewModel
 import java.time.LocalDateTime

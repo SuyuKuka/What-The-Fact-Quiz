@@ -1,4 +1,4 @@
-package fr.uparis.chenliu.projet.ui
+package fr.uparis.chenliu.projet.ui.menu
 
 import android.content.Intent
 import androidx.compose.foundation.Image
@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
 import fr.uparis.chenliu.projet.navigation.Screen
+import fr.uparis.chenliu.projet.ui.quizz.QuizzActivity
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
 @Composable
@@ -62,7 +63,11 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                 gainEnergyRemind(context = context, remainingTime = remainingTime)
             }
             if (energy.intValue < 20) {
-                fullEnergyRemind(context = context, currentEnergy = energy.intValue, remainingTime = remainingTime)
+                fullEnergyRemind(
+                    context = context,
+                    currentEnergy = energy.intValue,
+                    remainingTime = remainingTime
+                )
             }
         }
     }
