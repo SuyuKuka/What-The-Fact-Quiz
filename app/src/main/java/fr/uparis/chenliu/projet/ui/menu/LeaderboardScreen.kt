@@ -1,4 +1,4 @@
-package fr.uparis.chenliu.projet.ui
+package fr.uparis.chenliu.projet.ui.menu
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box

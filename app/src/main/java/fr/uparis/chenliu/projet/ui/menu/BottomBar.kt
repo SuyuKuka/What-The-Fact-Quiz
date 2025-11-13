@@ -1,4 +1,4 @@
-package fr.uparis.chenliu.projet.ui
+package fr.uparis.chenliu.projet.ui.menu
 
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
