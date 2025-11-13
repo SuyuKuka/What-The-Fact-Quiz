@@ -99,9 +99,9 @@ fun DragImage(answer: String, url: String) {
 
 @OptIn(ExperimentalGlideComposeApi::class) // on pose ici
 @Composable
-fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type: Int) {
+fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type: Int, movable: Boolean = true) {
     val currentImageAnswer = model.imageAnswer[intValue]
-    val drag = if (currentImageAnswer.isNotEmpty()) {
+    val drag = if ((currentImageAnswer.isNotEmpty() && type != 3) || (type == 3 && movable)) {
         Modifier.dragAndDropSource { _ -> DragAndDropTransferData(ClipData.newPlainText("swap", intValue.toString())) }
     } else {
         Modifier

@@ -69,7 +69,12 @@ fun Quizztype3(
                             intValue = index,
                             font = model.translateFont(),
                             model = model,
-                            type = 4
+                            type = 3,
+                            movable = if (buildAnswer[index] == ans[0]) {
+                                true
+                            } else {
+                                false
+                            }
                         )
                     }
                     if (index != currentImage.intValue) {
