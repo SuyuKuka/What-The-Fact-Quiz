@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
@@ -60,8 +61,7 @@ fun Quizztype3(
                     }
                     Box(
                         modifier = Modifier
-                            .width(250.dp)
-                            .aspectRatio(1.5f)
+                            .width(200.dp)
                             .padding(8.dp)
                             .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
                     ) {
@@ -113,10 +113,10 @@ fun Quizztype3(
 
     // EN BAS
     Box(
-        contentAlignment = Alignment.Center,
         modifier = Modifier
-            .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
-            .background(Color.Black)
+            .padding(8.dp).width(150.dp).height(200.dp)
+            .background(Color.Black),
+        contentAlignment = Alignment.Center
     ) {
         if (currentImage.intValue < buildAnswer.size) {
             DragImage(answer = ans[0], url = ans[1])

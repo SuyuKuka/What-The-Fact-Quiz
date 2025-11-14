@@ -51,6 +51,7 @@ fun LeaderboardScreen(model: MenuViewModel) {
                     }
                 }
             }
+            //todo mettre une lazycolumn pour que ca soit scrollable
             if (!changed.value) {
                 if (username.isEmpty()) {
                     DisplayText(
