@@ -99,7 +99,8 @@ fun Quizztype3(
         Button(onClick = {
             model.updateGame(
                 answerList = buildAnswer,
-                verify = data.answers[currentQuestion.intValue].answer.toList()
+                verify = data.answers[currentQuestion.intValue].answer.toList(),
+                type = 3
             )
         }, shape = RectangleShape) {
             DisplayText(

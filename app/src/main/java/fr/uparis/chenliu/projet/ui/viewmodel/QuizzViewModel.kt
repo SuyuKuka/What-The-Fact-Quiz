@@ -19,7 +19,6 @@ import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.collections.mutableListOf
-import kotlin.math.abs
 
 class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
@@ -213,12 +212,28 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         return randomPropositions.shuffled()
     }
 
-    // todo: améliorer
-    fun calcScore(text: String, aim: String): Double {
-        if (abs(aim.toInt() - text.toInt()) <= 1) {
-            return 0.5
+    fun calcScore(gameData: GameData, answerList: List<String>, verify: List<String>, type: Int) {
+        val score = mutableDoubleStateOf(0.0)
+        if (type == 0 || type == 3) {
+            if (answerList.toList().toString() == verify.toList().toString()) score.doubleValue++
+        } else if (type == 1) {
+            if (answerList.toList()[0] == verify.toList()[0]) {
+                score.doubleValue++
+            } else if (answerList.toList()[0] == verify.toList()[1]) {
+                score.doubleValue += 0.5
+            } else if (answerList.toList()[0] == verify.toList()[2]) {
+                score.doubleValue += 0.25
+            }
+        } else if (type == 2 || type == 4) {
+            for (i in 0..verify.size - 1) {
+                if (answerList.toList()[i] == verify.toList()[i]) {
+                    score.doubleValue += 0.25
+                }
+            }
+        } else {
+            score.doubleValue = 0.0
         }
-        return 0.0
+        gameData.score.doubleValue += score.doubleValue
     }
 
     fun swapAnswers(i: Int, j: Int) {
@@ -226,14 +241,14 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         imageAnswer[i] = imageAnswer[j].also { imageAnswer[j] = imageAnswer[i] }
     }
 
-    fun updateGame(answerList: List<String>, verify: List<String>) {
+    fun updateGame(answerList: List<String>, verify: List<String>, type: Int) {
         gameData.answerHistory.add(answerList.toList().toString())
         gameData.questionHistory.add(data.question[currentQuestion.intValue]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
-        if (answerList.toList().toString() == verify.toList().toString()) { ++gameData.score.doubleValue }
+        calcScore(gameData = gameData, answerList = answerList, verify = verify, type = type)
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
-        if (currentQuestion.intValue == 9) { currentQuestion.intValue = 0 } else { currentQuestion.intValue++ }
+        if (currentQuestion.intValue < 10) { currentQuestion.intValue++ }
         resetDragDrop()
         currentImage.intValue = 0
     }

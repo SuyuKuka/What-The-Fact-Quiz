@@ -26,7 +26,6 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation3.runtime.NavBackStack
@@ -37,7 +36,6 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
 @Composable
 fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
-    // todo: load depuis la db
     val alert = remember { mutableStateOf(false) }
     val difficulty = model.difficultyList
     val subject = model.subjectList
@@ -128,20 +126,28 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                     Button(
                         onClick = { selectedSubj.value = subj },
                         modifier = Modifier
-                            .aspectRatio(1f)
+                            .aspectRatio(1.2f)
                             .padding(8.dp)
                             .fillMaxWidth(),
                         shape = RectangleShape,
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = if (selectedSubj.value == subj) Color.Blue else Color.Gray,
+                            containerColor = if (selectedSubj.value == subj) Color.White else Color.White,
                             contentColor = Color.White
-                        )
+                        ),
+                        contentPadding = PaddingValues(0.dp)
                     ) {
-                        DisplayText(
-                            list = currentFont,
-                            text = subj,
-                            textAlign = TextAlign.Center
-                        )
+                        Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Image(
+                                painter = painterResource(id = model.subjectImage(subj)),
+                                contentDescription = null,
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Crop
+                            )
+                            DisplayText(list = currentFont, text = subj, fontSize = 24.sp)
+                        }
                     }
                 }
             }
