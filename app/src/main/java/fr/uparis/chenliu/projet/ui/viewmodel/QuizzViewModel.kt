@@ -217,14 +217,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         if (type == 0 || type == 3) {
             if (answerList.toList().toString() == verify.toList().toString()) score.doubleValue++
         } else if (type == 1) {
-            if (answerList.isNotEmpty()) {
-                if (answerList.toList()[0] == verify.toList()[0]) {
-                    score.doubleValue++
-                } else if (answerList.toList()[0] == verify.toList()[1]) {
-                    score.doubleValue += 0.5
-                } else if (answerList.toList()[0] == verify.toList()[2]) {
-                    score.doubleValue += 0.25
-                }
+            if (answerList.toList()[0] == verify.toList()[0]) {
+                score.doubleValue++
             }
         } else if (type == 2 || type == 4) {
             for (i in 0..verify.size - 1) {
