@@ -5,3240 +5,1680 @@
       "type": 0,
       "question": "Que stockent les cactus dans leurs tissus pour faire plus efficacement face à la sécheresse ?",
       "propositions": [
-        [
-          "Terre",
-          ""
-        ],
-        [
-          "Suc",
-          ""
-        ],
-        [
-          "Sel",
-          ""
-        ],
-        [
-          "Épines",
-          ""
-        ],
-        [
-          "Carbone",
-          ""
-        ],
-        [
-          "Sable",
-          ""
-        ]
+        ["Terre",   ""],
+        ["Suc",     ""],
+        ["Sel",     ""],
+        ["Épines",  ""],
+        ["Carbone", ""],
+        ["Sable",   ""]
       ],
-      "answer": [
-        "Suc"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Ce sont presque toutes des plantes grasses ou succulentes, c'est-à-dire des plantes xérophytes qui stockent des réserves de suc."
+      "answer": ["Suc"],
+      "difficulty": "Facile"
     },
     {
       "id": 2,
       "type": 0,
       "question": "Combien d'espèces environ comprend la famille des Cactaceae ?",
       "propositions": [
-        [
-          "2 500",
-          ""
-        ],
-        [
-          "1 500",
-          ""
-        ],
-        [
-          "3 500",
-          ""
-        ],
-        [
-          "4 500",
-          ""
-        ],
-        [
-          "500",
-          ""
-        ],
-        [
-          "10 000",
-          ""
-        ]
+        ["2 500",  ""],
+        ["1 500",  ""],
+        ["3 500",  ""],
+        ["4 500",  ""],
+        ["500",    ""],
+        ["10 000", ""]
       ],
-      "answer": [
-        "2 500"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Dans le langage courant, le mot cactus désigne souvent le figuier de Barbarie, plante commune sur les bords de la Méditerranée."
+      "answer": ["2 500"],
+      "difficulty": "Facile"
     },
     {
       "id": 3,
       "type": 0,
       "question": "Quelle forme de cactus est souvent appréciée des collectionneurs ?",
       "propositions": [
-        [
-          "Monstrueuse",
-          ""
-        ],
-        [
-          "Arbustive",
-          ""
-        ],
-        [
-          "Grimpante",
-          ""
-        ],
-        [
-          "Globulaire",
-          ""
-        ],
-        [
-          "Plate",
-          ""
-        ],
-        [
-          "Cylindrique",
-          ""
-        ]
+        ["Monstrueuse", ""],
+        ["Arbustive",   ""],
+        ["Grimpante",   ""],
+        ["Globulaire",  ""],
+        ["Plate",       ""],
+        ["Cylindrique", ""]
       ],
-      "answer": [
-        "Monstrueuse"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "L'origine du phénomène est inconnue, probablement due à des mutations réparties en deux catégories : fasciation et cristation."
+      "answer": ["Monstrueuse"],
+      "difficulty": "Facile"
     },
     {
       "id": 4,
       "type": 0,
       "question": "Avec ses raquettes, de quel pays est originaire le figuier de Barbarie ?",
       "propositions": [
-        [
-          "Mexique",
-          ""
-        ],
-        [
-          "Espagne",
-          ""
-        ],
-        [
-          "Grèce",
-          ""
-        ],
-        [
-          "Australie",
-          ""
-        ],
-        [
-          "Maroc",
-          ""
-        ],
-        [
-          "Argentine",
-          ""
-        ]
+        ["Mexique",   ""],
+        ["Espagne",   ""],
+        ["Grèce",     ""],
+        ["Australie", ""],
+        ["Maroc",     ""],
+        ["Argentine", ""]
       ],
-      "answer": [
-        "Mexique"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "L'espèce est en effet originaire du Mexique, où elle est appelée nopal, et figure de plus dans les armoiries du drapeau mexicain."
+      "answer": ["Mexique"],
+      "difficulty": "Facile"
     },
     {
       "id": 5,
       "type": 0,
       "question": "À quel moment de la journée les cactus absorbent-ils le dioxyde de carbone ?",
       "propositions": [
-        [
-          "Le jour",
-          ""
-        ],
-        [
-          "Jour et nuit",
-          ""
-        ],
-        [
-          "Jamais",
-          ""
-        ],
-        [
-          "La nuit",
-          ""
-        ],
-        [
-          "Au crépuscule",
-          ""
-        ],
-        [
-          "À l'aube",
-          ""
-        ]
+        ["Le jour",       ""],
+        ["Jour et nuit",  ""],
+        ["Jamais",        ""],
+        ["La nuit",       ""],
+        ["Au crépuscule", ""],
+        ["À l'aube",      ""]
       ],
-      "answer": [
-        "La nuit"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Contrairement à la plupart des plantes, les cactus ont un métabolisme acide crassulacéen permettant de fixer le carbone."
+      "answer": ["La nuit"],
+      "difficulty": "Facile"
     },
     {
       "id": 6,
       "type": 0,
       "question": "Qui a ramené les premiers cactus en Europe (des Melocactus) ?",
       "propositions": [
-        [
-          "Diogo Gomes",
-          ""
-        ],
-        [
-          "Pedro de Sintra",
-          ""
-        ],
-        [
-          "Christophe Colomb",
-          ""
-        ],
-        [
-          "Afonso de Paiva",
-          ""
-        ],
-        [
-          "Vasco de Gama",
-          ""
-        ],
-        [
-          "Fernand de Magellan",
-          ""
-        ]
+        ["Diogo Gomes",         ""],
+        ["Pedro de Sintra",     ""],
+        ["Christophe Colomb",   ""],
+        ["Afonso de Paiva",     ""],
+        ["Vasco de Gama",       ""],
+        ["Fernand de Magellan", ""]
       ],
-      "answer": [
-        "Christophe Colomb"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Cactus en forme de melon (d'où leur nom), ils sont originaires des Caraïbes, des Antilles et du nord de l'Amérique du Sud."
+      "answer": ["Christophe Colomb"],
+      "difficulty": "Facile"
     },
     {
       "id": 7,
       "type": 0,
       "question": "Idéalement, à quelle fréquence est-il nécessaire de rempoter un cactus ?",
       "propositions": [
-        [
-          "Tous les 4 ans",
-          ""
-        ],
-        [
-          "Tous les 8 ans",
-          ""
-        ],
-        [
-          "Tous les 16 ans",
-          ""
-        ],
-        [
-          "Tous les 12 ans",
-          ""
-        ],
-        [
-          "Chaque année",
-          ""
-        ],
-        [
-          "Tous les 2 ans",
-          ""
-        ]
+        ["Tous les 4 ans",  ""],
+        ["Tous les 8 ans",  ""],
+        ["Tous les 16 ans", ""],
+        ["Tous les 12 ans", ""],
+        ["Chaque année",    ""],
+        ["Tous les 2 ans",  ""]
       ],
-      "answer": [
-        "Tous les 4 ans"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Les cactées n'aimant pas l'excès de nourriture, le cactus se développera si le volume du pot ne dépasse pas celui de la plante."
+      "answer": ["Tous les 4 ans"],
+      "difficulty": "Facile"
     },
     {
       "id": 8,
       "type": 0,
       "question": "Quelle est la température la plus adéquate pour le repos hivernal du cactus ?",
       "propositions": [
-        [
-          "7° C",
-          ""
-        ],
-        [
-          "22° C",
-          ""
-        ],
-        [
-          "17° C",
-          ""
-        ],
-        [
-          "12° C",
-          ""
-        ],
-        [
-          "30° C",
-          ""
-        ],
-        [
-          "0° C",
-          ""
-        ]
+        ["7° C",  ""],
+        ["22° C", ""],
+        ["17° C", ""],
+        ["12° C", ""],
+        ["30° C", ""],
+        ["0° C",  ""]
       ],
-      "answer": [
-        "7° C"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Durant l'été, un bon arrosage une fois par semaine suffit, bien que les cactus puissent aisément se passer d'eau fort longtemps."
+      "answer": ["7° C"],
+      "difficulty": "Facile"
     },
     {
       "id": 9,
       "type": 0,
       "question": "De quelle quantité de lumière un cactus a-t-il besoin pour s'épanouir ?",
       "propositions": [
-        [
-          "Un peu",
-          ""
-        ],
-        [
-          "Beaucoup",
-          ""
-        ],
-        [
-          "Aucune",
-          ""
-        ],
-        [
-          "Le maximum",
-          ""
-        ],
-        [
-          "Lumière indirecte",
-          ""
-        ],
-        [
-          "Mi-ombre",
-          ""
-        ]
+        ["Un peu",            ""],
+        ["Beaucoup",          ""],
+        ["Aucune",            ""],
+        ["Le maximum",        ""],
+        ["Lumière indirecte", ""],
+        ["Mi-ombre",          ""]
       ],
-      "answer": [
-        "Le maximum"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Cependant, après l'hivernage, n'exposez pas directement vos cactus en plein soleil but privilégiez un retour progressif à la lumière."
+      "answer": ["Le maximum"],
+      "difficulty": "Facile"
     },
     {
       "id": 10,
       "type": 0,
       "question": "Dans quelles régions du globe les cactus poussent-ils le mieux ?",
       "propositions": [
-        [
-          "Prairies",
-          ""
-        ],
-        [
-          "Montagnes",
-          ""
-        ],
-        [
-          "Plaines",
-          ""
-        ],
-        [
-          "Déserts",
-          ""
-        ],
-        [
-          "Forêts tropicales",
-          ""
-        ],
-        [
-          "Zones humides",
-          ""
-        ]
+        ["Prairies",          ""],
+        ["Montagnes",         ""],
+        ["Plaines",           ""],
+        ["Déserts",           ""],
+        ["Forêts tropicales", ""],
+        ["Zones humides",     ""]
       ],
-      "answer": [
-        "Déserts"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "On retrouve principalement les cactus au Mexique, aux États-Unis, sur le pourtour méditerranéen ainsi qu'au Sahara et en Australie."
+      "answer": ["Déserts"],
+      "difficulty": "Facile"
     },
     {
       "id": 11,
       "type": 0,
       "question": "Combien de loges comporte la baie du fruit du cactus ?",
       "propositions": [
-        [
-          "Trois",
-          ""
-        ],
-        [
-          "Deux",
-          ""
-        ],
-        [
-          "Quatre",
-          ""
-        ],
-        [
-          "Une seule",
-          ""
-        ],
-        [
-          "Cinq",
-          ""
-        ],
-        [
-          "Six",
-          ""
-        ]
+        ["Trois",     ""],
+        ["Deux",      ""],
+        ["Quatre",    ""],
+        ["Une seule", ""],
+        ["Cinq",      ""],
+        ["Six",       ""]
       ],
-      "answer": [
-        "Une seule"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Le fruit du cactus doit être une baie à une seule loge car il n'existe de cloisons internes séparant les graines ou les groupes de graines."
+      "answer": ["Une seule"],
+      "difficulty": "Moyen"
     },
     {
       "id": 12,
       "type": 0,
       "question": "Quel cactus était autrefois utilisé à des fins rituelles par les Amérindiens ?",
       "propositions": [
-        [
-          "San Pedro",
-          ""
-        ],
-        [
-          "Peyotl",
-          ""
-        ],
-        [
-          "Hylocereus",
-          ""
-        ],
-        [
-          "Cereus",
-          ""
-        ],
-        [
-          "Echinopsis",
-          ""
-        ],
-        [
-          "Opuntia",
-          ""
-        ]
+        ["San Pedro",  ""],
+        ["Peyotl",     ""],
+        ["Hylocereus", ""],
+        ["Cereus",     ""],
+        ["Echinopsis", ""],
+        ["Opuntia",    ""]
       ],
-      "answer": [
-        "Peyotl"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Ce cactus contient plusieurs alcaloïdes dont la mescaline, utilisée pour ses propriétés enthéogènes, psychotropes et hallucinogènes."
+      "answer": ["Peyotl"],
+      "difficulty": "Moyen"
     },
     {
       "id": 13,
       "type": 0,
       "question": "Que signifie le mot grec ancien kaktos, d'où provient le nom cactus ?",
       "propositions": [
-        [
-          "Épine",
-          ""
-        ],
-        [
-          "Résine",
-          ""
-        ],
-        [
-          "Chardon",
-          ""
-        ],
-        [
-          "Soleil",
-          ""
-        ],
-        [
-          "Eau",
-          ""
-        ],
-        [
-          "Gros",
-          ""
-        ]
+        ["Épine",   ""],
+        ["Résine",  ""],
+        ["Chardon", ""],
+        ["Soleil",  ""],
+        ["Eau",     ""],
+        ["Gros",    ""]
       ],
-      "answer": [
-        "Chardon"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Il a été utilisé comme le nom du premier genre de ces plantes par Carl von Linné, avant que d'autres en soient séparés."
+      "answer": ["Chardon"],
+      "difficulty": "Moyen"
     },
     {
       "id": 14,
       "type": 0,
       "question": "En combien de genres sont réparties les 2 500 espèces de cactus connues ?",
       "propositions": [
-        [
-          "70",
-          ""
-        ],
-        [
-          "30",
-          ""
-        ],
-        [
-          "50",
-          ""
-        ],
-        [
-          "90",
-          ""
-        ],
-        [
-          "120",
-          ""
-        ],
-        [
-          "10",
-          ""
-        ]
+        ["70",  ""],
+        ["30",  ""],
+        ["50",  ""],
+        ["90",  ""],
+        ["120", ""],
+        ["10",  ""]
       ],
-      "answer": [
-        "90"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "En systématique, le genre est un rang taxinomique qui regroupe un ensemble d'espèces ayant en commun des caractères similaires."
+      "answer": ["90"],
+      "difficulty": "Moyen"
     },
     {
       "id": 15,
       "type": 0,
       "question": "Quels cactus ont gardé l'aspect d'arbustes classiques ainsi que leurs vraies feuilles ?",
       "propositions": [
-        [
-          "Primitifs",
-          ""
-        ],
-        [
-          "Épiphytes",
-          ""
-        ],
-        [
-          "Globuleux",
-          ""
-        ],
-        [
-          "Colonnaires",
-          ""
-        ],
-        [
-          "Grands",
-          ""
-        ],
-        [
-          "Miniatures",
-          ""
-        ]
+        ["Primitifs",   ""],
+        ["Épiphytes",   ""],
+        ["Globuleux",   ""],
+        ["Colonnaires", ""],
+        ["Grands",      ""],
+        ["Miniatures",  ""]
       ],
-      "answer": [
-        "Primitifs"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Pereskia est un genre de cactus des zones tropicales d'Amérique qui a la particularité rare de porter des feuilles apparentes."
+      "answer": ["Primitifs"],
+      "difficulty": "Moyen"
     },
     {
       "id": 16,
       "type": 0,
       "question": "En combien de types morphologiques peuvent être regroupés les cactus ?",
       "propositions": [
-        [
-          "Quatre",
-          ""
-        ],
-        [
-          "Sept",
-          ""
-        ],
-        [
-          "Cinq",
-          ""
-        ],
-        [
-          "Six",
-          ""
-        ],
-        [
-          "Trois",
-          ""
-        ],
-        [
-          "Huit",
-          ""
-        ]
+        ["Quatre", ""],
+        ["Sept",   ""],
+        ["Cinq",   ""],
+        ["Six",    ""],
+        ["Trois",  ""],
+        ["Huit",   ""]
       ],
-      "answer": [
-        "Cinq"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Cactus primitifs, oponces, cactus colonnaires, cactus globuleux et cactus épiphytes à tiges aplaties sont les cinq types morphologiques."
+      "answer": ["Cinq"],
+      "difficulty": "Moyen"
     },
     {
       "id": 17,
       "type": 0,
       "question": "Dans quel pays le fait de ramasser des cactus est-il puni de prison ?",
       "propositions": [
-        [
-          "Algérie",
-          ""
-        ],
-        [
-          "Argentine",
-          ""
-        ],
-        [
-          "Inde",
-          ""
-        ],
-        [
-          "Mexique",
-          ""
-        ],
-        [
-          "États-Unis",
-          ""
-        ],
-        [
-          "Brésil",
-          ""
-        ]
+        ["Algérie",    ""],
+        ["Argentine",  ""],
+        ["Inde",       ""],
+        ["Mexique",    ""],
+        ["États-Unis", ""],
+        ["Brésil",     ""]
       ],
-      "answer": [
-        "Mexique"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Certains pays ont une attitude contradictoire pour la protection des espèces, but les extensions urbaines détruisent des sites de cactus."
+      "answer": ["Mexique"],
+      "difficulty": "Moyen"
     },
     {
       "id": 18,
       "type": 0,
       "question": "Pour quel élevage l'Opuntia a-t-il été importé en Australie ?",
       "propositions": [
-        [
-          "Coléoptères",
-          ""
-        ],
-        [
-          "Cloportes",
-          ""
-        ],
-        [
-          "Coccinelles",
-          ""
-        ],
-        [
-          "Cochenilles",
-          ""
-        ],
-        [
-          "Papillons",
-          ""
-        ],
-        [
-          "Abeilles",
-          ""
-        ]
+        ["Coléoptères", ""],
+        ["Cloportes",   ""],
+        ["Coccinelles", ""],
+        ["Cochenilles", ""],
+        ["Papillons",   ""],
+        ["Abeilles",    ""]
       ],
-      "answer": [
-        "Cochenilles"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Philip Miller a attribué le nom d'Opuntia à une plante appelée figuier d'Inde par référence à la ville grecque ancienne d'Oponte."
+      "answer": ["Cochenilles"],
+      "difficulty": "Moyen"
     },
     {
       "id": 19,
       "type": 0,
       "question": "Quelle technique permet facilement la multiplication des cactus ?",
       "propositions": [
-        [
-          "Bouturage",
-          ""
-        ],
-        [
-          "Marcottage",
-          ""
-        ],
-        [
-          "Cernage",
-          ""
-        ],
-        [
-          "Tuteurage",
-          ""
-        ],
-        [
-          "Greffage",
-          ""
-        ],
-        [
-          "Semis",
-          ""
-        ]
+        ["Bouturage",  ""],
+        ["Marcottage", ""],
+        ["Cernage",    ""],
+        ["Tuteurage",  ""],
+        ["Greffage",   ""],
+        ["Semis",      ""]
       ],
-      "answer": [
-        "Bouturage"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Le bouturage consiste à donner naissance à un nouvel individu à partir d'un organe ou d'un fragment d'organe isolé."
+      "answer": ["Bouturage"],
+      "difficulty": "Moyen"
     },
     {
       "id": 20,
       "type": 0,
       "question": "Quelle marque de voiture française propose un modèle baptisé cactus ?",
       "propositions": [
-        [
-          "Citroën C4",
-          ""
-        ],
-        [
-          "Nissan Juke",
-          ""
-        ],
-        [
-          "Peugeot P4",
-          ""
-        ],
-        [
-          "Audi Q2",
-          ""
-        ],
-        [
-          "Renault Captur",
-          ""
-        ],
-        [
-          "Dacia Duster",
-          ""
-        ]
+        ["Citroën C4",     ""],
+        ["Nissan Juke",    ""],
+        ["Peugeot P4",     ""],
+        ["Audi Q2",        ""],
+        ["Renault Captur", ""],
+        ["Dacia Duster",   ""]
       ],
-      "answer": [
-        "Citroën C4"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La C4 Cactus est une berline compacte, initialement typée crossover, présentée le 5 février 2014, date anniversaire d'André Citroën."
+      "answer": ["Citroën C4"],
+      "difficulty": "Moyen"
     },
     {
       "id": 21,
       "type": 0,
       "question": "Quel naturaliste a regroupé en 1753 les 22 espèces connues de cactus ?",
       "propositions": [
-        [
-          "Carl von Linné",
-          ""
-        ],
-        [
-          "Daniel Rolander",
-          ""
-        ],
-        [
-          "Olof Celsius",
-          ""
-        ],
-        [
-          "Erik Acharius",
-          ""
-        ],
-        [
-          "Alexander von Humboldt",
-          ""
-        ],
-        [
-          "Charles Darwin",
-          ""
-        ]
+        ["Carl von Linné",         ""],
+        ["Daniel Rolander",        ""],
+        ["Olof Celsius",           ""],
+        ["Erik Acharius",          ""],
+        ["Alexander von Humboldt", ""],
+        ["Charles Darwin",         ""]
       ],
-      "answer": [
-        "Carl von Linné"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Ce naturaliste suédois, qui a consacré sa vie aux êtres vivants, a fondé les bases du système moderne de la nomenclature binominale."
+      "answer": ["Carl von Linné"],
+      "difficulty": "Difficile"
     },
     {
       "id": 22,
       "type": 0,
       "question": "Combien d'espèces de cactus ont aujourd'hui un usage médicinal et/ou vétérinaire ?",
       "propositions": [
-        [
-          "64",
-          ""
-        ],
-        [
-          "34",
-          ""
-        ],
-        [
-          "4",
-          ""
-        ],
-        [
-          "94",
-          ""
-        ],
-        [
-          "128",
-          ""
-        ],
-        [
-          "10",
-          ""
-        ]
+        ["64",  ""],
+        ["34",  ""],
+        ["4",   ""],
+        ["94",  ""],
+        ["128", ""],
+        ["10",  ""]
       ],
-      "answer": [
-        "64"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "64 % des cactus menacés sont utilisés par l'homme sous l'une de ces formes et 57 % (236 espèces) en l'horticulture."
+      "answer": ["64"],
+      "difficulty": "Difficile"
     },
     {
       "id": 23,
       "type": 0,
       "question": "En botanique, quel signe distinctif différencie les Cactaceae des autres familles ?",
       "propositions": [
-        [
-          "Radicule",
-          ""
-        ],
-        [
-          "Aréole",
-          ""
-        ],
-        [
-          "Lenticelle",
-          ""
-        ],
-        [
-          "Chalaze",
-          ""
-        ],
-        [
-          "Stomate",
-          ""
-        ],
-        [
-          "Pédoncule",
-          ""
-        ]
+        ["Radicule",   ""],
+        ["Aréole",     ""],
+        ["Lenticelle", ""],
+        ["Chalaze",    ""],
+        ["Stomate",    ""],
+        ["Pédoncule",  ""]
       ],
-      "answer": [
-        "Aréole"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Les aréoles sont des petites excroissances de la plante à partir desquelles partent en faisceau les épines, les poils et les fleurs."
+      "answer": ["Aréole"],
+      "difficulty": "Difficile"
     },
     {
       "id": 24,
       "type": 0,
       "question": "Quelle est la plus haute espèce de cactus connue à ce jour ?",
       "propositions": [
-        [
-          "Pachycereus pringlei",
-          ""
-        ],
-        [
-          "Rhipsalis russellii",
-          ""
-        ],
-        [
-          "Harrisia fragrans",
-          ""
-        ],
-        [
-          "Opuntia rufida",
-          ""
-        ],
-        [
-          "Saguaro",
-          ""
-        ],
-        [
-          "Echinocactus grusonii",
-          ""
-        ]
+        ["Pachycereus pringlei",  ""],
+        ["Rhipsalis russellii",   ""],
+        ["Harrisia fragrans",     ""],
+        ["Opuntia rufida",        ""],
+        ["Saguaro",               ""],
+        ["Echinocactus grusonii", ""]
       ],
-      "answer": [
-        "Pachycereus pringlei"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Avec un tronc d'un mètre de diamètre, ses fleurs blanches en forme d'entonnoir de 8 cm de long n'apparaissent que chez les adultes."
+      "answer": ["Pachycereus pringlei"],
+      "difficulty": "Difficile"
     },
     {
       "id": 25,
       "type": 0,
       "question": "Comment appelle-t-on une croissance anormale du sommet d'une tige de cactus ?",
       "propositions": [
-        [
-          "Sérotinie",
-          ""
-        ],
-        [
-          "Cristation",
-          ""
-        ],
-        [
-          "Résupination",
-          ""
-        ],
-        [
-          "Ostiole",
-          ""
-        ],
-        [
-          "Fasciation",
-          ""
-        ],
-        [
-          "Étiolation",
-          ""
-        ]
+        ["Sérotinie",    ""],
+        ["Cristation",   ""],
+        ["Résupination", ""],
+        ["Ostiole",      ""],
+        ["Fasciation",   ""],
+        ["Étiolation",   ""]
       ],
-      "answer": [
-        "Cristation"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "La cristation désigne une forme de tératologie végétale qui consiste en la croissance anormale du sommet d'une tige."
+      "answer": ["Cristation"],
+      "difficulty": "Difficile"
     },
     {
       "id": 26,
       "type": 0,
       "question": "Quel cactus colonnaire est connu pour contenir de la mescaline ?",
       "propositions": [
-        [
-          "Oroya",
-          ""
-        ],
-        [
-          "Ferocactus",
-          ""
-        ],
-        [
-          "Parodia",
-          ""
-        ],
-        [
-          "San Pedro",
-          ""
-        ],
-        [
-          "Opuntia ficus-indica",
-          ""
-        ],
-        [
-          "Carnegiea gigantea",
-          ""
-        ]
+        ["Oroya",                ""],
+        ["Ferocactus",           ""],
+        ["Parodia",              ""],
+        ["San Pedro",            ""],
+        ["Opuntia ficus-indica", ""],
+        ["Carnegiea gigantea",   ""]
       ],
-      "answer": [
-        "San Pedro"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Ce cactus colonnaire à croissance rapide, originaire des Andes péruviennes, pousse entre 2 000 et 3 000 m d'altitude."
+      "answer": ["San Pedro"],
+      "difficulty": "Difficile"
     },
     {
       "id": 27,
       "type": 0,
       "question": "Quelle vallée est l'un des plus riches sites de cactus dans le monde ?",
       "propositions": [
-        [
-          "Vallée de Joux",
-          ""
-        ],
-        [
-          "Vallée de Baïgorry",
-          ""
-        ],
-        [
-          "Vallée de Tehuacan",
-          ""
-        ],
-        [
-          "Vallée des Usines",
-          ""
-        ],
-        [
-          "Vallée de la Mort",
-          ""
-        ],
-        [
-          "Vallée du Rift",
-          ""
-        ]
+        ["Vallée de Joux",     ""],
+        ["Vallée de Baïgorry", ""],
+        ["Vallée de Tehuacan", ""],
+        ["Vallée des Usines",  ""],
+        ["Vallée de la Mort",  ""],
+        ["Vallée du Rift",     ""]
       ],
-      "answer": [
-        "Vallée de Tehuacan"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "D'autres cactus (notamment les Opuntias) se sont acclimatés sur les autres continents après avoir été introduits par l'homme."
+      "answer": ["Vallée de Tehuacan"],
+      "difficulty": "Difficile"
     },
     {
       "id": 28,
       "type": 0,
       "question": "Quel cactus produit le pitaya, également appelé le fruit du dragon ?",
       "propositions": [
-        [
-          "Hylocereus",
-          ""
-        ],
-        [
-          "San Pedro",
-          ""
-        ],
-        [
-          "Peyotl",
-          ""
-        ],
-        [
-          "Cereus",
-          ""
-        ],
-        [
-          "Mammillaria",
-          ""
-        ],
-        [
-          "Gymnocalycium",
-          ""
-        ]
+        ["Hylocereus",    ""],
+        ["San Pedro",     ""],
+        ["Peyotl",        ""],
+        ["Cereus",        ""],
+        ["Mammillaria",   ""],
+        ["Gymnocalycium", ""]
       ],
-      "answer": [
-        "Hylocereus"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "La chair du pitaya est comestible et ressemble par sa texture et la présence de petits pépins noirs à celle du kiwi, au goût plus doux."
+      "answer": ["Hylocereus"],
+      "difficulty": "Difficile"
     },
     {
       "id": 29,
       "type": 0,
       "question": "Quelle est la plus petite espèce de cactus connue à ce jour ?",
       "propositions": [
-        [
-          "Aztekium ritteri",
-          ""
-        ],
-        [
-          "Echinopsis oxygona",
-          ""
-        ],
-        [
-          "Cereus jamacaru",
-          ""
-        ],
-        [
-          "Blossfeldia liliputiana",
-          ""
-        ],
-        [
-          "Mammillaria microcarpa",
-          ""
-        ],
-        [
-          "Rebutia minuscula",
-          ""
-        ]
+        ["Aztekium ritteri",        ""],
+        ["Echinopsis oxygona",      ""],
+        ["Cereus jamacaru",         ""],
+        ["Blossfeldia liliputiana", ""],
+        ["Mammillaria microcarpa",  ""],
+        ["Rebutia minuscula",       ""]
       ],
-      "answer": [
-        "Blossfeldia liliputiana"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Cette espèce de cactus porte le nom du pays légendaire de Liliput, l'appellation liliputana étant parfois utilisée but non validée."
+      "answer": ["Blossfeldia liliputiana"],
+      "difficulty": "Difficile"
     },
     {
       "id": 30,
       "type": 0,
       "question": "Quelle série de BD humoristique est dessinée par Philippe Bercovici ?",
       "propositions": [
-        [
-          "Red Cactus",
-          ""
-        ],
-        [
-          "Cactus Man",
-          ""
-        ],
-        [
-          "Circus Cactus",
-          ""
-        ],
-        [
-          "Cactus Club",
-          ""
-        ],
-        [
-          "Les Femmes en blanc",
-          ""
-        ],
-        [
-          "Les Profs",
-          ""
-        ]
+        ["Red Cactus",          ""],
+        ["Cactus Man",          ""],
+        ["Circus Cactus",       ""],
+        ["Cactus Club",         ""],
+        ["Les Femmes en blanc", ""],
+        ["Les Profs",           ""]
       ],
-      "answer": [
-        "Cactus Club"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Dans un club de vacances, l'animateur Phil, G.O. en chef, est chargé de s'occuper de tous les caprices de ses clients."
+      "answer": ["Cactus Club"],
+      "difficulty": "Difficile"
     },
     {
       "id": 31,
       "type": 0,
       "question": "Dans quel verger poussent presque exclusivement des pommiers ?",
       "propositions": [
-        [
-          "Pommeraie",
-          ""
-        ],
-        [
-          "Pommiseau",
-          ""
-        ],
-        [
-          "Vergepommes",
-          ""
-        ],
-        [
-          "Vergeture",
-          ""
-        ],
-        [
-          "Vignoble",
-          ""
-        ],
-        [
-          "Pêcheraie",
-          ""
-        ]
+        ["Pommeraie",   ""],
+        ["Pommiseau",   ""],
+        ["Vergepommes", ""],
+        ["Vergeture",   ""],
+        ["Vignoble",    ""],
+        ["Pêcheraie",   ""]
       ],
-      "answer": [
-        "Pommeraie"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "La pomme est le troisième fruit consommé dans le monde, après les agrumes et la banane."
+      "answer": ["Pommeraie"],
+      "difficulty": "Facile"
     },
     {
       "id": 32,
       "type": 0,
       "question": "Quelle est la variété de pommes la plus répandue en France ?",
       "propositions": [
-        [
-          "Jonagold",
-          ""
-        ],
-        [
-          "Golden",
-          ""
-        ],
-        [
-          "Granny Smith",
-          ""
-        ],
-        [
-          "Gala",
-          ""
-        ],
-        [
-          "Fuji",
-          ""
-        ],
-        [
-          "Reinette",
-          ""
-        ]
+        ["Jonagold",     ""],
+        ["Golden",       ""],
+        ["Granny Smith", ""],
+        ["Gala",         ""],
+        ["Fuji",         ""],
+        ["Reinette",     ""]
       ],
-      "answer": [
-        "Golden"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Cette variété est depuis plus d'un siècle une des cinq variétés les plus utilisées par les obtenteurs pour créer de nouvelles variétés."
+      "answer": ["Golden"],
+      "difficulty": "Facile"
     },
     {
       "id": 33,
       "type": 0,
       "question": "De quelle vitamine la pomme est-elle la mieux pourvue ?",
       "propositions": [
-        [
-          "Vitamine E",
-          ""
-        ],
-        [
-          "Vitamine C",
-          ""
-        ],
-        [
-          "Vitamine B",
-          ""
-        ],
-        [
-          "Vitamine D",
-          ""
-        ],
-        [
-          "Vitamine A",
-          ""
-        ],
-        [
-          "Vitamine K",
-          ""
-        ]
+        ["Vitamine E", ""],
+        ["Vitamine C", ""],
+        ["Vitamine B", ""],
+        ["Vitamine D", ""],
+        ["Vitamine A", ""],
+        ["Vitamine K", ""]
       ],
-      "answer": [
-        "Vitamine C"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Pour gagner en vitamines, mieux vaut croquer la pomme sans la peler, en ayant pris soin de correctement la laver."
+      "answer": ["Vitamine C"],
+      "difficulty": "Facile"
     },
     {
       "id": 34,
       "type": 0,
       "question": "Quelle partie de la pomme contient le plus de vitamine ?",
       "propositions": [
-        [
-          "Le pédoncule",
-          ""
-        ],
-        [
-          "La pulpe",
-          ""
-        ],
-        [
-          "La peau",
-          ""
-        ],
-        [
-          "Les pépins",
-          ""
-        ],
-        [
-          "Le trognon",
-          ""
-        ],
-        [
-          "Le cœur",
-          ""
-        ]
+        ["Le pédoncule", ""],
+        ["La pulpe",     ""],
+        ["La peau",      ""],
+        ["Les pépins",   ""],
+        ["Le trognon",   ""],
+        ["Le cœur",      ""]
       ],
-      "answer": [
-        "La peau"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Les pommes 'Ribston Pipping', 'Reinette d'Orléans', 'Reinette Ananas' ou 'Ontario' sont fortement pourvues en vitamine C."
+      "answer": ["La peau"],
+      "difficulty": "Facile"
     },
     {
       "id": 35,
       "type": 0,
       "question": "Que permet de réguler le gel formé par la pectine présente dans la pomme ?",
       "propositions": [
-        [
-          "Le cholestérol",
-          ""
-        ],
-        [
-          "Le lanostérol",
-          ""
-        ],
-        [
-          "Le phytostérol",
-          ""
-        ],
-        [
-          "Le campestérol",
-          ""
-        ],
-        [
-          "La glycémie",
-          ""
-        ],
-        [
-          "La tension artérielle",
-          ""
-        ]
+        ["Le cholestérol",        ""],
+        ["Le lanostérol",         ""],
+        ["Le phytostérol",        ""],
+        ["Le campestérol",        ""],
+        ["La glycémie",           ""],
+        ["La tension artérielle", ""]
       ],
-      "answer": [
-        "Le cholestérol"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "La pectine du commerce, souvent utilisée pour épaissir les confitures et les gelées, est extraite du marc de pommes desséchées."
+      "answer": ["Le cholestérol"],
+      "difficulty": "Facile"
     },
     {
       "id": 36,
       "type": 0,
       "question": "Complétez ce diction : « Une pomme chaque matin éloigne... »",
       "propositions": [
-        [
-          "Le médecin",
-          ""
-        ],
-        [
-          "Le chagrin",
-          ""
-        ],
-        [
-          "Le pantin",
-          ""
-        ],
-        [
-          "Le destin",
-          ""
-        ],
-        [
-          "Le dentiste",
-          ""
-        ],
-        [
-          "Le pharmacien",
-          ""
-        ]
+        ["Le médecin",    ""],
+        ["Le chagrin",    ""],
+        ["Le pantin",     ""],
+        ["Le destin",     ""],
+        ["Le dentiste",   ""],
+        ["Le pharmacien", ""]
       ],
-      "answer": [
-        "Le médecin"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Jadis, on utilisait les vertus thérapeutiques de la pomme qui entrait dans la confection d'onguents (d'où vient le mot « pommade »)."
+      "answer": ["Le médecin"],
+      "difficulty": "Facile"
     },
     {
       "id": 37,
       "type": 0,
       "question": "Quelle confiserie est constituée d'une pomme fraîche entourée de sucre cuit, souvent rouge ?",
       "propositions": [
-        [
-          "Apfelstrudel",
-          ""
-        ],
-        [
-          "Tarte Tatin",
-          ""
-        ],
-        [
-          "Pomme d'amour",
-          ""
-        ],
-        [
-          "Le crumble",
-          ""
-        ],
-        [
-          "Chausson aux pommes",
-          ""
-        ],
-        [
-          "Tarte normande",
-          ""
-        ]
+        ["Apfelstrudel",        ""],
+        ["Tarte Tatin",         ""],
+        ["Pomme d'amour",       ""],
+        ["Le crumble",          ""],
+        ["Chausson aux pommes", ""],
+        ["Tarte normande",      ""]
       ],
-      "answer": [
-        "Pomme d'amour"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "La pomme d'amour peut aussi être trempée dans le chocolat noir ou au lait et durci, comme est la variante habituelle en Irlande."
+      "answer": ["Pomme d'amour"],
+      "difficulty": "Facile"
     },
     {
       "id": 38,
       "type": 0,
       "question": "Dans quel dessert les pommes sont-elles enrobées de pâte et frites dans l'huile ?",
       "propositions": [
-        [
-          "Un flan",
-          ""
-        ],
-        [
-          "Une croûte",
-          ""
-        ],
-        [
-          "Un beignet",
-          ""
-        ],
-        [
-          "Une bûche",
-          ""
-        ],
-        [
-          "Un clafoutis",
-          ""
-        ],
-        [
-          "Un délice",
-          ""
-        ]
+        ["Un flan",      ""],
+        ["Une croûte",   ""],
+        ["Un beignet",   ""],
+        ["Une bûche",    ""],
+        ["Un clafoutis", ""],
+        ["Un délice",    ""]
       ],
-      "answer": [
-        "Un beignet"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Le beignet est ainsi servi chaud avec du sucre en poudre et peut être également flambé, par exemple au calvados."
+      "answer": ["Un beignet"],
+      "difficulty": "Facile"
     },
     {
       "id": 39,
       "type": 0,
       "question": "Quelle grande entreprise multinationale américaine a pour logo une pomme ?",
       "propositions": [
-        [
-          "Xerox",
-          ""
-        ],
-        [
-          "IBM",
-          ""
-        ],
-        [
-          "Apple",
-          ""
-        ],
-        [
-          "Microsoft",
-          ""
-        ],
-        [
-          "Samsung",
-          ""
-        ],
-        [
-          "Sony",
-          ""
-        ]
+        ["Xerox",     ""],
+        ["IBM",       ""],
+        ["Apple",     ""],
+        ["Microsoft", ""],
+        ["Samsung",   ""],
+        ["Sony",      ""]
       ],
-      "answer": [
-        "Apple"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "En 2011, l'entreprise Apple employait 60 400 personnes pour un chiffre d'affaires annuel de plus de 170 milliards de dollars."
+      "answer": ["Apple"],
+      "difficulty": "Facile"
     },
     {
       "id": 40,
       "type": 0,
       "question": "Quelle célèbre princesse originaire de contes a été empoisonnée par une pomme ?",
       "propositions": [
-        [
-          "Jasmine",
-          ""
-        ],
-        [
-          "Aurore",
-          ""
-        ],
-        [
-          "Cendrillon",
-          ""
-        ],
-        [
-          "Blanche-Neige",
-          ""
-        ],
-        [
-          "Raiponce",
-          ""
-        ],
-        [
-          "Belle",
-          ""
-        ]
+        ["Jasmine",       ""],
+        ["Aurore",        ""],
+        ["Cendrillon",    ""],
+        ["Blanche-Neige", ""],
+        ["Raiponce",      ""],
+        ["Belle",         ""]
       ],
-      "answer": [
-        "Blanche-Neige"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Le conte collecté par les frères Jacob et Wilhelm Grimm aurait été inspiré par un mythe germanique."
+      "answer": ["Blanche-Neige"],
+      "difficulty": "Facile"
     },
     {
       "id": 41,
       "type": 0,
       "question": "Quelle boisson alcoolisée à base de pommes titre habituellement entre 2 % et 8 % d'alcool ?",
       "propositions": [
-        [
-          "Le cidre",
-          ""
-        ],
-        [
-          "Le calvados",
-          ""
-        ],
-        [
-          "Le lambig",
-          ""
-        ],
-        [
-          "Le pommeau",
-          ""
-        ],
-        [
-          "Le poiré",
-          ""
-        ],
-        [
-          "Le kirsch",
-          ""
-        ]
+        ["Le cidre",    ""],
+        ["Le calvados", ""],
+        ["Le lambig",   ""],
+        ["Le pommeau",  ""],
+        ["Le poiré",    ""],
+        ["Le kirsch",   ""]
       ],
-      "answer": [
-        "Le cidre"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Chez les producteurs, l'adjectif cidricole fait référence aussi bien à la boisson fermentée à base de pomme qu'à base de poire."
+      "answer": ["Le cidre"],
+      "difficulty": "Moyen"
     },
     {
       "id": 42,
       "type": 0,
       "question": "Que désigne le mot « pomme » dans le langage populaire ?",
       "propositions": [
-        [
-          "Le visage",
-          ""
-        ],
-        [
-          "Les genoux",
-          ""
-        ],
-        [
-          "Le ventre",
-          ""
-        ],
-        [
-          "Les fesses",
-          ""
-        ],
-        [
-          "Le pied",
-          ""
-        ],
-        [
-          "Le coude",
-          ""
-        ]
+        ["Le visage",  ""],
+        ["Les genoux", ""],
+        ["Le ventre",  ""],
+        ["Les fesses", ""],
+        ["Le pied",    ""],
+        ["Le coude",   ""]
       ],
-      "answer": [
-        "Le visage"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Il s'utilise aussi par extension pour désigner une personne serviable et un peu naïve : « c'est une bonne pomme »."
+      "answer": ["Le visage"],
+      "difficulty": "Moyen"
     },
     {
       "id": 43,
       "type": 0,
       "question": "Combien de pépins compte-t-on dans chacune des cinq loges de l'ovaire initial de la pomme ?",
       "propositions": [
-        [
-          "Huit",
-          ""
-        ],
-        [
-          "Six",
-          ""
-        ],
-        [
-          "Deux",
-          ""
-        ],
-        [
-          "Quatre",
-          ""
-        ],
-        [
-          "Un",
-          ""
-        ],
-        [
-          "Trois",
-          ""
-        ]
+        ["Huit",   ""],
+        ["Six",    ""],
+        ["Deux",   ""],
+        ["Quatre", ""],
+        ["Un",     ""],
+        ["Trois",  ""]
       ],
-      "answer": [
-        "Deux"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Entouré d'une enveloppe sclérifiée (ce qui rappelle le noyau d'une drupe), l'ensemble est lui-même entouré d'une pulpe mince."
+      "answer": ["Deux"],
+      "difficulty": "Moyen"
     },
     {
       "id": 44,
       "type": 0,
       "question": "Quelle place occupe la pomme dans la consommation des fruits dans le monde ?",
       "propositions": [
-        [
-          "Quatrième",
-          ""
-        ],
-        [
-          "Première",
-          ""
-        ],
-        [
-          "Troisième",
-          ""
-        ],
-        [
-          "Deuxième",
-          ""
-        ],
-        [
-          "Cinquième",
-          ""
-        ],
-        [
-          "Sixième",
-          ""
-        ]
+        ["Quatrième", ""],
+        ["Première",  ""],
+        ["Troisième", ""],
+        ["Deuxième",  ""],
+        ["Cinquième", ""],
+        ["Sixième",   ""]
       ],
-      "answer": [
-        "Troisième"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La pomme peut se manger crue ou cuite, en dessert, compote, tarte, gâteau, gelée, confiture ou en pâte de fruit."
+      "answer": ["Troisième"],
+      "difficulty": "Moyen"
     },
     {
       "id": 45,
       "type": 0,
       "question": "Quel pays est le plus gros producteur de pommes avec 35 millions de tonnes par an ?",
       "propositions": [
-        [
-          "États-Unis",
-          ""
-        ],
-        [
-          "Italie",
-          ""
-        ],
-        [
-          "Turquie",
-          ""
-        ],
-        [
-          "Chine",
-          ""
-        ],
-        [
-          "France",
-          ""
-        ],
-        [
-          "Pologne",
-          ""
-        ]
+        ["États-Unis", ""],
+        ["Italie",     ""],
+        ["Turquie",    ""],
+        ["Chine",      ""],
+        ["France",     ""],
+        ["Pologne",    ""]
       ],
-      "answer": [
-        "Chine"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "L'Europe produit quant à elle 7,5 millions de tonnes de pommes chaque année, dont deux millions en France."
+      "answer": ["Chine"],
+      "difficulty": "Moyen"
     },
     {
       "id": 46,
       "type": 0,
       "question": "Quel célèbre gâteau traditionnel autrichien est cuisiné à base de pommes ?",
       "propositions": [
-        [
-          "La croustade",
-          ""
-        ],
-        [
-          "Tarte Tatin",
-          ""
-        ],
-        [
-          "Le crumble",
-          ""
-        ],
-        [
-          "Apfelstrudel",
-          ""
-        ],
-        [
-          "Sachertorte",
-          ""
-        ],
-        [
-          "Linzertorte",
-          ""
-        ]
+        ["La croustade", ""],
+        ["Tarte Tatin",  ""],
+        ["Le crumble",   ""],
+        ["Apfelstrudel", ""],
+        ["Sachertorte",  ""],
+        ["Linzertorte",  ""]
       ],
-      "answer": [
-        "Apfelstrudel"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Les communautés juives ashkénazes l'ont également introduit en Israël, but aussi aux États-Unis et en Argentine."
+      "answer": ["Apfelstrudel"],
+      "difficulty": "Moyen"
     },
     {
       "id": 47,
       "type": 0,
       "question": "Dans quelle tarte aux pommes renversée les pommes sont-elles caramélisées ?",
       "propositions": [
-        [
-          "Tarte au riz",
-          ""
-        ],
-        [
-          "Tarte Tatin",
-          ""
-        ],
-        [
-          "Tarte au maton",
-          ""
-        ],
-        [
-          "Tarte normande",
-          ""
-        ],
-        [
-          "Tarte Bourdaloue",
-          ""
-        ],
-        [
-          "Tarte aux Daims",
-          ""
-        ]
+        ["Tarte au riz",     ""],
+        ["Tarte Tatin",      ""],
+        ["Tarte au maton",   ""],
+        ["Tarte normande",   ""],
+        ["Tarte Bourdaloue", ""],
+        ["Tarte aux Daims",  ""]
       ],
-      "answer": [
-        "Tarte Tatin"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "C'est le restaurateur auvergnat Louis Vaudable, propriétaire de Maxim's, qui le premier la découvre chez les soeurs Tatin."
+      "answer": ["Tarte Tatin"],
+      "difficulty": "Moyen"
     },
     {
       "id": 48,
       "type": 0,
       "question": "Qui a été obligé de tirer un carreau d'arbalète dans une pomme posée sur la tête de son fils ?",
       "propositions": [
-        [
-          "Sinbad le marin",
-          ""
-        ],
-        [
-          "Guillaume Tell",
-          ""
-        ],
-        [
-          "Perceval",
-          ""
-        ],
-        [
-          "Belphégor",
-          ""
-        ],
-        [
-          "Robin des Bois",
-          ""
-        ],
-        [
-          "Ulysse",
-          ""
-        ]
+        ["Sinbad le marin", ""],
+        ["Guillaume Tell",  ""],
+        ["Perceval",        ""],
+        ["Belphégor",       ""],
+        ["Robin des Bois",  ""],
+        ["Ulysse",          ""]
       ],
-      "answer": [
-        "Guillaume Tell"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Figure probablement légendaire, Guillaume Tell est un héros de l'indépendance de la Suisse qui aurait vécu au XIVe siècle."
+      "answer": ["Guillaume Tell"],
+      "difficulty": "Moyen"
     },
     {
       "id": 49,
       "type": 0,
       "question": "Quel président français a utilisé la pomme comme symbole de sa campagne politique ?",
       "propositions": [
-        [
-          "Jacques Chirac",
-          ""
-        ],
-        [
-          "François Hollande",
-          ""
-        ],
-        [
-          "Nicolas Sarkozy",
-          ""
-        ],
-        [
-          "François Mitterrand",
-          ""
-        ],
-        [
-          "Valéry Giscard d'Estaing",
-          ""
-        ],
-        [
-          "Emmanuel Macron",
-          ""
-        ]
+        ["Jacques Chirac",           ""],
+        ["François Hollande",        ""],
+        ["Nicolas Sarkozy",          ""],
+        ["François Mitterrand",      ""],
+        ["Valéry Giscard d'Estaing", ""],
+        ["Emmanuel Macron",          ""]
       ],
-      "answer": [
-        "Jacques Chirac"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La phrase « Mangez des pommes » fut vite reprise dans les médias ainsi qu'au sein de la population."
+      "answer": ["Jacques Chirac"],
+      "difficulty": "Moyen"
     },
     {
       "id": 50,
       "type": 0,
       "question": "Qui aurait compris les lois de l'attraction universelle une pomme tombée sur la tête ?",
       "propositions": [
-        [
-          "Edmond Halley",
-          ""
-        ],
-        [
-          "Isaac Newton",
-          ""
-        ],
-        [
-          "Nicolas Copernic",
-          ""
-        ],
-        [
-          "Galilée",
-          ""
-        ],
-        [
-          "Albert Einstein",
-          ""
-        ],
-        [
-          "Stephen Hawking",
-          ""
-        ]
+        ["Edmond Halley",    ""],
+        ["Isaac Newton",     ""],
+        ["Nicolas Copernic", ""],
+        ["Galilée",          ""],
+        ["Albert Einstein",  ""],
+        ["Stephen Hawking",  ""]
       ],
-      "answer": [
-        "Isaac Newton"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Newton a montré que le mouvement des objets sur Terre et des corps célestes sont gouvernés par les mêmes lois naturelles."
+      "answer": ["Isaac Newton"],
+      "difficulty": "Moyen"
     },
     {
       "id": 51,
       "type": 0,
       "question": "Combinaison de plusieurs organes, la pomme est un fruit, mais plus précisément...",
       "propositions": [
-        [
-          "Un faux-fruit",
-          ""
-        ],
-        [
-          "Une stomate",
-          ""
-        ],
-        [
-          "Une souche",
-          ""
-        ],
-        [
-          "Une pruine",
-          ""
-        ],
-        [
-          "Un akène",
-          ""
-        ],
-        [
-          "Une drupéole",
-          ""
-        ]
+        ["Un faux-fruit", ""],
+        ["Une stomate",   ""],
+        ["Une souche",    ""],
+        ["Une pruine",    ""],
+        ["Un akène",      ""],
+        ["Une drupéole",  ""]
       ],
-      "answer": [
-        "Un faux-fruit"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "La fécondation induit parfois le développement d'autres organes : pédoncule floral chez la pomme cajou, bractées chez l'ananas."
+      "answer": ["Un faux-fruit"],
+      "difficulty": "Difficile"
     },
     {
       "id": 52,
       "type": 0,
       "question": "Combien de tonnes de pommes récolte-t-on annuellement dans le monde ?",
       "propositions": [
-        [
-          "53 millions",
-          ""
-        ],
-        [
-          "45 millions",
-          ""
-        ],
-        [
-          "37 millions",
-          ""
-        ],
-        [
-          "69 millions",
-          ""
-        ],
-        [
-          "80 millions",
-          ""
-        ],
-        [
-          "25 millions",
-          ""
-        ]
+        ["53 millions", ""],
+        ["45 millions", ""],
+        ["37 millions", ""],
+        ["69 millions", ""],
+        ["80 millions", ""],
+        ["25 millions", ""]
       ],
-      "answer": [
-        "69 millions"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Le terme « pomme de consommation » désigne les fruits destinés à être vendus directement au consommateur."
+      "answer": ["69 millions"],
+      "difficulty": "Difficile"
     },
     {
       "id": 53,
       "type": 0,
       "question": "Quelle partie de la pomme contient principalement de la pectine ?",
       "propositions": [
-        [
-          "La peau",
-          ""
-        ],
-        [
-          "Les pépins",
-          ""
-        ],
-        [
-          "Le pédoncule",
-          ""
-        ],
-        [
-          "La pulpe",
-          ""
-        ],
-        [
-          "Le trognon",
-          ""
-        ],
-        [
-          "L'épiderme",
-          ""
-        ]
+        ["La peau",      ""],
+        ["Les pépins",   ""],
+        ["Le pédoncule", ""],
+        ["La pulpe",     ""],
+        ["Le trognon",   ""],
+        ["L'épiderme",   ""]
       ],
-      "answer": [
-        "Les pépins"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Le gel formé par la pectine emprisonne les graisses, régulant ainsi le taux de cholestérol."
+      "answer": ["Les pépins"],
+      "difficulty": "Difficile"
     },
     {
       "id": 54,
       "type": 0,
       "question": "Quel gâteau à base de pommes est appelé « croustade » au Québec ?",
       "propositions": [
-        [
-          "Crumble",
-          ""
-        ],
-        [
-          "Chausson",
-          ""
-        ],
-        [
-          "Tarte Tatin",
-          ""
-        ],
-        [
-          "Apfelstrudel",
-          ""
-        ],
-        [
-          "Galette",
-          ""
-        ],
-        [
-          "Beignet",
-          ""
-        ]
+        ["Crumble",      ""],
+        ["Chausson",     ""],
+        ["Tarte Tatin",  ""],
+        ["Apfelstrudel", ""],
+        ["Galette",      ""],
+        ["Beignet",      ""]
       ],
-      "answer": [
-        "Crumble"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "En Pologne, on prépare depuis le XIXe siècle des pâtisseries avec cet émietté (mélange de farine sucre et beurre)."
+      "answer": ["Crumble"],
+      "difficulty": "Difficile"
     },
     {
       "id": 55,
       "type": 0,
       "question": "Quelle eau-de-vie d'origine normande est obtenue par distillation de cidre ?",
       "propositions": [
-        [
-          "Le pommeau",
-          ""
-        ],
-        [
-          "Le calvados",
-          ""
-        ],
-        [
-          "Le lambig",
-          ""
-        ],
-        [
-          "Le cidre",
-          ""
-        ],
-        [
-          "Le poiré",
-          ""
-        ],
-        [
-          "Le kirsch",
-          ""
-        ]
+        ["Le pommeau",  ""],
+        ["Le calvados", ""],
+        ["Le lambig",   ""],
+        ["Le cidre",    ""],
+        ["Le poiré",    ""],
+        ["Le kirsch",   ""]
       ],
-      "answer": [
-        "Le calvados"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Cette eau-de-vie est attestée au XVIe siècle dans le journal de Gilles de Gouberville, gentilhomme du Cotentin."
+      "answer": ["Le calvados"],
+      "difficulty": "Difficile"
     },
     {
       "id": 56,
       "type": 0,
       "question": "Quelle pomme représente le logo de la maison de disques du groupe anglais The Beatles ?",
       "propositions": [
-        [
-          "Jonagold",
-          ""
-        ],
-        [
-          "Golden",
-          ""
-        ],
-        [
-          "Granny Smith",
-          ""
-        ],
-        [
-          "Gala",
-          ""
-        ],
-        [
-          "Red Delicious",
-          ""
-        ],
-        [
-          "Pink Lady",
-          ""
-        ]
+        ["Jonagold",      ""],
+        ["Golden",        ""],
+        ["Granny Smith",  ""],
+        ["Gala",          ""],
+        ["Red Delicious", ""],
+        ["Pink Lady",     ""]
       ],
-      "answer": [
-        "Granny Smith"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Le nom et le logo proviennent d'un célèbre tableau de René Magritte et le design est complété par le graphiste britannique Gene Mahon."
+      "answer": ["Granny Smith"],
+      "difficulty": "Difficile"
     },
     {
       "id": 57,
       "type": 0,
       "question": "Quel peintre belge a employé une pomme pour appuyer son travail sur les mots ?",
       "propositions": [
-        [
-          "René Magritte",
-          ""
-        ],
-        [
-          "Paul Delvaux",
-          ""
-        ],
-        [
-          "Henri Michaux",
-          ""
-        ],
-        [
-          "James Ensor",
-          ""
-        ],
-        [
-          "Salvador Dalí",
-          ""
-        ],
-        [
-          "Andy Warhol",
-          ""
-        ]
+        ["René Magritte", ""],
+        ["Paul Delvaux",  ""],
+        ["Henri Michaux", ""],
+        ["James Ensor",   ""],
+        ["Salvador Dalí", ""],
+        ["Andy Warhol",   ""]
       ],
-      "answer": [
-        "René Magritte"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Parmi les objets qui contribuent à faire de ses toiles d'impénétrables énigmes, une sphère noire apparaît de façon récurrente."
+      "answer": ["René Magritte"],
+      "difficulty": "Difficile"
     },
     {
       "id": 58,
       "type": 0,
       "question": "Suite à quelle maladie observe-t-on des taches noirâtres sur les feuilles des pommiers ?",
       "propositions": [
-        [
-          "Rouille",
-          ""
-        ],
-        [
-          "Charbon",
-          ""
-        ],
-        [
-          "Tavelure",
-          ""
-        ],
-        [
-          "Galle",
-          ""
-        ],
-        [
-          "Mildiou",
-          ""
-        ],
-        [
-          "Oïdium",
-          ""
-        ]
+        ["Rouille",  ""],
+        ["Charbon",  ""],
+        ["Tavelure", ""],
+        ["Galle",    ""],
+        ["Mildiou",  ""],
+        ["Oïdium",   ""]
       ],
-      "answer": [
-        "Tavelure"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Sur fruits, les manifestations vont jusqu'à la déformation complète, avec crevasses profondes et/ou la chute du fruit."
+      "answer": ["Tavelure"],
+      "difficulty": "Difficile"
     },
     {
       "id": 59,
       "type": 0,
       "question": "Quel était généralement le jour de la pomme dans le calendrier républicain français ?",
       "propositions": [
-        [
-          "6 décembre",
-          ""
-        ],
-        [
-          "22 octobre",
-          ""
-        ],
-        [
-          "11 janvier",
-          ""
-        ],
-        [
-          "16 novembre",
-          ""
-        ],
-        [
-          "10 septembre",
-          ""
-        ],
-        [
-          "3 mars",
-          ""
-        ]
+        ["6 décembre",   ""],
+        ["22 octobre",   ""],
+        ["11 janvier",   ""],
+        ["16 novembre",  ""],
+        ["10 septembre", ""],
+        ["3 mars",       ""]
       ],
-      "answer": [
-        "22 octobre"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Les noms des mois et des jours furent conçus par le poète Fabre d'Églantine avec l'aide d'André Thouin, jardinier."
+      "answer": ["22 octobre"],
+      "difficulty": "Difficile"
     },
     {
       "id": 60,
       "type": 0,
       "question": "Quel est le poids d'une pomme calibrée à 60/65 pour la consommation ?",
       "propositions": [
-        [
-          "176-209 g",
-          ""
-        ],
-        [
-          "108-142 g",
-          ""
-        ],
-        [
-          "75-108 g",
-          ""
-        ],
-        [
-          "142-176 g",
-          ""
-        ],
-        [
-          "209-242 g",
-          ""
-        ],
-        [
-          "50-75 g",
-          ""
-        ]
+        ["176-209 g", ""],
+        ["108-142 g", ""],
+        ["75-108 g",  ""],
+        ["142-176 g", ""],
+        ["209-242 g", ""],
+        ["50-75 g",   ""]
       ],
-      "answer": [
-        "75-108 g"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "La pomme est le premier fruit consommé en France (22,6 %) devant l'orange (12,3 %) et la banane (12,2 %)."
+      "answer": ["75-108 g"],
+      "difficulty": "Difficile"
     },
     {
       "id": 61,
       "type": 0,
       "question": "Quelle société est la première productrice mondiale de frites surgelées ?",
       "propositions": [
-        [
-          "Mousline",
-          ""
-        ],
-        [
-          "Vico",
-          ""
-        ],
-        [
-          "McCain Foods",
-          ""
-        ],
-        [
-          "Lutosa",
-          ""
-        ],
-        [
-          "Aviko",
-          ""
-        ],
-        [
-          "Nestlé",
-          ""
-        ]
+        ["Mousline",     ""],
+        ["Vico",         ""],
+        ["McCain Foods", ""],
+        ["Lutosa",       ""],
+        ["Aviko",        ""],
+        ["Nestlé",       ""]
       ],
-      "answer": [
-        "McCain Foods"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "La société McCain Foods, basée à Toronto, emploie environ 20 000 personnes dans ses 55 usines à travers le monde."
+      "answer": ["McCain Foods"],
+      "difficulty": "Facile"
     },
     {
       "id": 62,
       "type": 0,
       "question": "Quel jouet pour enfants possède une tête en plastique de forme patatoïde ?",
       "propositions": [
-        [
-          "Monsieur Patate",
-          ""
-        ],
-        [
-          "Woody",
-          ""
-        ],
-        [
-          "Zigzag",
-          ""
-        ],
-        [
-          "Rex",
-          ""
-        ],
-        [
-          "Buzz l'Éclair",
-          ""
-        ],
-        [
-          "Slinky",
-          ""
-        ]
+        ["Monsieur Patate", ""],
+        ["Woody",           ""],
+        ["Zigzag",          ""],
+        ["Rex",             ""],
+        ["Buzz l'Éclair",   ""],
+        ["Slinky",          ""]
       ],
-      "answer": [
-        "Monsieur Patate"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Créé par l'inventeur George Lerner en 1949, Monsieur Patate fut commercialisé aux États-Unis pour la première fois en 1952."
+      "answer": ["Monsieur Patate"],
+      "difficulty": "Facile"
     },
     {
       "id": 63,
       "type": 0,
       "question": "Quel tableau de Jean-François Millet aurait dû s'appeler « La Mauvaise Récolte » ?",
       "propositions": [
-        [
-          "Le Semeur",
-          ""
-        ],
-        [
-          "L'Angélus",
-          ""
-        ],
-        [
-          "Les Glaneuses",
-          ""
-        ],
-        [
-          "Un vanneur",
-          ""
-        ],
-        [
-          "Le Repas du soir",
-          ""
-        ],
-        [
-          "La Méridienne",
-          ""
-        ]
+        ["Le Semeur",        ""],
+        ["L'Angélus",        ""],
+        ["Les Glaneuses",    ""],
+        ["Un vanneur",       ""],
+        ["Le Repas du soir", ""],
+        ["La Méridienne",    ""]
       ],
-      "answer": [
-        "L'Angélus"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "L'Angélus a largement été reproduit sur des supports tels que des calendriers, des canevas, des meubles ou des cahiers d'écolier."
+      "answer": ["L'Angélus"],
+      "difficulty": "Facile"
     },
     {
       "id": 64,
       "type": 0,
       "question": "Si vous en avez gros sur la patate, vous en avez probablement gros sur...",
       "propositions": [
-        [
-          "Le nez",
-          ""
-        ],
-        [
-          "Le foie",
-          ""
-        ],
-        [
-          "Le dos",
-          ""
-        ],
-        [
-          "Le coeur",
-          ""
-        ],
-        [
-          "L'estomac",
-          ""
-        ],
-        [
-          "La tête",
-          ""
-        ]
+        ["Le nez",    ""],
+        ["Le foie",   ""],
+        ["Le dos",    ""],
+        ["Le coeur",  ""],
+        ["L'estomac", ""],
+        ["La tête",   ""]
       ],
-      "answer": [
-        "Le coeur"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Le terme patate désigne aussi en français familier une personne que l'on considère comme étant un peu simplette."
+      "answer": ["Le coeur"],
+      "difficulty": "Facile"
     },
     {
       "id": 65,
       "type": 0,
       "question": "En Belgique, quelle est la principale entreprise de l'industrie de la pomme de terre ?",
       "propositions": [
-        [
-          "Avebe",
-          ""
-        ],
-        [
-          "Aviko",
-          ""
-        ],
-        [
-          "Lutosa",
-          ""
-        ],
-        [
-          "McCain",
-          ""
-        ],
-        [
-          "Clarebout",
-          ""
-        ],
-        [
-          "Agristo",
-          ""
-        ]
+        ["Avebe",     ""],
+        ["Aviko",     ""],
+        ["Lutosa",    ""],
+        ["McCain",    ""],
+        ["Clarebout", ""],
+        ["Agristo",   ""]
       ],
-      "answer": [
-        "Lutosa"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Lutosa est une entreprise belge spécialisée dans la transformation industrielle de pommes de terre en frites surgelées et réfrigérées."
+      "answer": ["Lutosa"],
+      "difficulty": "Facile"
     },
     {
       "id": 66,
       "type": 0,
       "question": "Quelle activité manuelle consiste à servir de pommes de terre comme tampons ?",
       "propositions": [
-        [
-          "Patatogravure",
-          ""
-        ],
-        [
-          "Sel coloré",
-          ""
-        ],
-        [
-          "Pâte à sel",
-          ""
-        ],
-        [
-          "Origami",
-          ""
-        ],
-        [
-          "Mosaïque",
-          ""
-        ],
-        [
-          "Découpage",
-          ""
-        ]
+        ["Patatogravure", ""],
+        ["Sel coloré",    ""],
+        ["Pâte à sel",    ""],
+        ["Origami",       ""],
+        ["Mosaïque",      ""],
+        ["Découpage",     ""]
       ],
-      "answer": [
-        "Patatogravure"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Cette activité consiste à sculpter dans la chair des pommes de terre des lettres ou des motifs représentant des formes géométriques."
+      "answer": ["Patatogravure"],
+      "difficulty": "Facile"
     },
     {
       "id": 67,
       "type": 0,
       "question": "Quel épluche-légumes à lame en gouttière facilite l'épluchage de la pomme de terre ?",
       "propositions": [
-        [
-          "Girafe",
-          ""
-        ],
-        [
-          "Économe",
-          ""
-        ],
-        [
-          "Canneleur",
-          ""
-        ],
-        [
-          "Râpe",
-          ""
-        ],
-        [
-          "Mandoline",
-          ""
-        ],
-        [
-          "Couteau d'office",
-          ""
-        ]
+        ["Girafe",           ""],
+        ["Économe",          ""],
+        ["Canneleur",        ""],
+        ["Râpe",             ""],
+        ["Mandoline",        ""],
+        ["Couteau d'office", ""]
       ],
-      "answer": [
-        "Économe"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Traditionnellement, l'épluchage se pratiquait avec un simple couteau de cuisine, notamment dans le cadre des corvées de patates."
+      "answer": ["Économe"],
+      "difficulty": "Facile"
     },
     {
       "id": 68,
       "type": 0,
       "question": "Quel roman de Jacques Vaucherot fut adapté au cinéma par Claude Autant-Lara ?",
       "propositions": [
-        [
-          "Les patates",
-          ""
-        ],
-        [
-          "Douce",
-          ""
-        ],
-        [
-          "Gloria",
-          ""
-        ],
-        [
-          "Le Joueur",
-          ""
-        ],
-        [
-          "La Traversée de Paris",
-          ""
-        ],
-        [
-          "Le Diable au corps",
-          ""
-        ]
+        ["Les patates",           ""],
+        ["Douce",                 ""],
+        ["Gloria",                ""],
+        ["Le Joueur",             ""],
+        ["La Traversée de Paris", ""],
+        ["Le Diable au corps",    ""]
       ],
-      "answer": [
-        "Les patates"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Claude Autant-Lara a connu le succès après la Seconde Guerre mondiale avec l'adaptation d'un roman, « Le Diable au corps »."
+      "answer": ["Les patates"],
+      "difficulty": "Facile"
     },
     {
       "id": 69,
       "type": 0,
       "question": "Quelle vitamine apportée par la pomme de terre est utile pour la prévention du scorbut ?",
       "propositions": [
-        [
-          "Vitamine D",
-          ""
-        ],
-        [
-          "Vitamine B",
-          ""
-        ],
-        [
-          "Vitamine A",
-          ""
-        ],
-        [
-          "Vitamine C",
-          ""
-        ],
-        [
-          "Vitamine E",
-          ""
-        ],
-        [
-          "Vitamine K",
-          ""
-        ]
+        ["Vitamine D", ""],
+        ["Vitamine B", ""],
+        ["Vitamine A", ""],
+        ["Vitamine C", ""],
+        ["Vitamine E", ""],
+        ["Vitamine K", ""]
       ],
-      "answer": [
-        "Vitamine C"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Facilitant le transit intestinal, la pomme de terre a aussi des propriétés cicatrisantes, utiles contre les ulcères intestinaux."
+      "answer": ["Vitamine C"],
+      "difficulty": "Facile"
     },
     {
       "id": 70,
       "type": 0,
       "question": "Quelle patate se renvoie-t-on l'un l'autre face à un problème embarrassant ?",
       "propositions": [
-        [
-          "Froide",
-          ""
-        ],
-        [
-          "Dure",
-          ""
-        ],
-        [
-          "Chaude",
-          ""
-        ],
-        [
-          "Molle",
-          ""
-        ],
-        [
-          "Pourrie",
-          ""
-        ],
-        [
-          "Vicieuse",
-          ""
-        ]
+        ["Froide",   ""],
+        ["Dure",     ""],
+        ["Chaude",   ""],
+        ["Molle",    ""],
+        ["Pourrie",  ""],
+        ["Vicieuse", ""]
       ],
-      "answer": [
-        "Chaude"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Synonyme de se renvoyer la balle, cette expression récente est apparue au Québec dans les années 1970 et en Europe en 1990."
+      "answer": ["Chaude"],
+      "difficulty": "Facile"
     },
     {
       "id": 71,
       "type": 0,
       "question": "Dans quelle ville belge se trouve le seul musée au monde consacré à la frite ?",
       "propositions": [
-        [
-          "Mons",
-          ""
-        ],
-        [
-          "Courtrai",
-          ""
-        ],
-        [
-          "Bruges",
-          ""
-        ],
-        [
-          "Tournai",
-          ""
-        ],
-        [
-          "Bruxelles",
-          ""
-        ],
-        [
-          "Anvers",
-          ""
-        ]
+        ["Mons",      ""],
+        ["Courtrai",  ""],
+        ["Bruges",    ""],
+        ["Tournai",   ""],
+        ["Bruxelles", ""],
+        ["Anvers",    ""]
       ],
-      "answer": [
-        "Bruges"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Ce musée est connu sous le nom de « loge des Génois ». C'était en fait le bureau central des commerçants génois à Bruges."
+      "answer": ["Bruges"],
+      "difficulty": "Moyen"
     },
     {
       "id": 72,
       "type": 0,
       "question": "Quel jeu en réalité alternée a utilisé la pomme de terre comme emblème ?",
       "propositions": [
-        [
-          "Team Fortress",
-          ""
-        ],
-        [
-          "The Orange Box",
-          ""
-        ],
-        [
-          "Portal 2",
-          ""
-        ],
-        [
-          "Counter-Strike",
-          ""
-        ],
-        [
-          "Half-Life",
-          ""
-        ],
-        [
-          "Left 4 Dead",
-          ""
-        ]
+        ["Team Fortress",  ""],
+        ["The Orange Box", ""],
+        ["Portal 2",       ""],
+        ["Counter-Strike", ""],
+        ["Half-Life",      ""],
+        ["Left 4 Dead",    ""]
       ],
-      "answer": [
-        "Portal 2"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "L'intrigue du jeu offre en effet la possibilité d'utiliser la patate comme électrolyte pour la fabrication d'une pile artisanale."
+      "answer": ["Portal 2"],
+      "difficulty": "Moyen"
     },
     {
       "id": 73,
       "type": 0,
       "question": "Quel poète chilien, prix Nobel de littérature, a chanté la pomme de terre ?",
       "propositions": [
-        [
-          "Armando Uribe",
-          ""
-        ],
-        [
-          "Nicanor Parra",
-          ""
-        ],
-        [
-          "Pablo Neruda",
-          ""
-        ],
-        [
-          "Enrique Lihn",
-          ""
-        ],
-        [
-          "Vicente Huidobro",
-          ""
-        ],
-        [
-          "Gabriela Mistral",
-          ""
-        ]
+        ["Armando Uribe",    ""],
+        ["Nicanor Parra",    ""],
+        ["Pablo Neruda",     ""],
+        ["Enrique Lihn",     ""],
+        ["Vicente Huidobro", ""],
+        ["Gabriela Mistral", ""]
       ],
-      "answer": [
-        "Pablo Neruda"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Pablo Neruda a chanté la pomme de terre et son identité indienne dans son « Oda a la papa » (Odes élémentaires)."
+      "answer": ["Pablo Neruda"],
+      "difficulty": "Moyen"
     },
     {
       "id": 74,
       "type": 0,
       "question": "Quelle société américaine domine aujourd'hui le marché des chips ?",
       "propositions": [
-        [
-          "Covi",
-          ""
-        ],
-        [
-          "Frito-Lay",
-          ""
-        ],
-        [
-          "Quala",
-          ""
-        ],
-        [
-          "Lunor",
-          ""
-        ],
-        [
-          "Walkers",
-          ""
-        ],
-        [
-          "Lay's",
-          ""
-        ]
+        ["Covi",      ""],
+        ["Frito-Lay", ""],
+        ["Quala",     ""],
+        ["Lunor",     ""],
+        ["Walkers",   ""],
+        ["Lay's",     ""]
       ],
-      "answer": [
-        "Frito-Lay"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Filiale du groupe Pepsico, elle exploite 67 usines dans 27 pays et transforme annuellement 4 millions de tonnes de pommes de terre."
+      "answer": ["Frito-Lay"],
+      "difficulty": "Moyen"
     },
     {
       "id": 75,
       "type": 0,
       "question": "Quel pays est le plus gros consommateur de pommes de terre ?",
       "propositions": [
-        [
-          "Inde",
-          ""
-        ],
-        [
-          "Chine",
-          ""
-        ],
-        [
-          "Russie",
-          ""
-        ],
-        [
-          "Royaume-Uni",
-          ""
-        ],
-        [
-          "États-Unis",
-          ""
-        ],
-        [
-          "Allemagne",
-          ""
-        ]
+        ["Inde",        ""],
+        ["Chine",       ""],
+        ["Russie",      ""],
+        ["Royaume-Uni", ""],
+        ["États-Unis",  ""],
+        ["Allemagne",   ""]
       ],
-      "answer": [
-        "Chine"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La consommation moyenne est évaluée à 33,3 kg par habitant et par an, ou bien 91,2 g, soit 62 kcal, par personne et par jour."
+      "answer": ["Chine"],
+      "difficulty": "Moyen"
     },
     {
       "id": 76,
       "type": 0,
       "question": "Qu'est-il possible de produire avec deux pommes de terre et peu de matériel ?",
       "propositions": [
-        [
-          "Vibrations",
-          ""
-        ],
-        [
-          "Lumière",
-          ""
-        ],
-        [
-          "Son",
-          ""
-        ],
-        [
-          "Électricité",
-          ""
-        ],
-        [
-          "Chaleur",
-          ""
-        ],
-        [
-          "Odeur",
-          ""
-        ]
+        ["Vibrations",  ""],
+        ["Lumière",     ""],
+        ["Son",         ""],
+        ["Électricité", ""],
+        ["Chaleur",     ""],
+        ["Odeur",       ""]
       ],
-      "answer": [
-        "Électricité"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "En y insérant deux électrodes, l'une en zinc et l'autre en cuivre, la chair de la pomme de terre fait office d'électrolyte."
+      "answer": ["Électricité"],
+      "difficulty": "Moyen"
     },
     {
       "id": 77,
       "type": 0,
       "question": "Que peut-on produire après fermentation et distillation de l'amidon de la pomme de terre ?",
       "propositions": [
-        [
-          "Ouzo",
-          ""
-        ],
-        [
-          "Raki",
-          ""
-        ],
-        [
-          "Éthanol",
-          ""
-        ],
-        [
-          "Absinthe",
-          ""
-        ],
-        [
-          "Moutarde",
-          ""
-        ],
-        [
-          "Vinaigre",
-          ""
-        ]
+        ["Ouzo",     ""],
+        ["Raki",     ""],
+        ["Éthanol",  ""],
+        ["Absinthe", ""],
+        ["Moutarde", ""],
+        ["Vinaigre", ""]
       ],
-      "answer": [
-        "Éthanol"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Liquide incolore, inflammable et miscible à l'eau, l'éthanol est un psychotrope et l'une des plus anciennes drogues récréatives."
+      "answer": ["Éthanol"],
+      "difficulty": "Moyen"
     },
     {
       "id": 78,
       "type": 0,
       "question": "À partir du XVIe siècle, l'alcool de pomme de terre a servi à confectionner quel alcool ?",
       "propositions": [
-        [
-          "Calvados",
-          ""
-        ],
-        [
-          "Tequila",
-          ""
-        ],
-        [
-          "Armagnac",
-          ""
-        ],
-        [
-          "Vodka",
-          ""
-        ],
-        [
-          "Rhum",
-          ""
-        ],
-        [
-          "Gin",
-          ""
-        ]
+        ["Calvados", ""],
+        ["Tequila",  ""],
+        ["Armagnac", ""],
+        ["Vodka",    ""],
+        ["Rhum",     ""],
+        ["Gin",      ""]
       ],
-      "answer": [
-        "Vodka"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La vodka peut être issue de la transformation de presque toutes les matières d'origine agricole, les plus connues étant les céréales."
+      "answer": ["Vodka"],
+      "difficulty": "Moyen"
     },
     {
       "id": 79,
       "type": 0,
       "question": "Quel pays est le premier exportateur mondial de pommes de terre de conservation ?",
       "propositions": [
-        [
-          "Belgique",
-          ""
-        ],
-        [
-          "France",
-          ""
-        ],
-        [
-          "Pays-Bas",
-          ""
-        ],
-        [
-          "Allemagne",
-          ""
-        ],
-        [
-          "Canada",
-          ""
-        ],
-        [
-          "Chine",
-          ""
-        ]
+        ["Belgique",  ""],
+        ["France",    ""],
+        ["Pays-Bas",  ""],
+        ["Allemagne", ""],
+        ["Canada",    ""],
+        ["Chine",     ""]
       ],
-      "answer": [
-        "France"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Pour les pommes de terre surgelées, les principaux pays exportateurs sont la Belgique, les Pays-Bas et le Canada."
+      "answer": ["France"],
+      "difficulty": "Moyen"
     },
     {
       "id": 80,
       "type": 0,
       "question": "Quel nom est également donné à l'amidon de pomme de terre ?",
       "propositions": [
-        [
-          "Gélose",
-          ""
-        ],
-        [
-          "Purée",
-          ""
-        ],
-        [
-          "Sirop",
-          ""
-        ],
-        [
-          "Fécule",
-          ""
-        ],
-        [
-          "Maltose",
-          ""
-        ],
-        [
-          "Dextrine",
-          ""
-        ]
+        ["Gélose",   ""],
+        ["Purée",    ""],
+        ["Sirop",    ""],
+        ["Fécule",   ""],
+        ["Maltose",  ""],
+        ["Dextrine", ""]
       ],
-      "answer": [
-        "Fécule"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La fécule de pomme de terre a de multiples applications dans l'industrie, en particulier pour le couchage du papier."
+      "answer": ["Fécule"],
+      "difficulty": "Moyen"
     },
     {
       "id": 81,
       "type": 0,
       "question": "Quelle année a été déclarée année de la pomme de terre par l'ONU ?",
       "propositions": [
-        [
-          "1988",
-          ""
-        ],
-        [
-          "2008",
-          ""
-        ],
-        [
-          "2018",
-          ""
-        ],
-        [
-          "1998",
-          ""
-        ],
-        [
-          "2000",
-          ""
-        ],
-        [
-          "2010",
-          ""
-        ]
+        ["1988", ""],
+        ["2008", ""],
+        ["2018", ""],
+        ["1998", ""],
+        ["2000", ""],
+        ["2010", ""]
       ],
-      "answer": [
-        "2008"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Cette déclaration a été faite par l'ONU pour sensibiliser le monde entier sur son rôle et promouvoir sa mise en oeuvre."
+      "answer": ["2008"],
+      "difficulty": "Difficile"
     },
     {
       "id": 82,
       "type": 0,
       "question": "Quelle variété est utilisée pour la préparation des frites McDonald's ?",
       "propositions": [
-        [
-          "Red Pontiac",
-          ""
-        ],
-        [
-          "Shepody",
-          ""
-        ],
-        [
-          "Yukon Gold",
-          ""
-        ],
-        [
-          "Russet Burbank",
-          ""
-        ],
-        [
-          "Bintje",
-          ""
-        ],
-        [
-          "Charlotte",
-          ""
-        ]
+        ["Red Pontiac",    ""],
+        ["Shepody",        ""],
+        ["Yukon Gold",     ""],
+        ["Russet Burbank", ""],
+        ["Bintje",         ""],
+        ["Charlotte",      ""]
       ],
-      "answer": [
-        "Russet Burbank"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Quand on utilise cette pomme de terre pour faire des chips, il se produit une coloration foncée due au phénomène de caramélisation."
+      "answer": ["Russet Burbank"],
+      "difficulty": "Difficile"
     },
     {
       "id": 83,
       "type": 0,
       "question": "Quel entrepreneur nippo-américain est surnommé le roi de la pomme de terre ?",
       "propositions": [
-        [
-          "George Shima",
-          ""
-        ],
-        [
-          "Daniel Inouye",
-          ""
-        ],
-        [
-          "Steve Aoki",
-          ""
-        ],
-        [
-          "Eddie Imazu",
-          ""
-        ],
-        [
-          "Yoko Ono",
-          ""
-        ],
-        [
-          "Bill Gates",
-          ""
-        ]
+        ["George Shima",  ""],
+        ["Daniel Inouye", ""],
+        ["Steve Aoki",    ""],
+        ["Eddie Imazu",   ""],
+        ["Yoko Ono",      ""],
+        ["Bill Gates",    ""]
       ],
-      "answer": [
-        "George Shima"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "À une époque, George Shima produisait 85% de la récolte de pommes de terre de Californie, ce qui lui valut ce surnom."
+      "answer": ["George Shima"],
+      "difficulty": "Difficile"
     },
     {
       "id": 84,
       "type": 0,
       "question": "De quel État américain la pomme de terre est-elle l'emblème officiel ?",
       "propositions": [
-        [
-          "Montana",
-          ""
-        ],
-        [
-          "Vermont",
-          ""
-        ],
-        [
-          "Idaho",
-          ""
-        ],
-        [
-          "Géorgie",
-          ""
-        ],
-        [
-          "Washington",
-          ""
-        ],
-        [
-          "Maine",
-          ""
-        ]
+        ["Montana",    ""],
+        ["Vermont",    ""],
+        ["Idaho",      ""],
+        ["Géorgie",    ""],
+        ["Washington", ""],
+        ["Maine",      ""]
       ],
-      "answer": [
-        "Idaho"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Cet État, surnommé le « Potato State », est le principal producteur de ce tubercule aux États-Unis (28% de la production nationale)."
+      "answer": ["Idaho"],
+      "difficulty": "Difficile"
     },
     {
       "id": 85,
       "type": 0,
       "question": "Quel terme du quechua désigne la pomme de terre dans les pays d'Amérique latine ?",
       "propositions": [
-        [
-          "Baba",
-          ""
-        ],
-        [
-          "Dada",
-          ""
-        ],
-        [
-          "Papa",
-          ""
-        ],
-        [
-          "Mama",
-          ""
-        ],
-        [
-          "Oca",
-          ""
-        ],
-        [
-          "Yuca",
-          ""
-        ]
+        ["Baba", ""],
+        ["Dada", ""],
+        ["Papa", ""],
+        ["Mama", ""],
+        ["Oca",  ""],
+        ["Yuca", ""]
       ],
-      "answer": [
-        "Papa"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Dans cette langue véhiculaire de l'empire Inca, papa désignait tout type de tubercule à l'exception de l'oca."
+      "answer": ["Papa"],
+      "difficulty": "Difficile"
     },
     {
       "id": 86,
       "type": 0,
       "question": "Quel extrait de la pomme de terre est utilisé comme apprêt pour la raideur du linge ?",
       "propositions": [
-        [
-          "Synthon",
-          ""
-        ],
-        [
-          "Empois",
-          ""
-        ],
-        [
-          "Dipôle",
-          ""
-        ],
-        [
-          "Prontosil",
-          ""
-        ],
-        [
-          "Gélatine",
-          ""
-        ],
-        [
-          "Lait de chaux",
-          ""
-        ]
+        ["Synthon",       ""],
+        ["Empois",        ""],
+        ["Dipôle",        ""],
+        ["Prontosil",     ""],
+        ["Gélatine",      ""],
+        ["Lait de chaux", ""]
       ],
-      "answer": [
-        "Empois"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Résultant de l'agitation de la poudre d'amidon dans de l'eau chaude, l'empois devient visqueux selon la concentration d'amidon."
+      "answer": ["Empois"],
+      "difficulty": "Difficile"
     },
     {
       "id": 87,
       "type": 0,
       "question": "En Pologne, quel ratio de pomme de terre est produit pour la consommation animale ?",
       "propositions": [
-        [
-          "Une sur trois",
-          ""
-        ],
-        [
-          "Une sur neuf",
-          ""
-        ],
-        [
-          "Une sur sept",
-          ""
-        ],
-        [
-          "Une sur cinq",
-          ""
-        ],
-        [
-          "Une sur deux",
-          ""
-        ],
-        [
-          "Une sur quatre",
-          ""
-        ]
+        ["Une sur trois",  ""],
+        ["Une sur neuf",   ""],
+        ["Une sur sept",   ""],
+        ["Une sur cinq",   ""],
+        ["Une sur deux",   ""],
+        ["Une sur quatre", ""]
       ],
-      "answer": [
-        "Une sur trois"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Les pommes de terre données à certains animaux monogastriques (porcs et volailles) doivent être cuites pour être digestibles."
+      "answer": ["Une sur trois"],
+      "difficulty": "Difficile"
     },
     {
       "id": 88,
       "type": 0,
       "question": "Quel plat traditionnel des Pays-Bas consiste en une purée mélangée avec des légumes ?",
       "propositions": [
-        [
-          "Potaye",
-          ""
-        ],
-        [
-          "Stamppot",
-          ""
-        ],
-        [
-          "Lefse",
-          ""
-        ],
-        [
-          "Frico",
-          ""
-        ],
-        [
-          "Hutspot",
-          ""
-        ],
-        [
-          "Bitterballen",
-          ""
-        ]
+        ["Potaye",       ""],
+        ["Stamppot",     ""],
+        ["Lefse",        ""],
+        ["Frico",        ""],
+        ["Hutspot",      ""],
+        ["Bitterballen", ""]
       ],
-      "answer": [
-        "Stamppot"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Ces légumes d'accompagnement sont souvent la choucroute, la scarole, le chou frisé, ou un mélange carottes et oignons."
+      "answer": ["Stamppot"],
+      "difficulty": "Difficile"
     },
     {
       "id": 89,
       "type": 0,
       "question": "Au Pérou, combien existe-t-il environ de variétés de pommes de terre ?",
       "propositions": [
-        [
-          "2 000",
-          ""
-        ],
-        [
-          "3 000",
-          ""
-        ],
-        [
-          "1 000",
-          ""
-        ],
-        [
-          "4 000",
-          ""
-        ],
-        [
-          "500",
-          ""
-        ],
-        [
-          "5 000",
-          ""
-        ]
+        ["2 000", ""],
+        ["3 000", ""],
+        ["1 000", ""],
+        ["4 000", ""],
+        ["500",   ""],
+        ["5 000", ""]
       ],
-      "answer": [
-        "3 000"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Elle entre dans la composition de très nombreux plats comme la papa a la huancaina, la papa rellena, l'ocopa et la carapulcra."
+      "answer": ["3 000"],
+      "difficulty": "Difficile"
     },
     {
       "id": 90,
       "type": 0,
       "question": "Quel mets québécois se compose de frites, de cheddar en grains et de sauce brune ?",
       "propositions": [
-        [
-          "Trempette",
-          ""
-        ],
-        [
-          "Poutine",
-          ""
-        ],
-        [
-          "Cipaille",
-          ""
-        ],
-        [
-          "Gibelotte",
-          ""
-        ],
-        [
-          "Tire sur neige",
-          ""
-        ],
-        [
-          "BeaverTails",
-          ""
-        ]
+        ["Trempette",      ""],
+        ["Poutine",        ""],
+        ["Cipaille",       ""],
+        ["Gibelotte",      ""],
+        ["Tire sur neige", ""],
+        ["BeaverTails",    ""]
       ],
-      "answer": [
-        "Poutine"
+      "answer": ["Poutine"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 91,
+      "type": 1,
+      "question": "En moyenne, combien d’années faut-il à un chêne pour atteindre 20 mètres de hauteur ?",
+      "propositions": [
+        []
       ],
-      "difficulty": "Difficile",
-      "anecdote": "Mets longtemps utilisé pour représenter de manière caricaturale la société québécoise, la poutine est maintenant en vogue."
+      "answer": ["50"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 92,
+      "type": 1,
+      "question": "Combien d’années vit en moyenne un bouleau ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["80"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 93,
+      "type": 1,
+      "question": "Quel est l’âge approximatif du plus vieux baobab connu ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["1500"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 94,
+      "type": 1,
+      "question": "Combien d’espèces de chênes existe-t-il dans le monde ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["600"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 95,
+      "type": 1,
+      "question": "À combien de mètres un séquoia peut-il culminer au maximum ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["115"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 96,
+      "type": 1,
+      "question": "En moyenne, combien de litres d’eau un grand arbre peut-il absorber par jour ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["200"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 97,
+      "type": 1,
+      "question": "Combien de millions d’arbres sont plantés chaque année en France environ ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["80"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 98,
+      "type": 1,
+      "question": "Combien de feuilles environ possède un chêne adulte ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["200000"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 99,
+      "type": 1,
+      "question": "Combien d’années faut-il à un pommier pour produire ses premiers fruits ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["4"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 100,
+      "type": 1,
+      "question": "Combien d’espèces d’arbres sont présentes dans la forêt amazonienne ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["1600"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 101,
+      "type": 1,
+      "question": "Combien de centimètres un arbre peut-il croître en moyenne par an ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["50"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 102,
+      "type": 1,
+      "question": "Combien de graines environ produit un pin adulte chaque année ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["10000"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 103,
+      "type": 1,
+      "question": "Combien d’espèces de séquoias existent dans le monde ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["3"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 104,
+      "type": 1,
+      "question": "À quel âge moyen un érable peut-il commencer à produire du sirop ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["10"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 105,
+      "type": 1,
+      "question": "Combien de racines principales un chêne développe-t-il en moyenne ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["1"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 106,
+      "type": 1,
+      "question": "Combien de mètres un eucalyptus peut-il pousser par an dans des conditions idéales ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["2"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 107,
+      "type": 1,
+      "question": "Combien de kilogrammes de bois produit un chêne adulte chaque année environ ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["200"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 108,
+      "type": 1,
+      "question": "Combien de feuilles un érable adulte peut-il perdre en automne ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["50000"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 109,
+      "type": 1,
+      "question": "Combien de litres d’eau une forêt de 1 hectare peut-elle absorber par jour en moyenne ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["10000"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 110,
+      "type": 1,
+      "question": "Combien de pétales a une fleur de lys en moyenne ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["6"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 111,
+      "type": 1,
+      "question": "Combien de jours en moyenne dure la floraison d’une rose ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["7"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 112,
+      "type": 1,
+      "question": "Combien de fleurs de tournesol peut produire une seule plante en moyenne ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["1"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 113,
+      "type": 1,
+      "question": "Combien de fleurs composent une inflorescence de lavande typique ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["50"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 114,
+      "type": 1,
+      "question": "Combien de fleurs une orchidée Phalaenopsis peut-elle produire par tige en moyenne ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["20"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 115,
+      "type": 1,
+      "question": "Combien de variétés de tulipes existent dans le monde ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["3000"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 116,
+      "type": 1,
+      "question": "Combien de centimètres peut mesurer le plus grand pétale d’une fleur de rafflesia ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["90"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 117,
+      "type": 1,
+      "question": "Combien de jours en moyenne une fleur de lotus reste-t-elle ouverte chaque matin ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["3"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 118,
+      "type": 1,
+      "question": "Combien de graines peut produire une seule fleur de pavot en moyenne ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["1000"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 119,
+      "type": 1,
+      "question": "Combien de couleurs naturelles de roses existent dans le monde ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["7"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 120,
+      "type": 3,
+      "question": "Classez ces arbres du plus petit au plus grand en taille moyenne.",
+      "propositions": [
+        ["Bouleau","https://fr.wikipedia.org/wiki/Bouleau#/media/Fichier:Bouleau-cepee.jpg"],
+        ["Chêne","https://fr.wikipedia.org/wiki/Chêne#/media/Fichier:Hain_Eiche_Herbst_121696.jpg"],
+        ["Pin","https://fr.wikipedia.org/wiki/Pin_(plante)#/media/Fichier:Pinparasol.jpg"],
+        ["Séquoia","https://fr.wikipedia.org/wiki/Séquoia_géant#/media/Fichier:General_Sherman_tree_looking_up.jpg"]
+      ],
+      "answer": ["Bouleau", "Chêne", "Pin", "Séquoia"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 121,
+      "type": 3,
+      "question": "Trois fleurs sont déjà classées du plus petit au plus grand, où faut-il placer la Tulipe ?",
+      "propositions": [
+        ["Marguerite","https://fr.wikipedia.org/wiki/Marguerite_commune#/media/Fichier:Leucanthemum_vulgare_2007-06-02_(plants).jpg"],
+        ["Rose","https://fr.wikipedia.org/wiki/Rose_(fleur)#/media/Fichier:Rose_Papa_Meilland.jpg"],
+        ["Tournesol","https://fr.wikipedia.org/wiki/Tournesol#/media/Fichier:Helianthus_annuus_0001.JPG"],
+        ["Tulipe","https://fr.wikipedia.org/wiki/Tulipe#/media/Fichier:Tulipes-byRundvald.jpg"]
+      ],
+      "answer": ["Marguerite", "Rose", "Tulipe", "Tournesol"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 122,
+      "type": 4,
+      "question": "Classez ces fleurs du plus léger au plus lourd.",
+      "propositions": [
+        ["Violette","https://fr.wikipedia.org/wiki/Viola_(plante)#/media/Fichier:JDCANO_Viola_Cazorlensis.jpg"],
+        ["Tulipe","https://fr.wikipedia.org/wiki/Tulipe#/media/Fichier:Tulipes-byRundvald.jpg"],
+        ["Pâquerette","https://thenunheadgardener.com/wp-content/uploads/images/27000000000000354-1-600x597.jpg"],
+        ["Jonquille","https://fr.wikipedia.org/wiki/Narcissus#/media/Fichier:Narcissus_Tête-à-Tête_closeup.jpg"]
+      ],
+      "answer": ["Violette", "Pâquerette", "Tulipe", "Jonquille"],
+      "difficulty": "Moyen"
     }
+
   ]
 }
