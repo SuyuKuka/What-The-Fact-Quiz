@@ -260,35 +260,26 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.score.intValue +=  score.intValue
     }
 
-    fun approxScore(answer: Any, guess: Any): Int {
-        return when {
-            // si ce sont des nombres (Int, Long, Double)
-            answer is Number && guess is Number -> {
-                val a = answer.toDouble()
-                val g = guess.toDouble()
-                val minVal = minOf(a, g)
-                val maxVal = maxOf(a, g)
-                val ratio = if (maxVal == 0.0) 1.0 else minVal / maxVal
-                (ratio * 1000).toInt()
-            }
+    fun approxScore(answer: String, guess: String): Int {
 
-            // si ce sont des chaînes de caractères
-            answer is String && guess is String -> {
-                val size = minOf(answer.length, guess.length)
-                var correct = 0
-                for (i in 0..size-1) {
-                    if (answer[i] == guess[i]) correct++
-                }
-                // nb de lettre correcte sur le nb de lettre de la réponse
-                val percent = (correct.toDouble() / maxOf(answer.length, guess.length)) * 100
-                val score = (percent / 100) * 1000
-                return score.toInt()
+        // si answer et guess sont des nombre
+        if (answer.toIntOrNull() != null  && guess.toIntOrNull() != null) {
+            val a = answer.toDouble()
+            val g = guess.toDouble()
+            val minVal = minOf(a, g)
+            val maxVal = maxOf(a, g)
+            val ratio = if (maxVal == 0.0) 1.0 else minVal / maxVal
+            return (ratio * 1000).toInt()
+        } else {
+            val size = minOf(answer.length, guess.length)
+            var correct = 0
+            for (i in 0..size-1) {
+                if (answer[i] == guess[i]) correct++
             }
-
-            else -> {
-                // types différents : score 0
-                0
-            }
+            // nb de lettre correcte sur le nb de lettre de la réponse
+            val percent = (correct.toDouble() / maxOf(answer.length, guess.length)) * 100
+            val score = (percent / 100) * 1000
+            return score.toInt()
         }
     }
 
