@@ -16,7 +16,7 @@ data class LeaderboardEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val userId: Int,
-    val score: Double,
+    val score: Int,
     val time: Double,
     val subject: String
 )

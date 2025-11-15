@@ -40,7 +40,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
 
     // Leaderboard
     val usernameLeaderboard = mutableListOf<String?>()
-    val score = mutableListOf<Double?>()
+    val score = mutableListOf<Int?>()
     val bestTime = mutableListOf<Double?>()
     val subject = mutableStateOf("")
 
