@@ -223,7 +223,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                 score.intValue = score.intValue + 1000
             }
         } else if (type == 1) {
-            score.intValue = score.intValue + approxWord(answerList.toList()[0], verify.toList()[0])
+            score.intValue = score.intValue + approxScore(answerList.toList()[0], verify.toList()[0])
         } else if (type == 2 || type == 4) {
             // c'est plus long, et plus compliqué d'avoir la réponse exacte, donc les type 2, 4 valent 4000 au total
             for (i in 0..verify.size - 1) {
@@ -235,16 +235,36 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.score.intValue +=  score.intValue
     }
 
-    fun approxWord(w: String, s: String): Int {
-        val size = minOf(w.length, s.length)
-        var correct = 0
-        for (i in 0..size-1) {
-            if (w[i] == s[i]) correct++
+    fun approxScore(answer: Any, guess: Any): Int {
+        return when {
+            // si ce sont des nombres (Int, Long, Double)
+            answer is Number && guess is Number -> {
+                val a = answer.toDouble()
+                val g = guess.toDouble()
+                val minVal = minOf(a, g)
+                val maxVal = maxOf(a, g)
+                val ratio = if (maxVal == 0.0) 1.0 else minVal / maxVal
+                (ratio * 1000).toInt()
+            }
+
+            // si ce sont des chaînes de caractères
+            answer is String && guess is String -> {
+                val size = minOf(answer.length, guess.length)
+                var correct = 0
+                for (i in 0..size-1) {
+                    if (answer[i] == guess[i]) correct++
+                }
+                // nb de lettre correcte sur le nb de lettre de la réponse
+                val percent = (correct.toDouble() / maxOf(answer.length, guess.length)) * 100
+                val score = (percent / 100) * 1000
+                return score.toInt()
+            }
+
+            else -> {
+                // types différents : score 0
+                0
+            }
         }
-        // nb de lettre correcte sur le nb de lettre de la réponse
-        val percent = (correct.toDouble() / maxOf(w.length, s.length)) * 100
-        val score = (percent / 100) * 1000
-        return score.toInt()
     }
 
     fun swapAnswers(i: Int, j: Int) {
