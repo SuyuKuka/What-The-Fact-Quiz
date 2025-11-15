@@ -119,8 +119,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             // type
             data.types.add(allQuestion[i].type)
             // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)    // pas simplifiable ya le currentdao
-            val currentPropositions = shuffle(currentAnswer)
+            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
+            val currentPropositions =
+                if (data.types[i] == 0) {
+                    shuffle(currentAnswer)
+                } else {
+                    currentAnswer.propositions
+                }
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
     }
@@ -134,7 +139,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions = shuffle(currentAnswer)
+            val currentPropositions =
+                if (data.types[i] == 0) {
+                    shuffle(currentAnswer)
+                } else {
+                    currentAnswer.propositions
+                }
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
     }
@@ -148,7 +158,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions = shuffle(currentAnswer)
+            val currentPropositions =
+                if (data.types[i] == 0) {
+                    shuffle(currentAnswer)
+                } else {
+                    currentAnswer.propositions
+                }
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
     }
@@ -162,7 +177,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions = shuffle(currentAnswer)
+            val currentPropositions =
+                if (data.types[i] == 0) {
+                    shuffle(currentAnswer)
+                } else {
+                    currentAnswer.propositions
+                }
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
     }
@@ -195,7 +215,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             data.types.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions = shuffle(currentAnswer)
+            val currentPropositions =
+                if (data.types[i] == 0) {
+                    shuffle(currentAnswer)
+                } else {
+                    currentAnswer.propositions
+                }
             data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
     }
