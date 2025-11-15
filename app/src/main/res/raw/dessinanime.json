@@ -12,7 +12,7 @@
         ["3",  ""],
         ["5",  ""]
       ],
-      "answer": "6",
+      "answer": ["6"],
       "difficulty": "Facile"
     },
     {
@@ -27,7 +27,7 @@
         ["Chien",    ""],
         ["Écureuil", ""]
       ],
-      "answer": "Lapin",
+      "answer": ["Lapin"],
       "difficulty": "Facile"
     },
     {
@@ -42,7 +42,7 @@
         ["Saphir",       ""],
         ["Vert Feuille", ""]
       ],
-      "answer": "Rubis",
+      "answer": ["Rubis"],
       "difficulty": "Facile"
     },
     {
@@ -57,7 +57,7 @@
         ["Dragon / Sol",   ""],
         ["Feu / Électrik", ""]
       ],
-      "answer": "Feu / Vol",
+      "answer": ["Feu / Vol"],
       "difficulty": "Facile"
     },
     {
@@ -72,7 +72,7 @@
         ["Régis",   ""],
         ["Chen",    ""]
       ],
-      "answer": "Sacha",
+      "answer": ["Sacha"],
       "difficulty": "Facile"
     },
     {
@@ -87,7 +87,7 @@
         ["Guerriers magiques", ""],
         ["Évolutions cachées", ""]
       ],
-      "answer": "Monstres de poche",
+      "answer": ["Monstres de poche"],
       "difficulty": "Facile"
     },
     {
@@ -102,7 +102,7 @@
         ["8 ans",  ""],
         ["13 ans", ""]
       ],
-      "answer": "10 ans",
+      "answer": ["10 ans"],
       "difficulty": "Facile"
     },
     {
@@ -117,7 +117,7 @@
         ["Insectes", ""],
         ["Oiseaux",  ""]
       ],
-      "answer": "Souris",
+      "answer": ["Souris"],
       "difficulty": "Facile"
     },
     {
@@ -132,7 +132,7 @@
         ["Un éclair",   ""],
         ["Un triangle", ""]
       ],
-      "answer": "Une spirale",
+      "answer": ["Une spirale"],
       "difficulty": "Facile"
     },
     {
@@ -147,7 +147,7 @@
         ["Pocket Fighters",  ""],
         ["Monster Balls",    ""]
       ],
-      "answer": "Capsule Monsters",
+      "answer": ["Capsule Monsters"],
       "difficulty": "Facile"
     },
     {
@@ -162,7 +162,7 @@
         ["Marron", ""],
         ["Noire",  ""]
       ],
-      "answer": "Verte",
+      "answer": ["Verte"],
       "difficulty": "Moyen"
     },
     {
@@ -177,7 +177,7 @@
         ["Ossatueur", ""],
         ["Porygon",   ""]
       ],
-      "answer": "Osselait",
+      "answer": ["Osselait"],
       "difficulty": "Moyen"
     },
     {
@@ -192,7 +192,7 @@
         ["Une pomme",    ""],
         ["Un bâton",     ""]
       ],
-      "answer": "Un poireau",
+      "answer": ["Un poireau"],
       "difficulty": "Moyen"
     },
     {
@@ -207,7 +207,7 @@
         ["Des fourmis",   ""],
         ["Des araignées", ""]
       ],
-      "answer": "Des criquets",
+      "answer": ["Des criquets"],
       "difficulty": "Moyen"
     },
     {
@@ -222,7 +222,7 @@
         ["Cinq fois",   ""],
         ["Zéro fois",   ""]
       ],
-      "answer": "Deux fois",
+      "answer": ["Deux fois"],
       "difficulty": "Moyen"
     },
     {
@@ -237,7 +237,7 @@
         ["Jessie",   ""],
         ["James",    ""]
       ],
-      "answer": "Giovanni",
+      "answer": ["Giovanni"],
       "difficulty": "Moyen"
     },
     {
@@ -252,7 +252,7 @@
         ["Mewtwo",     ""],
         ["Arceus",     ""]
       ],
-      "answer": "Pikachu",
+      "answer": ["Pikachu"],
       "difficulty": "Moyen"
     },
     {
@@ -267,7 +267,7 @@
         ["Des États-Unis", ""],
         ["De la Corée",    ""]
       ],
-      "answer": "Du Japon",
+      "answer": ["Du Japon"],
       "difficulty": "Moyen"
     },
     {
@@ -282,7 +282,7 @@
         ["Or",       ""],
         ["Violette", ""]
       ],
-      "answer": "Bleue",
+      "answer": ["Bleue"],
       "difficulty": "Moyen"
     },
     {
@@ -297,7 +297,7 @@
         ["Destruction",   ""],
         ["Misère",        ""]
       ],
-      "answer": "Dévastation",
+      "answer": ["Dévastation"],
       "difficulty": "Moyen"
     },
     {
@@ -312,7 +312,7 @@
         ["Ectoplasma", ""],
         ["Melofée",    ""]
       ],
-      "answer": "Ossatueur",
+      "answer": ["Ossatueur"],
       "difficulty": "Difficile"
     },
     {
@@ -327,7 +327,7 @@
         ["Pêcha",  ""],
         ["Mepo",   ""]
       ],
-      "answer": "Kika",
+      "answer": ["Kika"],
       "difficulty": "Difficile"
     },
     {
@@ -342,7 +342,7 @@
         ["Jet Li",      ""],
         ["Donnie Yen",  ""]
       ],
-      "answer": "Bruce Lee",
+      "answer": ["Bruce Lee"],
       "difficulty": "Difficile"
     },
     {
@@ -357,7 +357,7 @@
         ["Le panda",     ""],
         ["Le paresseux", ""]
       ],
-      "answer": "Le tapir",
+      "answer": ["Le tapir"],
       "difficulty": "Difficile"
     },
     {
@@ -372,7 +372,7 @@
         ["Dracaufeu",  ""],
         ["Mew",        ""]
       ],
-      "answer": "Rhinoféros",
+      "answer": ["Rhinoféros"],
       "difficulty": "Difficile"
     },
     {
@@ -387,7 +387,7 @@
         ["Mewtwo",   ""],
         ["Rayquaza", ""]
       ],
-      "answer": "Arceus",
+      "answer": ["Arceus"],
       "difficulty": "Difficile"
     },
     {
@@ -402,7 +402,7 @@
         ["Lugia",      ""],
         ["Celebi",     ""]
       ],
-      "answer": "Mew",
+      "answer": ["Mew"],
       "difficulty": "Difficile"
     },
     {
@@ -417,7 +417,7 @@
         ["Pikachu",    ""],
         ["Rattata",    ""]
       ],
-      "answer": "Bulbizarre",
+      "answer": ["Bulbizarre"],
       "difficulty": "Difficile"
     },
     {
@@ -432,7 +432,7 @@
         ["Carapuce",   ""],
         ["Salamèche",  ""]
       ],
-      "answer": "Melofée",
+      "answer": ["Melofée"],
       "difficulty": "Difficile"
     },
     {
@@ -447,7 +447,7 @@
         ["151 et 150", ""],
         ["1 et 10",    ""]
       ],
-      "answer": "25 et 52",
+      "answer": ["25 et 52"],
       "difficulty": "Difficile"
     },
     {
@@ -462,7 +462,7 @@
         ["Masashi Kishimoto", ""],
         ["Tite Kubo",         ""]
       ],
-      "answer": "Eiichiro Oda",
+      "answer": ["Eiichiro Oda"],
       "difficulty": "Facile"
     },
     {
@@ -477,7 +477,7 @@
         ["Sanji",   ""],
         ["Chopper", ""]
       ],
-      "answer": "Nami",
+      "answer": ["Nami"],
       "difficulty": "Facile"
     },
     {
@@ -492,7 +492,7 @@
         ["Kirin",       ""],
         ["Shichibukai", ""]
       ],
-      "answer": "Zoan",
+      "answer": ["Zoan"],
       "difficulty": "Facile"
     },
     {
@@ -507,7 +507,7 @@
         ["Kaido",            ""],
         ["Charlotte Linlin", ""]
       ],
-      "answer": "Barbe Noire",
+      "answer": ["Barbe Noire"],
       "difficulty": "Facile"
     },
     {
@@ -522,7 +522,7 @@
         ["Mr. 1",           ""],
         ["Miss All Sunday", ""]
       ],
-      "answer": "Crocodile",
+      "answer": ["Crocodile"],
       "difficulty": "Facile"
     },
     {
@@ -537,7 +537,7 @@
         ["Big Mom",       ""],
         ["Kidd",          ""]
       ],
-      "answer": "Shanks",
+      "answer": ["Shanks"],
       "difficulty": "Facile"
     },
     {
@@ -552,7 +552,7 @@
         ["Luffy",   ""],
         ["Aokiji",  ""]
       ],
-      "answer": "Law",
+      "answer": ["Law"],
       "difficulty": "Facile"
     },
     {
@@ -567,7 +567,7 @@
         ["Fish-Man Island", ""],
         ["Wano Kuni",       ""]
       ],
-      "answer": "Laught Tale",
+      "answer": ["Laught Tale"],
       "difficulty": "Facile"
     },
     {
@@ -582,7 +582,7 @@
         ["Cyborgs",         ""],
         ["Long-bras",       ""]
       ],
-      "answer": "Géants",
+      "answer": ["Géants"],
       "difficulty": "Facile"
     },
     {
@@ -597,7 +597,7 @@
         ["Tashigi",     ""],
         ["Vivi",        ""]
       ],
-      "answer": "Boa Hancock",
+      "answer": ["Boa Hancock"],
       "difficulty": "Facile"
     },
     {
@@ -612,7 +612,7 @@
         ["Thousand Sunny", ""],
         ["Sabaody Park",   ""]
       ],
-      "answer": "Baratie",
+      "answer": ["Baratie"],
       "difficulty": "Moyen"
     },
     {
@@ -627,7 +627,7 @@
         ["6 mois", ""],
         ["4 ans",  ""]
       ],
-      "answer": "2 ans",
+      "answer": ["2 ans"],
       "difficulty": "Moyen"
     },
     {
@@ -642,7 +642,7 @@
         ["Thatch", ""],
         ["Izo",    ""]
       ],
-      "answer": "Joz",
+      "answer": ["Joz"],
       "difficulty": "Moyen"
     },
     {
@@ -657,7 +657,7 @@
         ["Timonier",        ""],
         ["Canonnier",       ""]
       ],
-      "answer": "Médecin de bord",
+      "answer": ["Médecin de bord"],
       "difficulty": "Moyen"
     },
     {
@@ -672,7 +672,7 @@
         ["Grand Line",    ""],
         ["Nouveau Monde", ""]
       ],
-      "answer": "East Blue",
+      "answer": ["East Blue"],
       "difficulty": "Moyen"
     },
     {
@@ -687,7 +687,7 @@
         ["Z",                               ""],
         ["Baron Omatsuri et l'Île Secrète", ""]
       ],
-      "answer": "Strong World",
+      "answer": ["Strong World"],
       "difficulty": "Moyen"
     },
     {
@@ -702,7 +702,7 @@
         ["Sickle",        ""],
         ["Scopper Gaban", ""]
       ],
-      "answer": "Weeble",
+      "answer": ["Weeble"],
       "difficulty": "Moyen"
     },
     {
@@ -717,7 +717,7 @@
         ["Pica",       ""],
         ["Vergo",      ""]
       ],
-      "answer": "Lao G",
+      "answer": ["Lao G"],
       "difficulty": "Moyen"
     },
     {
@@ -732,7 +732,7 @@
         ["Dalton", ""],
         ["Koza",   ""]
       ],
-      "answer": "Cobra",
+      "answer": ["Cobra"],
       "difficulty": "Moyen"
     },
     {
@@ -747,7 +747,7 @@
         ["Saint Jalmack",   ""],
         ["Saint Figarland", ""]
       ],
-      "answer": "Saint Charlos",
+      "answer": ["Saint Charlos"],
       "difficulty": "Moyen"
     },
     {
@@ -762,7 +762,7 @@
         ["Ivankov",   ""],
         ["Inazuma",   ""]
       ],
-      "answer": "Hannyabal",
+      "answer": ["Hannyabal"],
       "difficulty": "Difficile"
     },
     {
@@ -777,7 +777,7 @@
         ["Marine",                         ""],
         ["Pirates de l'Équipage de Kaido", ""]
       ],
-      "answer": "Cipher Pol",
+      "answer": ["Cipher Pol"],
       "difficulty": "Difficile"
     },
     {
@@ -792,7 +792,7 @@
         ["Girafe",   ""],
         ["Ours",     ""]
       ],
-      "answer": "Éléphant",
+      "answer": ["Éléphant"],
       "difficulty": "Difficile"
     },
     {
@@ -807,7 +807,7 @@
         ["Burning Blood",   ""],
         ["Pirate Warriors", ""]
       ],
-      "answer": "Odyssey",
+      "answer": ["Odyssey"],
       "difficulty": "Difficile"
     },
     {
@@ -822,7 +822,7 @@
         ["Trafalgar Law", ""],
         ["Sugar",         ""]
       ],
-      "answer": "Diamante",
+      "answer": ["Diamante"],
       "difficulty": "Difficile"
     },
     {
@@ -837,7 +837,7 @@
         ["Perospero", ""],
         ["Daifuku",   ""]
       ],
-      "answer": "Snack",
+      "answer": ["Snack"],
       "difficulty": "Difficile"
     },
     {
@@ -852,7 +852,7 @@
         ["Sabo",      ""],
         ["Koala",     ""]
       ],
-      "answer": "Karasu",
+      "answer": ["Karasu"],
       "difficulty": "Difficile"
     },
     {
@@ -867,7 +867,7 @@
         ["Amiral",        ""],
         ["Enseigne",      ""]
       ],
-      "answer": "Contre-Amiral",
+      "answer": ["Contre-Amiral"],
       "difficulty": "Difficile"
     },
     {
@@ -882,7 +882,7 @@
         ["Hope",            ""],
         ["Share the World", ""]
       ],
-      "answer": "Hikari E",
+      "answer": ["Hikari E"],
       "difficulty": "Difficile"
     },
     {
@@ -897,7 +897,7 @@
         ["Oz",      ""],
         ["Hogback", ""]
       ],
-      "answer": "John",
+      "answer": ["John"],
       "difficulty": "Difficile"
     },
     {
@@ -912,7 +912,7 @@
         ["Dans ses mains",    ""],
         ["Sous ses oreilles", ""]
       ],
-      "answer": "Dans ses pieds",
+      "answer": ["Dans ses pieds"],
       "difficulty": "Facile"
     },
     {
@@ -927,7 +927,7 @@
         ["Butters", ""],
         ["Chef",    ""]
       ],
-      "answer": "Kenny",
+      "answer": ["Kenny"],
       "difficulty": "Facile"
     },
     {
@@ -942,7 +942,7 @@
         ["Daphné", ""],
         ["Véra",   ""]
       ],
-      "answer": "Sammy",
+      "answer": ["Sammy"],
       "difficulty": "Facile"
     },
     {
@@ -957,7 +957,7 @@
         ["Homer",  ""],
         ["Patty",  ""]
       ],
-      "answer": "Bart",
+      "answer": ["Bart"],
       "difficulty": "Facile"
     },
     {
@@ -972,7 +972,7 @@
         ["Écureuil",     ""],
         ["Chiot",        ""]
       ],
-      "answer": "Raton laveur",
+      "answer": ["Raton laveur"],
       "difficulty": "Facile"
     },
     {
@@ -987,7 +987,7 @@
         ["Magique",     ""],
         ["Fantastique", ""]
       ],
-      "answer": "Enchanté",
+      "answer": ["Enchanté"],
       "difficulty": "Facile"
     },
     {
@@ -1002,7 +1002,7 @@
         ["Sonic",   ""],
         ["Mario",   ""]
       ],
-      "answer": "Pac-Man",
+      "answer": ["Pac-Man"],
       "difficulty": "Facile"
     },
     {
@@ -1017,7 +1017,7 @@
         ["Pico le Pivert",   ""],
         ["Le Grand Corbeau", ""]
       ],
-      "answer": "Woody Woodpecker",
+      "answer": ["Woody Woodpecker"],
       "difficulty": "Facile"
     },
     {
@@ -1032,7 +1032,7 @@
         ["Indiana Jones",           ""],
         ["Le Seigneur des Anneaux", ""]
       ],
-      "answer": "Star Wars",
+      "answer": ["Star Wars"],
       "difficulty": "Facile"
     },
     {
@@ -1047,7 +1047,7 @@
         ["Sid Sawyer",       ""],
         ["Joe Harper",       ""]
       ],
-      "answer": "Huckleberry Finn",
+      "answer": ["Huckleberry Finn"],
       "difficulty": "Facile"
     },
     {
@@ -1062,7 +1062,7 @@
         ["Baguette magique", ""],
         ["Bague",            ""]
       ],
-      "answer": "Pendentif",
+      "answer": ["Pendentif"],
       "difficulty": "Moyen"
     },
     {
@@ -1077,7 +1077,7 @@
         ["Miroir magique", ""],
         ["Cristal",        ""]
       ],
-      "answer": "Herbe musicale",
+      "answer": ["Herbe musicale"],
       "difficulty": "Moyen"
     },
     {
@@ -1092,7 +1092,7 @@
         ["Jimmy Neutron", ""],
         ["Dexter",        ""]
       ],
-      "answer": "Ben 10",
+      "answer": ["Ben 10"],
       "difficulty": "Moyen"
     },
     {
@@ -1107,7 +1107,7 @@
         ["Écouteur",      ""],
         ["Talkie-walkie", ""]
       ],
-      "answer": "Montre",
+      "answer": ["Montre"],
       "difficulty": "Moyen"
     },
     {
@@ -1122,7 +1122,7 @@
         ["Hélicoptère", ""],
         ["Sous-marin",  ""]
       ],
-      "answer": "Biplan",
+      "answer": ["Biplan"],
       "difficulty": "Moyen"
     },
     {
@@ -1137,7 +1137,7 @@
         ["Il est teint",     ""],
         ["Il est différent", ""]
       ],
-      "answer": "Il est sale",
+      "answer": ["Il est sale"],
       "difficulty": "Moyen"
     },
     {
@@ -1152,7 +1152,7 @@
         ["Écharpe et bonnet",  ""],
         ["Lunettes et veste",  ""]
       ],
-      "answer": "Cravate et chapeau",
+      "answer": ["Cravate et chapeau"],
       "difficulty": "Moyen"
     },
     {
@@ -1167,7 +1167,7 @@
         ["Un chaton",       ""],
         ["Un chiot",        ""]
       ],
-      "answer": "Un caneton",
+      "answer": ["Un caneton"],
       "difficulty": "Moyen"
     },
     {
@@ -1182,7 +1182,7 @@
         ["Dessin animé classique", ""],
         ["Stop motion",            ""]
       ],
-      "answer": "Marionnettes",
+      "answer": ["Marionnettes"],
       "difficulty": "Moyen"
     },
     {
@@ -1197,7 +1197,7 @@
         ["Minnie Mouse", ""],
         ["Olive Oyl",    ""]
       ],
-      "answer": "Betty Boop",
+      "answer": ["Betty Boop"],
       "difficulty": "Moyen"
     },
     {
@@ -1212,7 +1212,7 @@
         ["Canal J", ""],
         ["Tiji",    ""]
       ],
-      "answer": "Gulli",
+      "answer": ["Gulli"],
       "difficulty": "Difficile"
     },
     {
@@ -1227,7 +1227,7 @@
         ["Télétubbies",    ""],
         ["Fous du volant", ""]
       ],
-      "answer": "Popples",
+      "answer": ["Popples"],
       "difficulty": "Difficile"
     },
     {
@@ -1242,7 +1242,7 @@
         ["Dofus",          ""],
         ["Ogrest",         ""]
       ],
-      "answer": "Wakfu",
+      "answer": ["Wakfu"],
       "difficulty": "Difficile"
     },
     {
@@ -1257,7 +1257,7 @@
         ["Capitaine Flam", ""],
         ["Albator",        ""]
       ],
-      "answer": "X-Or",
+      "answer": ["X-Or"],
       "difficulty": "Difficile"
     },
     {
@@ -1272,7 +1272,7 @@
         ["Barnabé",   ""],
         ["Finot",     ""]
       ],
-      "answer": "Croquetou",
+      "answer": ["Croquetou"],
       "difficulty": "Difficile"
     },
     {
@@ -1287,7 +1287,7 @@
         ["Chien",  ""],
         ["Poney",  ""]
       ],
-      "answer": "Cheval",
+      "answer": ["Cheval"],
       "difficulty": "Difficile"
     },
     {
@@ -1302,7 +1302,7 @@
         ["Cuisinier", ""],
         ["Musicien",  ""]
       ],
-      "answer": "Peintre",
+      "answer": ["Peintre"],
       "difficulty": "Difficile"
     },
     {
@@ -1317,7 +1317,7 @@
         ["Quatre", ""],
         ["Trois",  ""]
       ],
-      "answer": "Cinq",
+      "answer": ["Cinq"],
       "difficulty": "Difficile"
     },
     {
@@ -1332,7 +1332,7 @@
         ["Yogi l'ours",        ""],
         ["Les Fous du volant", ""]
       ],
-      "answer": "Calimero",
+      "answer": ["Calimero"],
       "difficulty": "Difficile"
     },
     {
@@ -1347,7 +1347,7 @@
         ["Souris",       ""],
         ["Gerbille",     ""]
       ],
-      "answer": "Hamster",
+      "answer": ["Hamster"],
       "difficulty": "Difficile"
     }
   ]

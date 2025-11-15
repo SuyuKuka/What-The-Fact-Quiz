@@ -1645,10 +1645,10 @@
       "type": 3,
       "question": "Classez ces arbres du plus petit au plus grand en taille moyenne.",
       "propositions": [
-        ["Bouleau","https://fr.wikipedia.org/wiki/Bouleau#/media/Fichier:Bouleau-cepee.jpg"],
-        ["Chêne","https://fr.wikipedia.org/wiki/Chêne#/media/Fichier:Hain_Eiche_Herbst_121696.jpg"],
-        ["Pin","https://fr.wikipedia.org/wiki/Pin_(plante)#/media/Fichier:Pinparasol.jpg"],
-        ["Séquoia","https://fr.wikipedia.org/wiki/Séquoia_géant#/media/Fichier:General_Sherman_tree_looking_up.jpg"]
+        ["Bouleau","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr83KvSVCJpMFu-NNVri0n1uwHORC6ii6itva4ApC_yTzoxdn8l7cJY2Txw652WmFV6gfq9s7yOSa4vqowv2Bp6eLN5DSqwapswHEDIQ&s=10"],
+        ["Chêne","https://pepinieres-lecomte.com/2357-thickbox_default/chene-pedoncule.jpg"],
+        ["Pin","https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTzeIfDrPVk7X0CQNSA4DFR2HYHlx6-GsbThN9CA2HEz44bpijGfBq0tF7V1t8W_V5CJjSJmJBLNa9eoatQR3MVPochV5F-nI-7PLMjFc32"],
+        ["Séquoia","https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sequoia_sempervirens_Big_Basin_Redwoods_State_Park_1.jpg/960px-Sequoia_sempervirens_Big_Basin_Redwoods_State_Park_1.jpg"]
       ],
       "answer": ["Bouleau", "Chêne", "Pin", "Séquoia"],
       "difficulty": "Facile"
@@ -1658,10 +1658,10 @@
       "type": 3,
       "question": "Trois fleurs sont déjà classées du plus petit au plus grand, où faut-il placer la Tulipe ?",
       "propositions": [
-        ["Marguerite","https://fr.wikipedia.org/wiki/Marguerite_commune#/media/Fichier:Leucanthemum_vulgare_2007-06-02_(plants).jpg"],
-        ["Rose","https://fr.wikipedia.org/wiki/Rose_(fleur)#/media/Fichier:Rose_Papa_Meilland.jpg"],
-        ["Tournesol","https://fr.wikipedia.org/wiki/Tournesol#/media/Fichier:Helianthus_annuus_0001.JPG"],
-        ["Tulipe","https://fr.wikipedia.org/wiki/Tulipe#/media/Fichier:Tulipes-byRundvald.jpg"]
+        ["Marguerite","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJlrQV0BTLpwsqAi_6fRN5JjLyla9sbhf0fbopyETY8-AEtUYD843My0p-Nh8Y7YIYFsEIzDTBTH3UEFyd30Na4z058Z_LT4reVPO_QA&s=10"],
+        ["Rose","https://www.max-le-fleuriste.fr/316-large_default/rose-eternelle-fuchsia-xl.jpg"],
+        ["Tournesol","https://binette-et-jardin.ouest-france.fr/images/dossiers/historique/mini/tournesol-180214-650-325.jpg"],
+        ["Tulipe","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuF0CUlZ3etq6LQ9xzefZ_-viwySHSSS9XkLegZXHeF-a4NjiV5EmXC8j3_E6j55cHaz8XmhYf7wU9OaVDTMNpmB2nVe1B1_dA45tdwz0&s=10"]
       ],
       "answer": ["Marguerite", "Rose", "Tulipe", "Tournesol"],
       "difficulty": "Facile"
