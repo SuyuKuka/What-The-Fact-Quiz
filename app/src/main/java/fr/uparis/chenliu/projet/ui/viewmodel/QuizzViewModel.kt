@@ -40,7 +40,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         val nbQuestion: MutableIntState,
         val gameEnded: MutableState<Boolean>,
         val time: MutableDoubleState,
-        val score: MutableDoubleState
+        val score: MutableIntState
     )
 
     private val db = AppDatabase.getInstance(application)
@@ -84,7 +84,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         nbQuestion = mutableIntStateOf(10),
         gameEnded = mutableStateOf(false),
         time = mutableDoubleStateOf(0.0),
-        score = mutableDoubleStateOf(0.0)
+        score = mutableIntStateOf(0)
     )
 
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
@@ -213,23 +213,25 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun calcScore(gameData: GameData, answerList: List<String>, verify: List<String>, type: Int) {
-        val score = mutableDoubleStateOf(0.0)
+        val score = mutableIntStateOf(0)
         if (type == 0 || type == 3) {
-            if (answerList.toList().toString() == verify.toList().toString()) score.doubleValue++
+            if (answerList.toList().toString() == verify.toList().toString()){
+                score.intValue = score.intValue + 1000
+            }
         } else if (type == 1) {
             if (answerList.toList()[0] == verify.toList()[0]) {
-                score.doubleValue++
+                score.intValue = score.intValue + 1000 // todo: pourcentage
             }
+            // c'est plus long, et plus compliqué d'avoir la bonne réponse
+            // donc les type 2, 4 valent 4000
         } else if (type == 2 || type == 4) {
             for (i in 0..verify.size - 1) {
                 if (answerList.toList()[i] == verify.toList()[i]) {
-                    score.doubleValue += 0.25
+                    score.intValue = score.intValue + 1000
                 }
             }
-        } else {
-            score.doubleValue = 0.0
         }
-        gameData.score.doubleValue += score.doubleValue
+        gameData.score.intValue +=  score.intValue
     }
 
     fun swapAnswers(i: Int, j: Int) {
@@ -244,7 +246,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         calcScore(gameData = gameData, answerList = answerList, verify = verify, type = type)
         gameData.nbQuestion.intValue--      // reduire le nb de question
         gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
-        if (currentQuestion.intValue < 10) { currentQuestion.intValue++ }
+        if (currentQuestion.intValue == 9) { currentQuestion.intValue = 0 } else { currentQuestion.intValue++ }
         resetDragDrop()
         currentImage.intValue = 0
     }
@@ -252,7 +254,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     fun resetStats(gameData: GameData) {
         removeEnergy()
         gameData.nbQuestion.intValue = 10
-        gameData.score.doubleValue = 0.0
+        gameData.score.intValue = 0
         gameData.answerHistory.clear()
         gameData.questionHistory.clear()
         gameData.goodAnswer.clear()
@@ -361,8 +363,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun insertLeaderboard() {
         viewModelScope.launch {
-            println(gameData.score.doubleValue)
-            db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.doubleValue, time = gameData.time.doubleValue, subject = subject.value))
+            println(gameData.score.intValue)
+            db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.intValue, time = gameData.time.doubleValue, subject = subject.value))
         }
     }
 
