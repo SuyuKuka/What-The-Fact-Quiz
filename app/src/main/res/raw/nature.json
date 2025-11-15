@@ -1553,51 +1553,51 @@
     {
       "id": 111,
       "type": 1,
-      "question": "Combien de jours en moyenne dure la floraison d’une rose ?",
+      "question": "Quel est le nom de la fleur nationale du Japon ?",
       "propositions": [
         []
       ],
-      "answer": ["7"],
+      "answer": ["Sakura"],
       "difficulty": "Difficile"
     },
     {
       "id": 112,
       "type": 1,
-      "question": "Combien de fleurs de tournesol peut produire une seule plante en moyenne ?",
+      "question": "Combien de pétales a typiquement une marguerite commune ?",
       "propositions": [
         []
       ],
-      "answer": ["1"],
+      "answer": ["34"],
       "difficulty": "Difficile"
     },
     {
       "id": 113,
       "type": 1,
-      "question": "Combien de fleurs composent une inflorescence de lavande typique ?",
+      "question": "Quelle fleur est connue pour s’ouvrir uniquement la nuit ?",
       "propositions": [
         []
       ],
-      "answer": ["50"],
+      "answer": ["Datura"],
       "difficulty": "Difficile"
     },
     {
       "id": 114,
       "type": 1,
-      "question": "Combien de fleurs une orchidée Phalaenopsis peut-elle produire par tige en moyenne ?",
+      "question": "Combien de fleurs un tournesol géant peut-il produire sur une seule inflorescence ?",
       "propositions": [
         []
       ],
-      "answer": ["20"],
+      "answer": ["2000"],
       "difficulty": "Difficile"
     },
     {
       "id": 115,
       "type": 1,
-      "question": "Combien de variétés de tulipes existent dans le monde ?",
+      "question": "Quel est le nom de la plus grande fleur du monde ?",
       "propositions": [
         []
       ],
-      "answer": ["3000"],
+      "answer": ["Rafflesia"],
       "difficulty": "Difficile"
     },
     {
@@ -1668,17 +1668,120 @@
     },
     {
       "id": 122,
-      "type": 4,
-      "question": "Classez ces fleurs du plus léger au plus lourd.",
+      "type": 3,
+      "question": "Classez ces arbres fruitiers du plus petit au plus grand en taille moyenne.",
       "propositions": [
-        ["Violette","https://fr.wikipedia.org/wiki/Viola_(plante)#/media/Fichier:JDCANO_Viola_Cazorlensis.jpg"],
-        ["Tulipe","https://fr.wikipedia.org/wiki/Tulipe#/media/Fichier:Tulipes-byRundvald.jpg"],
-        ["Pâquerette","https://thenunheadgardener.com/wp-content/uploads/images/27000000000000354-1-600x597.jpg"],
-        ["Jonquille","https://fr.wikipedia.org/wiki/Narcissus#/media/Fichier:Narcissus_Tête-à-Tête_closeup.jpg"]
+        ["Figuier","https://www.leparisien.fr/resizer/IpXVD0IO3PvkcfywJyev9AyIaiM=/arc-photo-lpguideshopping/eu-central-1-prod/public/A3RVA7MIMJC45FE6EFC4EYOHCA.jpg"],
+        ["Pommier","https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQmyXZ1-PMKg5P1o4QkglaSFiqAN0v8NotdUhPdf04qQ7CSViF__aFbwGqh-HRgcHo1WDH09y_RTZwzy4Nr39bPpFSyL6rLqEa1QeWJIoE"],
+        ["Ceriser","https://conseils-jardin.willemsefrance.fr/wp-content/uploads/2021/07/cerisier.jpg"],
+        ["Noyer","https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQLkAMda8-AytW2UEX5QTP9bLjemFdrrsYuRyF5mZuLnZj5UafULVRD8mY7l17swUl9LOgUKu6PBTA_u4Hzno9UmBIGvstSvFkOiwkkYtQ "]
       ],
-      "answer": ["Violette", "Pâquerette", "Tulipe", "Jonquille"],
-      "difficulty": "Moyen"
+      "answer": ["Figuier","Ceriser","Pommier","Noyer"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 123,
+      "type": 3,
+      "question": "Classez ces plantes carnivores du plus petit au plus grand.",
+      "propositions": [
+        ["Dionée attrape-mouche","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxFZiAMzqterK30HATNpiwEqBCQER48weRaejD2NZ8LzQfs9sH3RfZSS6AhFE6GKVdVfRtv7jDQIrbqgKFXKLhBRs-gZS8byrh6uFF0Va7BA&s=10"],
+        ["Sarracenia","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcKOwkj51crkIWT-4kBXlCphRuRYh-qQY0Dabg48LRVsCr8AwZhzBgOfqXMBx0keIlv5UDBdJxqrKMSHd9pn5t0g5SoMat9d24XRN8zHhLNg&s=10"],
+        ["Nepenthes","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3_86HDbqyjWTrwWfjeehQ7ySdAMJf9ZXUORIsti4Bd5Q5EkuKwAvOtZ3fF-xokX7Mw0g-W478FRfFB1qZKnfSMi_hB32oyQ_LFAIhSiPL&s=10"],
+        ["Drosera","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHj3ueLy_ncZbnTLIkZarlSuXHRoT0cB6VhyI6fsJ0qDIy92EgTcZib_hwubGNnMcRkpbhtz-x9PC76WE6iT6J9hPpPLFUYvaqHYSMSQrwBQ&s=10"]
+      ],
+      "answer": ["Dionée attrape-mouche","Drosera","Sarracenia","Nepenthes"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 124,
+      "type": 3,
+      "question": "Classez ces conifères du plus petit au plus grand en taille moyenne.",
+      "propositions": [
+        ["Cyprès","https://www.jardindupicvert.com/media/catalog/product/cache/52718ea4545b235e4b299b9f43100c72/c/y/cypres-d-italie-de-provence-garda-22979.jpg"],
+        ["Pin","https://www.willemsefrance.fr/cdn/shop/files/ADO_103186_1_BK_1750150421528_1800x.jpg?v=1753260276"],
+        ["Séquoia","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl8FNJjje2kMB8SL14EUz0O8zp7NI2yaxeClTjCPDAhGImu05W5VTq7LoUniuG2c8KEIz0TLDplT2UIFjv3zYuWJ1r4lcM3IYkHaioENE&s=10"],
+        ["Thuya","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-QcMQ1VPmahuOD2vAGKWMGLsDlAY9ljfHWw_Y_jG_UkBGAE6dVdnFAgHwzh-wuHsp_XdKxnZbfM99sRNt8KqilL9vSkE7oSH2mvwmaCg&s=10"]
+      ],
+      "answer": ["Cyprès","Thuya","Pin","Séquoia"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 125,
+      "type": 3,
+      "question": "Classez ces plantes aquatiques du plus petit au plus grand.",
+      "propositions": [
+        ["Nénuphar","https://www.aquaportail.com/aquabdd/photos/nymphaea-alba.webp"],
+        ["Lotus sacré","https://www.sciencesetavenir.fr/assets/img/2017/05/19/cover-r4x3w1200-591ee0293e0d0-000-oj5cn.jpg"],
+        ["Papyrus","https://www.rustica.fr/images/cyperus-papyrus-bord-d-bassin-vk.jpg"],
+        ["Elodea","https://media.gerbeaud.net/2021/04/640/egeria-najas-elodee.jpg"]
+      ],
+      "answer": ["Nénuphar","Elodea","Lotus sacré","Papyrus"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 126,
+      "type": 3,
+      "question": "Classez ces cactus du plus petit au plus grand.",
+      "propositions": [
+        ["Mammillaria","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlsyhiq1l_DKVaIivDwx8jfsgsXy3Vd0cVQ_TbkC77m9_NaEAW0iny3MCrsjW1V-NQGzt_JN5LlqysGUXb7EjIOSSgp9Mb5P1vAKHWzw&s=10"],
+        ["Echinopsis","https://www.terrelointaine.fr/1805-large_default/cactus-echinopsis-candicans.jpg"],
+        ["Saguaro","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ18RLaFQUHKzKHNyJMvJdK59fodJzaDBpDmJt8lHtHd8skYjdHhnTIS_MWthSBa6qBFCFB-BN9oyXIkaJ5-HZXuxU0QuCCnOGb9mOKRA&s=10"],
+        ["Ferocactus","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGs02xGUyFIAL0uk2PXjko-Y5pT1dWQ7KRlJ2pEonG44Fmt3rb7cF5y8wikjSo1FNVNQwv1O2r5My6OHToJxlfiodAn9S7wpY72HgHdQ&s=10"]
+      ],
+      "answer": ["Mammillaria","Echinopsis","Ferocactus","Saguaro"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 127,
+      "type": 3,
+      "question": "Classez ces fleurs comestibles du plus petit au plus grand.",
+      "propositions": [
+        ["Violette","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5U85T1Su8FiHmPDArSaXiQBzetOzC66tYcFptg3NpXSV5hICdMPOJ0FW_mO4Lxt7pXgEsND3lXp91KhsEEQoj4uvsRLW8Rmtravt3bw&s=10"],
+        ["Capucine","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ3k4LajElUEpRi8BhFMFhfArd-bWuvn4jTYnJfHilM2ArStlS9RtA7EtHH2NmhhC8x-8_KXC57XhHvrARBU4sGT2YxXDKlxGsBmZPag&s=10"],
+        ["Hibiscus","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE09gbEIhRXjO-s5D3svGPGVE_TCG9NQIMpTciqGQ5MriM-4xJ31FxdNnvc-2si6dlFSgu9UYcaKiy1GltujcnjSVLITQ8pq7PY9x3E9U&s=10"],
+        ["Souci","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEJW_sFaiio9dX2dALcIHxiwnVdkWbF35UfNXTg5DUjz0NATOpnUyU9w8wed9AegMb5bDY11UL52PmLOLUQn72p_ehbllDwv52kdSaPh4&s=10"]
+      ],
+      "answer": ["Violette","Souci","Capucine","Hibiscus"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 128,
+      "type": 3,
+      "question": "Classez ces arbustes du plus petit au plus grand.",
+      "propositions": [
+        ["Buis","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMl3hmCGVRrtyqrjJR5z5N7gZ04PGj66CfJ78Fei4KMO-ir4nm5sp7ZoC7io0NGp8hRIu-IvCPsW6DBrgK4SNZ3ztk5YATGzoNBFDvfDA&s=10"],
+        ["Forsythia","https://media.ooreka.fr/public/image/plant/280/mainImage-source-11552558.jpg"],
+        ["Hortensia","https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTy__uESRJZVOmiB5c6E_vGJiuPOlc_mJSC_DxvpO6QUdwsvQS8W-2RfoBaczxv39wOOVqq6HLG5aY742gTWljhtSpEDLekf7vNew4BiBI"],
+        ["Laurier-rose","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKzgjvxgEuyeBmjB0W-xcrOUoJVBIOgVWok0dzEH7A67606aC9VhT8rTFZw4BMMMFAyeULhhLw7YYm2DmLO6mPaFLPPsDOdEU9Q3mpfQ&s=10"]
+      ],
+      "answer": ["Buis","Forsythia","Hortensia","Laurier-rose"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 129,
+      "type": 3,
+      "question": "Classez ces arbres tropicaux du plus petit au plus grand.",
+      "propositions": [
+        ["Bananier","https://www.treedom.net/_next/image?url=https%3A%2F%2Fassets.treedom.net%2Fimage%2Fupload%2Fs--KA_ALEmL--%2Fc_limit%2Cf_auto%2Fv1%2Fscientific_specie-gallery%2Fs%2F329133&w=3840&q=75"],
+        ["Cocotier","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMOGobi8rQR75NP2zyWKhI2mldBu34QxjKRkPOglRN6NTASlTez_yOlHOmPhhjj8AYKuufEPR5XKOTFNdXZnc96EozQb_4QiiEwRE8wA&s=10"],
+        ["Mangoier","https://ma-pepiniere.fr/media/cache/sylius_shop_product_original/ef/f6/eabd3dd677ba47defeb5b8a688a8.jpg"],
+        ["Papayer","https://media.ooreka.fr/public/image/plant/2081/varietyImage/8uhmaxmb5o8wcso8soc4goggc-source-13818691.jpg"]
+      ],
+      "answer": ["Bananier","Papayer","Cocotier","Mangoier"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 130,
+      "type": 3,
+      "question": "Classez ces fleurs tropicales du plus petit au plus grand.",
+      "propositions": [
+        ["Hibiscus","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE09gbEIhRXjO-s5D3svGPGVE_TCG9NQIMpTciqGQ5MriM-4xJ31FxdNnvc-2si6dlFSgu9UYcaKiy1GltujcnjSVLITQ8pq7PY9x3E9U&s=10"],
+        ["Ginger","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUCnJE0RvMbXvixd14bm7mjm6BxzHrnRdZw&s"],
+        ["Heliconia","https://upload.wikimedia.org/wikipedia/commons/d/d0/Heliconia_caribaea-_Jardin_botanique_de_Deshaies.JPG"],
+        ["Bougainvillier","https://www.jardiner-malin.fr/wp-content/uploads/2020/11/Bougainvillier-bougainvillea.jpg"]
+      ],
+      "answer": ["Hibiscus","Bougainvillier","Ginger","Heliconia"],
+      "difficulty": "Facile"
     }
-
   ]
 }
