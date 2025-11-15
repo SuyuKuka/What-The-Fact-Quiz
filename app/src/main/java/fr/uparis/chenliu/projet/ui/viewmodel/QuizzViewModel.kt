@@ -1,6 +1,8 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
@@ -16,7 +18,9 @@ import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlin.collections.mutableListOf
 
@@ -46,6 +50,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     private val db = AppDatabase.getInstance(application)
     private var user = mutableStateOf<UsersEntity?>(null)
     private var settings = mutableStateOf<SettingsEntity?>(null)
+    private var chronoJob: Job? = null
 
     // Users
     val energy = mutableIntStateOf(0)
@@ -62,7 +67,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     var imageAnswer = mutableStateListOf("", "", "", "")
     val currentQuestion = mutableIntStateOf(0)
     val currentImage = mutableIntStateOf(0)
-    var isRunning = mutableStateOf(true)
 
     // Others
     val loading = mutableStateOf(true)
@@ -245,7 +249,10 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
         calcScore(gameData = gameData, answerList = answerList, verify = verify, type = type)
         gameData.nbQuestion.intValue--      // reduire le nb de question
-        gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
+        if (gameData.nbQuestion.intValue <= 0) { // regarder si la partie est fini
+            gameData.gameEnded.value = true
+            stopChronometer()
+        }
         if (currentQuestion.intValue == 9) { currentQuestion.intValue = 0 } else { currentQuestion.intValue++ }
         resetDragDrop()
         currentImage.intValue = 0
@@ -369,14 +376,10 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun chronometer() {
-        viewModelScope.launch {
+        chronoJob?.cancel()
+        chronoJob = viewModelScope.launch {
             val start = System.currentTimeMillis()
-            delay(1000L)
-            while (isRunning.value) {
-                if (gameData.gameEnded.value) {
-                    isRunning.value = false
-                    break
-                }
+            while (isActive && !gameData.gameEnded.value) {
                 val now = System.currentTimeMillis()
                 val diff = now - start
                 gameData.time.doubleValue = diff / 1000.0
@@ -384,4 +387,11 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             }
         }
     }
+
+    // pour eviter plusieur coroutine
+    fun stopChronometer() {
+        chronoJob?.cancel()
+        chronoJob = null
+    }
+
 }
