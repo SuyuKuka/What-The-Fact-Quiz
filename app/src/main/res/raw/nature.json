@@ -1782,6 +1782,267 @@
       ],
       "answer": ["Hibiscus","Bougainvillier","Ginger","Heliconia"],
       "difficulty": "Facile"
+    },
+    {
+      "id": 131,
+      "type": 3,
+      "question": "Classez ces animaux du plus rapide au plus lent.",
+      "propositions": [
+        ["Guépard", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYp5JeE-1jd8lFU92CwrFaclY7NrtfTpaJqI53WMfVnRzvaZySlrxpLPvyiWEMrqSs9O_NkqURthHKg1SZjUHFMWCmeKhwu1dgcOXVw&s=10"],
+        ["Autruche", "https://www.worldanimalprotection.org/contentassets/b4befd3f321543d6beefc69ce4f5cf57/1037907.jpg"],
+        ["Springbok", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbp_nt6q7c2YlLceflzlB1J0I5SftqxSTj5lTf6FRRMqHIfEZXRs-QFXsDpanhx9UA4vN-MDkfLhyOnbnejZJ3En1v_mXylLf9ioqJaw&s=10"],
+        ["Lièvre arctique", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXye0E0uTTYOPei2caheEYYZ2tjf6kNrAErZteWT78lbf1zUqkYotr03rGn678ucw1ULaxCNnahmGZqFf6pC-ECUTojinxA8pfhNFuJQ&s=10"]
+      ],
+      "answer": ["Guépard", "Springbok", "Autruche", "Lièvre arctique"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 132,
+      "type": 3,
+      "question": "Classez ces animaux du plus lourd au plus léger.",
+      "propositions": [
+        ["Éléphant africain", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKrDNYMkizSrX_M3U4NStuvNDVqXf8ZidKcOJeD1Ds30LIPnwJKWHrr5TVfqCy-GhBkXpCrsE-x6r7DaVkfaZGooo0h6zFtgsAqtzdXqg&s=10"],
+        ["Rhinocéros blanc", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqusMgf5f-Em6rwReGPxioRod_Rb_EmIVWaB4NsWmDwE60G4l0puoUdWinG740U1VHxqsrbUuiJaLS7CrKt4IxS7G8U3f6JgsMD3l0Pg&s=10"],
+        ["Hippopotame", "https://www.larousse.fr/encyclopedie/data/images/1309514-Hippopotame.jpg"],
+        ["Gorille", "https://cdn-images.zoobeauval.com/pHCjiFAXI5fyz-2jXmA7a1f9Kfo=/730x730/https%3A%2F%2Fs3.eu-west-3.amazonaws.com%2Fimages.zoobeauval.com%2F2020%2F06%2Fsticker-2-5ee22a296cd7d.jpg"]
+      ],
+      "answer": ["Éléphant africain", "Rhinocéros blanc", "Hippopotame", "Gorille"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 133,
+      "type": 3,
+      "question": "Classez ces animaux selon leur espérance de vie, de la plus longue à la plus courte.",
+      "propositions": [
+        ["Tortue géante", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXQ6Fj6Xzia9bViTvHOyGTBD6uSF40eD544hBdCHP48LpGKWlGpxqQGOtP74SDuiwVxpQ62mK_uSmqXkD2qGXHqomqnIablfNk7ddP_iO6&s=10"],
+        ["Éléphant d'Asie", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvaksFn1TqBtO3OaV8fN30pXg88c3aK-0Z26wSKH3pT6U0j9PMTJhwefyHyES0W6Z15JGBSYg15HHBruWLLCSN1_7Z-04hTjKensqu5G0&s=10"],
+        ["Crocodile marin", "https://www.monde-animal.fr/wp-content/uploads/2020/03/crocodile-marin-ocean.jpg"],
+        ["Grand requin blanc", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnRf1rXJnlnWnZVwlfjIdZQHXzNDDP8VNeRcAoc2o49mpVNXynzwD45qRN1TZp97InYYJYjctM9mJEjZq-KsImb_QbQHa7Ge_pXf2aqco6Aw&s=10"]
+      ],
+      "answer": ["Tortue géante", "Crocodile marin", "Éléphant d'Asie", "Grand requin blanc"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 134,
+      "type": 3,
+      "question": "Classez ces félins du plus grand au plus petit.",
+      "propositions": [
+        ["Tigre", "https://upload.wikimedia.org/wikipedia/commons/7/71/Sibirischer_tiger_de_edit02.jpg"],
+        ["Lion", "https://upload.wikimedia.org/wikipedia/commons/6/6f/011_The_lion_king_Tryggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"],
+        ["Jaguar", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf8Tbz6bm2udaCcCGeMY720jMcnA17UsokVCobQpd2oUpaikuC5AQZrJW_XzpHjP8KzUgaNlLKIMTtP7KVqipfvFtqPC9LdFC7UV6yM9I&s=10"],
+        ["Léopard", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHadYoknAnCbv73ZP4iNZD1OU_WOt4Kw_tBgE4Nvi1FPhlUW84UEUA9EM4Gn3wYFiAvcCoUWl3E9OLsaulJOIRZZirNO3pfvKWLdJnKw&s=10"]
+      ],
+      "answer": ["Tigre", "Lion", "Jaguar", "Léopard"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 135,
+      "type": 3,
+      "question": "Classez ces espèces d’ours du plus lourd au plus léger.",
+      "propositions": [
+        ["Ours kodiak", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJRGvLivfD6k058-SLf1pWVCjl_fjeWKxpsvuKcij0GrqLtVpmWDYYgYOzEHYD_V167OdpJ4fAnEojSeJtsbqG2uJ3qxYcT9fnmtUzAw&s=10"],
+        ["Ours polaire", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiSwQstpeQdKOcuXjh6FDpq8hB1ma4uRHYIb9K34WvHenY9yysIUnBePpR1KHi1GNsjg6JHn-5rs1lxLuFFHJqe5f3qhvLEmiBacGj7g&s=10"],
+        ["Grizzly", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHeob-BexXrtPufgJ_imFBoZZIPuDdz3MenolD97U3PMWGsCPK9OABGrK9_KrrSpQemAA&usqp=CAU"],
+        ["Ours noir", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-05l34Z3PfI4g7VllZ0mfwHLAWLOEqIbKPrcWyH1D5Qhf1tGpGzvGTqXwv1x4Abo7r81b-SyzGSSnk573jGrpzrmbMYFHiWNgt1DSlQ&s=10"]
+      ],
+      "answer": ["Ours kodiak", "Ours polaire", "Grizzly", "Ours noir"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 136,
+      "type": 3,
+      "question": "Classez ces oiseaux du plus grand au plus petit.",
+      "propositions": [
+        ["Autruche", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Masai_ostrich.jpg/250px-Masai_ostrich.jpg"],
+        ["Émeu", "https://upload.wikimedia.org/wikipedia/commons/9/9d/Emu_1_-_Tidbinbilla.jpg"],
+        ["Cygne tuberculé", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvZ9G-vZxzl2sHS_NiXELw6etDoSTFwGMQ5ES0laf45Mr6vsctGAu_opgfFVAMIxoQS21XDasYwtqoEym6PMpZDm0UNnhdB4dxjEomrk&s=10"],
+        ["Aigle royal", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx_tP2bhOW7kMSo8AXtRWQi_-HOsg6cTShyCdb1AERBVKiMK9L_-RCCo7tlbN6X-oIwpJ6O2JxmX_Kd0664HbvgAFGoyVXR7_RaoMsxA&s=10"]
+      ],
+      "answer": ["Autruche", "Émeu", "Cygne tuberculé", "Aigle royal"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 137,
+      "type": 3,
+      "question": "Classez ces animaux selon leur force de morsure, du plus puissant au moins puissant.",
+      "propositions": [
+        ["Crocodile du Nil", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpz2kUU4u_4Ee5iFJHyMEZOMQNdXTtKpXYWA1XYp-c3zwEvXkKHTEdgLZMbNAe5rjFq0uiYK3yeSKxyl50L2b4nzR5uU1zrh05eEsHyQ&s=10"],
+        ["Jaguar", "https://cdn.britannica.com/09/143609-050-826EA62F/Jaguar-stream-Brazil.jpg"],
+        ["Hyène tachetée", "https://www.safari-peaugres.com/wp-content/uploads/2023/12/hyene.jpg"],
+        ["Grizzly", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5mMO6sv4bX_sn-bs5R_IyPrx6dlESpukz_9Tzt3xwkbfqtEgBWdQknN8hTNlb8bLaoLQ&usqp=CAU"]
+      ],
+      "answer": ["Crocodile du Nil", "Jaguar", "Hyène tachetée", "Grizzly"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 138,
+      "type": 3,
+      "question": "Classez ces animaux du plus intelligent au moins intelligent.",
+      "propositions": [
+        ["Chimpanzé", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg/330px-015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg"],
+        ["Dauphin", "https://gogirlsgo.fr/wp-content/uploads/2024/06/les_differentes_especes_de_dauphins.webp"],
+        ["Corbeau", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDKLC1v7DP6UDTPTwj7xt9UKxYI_p1XTQJg&s"],
+        ["Poulpe", "https://www.guidedesespeces.org/sites/zeevruchtengids.org/files/styles/social_share_image/public/soort/Poulpe_0.jpg?h=16a6d817&itok=z2riagDu"]
+      ],
+      "answer": ["Chimpanzé", "Dauphin", "Corbeau", "Poulpe"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 139,
+      "type": 3,
+      "question": "Classez ces animaux marins du plus rapide au plus lent.",
+      "propositions": [
+        ["Espadon voilier", "https://mexique-voyages.com/wp-content/uploads/poisson-voilier.jpg"],
+        ["Orque", "https://www.monde-animal.fr/wp-content/uploads/2020/04/fiche-animale-monde-animal-orque-1.jpg"],
+        ["Thon rouge", "https://www.fishipedia.fr/wp-content/uploads/2020/06/Thunnus-albacares-2.jpg"],
+        ["Dauphin commun", "https://www.cetaces.org/wp-content/uploads/2020/07/Dauphin-commun_ad-6889.jpg"]
+      ],
+      "answer": ["Espadon voilier", "Thon rouge", "Orque", "Dauphin commun"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 140,
+      "type": 3,
+      "question": "Classez ces reptiles du plus grand au plus petit.",
+      "propositions": [
+        ["Crocodile marin", "https://upload.wikimedia.org/wikipedia/commons/4/43/SaltwaterCrocodile%28%27Maximo%27%29.jpg"],
+        ["Anaconda vert", "https://blooming-pets.com/wp-content/uploads/2025/03/Anaconda-Vert-Eunectes-Murinus-1536x1121.jpg"],
+        ["Python réticulé", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRkTEkCWL8Mz9qZHCepp53LYVS4zpfx0bfxw&s"],
+        ["Varan de Komodo", "https://vert.eco/wp-content/uploads/2021/09/8090267316_174e4b351d_o.jpg"]
+      ],
+      "answer": ["Crocodile marin", "Python réticulé", "Anaconda vert", "Varan de Komodo"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 141,
+      "type": 3,
+      "question": "Classez ces champignons du plus toxique au moins toxique.",
+      "propositions": [
+        ["Amanite phalloïde", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Amanita_phalloides_1.JPG/330px-Amanita_phalloides_1.JPG"],
+        ["Galerina marginata", "https://upload.wikimedia.org/wikipedia/commons/8/86/Galerina_marginata_051106Cmed.jpg"],
+        ["Amanite tue-mouches", "https://upload.wikimedia.org/wikipedia/commons/6/68/Gelin_Mantar%C4%B1_Sinek_mantar%C4%B1_%28Amanita_muscaria%29%2C.jpg"],
+        ["Coprin chevelu", "https://upload.wikimedia.org/wikipedia/commons/4/4a/-_Coprinus_comatus_-.jpg"]
+      ],
+      "answer": ["Amanite phalloïde", "Galerina marginata", "Amanite tue-mouches", "Coprin chevelu"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 142,
+      "type": 3,
+      "question": "Classez ces champignons du plus grand au plus petit en taille du chapeau.",
+      "propositions": [
+        ["Agaric géant", "https://upload.wikimedia.org/wikipedia/commons/2/25/Agaricus_crocodilinus_collection.jpg"],
+        ["Amanite des Césars", "https://upload.wikimedia.org/wikipedia/commons/f/f7/Amanita_caesarea.JPG"],
+        ["Pied-de-mouton", "https://upload.wikimedia.org/wikipedia/commons/b/b9/Hedgehog_fungi2.jpg"],
+        ["Morille", "https://www.chasseursdechampignons.com/blog/wp-content/uploads/2022/07/Des-morilles-dans-leur-habitat-et-biotope-naturels-morille-commune-morchella-esculenta.jpg"]
+      ],
+      "answer": ["Agaric géant", "Amanite des Césars", "Pied-de-mouton", "Morille"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 143,
+      "type": 3,
+      "question": "Classez ces champignons selon leur préférence d’humidité, du plus humide au moins humide.",
+      "propositions": [
+        ["Oreille de Judas", "https://nantes-naturopathe.fr/wp-content/uploads/2022/01/oreille-judas.jpg"],
+        ["Chanterelle en tube", "https://upload.wikimedia.org/wikipedia/commons/1/1a/Craterellus_tubaeformis_1345904803_69350246bb_o_cropped.jpg"],
+        ["Lépiote élevée", "https://upload.wikimedia.org/wikipedia/commons/9/9d/Macrolepiota-procera_%281%29_cropped.jpg"],
+        ["Pied bleu", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfse_ejNix49I5C1wylMPk0ctmxRvYijFPng&s"]
+      ],
+      "answer": ["Oreille de Judas", "Chanterelle en tube", "Lépiote élevée", "Pied bleu"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 144,
+      "type": 3,
+      "question": "Classez ces champignons lignivores selon leur rapidité de décomposition du bois (du plus rapide au plus lent).",
+      "propositions": [
+        ["Polypore soufré", "https://upload.wikimedia.org/wikipedia/commons/1/10/Laetiporus_sulphureus_%2832715501158%29.jpg"],
+        ["Tramète versicolore", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-mMgrexHmQDnBKMU0eNCLGsHW2SqHdp9cvg&s"],
+        ["Ganoderma applanatum", "https://www.mycodb.fr/photos/Ganoderma_applanatum_2006_jg_1.jpg"],
+        ["Fomes fomentarius", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Fomes_fomentarius_2010_G2.jpg"]
+      ],
+      "answer": ["Polypore soufré", "Tramète versicolore", "Ganoderma applanatum", "Fomes fomentarius"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 145,
+      "type": 3,
+      "question": "Classez ces champignons comestibles du plus recherché au moins recherché.",
+      "propositions": [
+        ["Morille", "https://magazine.hortus-focus.fr/wp-content/uploads/sites/2/2023/04/morille-morchella-esculenta-tomasztc-1200x800-1.jpg"],
+        ["Cèpe de Bordeaux", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Boletus_edulis_0.jpg/330px-Boletus_edulis_0.jpg"],
+        ["Girolle", "https://laumontshop.fr/cdn/shop/articles/Rebozuelo.jpg?v=1632214813"],
+        ["Pied-bleu", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc4TQ7KB6g1gbz0McG0c460sBd7eKqTMreww&s"]
+      ],
+      "answer": ["Cèpe de Bordeaux", "Morille", "Girolle", "Pied-bleu"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 146,
+      "type": 3,
+      "question": "Classez ces champignons du plus rare au plus commun.",
+      "propositions": [
+        ["Amanite royale", "https://www.notre-planete.info/photos/1570_amanite_tue_mouches_0.jpg"],
+        ["Morille noire", "https://www.chasseursdechampignons.com/blog/wp-content/uploads/2022/05/2-morilles-coniques-noires-dans-lherbe.jpg"],
+        ["Amanite panthère", "https://upload.wikimedia.org/wikipedia/commons/e/eb/Amanita_pantherina_Norway.jpg"],
+        ["Rosé des prés", "https://www.chasseursdechampignons.com/blog/wp-content/uploads/2021/12/Un-Rose-des-pres-Agaric-champetre-Agaricus-campestris.jpg"]
+      ],
+      "answer": ["Amanite royale", "Morille noire", "Amanite panthère", "Rosé des prés"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 147,
+      "type": 3,
+      "question": "Classez ces champignons selon leur capacité à teindre la laine, du plus puissant au moins puissant.",
+      "propositions": [
+        ["Dermocybe sanguinea", "https://identifier-les-champignons.com/wp-content/uploads/2020/06/Cortinarius_sanguineus_BS11.jpg"],
+        ["Paxille enroulé", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8Mec4YThoGOqKobqm8lJeGxUVbVg-sZpYQ&s"],
+        ["Lactaire sanguin", "https://www.francebleu.fr/pikapi/images/8483ab14-11f4-4322-a6e5-27caf2a383ae/1200x680?webp=false"],
+        ["Hydnellum peckii", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Hydnellum_peckii2.jpg/1200px-Hydnellum_peckii2.jpg"]
+      ],
+      "answer": ["Dermocybe sanguinea", "Lactaire sanguin", "Hydnellum peckii", "Paxille enroulé"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 148,
+      "type": 3,
+      "question": "Classez ces champignons par quantité de spores produites, du plus productif au moins productif.",
+      "propositions": [
+        ["Puffball géant (vessie-de-loup)", "https://upload.wikimedia.org/wikipedia/commons/e/e4/Calvatia_gigantea.jpg"],
+        ["Amanite tue-mouches", "https://upload.wikimedia.org/wikipedia/commons/6/68/Gelin_Mantar%C4%B1_Sinek_mantar%C4%B1_%28Amanita_muscaria%29%2C.jpg"],
+        ["Coprin micacé", "https://upload.wikimedia.org/wikipedia/commons/3/36/Coprinellus_micaceus_2.jpg"],
+        ["Pleurote en huître", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScg2fyhCwt5Nk9ayKu_weoEIcbm68awuXA8Q&s"]
+      ],
+      "answer": ["Puffball géant (vessie-de-loup)", "Amanite tue-mouches", "Coprin micacé", "Pleurote en huître"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 149,
+      "type": 3,
+      "question": "Classez ces champignons selon leur implication historique dans des intoxications graves, du plus impliqué au moins impliqué.",
+      "propositions": [
+        ["Amanite phalloïde", "https://www.centreantipoisons.be/sites/default/files/vergiftigingen/Groene-knolamaniet_59372219_0.jpg"],
+        ["Cortinaire couleur de rocou", "https://www.guidedeschampignons.com/wp-content/uploads/2020/11/Cortinarius_orellanus_Cortinaire-couleur-de-rocou_francini.jpg"],
+        ["Entolome livide", "https://www.centreantipoisons.be/sites/default/files/vergiftigingen/Giftige-Satijnzwam--Entoloma-sinuatum-%28DG%29-3027.jpg"],
+        ["Agaric jaunissant", "https://www.chasseursdechampignons.com/blog/wp-content/uploads/2022/07/Un-agaric-jaunissant.jpg"]
+      ],
+      "answer": ["Amanite phalloïde", "Entolome livide", "Cortinaire couleur de rocou", "Agaric jaunissant"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 150,
+      "type": 3,
+      "question": "Classez ces champignons selon leur toxicité potentielle, du plus toxique au moins toxique.",
+      "propositions": [
+        ["Amanite phalloïde", "https://media.lechemindelanature.com/2024/11/Amanite_phalloide-general-01-Lcdn-HD-C-2.jpg"],
+        ["Gyromitre (Gyromitra esculenta)", "https://upload.wikimedia.org/wikipedia/commons/9/9a/GYROMITRA_ESCULENTA_%28Krombh.%29_Cooke_%285897315242%29.jpg"],
+        ["Entolome livide", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/2013-11-02_Entoloma_sinuatum_%28Bull.%29_P._Kumm_393814.jpg/250px-2013-11-02_Entoloma_sinuatum_%28Bull.%29_P._Kumm_393814.jpg"],
+        ["Tricholome de la Saint-Georges", "https://secretsdeschampignons.com/wp-content/uploads/sites/3/2023/11/Un-Tricholome-de-la-Saint-Georges-trouve-dans-lherbe.jpg"]
+      ],
+      "answer": ["Amanite phalloïde", "Gyromitre (Gyromitra esculenta)", "Entolome livide", "Tricholome de la Saint-Georges"],
+      "difficulty": "Difficile"
     }
+
   ]
 }
