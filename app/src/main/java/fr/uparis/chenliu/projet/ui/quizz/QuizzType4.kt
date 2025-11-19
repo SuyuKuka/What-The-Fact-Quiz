@@ -109,13 +109,18 @@ fun Quizztype4(
 
     // EN BAS
     Box(
-        contentAlignment = Alignment.Center,
+        contentAlignment = if ( currentImage.intValue < buildAnswer.size) {
+            Alignment.BottomCenter
+        } else {
+            Alignment.Center
+        },
         modifier = Modifier
             .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
             .background(Color.Black)
     ) {
         if (currentImage.intValue < buildAnswer.size) {
             DragImage(answer = ans[0], url = ans[1])
+            DisplayText(list = font, text = ans[0], fontSize = 48.sp, color = Color.Red)
         } else {
             DisplayText(
                 list = font,

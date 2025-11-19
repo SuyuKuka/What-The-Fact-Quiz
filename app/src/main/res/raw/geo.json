@@ -1349,6 +1349,258 @@
       ],
       "answer": ["Landes"],
       "difficulty": "Difficile"
+    },
+    {
+      "id": 91,
+      "type": 1,
+      "question": "Quel fleuve, le plus long d'Afrique, traverse l'Égypte et se jette dans la mer Méditerranée ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Nil"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 92,
+      "type": 1,
+      "question": "Quel pays est une péninsule bordée par la mer Rouge et le golfe Persique ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Arabie Saoudite"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 93,
+      "type": 1,
+      "question": "Quel est le nom de la chaîne de montagnes qui sert de frontière naturelle entre l'Europe et l'Asie, notamment en Russie ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Oural"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 94,
+      "type": 1,
+      "question": "Quel détroit étroit sépare la péninsule Ibérique (Europe) du continent africain ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Détroit de Gibraltar"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 95,
+      "type": 1,
+      "question": "Quelle est la capitale officielle du Brésil, construite spécifiquement pour servir de capitale à partir de 1960 ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Brasília"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 96,
+      "type": 1,
+      "question": "Quel est le plus grand lac d'Afrique en superficie, partagé par la Tanzanie, l'Ouganda et le Kenya ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Lac Victoria"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 97,
+      "type": 1,
+      "question": "Quelle mer est bordée à l'ouest par la Grèce, à l'est par la Turquie, et contient des milliers d'îles dont Crète et Rhodes ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Mer Égée"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 98,
+      "type": 1,
+      "question": "Quel est le nom du courant marin chaud qui influence fortement le climat de l'Europe de l'Ouest ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Courant du Golf Stream"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 99,
+      "type": 1,
+      "question": "Quel désert, connu pour ses vastes dunes rouges et situé principalement au Chili et au Pérou, est considéré comme l'un des plus arides du monde ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Désert de l'Atacama"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 100,
+      "type": 2,
+      "question": "Classez ces fleuves européens par ordre de longueur, du plus court au plus long.",
+      "propositions": [
+        ["Seine", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pont_au_Change_and_Palais_de_justice%2C_Paris_20_April_2021_001.jpg/500px-Pont_au_Change_and_Palais_de_justice%2C_Paris_20_April_2021_001.jpg"],
+        ["Loire", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Loire_%C3%A0_Br%C3%A9h%C3%A9mont2.JPG/500px-Loire_%C3%A0_Br%C3%A9h%C3%A9mont2.JPG"],
+        ["Rhin", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Rhine_Rhein_Basel_2006_871.JPG/500px-Rhine_Rhein_Basel_2006_871.JPG"],
+        ["Danube", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Golubac.JPG/500px-Golubac.JPG"]
+      ],
+      "answer": [
+        "Seine",
+        "Loire",
+        "Rhin",
+        "Danube"
+      ],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 101,
+      "type": 2,
+      "question": "Classez ces océans par ordre de superficie, du plus petit au plus grand.",
+      "propositions": [
+        ["Océan Indien", "https://upload.wikimedia.org/wikipedia/commons/d/d6/Oc%C3%A9an_Indien.png"],
+        ["Océan Arctique", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Arctic_Ocean_relief_location_map.png/500px-Arctic_Ocean_relief_location_map.png"],
+        ["Océan Pacifique", "https://upload.wikimedia.org/wikipedia/commons/f/f5/Oc%C3%A9an_Pacifique_d%C3%A9tour%C3%A9e.png"],
+        ["Océan Atlantique", "https://upload.wikimedia.org/wikipedia/commons/6/65/Oc%C3%A9an_Atlantique.png"]
+      ],
+      "answer": [
+        "Océan Arctique",
+        "Océan Indien",
+        "Océan Atlantique",
+        "Océan Pacifique"
+      ],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 102,
+      "type": 2,
+      "question": "Classez ces continents par ordre de population estimée, du moins peuplé au plus peuplé.",
+      "propositions": [
+        ["Afrique", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Africa_%28orthographic_projection%29.svg/langfr-500px-Africa_%28orthographic_projection%29.svg.png"],
+        ["Europe", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Europe_orthographic_Caucasus_Urals_boundary_%28with_borders%29.svg/langfr-500px-Europe_orthographic_Caucasus_Urals_boundary_%28with_borders%29.svg.png"],
+        ["Océanie", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Oceania_%28orthographic_projection%29.svg/langfr-500px-Oceania_%28orthographic_projection%29.svg.png"],
+        ["Amérique du Sud", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/South_America_%28orthographic_projection%29.svg/langfr-500px-South_America_%28orthographic_projection%29.svg.png"]
+      ],
+      "answer": [
+        "Océanie",
+        "Amérique du Sud",
+        "Europe",
+        "Afrique"
+      ],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 103,
+      "type": 2,
+      "question": "Classez ces capitales européennes par ordre d'altitude, de la plus basse à la plus haute.",
+      "propositions": [
+        ["Paris (France)", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/500px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"],
+        ["Madrid (Espagne)", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/CollageMadrid.jpg/500px-CollageMadrid.jpg"],
+        ["Amsterdam (Pays-Bas)", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Westerkerk_Amsterdam.jpg/500px-Westerkerk_Amsterdam.jpg"],
+        ["Andorre-la-Vieille (Andorre)", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/LargeVue-Andorra.jpg/500px-LargeVue-Andorra.jpg"]
+      ],
+      "answer": [
+        "Amsterdam (Pays-Bas)",
+        "Paris (France)",
+        "Madrid (Espagne)",
+        "Andorre-la-Vieille (Andorre)"
+      ],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 104,
+      "type": 2,
+      "question": "Classez ces pays d'Europe par ordre de population, du moins peuplé au plus peuplé.",
+      "propositions": [
+        ["Pays-Bas", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/langfr-250px-Flag_of_the_Netherlands.svg.png"],
+        ["Espagne", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/langfr-250px-Flag_of_Spain.svg.png"],
+        ["France", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/langfr-250px-Flag_of_France.svg.png"],
+        ["Allemagne", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/langfr-250px-Flag_of_Germany.svg.png"]
+      ],
+      "answer": [
+        "Pays-Bas",
+        "Espagne",
+        "France",
+        "Allemagne"
+      ],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 105,
+      "type": 2,
+      "question": "Classez ces Grands Lacs d'Amérique du Nord par ordre de superficie, du plus petit au plus grand.",
+      "propositions": [
+        ["Lac Huron", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Passe_%C3%A0_poisson_du_lac_Rimouski_-_panoramio.jpg/500px-Passe_%C3%A0_poisson_du_lac_Rimouski_-_panoramio.jpg"],
+        ["Lac Ontario", "https://l-express.ca/wp-content/uploads/2023/03/iStock-1327285236-1024x768.jpg"],
+        ["Lac Supérieur", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lac-Superieur_QC_1.JPG/500px-Lac-Superieur_QC_1.JPG"],
+        ["Lac Érié", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lake_Erie_Land%27s_End.jpg/500px-Lake_Erie_Land%27s_End.jpg"]
+      ],
+      "answer": [
+        "Lac Ontario",
+        "Lac Érié",
+        "Lac Huron",
+        "Lac Supérieur"
+      ],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 106,
+      "type": 2,
+      "question": "Classez ces îles par ordre de superficie, de la plus petite à la plus grande.",
+      "propositions": [
+        ["Madagascar", "https://upload.wikimedia.org/wikipedia/commons/4/49/Madagascar-carte.png"],
+        ["Grande-Bretagne", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/MODIS_-_Great_Britain_-_2012-06-04_during_heat_wave_%28cropped%29.jpg/500px-MODIS_-_Great_Britain_-_2012-06-04_during_heat_wave_%28cropped%29.jpg"],
+        ["Honshū (Japon)", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Japan_honshu_map.svg/375px-Japan_honshu_map.svg.png"],
+        ["Île de Baffin (Canada)", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wfm_baffin_island.jpg/500px-Wfm_baffin_island.jpg"]
+      ],
+      "answer": [
+        "Grande-Bretagne",
+        "Honshū (Japon)",
+        "Île de Baffin (Canada)",
+        "Madagascar"
+      ],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 107,
+      "type": 2,
+      "question": "Classez ces chaînes de montagnes par ordre de longueur, de la plus courte à la plus longue.",
+      "propositions": [
+        ["Himalaya", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Himalayas.jpg/500px-Himalayas.jpg"],
+        ["Andes", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Andes_Chile_Argentina.jpg/500px-Andes_Chile_Argentina.jpg"],
+        ["Alpes", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Alpen_01.JPG/500px-Alpen_01.JPG"],
+        ["Rocheuses", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rocky_Mountains.aerial_view.no_snow.jpg/500px-Rocky_Mountains.aerial_view.no_snow.jpg"]
+      ],
+      "answer": [
+        "Alpes",
+        "Himalaya",
+        "Rocheuses",
+        "Andes"
+      ],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 108,
+      "type": 2,
+      "question": "Classez ces célèbres chutes d'eau par ordre de hauteur totale, de la plus basse à la plus haute.",
+      "propositions": [
+        ["Chutes de Yosemite (USA)", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Yosemite_falls_winter_2010.JPG/330px-Yosemite_falls_winter_2010.JPG"],
+        ["Chutes d'Iguazú (Argentine/Brésil)", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Iguacu-004.jpg/500px-Iguacu-004.jpg"],
+        ["Salto Ángel (Venezuela)", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Salto_angel_descubierto.jpg/500px-Salto_angel_descubierto.jpg"],
+        ["Chutes du Niagara (USA/Canada)", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Niagara_Falls_Sunset_%28cropped%29.jpg/500px-Niagara_Falls_Sunset_%28cropped%29.jpg"]
+      ],
+      "answer": [
+        "Chutes du Niagara (USA/Canada)",
+        "Chutes d'Iguazú (Argentine/Brésil)",
+        "Chutes de Yosemite (USA)",
+        "Salto Ángel (Venezuela)"
+      ],
+      "difficulty": "Difficile"
     }
   ]
 }
