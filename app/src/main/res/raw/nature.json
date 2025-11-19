@@ -1383,66 +1383,6 @@
     {
       "id": 94,
       "type": 1,
-      "question": "Combien d’espèces de chênes existe-t-il dans le monde ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["600"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 95,
-      "type": 1,
-      "question": "À combien de mètres un séquoia peut-il culminer au maximum ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["115"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 96,
-      "type": 1,
-      "question": "En moyenne, combien de litres d’eau un grand arbre peut-il absorber par jour ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["200"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 97,
-      "type": 1,
-      "question": "Combien de millions d’arbres sont plantés chaque année en France environ ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["80"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 98,
-      "type": 1,
-      "question": "Combien de feuilles environ possède un chêne adulte ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["200000"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 99,
-      "type": 1,
-      "question": "Combien d’années faut-il à un pommier pour produire ses premiers fruits ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["4"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 100,
-      "type": 1,
       "question": "Combien d’espèces d’arbres sont présentes dans la forêt amazonienne ?",
       "propositions": [
         []
@@ -1451,7 +1391,7 @@
       "difficulty": "Moyen"
     },
     {
-      "id": 101,
+      "id": 95,
       "type": 1,
       "question": "Combien de centimètres un arbre peut-il croître en moyenne par an ?",
       "propositions": [
@@ -1461,17 +1401,7 @@
       "difficulty": "Moyen"
     },
     {
-      "id": 102,
-      "type": 1,
-      "question": "Combien de graines environ produit un pin adulte chaque année ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["10000"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 103,
+      "id": 96,
       "type": 1,
       "question": "Combien d’espèces de séquoias existent dans le monde ?",
       "propositions": [
@@ -1481,77 +1411,7 @@
       "difficulty": "Moyen"
     },
     {
-      "id": 104,
-      "type": 1,
-      "question": "À quel âge moyen un érable peut-il commencer à produire du sirop ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["10"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 105,
-      "type": 1,
-      "question": "Combien de racines principales un chêne développe-t-il en moyenne ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["1"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 106,
-      "type": 1,
-      "question": "Combien de mètres un eucalyptus peut-il pousser par an dans des conditions idéales ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["2"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 107,
-      "type": 1,
-      "question": "Combien de kilogrammes de bois produit un chêne adulte chaque année environ ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["200"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 108,
-      "type": 1,
-      "question": "Combien de feuilles un érable adulte peut-il perdre en automne ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["50000"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 109,
-      "type": 1,
-      "question": "Combien de litres d’eau une forêt de 1 hectare peut-elle absorber par jour en moyenne ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["10000"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 110,
-      "type": 1,
-      "question": "Combien de pétales a une fleur de lys en moyenne ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["6"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 111,
+      "id": 97,
       "type": 1,
       "question": "Quel est le nom de la fleur nationale du Japon ?",
       "propositions": [
@@ -1561,7 +1421,7 @@
       "difficulty": "Difficile"
     },
     {
-      "id": 112,
+      "id": 98,
       "type": 1,
       "question": "Combien de pétales a typiquement une marguerite commune ?",
       "propositions": [
@@ -1571,7 +1431,7 @@
       "difficulty": "Difficile"
     },
     {
-      "id": 113,
+      "id": 99,
       "type": 1,
       "question": "Quelle fleur est connue pour s’ouvrir uniquement la nuit ?",
       "propositions": [
@@ -1581,80 +1441,7 @@
       "difficulty": "Difficile"
     },
     {
-      "id": 114,
-      "type": 1,
-      "question": "Combien de fleurs un tournesol géant peut-il produire sur une seule inflorescence ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["2000"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 115,
-      "type": 1,
-      "question": "Quel est le nom de la plus grande fleur du monde ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["Rafflesia"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 116,
-      "type": 1,
-      "question": "Combien de centimètres peut mesurer le plus grand pétale d’une fleur de rafflesia ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["90"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 117,
-      "type": 1,
-      "question": "Combien de jours en moyenne une fleur de lotus reste-t-elle ouverte chaque matin ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["3"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 118,
-      "type": 1,
-      "question": "Combien de graines peut produire une seule fleur de pavot en moyenne ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["1000"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 119,
-      "type": 1,
-      "question": "Combien de couleurs naturelles de roses existent dans le monde ?",
-      "propositions": [
-        []
-      ],
-      "answer": ["7"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 120,
-      "type": 3,
-      "question": "Classez ces arbres du plus petit au plus grand en taille moyenne.",
-      "propositions": [
-        ["Bouleau","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr83KvSVCJpMFu-NNVri0n1uwHORC6ii6itva4ApC_yTzoxdn8l7cJY2Txw652WmFV6gfq9s7yOSa4vqowv2Bp6eLN5DSqwapswHEDIQ&s=10"],
-        ["Chêne","https://pepinieres-lecomte.com/2357-thickbox_default/chene-pedoncule.jpg"],
-        ["Pin","https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTzeIfDrPVk7X0CQNSA4DFR2HYHlx6-GsbThN9CA2HEz44bpijGfBq0tF7V1t8W_V5CJjSJmJBLNa9eoatQR3MVPochV5F-nI-7PLMjFc32"],
-        ["Séquoia","https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sequoia_sempervirens_Big_Basin_Redwoods_State_Park_1.jpg/960px-Sequoia_sempervirens_Big_Basin_Redwoods_State_Park_1.jpg"]
-      ],
-      "answer": ["Bouleau", "Chêne", "Pin", "Séquoia"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 121,
+      "id": 100,
       "type": 3,
       "question": "Trois fleurs sont déjà classées du plus petit au plus grand, où faut-il placer la Tulipe ?",
       "propositions": [
@@ -1667,7 +1454,7 @@
       "difficulty": "Facile"
     },
     {
-      "id": 122,
+      "id": 101,
       "type": 3,
       "question": "Classez ces arbres fruitiers du plus petit au plus grand en taille moyenne.",
       "propositions": [
@@ -1680,7 +1467,7 @@
       "difficulty": "Facile"
     },
     {
-      "id": 123,
+      "id": 102,
       "type": 3,
       "question": "Classez ces plantes carnivores du plus petit au plus grand.",
       "propositions": [
@@ -1693,98 +1480,7 @@
       "difficulty": "Facile"
     },
     {
-      "id": 124,
-      "type": 3,
-      "question": "Classez ces conifères du plus petit au plus grand en taille moyenne.",
-      "propositions": [
-        ["Cyprès","https://www.jardindupicvert.com/media/catalog/product/cache/52718ea4545b235e4b299b9f43100c72/c/y/cypres-d-italie-de-provence-garda-22979.jpg"],
-        ["Pin","https://www.willemsefrance.fr/cdn/shop/files/ADO_103186_1_BK_1750150421528_1800x.jpg?v=1753260276"],
-        ["Séquoia","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl8FNJjje2kMB8SL14EUz0O8zp7NI2yaxeClTjCPDAhGImu05W5VTq7LoUniuG2c8KEIz0TLDplT2UIFjv3zYuWJ1r4lcM3IYkHaioENE&s=10"],
-        ["Thuya","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-QcMQ1VPmahuOD2vAGKWMGLsDlAY9ljfHWw_Y_jG_UkBGAE6dVdnFAgHwzh-wuHsp_XdKxnZbfM99sRNt8KqilL9vSkE7oSH2mvwmaCg&s=10"]
-      ],
-      "answer": ["Cyprès","Thuya","Pin","Séquoia"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 125,
-      "type": 3,
-      "question": "Classez ces plantes aquatiques du plus petit au plus grand.",
-      "propositions": [
-        ["Nénuphar","https://www.aquaportail.com/aquabdd/photos/nymphaea-alba.webp"],
-        ["Lotus sacré","https://www.sciencesetavenir.fr/assets/img/2017/05/19/cover-r4x3w1200-591ee0293e0d0-000-oj5cn.jpg"],
-        ["Papyrus","https://www.rustica.fr/images/cyperus-papyrus-bord-d-bassin-vk.jpg"],
-        ["Elodea","https://media.gerbeaud.net/2021/04/640/egeria-najas-elodee.jpg"]
-      ],
-      "answer": ["Nénuphar","Elodea","Lotus sacré","Papyrus"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 126,
-      "type": 3,
-      "question": "Classez ces cactus du plus petit au plus grand.",
-      "propositions": [
-        ["Mammillaria","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlsyhiq1l_DKVaIivDwx8jfsgsXy3Vd0cVQ_TbkC77m9_NaEAW0iny3MCrsjW1V-NQGzt_JN5LlqysGUXb7EjIOSSgp9Mb5P1vAKHWzw&s=10"],
-        ["Echinopsis","https://www.terrelointaine.fr/1805-large_default/cactus-echinopsis-candicans.jpg"],
-        ["Saguaro","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ18RLaFQUHKzKHNyJMvJdK59fodJzaDBpDmJt8lHtHd8skYjdHhnTIS_MWthSBa6qBFCFB-BN9oyXIkaJ5-HZXuxU0QuCCnOGb9mOKRA&s=10"],
-        ["Ferocactus","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGs02xGUyFIAL0uk2PXjko-Y5pT1dWQ7KRlJ2pEonG44Fmt3rb7cF5y8wikjSo1FNVNQwv1O2r5My6OHToJxlfiodAn9S7wpY72HgHdQ&s=10"]
-      ],
-      "answer": ["Mammillaria","Echinopsis","Ferocactus","Saguaro"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 127,
-      "type": 3,
-      "question": "Classez ces fleurs comestibles du plus petit au plus grand.",
-      "propositions": [
-        ["Violette","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5U85T1Su8FiHmPDArSaXiQBzetOzC66tYcFptg3NpXSV5hICdMPOJ0FW_mO4Lxt7pXgEsND3lXp91KhsEEQoj4uvsRLW8Rmtravt3bw&s=10"],
-        ["Capucine","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ3k4LajElUEpRi8BhFMFhfArd-bWuvn4jTYnJfHilM2ArStlS9RtA7EtHH2NmhhC8x-8_KXC57XhHvrARBU4sGT2YxXDKlxGsBmZPag&s=10"],
-        ["Hibiscus","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE09gbEIhRXjO-s5D3svGPGVE_TCG9NQIMpTciqGQ5MriM-4xJ31FxdNnvc-2si6dlFSgu9UYcaKiy1GltujcnjSVLITQ8pq7PY9x3E9U&s=10"],
-        ["Souci","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEJW_sFaiio9dX2dALcIHxiwnVdkWbF35UfNXTg5DUjz0NATOpnUyU9w8wed9AegMb5bDY11UL52PmLOLUQn72p_ehbllDwv52kdSaPh4&s=10"]
-      ],
-      "answer": ["Violette","Souci","Capucine","Hibiscus"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 128,
-      "type": 3,
-      "question": "Classez ces arbustes du plus petit au plus grand.",
-      "propositions": [
-        ["Buis","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMl3hmCGVRrtyqrjJR5z5N7gZ04PGj66CfJ78Fei4KMO-ir4nm5sp7ZoC7io0NGp8hRIu-IvCPsW6DBrgK4SNZ3ztk5YATGzoNBFDvfDA&s=10"],
-        ["Forsythia","https://media.ooreka.fr/public/image/plant/280/mainImage-source-11552558.jpg"],
-        ["Hortensia","https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTy__uESRJZVOmiB5c6E_vGJiuPOlc_mJSC_DxvpO6QUdwsvQS8W-2RfoBaczxv39wOOVqq6HLG5aY742gTWljhtSpEDLekf7vNew4BiBI"],
-        ["Laurier-rose","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKzgjvxgEuyeBmjB0W-xcrOUoJVBIOgVWok0dzEH7A67606aC9VhT8rTFZw4BMMMFAyeULhhLw7YYm2DmLO6mPaFLPPsDOdEU9Q3mpfQ&s=10"]
-      ],
-      "answer": ["Buis","Forsythia","Hortensia","Laurier-rose"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 129,
-      "type": 3,
-      "question": "Classez ces arbres tropicaux du plus petit au plus grand.",
-      "propositions": [
-        ["Bananier","https://www.treedom.net/_next/image?url=https%3A%2F%2Fassets.treedom.net%2Fimage%2Fupload%2Fs--KA_ALEmL--%2Fc_limit%2Cf_auto%2Fv1%2Fscientific_specie-gallery%2Fs%2F329133&w=3840&q=75"],
-        ["Cocotier","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMOGobi8rQR75NP2zyWKhI2mldBu34QxjKRkPOglRN6NTASlTez_yOlHOmPhhjj8AYKuufEPR5XKOTFNdXZnc96EozQb_4QiiEwRE8wA&s=10"],
-        ["Mangoier","https://ma-pepiniere.fr/media/cache/sylius_shop_product_original/ef/f6/eabd3dd677ba47defeb5b8a688a8.jpg"],
-        ["Papayer","https://media.ooreka.fr/public/image/plant/2081/varietyImage/8uhmaxmb5o8wcso8soc4goggc-source-13818691.jpg"]
-      ],
-      "answer": ["Bananier","Papayer","Cocotier","Mangoier"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 130,
-      "type": 3,
-      "question": "Classez ces fleurs tropicales du plus petit au plus grand.",
-      "propositions": [
-        ["Hibiscus","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE09gbEIhRXjO-s5D3svGPGVE_TCG9NQIMpTciqGQ5MriM-4xJ31FxdNnvc-2si6dlFSgu9UYcaKiy1GltujcnjSVLITQ8pq7PY9x3E9U&s=10"],
-        ["Ginger","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUCnJE0RvMbXvixd14bm7mjm6BxzHrnRdZw&s"],
-        ["Heliconia","https://upload.wikimedia.org/wikipedia/commons/d/d0/Heliconia_caribaea-_Jardin_botanique_de_Deshaies.JPG"],
-        ["Bougainvillier","https://www.jardiner-malin.fr/wp-content/uploads/2020/11/Bougainvillier-bougainvillea.jpg"]
-      ],
-      "answer": ["Hibiscus","Bougainvillier","Ginger","Heliconia"],
-      "difficulty": "Facile"
-    },
-    {
-      "id": 131,
+      "id": 103,
       "type": 3,
       "question": "Classez ces animaux du plus rapide au plus lent.",
       "propositions": [
@@ -1797,7 +1493,7 @@
       "difficulty": "Moyen"
     },
     {
-      "id": 132,
+      "id": 104,
       "type": 3,
       "question": "Classez ces animaux du plus lourd au plus léger.",
       "propositions": [
@@ -1810,7 +1506,7 @@
       "difficulty": "Moyen"
     },
     {
-      "id": 133,
+      "id": 105,
       "type": 3,
       "question": "Classez ces animaux selon leur espérance de vie, de la plus longue à la plus courte.",
       "propositions": [
@@ -1823,98 +1519,7 @@
       "difficulty": "Moyen"
     },
     {
-      "id": 134,
-      "type": 3,
-      "question": "Classez ces félins du plus grand au plus petit.",
-      "propositions": [
-        ["Tigre", "https://upload.wikimedia.org/wikipedia/commons/7/71/Sibirischer_tiger_de_edit02.jpg"],
-        ["Lion", "https://upload.wikimedia.org/wikipedia/commons/6/6f/011_The_lion_king_Tryggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"],
-        ["Jaguar", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf8Tbz6bm2udaCcCGeMY720jMcnA17UsokVCobQpd2oUpaikuC5AQZrJW_XzpHjP8KzUgaNlLKIMTtP7KVqipfvFtqPC9LdFC7UV6yM9I&s=10"],
-        ["Léopard", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHadYoknAnCbv73ZP4iNZD1OU_WOt4Kw_tBgE4Nvi1FPhlUW84UEUA9EM4Gn3wYFiAvcCoUWl3E9OLsaulJOIRZZirNO3pfvKWLdJnKw&s=10"]
-      ],
-      "answer": ["Tigre", "Lion", "Jaguar", "Léopard"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 135,
-      "type": 3,
-      "question": "Classez ces espèces d’ours du plus lourd au plus léger.",
-      "propositions": [
-        ["Ours kodiak", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJRGvLivfD6k058-SLf1pWVCjl_fjeWKxpsvuKcij0GrqLtVpmWDYYgYOzEHYD_V167OdpJ4fAnEojSeJtsbqG2uJ3qxYcT9fnmtUzAw&s=10"],
-        ["Ours polaire", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiSwQstpeQdKOcuXjh6FDpq8hB1ma4uRHYIb9K34WvHenY9yysIUnBePpR1KHi1GNsjg6JHn-5rs1lxLuFFHJqe5f3qhvLEmiBacGj7g&s=10"],
-        ["Grizzly", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHeob-BexXrtPufgJ_imFBoZZIPuDdz3MenolD97U3PMWGsCPK9OABGrK9_KrrSpQemAA&usqp=CAU"],
-        ["Ours noir", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-05l34Z3PfI4g7VllZ0mfwHLAWLOEqIbKPrcWyH1D5Qhf1tGpGzvGTqXwv1x4Abo7r81b-SyzGSSnk573jGrpzrmbMYFHiWNgt1DSlQ&s=10"]
-      ],
-      "answer": ["Ours kodiak", "Ours polaire", "Grizzly", "Ours noir"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 136,
-      "type": 3,
-      "question": "Classez ces oiseaux du plus grand au plus petit.",
-      "propositions": [
-        ["Autruche", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Masai_ostrich.jpg/250px-Masai_ostrich.jpg"],
-        ["Émeu", "https://upload.wikimedia.org/wikipedia/commons/9/9d/Emu_1_-_Tidbinbilla.jpg"],
-        ["Cygne tuberculé", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvZ9G-vZxzl2sHS_NiXELw6etDoSTFwGMQ5ES0laf45Mr6vsctGAu_opgfFVAMIxoQS21XDasYwtqoEym6PMpZDm0UNnhdB4dxjEomrk&s=10"],
-        ["Aigle royal", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx_tP2bhOW7kMSo8AXtRWQi_-HOsg6cTShyCdb1AERBVKiMK9L_-RCCo7tlbN6X-oIwpJ6O2JxmX_Kd0664HbvgAFGoyVXR7_RaoMsxA&s=10"]
-      ],
-      "answer": ["Autruche", "Émeu", "Cygne tuberculé", "Aigle royal"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 137,
-      "type": 3,
-      "question": "Classez ces animaux selon leur force de morsure, du plus puissant au moins puissant.",
-      "propositions": [
-        ["Crocodile du Nil", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpz2kUU4u_4Ee5iFJHyMEZOMQNdXTtKpXYWA1XYp-c3zwEvXkKHTEdgLZMbNAe5rjFq0uiYK3yeSKxyl50L2b4nzR5uU1zrh05eEsHyQ&s=10"],
-        ["Jaguar", "https://cdn.britannica.com/09/143609-050-826EA62F/Jaguar-stream-Brazil.jpg"],
-        ["Hyène tachetée", "https://www.safari-peaugres.com/wp-content/uploads/2023/12/hyene.jpg"],
-        ["Grizzly", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5mMO6sv4bX_sn-bs5R_IyPrx6dlESpukz_9Tzt3xwkbfqtEgBWdQknN8hTNlb8bLaoLQ&usqp=CAU"]
-      ],
-      "answer": ["Crocodile du Nil", "Jaguar", "Hyène tachetée", "Grizzly"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 138,
-      "type": 3,
-      "question": "Classez ces animaux du plus intelligent au moins intelligent.",
-      "propositions": [
-        ["Chimpanzé", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg/330px-015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg"],
-        ["Dauphin", "https://gogirlsgo.fr/wp-content/uploads/2024/06/les_differentes_especes_de_dauphins.webp"],
-        ["Corbeau", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDKLC1v7DP6UDTPTwj7xt9UKxYI_p1XTQJg&s"],
-        ["Poulpe", "https://www.guidedesespeces.org/sites/zeevruchtengids.org/files/styles/social_share_image/public/soort/Poulpe_0.jpg?h=16a6d817&itok=z2riagDu"]
-      ],
-      "answer": ["Chimpanzé", "Dauphin", "Corbeau", "Poulpe"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 139,
-      "type": 3,
-      "question": "Classez ces animaux marins du plus rapide au plus lent.",
-      "propositions": [
-        ["Espadon voilier", "https://mexique-voyages.com/wp-content/uploads/poisson-voilier.jpg"],
-        ["Orque", "https://www.monde-animal.fr/wp-content/uploads/2020/04/fiche-animale-monde-animal-orque-1.jpg"],
-        ["Thon rouge", "https://www.fishipedia.fr/wp-content/uploads/2020/06/Thunnus-albacares-2.jpg"],
-        ["Dauphin commun", "https://www.cetaces.org/wp-content/uploads/2020/07/Dauphin-commun_ad-6889.jpg"]
-      ],
-      "answer": ["Espadon voilier", "Thon rouge", "Orque", "Dauphin commun"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 140,
-      "type": 3,
-      "question": "Classez ces reptiles du plus grand au plus petit.",
-      "propositions": [
-        ["Crocodile marin", "https://upload.wikimedia.org/wikipedia/commons/4/43/SaltwaterCrocodile%28%27Maximo%27%29.jpg"],
-        ["Anaconda vert", "https://blooming-pets.com/wp-content/uploads/2025/03/Anaconda-Vert-Eunectes-Murinus-1536x1121.jpg"],
-        ["Python réticulé", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRkTEkCWL8Mz9qZHCepp53LYVS4zpfx0bfxw&s"],
-        ["Varan de Komodo", "https://vert.eco/wp-content/uploads/2021/09/8090267316_174e4b351d_o.jpg"]
-      ],
-      "answer": ["Crocodile marin", "Python réticulé", "Anaconda vert", "Varan de Komodo"],
-      "difficulty": "Moyen"
-    },
-    {
-      "id": 141,
+      "id": 106,
       "type": 3,
       "question": "Classez ces champignons du plus toxique au moins toxique.",
       "propositions": [
@@ -1927,7 +1532,7 @@
       "difficulty": "Difficile"
     },
     {
-      "id": 142,
+      "id": 107,
       "type": 3,
       "question": "Classez ces champignons du plus grand au plus petit en taille du chapeau.",
       "propositions": [
@@ -1940,7 +1545,7 @@
       "difficulty": "Difficile"
     },
     {
-      "id": 143,
+      "id": 108,
       "type": 3,
       "question": "Classez ces champignons selon leur préférence d’humidité, du plus humide au moins humide.",
       "propositions": [
@@ -1951,98 +1556,6 @@
       ],
       "answer": ["Oreille de Judas", "Chanterelle en tube", "Lépiote élevée", "Pied bleu"],
       "difficulty": "Difficile"
-    },
-    {
-      "id": 144,
-      "type": 3,
-      "question": "Classez ces champignons lignivores selon leur rapidité de décomposition du bois (du plus rapide au plus lent).",
-      "propositions": [
-        ["Polypore soufré", "https://upload.wikimedia.org/wikipedia/commons/1/10/Laetiporus_sulphureus_%2832715501158%29.jpg"],
-        ["Tramète versicolore", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-mMgrexHmQDnBKMU0eNCLGsHW2SqHdp9cvg&s"],
-        ["Ganoderma applanatum", "https://www.mycodb.fr/photos/Ganoderma_applanatum_2006_jg_1.jpg"],
-        ["Fomes fomentarius", "https://upload.wikimedia.org/wikipedia/commons/7/7b/Fomes_fomentarius_2010_G2.jpg"]
-      ],
-      "answer": ["Polypore soufré", "Tramète versicolore", "Ganoderma applanatum", "Fomes fomentarius"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 145,
-      "type": 3,
-      "question": "Classez ces champignons comestibles du plus recherché au moins recherché.",
-      "propositions": [
-        ["Morille", "https://magazine.hortus-focus.fr/wp-content/uploads/sites/2/2023/04/morille-morchella-esculenta-tomasztc-1200x800-1.jpg"],
-        ["Cèpe de Bordeaux", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Boletus_edulis_0.jpg/330px-Boletus_edulis_0.jpg"],
-        ["Girolle", "https://laumontshop.fr/cdn/shop/articles/Rebozuelo.jpg?v=1632214813"],
-        ["Pied-bleu", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc4TQ7KB6g1gbz0McG0c460sBd7eKqTMreww&s"]
-      ],
-      "answer": ["Cèpe de Bordeaux", "Morille", "Girolle", "Pied-bleu"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 146,
-      "type": 3,
-      "question": "Classez ces champignons du plus rare au plus commun.",
-      "propositions": [
-        ["Amanite royale", "https://www.notre-planete.info/photos/1570_amanite_tue_mouches_0.jpg"],
-        ["Morille noire", "https://www.chasseursdechampignons.com/blog/wp-content/uploads/2022/05/2-morilles-coniques-noires-dans-lherbe.jpg"],
-        ["Amanite panthère", "https://upload.wikimedia.org/wikipedia/commons/e/eb/Amanita_pantherina_Norway.jpg"],
-        ["Rosé des prés", "https://www.chasseursdechampignons.com/blog/wp-content/uploads/2021/12/Un-Rose-des-pres-Agaric-champetre-Agaricus-campestris.jpg"]
-      ],
-      "answer": ["Amanite royale", "Morille noire", "Amanite panthère", "Rosé des prés"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 147,
-      "type": 3,
-      "question": "Classez ces champignons selon leur capacité à teindre la laine, du plus puissant au moins puissant.",
-      "propositions": [
-        ["Dermocybe sanguinea", "https://identifier-les-champignons.com/wp-content/uploads/2020/06/Cortinarius_sanguineus_BS11.jpg"],
-        ["Paxille enroulé", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8Mec4YThoGOqKobqm8lJeGxUVbVg-sZpYQ&s"],
-        ["Lactaire sanguin", "https://www.francebleu.fr/pikapi/images/8483ab14-11f4-4322-a6e5-27caf2a383ae/1200x680?webp=false"],
-        ["Hydnellum peckii", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Hydnellum_peckii2.jpg/1200px-Hydnellum_peckii2.jpg"]
-      ],
-      "answer": ["Dermocybe sanguinea", "Lactaire sanguin", "Hydnellum peckii", "Paxille enroulé"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 148,
-      "type": 3,
-      "question": "Classez ces champignons par quantité de spores produites, du plus productif au moins productif.",
-      "propositions": [
-        ["Puffball géant (vessie-de-loup)", "https://upload.wikimedia.org/wikipedia/commons/e/e4/Calvatia_gigantea.jpg"],
-        ["Amanite tue-mouches", "https://upload.wikimedia.org/wikipedia/commons/6/68/Gelin_Mantar%C4%B1_Sinek_mantar%C4%B1_%28Amanita_muscaria%29%2C.jpg"],
-        ["Coprin micacé", "https://upload.wikimedia.org/wikipedia/commons/3/36/Coprinellus_micaceus_2.jpg"],
-        ["Pleurote en huître", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScg2fyhCwt5Nk9ayKu_weoEIcbm68awuXA8Q&s"]
-      ],
-      "answer": ["Puffball géant (vessie-de-loup)", "Amanite tue-mouches", "Coprin micacé", "Pleurote en huître"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 149,
-      "type": 3,
-      "question": "Classez ces champignons selon leur implication historique dans des intoxications graves, du plus impliqué au moins impliqué.",
-      "propositions": [
-        ["Amanite phalloïde", "https://www.centreantipoisons.be/sites/default/files/vergiftigingen/Groene-knolamaniet_59372219_0.jpg"],
-        ["Cortinaire couleur de rocou", "https://www.guidedeschampignons.com/wp-content/uploads/2020/11/Cortinarius_orellanus_Cortinaire-couleur-de-rocou_francini.jpg"],
-        ["Entolome livide", "https://www.centreantipoisons.be/sites/default/files/vergiftigingen/Giftige-Satijnzwam--Entoloma-sinuatum-%28DG%29-3027.jpg"],
-        ["Agaric jaunissant", "https://www.chasseursdechampignons.com/blog/wp-content/uploads/2022/07/Un-agaric-jaunissant.jpg"]
-      ],
-      "answer": ["Amanite phalloïde", "Entolome livide", "Cortinaire couleur de rocou", "Agaric jaunissant"],
-      "difficulty": "Difficile"
-    },
-    {
-      "id": 150,
-      "type": 3,
-      "question": "Classez ces champignons selon leur toxicité potentielle, du plus toxique au moins toxique.",
-      "propositions": [
-        ["Amanite phalloïde", "https://media.lechemindelanature.com/2024/11/Amanite_phalloide-general-01-Lcdn-HD-C-2.jpg"],
-        ["Gyromitre (Gyromitra esculenta)", "https://upload.wikimedia.org/wikipedia/commons/9/9a/GYROMITRA_ESCULENTA_%28Krombh.%29_Cooke_%285897315242%29.jpg"],
-        ["Entolome livide", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/2013-11-02_Entoloma_sinuatum_%28Bull.%29_P._Kumm_393814.jpg/250px-2013-11-02_Entoloma_sinuatum_%28Bull.%29_P._Kumm_393814.jpg"],
-        ["Tricholome de la Saint-Georges", "https://secretsdeschampignons.com/wp-content/uploads/sites/3/2023/11/Un-Tricholome-de-la-Saint-Georges-trouve-dans-lherbe.jpg"]
-      ],
-      "answer": ["Amanite phalloïde", "Gyromitre (Gyromitra esculenta)", "Entolome livide", "Tricholome de la Saint-Georges"],
-      "difficulty": "Difficile"
     }
-
   ]
 }
