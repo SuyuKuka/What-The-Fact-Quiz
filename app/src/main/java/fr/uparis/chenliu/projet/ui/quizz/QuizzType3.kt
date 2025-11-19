@@ -120,8 +120,7 @@ fun Quizztype3(
         },
         modifier = Modifier
             .padding(8.dp).width(150.dp).height(200.dp)
-            .background(Color.Black),
-        contentAlignment = Alignment.Center
+            .background(Color.Black)
     ) {
         if (currentImage.intValue < buildAnswer.size) {
             DragImage(answer = ans[0], url = ans[1])

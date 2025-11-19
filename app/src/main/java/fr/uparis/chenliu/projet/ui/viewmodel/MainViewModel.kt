@@ -64,7 +64,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     }
 
     suspend fun initUser() {
-        db.usersDao().insertUser(UsersEntity(username = username.value.trim(), energy = 20, lastTimeEnergy = System.currentTimeMillis(),subscribe = false, endDate = "", games = 0, wins = 0))
+        db.usersDao().insertUser(UsersEntity(username = username.value.trim(), energy = 20, lastTimeEnergy = System.currentTimeMillis(),subscribe = false, endDate = ""))
         user.value = db.usersDao().getUser()
         db.settingsDao().init(SettingsEntity(userId = user.value!!.userId, music = 1f, sound = 1f, background = 0, font = 0, preferredTopics = ""))
         delay(3000)
