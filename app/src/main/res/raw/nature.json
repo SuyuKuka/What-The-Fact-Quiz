@@ -1,0 +1,1795 @@
+{
+  "quizz": [
+    {
+      "id": 1,
+      "type": 0,
+      "question": "Que stockent les cactus dans leurs tissus pour faire plus efficacement face à la sécheresse ?",
+      "propositions": [
+        ["Terre",   ""],
+        ["Suc",     ""],
+        ["Sel",     ""],
+        ["Épines",  ""],
+        ["Carbone", ""],
+        ["Sable",   ""]
+      ],
+      "answer": ["Suc"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 2,
+      "type": 0,
+      "question": "Combien d'espèces environ comprend la famille des Cactaceae ?",
+      "propositions": [
+        ["2 500",  ""],
+        ["1 500",  ""],
+        ["3 500",  ""],
+        ["4 500",  ""],
+        ["500",    ""],
+        ["10 000", ""]
+      ],
+      "answer": ["2 500"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 3,
+      "type": 0,
+      "question": "Quelle forme de cactus est souvent appréciée des collectionneurs ?",
+      "propositions": [
+        ["Monstrueuse", ""],
+        ["Arbustive",   ""],
+        ["Grimpante",   ""],
+        ["Globulaire",  ""],
+        ["Plate",       ""],
+        ["Cylindrique", ""]
+      ],
+      "answer": ["Monstrueuse"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 4,
+      "type": 0,
+      "question": "Avec ses raquettes, de quel pays est originaire le figuier de Barbarie ?",
+      "propositions": [
+        ["Mexique",   ""],
+        ["Espagne",   ""],
+        ["Grèce",     ""],
+        ["Australie", ""],
+        ["Maroc",     ""],
+        ["Argentine", ""]
+      ],
+      "answer": ["Mexique"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 5,
+      "type": 0,
+      "question": "À quel moment de la journée les cactus absorbent-ils le dioxyde de carbone ?",
+      "propositions": [
+        ["Le jour",       ""],
+        ["Jour et nuit",  ""],
+        ["Jamais",        ""],
+        ["La nuit",       ""],
+        ["Au crépuscule", ""],
+        ["À l'aube",      ""]
+      ],
+      "answer": ["La nuit"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 6,
+      "type": 0,
+      "question": "Qui a ramené les premiers cactus en Europe (des Melocactus) ?",
+      "propositions": [
+        ["Diogo Gomes",         ""],
+        ["Pedro de Sintra",     ""],
+        ["Christophe Colomb",   ""],
+        ["Afonso de Paiva",     ""],
+        ["Vasco de Gama",       ""],
+        ["Fernand de Magellan", ""]
+      ],
+      "answer": ["Christophe Colomb"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 7,
+      "type": 0,
+      "question": "Idéalement, à quelle fréquence est-il nécessaire de rempoter un cactus ?",
+      "propositions": [
+        ["Tous les 4 ans",  ""],
+        ["Tous les 8 ans",  ""],
+        ["Tous les 16 ans", ""],
+        ["Tous les 12 ans", ""],
+        ["Chaque année",    ""],
+        ["Tous les 2 ans",  ""]
+      ],
+      "answer": ["Tous les 4 ans"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 8,
+      "type": 0,
+      "question": "Quelle est la température la plus adéquate pour le repos hivernal du cactus ?",
+      "propositions": [
+        ["7° C",  ""],
+        ["22° C", ""],
+        ["17° C", ""],
+        ["12° C", ""],
+        ["30° C", ""],
+        ["0° C",  ""]
+      ],
+      "answer": ["7° C"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 9,
+      "type": 0,
+      "question": "De quelle quantité de lumière un cactus a-t-il besoin pour s'épanouir ?",
+      "propositions": [
+        ["Un peu",            ""],
+        ["Beaucoup",          ""],
+        ["Aucune",            ""],
+        ["Le maximum",        ""],
+        ["Lumière indirecte", ""],
+        ["Mi-ombre",          ""]
+      ],
+      "answer": ["Le maximum"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 10,
+      "type": 0,
+      "question": "Dans quelles régions du globe les cactus poussent-ils le mieux ?",
+      "propositions": [
+        ["Prairies",          ""],
+        ["Montagnes",         ""],
+        ["Plaines",           ""],
+        ["Déserts",           ""],
+        ["Forêts tropicales", ""],
+        ["Zones humides",     ""]
+      ],
+      "answer": ["Déserts"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 11,
+      "type": 0,
+      "question": "Combien de loges comporte la baie du fruit du cactus ?",
+      "propositions": [
+        ["Trois",     ""],
+        ["Deux",      ""],
+        ["Quatre",    ""],
+        ["Une seule", ""],
+        ["Cinq",      ""],
+        ["Six",       ""]
+      ],
+      "answer": ["Une seule"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 12,
+      "type": 0,
+      "question": "Quel cactus était autrefois utilisé à des fins rituelles par les Amérindiens ?",
+      "propositions": [
+        ["San Pedro",  ""],
+        ["Peyotl",     ""],
+        ["Hylocereus", ""],
+        ["Cereus",     ""],
+        ["Echinopsis", ""],
+        ["Opuntia",    ""]
+      ],
+      "answer": ["Peyotl"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 13,
+      "type": 0,
+      "question": "Que signifie le mot grec ancien kaktos, d'où provient le nom cactus ?",
+      "propositions": [
+        ["Épine",   ""],
+        ["Résine",  ""],
+        ["Chardon", ""],
+        ["Soleil",  ""],
+        ["Eau",     ""],
+        ["Gros",    ""]
+      ],
+      "answer": ["Chardon"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 14,
+      "type": 0,
+      "question": "En combien de genres sont réparties les 2 500 espèces de cactus connues ?",
+      "propositions": [
+        ["70",  ""],
+        ["30",  ""],
+        ["50",  ""],
+        ["90",  ""],
+        ["120", ""],
+        ["10",  ""]
+      ],
+      "answer": ["90"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 15,
+      "type": 0,
+      "question": "Quels cactus ont gardé l'aspect d'arbustes classiques ainsi que leurs vraies feuilles ?",
+      "propositions": [
+        ["Primitifs",   ""],
+        ["Épiphytes",   ""],
+        ["Globuleux",   ""],
+        ["Colonnaires", ""],
+        ["Grands",      ""],
+        ["Miniatures",  ""]
+      ],
+      "answer": ["Primitifs"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 16,
+      "type": 0,
+      "question": "En combien de types morphologiques peuvent être regroupés les cactus ?",
+      "propositions": [
+        ["Quatre", ""],
+        ["Sept",   ""],
+        ["Cinq",   ""],
+        ["Six",    ""],
+        ["Trois",  ""],
+        ["Huit",   ""]
+      ],
+      "answer": ["Cinq"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 17,
+      "type": 0,
+      "question": "Dans quel pays le fait de ramasser des cactus est-il puni de prison ?",
+      "propositions": [
+        ["Algérie",    ""],
+        ["Argentine",  ""],
+        ["Inde",       ""],
+        ["Mexique",    ""],
+        ["États-Unis", ""],
+        ["Brésil",     ""]
+      ],
+      "answer": ["Mexique"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 18,
+      "type": 0,
+      "question": "Pour quel élevage l'Opuntia a-t-il été importé en Australie ?",
+      "propositions": [
+        ["Coléoptères", ""],
+        ["Cloportes",   ""],
+        ["Coccinelles", ""],
+        ["Cochenilles", ""],
+        ["Papillons",   ""],
+        ["Abeilles",    ""]
+      ],
+      "answer": ["Cochenilles"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 19,
+      "type": 0,
+      "question": "Quelle technique permet facilement la multiplication des cactus ?",
+      "propositions": [
+        ["Bouturage",  ""],
+        ["Marcottage", ""],
+        ["Cernage",    ""],
+        ["Tuteurage",  ""],
+        ["Greffage",   ""],
+        ["Semis",      ""]
+      ],
+      "answer": ["Bouturage"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 20,
+      "type": 0,
+      "question": "Quelle marque de voiture française propose un modèle baptisé cactus ?",
+      "propositions": [
+        ["Citroën C4",     ""],
+        ["Nissan Juke",    ""],
+        ["Peugeot P4",     ""],
+        ["Audi Q2",        ""],
+        ["Renault Captur", ""],
+        ["Dacia Duster",   ""]
+      ],
+      "answer": ["Citroën C4"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 21,
+      "type": 0,
+      "question": "Quel naturaliste a regroupé en 1753 les 22 espèces connues de cactus ?",
+      "propositions": [
+        ["Carl von Linné",         ""],
+        ["Daniel Rolander",        ""],
+        ["Olof Celsius",           ""],
+        ["Erik Acharius",          ""],
+        ["Alexander von Humboldt", ""],
+        ["Charles Darwin",         ""]
+      ],
+      "answer": ["Carl von Linné"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 22,
+      "type": 0,
+      "question": "Combien d'espèces de cactus ont aujourd'hui un usage médicinal et/ou vétérinaire ?",
+      "propositions": [
+        ["64",  ""],
+        ["34",  ""],
+        ["4",   ""],
+        ["94",  ""],
+        ["128", ""],
+        ["10",  ""]
+      ],
+      "answer": ["64"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 23,
+      "type": 0,
+      "question": "En botanique, quel signe distinctif différencie les Cactaceae des autres familles ?",
+      "propositions": [
+        ["Radicule",   ""],
+        ["Aréole",     ""],
+        ["Lenticelle", ""],
+        ["Chalaze",    ""],
+        ["Stomate",    ""],
+        ["Pédoncule",  ""]
+      ],
+      "answer": ["Aréole"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 24,
+      "type": 0,
+      "question": "Quelle est la plus haute espèce de cactus connue à ce jour ?",
+      "propositions": [
+        ["Pachycereus pringlei",  ""],
+        ["Rhipsalis russellii",   ""],
+        ["Harrisia fragrans",     ""],
+        ["Opuntia rufida",        ""],
+        ["Saguaro",               ""],
+        ["Echinocactus grusonii", ""]
+      ],
+      "answer": ["Pachycereus pringlei"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 25,
+      "type": 0,
+      "question": "Comment appelle-t-on une croissance anormale du sommet d'une tige de cactus ?",
+      "propositions": [
+        ["Sérotinie",    ""],
+        ["Cristation",   ""],
+        ["Résupination", ""],
+        ["Ostiole",      ""],
+        ["Fasciation",   ""],
+        ["Étiolation",   ""]
+      ],
+      "answer": ["Cristation"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 26,
+      "type": 0,
+      "question": "Quel cactus colonnaire est connu pour contenir de la mescaline ?",
+      "propositions": [
+        ["Oroya",                ""],
+        ["Ferocactus",           ""],
+        ["Parodia",              ""],
+        ["San Pedro",            ""],
+        ["Opuntia ficus-indica", ""],
+        ["Carnegiea gigantea",   ""]
+      ],
+      "answer": ["San Pedro"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 27,
+      "type": 0,
+      "question": "Quelle vallée est l'un des plus riches sites de cactus dans le monde ?",
+      "propositions": [
+        ["Vallée de Joux",     ""],
+        ["Vallée de Baïgorry", ""],
+        ["Vallée de Tehuacan", ""],
+        ["Vallée des Usines",  ""],
+        ["Vallée de la Mort",  ""],
+        ["Vallée du Rift",     ""]
+      ],
+      "answer": ["Vallée de Tehuacan"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 28,
+      "type": 0,
+      "question": "Quel cactus produit le pitaya, également appelé le fruit du dragon ?",
+      "propositions": [
+        ["Hylocereus",    ""],
+        ["San Pedro",     ""],
+        ["Peyotl",        ""],
+        ["Cereus",        ""],
+        ["Mammillaria",   ""],
+        ["Gymnocalycium", ""]
+      ],
+      "answer": ["Hylocereus"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 29,
+      "type": 0,
+      "question": "Quelle est la plus petite espèce de cactus connue à ce jour ?",
+      "propositions": [
+        ["Aztekium ritteri",        ""],
+        ["Echinopsis oxygona",      ""],
+        ["Cereus jamacaru",         ""],
+        ["Blossfeldia liliputiana", ""],
+        ["Mammillaria microcarpa",  ""],
+        ["Rebutia minuscula",       ""]
+      ],
+      "answer": ["Blossfeldia liliputiana"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 30,
+      "type": 0,
+      "question": "Quelle série de BD humoristique est dessinée par Philippe Bercovici ?",
+      "propositions": [
+        ["Red Cactus",          ""],
+        ["Cactus Man",          ""],
+        ["Circus Cactus",       ""],
+        ["Cactus Club",         ""],
+        ["Les Femmes en blanc", ""],
+        ["Les Profs",           ""]
+      ],
+      "answer": ["Cactus Club"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 31,
+      "type": 0,
+      "question": "Dans quel verger poussent presque exclusivement des pommiers ?",
+      "propositions": [
+        ["Pommeraie",   ""],
+        ["Pommiseau",   ""],
+        ["Vergepommes", ""],
+        ["Vergeture",   ""],
+        ["Vignoble",    ""],
+        ["Pêcheraie",   ""]
+      ],
+      "answer": ["Pommeraie"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 32,
+      "type": 0,
+      "question": "Quelle est la variété de pommes la plus répandue en France ?",
+      "propositions": [
+        ["Jonagold",     ""],
+        ["Golden",       ""],
+        ["Granny Smith", ""],
+        ["Gala",         ""],
+        ["Fuji",         ""],
+        ["Reinette",     ""]
+      ],
+      "answer": ["Golden"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 33,
+      "type": 0,
+      "question": "De quelle vitamine la pomme est-elle la mieux pourvue ?",
+      "propositions": [
+        ["Vitamine E", ""],
+        ["Vitamine C", ""],
+        ["Vitamine B", ""],
+        ["Vitamine D", ""],
+        ["Vitamine A", ""],
+        ["Vitamine K", ""]
+      ],
+      "answer": ["Vitamine C"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 34,
+      "type": 0,
+      "question": "Quelle partie de la pomme contient le plus de vitamine ?",
+      "propositions": [
+        ["Le pédoncule", ""],
+        ["La pulpe",     ""],
+        ["La peau",      ""],
+        ["Les pépins",   ""],
+        ["Le trognon",   ""],
+        ["Le cœur",      ""]
+      ],
+      "answer": ["La peau"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 35,
+      "type": 0,
+      "question": "Que permet de réguler le gel formé par la pectine présente dans la pomme ?",
+      "propositions": [
+        ["Le cholestérol",        ""],
+        ["Le lanostérol",         ""],
+        ["Le phytostérol",        ""],
+        ["Le campestérol",        ""],
+        ["La glycémie",           ""],
+        ["La tension artérielle", ""]
+      ],
+      "answer": ["Le cholestérol"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 36,
+      "type": 0,
+      "question": "Complétez ce diction : « Une pomme chaque matin éloigne... »",
+      "propositions": [
+        ["Le médecin",    ""],
+        ["Le chagrin",    ""],
+        ["Le pantin",     ""],
+        ["Le destin",     ""],
+        ["Le dentiste",   ""],
+        ["Le pharmacien", ""]
+      ],
+      "answer": ["Le médecin"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 37,
+      "type": 0,
+      "question": "Quelle confiserie est constituée d'une pomme fraîche entourée de sucre cuit, souvent rouge ?",
+      "propositions": [
+        ["Apfelstrudel",        ""],
+        ["Tarte Tatin",         ""],
+        ["Pomme d'amour",       ""],
+        ["Le crumble",          ""],
+        ["Chausson aux pommes", ""],
+        ["Tarte normande",      ""]
+      ],
+      "answer": ["Pomme d'amour"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 38,
+      "type": 0,
+      "question": "Dans quel dessert les pommes sont-elles enrobées de pâte et frites dans l'huile ?",
+      "propositions": [
+        ["Un flan",      ""],
+        ["Une croûte",   ""],
+        ["Un beignet",   ""],
+        ["Une bûche",    ""],
+        ["Un clafoutis", ""],
+        ["Un délice",    ""]
+      ],
+      "answer": ["Un beignet"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 39,
+      "type": 0,
+      "question": "Quelle grande entreprise multinationale américaine a pour logo une pomme ?",
+      "propositions": [
+        ["Xerox",     ""],
+        ["IBM",       ""],
+        ["Apple",     ""],
+        ["Microsoft", ""],
+        ["Samsung",   ""],
+        ["Sony",      ""]
+      ],
+      "answer": ["Apple"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 40,
+      "type": 0,
+      "question": "Quelle célèbre princesse originaire de contes a été empoisonnée par une pomme ?",
+      "propositions": [
+        ["Jasmine",       ""],
+        ["Aurore",        ""],
+        ["Cendrillon",    ""],
+        ["Blanche-Neige", ""],
+        ["Raiponce",      ""],
+        ["Belle",         ""]
+      ],
+      "answer": ["Blanche-Neige"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 41,
+      "type": 0,
+      "question": "Quelle boisson alcoolisée à base de pommes titre habituellement entre 2 % et 8 % d'alcool ?",
+      "propositions": [
+        ["Le cidre",    ""],
+        ["Le calvados", ""],
+        ["Le lambig",   ""],
+        ["Le pommeau",  ""],
+        ["Le poiré",    ""],
+        ["Le kirsch",   ""]
+      ],
+      "answer": ["Le cidre"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 42,
+      "type": 0,
+      "question": "Que désigne le mot « pomme » dans le langage populaire ?",
+      "propositions": [
+        ["Le visage",  ""],
+        ["Les genoux", ""],
+        ["Le ventre",  ""],
+        ["Les fesses", ""],
+        ["Le pied",    ""],
+        ["Le coude",   ""]
+      ],
+      "answer": ["Le visage"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 43,
+      "type": 0,
+      "question": "Combien de pépins compte-t-on dans chacune des cinq loges de l'ovaire initial de la pomme ?",
+      "propositions": [
+        ["Huit",   ""],
+        ["Six",    ""],
+        ["Deux",   ""],
+        ["Quatre", ""],
+        ["Un",     ""],
+        ["Trois",  ""]
+      ],
+      "answer": ["Deux"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 44,
+      "type": 0,
+      "question": "Quelle place occupe la pomme dans la consommation des fruits dans le monde ?",
+      "propositions": [
+        ["Quatrième", ""],
+        ["Première",  ""],
+        ["Troisième", ""],
+        ["Deuxième",  ""],
+        ["Cinquième", ""],
+        ["Sixième",   ""]
+      ],
+      "answer": ["Troisième"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 45,
+      "type": 0,
+      "question": "Quel pays est le plus gros producteur de pommes avec 35 millions de tonnes par an ?",
+      "propositions": [
+        ["États-Unis", ""],
+        ["Italie",     ""],
+        ["Turquie",    ""],
+        ["Chine",      ""],
+        ["France",     ""],
+        ["Pologne",    ""]
+      ],
+      "answer": ["Chine"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 46,
+      "type": 0,
+      "question": "Quel célèbre gâteau traditionnel autrichien est cuisiné à base de pommes ?",
+      "propositions": [
+        ["La croustade", ""],
+        ["Tarte Tatin",  ""],
+        ["Le crumble",   ""],
+        ["Apfelstrudel", ""],
+        ["Sachertorte",  ""],
+        ["Linzertorte",  ""]
+      ],
+      "answer": ["Apfelstrudel"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 47,
+      "type": 0,
+      "question": "Dans quelle tarte aux pommes renversée les pommes sont-elles caramélisées ?",
+      "propositions": [
+        ["Tarte au riz",     ""],
+        ["Tarte Tatin",      ""],
+        ["Tarte au maton",   ""],
+        ["Tarte normande",   ""],
+        ["Tarte Bourdaloue", ""],
+        ["Tarte aux Daims",  ""]
+      ],
+      "answer": ["Tarte Tatin"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 48,
+      "type": 0,
+      "question": "Qui a été obligé de tirer un carreau d'arbalète dans une pomme posée sur la tête de son fils ?",
+      "propositions": [
+        ["Sinbad le marin", ""],
+        ["Guillaume Tell",  ""],
+        ["Perceval",        ""],
+        ["Belphégor",       ""],
+        ["Robin des Bois",  ""],
+        ["Ulysse",          ""]
+      ],
+      "answer": ["Guillaume Tell"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 49,
+      "type": 0,
+      "question": "Quel président français a utilisé la pomme comme symbole de sa campagne politique ?",
+      "propositions": [
+        ["Jacques Chirac",           ""],
+        ["François Hollande",        ""],
+        ["Nicolas Sarkozy",          ""],
+        ["François Mitterrand",      ""],
+        ["Valéry Giscard d'Estaing", ""],
+        ["Emmanuel Macron",          ""]
+      ],
+      "answer": ["Jacques Chirac"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 50,
+      "type": 0,
+      "question": "Qui aurait compris les lois de l'attraction universelle une pomme tombée sur la tête ?",
+      "propositions": [
+        ["Edmond Halley",    ""],
+        ["Isaac Newton",     ""],
+        ["Nicolas Copernic", ""],
+        ["Galilée",          ""],
+        ["Albert Einstein",  ""],
+        ["Stephen Hawking",  ""]
+      ],
+      "answer": ["Isaac Newton"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 51,
+      "type": 0,
+      "question": "Combinaison de plusieurs organes, la pomme est un fruit, mais plus précisément...",
+      "propositions": [
+        ["Un faux-fruit", ""],
+        ["Une stomate",   ""],
+        ["Une souche",    ""],
+        ["Une pruine",    ""],
+        ["Un akène",      ""],
+        ["Une drupéole",  ""]
+      ],
+      "answer": ["Un faux-fruit"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 52,
+      "type": 0,
+      "question": "Combien de tonnes de pommes récolte-t-on annuellement dans le monde ?",
+      "propositions": [
+        ["53 millions", ""],
+        ["45 millions", ""],
+        ["37 millions", ""],
+        ["69 millions", ""],
+        ["80 millions", ""],
+        ["25 millions", ""]
+      ],
+      "answer": ["69 millions"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 53,
+      "type": 0,
+      "question": "Quelle partie de la pomme contient principalement de la pectine ?",
+      "propositions": [
+        ["La peau",      ""],
+        ["Les pépins",   ""],
+        ["Le pédoncule", ""],
+        ["La pulpe",     ""],
+        ["Le trognon",   ""],
+        ["L'épiderme",   ""]
+      ],
+      "answer": ["Les pépins"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 54,
+      "type": 0,
+      "question": "Quel gâteau à base de pommes est appelé « croustade » au Québec ?",
+      "propositions": [
+        ["Crumble",      ""],
+        ["Chausson",     ""],
+        ["Tarte Tatin",  ""],
+        ["Apfelstrudel", ""],
+        ["Galette",      ""],
+        ["Beignet",      ""]
+      ],
+      "answer": ["Crumble"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 55,
+      "type": 0,
+      "question": "Quelle eau-de-vie d'origine normande est obtenue par distillation de cidre ?",
+      "propositions": [
+        ["Le pommeau",  ""],
+        ["Le calvados", ""],
+        ["Le lambig",   ""],
+        ["Le cidre",    ""],
+        ["Le poiré",    ""],
+        ["Le kirsch",   ""]
+      ],
+      "answer": ["Le calvados"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 56,
+      "type": 0,
+      "question": "Quelle pomme représente le logo de la maison de disques du groupe anglais The Beatles ?",
+      "propositions": [
+        ["Jonagold",      ""],
+        ["Golden",        ""],
+        ["Granny Smith",  ""],
+        ["Gala",          ""],
+        ["Red Delicious", ""],
+        ["Pink Lady",     ""]
+      ],
+      "answer": ["Granny Smith"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 57,
+      "type": 0,
+      "question": "Quel peintre belge a employé une pomme pour appuyer son travail sur les mots ?",
+      "propositions": [
+        ["René Magritte", ""],
+        ["Paul Delvaux",  ""],
+        ["Henri Michaux", ""],
+        ["James Ensor",   ""],
+        ["Salvador Dalí", ""],
+        ["Andy Warhol",   ""]
+      ],
+      "answer": ["René Magritte"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 58,
+      "type": 0,
+      "question": "Suite à quelle maladie observe-t-on des taches noirâtres sur les feuilles des pommiers ?",
+      "propositions": [
+        ["Rouille",  ""],
+        ["Charbon",  ""],
+        ["Tavelure", ""],
+        ["Galle",    ""],
+        ["Mildiou",  ""],
+        ["Oïdium",   ""]
+      ],
+      "answer": ["Tavelure"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 59,
+      "type": 0,
+      "question": "Quel était généralement le jour de la pomme dans le calendrier républicain français ?",
+      "propositions": [
+        ["6 décembre",   ""],
+        ["22 octobre",   ""],
+        ["11 janvier",   ""],
+        ["16 novembre",  ""],
+        ["10 septembre", ""],
+        ["3 mars",       ""]
+      ],
+      "answer": ["22 octobre"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 60,
+      "type": 0,
+      "question": "Quel est le poids d'une pomme calibrée à 60/65 pour la consommation ?",
+      "propositions": [
+        ["176-209 g", ""],
+        ["108-142 g", ""],
+        ["75-108 g",  ""],
+        ["142-176 g", ""],
+        ["209-242 g", ""],
+        ["50-75 g",   ""]
+      ],
+      "answer": ["75-108 g"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 61,
+      "type": 0,
+      "question": "Quelle société est la première productrice mondiale de frites surgelées ?",
+      "propositions": [
+        ["Mousline",     ""],
+        ["Vico",         ""],
+        ["McCain Foods", ""],
+        ["Lutosa",       ""],
+        ["Aviko",        ""],
+        ["Nestlé",       ""]
+      ],
+      "answer": ["McCain Foods"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 62,
+      "type": 0,
+      "question": "Quel jouet pour enfants possède une tête en plastique de forme patatoïde ?",
+      "propositions": [
+        ["Monsieur Patate", ""],
+        ["Woody",           ""],
+        ["Zigzag",          ""],
+        ["Rex",             ""],
+        ["Buzz l'Éclair",   ""],
+        ["Slinky",          ""]
+      ],
+      "answer": ["Monsieur Patate"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 63,
+      "type": 0,
+      "question": "Quel tableau de Jean-François Millet aurait dû s'appeler « La Mauvaise Récolte » ?",
+      "propositions": [
+        ["Le Semeur",        ""],
+        ["L'Angélus",        ""],
+        ["Les Glaneuses",    ""],
+        ["Un vanneur",       ""],
+        ["Le Repas du soir", ""],
+        ["La Méridienne",    ""]
+      ],
+      "answer": ["L'Angélus"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 64,
+      "type": 0,
+      "question": "Si vous en avez gros sur la patate, vous en avez probablement gros sur...",
+      "propositions": [
+        ["Le nez",    ""],
+        ["Le foie",   ""],
+        ["Le dos",    ""],
+        ["Le coeur",  ""],
+        ["L'estomac", ""],
+        ["La tête",   ""]
+      ],
+      "answer": ["Le coeur"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 65,
+      "type": 0,
+      "question": "En Belgique, quelle est la principale entreprise de l'industrie de la pomme de terre ?",
+      "propositions": [
+        ["Avebe",     ""],
+        ["Aviko",     ""],
+        ["Lutosa",    ""],
+        ["McCain",    ""],
+        ["Clarebout", ""],
+        ["Agristo",   ""]
+      ],
+      "answer": ["Lutosa"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 66,
+      "type": 0,
+      "question": "Quelle activité manuelle consiste à servir de pommes de terre comme tampons ?",
+      "propositions": [
+        ["Patatogravure", ""],
+        ["Sel coloré",    ""],
+        ["Pâte à sel",    ""],
+        ["Origami",       ""],
+        ["Mosaïque",      ""],
+        ["Découpage",     ""]
+      ],
+      "answer": ["Patatogravure"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 67,
+      "type": 0,
+      "question": "Quel épluche-légumes à lame en gouttière facilite l'épluchage de la pomme de terre ?",
+      "propositions": [
+        ["Girafe",           ""],
+        ["Économe",          ""],
+        ["Canneleur",        ""],
+        ["Râpe",             ""],
+        ["Mandoline",        ""],
+        ["Couteau d'office", ""]
+      ],
+      "answer": ["Économe"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 68,
+      "type": 0,
+      "question": "Quel roman de Jacques Vaucherot fut adapté au cinéma par Claude Autant-Lara ?",
+      "propositions": [
+        ["Les patates",           ""],
+        ["Douce",                 ""],
+        ["Gloria",                ""],
+        ["Le Joueur",             ""],
+        ["La Traversée de Paris", ""],
+        ["Le Diable au corps",    ""]
+      ],
+      "answer": ["Les patates"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 69,
+      "type": 0,
+      "question": "Quelle vitamine apportée par la pomme de terre est utile pour la prévention du scorbut ?",
+      "propositions": [
+        ["Vitamine D", ""],
+        ["Vitamine B", ""],
+        ["Vitamine A", ""],
+        ["Vitamine C", ""],
+        ["Vitamine E", ""],
+        ["Vitamine K", ""]
+      ],
+      "answer": ["Vitamine C"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 70,
+      "type": 0,
+      "question": "Quelle patate se renvoie-t-on l'un l'autre face à un problème embarrassant ?",
+      "propositions": [
+        ["Froide",   ""],
+        ["Dure",     ""],
+        ["Chaude",   ""],
+        ["Molle",    ""],
+        ["Pourrie",  ""],
+        ["Vicieuse", ""]
+      ],
+      "answer": ["Chaude"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 71,
+      "type": 0,
+      "question": "Dans quelle ville belge se trouve le seul musée au monde consacré à la frite ?",
+      "propositions": [
+        ["Mons",      ""],
+        ["Courtrai",  ""],
+        ["Bruges",    ""],
+        ["Tournai",   ""],
+        ["Bruxelles", ""],
+        ["Anvers",    ""]
+      ],
+      "answer": ["Bruges"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 72,
+      "type": 0,
+      "question": "Quel jeu en réalité alternée a utilisé la pomme de terre comme emblème ?",
+      "propositions": [
+        ["Team Fortress",  ""],
+        ["The Orange Box", ""],
+        ["Portal 2",       ""],
+        ["Counter-Strike", ""],
+        ["Half-Life",      ""],
+        ["Left 4 Dead",    ""]
+      ],
+      "answer": ["Portal 2"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 73,
+      "type": 0,
+      "question": "Quel poète chilien, prix Nobel de littérature, a chanté la pomme de terre ?",
+      "propositions": [
+        ["Armando Uribe",    ""],
+        ["Nicanor Parra",    ""],
+        ["Pablo Neruda",     ""],
+        ["Enrique Lihn",     ""],
+        ["Vicente Huidobro", ""],
+        ["Gabriela Mistral", ""]
+      ],
+      "answer": ["Pablo Neruda"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 74,
+      "type": 0,
+      "question": "Quelle société américaine domine aujourd'hui le marché des chips ?",
+      "propositions": [
+        ["Covi",      ""],
+        ["Frito-Lay", ""],
+        ["Quala",     ""],
+        ["Lunor",     ""],
+        ["Walkers",   ""],
+        ["Lay's",     ""]
+      ],
+      "answer": ["Frito-Lay"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 75,
+      "type": 0,
+      "question": "Quel pays est le plus gros consommateur de pommes de terre ?",
+      "propositions": [
+        ["Inde",        ""],
+        ["Chine",       ""],
+        ["Russie",      ""],
+        ["Royaume-Uni", ""],
+        ["États-Unis",  ""],
+        ["Allemagne",   ""]
+      ],
+      "answer": ["Chine"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 76,
+      "type": 0,
+      "question": "Qu'est-il possible de produire avec deux pommes de terre et peu de matériel ?",
+      "propositions": [
+        ["Vibrations",  ""],
+        ["Lumière",     ""],
+        ["Son",         ""],
+        ["Électricité", ""],
+        ["Chaleur",     ""],
+        ["Odeur",       ""]
+      ],
+      "answer": ["Électricité"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 77,
+      "type": 0,
+      "question": "Que peut-on produire après fermentation et distillation de l'amidon de la pomme de terre ?",
+      "propositions": [
+        ["Ouzo",     ""],
+        ["Raki",     ""],
+        ["Éthanol",  ""],
+        ["Absinthe", ""],
+        ["Moutarde", ""],
+        ["Vinaigre", ""]
+      ],
+      "answer": ["Éthanol"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 78,
+      "type": 0,
+      "question": "À partir du XVIe siècle, l'alcool de pomme de terre a servi à confectionner quel alcool ?",
+      "propositions": [
+        ["Calvados", ""],
+        ["Tequila",  ""],
+        ["Armagnac", ""],
+        ["Vodka",    ""],
+        ["Rhum",     ""],
+        ["Gin",      ""]
+      ],
+      "answer": ["Vodka"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 79,
+      "type": 0,
+      "question": "Quel pays est le premier exportateur mondial de pommes de terre de conservation ?",
+      "propositions": [
+        ["Belgique",  ""],
+        ["France",    ""],
+        ["Pays-Bas",  ""],
+        ["Allemagne", ""],
+        ["Canada",    ""],
+        ["Chine",     ""]
+      ],
+      "answer": ["France"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 80,
+      "type": 0,
+      "question": "Quel nom est également donné à l'amidon de pomme de terre ?",
+      "propositions": [
+        ["Gélose",   ""],
+        ["Purée",    ""],
+        ["Sirop",    ""],
+        ["Fécule",   ""],
+        ["Maltose",  ""],
+        ["Dextrine", ""]
+      ],
+      "answer": ["Fécule"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 81,
+      "type": 0,
+      "question": "Quelle année a été déclarée année de la pomme de terre par l'ONU ?",
+      "propositions": [
+        ["1988", ""],
+        ["2008", ""],
+        ["2018", ""],
+        ["1998", ""],
+        ["2000", ""],
+        ["2010", ""]
+      ],
+      "answer": ["2008"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 82,
+      "type": 0,
+      "question": "Quelle variété est utilisée pour la préparation des frites McDonald's ?",
+      "propositions": [
+        ["Red Pontiac",    ""],
+        ["Shepody",        ""],
+        ["Yukon Gold",     ""],
+        ["Russet Burbank", ""],
+        ["Bintje",         ""],
+        ["Charlotte",      ""]
+      ],
+      "answer": ["Russet Burbank"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 83,
+      "type": 0,
+      "question": "Quel entrepreneur nippo-américain est surnommé le roi de la pomme de terre ?",
+      "propositions": [
+        ["George Shima",  ""],
+        ["Daniel Inouye", ""],
+        ["Steve Aoki",    ""],
+        ["Eddie Imazu",   ""],
+        ["Yoko Ono",      ""],
+        ["Bill Gates",    ""]
+      ],
+      "answer": ["George Shima"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 84,
+      "type": 0,
+      "question": "De quel État américain la pomme de terre est-elle l'emblème officiel ?",
+      "propositions": [
+        ["Montana",    ""],
+        ["Vermont",    ""],
+        ["Idaho",      ""],
+        ["Géorgie",    ""],
+        ["Washington", ""],
+        ["Maine",      ""]
+      ],
+      "answer": ["Idaho"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 85,
+      "type": 0,
+      "question": "Quel terme du quechua désigne la pomme de terre dans les pays d'Amérique latine ?",
+      "propositions": [
+        ["Baba", ""],
+        ["Dada", ""],
+        ["Papa", ""],
+        ["Mama", ""],
+        ["Oca",  ""],
+        ["Yuca", ""]
+      ],
+      "answer": ["Papa"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 86,
+      "type": 0,
+      "question": "Quel extrait de la pomme de terre est utilisé comme apprêt pour la raideur du linge ?",
+      "propositions": [
+        ["Synthon",       ""],
+        ["Empois",        ""],
+        ["Dipôle",        ""],
+        ["Prontosil",     ""],
+        ["Gélatine",      ""],
+        ["Lait de chaux", ""]
+      ],
+      "answer": ["Empois"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 87,
+      "type": 0,
+      "question": "En Pologne, quel ratio de pomme de terre est produit pour la consommation animale ?",
+      "propositions": [
+        ["Une sur trois",  ""],
+        ["Une sur neuf",   ""],
+        ["Une sur sept",   ""],
+        ["Une sur cinq",   ""],
+        ["Une sur deux",   ""],
+        ["Une sur quatre", ""]
+      ],
+      "answer": ["Une sur trois"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 88,
+      "type": 0,
+      "question": "Quel plat traditionnel des Pays-Bas consiste en une purée mélangée avec des légumes ?",
+      "propositions": [
+        ["Potaye",       ""],
+        ["Stamppot",     ""],
+        ["Lefse",        ""],
+        ["Frico",        ""],
+        ["Hutspot",      ""],
+        ["Bitterballen", ""]
+      ],
+      "answer": ["Stamppot"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 89,
+      "type": 0,
+      "question": "Au Pérou, combien existe-t-il environ de variétés de pommes de terre ?",
+      "propositions": [
+        ["2 000", ""],
+        ["3 000", ""],
+        ["1 000", ""],
+        ["4 000", ""],
+        ["500",   ""],
+        ["5 000", ""]
+      ],
+      "answer": ["3 000"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 90,
+      "type": 0,
+      "question": "Quel mets québécois se compose de frites, de cheddar en grains et de sauce brune ?",
+      "propositions": [
+        ["Trempette",      ""],
+        ["Poutine",        ""],
+        ["Cipaille",       ""],
+        ["Gibelotte",      ""],
+        ["Tire sur neige", ""],
+        ["BeaverTails",    ""]
+      ],
+      "answer": ["Poutine"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 91,
+      "type": 1,
+      "question": "En moyenne, combien d’années faut-il à un chêne pour atteindre 20 mètres de hauteur ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["50"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 92,
+      "type": 1,
+      "question": "Combien d’années vit en moyenne un bouleau ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["80"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 93,
+      "type": 1,
+      "question": "Quel est l’âge approximatif du plus vieux baobab connu ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["1500"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 94,
+      "type": 1,
+      "question": "Combien d’espèces d’arbres sont présentes dans la forêt amazonienne ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["1600"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 95,
+      "type": 1,
+      "question": "Combien de centimètres un arbre peut-il croître en moyenne par an ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["50"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 96,
+      "type": 1,
+      "question": "Combien d’espèces de séquoias existent dans le monde ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["3"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 97,
+      "type": 1,
+      "question": "Quel est le nom de la fleur nationale du Japon ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Sakura"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 98,
+      "type": 1,
+      "question": "Combien de pétales a typiquement une marguerite commune ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["34"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 99,
+      "type": 1,
+      "question": "Quelle fleur est connue pour s’ouvrir uniquement la nuit ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Datura"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 100,
+      "type": 3,
+      "question": "Trois fleurs sont déjà classées du plus petit au plus grand, où faut-il placer la Tulipe ?",
+      "propositions": [
+        ["Marguerite","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJlrQV0BTLpwsqAi_6fRN5JjLyla9sbhf0fbopyETY8-AEtUYD843My0p-Nh8Y7YIYFsEIzDTBTH3UEFyd30Na4z058Z_LT4reVPO_QA&s=10"],
+        ["Rose","https://www.max-le-fleuriste.fr/316-large_default/rose-eternelle-fuchsia-xl.jpg"],
+        ["Tournesol","https://binette-et-jardin.ouest-france.fr/images/dossiers/historique/mini/tournesol-180214-650-325.jpg"],
+        ["Tulipe","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuF0CUlZ3etq6LQ9xzefZ_-viwySHSSS9XkLegZXHeF-a4NjiV5EmXC8j3_E6j55cHaz8XmhYf7wU9OaVDTMNpmB2nVe1B1_dA45tdwz0&s=10"]
+      ],
+      "answer": ["Marguerite", "Rose", "Tulipe", "Tournesol"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 101,
+      "type": 3,
+      "question": "Rangez ces arbres fruitiers en fonction de leur taille moyenne, du plus petit au plus grand, en incluant le noyer.",
+      "propositions": [
+        ["Figuier","https://www.leparisien.fr/resizer/IpXVD0IO3PvkcfywJyev9AyIaiM=/arc-photo-lpguideshopping/eu-central-1-prod/public/A3RVA7MIMJC45FE6EFC4EYOHCA.jpg"],
+        ["Pommier","https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQmyXZ1-PMKg5P1o4QkglaSFiqAN0v8NotdUhPdf04qQ7CSViF__aFbwGqh-HRgcHo1WDH09y_RTZwzy4Nr39bPpFSyL6rLqEa1QeWJIoE"],
+        ["Ceriser","https://conseils-jardin.willemsefrance.fr/wp-content/uploads/2021/07/cerisier.jpg"],
+        ["Noyer","https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQLkAMda8-AytW2UEX5QTP9bLjemFdrrsYuRyF5mZuLnZj5UafULVRD8mY7l17swUl9LOgUKu6PBTA_u4Hzno9UmBIGvstSvFkOiwkkYtQ "]
+      ],
+      "answer": ["Figuier","Ceriser","Pommier","Noyer"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 102,
+      "type": 3,
+      "question": "Rangez ces plantes carnivores en fonction de leur taille moyenne, du plus petit au plus grand, en incluant la Drosera.",
+      "propositions": [
+        ["Dionée attrape-mouche","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxFZiAMzqterK30HATNpiwEqBCQER48weRaejD2NZ8LzQfs9sH3RfZSS6AhFE6GKVdVfRtv7jDQIrbqgKFXKLhBRs-gZS8byrh6uFF0Va7BA&s=10"],
+        ["Sarracenia","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcKOwkj51crkIWT-4kBXlCphRuRYh-qQY0Dabg48LRVsCr8AwZhzBgOfqXMBx0keIlv5UDBdJxqrKMSHd9pn5t0g5SoMat9d24XRN8zHhLNg&s=10"],
+        ["Nepenthes","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3_86HDbqyjWTrwWfjeehQ7ySdAMJf9ZXUORIsti4Bd5Q5EkuKwAvOtZ3fF-xokX7Mw0g-W478FRfFB1qZKnfSMi_hB32oyQ_LFAIhSiPL&s=10"],
+        ["Drosera","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHj3ueLy_ncZbnTLIkZarlSuXHRoT0cB6VhyI6fsJ0qDIy92EgTcZib_hwubGNnMcRkpbhtz-x9PC76WE6iT6J9hPpPLFUYvaqHYSMSQrwBQ&s=10"]
+      ],
+      "answer": ["Dionée attrape-mouche","Drosera","Sarracenia","Nepenthes"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 103,
+      "type": 3,
+      "question": "Organisez ces animaux du plus véloce au plus lent, en intégrant le lièvre arctique.",
+      "propositions": [
+        ["Guépard", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYp5JeE-1jd8lFU92CwrFaclY7NrtfTpaJqI53WMfVnRzvaZySlrxpLPvyiWEMrqSs9O_NkqURthHKg1SZjUHFMWCmeKhwu1dgcOXVw&s=10"],
+        ["Autruche", "https://www.worldanimalprotection.org/contentassets/b4befd3f321543d6beefc69ce4f5cf57/1037907.jpg"],
+        ["Springbok", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbp_nt6q7c2YlLceflzlB1J0I5SftqxSTj5lTf6FRRMqHIfEZXRs-QFXsDpanhx9UA4vN-MDkfLhyOnbnejZJ3En1v_mXylLf9ioqJaw&s=10"],
+        ["Lièvre arctique", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXye0E0uTTYOPei2caheEYYZ2tjf6kNrAErZteWT78lbf1zUqkYotr03rGn678ucw1ULaxCNnahmGZqFf6pC-ECUTojinxA8pfhNFuJQ&s=10"]
+      ],
+      "answer": ["Guépard", "Springbok", "Autruche", "Lièvre arctique"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 104,
+      "type": 3,
+      "question": "Organisez ces animaux du plus massif au plus léger, n’oubliant pas le gorille.",
+      "propositions": [
+        ["Éléphant africain", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKrDNYMkizSrX_M3U4NStuvNDVqXf8ZidKcOJeD1Ds30LIPnwJKWHrr5TVfqCy-GhBkXpCrsE-x6r7DaVkfaZGooo0h6zFtgsAqtzdXqg&s=10"],
+        ["Rhinocéros blanc", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqusMgf5f-Em6rwReGPxioRod_Rb_EmIVWaB4NsWmDwE60G4l0puoUdWinG740U1VHxqsrbUuiJaLS7CrKt4IxS7G8U3f6JgsMD3l0Pg&s=10"],
+        ["Hippopotame", "https://www.larousse.fr/encyclopedie/data/images/1309514-Hippopotame.jpg"],
+        ["Gorille", "https://cdn-images.zoobeauval.com/pHCjiFAXI5fyz-2jXmA7a1f9Kfo=/730x730/https%3A%2F%2Fs3.eu-west-3.amazonaws.com%2Fimages.zoobeauval.com%2F2020%2F06%2Fsticker-2-5ee22a296cd7d.jpg"]
+      ],
+      "answer": ["Éléphant africain", "Rhinocéros blanc", "Hippopotame", "Gorille"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 105,
+      "type": 3,
+      "question": "Classez ces animaux selon leur durée de vie, de celui qui vit le plus longtemps à celui qui vit le moins, avec le grand requin blanc.",
+      "propositions": [
+        ["Tortue géante", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXQ6Fj6Xzia9bViTvHOyGTBD6uSF40eD544hBdCHP48LpGKWlGpxqQGOtP74SDuiwVxpQ62mK_uSmqXkD2qGXHqomqnIablfNk7ddP_iO6&s=10"],
+        ["Éléphant d'Asie", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvaksFn1TqBtO3OaV8fN30pXg88c3aK-0Z26wSKH3pT6U0j9PMTJhwefyHyES0W6Z15JGBSYg15HHBruWLLCSN1_7Z-04hTjKensqu5G0&s=10"],
+        ["Crocodile marin", "https://www.monde-animal.fr/wp-content/uploads/2020/03/crocodile-marin-ocean.jpg"],
+        ["Grand requin blanc", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnRf1rXJnlnWnZVwlfjIdZQHXzNDDP8VNeRcAoc2o49mpVNXynzwD45qRN1TZp97InYYJYjctM9mJEjZq-KsImb_QbQHa7Ge_pXf2aqco6Aw&s=10"]
+      ],
+      "answer": ["Tortue géante", "Crocodile marin", "Éléphant d'Asie", "Grand requin blanc"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 106,
+      "type": 3,
+      "question": "Classez ces champignons selon leur toxicité, du plus toxique au moins toxique, avec le coprin chevelu.",
+      "propositions": [
+        ["Amanite phalloïde", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Amanita_phalloides_1.JPG/330px-Amanita_phalloides_1.JPG"],
+        ["Galerina marginata", "https://upload.wikimedia.org/wikipedia/commons/8/86/Galerina_marginata_051106Cmed.jpg"],
+        ["Amanite tue-mouches", "https://upload.wikimedia.org/wikipedia/commons/6/68/Gelin_Mantar%C4%B1_Sinek_mantar%C4%B1_%28Amanita_muscaria%29%2C.jpg"],
+        ["Coprin chevelu", "https://upload.wikimedia.org/wikipedia/commons/4/4a/-_Coprinus_comatus_-.jpg"]
+      ],
+      "answer": ["Amanite phalloïde", "Galerina marginata", "Amanite tue-mouches", "Coprin chevelu"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 107,
+      "type": 3,
+      "question": "Organisez ces champignons du chapeau le plus large au plus réduit, en n’oubliant pas la morille.",
+      "propositions": [
+        ["Agaric géant", "https://upload.wikimedia.org/wikipedia/commons/2/25/Agaricus_crocodilinus_collection.jpg"],
+        ["Amanite des Césars", "https://upload.wikimedia.org/wikipedia/commons/f/f7/Amanita_caesarea.JPG"],
+        ["Pied-de-mouton", "https://upload.wikimedia.org/wikipedia/commons/b/b9/Hedgehog_fungi2.jpg"],
+        ["Morille", "https://www.chasseursdechampignons.com/blog/wp-content/uploads/2022/07/Des-morilles-dans-leur-habitat-et-biotope-naturels-morille-commune-morchella-esculenta.jpg"]
+      ],
+      "answer": ["Agaric géant", "Amanite des Césars", "Pied-de-mouton", "Morille"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 108,
+      "type": 3,
+      "question": "Rangez ces champignons selon leur goût pour l’humidité, du plus friand d’humidité au moins, en incluant le pied bleu.",
+      "propositions": [
+        ["Oreille de Judas", "https://nantes-naturopathe.fr/wp-content/uploads/2022/01/oreille-judas.jpg"],
+        ["Chanterelle en tube", "https://upload.wikimedia.org/wikipedia/commons/1/1a/Craterellus_tubaeformis_1345904803_69350246bb_o_cropped.jpg"],
+        ["Lépiote élevée", "https://upload.wikimedia.org/wikipedia/commons/9/9d/Macrolepiota-procera_%281%29_cropped.jpg"],
+        ["Pied bleu", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfse_ejNix49I5C1wylMPk0ctmxRvYijFPng&s"]
+      ],
+      "answer": ["Oreille de Judas", "Chanterelle en tube", "Lépiote élevée", "Pied bleu"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 109,
+      "type": 4,
+      "question": "Classez ces roches du plus léger au plus lourd.",
+      "propositions": [
+        ["Granite", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Fj%C3%A6regranitt3.JPG"],
+        ["Granit rose", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFvCD0x7pRwdJbHw7OrxX3-lvnu3OJqwOlYA&s"],
+        ["Basalte", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD0ywWTv1iiowu80zqLs48ElNDDLTbiNTY4w&s"],
+        ["Pumice", "https://rockidentifier.com/image-handle/image/1080/154066524263415836.jpeg?x-oss-process=image/format,webp/resize,s_300&v=1.0"]
+      ],
+      "answer": ["Pumice", "Granit rose", "Granite", "Basalte"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 110,
+      "type": 4,
+      "question": "Rangez ces roches selon leur couleur dominante, du plus clair au plus foncé.",
+      "propositions": [
+        ["Calcaire", "https://www.bht-materiaux.fr/images/com_hikashop/upload/bloc-de-calcaire-2.jpg"],
+        ["Granit", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Fj%C3%A6regranitt3.JPG"],
+        ["Basalte", "https://actugeologique.fr/wp-content/uploads/2019/02/Basalt_8_48674617291-816x576.jpg"],
+        ["Marbre", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG5XTTxTZmLE1O9X4P-_GkURwKKlqc37sAZg&s"]
+      ],
+      "answer": ["Calcaire", "Marbre", "Granit", "Basalte"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 111,
+      "type": 4,
+      "question": "Classez ces roches selon leur formation, du sédimentaire au volcanique.",
+      "propositions": [
+        ["Grès", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaQ4sWHAzbvneCm5CipRDA7OCbTZDT1e7yng&s"],
+        ["Basalte", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrI_wmW0A2Os1SYf8aFBG-4KySjLLy5K96jw&s"],
+        ["Calcaire", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZajdBDPR5Uokla3FgS1_FQ9GedNyoOT-4lQ&s"],
+        ["Rhyolite", "https://rockidentifier.com/image-handle/image/1080/154142940321546243.jpeg?x-oss-process=image/format,webp/resize,s_300&v=1.0"]
+      ],
+      "answer": ["Grès", "Calcaire", "Rhyolite", "Basalte"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 112,
+      "type": 4,
+      "question": "Rangez ces roches selon leur dureté, de la plus tendre à la plus dure.",
+      "propositions": [
+        ["Gypse", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Soufre%26gypse_sicile.jpg/1200px-Soufre%26gypse_sicile.jpg"],
+        ["Granit", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Fj%C3%A6regranitt3.JPG"],
+        ["Quartzite", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMGBx8V2wxIochoIEfNN0unwMB5ui5hvoDYw&s"],
+        ["Calcaire", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp-TJq8WNLgpvAATYYbmW5NvSArr6jd71ggg&s"]
+      ],
+      "answer": ["Gypse", "Calcaire", "Granit", "Quartzite"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 113,
+      "type": 4,
+      "question": "Classez ces roches selon leur origine géologique, du plutonique au volcanique.",
+      "propositions": [
+        ["Granit", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Fj%C3%A6regranitt3.JPG"],
+        ["Basalte", "https://www.begenat.com/wp-content/uploads/2018/03/Basalte-a-olivine-2-scaled.jpg"],
+        ["Rhyolite", "https://rockidentifier.com/image-handle/image/1080/154142940321546243.jpeg?x-oss-process=image/format,webp/resize,s_300&v=1.0"],
+        ["Diorite", "https://rockidentifier.com/wiki-image/1080/153992178379522079.jpeg"]
+      ],
+      "answer": ["Granit", "Diorite", "Rhyolite", "Basalte"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 114,
+      "type": 4,
+      "question": "Rangez ces roches selon leur résistance à l’érosion, du moins résistant au plus résistant.",
+      "propositions": [
+        ["Sable", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKIHCQlV7gCFLZYEtVHsM2ArIopxz6h9ESyQ&s"],
+        ["Calcaire", "https://www.aquaportail.com/pictures2011/calcaire-cristallin.jpg"],
+        ["Granit", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn-f_h-VYiAot1xZg73ctNYGRbJzqGxg4Q3w&s"],
+        ["Quartzite", "https://www.dedalostone.com/wp-content/uploads/2023/07/quartzite-800x449.jpg"]
+      ],
+      "answer": ["Sable", "Calcaire", "Granit", "Quartzite"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 115,
+      "type": 4,
+      "question": "Classez ces roches métamorphiques selon l’intensité du métamorphisme subi, du moins au plus intense.",
+      "propositions": [
+        ["Ardoise", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1h7L7mJjfwVMXh5IbTOINytiCIgW4EcU2jg&s"],
+        ["Schiste", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnZQvvvRMqvP3n097E6nyEGO7WRz1RuMhWMg&s"],
+        ["Gneiss", "https://www.dedalostone.com/wp-content/uploads/2024/10/gneiss-800x448.jpeg"],
+        ["Quartzite", "https://cdn.britannica.com/47/127747-004-CC7F17F4/Quartzite.jpg"]
+      ],
+      "answer": ["Ardoise", "Schiste", "Quartzite", "Gneiss"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 116,
+      "type": 4,
+      "question": "Rangez ces roches magmatiques selon leur composition en silice, du plus faible au plus élevé.",
+      "propositions": [
+        ["Basalte", "https://actugeologique.fr/wp-content/uploads/2019/02/Basalt_8_48674617291-816x576.jpg"],
+        ["Diorite", "https://rockidentifier.com/wiki-image/1080/153992178379522079.jpeg"],
+        ["Granit", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Fj%C3%A6regranitt3.JPG"],
+        ["Rhyolite", "https://www.mineraux.fr/wp-content/uploads/2020/12/pierre-rhyolite-caracteristiques.jpg"]
+      ],
+      "answer": ["Basalte", "Diorite", "Granit", "Rhyolite"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 117,
+      "type": 4,
+      "question": "Classez ces roches selon leur capacité à former des cristaux visibles, du moins au plus cristallin.",
+      "propositions": [
+        ["Obsidienne", "https://www.lithotherapie.net/wp-content/uploads/2019/07/obsidienne.jpg"],
+        ["Basalte", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrI_wmW0A2Os1SYf8aFBG-4KySjLLy5K96jw&s"],
+        ["Granit", "https://www.cupastone.fr/wp-content/uploads/sites/7/2022/05/GRANIT_BEIGE_BRETON_BARETTE_PRODUCTO_WEB-1.jpg"],
+        ["Quartzite", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Sample_of_Quartzite.JPG/250px-Sample_of_Quartzite.JPG"]
+      ],
+      "answer": ["Obsidienne", "Basalte", "Quartzite", "Granit"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 118,
+      "type": 2,
+      "question": "Classez ces nuages du plus bas au plus haut dans le ciel.",
+      "propositions": [
+        ["Stratus", "https://sciencequery.com/wp-content/uploads/2022/06/Stratus-Cloud.png"],
+        ["Cumulus", "https://upload.wikimedia.org/wikipedia/commons/b/b5/Cumulus_clouds_in_fair_weather.jpeg"],
+        ["Cirrus", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmvXUI68uiP7er0VGZlQIf-cFOXfYGFFRe_w&s"],
+        ["Nimbostratus", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ns1.jpg/1200px-Ns1.jpg"]
+      ],
+      "answer": ["Stratus", "Nimbostratus", "Cumulus", "Cirrus"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 119,
+      "type": 2,
+      "question": "Rangez ces nuages selon leur densité, du plus léger au plus épais.",
+      "propositions": [
+        ["Cirrus", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/2017-07-04_DSC4215.jpg/250px-2017-07-04_DSC4215.jpg"],
+        ["Cumulus", "https://upload.wikimedia.org/wikipedia/commons/b/b5/Cumulus_clouds_in_fair_weather.jpeg"],
+        ["Stratus", "https://www.climateandweather.net/wp-content/uploads/2022/09/How-Do-You-Identify-Stratus-Clouds.jpg"],
+        ["Cumulonimbus", "https://www.imagesdoc.com/wp-content/uploads/sites/33/2024/10/Capture-de%CC%81cran-2024-10-09-a%CC%80-09.46.23.png"]
+      ],
+      "answer": ["Cirrus", "Stratus", "Cumulus", "Cumulonimbus"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 120,
+      "type": 2,
+      "question": "Classez ces types de précipitations du plus faible au plus intense.",
+      "propositions": [
+        ["Brouillard", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTasdyLlwiz0SlEsQk6dmghVbjVWASeEv7wzQ&s"],
+        ["Pluie fine", "https://st.depositphotos.com/1077338/4738/i/450/depositphotos_47385175-stock-photo-rain-drops-on-window-pane.jpg"],
+        ["Averse", "https://www.aquaportail.com/pictures1410/averse.jpg"],
+        ["Orage", "https://static.nationalgeographic.fr/files/styles/image_3200/public/nationalgeographic_2808201.webp?w=1600&h=900"]
+      ],
+      "answer": ["Brouillard", "Pluie fine", "Averse", "Orage"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 121,
+      "type": 2,
+      "question": "Rangez ces nuages selon leur potentiel d’orage, du moins menaçant au plus menaçant.",
+      "propositions": [
+        ["Cirrus", "https://srm360.org/wp-content/uploads/2024/11/cirrus-clouds.jpg"],
+        ["Stratus", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUQA3XUd7rLsWDoxhqZKtihJ177Nkt4tng6w&s"],
+        ["Cumulus", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIAF67To1a1KSWiI-HvSzzntkUarWP27r7Bg&s"],
+        ["Cumulonimbus", "https://www.imagesdoc.com/wp-content/uploads/sites/33/2024/10/Capture-de%CC%81cran-2024-10-09-a%CC%80-09.46.23.png"]
+      ],
+      "answer": ["Cirrus", "Stratus", "Cumulus", "Cumulonimbus"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 122,
+      "type": 2,
+      "question": "Classez ces phénomènes météorologiques du plus froid au plus chaud.",
+      "propositions": [
+        ["Gelée", "https://fr.blog.sencrop.com/content/images/2022/03/gel.jpg"],
+        ["Pluie", "https://static.actu.fr/uploads/2020/08/odeur-pluie-orages-petrichor-question-pas-si-bete-960x640.jpeg"],
+        ["Canicule", "https://cdn.prod.website-files.com/6638f8a6eb6d568220f98b00/685522c4c703e419d82b7626_pexels-pixabay-301599.jpg"],
+        ["Brouillard", "https://static.cnews.fr/sites/default/files/styles/image_750_422/public/000_jg63o-taille1200_6720ef93c1771_0.jpg?itok=H_qNtnSK"]
+      ],
+      "answer": ["Gelée", "Brouillard", "Pluie", "Canicule"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 123,
+      "type": 2,
+      "question": "Rangez ces nuages selon leur vitesse de déplacement typique, du plus lent au plus rapide.",
+      "propositions": [
+        ["Stratus", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Sun_through_Stratus.JPG/1200px-Sun_through_Stratus.JPG"],
+        ["Cumulus", "https://upload.wikimedia.org/wikipedia/commons/b/b5/Cumulus_clouds_in_fair_weather.jpeg"],
+        ["Cirrus", "https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/cirrus-hooks.jpg"],
+        ["Cumulonimbus", "https://meteofrance.com/sites/meteofrance.com/files/styles/730_322/public/images/articles/GettyImages-638799426.jpg?itok=_dUSmNFn"]
+      ],
+      "answer": ["Stratus", "Cumulus", "Cumulonimbus", "Cirrus"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 124,
+      "type": 2,
+      "question": "Classez ces nuages selon leur hauteur moyenne en mètres, du plus bas au plus haut.",
+      "propositions": [
+        ["Stratus", "https://www.climateandweather.net/wp-content/uploads/2022/09/How-Do-You-Identify-Stratus-Clouds.jpg"],
+        ["Cumulonimbus", "https://omb11.com/franquias/2/742633/editor-html/4523799.jpg"],
+        ["Altostratus", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/2020-12-31_16_06_58_Altostratus_with_a_wavy_undulating_base_above_the_Dulles_section_of_Sterling%2C_Loudoun_County%2C_Virginia.jpg/500px-2020-12-31_16_06_58_Altostratus_with_a_wavy_undulating_base_above_the_Dulles_section_of_Sterling%2C_Loudoun_County%2C_Virginia.jpg"],
+        ["Cirrus", "https://lacluse.fr/images/nuages/cirrus.jpg"]
+      ],
+      "answer": ["Stratus", "Altostratus", "Cumulonimbus", "Cirrus"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 125,
+      "type": 2,
+      "question": "Rangez ces types de précipitations selon leur densité d’eau, du moins humide au plus humide.",
+      "propositions": [
+        ["Brouillard", "https://www.meteo.bzh/media/2023/02/21/diapositive2-20230221-082341.png"],
+        ["Pluie fine", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv1hWsP4BXrKlLGTDtQ7xB6HwG-p8hEENjtQ&s"],
+        ["Neige", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTerkvvEQIEYxrneZnWAB30N43WrVxPa2NfZw&s"],
+        ["Averse", "https://www.lesoir.be/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/06/12/node_230275/26645557/public/2019/06/12/B9719921663Z.1_20190612214329_000+GN8DR842H.2-0.jpg?itok=RuRAmwCJ1560368617"]
+      ],
+      "answer": ["Brouillard", "Pluie fine", "Neige", "Averse"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 126,
+      "type": 2,
+      "question": "Classez ces nuages selon leur formation, du plus stable au plus instable.",
+      "propositions": [
+        ["Stratus", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo7oFWzqNMn_jifyyOXTrLTvi3kJIQZuknng&s"],
+        ["Cirrus", "https://srm360.org/wp-content/uploads/2024/11/cirrus-clouds.jpg"],
+        ["Cumulus", "https://upload.wikimedia.org/wikipedia/commons/b/b5/Cumulus_clouds_in_fair_weather.jpeg"],
+        ["Cumulonimbus", "https://media.ouest-france.fr/v1/pictures/MjAxODA2ZDczZjMxZWEzNWU5NWU4YmU5ZTZkZDU2Mzg1ZDU0YTg?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9df4909e2387e3314129849e85a26246beb313e3f05271e04e29f5de4d286715"]
+      ],
+      "answer": ["Stratus", "Cirrus", "Cumulus", "Cumulonimbus"],
+      "difficulty": "Difficile"
+    }
+  ]
+}

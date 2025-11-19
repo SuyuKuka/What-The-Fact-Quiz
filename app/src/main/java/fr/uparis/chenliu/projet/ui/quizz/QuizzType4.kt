@@ -1,0 +1,135 @@
+package fr.uparis.chenliu.projet.ui.quizz
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import fr.uparis.chenliu.projet.ui.menu.DisplayText
+import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
+
+@Composable
+fun Quizztype4(
+    font: List<Int>, data:
+    QuizzViewModel.Data,
+    model: QuizzViewModel,
+    modifier: Modifier
+) {
+    val buildAnswer = model.buildAnswer
+    val imageAnswer = model.imageAnswer
+    val currentQuestion = model.currentQuestion
+    val currentImage = model.currentImage
+    if (currentImage.intValue == 0) {
+        buildAnswer[0] = data.answers[currentQuestion.intValue].propositions[0][0]
+        imageAnswer[0] = data.answers[currentQuestion.intValue].propositions[0][1]
+        currentImage.intValue++
+    }
+    val ans: List<String> = if (currentImage.intValue < buildAnswer.size) {
+        data.answers[currentQuestion.intValue].propositions[currentImage.intValue]
+    } else {
+        data.answers[currentQuestion.intValue].propositions[currentImage.intValue - 1]
+    }
+
+    // EN HAUT
+    LazyRow(
+        modifier = modifier,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        items(count = currentImage.intValue) { index ->
+            if (index < buildAnswer.size) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    if (index == 0) {
+                        InsertionDropTarget(index = 0, model = model)
+                    }
+                    Box(
+                        modifier = Modifier
+                            .width(250.dp)
+                            .aspectRatio(1.5f)
+                            .padding(8.dp)
+                            .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+                    ) {
+                        DropTargetImage(
+                            intValue = index,
+                            font = model.translateFont(),
+                            model = model,
+                            type = 4
+                        )
+                    }
+                    if (index != currentImage.intValue) {
+                        InsertionDropTarget(index = index + 1, model = model)
+                    } else {
+                        InsertionDropTarget(index = index, model = model)
+                    }
+                }
+            }
+        }
+    }
+
+    // BOUTON MILIEU
+    Row (
+        modifier = Modifier
+            .fillMaxWidth().padding(end = 8.dp).padding(start = 8.dp),
+        horizontalArrangement = Arrangement.SpaceBetween
+    ){
+        Button(onClick = { currentImage.intValue = 0 }, shape = RectangleShape) {
+            DisplayText(
+                list = font,
+                text = "Reset",
+                textAlign = TextAlign.Center
+            )
+        }
+        Button(onClick = {
+            model.updateGame(
+                answerList = buildAnswer,
+                verify = data.answers[currentQuestion.intValue].answer.toList(),
+                type = 4
+            )
+        }, shape = RectangleShape) {
+            DisplayText(
+                list = font,
+                text = "Valider",
+                textAlign = TextAlign.Center
+            )
+        }
+    }
+
+    // EN BAS
+    Box(
+        contentAlignment = if ( currentImage.intValue < buildAnswer.size) {
+            Alignment.BottomCenter
+        } else {
+            Alignment.Center
+        },
+        modifier = Modifier
+            .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
+            .background(Color.Black)
+    ) {
+        if (currentImage.intValue < buildAnswer.size) {
+            DragImage(answer = ans[0], url = ans[1])
+            DisplayText(list = font, text = ans[0], fontSize = 48.sp, color = Color.Red)
+        } else {
+            DisplayText(
+                list = font,
+                text = "C'est tout!",
+                color = Color.White,
+                fontSize = 32.sp,
+                textAlign = TextAlign.Center
+            )
+        }
+    }
+}

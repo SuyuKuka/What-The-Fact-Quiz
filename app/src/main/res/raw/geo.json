@@ -1,0 +1,1606 @@
+{
+  "quizz": [
+    {
+      "id": 1,
+      "type": 0,
+      "question": "Quel pont de Florence est aussi une rue piétonne et une galerie marchande ?",
+      "propositions": [
+        ["San Niccolo",            ""],
+        ["Vittoria",               ""],
+        ["Ponte Vecchio",          ""],
+        ["Santa Trinita",          ""],
+        ["Ponte alla Carraia",     ""],
+        ["Ponte Amerigo Vespucci", ""]
+      ],
+      "answer": ["Ponte Vecchio"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 2,
+      "type": 0,
+      "question": "Quelle mer les Grecs connaissent-ils sous le nom de Pont Euxin ?",
+      "propositions": [
+        ["Mer Adriatique",   ""],
+        ["Mer Noire",        ""],
+        ["Mer Ionienne",     ""],
+        ["Mer Égée",         ""],
+        ["Mer Méditerranée", ""],
+        ["Mer Rouge",        ""]
+      ],
+      "answer": ["Mer Noire"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 3,
+      "type": 0,
+      "question": "Quel est le pourcentage d'occupation des mers sur la surface du globe ?",
+      "propositions": [
+        ["50 %", ""],
+        ["80 %", ""],
+        ["60 %", ""],
+        ["70 %", ""],
+        ["45 %", ""],
+        ["90 %", ""]
+      ],
+      "answer": ["70 %"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 4,
+      "type": 0,
+      "question": "Quelle est la nationalité de la presqu'île du Yucatan, dont la capitale est Mérida ?",
+      "propositions": [
+        ["Bolivienne",    ""],
+        ["Colombienne",   ""],
+        ["Mexicaine",     ""],
+        ["Cubaine",       ""],
+        ["Péruvienne",    ""],
+        ["Guatémaltèque", ""]
+      ],
+      "answer": ["Mexicaine"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 5,
+      "type": 0,
+      "question": "Quel est, avec ses 7 025 kilomètres, le plus long fleuve au monde ?",
+      "propositions": [
+        ["Saint-Laurent", ""],
+        ["Amazone",       ""],
+        ["Danube",        ""],
+        ["Colorado",      ""],
+        ["Nil",           ""],
+        ["Yangzi Jiang",  ""]
+      ],
+      "answer": ["Amazone"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 6,
+      "type": 0,
+      "question": "Quelle ville portugaise située au bord du Douro a donné son nom à un vin apéritif ?",
+      "propositions": [
+        ["Douro",    ""],
+        ["Porto",    ""],
+        ["Dao",      ""],
+        ["Madère",   ""],
+        ["Lisbonne", ""],
+        ["Faro",     ""]
+      ],
+      "answer": ["Porto"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 7,
+      "type": 0,
+      "question": "Quel viaduc conçu par Norman Foster surplombe la vallée du Tarn ?",
+      "propositions": [
+        ["Viaduc du Viaur",     ""],
+        ["Viaduc de Gien",      ""],
+        ["Viaduc de Ventabren", ""],
+        ["Viaduc de Millau",    ""],
+        ["Viaduc de Garabit",   ""],
+        ["Viaduc de Morlaix",   ""]
+      ],
+      "answer": ["Viaduc de Millau"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 8,
+      "type": 0,
+      "question": "Dans quel département français se trouvent les villes de Quimper, Brest et Morlaix ?",
+      "propositions": [
+        ["Finistère",       ""],
+        ["Morbihan",        ""],
+        ["Charente",        ""],
+        ["Aveyron",         ""],
+        ["Côtes-d'Armor",   ""],
+        ["Ille-et-Vilaine", ""]
+      ],
+      "answer": ["Finistère"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 9,
+      "type": 0,
+      "question": "En géographie, quel cours d'eau, grossi par ses affluents, va se jeter dans la mer ?",
+      "propositions": [
+        ["Rivière",  ""],
+        ["Torrent",  ""],
+        ["Fleuve",   ""],
+        ["Ruisseau", ""],
+        ["Estuaire", ""],
+        ["Canal",    ""]
+      ],
+      "answer": ["Fleuve"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 10,
+      "type": 0,
+      "question": "Sur quelle île se trouvait le colosse de la série des sept merveilles du monde ?",
+      "propositions": [
+        ["Mykonos", ""],
+        ["Lipsi",   ""],
+        ["Rhodes",  ""],
+        ["Kassos",  ""],
+        ["Crète",   ""],
+        ["Chypre",  ""]
+      ],
+      "answer": ["Rhodes"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 11,
+      "type": 0,
+      "question": "Face aux côtes de quel pays se déploie dans l'Océan Indien l'archipel de Zanzibar ?",
+      "propositions": [
+        ["Malawi",     ""],
+        ["Botswana",   ""],
+        ["Cameroun",   ""],
+        ["Tanzanie",   ""],
+        ["Kenya",      ""],
+        ["Mozambique", ""]
+      ],
+      "answer": ["Tanzanie"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 12,
+      "type": 0,
+      "question": "À l'est de quel État américain se dresse le massif de la Sierra Nevada ?",
+      "propositions": [
+        ["Géorgie",    ""],
+        ["Californie", ""],
+        ["Floride",    ""],
+        ["Colorado",   ""],
+        ["Texas",      ""],
+        ["Arizona",    ""]
+      ],
+      "answer": ["Californie"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 13,
+      "type": 0,
+      "question": "Sur quelle île se rendent les vedettes en partance de la pointe de l'Arcouest ?",
+      "propositions": [
+        ["Ouessant",         ""],
+        ["Île de Bréhat",    ""],
+        ["Île de Ré",        ""],
+        ["Groix",            ""],
+        ["Batz",             ""],
+        ["Belle-Île-en-Mer", ""]
+      ],
+      "answer": ["Île de Bréhat"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 14,
+      "type": 0,
+      "question": "Quel est le plus grand département français en terme de superficie ?",
+      "propositions": [
+        ["Martinique",         ""],
+        ["Guadeloupe",         ""],
+        ["La Réunion",         ""],
+        ["Guyane",             ""],
+        ["Mayotte",            ""],
+        ["Nouvelle-Calédonie", ""]
+      ],
+      "answer": ["Guyane"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 15,
+      "type": 0,
+      "question": "Quel est le troisième pays qui, avec la Corée et le Japon, donne sur la mer du Japon ?",
+      "propositions": [
+        ["Australie", ""],
+        ["Inde",      ""],
+        ["Pakistan",  ""],
+        ["Russie",    ""],
+        ["Chine",     ""],
+        ["Vietnam",   ""]
+      ],
+      "answer": ["Russie"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 16,
+      "type": 0,
+      "question": "Quel volcan culminant à 3 330 mètres d'altitude est le plus grand d'Europe ?",
+      "propositions": [
+        ["Krakatoa",     ""],
+        ["Popocatepetl", ""],
+        ["Stromboli",    ""],
+        ["Etna",         ""],
+        ["Vésuve",       ""],
+        ["Mont Elbrouz", ""]
+      ],
+      "answer": ["Etna"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 17,
+      "type": 0,
+      "question": "Quelle région autonome d'Italie est aussi la plus grande île de la Méditerranée ?",
+      "propositions": [
+        ["Sicile",    ""],
+        ["Sardaigne", ""],
+        ["Lombardie", ""],
+        ["Toscane",   ""],
+        ["Campanie",  ""],
+        ["Vénétie",   ""]
+      ],
+      "answer": ["Sicile"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 18,
+      "type": 0,
+      "question": "Avec lequel de ces pays la république islamique d'Iran n'a-t-elle pas de frontière ?",
+      "propositions": [
+        ["Afghanistan",  ""],
+        ["Irak",         ""],
+        ["Turquie",      ""],
+        ["Syrie",        ""],
+        ["Pakistan",     ""],
+        ["Turkménistan", ""]
+      ],
+      "answer": ["Syrie"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 19,
+      "type": 0,
+      "question": "Sur quel continent coule le fleuve Amour, qui se jette dans le détroit de Tatarie ?",
+      "propositions": [
+        ["Afrique",          ""],
+        ["Asie",             ""],
+        ["Europe",           ""],
+        ["Océanie",          ""],
+        ["Amérique du Sud",  ""],
+        ["Amérique du Nord", ""]
+      ],
+      "answer": ["Asie"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 20,
+      "type": 0,
+      "question": "Quel fleuve né au Tibet forme un immense delta avant de se jeter dans la mer de Chine ?",
+      "propositions": [
+        ["Euphrate",  ""],
+        ["Tigre",     ""],
+        ["Gange",     ""],
+        ["Mékong",    ""],
+        ["Indus",     ""],
+        ["Irrawaddy", ""]
+      ],
+      "answer": ["Mékong"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 21,
+      "type": 0,
+      "question": "Quelle capitale de l'Irlande du Nord possède officiellement le statut de cité ?",
+      "propositions": [
+        ["Bangor",  ""],
+        ["Belfast", ""],
+        ["Derry",   ""],
+        ["Larne",   ""],
+        ["Lisburn", ""],
+        ["Newry",   ""]
+      ],
+      "answer": ["Belfast"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 22,
+      "type": 0,
+      "question": "Quelle rivière longue de 51 kilomètres relie le Lac Sainte-Claire au Lac Érié ?",
+      "propositions": [
+        ["Bonnet Plume",        ""],
+        ["Kazan",               ""],
+        ["Détroit",             ""],
+        ["Mattawa",             ""],
+        ["Rivière Niagara",     ""],
+        ["Rivière Saint-Louis", ""]
+      ],
+      "answer": ["Détroit"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 23,
+      "type": 0,
+      "question": "Dans quelle région du Portugal peut-on atterrir à l'aéroport international de Faro ?",
+      "propositions": [
+        ["Algarve",                 ""],
+        ["Açores",                  ""],
+        ["Alentejo",                ""],
+        ["Madère",                  ""],
+        ["Lisbonne et Val de Tage", ""],
+        ["Centre",                  ""]
+      ],
+      "answer": ["Algarve"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 24,
+      "type": 0,
+      "question": "Dans quel pays se trouvent les déserts Victoria, Simson et Gibson ?",
+      "propositions": [
+        ["Chine",      ""],
+        ["Russie",     ""],
+        ["Malaisie",   ""],
+        ["Australie",  ""],
+        ["Inde",       ""],
+        ["États-Unis", ""]
+      ],
+      "answer": ["Australie"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 25,
+      "type": 0,
+      "question": "Quelle vague déferlante est capable de remonter l'estuaire d'un fleuve ?",
+      "propositions": [
+        ["Atoll",        ""],
+        ["Mascaret",     ""],
+        ["Tsunami",      ""],
+        ["Tourbillon",   ""],
+        ["Raz-de-marée", ""],
+        ["Ressac",       ""]
+      ],
+      "answer": ["Mascaret"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 26,
+      "type": 0,
+      "question": "Quelles sont les plus célèbres îles appartenant à la République d'Équateur ?",
+      "propositions": [
+        ["Mariannes",      ""],
+        ["Kouriles",       ""],
+        ["Galapagos",      ""],
+        ["San Juan",       ""],
+        ["Îles Malouines", ""],
+        ["Samoa",          ""]
+      ],
+      "answer": ["Galapagos"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 27,
+      "type": 0,
+      "question": "À l'embouchure de quel fleuve est bâtie la ville portugaise de Lisbonne ?",
+      "propositions": [
+        ["Douro",        ""],
+        ["Tage",         ""],
+        ["Guadalquivir", ""],
+        ["Èbre",         ""],
+        ["Mondego",      ""],
+        ["Sado",         ""]
+      ],
+      "answer": ["Tage"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 28,
+      "type": 0,
+      "question": "Quelle est la ville de plus d'un million d'habitants la plus septentrionale au monde ?",
+      "propositions": [
+        ["Saint-Petersbourg", ""],
+        ["Mourmansk",         ""],
+        ["Kiev",              ""],
+        ["Minsk",             ""],
+        ["Oslo",              ""],
+        ["Edmonton",          ""]
+      ],
+      "answer": ["Saint-Petersbourg"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 29,
+      "type": 0,
+      "question": "Dans quelle région d'Espagne se trouve Saint-Jacques-de-Compostelle ?",
+      "propositions": [
+        ["Andalousie",       ""],
+        ["Galice",           ""],
+        ["Catalogne",        ""],
+        ["Asturies",         ""],
+        ["Pays Basque",      ""],
+        ["Castille-et-León", ""]
+      ],
+      "answer": ["Galice"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 30,
+      "type": 0,
+      "question": "Sur quelle île peut-on aller bronzer sur les plages de Saint-Florent ?",
+      "propositions": [
+        ["Mayotte",    ""],
+        ["Martinique", ""],
+        ["La Réunion", ""],
+        ["Corse",      ""],
+        ["Guadeloupe", ""],
+        ["Sardaigne",  ""]
+      ],
+      "answer": ["Corse"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 31,
+      "type": 0,
+      "question": "À quelle ville de France l'andouillette, le saucisson et Guignol vous font-ils penser ?",
+      "propositions": [
+        ["Marseille", ""],
+        ["Nice",      ""],
+        ["Lyon",      ""],
+        ["Cannes",    ""],
+        ["Bordeaux",  ""],
+        ["Toulouse",  ""]
+      ],
+      "answer": ["Lyon"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 32,
+      "type": 0,
+      "question": "Quelle ville, capitale de la Grèce, comprend notamment le port du Pirée ?",
+      "propositions": [
+        ["Héraklion",     ""],
+        ["Patras",        ""],
+        ["Larissa",       ""],
+        ["Athènes",       ""],
+        ["Thessalonique", ""],
+        ["Rhodes",        ""]
+      ],
+      "answer": ["Athènes"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 33,
+      "type": 0,
+      "question": "De quelle ville du Sud-Ouest de la France proviennent de célèbres pruneaux AOC ?",
+      "propositions": [
+        ["Nérac",     ""],
+        ["Agen",      ""],
+        ["Tonneins",  ""],
+        ["Marmande",  ""],
+        ["Cahors",    ""],
+        ["Montauban", ""]
+      ],
+      "answer": ["Agen"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 34,
+      "type": 0,
+      "question": "De quelle couleur sont les cabines téléphoniques de la ville de Londres ?",
+      "propositions": [
+        ["Verte",   ""],
+        ["Blanche", ""],
+        ["Jaune",   ""],
+        ["Rouge",   ""],
+        ["Bleue",   ""],
+        ["Noire",   ""]
+      ],
+      "answer": ["Rouge"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 35,
+      "type": 0,
+      "question": "Quelle ville réputée pour la qualité de ses cigares est aussi la capitale de Cuba ?",
+      "propositions": [
+        ["La Havane",        ""],
+        ["Santa Clara",      ""],
+        ["Guantanamo",       ""],
+        ["Santiago de Cuba", ""],
+        ["Varadero",         ""],
+        ["Camagüey",         ""]
+      ],
+      "answer": ["La Havane"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 36,
+      "type": 0,
+      "question": "À la fois ville et province, de quel pays Bangkok est-elle la capitale ?",
+      "propositions": [
+        ["Birmanie",  ""],
+        ["Malaisie",  ""],
+        ["Laos",      ""],
+        ["Thaïlande", ""],
+        ["Vietnam",   ""],
+        ["Cambodge",  ""]
+      ],
+      "answer": ["Thaïlande"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 37,
+      "type": 0,
+      "question": "À quelle grande ville d'Afrique l'explorateur Savorgnan de Brazza a-t-il donné son nom ?",
+      "propositions": [
+        ["Nairobi",     ""],
+        ["Brazzaville", ""],
+        ["Libreville",  ""],
+        ["Kinshasa",    ""],
+        ["Douala",      ""],
+        ["Luanda",      ""]
+      ],
+      "answer": ["Brazzaville"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 38,
+      "type": 0,
+      "question": "Quelle capitale est également le centre politique et culturel de la Chine ?",
+      "propositions": [
+        ["Hong Kong", ""],
+        ["Tokyo",     ""],
+        ["Shanghai",  ""],
+        ["Pékin",     ""],
+        ["Séoul",     ""],
+        ["Manille",   ""]
+      ],
+      "answer": ["Pékin"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 39,
+      "type": 0,
+      "question": "Laquelle de ces quatre villes espagnoles ne possède pas un port de renom ?",
+      "propositions": [
+        ["Barcelone", ""],
+        ["Malaga",    ""],
+        ["Valence",   ""],
+        ["Madrid",    ""],
+        ["Bilbao",    ""],
+        ["Séville",   ""]
+      ],
+      "answer": ["Madrid"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 40,
+      "type": 0,
+      "question": "Dans quel pays à forte densité de population la ville de Calcutta est-elle située ?",
+      "propositions": [
+        ["Brésil",     ""],
+        ["Birmanie",   ""],
+        ["Inde",       ""],
+        ["Bangladesh", ""],
+        ["Indonésie",  ""],
+        ["Nigeria",    ""]
+      ],
+      "answer": ["Inde"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 41,
+      "type": 0,
+      "question": "Quelle est la capitale ainsi que la plus grande ville du territoire égyptien ?",
+      "propositions": [
+        ["Alexandrie", ""],
+        ["Le Caire",   ""],
+        ["Louxor",     ""],
+        ["Suez",       ""],
+        ["Assouan",    ""],
+        ["Gizeh",      ""]
+      ],
+      "answer": ["Le Caire"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 42,
+      "type": 0,
+      "question": "Célèbre pour son industrie cinématographique, dans quel pays se situe la ville de Bombay ?",
+      "propositions": [
+        ["Népal",       ""],
+        ["Inde",        ""],
+        ["Sri Lanka",   ""],
+        ["Pakistan",    ""],
+        ["Bangladesh",  ""],
+        ["Afghanistan", ""]
+      ],
+      "answer": ["Inde"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 43,
+      "type": 0,
+      "question": "Dans laquelle de ces villes peut-on contempler un célèbre pain de sucre ?",
+      "propositions": [
+        ["Rio de Janeiro", ""],
+        ["La Havane",      ""],
+        ["Brazzaville",    ""],
+        ["Le Caire",       ""],
+        ["Buenos Aires",   ""],
+        ["Lima",           ""]
+      ],
+      "answer": ["Rio de Janeiro"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 44,
+      "type": 0,
+      "question": "Quelle capitale administrative des Pays-Bas est le siège de nombreuses institutions ?",
+      "propositions": [
+        ["Amsterdam",  ""],
+        ["La Haye",    ""],
+        ["Rotterdam",  ""],
+        ["Utrecht",    ""],
+        ["Eindhoven",  ""],
+        ["Maastricht", ""]
+      ],
+      "answer": ["La Haye"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 45,
+      "type": 0,
+      "question": "Combien y a-t-il de communes à Paris situées sur une boucle de la Seine ?",
+      "propositions": [
+        ["22",        ""],
+        ["Une seule", ""],
+        ["13",        ""],
+        ["9",         ""],
+        ["5",         ""],
+        ["10",        ""]
+      ],
+      "answer": ["Une seule"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 46,
+      "type": 0,
+      "question": "Tripoli est une ville du Liban mais se trouve être aussi la capitale de quel pays ?",
+      "propositions": [
+        ["Tunisie", ""],
+        ["Soudan",  ""],
+        ["Libye",   ""],
+        ["Maroc",   ""],
+        ["Algérie", ""],
+        ["Égypte",  ""]
+      ],
+      "answer": ["Libye"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 47,
+      "type": 0,
+      "question": "Quelle ville est aussi importante pour l'Afrique que pour le monde arabe ?",
+      "propositions": [
+        ["Le Caire",   ""],
+        ["Alexandrie", ""],
+        ["Suez",       ""],
+        ["Assouan",    ""],
+        ["Casablanca", ""],
+        ["Tunis",      ""]
+      ],
+      "answer": ["Le Caire"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 48,
+      "type": 0,
+      "question": "Avec ses nombreux canaux, sur les rives de quelle mer la ville de Venise est-elle située ?",
+      "propositions": [
+        ["Noire",        ""],
+        ["Adriatique",   ""],
+        ["Ionienne",     ""],
+        ["Égée",         ""],
+        ["Tyrrhénienne", ""],
+        ["Baltique",     ""]
+      ],
+      "answer": ["Adriatique"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 49,
+      "type": 0,
+      "question": "Dans quelle ville recense-t-on à ce jour le plus grand nombre de taxis au monde ?",
+      "propositions": [
+        ["New York", ""],
+        ["Londres",  ""],
+        ["Brasilia", ""],
+        ["Tokyo",    ""],
+        ["Moscou",   ""],
+        ["Mexico",   ""]
+      ],
+      "answer": ["New York"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 50,
+      "type": 0,
+      "question": "Quelle capitale du Népal était une étape bien connue de la communauté hippies ?",
+      "propositions": [
+        ["Dharan",    ""],
+        ["Katmandou", ""],
+        ["Pokhara",   ""],
+        ["Lalitpur",  ""],
+        ["Bhaktapur", ""],
+        ["Janakpur",  ""]
+      ],
+      "answer": ["Katmandou"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 51,
+      "type": 0,
+      "question": "Au bord de quoi la ville américaine de Chicago a-t-elle été construite ?",
+      "propositions": [
+        ["Volcan", ""],
+        ["Faille", ""],
+        ["Lac",    ""],
+        ["Océan",  ""],
+        ["Désert", ""],
+        ["Gorge",  ""]
+      ],
+      "answer": ["Lac"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 52,
+      "type": 0,
+      "question": "Quelle est la nationalité des habitants de l'île de Taïwan, aussi appelée Formose ?",
+      "propositions": [
+        ["Coréenne",     ""],
+        ["Chinoise",     ""],
+        ["Népalaise",    ""],
+        ["Japonaise",    ""],
+        ["Vietnamienne", ""],
+        ["Malaisienne",  ""]
+      ],
+      "answer": ["Chinoise"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 53,
+      "type": 0,
+      "question": "Combien y a-t-il environ d'habitants à Mexico, capitale et ville la plus peuplée du Mexique ?",
+      "propositions": [
+        ["12 millions", ""],
+        ["8 millions",  ""],
+        ["20 millions", ""],
+        ["16 millions", ""],
+        ["25 millions", ""],
+        ["10 millions", ""]
+      ],
+      "answer": ["20 millions"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 54,
+      "type": 0,
+      "question": "Dans quelle région historique d'Espagne se situe la célèbre ville de Barcelone ?",
+      "propositions": [
+        ["Catalogne",  ""],
+        ["Andalousie", ""],
+        ["Castille",   ""],
+        ["Galice",     ""],
+        ["Valence",    ""],
+        ["Aragon",     ""]
+      ],
+      "answer": ["Catalogne"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 55,
+      "type": 0,
+      "question": "Comment appelle-t-on le quartier arabe ou la médina d'Alger ?",
+      "propositions": [
+        ["Bled",   ""],
+        ["Casbah", ""],
+        ["Torah",  ""],
+        ["Souk",   ""],
+        ["Riad",   ""],
+        ["Mellah", ""]
+      ],
+      "answer": ["Casbah"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 56,
+      "type": 0,
+      "question": "De quel pays Rangoun est-elle la plus grande ville en nombre d'habitants ?",
+      "propositions": [
+        ["Laos",        ""],
+        ["Malaisie",    ""],
+        ["Birmanie",    ""],
+        ["Philippines", ""],
+        ["Thaïlande",   ""],
+        ["Cambodge",    ""]
+      ],
+      "answer": ["Birmanie"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 57,
+      "type": 0,
+      "question": "Dans quel pays se trouve Hammerfest, la ville la plus au nord de l'Europe ?",
+      "propositions": [
+        ["Écosse",   ""],
+        ["Norvège",  ""],
+        ["Finlande", ""],
+        ["Suède",    ""],
+        ["Islande",  ""],
+        ["Danemark", ""]
+      ],
+      "answer": ["Norvège"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 58,
+      "type": 0,
+      "question": "Quelle capitale du Liberia est située au bord de l'océan Atlantique ?",
+      "propositions": [
+        ["Monrovia",    ""],
+        ["Nimba",       ""],
+        ["Lofa",        ""],
+        ["Grand Bassa", ""],
+        ["Buchanan",    ""],
+        ["Ganta",       ""]
+      ],
+      "answer": ["Monrovia"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 59,
+      "type": 0,
+      "question": "Dans quel pays peut-on déambuler dans les rues de Constantine, Oran ou encore Annaba ?",
+      "propositions": [
+        ["Turquie",  ""],
+        ["Jordanie", ""],
+        ["Tunisie",  ""],
+        ["Algérie",  ""],
+        ["Maroc",    ""],
+        ["Libye",    ""]
+      ],
+      "answer": ["Algérie"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 60,
+      "type": 0,
+      "question": "À Hong Kong, quel funiculaire relie le quartier de Central à Victoria Peak ?",
+      "propositions": [
+        ["Cross-Harbour", ""],
+        ["Tsing Ma",      ""],
+        ["Peak Tram",     ""],
+        ["Octopus",       ""],
+        ["Star Ferry",    ""],
+        ["MTR",           ""]
+      ],
+      "answer": ["Peak Tram"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 61,
+      "type": 0,
+      "question": "À quel département Bernadette et Jacques Chirac étaient-ils fortement liés ?",
+      "propositions": [
+        ["Landes",        ""],
+        ["Corrèze",       ""],
+        ["Pas-de-Calais", ""],
+        ["Vosges",        ""],
+        ["Puy-de-Dôme",   ""],
+        ["Cantal",        ""]
+      ],
+      "answer": ["Corrèze"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 62,
+      "type": 0,
+      "question": "Dans quel département Versailles s'est-elle développée autour de son château ?",
+      "propositions": [
+        ["Gard",       ""],
+        ["Aisne",      ""],
+        ["Yvelines",   ""],
+        ["Charente",   ""],
+        ["Val-d'Oise", ""],
+        ["Essonne",    ""]
+      ],
+      "answer": ["Yvelines"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 63,
+      "type": 0,
+      "question": "Comment sont nommés les habitants du département de l'Hérault ?",
+      "propositions": [
+        ["Héraultais",  ""],
+        ["Savoie",      ""],
+        ["Gard",        ""],
+        ["Morbihan",    ""],
+        ["Audois",      ""],
+        ["Vauclusiens", ""]
+      ],
+      "answer": ["Héraultais"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 64,
+      "type": 0,
+      "question": "Quel département français regroupe l'Artois et une partie de l'ancienne Picardie ?",
+      "propositions": [
+        ["Pas-de-Calais", ""],
+        ["Aisne",         ""],
+        ["Nord",          ""],
+        ["Calvados",      ""],
+        ["Oise",          ""],
+        ["Somme",         ""]
+      ],
+      "answer": ["Pas-de-Calais"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 65,
+      "type": 0,
+      "question": "Quel deuxième aéroport de France se situe dans le département de l'Essone ?",
+      "propositions": [
+        ["Paris-Orly",              ""],
+        ["Creuse",                  ""],
+        ["Gironde",                 ""],
+        ["Jura",                    ""],
+        ["Paris-Charles de Gaulle", ""],
+        ["Nice Côte d'Azur",        ""]
+      ],
+      "answer": ["Paris-Orly"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 66,
+      "type": 0,
+      "question": "Quel département tient son nom de la rivière localement appelée le Gardon ?",
+      "propositions": [
+        ["Gard",     ""],
+        ["Charente", ""],
+        ["Vaucluse", ""],
+        ["Morbihan", ""],
+        ["Tarn",     ""],
+        ["Hérault",  ""]
+      ],
+      "answer": ["Gard"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 67,
+      "type": 0,
+      "question": "Quel département de Bretagne a pour préfecture la ville de Vannes ?",
+      "propositions": [
+        ["Côtes-d'Armor",    ""],
+        ["Ille-et-Vilaine",  ""],
+        ["Morbihan",         ""],
+        ["Finistère",        ""],
+        ["Loire-Atlantique", ""],
+        ["Sarthe",           ""]
+      ],
+      "answer": ["Morbihan"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 68,
+      "type": 0,
+      "question": "Lequel de ces départements a un nom provenant des deux rivières le traversant ?",
+      "propositions": [
+        ["Pas-de-Calais",     ""],
+        ["Loir-et-Cher",      ""],
+        ["Charente-Maritime", ""],
+        ["Puy-de-Dôme",       ""],
+        ["Haute-Garonne",     ""],
+        ["Seine-et-Marne",    ""]
+      ],
+      "answer": ["Loir-et-Cher"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 69,
+      "type": 0,
+      "question": "Quel département est géographiquement situé le plus à l'ouest de la France ?",
+      "propositions": [
+        ["Pas-de-Calais", ""],
+        ["Dordogne",      ""],
+        ["Lozère",        ""],
+        ["Finistère",     ""],
+        ["Morbihan",      ""],
+        ["Côtes-d'Armor", ""]
+      ],
+      "answer": ["Finistère"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 70,
+      "type": 0,
+      "question": "Dans quel département mange-t-on le potjevleesch, le waterzooi et le welsh ?",
+      "propositions": [
+        ["Nord",          ""],
+        ["Deux-Sèvres",   ""],
+        ["Finistère",     ""],
+        ["Lozère",        ""],
+        ["Pas-de-Calais", ""],
+        ["Ardennes",      ""]
+      ],
+      "answer": ["Nord"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 71,
+      "type": 0,
+      "question": "Dans quel département êtes-vous en vous promenant sur le vieux bassin d'Honfleur ?",
+      "propositions": [
+        ["Calvados",       ""],
+        ["Deux-Sèvres",    ""],
+        ["Yvelines",       ""],
+        ["Finistère",      ""],
+        ["Seine-Maritime", ""],
+        ["Manche",         ""]
+      ],
+      "answer": ["Calvados"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 72,
+      "type": 0,
+      "question": "Dans quel département l'agglomération d'Épinal dépasse-t-elle les 40 000 habitants ?",
+      "propositions": [
+        ["Gironde",            ""],
+        ["Jura",               ""],
+        ["Vosges",             ""],
+        ["Aude",               ""],
+        ["Haute-Saône",        ""],
+        ["Meurthe-et-Moselle", ""]
+      ],
+      "answer": ["Vosges"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 73,
+      "type": 0,
+      "question": "Quel est le troisième département forestier de France avec 418 000 hectares ?",
+      "propositions": [
+        ["Creuse",   ""],
+        ["Sarthe",   ""],
+        ["Vosges",   ""],
+        ["Dordogne", ""],
+        ["Landes",   ""],
+        ["Gironde",  ""]
+      ],
+      "answer": ["Dordogne"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 74,
+      "type": 0,
+      "question": "Quel est le plus vaste département de France métropolitaine ?",
+      "propositions": [
+        ["Aude",            ""],
+        ["Yvelines",        ""],
+        ["Savoie",          ""],
+        ["Gironde",         ""],
+        ["Landes",          ""],
+        ["Alpes-Maritimes", ""]
+      ],
+      "answer": ["Gironde"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 75,
+      "type": 0,
+      "question": "De quel département François Fillon a-t-il été député et sénateur ?",
+      "propositions": [
+        ["Sarthe",    ""],
+        ["Manche",    ""],
+        ["Lozère",    ""],
+        ["Finistère", ""],
+        ["Vendée",    ""],
+        ["Mayenne",   ""]
+      ],
+      "answer": ["Sarthe"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 76,
+      "type": 0,
+      "question": "Dans quel département pouvez-vous assister aux 24 Heures du Mans ?",
+      "propositions": [
+        ["Charente",         ""],
+        ["Sarthe",           ""],
+        ["Corrèze",          ""],
+        ["Moselle",          ""],
+        ["Indre-et-Loire",   ""],
+        ["Loire-Atlantique", ""]
+      ],
+      "answer": ["Sarthe"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 77,
+      "type": 0,
+      "question": "Quel département est réputé pour ses vins blancs dont son cépage Savagnin ?",
+      "propositions": [
+        ["Corrèze",  ""],
+        ["Jura",     ""],
+        ["Yvelines", ""],
+        ["Nord",     ""],
+        ["Ain",      ""],
+        ["Doubs",    ""]
+      ],
+      "answer": ["Jura"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 78,
+      "type": 0,
+      "question": "Quel département français est frontalier avec le Luxembourg et l'Allemagne ?",
+      "propositions": [
+        ["Moselle",  ""],
+        ["Manche",   ""],
+        ["Gironde",  ""],
+        ["Savoie",   ""],
+        ["Bas-Rhin", ""],
+        ["Ardennes", ""]
+      ],
+      "answer": ["Moselle"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 79,
+      "type": 0,
+      "question": "Quel département ayant pour code 73 est le plus montagneux de France ?",
+      "propositions": [
+        ["Loir-et-Cher", ""],
+        ["Calvados",     ""],
+        ["Savoie",       ""],
+        ["Creuse",       ""],
+        ["Haute-Savoie", ""],
+        ["Isère",        ""]
+      ],
+      "answer": ["Savoie"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 80,
+      "type": 0,
+      "question": "Dans quel département français est situé le mont Ventoux ?",
+      "propositions": [
+        ["Gard",             ""],
+        ["Vaucluse",         ""],
+        ["Lozère",           ""],
+        ["Aude",             ""],
+        ["Drôme",            ""],
+        ["Bouches-du-Rhône", ""]
+      ],
+      "answer": ["Vaucluse"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 81,
+      "type": 0,
+      "question": "Quel département français a pour emblème un escargot avec des ailes ?",
+      "propositions": [
+        ["Manche",            ""],
+        ["Dordogne",          ""],
+        ["Vaucluse",          ""],
+        ["Charente",          ""],
+        ["Charente-Maritime", ""],
+        ["Deux-Sèvres",       ""]
+      ],
+      "answer": ["Charente"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 82,
+      "type": 0,
+      "question": "De quel département Cherbourg-en-Cotentin est-elle le principal pôle culturel ?",
+      "propositions": [
+        ["Calvados",     ""],
+        ["Manche",       ""],
+        ["Loir-et-Cher", ""],
+        ["Sarthe",       ""],
+        ["Orne",         ""],
+        ["Morbihan",     ""]
+      ],
+      "answer": ["Manche"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 83,
+      "type": 0,
+      "question": "Dans quel département fête-t-on le carnaval de Limoux durant plus de dix semaines ?",
+      "propositions": [
+        ["Corrèze",             ""],
+        ["Deux-Sèvres",         ""],
+        ["Moselle",             ""],
+        ["Aude",                ""],
+        ["Pyrénées-Orientales", ""],
+        ["Hérault",             ""]
+      ],
+      "answer": ["Aude"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 84,
+      "type": 0,
+      "question": "Dans quelle ville de la Somme trouve-t-on la Tour Perret et la maison de Jules Verne ?",
+      "propositions": [
+        ["Vaucluse",      ""],
+        ["Amiens",        ""],
+        ["Jura",          ""],
+        ["Gard",          ""],
+        ["Abbeville",     ""],
+        ["Saint-Quentin", ""]
+      ],
+      "answer": ["Amiens"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 85,
+      "type": 0,
+      "question": "Quel est le deuxième département le moins peuplé de France après la Lozère ?",
+      "propositions": [
+        ["Creuse",                ""],
+        ["Dordogne",              ""],
+        ["Pas-de-Calais",         ""],
+        ["Vosges",                ""],
+        ["Ardennes",              ""],
+        ["Territoire de Belfort", ""]
+      ],
+      "answer": ["Creuse"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 86,
+      "type": 0,
+      "question": "Quel département français est surnommé le département des sources ?",
+      "propositions": [
+        ["Vosges",      ""],
+        ["Sarthe",      ""],
+        ["Morbihan",    ""],
+        ["Lozère",      ""],
+        ["Haute-Loire", ""],
+        ["Isère",       ""]
+      ],
+      "answer": ["Lozère"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 87,
+      "type": 0,
+      "question": "Quel barrage est situé sur la Truyère, dans le département du Cantal ?",
+      "propositions": [
+        ["Tignes",        ""],
+        ["Grandval",      ""],
+        ["Pareloup",      ""],
+        ["Maury",         ""],
+        ["Vezins",        ""],
+        ["Saut de Véole", ""]
+      ],
+      "answer": ["Grandval"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 88,
+      "type": 0,
+      "question": "Dans quel département la ville de Niort compte-t-elle plus de 50 000 habitants ?",
+      "propositions": [
+        ["Moselle",           ""],
+        ["Nord",              ""],
+        ["Landes",            ""],
+        ["Deux-Sèvres",       ""],
+        ["Charente-Maritime", ""],
+        ["Vendée",            ""]
+      ],
+      "answer": ["Deux-Sèvres"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 89,
+      "type": 0,
+      "question": "Dans quel département les habitants sont-ils appelés les Axonais ?",
+      "propositions": [
+        ["Allier",   ""],
+        ["Ariège",   ""],
+        ["Aisne",    ""],
+        ["Ain",      ""],
+        ["Ardennes", ""],
+        ["Oise",     ""]
+      ],
+      "answer": ["Aisne"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 90,
+      "type": 0,
+      "question": "Dans quel département la renommée des conditions de surf est-elle mondiale ?",
+      "propositions": [
+        ["Gironde",              ""],
+        ["Landes",               ""],
+        ["Moselle",              ""],
+        ["Manche",               ""],
+        ["Pyrénées-Atlantiques", ""],
+        ["Finistère",            ""]
+      ],
+      "answer": ["Landes"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 91,
+      "type": 1,
+      "question": "Quel fleuve, le plus long d'Afrique, traverse l'Égypte et se jette dans la mer Méditerranée ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Nil"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 92,
+      "type": 1,
+      "question": "Quel pays est une péninsule bordée par la mer Rouge et le golfe Persique ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Arabie Saoudite"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 93,
+      "type": 1,
+      "question": "Quel est le nom de la chaîne de montagnes qui sert de frontière naturelle entre l'Europe et l'Asie, notamment en Russie ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Oural"],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 94,
+      "type": 1,
+      "question": "Quel détroit étroit sépare la péninsule Ibérique (Europe) du continent africain ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Détroit de Gibraltar"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 95,
+      "type": 1,
+      "question": "Quelle est la capitale officielle du Brésil, construite spécifiquement pour servir de capitale à partir de 1960 ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Brasília"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 96,
+      "type": 1,
+      "question": "Quel est le plus grand lac d'Afrique en superficie, partagé par la Tanzanie, l'Ouganda et le Kenya ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Lac Victoria"],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 97,
+      "type": 1,
+      "question": "Quelle mer est bordée à l'ouest par la Grèce, à l'est par la Turquie, et contient des milliers d'îles dont Crète et Rhodes ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Mer Égée"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 98,
+      "type": 1,
+      "question": "Quel est le nom du courant marin chaud qui influence fortement le climat de l'Europe de l'Ouest ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Courant du Golf Stream"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 99,
+      "type": 1,
+      "question": "Quel désert, connu pour ses vastes dunes rouges et situé principalement au Chili et au Pérou, est considéré comme l'un des plus arides du monde ?",
+      "propositions": [
+        []
+      ],
+      "answer": ["Désert de l'Atacama"],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 100,
+      "type": 2,
+      "question": "Classez ces fleuves européens par ordre de longueur, du plus court au plus long.",
+      "propositions": [
+        ["Seine", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pont_au_Change_and_Palais_de_justice%2C_Paris_20_April_2021_001.jpg/500px-Pont_au_Change_and_Palais_de_justice%2C_Paris_20_April_2021_001.jpg"],
+        ["Loire", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Loire_%C3%A0_Br%C3%A9h%C3%A9mont2.JPG/500px-Loire_%C3%A0_Br%C3%A9h%C3%A9mont2.JPG"],
+        ["Rhin", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Rhine_Rhein_Basel_2006_871.JPG/500px-Rhine_Rhein_Basel_2006_871.JPG"],
+        ["Danube", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Golubac.JPG/500px-Golubac.JPG"]
+      ],
+      "answer": [
+        "Seine",
+        "Loire",
+        "Rhin",
+        "Danube"
+      ],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 101,
+      "type": 2,
+      "question": "Classez ces océans par ordre de superficie, du plus petit au plus grand.",
+      "propositions": [
+        ["Océan Indien", "https://upload.wikimedia.org/wikipedia/commons/d/d6/Oc%C3%A9an_Indien.png"],
+        ["Océan Arctique", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Arctic_Ocean_relief_location_map.png/500px-Arctic_Ocean_relief_location_map.png"],
+        ["Océan Pacifique", "https://upload.wikimedia.org/wikipedia/commons/f/f5/Oc%C3%A9an_Pacifique_d%C3%A9tour%C3%A9e.png"],
+        ["Océan Atlantique", "https://upload.wikimedia.org/wikipedia/commons/6/65/Oc%C3%A9an_Atlantique.png"]
+      ],
+      "answer": [
+        "Océan Arctique",
+        "Océan Indien",
+        "Océan Atlantique",
+        "Océan Pacifique"
+      ],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 102,
+      "type": 2,
+      "question": "Classez ces continents par ordre de population estimée, du moins peuplé au plus peuplé.",
+      "propositions": [
+        ["Afrique", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Africa_%28orthographic_projection%29.svg/langfr-500px-Africa_%28orthographic_projection%29.svg.png"],
+        ["Europe", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Europe_orthographic_Caucasus_Urals_boundary_%28with_borders%29.svg/langfr-500px-Europe_orthographic_Caucasus_Urals_boundary_%28with_borders%29.svg.png"],
+        ["Océanie", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Oceania_%28orthographic_projection%29.svg/langfr-500px-Oceania_%28orthographic_projection%29.svg.png"],
+        ["Amérique du Sud", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/South_America_%28orthographic_projection%29.svg/langfr-500px-South_America_%28orthographic_projection%29.svg.png"]
+      ],
+      "answer": [
+        "Océanie",
+        "Amérique du Sud",
+        "Europe",
+        "Afrique"
+      ],
+      "difficulty": "Facile"
+    },
+    {
+      "id": 103,
+      "type": 2,
+      "question": "Classez ces capitales européennes par ordre d'altitude, de la plus basse à la plus haute.",
+      "propositions": [
+        ["Paris (France)", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/500px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"],
+        ["Madrid (Espagne)", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/CollageMadrid.jpg/500px-CollageMadrid.jpg"],
+        ["Amsterdam (Pays-Bas)", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Westerkerk_Amsterdam.jpg/500px-Westerkerk_Amsterdam.jpg"],
+        ["Andorre-la-Vieille (Andorre)", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/LargeVue-Andorra.jpg/500px-LargeVue-Andorra.jpg"]
+      ],
+      "answer": [
+        "Amsterdam (Pays-Bas)",
+        "Paris (France)",
+        "Madrid (Espagne)",
+        "Andorre-la-Vieille (Andorre)"
+      ],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 104,
+      "type": 2,
+      "question": "Classez ces pays d'Europe par ordre de population, du moins peuplé au plus peuplé.",
+      "propositions": [
+        ["Pays-Bas", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/langfr-250px-Flag_of_the_Netherlands.svg.png"],
+        ["Espagne", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/langfr-250px-Flag_of_Spain.svg.png"],
+        ["France", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/langfr-250px-Flag_of_France.svg.png"],
+        ["Allemagne", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/langfr-250px-Flag_of_Germany.svg.png"]
+      ],
+      "answer": [
+        "Pays-Bas",
+        "Espagne",
+        "France",
+        "Allemagne"
+      ],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 105,
+      "type": 2,
+      "question": "Classez ces Grands Lacs d'Amérique du Nord par ordre de superficie, du plus petit au plus grand.",
+      "propositions": [
+        ["Lac Huron", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Passe_%C3%A0_poisson_du_lac_Rimouski_-_panoramio.jpg/500px-Passe_%C3%A0_poisson_du_lac_Rimouski_-_panoramio.jpg"],
+        ["Lac Ontario", "https://l-express.ca/wp-content/uploads/2023/03/iStock-1327285236-1024x768.jpg"],
+        ["Lac Supérieur", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lac-Superieur_QC_1.JPG/500px-Lac-Superieur_QC_1.JPG"],
+        ["Lac Érié", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lake_Erie_Land%27s_End.jpg/500px-Lake_Erie_Land%27s_End.jpg"]
+      ],
+      "answer": [
+        "Lac Ontario",
+        "Lac Érié",
+        "Lac Huron",
+        "Lac Supérieur"
+      ],
+      "difficulty": "Moyen"
+    },
+    {
+      "id": 106,
+      "type": 2,
+      "question": "Classez ces îles par ordre de superficie, de la plus petite à la plus grande.",
+      "propositions": [
+        ["Madagascar", "https://upload.wikimedia.org/wikipedia/commons/4/49/Madagascar-carte.png"],
+        ["Grande-Bretagne", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/MODIS_-_Great_Britain_-_2012-06-04_during_heat_wave_%28cropped%29.jpg/500px-MODIS_-_Great_Britain_-_2012-06-04_during_heat_wave_%28cropped%29.jpg"],
+        ["Honshū (Japon)", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Japan_honshu_map.svg/375px-Japan_honshu_map.svg.png"],
+        ["Île de Baffin (Canada)", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wfm_baffin_island.jpg/500px-Wfm_baffin_island.jpg"]
+      ],
+      "answer": [
+        "Grande-Bretagne",
+        "Honshū (Japon)",
+        "Île de Baffin (Canada)",
+        "Madagascar"
+      ],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 107,
+      "type": 2,
+      "question": "Classez ces chaînes de montagnes par ordre de longueur, de la plus courte à la plus longue.",
+      "propositions": [
+        ["Himalaya", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Himalayas.jpg/500px-Himalayas.jpg"],
+        ["Andes", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Andes_Chile_Argentina.jpg/500px-Andes_Chile_Argentina.jpg"],
+        ["Alpes", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Alpen_01.JPG/500px-Alpen_01.JPG"],
+        ["Rocheuses", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rocky_Mountains.aerial_view.no_snow.jpg/500px-Rocky_Mountains.aerial_view.no_snow.jpg"]
+      ],
+      "answer": [
+        "Alpes",
+        "Himalaya",
+        "Rocheuses",
+        "Andes"
+      ],
+      "difficulty": "Difficile"
+    },
+    {
+      "id": 108,
+      "type": 2,
+      "question": "Classez ces célèbres chutes d'eau par ordre de hauteur totale, de la plus basse à la plus haute.",
+      "propositions": [
+        ["Chutes de Yosemite (USA)", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Yosemite_falls_winter_2010.JPG/330px-Yosemite_falls_winter_2010.JPG"],
+        ["Chutes d'Iguazú (Argentine/Brésil)", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Iguacu-004.jpg/500px-Iguacu-004.jpg"],
+        ["Salto Ángel (Venezuela)", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Salto_angel_descubierto.jpg/500px-Salto_angel_descubierto.jpg"],
+        ["Chutes du Niagara (USA/Canada)", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Niagara_Falls_Sunset_%28cropped%29.jpg/500px-Niagara_Falls_Sunset_%28cropped%29.jpg"]
+      ],
+      "answer": [
+        "Chutes du Niagara (USA/Canada)",
+        "Chutes d'Iguazú (Argentine/Brésil)",
+        "Chutes de Yosemite (USA)",
+        "Salto Ángel (Venezuela)"
+      ],
+      "difficulty": "Difficile"
+    }
+  ]
+}
