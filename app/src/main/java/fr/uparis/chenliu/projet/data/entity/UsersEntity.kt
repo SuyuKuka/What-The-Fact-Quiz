@@ -11,7 +11,5 @@ data class UsersEntity (
     val energy: Int,
     val lastTimeEnergy: Long,
     val subscribe: Boolean,
-    val endDate: String,
-    val games: Int,
-    val wins: Int
+    val endDate: String
 )
