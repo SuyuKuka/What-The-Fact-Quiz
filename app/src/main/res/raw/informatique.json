@@ -4,2521 +4,1136 @@
       "id": 1,
       "type": 0,
       "question": "Quel type de code permet de déverrouiller la carte SIM de votre smartphone ?",
-      "propositions": [
-        [
-          "IBAN",
-          ""
-        ],
-        [
-          "PIN",
-          ""
-        ],
-        [
-          "PUK",
-          ""
-        ],
-        [
-          "IMEI",
-          ""
-        ]
-      ],
-      "answer": [
-        "PIN"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Ce code, souvent à quatre chiffres, est destiné à authentifier le titulaire d'une carte bancaire, d'une carte SIM ou d'une carte à puce."
+      "propositions": [ ["IBAN", ""], ["PIN", ""], ["PUK", ""], ["IMEI", ""] ],
+      "answer": ["PIN"],
+      "difficulty": "Facile"
     },
     {
       "id": 2,
       "type": 0,
       "question": "Quel est le premier smartphone et téléphone mobile à écran tactile de l'histoire ?",
       "propositions": [
-        [
-          "Nokia 3310",
-          ""
-        ],
-        [
-          "SH-100",
-          ""
-        ],
-        [
-          "iPhone EDGE",
-          ""
-        ],
-        [
-          "IBM Simon",
-          ""
-        ]
+        ["Nokia 3310",  ""],
+        ["SH-100",      ""],
+        ["iPhone EDGE", ""],
+        ["IBM Simon",   ""]
       ],
-      "answer": [
-        "IBM Simon"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Le premier smartphone de l'histoire a été présenté le 16 novembre 1992 au au COMDEX de Las Vegas (Nevada), ancêtre du CES."
+      "answer": ["IBM Simon"],
+      "difficulty": "Facile"
     },
     {
       "id": 3,
       "type": 0,
       "question": "En quelle année a été commercialisé le tout premier smartphone ?",
       "propositions": [
-        [
-          "1989",
-          ""
-        ],
-        [
-          "1994",
-          ""
-        ],
-        [
-          "1999",
-          ""
-        ],
-        [
-          "2004",
-          ""
-        ]
+        ["1989", ""],
+        ["1994", ""],
+        ["1999", ""],
+        ["2004", ""]
       ],
-      "answer": [
-        "1994"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "En plus des fonctions de téléphonie cellulaire, l'IBM Simon était capable d'envoyer et recevoir des fax et faisait office de pager."
+      "answer": ["1994"],
+      "difficulty": "Facile"
     },
     {
       "id": 4,
       "type": 0,
       "question": "Quelle entreprise, faisant partie des GAFAM, a racheté Android en 2405 ?",
       "propositions": [
-        [
-          "Facebook",
-          ""
-        ],
-        [
-          "Google",
-          ""
-        ],
-        [
-          "Amazon",
-          ""
-        ],
-        [
-          "Microsoft",
-          ""
-        ]
+        ["Facebook",  ""],
+        ["Google",    ""],
+        ["Amazon",    ""],
+        ["Microsoft", ""]
       ],
-      "answer": [
-        "Google"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Android est le système d'exploitation mobile le plus utilisé dans le monde, devant iOS d'Apple, avec plus de 80 % de parts de marché."
+      "answer": ["Google"],
+      "difficulty": "Facile"
     },
     {
       "id": 5,
       "type": 0,
       "question": "Quel est le premier smartphone de la gamme iPhone d'Apple ?",
-      "propositions": [
-        [
-          "G1",
-          ""
-        ],
-        [
-          "Max",
-          ""
-        ],
-        [
-          "Storm",
-          ""
-        ],
-        [
-          "EDGE",
-          ""
-        ]
-      ],
-      "answer": [
-        "EDGE"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Le développement du produit a commencé en 2005 et s'est poursuivi dans le plus grand secret jusqu'à son dévoilement public."
+      "propositions": [ ["G1", ""], ["Max", ""], ["Storm", ""], ["EDGE", ""] ],
+      "answer": ["EDGE"],
+      "difficulty": "Facile"
     },
     {
       "id": 6,
       "type": 0,
       "question": "En France, depuis quand les smartphones sont-ils interdits dans les écoles ?",
       "propositions": [
-        [
-          "2023",
-          ""
-        ],
-        [
-          "2013",
-          ""
-        ],
-        [
-          "2010",
-          ""
-        ],
-        [
-          "2018",
-          ""
-        ]
+        ["2023", ""],
+        ["2013", ""],
+        ["2010", ""],
+        ["2018", ""]
       ],
-      "answer": [
-        "2018"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Les adolescents ayant grandi durant les deux premières décennies du XXIe siècle ont bénéficié de l'influence des NTIC."
+      "answer": ["2018"],
+      "difficulty": "Facile"
     },
     {
       "id": 7,
       "type": 0,
       "question": "Quel terme désigne un piéton ayant les yeux rivés à son téléphone mobile ?",
       "propositions": [
-        [
-          "Muggon",
-          ""
-        ],
-        [
-          "Chtonien",
-          ""
-        ],
-        [
-          "Smombie",
-          ""
-        ],
-        [
-          "Cracmol",
-          ""
-        ]
+        ["Muggon",   ""],
+        ["Chtonien", ""],
+        ["Smombie",  ""],
+        ["Cracmol",  ""]
       ],
-      "answer": [
-        "Smombie"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Selon une étude menée en 2014, 17 % des piétons de grandes villes auraient un comportement à risque avec leur smartphone."
+      "answer": ["Smombie"],
+      "difficulty": "Facile"
     },
     {
       "id": 8,
       "type": 0,
       "question": "Quel fut le premier opérateur téléphonique français à lancer son réseau mobile ?",
       "propositions": [
-        [
-          "SFR",
-          ""
-        ],
-        [
-          "France Telecom",
-          ""
-        ],
-        [
-          "Bouygues Telecom",
-          ""
-        ],
-        [
-          "Itineris",
-          ""
-        ]
+        ["SFR",              ""],
+        ["France Telecom",   ""],
+        ["Bouygues Telecom", ""],
+        ["Itineris",         ""]
       ],
-      "answer": [
-        "France Telecom"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Le 1er octobre 1991, France Telecom a débuté à Strasbourg une expérience-pilote de téléphonie sans-fil grand-public, en ville."
+      "answer": ["France Telecom"],
+      "difficulty": "Facile"
     },
     {
       "id": 9,
       "type": 0,
       "question": "Quel sigle est associé à la messagerie multimédia pour téléphone mobile ?",
-      "propositions": [
-        [
-          "MMS",
-          ""
-        ],
-        [
-          "TDM",
-          ""
-        ],
-        [
-          "MDR",
-          ""
-        ],
-        [
-          "GSM",
-          ""
-        ]
-      ],
-      "answer": [
-        "MMS"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Il étend les capacités des SMS, permettant de transmettre des photos, des enregistrements audio ainsi que de la vidéo."
+      "propositions": [ ["MMS", ""], ["TDM", ""], ["MDR", ""], ["GSM", ""] ],
+      "answer": ["MMS"],
+      "difficulty": "Facile"
     },
     {
       "id": 10,
       "type": 0,
       "question": "Quelle zone géographique est parfois non desservie par un réseau cellulaire ?",
       "propositions": [
-        [
-          "Zone creuse",
-          ""
-        ],
-        [
-          "Zone rouge",
-          ""
-        ],
-        [
-          "Zone vide",
-          ""
-        ],
-        [
-          "Zone blanche",
-          ""
-        ]
+        ["Zone creuse",  ""],
+        ["Zone rouge",   ""],
+        ["Zone vide",    ""],
+        ["Zone blanche", ""]
       ],
-      "answer": [
-        "Zone blanche"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Il s'agit souvent des zones les moins densément peuplées (typiquement les zones rurales), sans réel intérêt d'investissement."
+      "answer": ["Zone blanche"],
+      "difficulty": "Facile"
     },
     {
       "id": 11,
       "type": 0,
       "question": "Quel terme français est synonyme de roaming en téléphonie mobile ?",
       "propositions": [
-        [
-          "Itinérance",
-          ""
-        ],
-        [
-          "Migration",
-          ""
-        ],
-        [
-          "Transhumance",
-          ""
-        ],
-        [
-          "Nomadisme",
-          ""
-        ]
+        ["Itinérance",   ""],
+        ["Migration",    ""],
+        ["Transhumance", ""],
+        ["Nomadisme",    ""]
       ],
-      "answer": [
-        "Itinérance"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Le roaming et le handover sont deux caractéristiques fondamentales des réseaux mobile de types GSM, UMTS, LTE ou 5G."
+      "answer": ["Itinérance"],
+      "difficulty": "Moyen"
     },
     {
       "id": 12,
       "type": 0,
       "question": "Quel est le nom du premier protocole de communication de l'internet mobile ?",
       "propositions": [
-        [
-          "WAP",
-          ""
-        ],
-        [
-          "WiMAX",
-          ""
-        ],
-        [
-          "POW",
-          ""
-        ],
-        [
-          "MobiNet",
-          ""
-        ]
+        ["WAP",     ""],
+        ["WiMAX",   ""],
+        ["POW",     ""],
+        ["MobiNet", ""]
       ],
-      "answer": [
-        "WAP"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Il redéfinit le protocole HTTP, l'HTML et le JavaScript pour les adapter au monde des périphériques ayant un écran de taille réduite."
+      "answer": ["WAP"],
+      "difficulty": "Moyen"
     },
     {
       "id": 13,
       "type": 0,
       "question": "Quel sigle désigne les opérateurs de téléphonie mobile sans réseau propre ?",
       "propositions": [
-        [
-          "ACVN",
-          ""
-        ],
-        [
-          "OMNI",
-          ""
-        ],
-        [
-          "MVNO",
-          ""
-        ],
-        [
-          "GLOCOM",
-          ""
-        ]
+        ["ACVN",   ""],
+        ["OMNI",   ""],
+        ["MVNO",   ""],
+        ["GLOCOM", ""]
       ],
-      "answer": [
-        "MVNO"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "En général, un MVNO représente une société indépendante de l'opérateur, ce qui lui permet de fixer ses tarifs propres."
+      "answer": ["MVNO"],
+      "difficulty": "Moyen"
     },
     {
       "id": 14,
       "type": 0,
       "question": "Quel opérateur français privé fut le premier à lancer son réseau mobile ?",
       "propositions": [
-        [
-          "SFR",
-          ""
-        ],
-        [
-          "Bouygues Telecom",
-          ""
-        ],
-        [
-          "France Telecom",
-          ""
-        ],
-        [
-          "Itineris",
-          ""
-        ]
+        ["SFR",              ""],
+        ["Bouygues Telecom", ""],
+        ["France Telecom",   ""],
+        ["Itineris",         ""]
       ],
-      "answer": [
-        "SFR"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La Société Française du Radiotéléphone est une branche regroupant les activités télécoms du groupe luxembourgeois Altice France."
+      "answer": ["SFR"],
+      "difficulty": "Moyen"
     },
     {
       "id": 15,
       "type": 0,
       "question": "Quel est le composant le plus énergivore d'un smartphone ?",
       "propositions": [
-        [
-          "Mémoire vive",
-          ""
-        ],
-        [
-          "Processeur",
-          ""
-        ],
-        [
-          "Écran",
-          ""
-        ],
-        [
-          "Antenne",
-          ""
-        ]
+        ["Mémoire vive", ""],
+        ["Processeur",   ""],
+        ["Écran",        ""],
+        ["Antenne",      ""]
       ],
-      "answer": [
-        "Écran"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Les smartphones modernes ont des écrans assez impressionnants : plus ils emballent de pixels, plus ils consomment de puissance."
+      "answer": ["Écran"],
+      "difficulty": "Moyen"
     },
     {
       "id": 16,
       "type": 0,
       "question": "En quelle année le port USB-C fut-il imposé sur les smartphones ?",
       "propositions": [
-        [
-          "2026",
-          ""
-        ],
-        [
-          "2020",
-          ""
-        ],
-        [
-          "2022",
-          ""
-        ],
-        [
-          "2024",
-          ""
-        ]
+        ["2026", ""],
+        ["2020", ""],
+        ["2022", ""],
+        ["2024", ""]
       ],
-      "answer": [
-        "2024"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La directive sur le chargeur unique, qui a largement fait parler d'elle, a en effet été publiée au Journal officiel européen en 2023."
+      "answer": ["2024"],
+      "difficulty": "Moyen"
     },
     {
       "id": 17,
       "type": 0,
       "question": "Quel pays a construit le plus grand nombre de smartphones en 2021 ?",
       "propositions": [
-        [
-          "Chine",
-          ""
-        ],
-        [
-          "Taiwan",
-          ""
-        ],
-        [
-          "Japon",
-          ""
-        ],
-        [
-          "Corée du sud",
-          ""
-        ]
+        ["Chine",        ""],
+        ["Taiwan",       ""],
+        ["Japon",        ""],
+        ["Corée du sud", ""]
       ],
-      "answer": [
-        "Chine"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La Chine a contribué à 67 % de la production mondiale en 2021, les autres pays n'ayant pas compensé le déclin d'Huawei."
+      "answer": ["Chine"],
+      "difficulty": "Moyen"
     },
     {
       "id": 18,
       "type": 0,
       "question": "Quelle est la signification du premier S du sigle SMS ?",
       "propositions": [
-        [
-          "Swift",
-          ""
-        ],
-        [
-          "Secure",
-          ""
-        ],
-        [
-          "Short",
-          ""
-        ],
-        [
-          "Speedy",
-          ""
-        ]
+        ["Swift",  ""],
+        ["Secure", ""],
+        ["Short",  ""],
+        ["Speedy", ""]
       ],
-      "answer": [
-        "Short"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Dans certaines régions du monde comme l'Amérique du Nord, le Royaume-Uni ou les Philippines, on parle de messagerie texte."
+      "answer": ["Short"],
+      "difficulty": "Moyen"
     },
     {
       "id": 19,
       "type": 0,
       "question": "Quelle est la signification du S présent dans le sigle MMS ?",
       "propositions": [
-        [
-          "Secure",
-          ""
-        ],
-        [
-          "Service",
-          ""
-        ],
-        [
-          "Short",
-          ""
-        ],
-        [
-          "System",
-          ""
-        ]
+        ["Secure",  ""],
+        ["Service", ""],
+        ["Short",   ""],
+        ["System",  ""]
       ],
-      "answer": [
-        "Service"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Il étend les capacités des SMS, permettant de transmettre des photos, des enregistrements audio ainsi que de la vidéo."
+      "answer": ["Service"],
+      "difficulty": "Moyen"
     },
     {
       "id": 20,
       "type": 0,
       "question": "Quel seuil de recharge maximal est optimal pour la batterie de votre smartphone ?",
       "propositions": [
-        [
-          "85 %",
-          ""
-        ],
-        [
-          "95 %",
-          ""
-        ],
-        [
-          "75 %",
-          ""
-        ],
-        [
-          "65 %",
-          ""
-        ]
+        ["85 %", ""],
+        ["95 %", ""],
+        ["75 %", ""],
+        ["65 %", ""]
       ],
-      "answer": [
-        "85 %"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Une batterie d'accumulateurs permet de stocker l'énergie électrique sous forme chimique et de la restituer en courant continu."
+      "answer": ["85 %"],
+      "difficulty": "Moyen"
     },
     {
       "id": 21,
       "type": 0,
       "question": "Lequel de ces acronymes ne désigne aucune des versions de la norme 2G ?",
       "propositions": [
-        [
-          "AMPS",
-          ""
-        ],
-        [
-          "GPRS",
-          ""
-        ],
-        [
-          "EDGE",
-          ""
-        ],
-        [
-          "GSM",
-          ""
-        ]
+        ["AMPS", ""],
+        ["GPRS", ""],
+        ["EDGE", ""],
+        ["GSM",  ""]
       ],
-      "answer": [
-        "AMPS"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "AMPS est un sigle informatique, néologisme basé sur LAMP, reprenant les premières lettres de Apache, MySQL, PHP et Solaris."
+      "answer": ["AMPS"],
+      "difficulty": "Difficile"
     },
     {
       "id": 22,
       "type": 0,
       "question": "Lequel de ces acronymes ne désigne aucune des versions de la norme 3G ?",
       "propositions": [
-        [
-          "HSPA",
-          ""
-        ],
-        [
-          "LTE",
-          ""
-        ],
-        [
-          "HSPA+",
-          ""
-        ],
-        [
-          "UMTS",
-          ""
-        ]
+        ["HSPA",  ""],
+        ["LTE",   ""],
+        ["HSPA+", ""],
+        ["UMTS",  ""]
       ],
-      "answer": [
-        "LTE"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "La norme LTE, définie par le consortium 3GPP, a d'abord été considérée comme une norme de troisième génération 3.9G."
+      "answer": ["LTE"],
+      "difficulty": "Difficile"
     },
     {
       "id": 23,
       "type": 0,
       "question": "Quel terme désigne le fait de remplacer le système d'exploitation de son mobile ?",
       "propositions": [
-        [
-          "Format",
-          ""
-        ],
-        [
-          "Defrag",
-          ""
-        ],
-        [
-          "Flash",
-          ""
-        ],
-        [
-          "Override",
-          ""
-        ]
+        ["Format",   ""],
+        ["Defrag",   ""],
+        ["Flash",    ""],
+        ["Override", ""]
       ],
-      "answer": [
-        "Flash"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "La téléphonie cellulaire est un moyen de télécommunication, plus précisément de radiocommunication, par téléphone mobile."
+      "answer": ["Flash"],
+      "difficulty": "Difficile"
     },
     {
       "id": 24,
       "type": 0,
       "question": "Comment est appelé le fichier d'image d'un système d'exploitation mobile ?",
-      "propositions": [
-        [
-          "iOS",
-          ""
-        ],
-        [
-          "ROM",
-          ""
-        ],
-        [
-          "RAR",
-          ""
-        ],
-        [
-          "RAM",
-          ""
-        ]
-      ],
-      "answer": [
-        "ROM"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Originellement, l'expression mémoire morte (en anglais, Read-Only Memory : ROM) désignait une mémoire informatique non volatile."
+      "propositions": [ ["iOS", ""], ["ROM", ""], ["RAR", ""], ["RAM", ""] ],
+      "answer": ["ROM"],
+      "difficulty": "Difficile"
     },
     {
       "id": 25,
       "type": 0,
       "question": "Quel est le nom du premier smartphone pliable proposé au grand public ?",
       "propositions": [
-        [
-          "Find N2",
-          ""
-        ],
-        [
-          "Mate X3",
-          ""
-        ],
-        [
-          "FlexPai",
-          ""
-        ],
-        [
-          "Galaxy X",
-          ""
-        ]
+        ["Find N2",  ""],
+        ["Mate X3",  ""],
+        ["FlexPai",  ""],
+        ["Galaxy X", ""]
       ],
-      "answer": [
-        "FlexPai"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "On attendait Samsung, et c'est finalement Royole qui a grillé la politesse à tout le monde, fabricant chinois de dalles flexibles."
+      "answer": ["FlexPai"],
+      "difficulty": "Difficile"
     },
     {
       "id": 26,
       "type": 0,
       "question": "En quelle année est sortie la première version de « PUBG » sur mobile ?",
       "propositions": [
-        [
-          "2014",
-          ""
-        ],
-        [
-          "2018",
-          ""
-        ],
-        [
-          "2012",
-          ""
-        ],
-        [
-          "2016",
-          ""
-        ]
+        ["2014", ""],
+        ["2018", ""],
+        ["2012", ""],
+        ["2016", ""]
       ],
-      "answer": [
-        "2018"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Le jeu est en effet disponible sur iOS et Android gratuitement depuis mars 2018 sous le titre « PlayerUnknown's Battlegrounds Mobile »."
+      "answer": ["2018"],
+      "difficulty": "Difficile"
     },
     {
       "id": 27,
       "type": 0,
       "question": "En quelle année est sortie la première version de « Clash of Clans » sur iOS ?",
       "propositions": [
-        [
-          "2014",
-          ""
-        ],
-        [
-          "2012",
-          ""
-        ],
-        [
-          "2010",
-          ""
-        ],
-        [
-          "2008",
-          ""
-        ]
+        ["2014", ""],
+        ["2012", ""],
+        ["2010", ""],
+        ["2008", ""]
       ],
-      "answer": [
-        "2012"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Ce jeu vidéo mobile de stratégie en temps réel massivement multijoueur est développé et édité par le studio finlandais Supercell."
+      "answer": ["2012"],
+      "difficulty": "Difficile"
     },
     {
       "id": 28,
       "type": 0,
       "question": "En quelle année est sortie la première version de « Candy Crush Saga » sur mobile ?",
       "propositions": [
-        [
-          "2006",
-          ""
-        ],
-        [
-          "2008",
-          ""
-        ],
-        [
-          "2010",
-          ""
-        ],
-        [
-          "2012",
-          ""
-        ]
+        ["2006", ""],
+        ["2008", ""],
+        ["2010", ""],
+        ["2012", ""]
       ],
-      "answer": [
-        "2012"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "« Candy Crush Saga » est préinstallé sur les appareils dotés de base de Windows 10, au même titre que « Solitaire » et « Démineur »."
+      "answer": ["2012"],
+      "difficulty": "Difficile"
     },
     {
       "id": 29,
       "type": 0,
       "question": "En quelle année est sortie la première version de « Fruit Ninja » sur mobile ?",
       "propositions": [
-        [
-          "2010",
-          ""
-        ],
-        [
-          "2012",
-          ""
-        ],
-        [
-          "2008",
-          ""
-        ],
-        [
-          "2006",
-          ""
-        ]
+        ["2010", ""],
+        ["2012", ""],
+        ["2008", ""],
+        ["2006", ""]
       ],
-      "answer": [
-        "2010"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Développé par Halfbrick Studios, « Fruit Ninja » fait partie du kit de démarrage iOS et Xbox 360 (également adapté pour Kinect)."
+      "answer": ["2010"],
+      "difficulty": "Difficile"
     },
     {
       "id": 30,
       "type": 0,
       "question": "En quelle année est sortie la première version de « 8 Ball Pool » sur mobile ?",
       "propositions": [
-        [
-          "2012",
-          ""
-        ],
-        [
-          "2008",
-          ""
-        ],
-        [
-          "2014",
-          ""
-        ],
-        [
-          "2010",
-          ""
-        ]
+        ["2012", ""],
+        ["2008", ""],
+        ["2014", ""],
+        ["2010", ""]
       ],
-      "answer": [
-        "2010"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "La version mobile de « 8 Ball Pool » est gérée par Miniclip, une société de jeux basée en Suisse, au Portugal, en Italie et en Angleterre."
+      "answer": ["2010"],
+      "difficulty": "Difficile"
     },
     {
       "id": 31,
       "type": 0,
       "question": "Quel langage orienté objet a été créé par des employés de Sun Microsystems ?",
       "propositions": [
-        [
-          "Perl",
-          ""
-        ],
-        [
-          "Python",
-          ""
-        ],
-        [
-          "Java",
-          ""
-        ],
-        [
-          "Ruby",
-          ""
-        ]
+        ["Perl",   ""],
+        ["Python", ""],
+        ["Java",   ""],
+        ["Ruby",   ""]
       ],
-      "answer": [
-        "Java"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Un logiciel écrit en Java a pour particularité d'être compilé vers un code intermédiaire qui peut être exécutée dans une VM."
+      "answer": ["Java"],
+      "difficulty": "Facile"
     },
     {
       "id": 32,
       "type": 0,
       "question": "Quel langage de programmation a le même nom qu'une espèce de serpent ?",
       "propositions": [
-        [
-          "Boa",
-          ""
-        ],
-        [
-          "Python",
-          ""
-        ],
-        [
-          "Vipère",
-          ""
-        ],
-        [
-          "Cobra",
-          ""
-        ]
+        ["Boa",    ""],
+        ["Python", ""],
+        ["Vipère", ""],
+        ["Cobra",  ""]
       ],
-      "answer": [
-        "Python"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Python est placé sous une licence libre proche de la licence BSD et fonctionne sur la plupart des plateformes informatiques."
+      "answer": ["Python"],
+      "difficulty": "Facile"
     },
     {
       "id": 33,
       "type": 0,
       "question": "Quel langage a permis de créer des sites web comme Facebook et Wikipédia ?",
       "propositions": [
-        [
-          "Assembleur",
-          ""
-        ],
-        [
-          "Fortran",
-          ""
-        ],
-        [
-          "Scala",
-          ""
-        ],
-        [
-          "PHP",
-          ""
-        ]
+        ["Assembleur", ""],
+        ["Fortran",    ""],
+        ["Scala",      ""],
+        ["PHP",        ""]
       ],
-      "answer": [
-        "PHP"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "PHP est considéré comme une des bases de la création de sites web dits dynamiques mais également des applications web."
+      "answer": ["PHP"],
+      "difficulty": "Facile"
     },
     {
       "id": 34,
       "type": 0,
       "question": "Quelle collection d'outils, utiles à la création du design, a été créée par Twitter ?",
       "propositions": [
-        [
-          "Bootstrap",
-          ""
-        ],
-        [
-          "Flutter",
-          ""
-        ],
-        [
-          "React",
-          ""
-        ],
-        [
-          "Fortran",
-          ""
-        ]
+        ["Bootstrap", ""],
+        ["Flutter",   ""],
+        ["React",     ""],
+        ["Fortran",   ""]
       ],
-      "answer": [
-        "Bootstrap"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Avant l'arrivée de Bootstrap, plusieurs bibliothèques existaient, ce qui menait à des incohérences et à un coût de maintenance élevé."
+      "answer": ["Bootstrap"],
+      "difficulty": "Facile"
     },
     {
       "id": 35,
       "type": 0,
       "question": "Quel langage de programmation compilé est un niveau au-dessus de C ?",
-      "propositions": [
-        [
-          "Go",
-          ""
-        ],
-        [
-          "Java",
-          ""
-        ],
-        [
-          "C++",
-          ""
-        ],
-        [
-          "Perl",
-          ""
-        ]
-      ],
-      "answer": [
-        "C++"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "L'encapsulation permet de faire abstraction du fonctionnement interne d'une classe et de ne se préoccuper que des services rendus."
+      "propositions": [ ["Go", ""], ["Java", ""], ["C++", ""], ["Perl", ""] ],
+      "answer": ["C++"],
+      "difficulty": "Facile"
     },
     {
       "id": 36,
       "type": 0,
       "question": "Quel nom donne-t-on à un défaut de conception d'un programme informatique ?",
       "propositions": [
-        [
-          "Commit",
-          ""
-        ],
-        [
-          "Lisp",
-          ""
-        ],
-        [
-          "Bug",
-          ""
-        ],
-        [
-          "Rollback",
-          ""
-        ]
+        ["Commit",   ""],
+        ["Lisp",     ""],
+        ["Bug",      ""],
+        ["Rollback", ""]
       ],
-      "answer": [
-        "Bug"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "La gravité du dysfonctionnement peut aller de bénigne à majeure, tels un plantage du système pouvant entraîner de graves accidents."
+      "answer": ["Bug"],
+      "difficulty": "Facile"
     },
     {
       "id": 37,
       "type": 0,
       "question": "Quel célèbre langage a été inventé courant 1972 dans les laboratoires Bell ?",
       "propositions": [
-        [
-          "Fortran",
-          ""
-        ],
-        [
-          "RPG",
-          ""
-        ],
-        [
-          "COBOL",
-          ""
-        ],
-        [
-          "C",
-          ""
-        ]
+        ["Fortran", ""],
+        ["RPG",     ""],
+        ["COBOL",   ""],
+        ["C",       ""]
       ],
-      "answer": [
-        "C"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Inventé au début des années 1970 pour réécrire Unix, C est devenu un des langages les plus utilisés, encore de nos jours."
+      "answer": ["C"],
+      "difficulty": "Facile"
     },
     {
       "id": 38,
       "type": 0,
       "question": "Quels mots sont souvent utilisés pour vite tester un logiciel simple sans erreur ?",
       "propositions": [
-        [
-          "Happy day",
-          ""
-        ],
-        [
-          "Well done",
-          ""
-        ],
-        [
-          "No bug",
-          ""
-        ],
-        [
-          "Hello world",
-          ""
-        ]
+        ["Happy day",   ""],
+        ["Well done",   ""],
+        ["No bug",      ""],
+        ["Hello world", ""]
       ],
-      "answer": [
-        "Hello world"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "C'est souvent le programme le plus simple qu'on essaie de faire fonctionner en apprenant un nouveau langage de programmation."
+      "answer": ["Hello world"],
+      "difficulty": "Facile"
     },
     {
       "id": 39,
       "type": 0,
       "question": "Quel EDI propriétaire sous Windows a été créé en 1995 par Borland ?",
       "propositions": [
-        [
-          "WinDev",
-          ""
-        ],
-        [
-          "Ada",
-          ""
-        ],
-        [
-          "Visual Basic",
-          ""
-        ],
-        [
-          "Delphi",
-          ""
-        ]
+        ["WinDev",       ""],
+        ["Ada",          ""],
+        ["Visual Basic", ""],
+        ["Delphi",       ""]
       ],
-      "answer": [
-        "Delphi"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Delphi est apparu comme une alternative viable pour de nombreux développeurs qui souhaitaient programmer sous Windows."
+      "answer": ["Delphi"],
+      "difficulty": "Facile"
     },
     {
       "id": 40,
       "type": 0,
       "question": "Quel langage de programmation libre utilise les extensions rb et rbw ?",
       "propositions": [
-        [
-          "Ruby",
-          ""
-        ],
-        [
-          "RPG",
-          ""
-        ],
-        [
-          "Ada",
-          ""
-        ],
-        [
-          "React",
-          ""
-        ]
+        ["Ruby",  ""],
+        ["RPG",   ""],
+        ["Ada",   ""],
+        ["React", ""]
       ],
-      "answer": [
-        "Ruby"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Frustré par son expérience en développement Smalltalk et Lisp, Yukihiro Matsumoto a commencé à créer Ruby en 1993 sous Emacs."
+      "answer": ["Ruby"],
+      "difficulty": "Facile"
     },
     {
       "id": 41,
       "type": 0,
       "question": "Quel langage créé en 1987 par Larry Wall traite de l'information textuelle ?",
       "propositions": [
-        [
-          "PHP",
-          ""
-        ],
-        [
-          "Python",
-          ""
-        ],
-        [
-          "Perl",
-          ""
-        ],
-        [
-          "Java",
-          ""
-        ]
+        ["PHP",    ""],
+        ["Python", ""],
+        ["Perl",   ""],
+        ["Java",   ""]
       ],
-      "answer": [
-        "Perl"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Ce langage s'inspire des structures de contrôle et d'impression du langage C, mais aussi de langages de scripts sed, awk et shell (sh)."
+      "answer": ["Perl"],
+      "difficulty": "Moyen"
     },
     {
       "id": 42,
       "type": 0,
       "question": "Quelle bibliothèque JavaScript libre est développée par Meta depuis 2013 ?",
       "propositions": [
-        [
-          "Scala",
-          ""
-        ],
-        [
-          "Go",
-          ""
-        ],
-        [
-          "React",
-          ""
-        ],
-        [
-          "Kotlin",
-          ""
-        ]
+        ["Scala",  ""],
+        ["Go",     ""],
+        ["React",  ""],
+        ["Kotlin", ""]
       ],
-      "answer": [
-        "React"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "La bibliothèque se démarque de ses concurrents par sa flexibilité et ses performances, en travaillant avec un DOM virtuel."
+      "answer": ["React"],
+      "difficulty": "Moyen"
     },
     {
       "id": 43,
       "type": 0,
       "question": "Quel langage développé par Microsoft a pris fin en 1998 avec la version 6 ?",
       "propositions": [
-        [
-          "Fortran",
-          ""
-        ],
-        [
-          "Visual Basic",
-          ""
-        ],
-        [
-          "Assembleur",
-          ""
-        ],
-        [
-          "Ruby",
-          ""
-        ]
+        ["Fortran",      ""],
+        ["Visual Basic", ""],
+        ["Assembleur",   ""],
+        ["Ruby",         ""]
       ],
-      "answer": [
-        "Visual Basic"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Dans une étude conduite en 2005, 62 % des développeurs interrogés auraient déclaré utiliser l'une ou l'autre forme de Visual Basic."
+      "answer": ["Visual Basic"],
+      "difficulty": "Moyen"
     },
     {
       "id": 44,
       "type": 0,
       "question": "Quel est le langage de plus bas niveau qui représente le langage machine ?",
       "propositions": [
-        [
-          "Scala",
-          ""
-        ],
-        [
-          "C",
-          ""
-        ],
-        [
-          "Assembleur",
-          ""
-        ],
-        [
-          "C++",
-          ""
-        ]
+        ["Scala",      ""],
+        ["C",          ""],
+        ["Assembleur", ""],
+        ["C++",        ""]
       ],
-      "answer": [
-        "Assembleur"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Les combinaisons de bits du langage machine sont représentées par des symboles dits mnémoniques, c'est-à-dire faciles à retenir."
+      "answer": ["Assembleur"],
+      "difficulty": "Moyen"
     },
     {
       "id": 45,
       "type": 0,
       "question": "Quel nom de langage de programmation a été choisi en l'honneur d'Ada Lovelace ?",
       "propositions": [
-        [
-          "Alo",
-          ""
-        ],
-        [
-          "Lovelace",
-          ""
-        ],
-        [
-          "Ada",
-          ""
-        ],
-        [
-          "Algol",
-          ""
-        ]
+        ["Alo",      ""],
+        ["Lovelace", ""],
+        ["Ada",      ""],
+        ["Algol",    ""]
       ],
-      "answer": [
-        "Ada"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Augusta Ada King, comtesse de Lovelace, née à Londres le 10 décembre 1815, est une pionnière de la science informatique."
+      "answer": ["Ada"],
+      "difficulty": "Moyen"
     },
     {
       "id": 46,
       "type": 0,
       "question": "Quel atelier de génie logiciel pour applications Windows utilise le Wlangage ?",
       "propositions": [
-        [
-          "WebDev",
-          ""
-        ],
-        [
-          "Delphi",
-          ""
-        ],
-        [
-          "Go",
-          ""
-        ],
-        [
-          "WinDev",
-          ""
-        ]
+        ["WebDev", ""],
+        ["Delphi", ""],
+        ["Go",     ""],
+        ["WinDev", ""]
       ],
-      "answer": [
-        "WinDev"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "WebDev et WinDev Mobile utilisent le WLangage et les mêmes concepts pour la génération de sites Web et d'applications mobiles."
+      "answer": ["WinDev"],
+      "difficulty": "Moyen"
     },
     {
       "id": 47,
       "type": 0,
       "question": "Quelle société a annoncé en 2015 le passage en open source du langage Swift ?",
       "propositions": [
-        [
-          "Facebook",
-          ""
-        ],
-        [
-          "Twitter",
-          ""
-        ],
-        [
-          "Google",
-          ""
-        ],
-        [
-          "Apple",
-          ""
-        ]
+        ["Facebook", ""],
+        ["Twitter",  ""],
+        ["Google",   ""],
+        ["Apple",    ""]
       ],
-      "answer": [
-        "Apple"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Jugé plus simple et plus concis que l'Objective-C, Swift a été bien accueilli par les développeurs habitués aux technologies d'Apple."
+      "answer": ["Apple"],
+      "difficulty": "Moyen"
     },
     {
       "id": 48,
       "type": 0,
       "question": "Quel logiciel de gestion de versions décentralisé a été créé par Linus Torvalds ?",
       "propositions": [
-        [
-          "Monotone",
-          ""
-        ],
-        [
-          "Mercurial",
-          ""
-        ],
-        [
-          "Git",
-          ""
-        ],
-        [
-          "Bazaar",
-          ""
-        ]
+        ["Monotone",  ""],
+        ["Mercurial", ""],
+        ["Git",       ""],
+        ["Bazaar",    ""]
       ],
-      "answer": [
-        "Git"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Depuis les années 2010, il s'agit du logiciel de gestion de versions le plus populaire dans le développement logiciel et web."
+      "answer": ["Git"],
+      "difficulty": "Moyen"
     },
     {
       "id": 49,
       "type": 0,
       "question": "Quel langage fut utilisé dès les premières générations d'IBM AS/400 ?",
       "propositions": [
-        [
-          "RPG",
-          ""
-        ],
-        [
-          "Ruby",
-          ""
-        ],
-        [
-          "Java",
-          ""
-        ],
-        [
-          "Python",
-          ""
-        ]
+        ["RPG",    ""],
+        ["Ruby",   ""],
+        ["Java",   ""],
+        ["Python", ""]
       ],
-      "answer": [
-        "RPG"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Destiné aux entreprises et laboratoires, le langage RPG est né en 1959 et se pratiquait sur les systèmes 3 ou sur IBM/360 (1965)."
+      "answer": ["RPG"],
+      "difficulty": "Moyen"
     },
     {
       "id": 50,
       "type": 0,
       "question": "Quelle entité informatique permet d'encapsuler une portion de code ?",
       "propositions": [
-        [
-          "Variable",
-          ""
-        ],
-        [
-          "Routine",
-          ""
-        ],
-        [
-          "Constante",
-          ""
-        ],
-        [
-          "Extension",
-          ""
-        ]
+        ["Variable",  ""],
+        ["Routine",   ""],
+        ["Constante", ""],
+        ["Extension", ""]
       ],
-      "answer": [
-        "Routine"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Les routines permettent de structurer la programmation d'un problème en décomposant le programme en portions de code."
+      "answer": ["Routine"],
+      "difficulty": "Moyen"
     },
     {
       "id": 51,
       "type": 0,
       "question": "Quel langage de programmation est utilisé dans les applications Microsoft Office ?",
       "propositions": [
-        [
-          "JavaScript",
-          ""
-        ],
-        [
-          "Visual Basic",
-          ""
-        ],
-        [
-          "Lisp",
-          ""
-        ],
-        [
-          "Go",
-          ""
-        ]
+        ["JavaScript",   ""],
+        ["Visual Basic", ""],
+        ["Lisp",         ""],
+        ["Go",           ""]
       ],
-      "answer": [
-        "Visual Basic"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Dans une étude conduite en 2005, 62 % des développeurs interrogés auraient déclaré utiliser l'une ou l'autre forme de Visual Basic."
+      "answer": ["Visual Basic"],
+      "difficulty": "Difficile"
     },
     {
       "id": 52,
       "type": 0,
       "question": "Quel nouveau logiciel peut être créé à partir du code source d'un logiciel existant ?",
       "propositions": [
-        [
-          "Scrub",
-          ""
-        ],
-        [
-          "Prank",
-          ""
-        ],
-        [
-          "Grab",
-          ""
-        ],
-        [
-          "Fork",
-          ""
-        ]
+        ["Scrub", ""],
+        ["Prank", ""],
+        ["Grab",  ""],
+        ["Fork",  ""]
       ],
-      "answer": [
-        "Fork"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Les forks sont courants dans les logiciels libres, dont les licences permettent l'utilisation, la modification et la redistribution du code."
+      "answer": ["Fork"],
+      "difficulty": "Difficile"
     },
     {
       "id": 53,
       "type": 0,
       "question": "Créé en 1957, quel fut le premier langage de programmation de haut niveau ?",
       "propositions": [
-        [
-          "Algol",
-          ""
-        ],
-        [
-          "Lisp",
-          ""
-        ],
-        [
-          "Fortran",
-          ""
-        ],
-        [
-          "COBOL",
-          ""
-        ]
+        ["Algol",   ""],
+        ["Lisp",    ""],
+        ["Fortran", ""],
+        ["COBOL",   ""]
       ],
-      "answer": [
-        "Fortran"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Quickstart Fortran permet d'installer facilement Fortran sous Microsoft Windows, sans nécessiter les droits d'administration."
+      "answer": ["Fortran"],
+      "difficulty": "Difficile"
     },
     {
       "id": 54,
       "type": 0,
       "question": "Quel est le langage de programmation possédant le plus large écosystème ?",
       "propositions": [
-        [
-          "Python",
-          ""
-        ],
-        [
-          "JavaScript",
-          ""
-        ],
-        [
-          "Java",
-          ""
-        ],
-        [
-          "RPG",
-          ""
-        ]
+        ["Python",     ""],
+        ["JavaScript", ""],
+        ["Java",       ""],
+        ["RPG",        ""]
       ],
-      "answer": [
-        "JavaScript"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Le langage a été créé en dix jours en mai 1995 pour le compte de la Netscape Communications Corporation par Brendan Eich."
+      "answer": ["JavaScript"],
+      "difficulty": "Difficile"
     },
     {
       "id": 55,
       "type": 0,
       "question": "Quel langage intègre programmation orientée objet et fonctionnelle ?",
-      "propositions": [
-        [
-          "Perl",
-          ""
-        ],
-        [
-          "Scala",
-          ""
-        ],
-        [
-          "PHP",
-          ""
-        ],
-        [
-          "Go",
-          ""
-        ]
-      ],
-      "answer": [
-        "Scala"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Il concilie ainsi ces deux paradigmes opposés et offre au développeur la possibilité de choisir le paradigme le plus approprié."
+      "propositions": [ ["Perl", ""], ["Scala", ""], ["PHP", ""], ["Go", ""] ],
+      "answer": ["Scala"],
+      "difficulty": "Difficile"
     },
     {
       "id": 56,
       "type": 0,
       "question": "Quel langage, développé par Google, est inspiré de C et de Pascal ?",
       "propositions": [
-        [
-          "Go",
-          ""
-        ],
-        [
-          "Ruby",
-          ""
-        ],
-        [
-          "Scala",
-          ""
-        ],
-        [
-          "Fortran",
-          ""
-        ]
+        ["Go",      ""],
+        ["Ruby",    ""],
+        ["Scala",   ""],
+        ["Fortran", ""]
       ],
-      "answer": [
-        "Go"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "En raison de sa simplicité, il est concevable de l'utiliser aussi bien pour écrire des applications, des scripts ou de grands systèmes."
+      "answer": ["Go"],
+      "difficulty": "Difficile"
     },
     {
       "id": 57,
       "type": 0,
       "question": "Quel anglicisme désigne l'enregistrement effectif d'une transaction ?",
       "propositions": [
-        [
-          "Rollback",
-          ""
-        ],
-        [
-          "Fallin",
-          ""
-        ],
-        [
-          "Commit",
-          ""
-        ],
-        [
-          "Backup",
-          ""
-        ]
+        ["Rollback", ""],
+        ["Fallin",   ""],
+        ["Commit",   ""],
+        ["Backup",   ""]
       ],
-      "answer": [
-        "Commit"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Le terme anglais fait référence à la commande éponyme présente dans la plupart des systèmes de gestion de base de données."
+      "answer": ["Commit"],
+      "difficulty": "Difficile"
     },
     {
       "id": 58,
       "type": 0,
       "question": "Quel langage doit son nom à une île située près de Saint-Pétersbourg ?",
       "propositions": [
-        [
-          "Wolin",
-          ""
-        ],
-        [
-          "Kotlin",
-          ""
-        ],
-        [
-          "Mohni",
-          ""
-        ],
-        [
-          "Uznam",
-          ""
-        ]
+        ["Wolin",  ""],
+        ["Kotlin", ""],
+        ["Mohni",  ""],
+        ["Uznam",  ""]
       ],
-      "answer": [
-        "Kotlin"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Kotlin est devenu officiellement en 2019 le langage de programmation voulu et recommandé par le géant américain Google."
+      "answer": ["Kotlin"],
+      "difficulty": "Difficile"
     },
     {
       "id": 59,
       "type": 0,
       "question": "Quel kit de développement logiciel open-source a été créé par Google ?",
       "propositions": [
-        [
-          "Tinder",
-          ""
-        ],
-        [
-          "Twitter",
-          ""
-        ],
-        [
-          "Flutter",
-          ""
-        ],
-        [
-          "Flubber",
-          ""
-        ]
+        ["Tinder",  ""],
+        ["Twitter", ""],
+        ["Flutter", ""],
+        ["Flubber", ""]
       ],
-      "answer": [
-        "Flutter"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Flutter génère des applications pour Android, iOS, Linux, Mac, Windows, Google Fuchsia et le web à partir d'une base de code."
+      "answer": ["Flutter"],
+      "difficulty": "Difficile"
     },
     {
       "id": 60,
       "type": 0,
       "question": "Quel fut le premier système d'exploitation à utiliser Objective-C ?",
       "propositions": [
-        [
-          "GeoWorks",
-          ""
-        ],
-        [
-          "JavaOS",
-          ""
-        ],
-        [
-          "NeXTSTEP",
-          ""
-        ],
-        [
-          "AmigaOS",
-          ""
-        ]
+        ["GeoWorks", ""],
+        ["JavaOS",   ""],
+        ["NeXTSTEP", ""],
+        ["AmigaOS",  ""]
       ],
-      "answer": [
-        "NeXTSTEP"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Objective-C est beaucoup utilisé sur Macintosh, notamment pour les API Cocoa de Mac OS X et, plus récemment pour les iPhone."
+      "answer": ["NeXTSTEP"],
+      "difficulty": "Difficile"
     },
     {
       "id": 61,
       "type": 0,
       "question": "Sur quel noyau le système d'exploitation mobile Android est-il basé ?",
       "propositions": [
-        [
-          "Accent",
-          ""
-        ],
-        [
-          "Linux",
-          ""
-        ],
-        [
-          "Windows NT",
-          ""
-        ],
-        [
-          "BSD",
-          ""
-        ]
+        ["Accent",     ""],
+        ["Linux",      ""],
+        ["Windows NT", ""],
+        ["BSD",        ""]
       ],
-      "answer": [
-        "Linux"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Le noyau Linux est un logiciel libre développé essentiellement en langage C par des milliers de bénévoles sur Internet."
+      "answer": ["Linux"],
+      "difficulty": "Facile"
     },
     {
       "id": 62,
       "type": 0,
       "question": "Par quelle société le système Android est-il actuellement développé ?",
       "propositions": [
-        [
-          "Google",
-          ""
-        ],
-        [
-          "HP",
-          ""
-        ],
-        [
-          "Apple",
-          ""
-        ],
-        [
-          "Microsoft",
-          ""
-        ]
+        ["Google",    ""],
+        ["HP",        ""],
+        ["Apple",     ""],
+        ["Microsoft", ""]
       ],
-      "answer": [
-        "Google"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Le système d'exploitation Android fut lancé en juin 2007 à la suite du rachat par Google en 2005 de la startup du même nom."
+      "answer": ["Google"],
+      "difficulty": "Facile"
     },
     {
       "id": 63,
       "type": 0,
       "question": "Quel petit robot vert est utilisé par Google pour présenter son système Android ?",
       "propositions": [
-        [
-          "Tux",
-          ""
-        ],
-        [
-          "Archie",
-          ""
-        ],
-        [
-          "Bugdroid",
-          ""
-        ],
-        [
-          "Woody",
-          ""
-        ]
+        ["Tux",      ""],
+        ["Archie",   ""],
+        ["Bugdroid", ""],
+        ["Woody",    ""]
       ],
-      "answer": [
-        "Bugdroid"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Bugdroid, le logo d'Android, serait en fait un personnage d'un jeu des années 1990 sur Atari : « Gauntlet: The Third Encounter »."
+      "answer": ["Bugdroid"],
+      "difficulty": "Facile"
     },
     {
       "id": 64,
       "type": 0,
       "question": "Quelle boutique en ligne permet l'achat d'applications pour Android ?",
       "propositions": [
-        [
-          "Steam",
-          ""
-        ],
-        [
-          "App Store",
-          ""
-        ],
-        [
-          "Impulse",
-          ""
-        ],
-        [
-          "Google Play",
-          ""
-        ]
+        ["Steam",       ""],
+        ["App Store",   ""],
+        ["Impulse",     ""],
+        ["Google Play", ""]
       ],
-      "answer": [
-        "Google Play"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Bien que non inclus dans les sources d'Android, Google Play joue un rôle essentiel pour la popularité d'Android."
+      "answer": ["Google Play"],
+      "difficulty": "Facile"
     },
     {
       "id": 65,
       "type": 0,
       "question": "Comment est nommé le navigateur web intégré par défaut à Android ?",
       "propositions": [
-        [
-          "Surfeur",
-          ""
-        ],
-        [
-          "Web",
-          ""
-        ],
-        [
-          "Internet",
-          ""
-        ],
-        [
-          "Galerie",
-          ""
-        ]
+        ["Surfeur",  ""],
+        ["Web",      ""],
+        ["Internet", ""],
+        ["Galerie",  ""]
       ],
-      "answer": [
-        "Internet"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Android AOSP (code source) comporte de nombreuses applications incorporées : Téléphone, Contacts, E-Mail, Agenda, ..."
+      "answer": ["Internet"],
+      "difficulty": "Facile"
     },
     {
       "id": 66,
       "type": 0,
       "question": "Sur quel type de carte pouvez-vous déplacer des applications Android ?",
       "propositions": [
-        [
-          "MicroSD",
-          ""
-        ],
-        [
-          "Réseau",
-          ""
-        ],
-        [
-          "Graphique",
-          ""
-        ],
-        [
-          "Wi-Fi",
-          ""
-        ]
+        ["MicroSD",   ""],
+        ["Réseau",    ""],
+        ["Graphique", ""],
+        ["Wi-Fi",     ""]
       ],
-      "answer": [
-        "MicroSD"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Cette possibilité repose sur les permissions et paramètres contenus dans le fichier manifeste de l'application qui l'autorise."
+      "answer": ["MicroSD"],
+      "difficulty": "Facile"
     },
     {
       "id": 67,
       "type": 0,
       "question": "Quel téléphone de Google fut le premier à bénéficier d'Android 2.2 (Froyo) ?",
       "propositions": [
-        [
-          "Nexus Galaxy",
-          ""
-        ],
-        [
-          "Nexus S",
-          ""
-        ],
-        [
-          "Nexus One",
-          ""
-        ],
-        [
-          "Nexus Pixel",
-          ""
-        ]
+        ["Nexus Galaxy", ""],
+        ["Nexus S",      ""],
+        ["Nexus One",    ""],
+        ["Nexus Pixel",  ""]
       ],
-      "answer": [
-        "Nexus One"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Ses ventes ne furent pas exceptionnelles avec seulement environ 20 000 exemplaires vendus la semaine de sa sortie."
+      "answer": ["Nexus One"],
+      "difficulty": "Facile"
     },
     {
       "id": 68,
       "type": 0,
       "question": "Quel modèle Samsung est devenu une référence en matière de tablettes Android ?",
       "propositions": [
-        [
-          "GamePad",
-          ""
-        ],
-        [
-          "Galaxy Tab",
-          ""
-        ],
-        [
-          "Padphone",
-          ""
-        ],
-        [
-          "Nook",
-          ""
-        ]
+        ["GamePad",    ""],
+        ["Galaxy Tab", ""],
+        ["Padphone",   ""],
+        ["Nook",       ""]
       ],
-      "answer": [
-        "Galaxy Tab"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "À l'origine livrée sous Android 2.2, deux mois après sa sortie, la Samsung Galaxy Tab fut vendue à plus de 600 000 exemplaires."
+      "answer": ["Galaxy Tab"],
+      "difficulty": "Facile"
     },
     {
       "id": 69,
       "type": 0,
       "question": "Quel nom a été donné à la version 8 du système d'exploitation Android ?",
       "propositions": [
-        [
-          "Marshmallow",
-          ""
-        ],
-        [
-          "Oreo",
-          ""
-        ],
-        [
-          "Nougat",
-          ""
-        ],
-        [
-          "Lollipop",
-          ""
-        ]
+        ["Marshmallow", ""],
+        ["Oreo",        ""],
+        ["Nougat",      ""],
+        ["Lollipop",    ""]
       ],
-      "answer": [
-        "Oreo"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Cette version du système Android est disponible depuis le 21 août 2017 et porte le nom de la marque de biscuits Oreo."
+      "answer": ["Oreo"],
+      "difficulty": "Facile"
     },
     {
       "id": 70,
       "type": 0,
       "question": "Quel pourcentage environ d'applications du Google Play sont gratuites ?",
       "propositions": [
-        [
-          "45 %",
-          ""
-        ],
-        [
-          "55 %",
-          ""
-        ],
-        [
-          "35 %",
-          ""
-        ],
-        [
-          "65 %",
-          ""
-        ]
+        ["45 %", ""],
+        ["55 %", ""],
+        ["35 %", ""],
+        ["65 %", ""]
       ],
-      "answer": [
-        "65 %"
-      ],
-      "difficulty": "Facile",
-      "anecdote": "Google Play permet de télécharger des applications, des livres, des films ou de la musique, payants ou non."
+      "answer": ["65 %"],
+      "difficulty": "Facile"
     },
     {
       "id": 71,
       "type": 0,
       "question": "Avant mars 2012, quel était le précédent nom donné au Google Play Store ?",
       "propositions": [
-        [
-          "Android Market",
-          ""
-        ],
-        [
-          "3DSWare",
-          ""
-        ],
-        [
-          "Galaxy Apps",
-          ""
-        ],
-        [
-          "Zeebo",
-          ""
-        ]
+        ["Android Market", ""],
+        ["3DSWare",        ""],
+        ["Galaxy Apps",    ""],
+        ["Zeebo",          ""]
       ],
-      "answer": [
-        "Android Market"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Début 2013, Google Play était fort de 800 000 applications, ce qui en faisait déjà le plus gros magasin d'applications au monde."
+      "answer": ["Android Market"],
+      "difficulty": "Moyen"
     },
     {
       "id": 72,
       "type": 0,
       "question": "Quel smartphone fut commercialisé dans le monde sous le nom de Motorola Milestone ?",
       "propositions": [
-        [
-          "Droid",
-          ""
-        ],
-        [
-          "Galaxy S",
-          ""
-        ],
-        [
-          "Xperia",
-          ""
-        ],
-        [
-          "Nexus",
-          ""
-        ]
+        ["Droid",    ""],
+        ["Galaxy S", ""],
+        ["Xperia",   ""],
+        ["Nexus",    ""]
       ],
-      "answer": [
-        "Droid"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Premier téléphone muni de la version 2.0 d'Android, l'appareil trouva 250 000 acheteurs une semaine après son lancement."
+      "answer": ["Droid"],
+      "difficulty": "Moyen"
     },
     {
       "id": 73,
       "type": 0,
       "question": "Que faut-il dans son smartphone pour accéder au magasin d'applications Tegra ?",
       "propositions": [
-        [
-          "iOS",
-          ""
-        ],
-        [
-          "Clé SSL",
-          ""
-        ],
-        [
-          "Bitcoins",
-          ""
-        ],
-        [
-          "Puce Tegra",
-          ""
-        ]
+        ["iOS",        ""],
+        ["Clé SSL",    ""],
+        ["Bitcoins",   ""],
+        ["Puce Tegra", ""]
       ],
-      "answer": [
-        "Puce Tegra"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Ce magasin permet notamment de télécharger des applications très haute définition (THD) dédiées aux téléphones sous Tegra."
+      "answer": ["Puce Tegra"],
+      "difficulty": "Moyen"
     },
     {
       "id": 74,
       "type": 0,
       "question": "Quel service d'applications libres a été créé par la Free Software Foundation ?",
       "propositions": [
-        [
-          "F-Droid",
-          ""
-        ],
-        [
-          "Android Market",
-          ""
-        ],
-        [
-          "Appslib",
-          ""
-        ],
-        [
-          "Zeebo",
-          ""
-        ]
+        ["F-Droid",        ""],
+        ["Android Market", ""],
+        ["Appslib",        ""],
+        ["Zeebo",          ""]
       ],
-      "answer": [
-        "F-Droid"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Les applications peuvent être installées via l'application F-Droid, mais peuvent également être chargées depuis le site web."
+      "answer": ["F-Droid"],
+      "difficulty": "Moyen"
     },
     {
       "id": 75,
       "type": 0,
       "question": "En France, quelle société a commercialisé le premier mobile sous Android ?",
       "propositions": [
-        [
-          "Free Mobile",
-          ""
-        ],
-        [
-          "SFR",
-          ""
-        ],
-        [
-          "Orange",
-          ""
-        ],
-        [
-          "Bouygues Telecom",
-          ""
-        ]
+        ["Free Mobile",      ""],
+        ["SFR",              ""],
+        ["Orange",           ""],
+        ["Bouygues Telecom", ""]
       ],
-      "answer": [
-        "Orange"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Après le HTC Dream, le HTC Magic est arrivé début mai 2009 chez SFR, suivi par le Samsung Galaxy (ou i7500) chez Bouygues."
+      "answer": ["Orange"],
+      "difficulty": "Moyen"
     },
     {
       "id": 76,
       "type": 0,
       "question": "Quel smartphone proposé en octobre 2011, fut le premier fonctionnant sous Android 4 ?",
       "propositions": [
-        [
-          "Galaxy Nexus",
-          ""
-        ],
-        [
-          "Xperia Play",
-          ""
-        ],
-        [
-          "Moto E",
-          ""
-        ],
-        [
-          "Xiaomi Mi 4",
-          ""
-        ]
+        ["Galaxy Nexus", ""],
+        ["Xperia Play",  ""],
+        ["Moto E",       ""],
+        ["Xiaomi Mi 4",  ""]
       ],
-      "answer": [
-        "Galaxy Nexus"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Celui-ci intègre le déverrouillage par reconnaissance faciale, les boutons virtuels et une reconnaissance vocale avancée."
+      "answer": ["Galaxy Nexus"],
+      "difficulty": "Moyen"
     },
     {
       "id": 77,
       "type": 0,
       "question": "Quelle version d'Android pouvait-on retrouver sur le Nexus 6 de Google ?",
       "propositions": [
-        [
-          "KitKat",
-          ""
-        ],
-        [
-          "Honeycomb",
-          ""
-        ],
-        [
-          "Jelly Bean",
-          ""
-        ],
-        [
-          "Lollipop",
-          ""
-        ]
+        ["KitKat",     ""],
+        ["Honeycomb",  ""],
+        ["Jelly Bean", ""],
+        ["Lollipop",   ""]
       ],
-      "answer": [
-        "Lollipop"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Les changements les plus importants d'Android 5.0 sont sa disponibilité sur les plateformes Android TV et Android Auto."
+      "answer": ["Lollipop"],
+      "difficulty": "Moyen"
     },
     {
       "id": 78,
       "type": 0,
       "question": "En quelle année fut dévoilée la première télévision sous Android ?",
       "propositions": [
-        [
-          "2016",
-          ""
-        ],
-        [
-          "2014",
-          ""
-        ],
-        [
-          "2010",
-          ""
-        ],
-        [
-          "2012",
-          ""
-        ]
+        ["2016", ""],
+        ["2014", ""],
+        ["2010", ""],
+        ["2012", ""]
       ],
-      "answer": [
-        "2010"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Scandinavia, développée par l'entreprise suédoise People of Lava, possédait un navigateur Web ainsi qu'un client de messagerie."
+      "answer": ["2010"],
+      "difficulty": "Moyen"
     },
     {
       "id": 79,
       "type": 0,
       "question": "Quel smartphone Google, équipé d'Android 4.4, fut le premier à supporter la 4G ?",
       "propositions": [
-        [
-          "Nexus 4",
-          ""
-        ],
-        [
-          "Nexus 6P",
-          ""
-        ],
-        [
-          "Nexus 5X",
-          ""
-        ],
-        [
-          "Nexus 5",
-          ""
-        ]
+        ["Nexus 4",  ""],
+        ["Nexus 6P", ""],
+        ["Nexus 5X", ""],
+        ["Nexus 5",  ""]
       ],
-      "answer": [
-        "Nexus 5"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Succédant au Nexus 4, le Nexus 5 est l'un des deux modèles de la gamme Nexus 2013 de Google, avec la tablette Nexus 7."
+      "answer": ["Nexus 5"],
+      "difficulty": "Moyen"
     },
     {
       "id": 80,
       "type": 0,
       "question": "Comment se nomme la première tablette de Google en partenariat avec Asus ?",
       "propositions": [
-        [
-          "Nexus 7",
-          ""
-        ],
-        [
-          "Nook 7",
-          ""
-        ],
-        [
-          "Galaxy Tab 7",
-          ""
-        ],
-        [
-          "Xperia 7",
-          ""
-        ]
+        ["Nexus 7",      ""],
+        ["Nook 7",       ""],
+        ["Galaxy Tab 7", ""],
+        ["Xperia 7",     ""]
       ],
-      "answer": [
-        "Nexus 7"
-      ],
-      "difficulty": "Moyen",
-      "anecdote": "Elle coûtait, en 2012, 199 euros TTC dans sa version 16 Go et 249 euros toutes taxes comprises pour la version 32 Go."
+      "answer": ["Nexus 7"],
+      "difficulty": "Moyen"
     },
     {
       "id": 81,
       "type": 0,
       "question": "Quel ancien CEO de Danger Inc est aussi le cofondateur du système Android ?",
       "propositions": [
-        [
-          "Chad Hurley",
-          ""
-        ],
-        [
-          "Andy Rubin",
-          ""
-        ],
-        [
-          "Matt Cutts",
-          ""
-        ],
-        [
-          "John Doerr",
-          ""
-        ]
+        ["Chad Hurley", ""],
+        ["Andy Rubin",  ""],
+        ["Matt Cutts",  ""],
+        ["John Doerr",  ""]
       ],
-      "answer": [
-        "Andy Rubin"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "En mai 2017, la société Essential Products créée par Andy Rubin a annoncé la sortie du smartphone Essential PH-1."
+      "answer": ["Andy Rubin"],
+      "difficulty": "Difficile"
     },
     {
       "id": 82,
       "type": 0,
       "question": "Quelle machine virtuelle était incluse jusqu'à la version 4.4 d'Android ?",
       "propositions": [
-        [
-          "Beam",
-          ""
-        ],
-        [
-          "Dalvik",
-          ""
-        ],
-        [
-          "Parrot",
-          ""
-        ],
-        [
-          "Pugs",
-          ""
-        ]
+        ["Beam",   ""],
+        ["Dalvik", ""],
+        ["Parrot", ""],
+        ["Pugs",   ""]
       ],
-      "answer": [
-        "Dalvik"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "C'est une machine virtuelle conçue dès le départ pour les appareils mobiles et leurs ressources réduites."
+      "answer": ["Dalvik"],
+      "difficulty": "Difficile"
     },
     {
       "id": 83,
       "type": 0,
       "question": "Quel service indépendant de chez Arkos permet de télécharger des apps Android ?",
       "propositions": [
-        [
-          "F-Droid",
-          ""
-        ],
-        [
-          "App Store",
-          ""
-        ],
-        [
-          "Galaxy Apps",
-          ""
-        ],
-        [
-          "Appslib",
-          ""
-        ]
+        ["F-Droid",     ""],
+        ["App Store",   ""],
+        ["Galaxy Apps", ""],
+        ["Appslib",     ""]
       ],
-      "answer": [
-        "Appslib"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Appslib permet ainsi à Archos de ne pas remplir les critères de Google autorisant l'intégration de Google Play à un appareil."
+      "answer": ["Appslib"],
+      "difficulty": "Difficile"
     },
     {
       "id": 84,
       "type": 0,
       "question": "Avec quel système la société HP a-t-elle concurrencé Android jusqu'en août 2011 ?",
       "propositions": [
-        [
-          "webOS",
-          ""
-        ],
-        [
-          "Symbian",
-          ""
-        ],
-        [
-          "Firefox OS",
-          ""
-        ],
-        [
-          "iOS",
-          ""
-        ]
+        ["webOS",      ""],
+        ["Symbian",    ""],
+        ["Firefox OS", ""],
+        ["iOS",        ""]
       ],
-      "answer": [
-        "webOS"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Depuis 2013, suite à une position quasi dominante de Google, HP utilise aussi Android sur sa gamme de tablettes Slate."
+      "answer": ["webOS"],
+      "difficulty": "Difficile"
     },
     {
       "id": 85,
       "type": 0,
       "question": "Quel droit faut-il avoir pour installer une version alternative d'Android ?",
       "propositions": [
-        [
-          "Flac",
-          ""
-        ],
-        [
-          "Root",
-          ""
-        ],
-        [
-          "Next",
-          ""
-        ],
-        [
-          "Join",
-          ""
-        ]
+        ["Flac", ""],
+        ["Root", ""],
+        ["Next", ""],
+        ["Join", ""]
       ],
-      "answer": [
-        "Root"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Entraînant généralement un risque de perte de garantie, l'Union européenne a voté des directives protectrices à ce sujet."
+      "answer": ["Root"],
+      "difficulty": "Difficile"
     },
     {
       "id": 86,
       "type": 0,
       "question": "Quelle ROM Android était précédemment connue sous le nom de CyanogenMod ?",
       "propositions": [
-        [
-          "LineageOS",
-          ""
-        ],
-        [
-          "Oreo",
-          ""
-        ],
-        [
-          "Wear OS",
-          ""
-        ],
-        [
-          "Baidu",
-          ""
-        ]
+        ["LineageOS", ""],
+        ["Oreo",      ""],
+        ["Wear OS",   ""],
+        ["Baidu",     ""]
       ],
-      "answer": [
-        "LineageOS"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Compatible avec de nombreux modèles du marché, LineageOS offre une alternative épurée de certaines fonctionnalités malveillantes."
+      "answer": ["LineageOS"],
+      "difficulty": "Difficile"
     },
     {
       "id": 87,
       "type": 0,
       "question": "Quel environnement d'exécution a remplacé la machine virtuelle Dalvik ?",
-      "propositions": [
-        [
-          "APK",
-          ""
-        ],
-        [
-          "ALE",
-          ""
-        ],
-        [
-          "AVO",
-          ""
-        ],
-        [
-          "ART",
-          ""
-        ]
-      ],
-      "answer": [
-        "ART"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Avec ART, contrairement à la machine virtuelle java, les fichiers .apk ne sont plus lancés directement but décompressés."
+      "propositions": [ ["APK", ""], ["ALE", ""], ["AVO", ""], ["ART", ""] ],
+      "answer": ["ART"],
+      "difficulty": "Difficile"
     },
     {
       "id": 88,
       "type": 0,
       "question": "Quel fut le tout premier téléphone commercialisé sous Android ?",
       "propositions": [
-        [
-          "Sony Arc",
-          ""
-        ],
-        [
-          "HTC G1/Dream",
-          ""
-        ],
-        [
-          "LG G3",
-          ""
-        ],
-        [
-          "Xiaomi Mi",
-          ""
-        ]
+        ["Sony Arc",     ""],
+        ["HTC G1/Dream", ""],
+        ["LG G3",        ""],
+        ["Xiaomi Mi",    ""]
       ],
-      "answer": [
-        "HTC G1/Dream"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Produit par la firme Taïwanaise HTC, le HTC G1 fut lancé aux États-Unis sur le réseau T-Mobile le 22 octobre 2008."
+      "answer": ["HTC G1/Dream"],
+      "difficulty": "Difficile"
     },
     {
       "id": 89,
       "type": 0,
       "question": "Quelle ROM Android, orientée 100 % libre, ne contient aucun paquet propriétaire ?",
       "propositions": [
-        [
-          "OmniROM",
-          ""
-        ],
-        [
-          "Replicant",
-          ""
-        ],
-        [
-          "Timescape",
-          ""
-        ],
-        [
-          "Iconia",
-          ""
-        ]
+        ["OmniROM",   ""],
+        ["Replicant", ""],
+        ["Timescape", ""],
+        ["Iconia",    ""]
       ],
-      "answer": [
-        "Replicant"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Soutenu par la Free Software Foundation, le nom Replicant est tiré des androïdes du même nom dans le film « Blade Runner »."
+      "answer": ["Replicant"],
+      "difficulty": "Difficile"
     },
     {
       "id": 90,
       "type": 0,
       "question": "Quelle console de jeu portable fabriquée par Nvidia tourne sous Android ?",
       "propositions": [
-        [
-          "Pandora",
-          ""
-        ],
-        [
-          "SupaBoy",
-          ""
-        ],
-        [
-          "Nvidia Shield",
-          ""
-        ],
-        [
-          "Tapwave",
-          ""
-        ]
+        ["Pandora",       ""],
+        ["SupaBoy",       ""],
+        ["Nvidia Shield", ""],
+        ["Tapwave",       ""]
       ],
-      "answer": [
-        "Nvidia Shield"
-      ],
-      "difficulty": "Difficile",
-      "anecdote": "Outre des caractéristiques de premier ordre, un de ses principaux atouts consiste en sa capacité à diffuser les jeux d'un PC."
+      "answer": ["Nvidia Shield"],
+      "difficulty": "Difficile"
     }
   ]
 }

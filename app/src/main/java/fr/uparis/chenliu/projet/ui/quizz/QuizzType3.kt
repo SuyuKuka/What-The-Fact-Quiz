@@ -113,6 +113,11 @@ fun Quizztype3(
 
     // EN BAS
     Box(
+        contentAlignment = if ( currentImage.intValue < buildAnswer.size) {
+            Alignment.BottomCenter
+        } else {
+            Alignment.Center
+        },
         modifier = Modifier
             .padding(8.dp).width(150.dp).height(200.dp)
             .background(Color.Black),
@@ -120,6 +125,7 @@ fun Quizztype3(
     ) {
         if (currentImage.intValue < buildAnswer.size) {
             DragImage(answer = ans[0], url = ans[1])
+            DisplayText(list = font, text = ans[0], fontSize = 48.sp, color = Color.Red)
         } else {
             DisplayText(
                 list = font,
