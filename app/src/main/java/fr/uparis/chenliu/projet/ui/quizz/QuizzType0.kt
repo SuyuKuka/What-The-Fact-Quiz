@@ -33,7 +33,8 @@ fun Quizztype0 (
             Button(
                 onClick = { model.updateGame(
                     answerList = listOf(ans[0]),
-                    verify = data.answers[currentQuestion.intValue].answer
+                    verify = data.answers[currentQuestion.intValue].answer,
+                    type = 0
                 )},
                 modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
                 shape = RectangleShape

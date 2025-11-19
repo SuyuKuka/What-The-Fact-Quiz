@@ -1,6 +1,8 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
@@ -16,10 +18,11 @@ import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlin.collections.mutableListOf
-import kotlin.math.abs
 
 class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
@@ -41,12 +44,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         val nbQuestion: MutableIntState,
         val gameEnded: MutableState<Boolean>,
         val time: MutableDoubleState,
-        val score: MutableDoubleState
+        val score: MutableIntState
     )
 
     private val db = AppDatabase.getInstance(application)
     private var user = mutableStateOf<UsersEntity?>(null)
     private var settings = mutableStateOf<SettingsEntity?>(null)
+    private var chronoJob: Job? = null
 
     // Users
     val energy = mutableIntStateOf(0)
@@ -63,7 +67,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     var imageAnswer = mutableStateListOf("", "", "", "")
     val currentQuestion = mutableIntStateOf(0)
     val currentImage = mutableIntStateOf(0)
-    var isRunning = mutableStateOf(true)
 
     // Others
     val loading = mutableStateOf(true)
@@ -85,7 +88,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         nbQuestion = mutableIntStateOf(10),
         gameEnded = mutableStateOf(false),
         time = mutableDoubleStateOf(0.0),
-        score = mutableDoubleStateOf(0.0)
+        score = mutableIntStateOf(0)
     )
 
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
@@ -238,12 +241,46 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         return randomPropositions.shuffled()
     }
 
-    // todo: améliorer
-    fun calcScore(text: String, aim: String): Double {
-        if (abs(aim.toInt() - text.toInt()) <= 1) {
-            return 0.5
+    fun calcScore(gameData: GameData, answerList: List<String>, verify: List<String>, type: Int) {
+        val score = mutableIntStateOf(0)
+        if (type == 0 || type == 3) {
+            if (answerList.toList().toString() == verify.toList().toString()){
+                score.intValue = score.intValue + 1000
+            }
+        } else if (type == 1) {
+            score.intValue = score.intValue + approxScore(answerList.toList()[0], verify.toList()[0])
+        } else if (type == 2 || type == 4) {
+            // c'est plus long, et plus compliqué d'avoir la réponse exacte, donc les type 2, 4 valent 4000 au total
+            for (i in 0..verify.size - 1) {
+                if (answerList.toList()[i] == verify.toList()[i]) {
+                    score.intValue = score.intValue + 1000
+                }
+            }
         }
-        return 0.0
+        gameData.score.intValue +=  score.intValue
+    }
+
+    fun approxScore(answer: String, guess: String): Int {
+
+        // si answer et guess sont des nombre
+        if (answer.toIntOrNull() != null  && guess.toIntOrNull() != null) {
+            val a = answer.toDouble()
+            val g = guess.toDouble()
+            val minVal = minOf(a, g)
+            val maxVal = maxOf(a, g)
+            val ratio = if (maxVal == 0.0) 1.0 else minVal / maxVal
+            return (ratio * 1000).toInt()
+        } else {
+            val size = minOf(answer.length, guess.length)
+            var correct = 0
+            for (i in 0..size-1) {
+                if (answer[i] == guess[i]) correct++
+            }
+            // nb de lettre correcte sur le nb de lettre de la réponse
+            val percent = (correct.toDouble() / maxOf(answer.length, guess.length)) * 100
+            val score = (percent / 100) * 1000
+            return score.toInt()
+        }
     }
 
     fun swapAnswers(i: Int, j: Int) {
@@ -251,13 +288,16 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         imageAnswer[i] = imageAnswer[j].also { imageAnswer[j] = imageAnswer[i] }
     }
 
-    fun updateGame(answerList: List<String>, verify: List<String>) {
+    fun updateGame(answerList: List<String>, verify: List<String>, type: Int) {
         gameData.answerHistory.add(answerList.toList().toString())
         gameData.questionHistory.add(data.question[currentQuestion.intValue]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
-        if (answerList.toList().toString() == verify.toList().toString()) { ++gameData.score.doubleValue }
+        calcScore(gameData = gameData, answerList = answerList, verify = verify, type = type)
         gameData.nbQuestion.intValue--      // reduire le nb de question
-        gameData.gameEnded.value = gameData.nbQuestion.intValue <= 0 // regarder si la partie est fini
+        if (gameData.nbQuestion.intValue <= 0) { // regarder si la partie est fini
+            gameData.gameEnded.value = true
+            stopChronometer()
+        }
         if (currentQuestion.intValue == 9) { currentQuestion.intValue = 0 } else { currentQuestion.intValue++ }
         resetDragDrop()
         currentImage.intValue = 0
@@ -266,7 +306,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     fun resetStats(gameData: GameData) {
         removeEnergy()
         gameData.nbQuestion.intValue = 10
-        gameData.score.doubleValue = 0.0
+        gameData.score.intValue = 0
         gameData.answerHistory.clear()
         gameData.questionHistory.clear()
         gameData.goodAnswer.clear()
@@ -375,20 +415,16 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun insertLeaderboard() {
         viewModelScope.launch {
-            println(gameData.score.doubleValue)
-            db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.doubleValue, time = gameData.time.doubleValue, subject = subject.value))
+            println(gameData.score.intValue)
+            db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.intValue, time = gameData.time.doubleValue, subject = subject.value))
         }
     }
 
     fun chronometer() {
-        viewModelScope.launch {
+        chronoJob?.cancel()
+        chronoJob = viewModelScope.launch {
             val start = System.currentTimeMillis()
-            delay(1000L)
-            while (isRunning.value) {
-                if (gameData.gameEnded.value) {
-                    isRunning.value = false
-                    break
-                }
+            while (isActive && !gameData.gameEnded.value) {
                 val now = System.currentTimeMillis()
                 val diff = now - start
                 gameData.time.doubleValue = diff / 1000.0
@@ -396,4 +432,11 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             }
         }
     }
+
+    // pour eviter plusieur coroutine
+    fun stopChronometer() {
+        chronoJob?.cancel()
+        chronoJob = null
+    }
+
 }

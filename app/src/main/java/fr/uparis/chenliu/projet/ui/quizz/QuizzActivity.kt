@@ -36,6 +36,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
+import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.ui.menu.DisplayText
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
@@ -93,7 +94,7 @@ fun DragImage(answer: String, url: String) {
             .dragAndDropSource { _ ->
             DragAndDropTransferData(ClipData.newPlainText(answer, url))
         },
-        loading = placeholder { Color.Red }
+        loading = placeholder { R.drawable.placeholder }
     )
 }
 
