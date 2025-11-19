@@ -1,10 +1,15 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
+import android.content.Context
+import android.graphics.drawable.Drawable
+import androidx.activity.compose.LocalActivity
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.platform.LocalContext
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import fr.uparis.chenliu.projet.R
@@ -47,17 +52,31 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     // Others
     val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
     val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
-    val subjectList = listOf("Science", "Gastronomie", "Géographie", "Nature", "Dessin anime", "Informatique")
+    var subjectList: MutableList<String> =  mutableListOf<String>()
     val difficultyList = listOf("Facile", "Moyen", "Difficile")
     val saved = mutableStateOf(true)
     val maxEnergy = mutableIntStateOf(20)
     val changed = mutableStateOf(false)
+
+    init {
+
+    }
+
+    fun getSubject(): MutableList<String> {
+
+        viewModelScope.launch {
+            subjectList = db.SubjectDao().getAllSubjectNames() as MutableList<String>
+        }
+        return subjectList
+    }
 
     fun init(username: String) {
         this.username.value = username
         viewModelScope.launch {
             getUsers()
             settings.value = db.settingsDao().getSetting()
+
+
 
             music.floatValue = settings.value!!.music
             sound.floatValue = settings.value!!.sound
@@ -266,15 +285,21 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun subjectImage(subject: String): Int {
-        when(subject) {
-            "Science" -> return R.drawable.science
-            "Gastronomie" -> return R.drawable.gastronomie
-            "Géographie" -> return R.drawable.geographie
-            "Nature" -> return R.drawable.nature
-            "Dessin anime" -> return R.drawable.dessinanime
-            "Informatique" -> return R.drawable.informatique
+    fun getDrawableId(context: Context, subj: String): Int {
+
+        var imageName: String? = ""
+        viewModelScope.launch {
+            imageName = db.SubjectDao().getImagePathByName(subj)
+            println(imageName)
+
+            println(subj)
+            delay(1000)
         }
-        return 0
+
+
+
+        return context.resources.getIdentifier(imageName, "drawable", context.packageName)
+            .takeIf { it != 0 } ?: R.drawable.nature
     }
+
 }

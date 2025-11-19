@@ -1,7 +1,6 @@
 {
   "quizz": [
     {
-      "id": 1,
       "type": 0,
       "question": "Quelle couleur caractérise visuellement la planète Mars ?",
       "propositions": [
@@ -13,10 +12,10 @@
         ["Grise",   ""]
       ],
       "answer": ["Rouge"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 2,
       "type": 0,
       "question": "Quel film de Ridley Scott met en scène Matt Damon sur la planète Mars ?",
       "propositions": [
@@ -28,10 +27,10 @@
         ["Alien",         ""]
       ],
       "answer": ["Seul sur Mars"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 3,
       "type": 0,
       "question": "Quelle est la position de Mars par ordre de distance croissante au Soleil ?",
       "propositions": [
@@ -43,10 +42,10 @@
         ["Septième",  ""]
       ],
       "answer": ["Quatrième"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 4,
       "type": 0,
       "question": "Outre Phobos, quel est l'autre petit satellite naturel de Mars ?",
       "propositions": [
@@ -58,10 +57,10 @@
         ["Ganymède", ""]
       ],
       "answer": ["Déimos"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 5,
       "type": 0,
       "question": "Quel film est une parodie de « La Guerre des mondes » de H. G. Wells ?",
       "propositions": [
@@ -73,10 +72,10 @@
         ["Men in Black",       ""]
       ],
       "answer": ["Mars Attacks!"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 6,
       "type": 0,
       "question": "De quoi est constamment chargée l'atmosphère martienne ?",
       "propositions": [
@@ -88,10 +87,10 @@
         ["Méthane",        ""]
       ],
       "answer": ["Poussière"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 7,
       "type": 0,
       "question": "Selon John Gray, si les hommes viennent de Mars, d'où viennent les femmes ?",
       "propositions": [
@@ -103,10 +102,10 @@
         ["De la Lune", ""]
       ],
       "answer": ["De Vénus"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 8,
       "type": 0,
       "question": "Dans quel film exploite-t-on Mars pour le turbinium enfoui dans son sous-sol ?",
       "propositions": [
@@ -118,10 +117,10 @@
         ["Red Planet",            ""]
       ],
       "answer": ["Total Recall"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 9,
       "type": 0,
       "question": "Quelle est la saison la plus longue de l'hémisphère nord de Mars ?",
       "propositions": [
@@ -133,10 +132,10 @@
         ["Période chaude", ""]
       ],
       "answer": ["Printemps"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 10,
       "type": 0,
       "question": "Quel film autour de Mars a réuni Carrie-Anne Moss et Val Kilmer ?",
       "propositions": [
@@ -148,10 +147,10 @@
         ["Ghosts of Mars",  ""]
       ],
       "answer": ["Planète rouge"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 11,
       "type": 0,
       "question": "Quelle astromobile a été envoyée sur Mars par la NASA en 2003 ?",
       "propositions": [
@@ -163,10 +162,10 @@
         ["Perseverance", ""]
       ],
       "answer": ["Spirit"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 12,
       "type": 0,
       "question": "Combien de temps environ Mars met-elle pour faire le tour du Soleil ?",
       "propositions": [
@@ -178,10 +177,10 @@
         ["Un an et demi", ""]
       ],
       "answer": ["Deux ans"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 13,
       "type": 0,
       "question": "Quel film est une libre adaptation du roman « Une princesse de Mars » ?",
       "propositions": [
@@ -193,10 +192,10 @@
         ["Outland",         ""]
       ],
       "answer": ["John Carter"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 14,
       "type": 0,
       "question": "Quelle sonde fut la première à survoler Mars en 1965 ?",
       "propositions": [
@@ -208,10 +207,10 @@
         ["Mars Reconnaissance Orbiter", ""]
       ],
       "answer": ["Mariner 4"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 15,
       "type": 0,
       "question": "Quel film de science-fiction de Brian de Palma fait référence au visage de Mars ?",
       "propositions": [
@@ -223,10 +222,10 @@
         ["Contact",         ""]
       ],
       "answer": ["Mission to Mars"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 16,
       "type": 0,
       "question": "Quelle est la température moyenne relevée à la surface de Mars ?",
       "propositions": [
@@ -238,10 +237,10 @@
         ["-15 °C",  ""]
       ],
       "answer": ["-63 °C"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 17,
       "type": 0,
       "question": "Quel orbiteur a permis de cartographier la presque totalité de la surface martienne ?",
       "propositions": [
@@ -253,10 +252,10 @@
         ["Phobos 2",             ""]
       ],
       "answer": ["Mariner 9"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 18,
       "type": 0,
       "question": "Quelle marque a intégré dans son logo le symbole astronomique de Mars ?",
       "propositions": [
@@ -268,10 +267,10 @@
         ["Mercedes", ""]
       ],
       "answer": ["Volvo"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 19,
       "type": 0,
       "question": "Dans quel jeu vidéo sorti en 1993 l'action se passe-t-elle exclusivement sur Mars ?",
       "propositions": [
@@ -283,10 +282,10 @@
         ["Mass Effect", ""]
       ],
       "answer": ["Doom"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 20,
       "type": 0,
       "question": "Quelle astromobile a atterri sur Mars trois semaines après son jumeau Spirit ?",
       "propositions": [
@@ -298,10 +297,10 @@
         ["Sojourner",   ""]
       ],
       "answer": ["Opportunity"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 21,
       "type": 0,
       "question": "Quelle est le plus emblématique des volcans boucliers martiens ?",
       "propositions": [
@@ -313,10 +312,10 @@
         ["Pavonis Mons",  ""]
       ],
       "answer": ["Olympus Mons"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 22,
       "type": 0,
       "question": "Quelle sonde a découvert à l'été 2008 de la glace d'eau à une faible profondeur ?",
       "propositions": [
@@ -328,10 +327,10 @@
         ["Viking 1",   ""]
       ],
       "answer": ["Phoenix"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 23,
       "type": 0,
       "question": "En quelle année la planète Mars sera-t-elle la plus proche de la Terre ?",
       "propositions": [
@@ -343,10 +342,10 @@
         ["2250", ""]
       ],
       "answer": ["2050"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 24,
       "type": 0,
       "question": "Quel astronome amateur américain a fait surgir le débat sur les canaux de Mars ?",
       "propositions": [
@@ -358,10 +357,10 @@
         ["Christiaan Huygens",    ""]
       ],
       "answer": ["Percival Lowell"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 25,
       "type": 0,
       "question": "Au-dessus de quel bassin naissent les tempêtes de poussière sur Mars ?",
       "propositions": [
@@ -373,10 +372,10 @@
         ["Tharsis Montes",   ""]
       ],
       "answer": ["Hellas Planitia"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 26,
       "type": 0,
       "question": "Dans la géologie martienne, quel terme correspond aux terrains les plus anciens ?",
       "propositions": [
@@ -388,10 +387,10 @@
         ["Cronien",    ""]
       ],
       "answer": ["Noachien"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 27,
       "type": 0,
       "question": "Quel nom a été donné au plus vaste volcan bouclier de la planète Mars ?",
       "propositions": [
@@ -403,10 +402,10 @@
         ["Elysium Mons",  ""]
       ],
       "answer": ["Alba Mons"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 28,
       "type": 0,
       "question": "Qui a découvert que l'orbite de Mars était elliptique et non circulaire ?",
       "propositions": [
@@ -418,10 +417,10 @@
         ["Galilée",          ""]
       ],
       "answer": ["Johannes Kepler"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 29,
       "type": 0,
       "question": "Qui a reçu le prix Nebula du meilleur roman en 1994 pour « L'Envol de Mars » ?",
       "propositions": [
@@ -433,10 +432,10 @@
         ["Philip K. Dick",       ""]
       ],
       "answer": ["Greg Bear"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 30,
       "type": 0,
       "question": "Quelle série de bande dessinée française place Mars en voie de terraformation ?",
       "propositions": [
@@ -448,10 +447,10 @@
         ["Aquablue",     ""]
       ],
       "answer": ["Aménophis IV"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 31,
       "type": 0,
       "question": "Quelle machine Alan Turing a-t-il cryptanalysé durant la Seconde Guerre mondiale ?",
       "propositions": [
@@ -463,10 +462,10 @@
         ["Bombe",     ""]
       ],
       "answer": ["Enigma"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 32,
       "type": 0,
       "question": "Quelle expérience de pensée Alan Turing a-t-il présenté en 1936 ?",
       "propositions": [
@@ -478,10 +477,10 @@
         ["Paradoxe de l'arrêt",       ""]
       ],
       "answer": ["Machine de Turing"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 33,
       "type": 0,
       "question": "Qu'a-t-on retrouvé sur la table de nuit de Turing le jour de sa mort ?",
       "propositions": [
@@ -493,10 +492,10 @@
         ["Photo",          ""]
       ],
       "answer": ["Pomme"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 34,
       "type": 0,
       "question": "Quel programme Turing a-t-il écrit en mai 1952 pour réaliser son célèbre test ?",
       "propositions": [
@@ -508,10 +507,10 @@
         ["Puissance 4",  ""]
       ],
       "answer": ["Jeu d'échecs"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 35,
       "type": 0,
       "question": "Des travaux de quel physicien Alan Turing s'est-il inspiré en 1928 ?",
       "propositions": [
@@ -523,10 +522,10 @@
         ["Max Planck",        ""]
       ],
       "answer": ["Albert Einstein"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 36,
       "type": 0,
       "question": "Dans quel système informatique l'algorithme de chiffrement d'Enigma a été implémenté ?",
       "propositions": [
@@ -538,10 +537,10 @@
         ["Linux",   ""]
       ],
       "answer": ["UNIX"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 37,
       "type": 0,
       "question": "Lequel de ces éléments ne fait pas partie de la machine de Turing ?",
       "propositions": [
@@ -553,10 +552,10 @@
         ["Unité arithmétique",       ""]
       ],
       "answer": ["Alimentation externe"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 38,
       "type": 0,
       "question": "Quelle machine électromécanique fut inventée par l'Allemand Arthur Scherbius ?",
       "propositions": [
@@ -568,10 +567,10 @@
         ["Difference Engine", ""]
       ],
       "answer": ["Enigma"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 39,
       "type": 0,
       "question": "Lequel de ces langages informatiques n'est pas Turing-complet ?",
       "propositions": [
@@ -583,10 +582,10 @@
         ["Haskell", ""]
       ],
       "answer": ["SQL"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 40,
       "type": 0,
       "question": "Quel supercalculateur fut le premier à battre un champion du monde d'échecs ?",
       "propositions": [
@@ -598,10 +597,10 @@
         ["AlphaGo",   ""]
       ],
       "answer": ["Deep Blue"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 41,
       "type": 0,
       "question": "Qu'est censée imiter une machine faisant le test de Turing ?",
       "propositions": [
@@ -613,10 +612,10 @@
         ["Musique",      ""]
       ],
       "answer": ["Conversation"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 42,
       "type": 0,
       "question": "Quelle thèse de Turing concerne la définition de la notion de calculabilité ?",
       "propositions": [
@@ -628,10 +627,10 @@
         ["Thèse de von Neumann", ""]
       ],
       "answer": ["Thèse de Church"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 43,
       "type": 0,
       "question": "Pour quelle raison Alan Turing a-t-il été poursuivi en justice en 1952 ?",
       "propositions": [
@@ -643,10 +642,10 @@
         ["Trahison",          ""]
       ],
       "answer": ["Son homosexualité"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 44,
       "type": 0,
       "question": "Comment Alan Turing a-t-il été retrouvé mort dans sa maison de Manchester ?",
       "propositions": [
@@ -658,10 +657,10 @@
         ["Écrasé",         ""]
       ],
       "answer": ["Empoisonné"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 45,
       "type": 0,
       "question": "Quel franco-américain a réalisé en 1982 le film franco-britannique « Enigma » ?",
       "propositions": [
@@ -673,10 +672,10 @@
         ["Gérard Krawczyk", ""]
       ],
       "answer": ["Jeannot Szwarc"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 46,
       "type": 0,
       "question": "Qui a publié le roman « Indécence manifeste » sur la vie de Turing ?",
       "propositions": [
@@ -688,10 +687,10 @@
         ["Henning Mankell",   ""]
       ],
       "answer": ["David Lagercrantz"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 47,
       "type": 0,
       "question": "Dans quelle ville Alan Turing est-il né le 23 juin 1912 ?",
       "propositions": [
@@ -703,10 +702,10 @@
         ["Cambridge",  ""]
       ],
       "answer": ["Londres"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 48,
       "type": 0,
       "question": "Très jeune, en combien de temps Alan Turing a-t-il appris seul à lire ?",
       "propositions": [
@@ -718,10 +717,10 @@
         ["10 jours",   ""]
       ],
       "answer": ["3 semaines"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 49,
       "type": 0,
       "question": "Dans quel site de décryptage du Royaume-Uni Turing et Knox ont-ils travaillé ?",
       "propositions": [
@@ -733,10 +732,10 @@
         ["Fylingdales",      ""]
       ],
       "answer": ["Bletchley Park"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 50,
       "type": 0,
       "question": "À quel bâtiment préfabriqué Turing a-t-il été affecté pour l'Enigma navale ?",
       "propositions": [
@@ -748,10 +747,10 @@
         ["Hut 6",   ""]
       ],
       "answer": ["Hut 8"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 51,
       "type": 0,
       "question": "Depuis quelle année le prix Turing est-il annuellement décerné ?",
       "propositions": [
@@ -763,10 +762,10 @@
         ["2006", ""]
       ],
       "answer": ["1966"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 52,
       "type": 0,
       "question": "Quel était le prix approximatif (en euros) de l'Enigma-A, sorti en 1923 ?",
       "propositions": [
@@ -778,10 +777,10 @@
         ["120 000 euros", ""]
       ],
       "answer": ["30 000 euros"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 53,
       "type": 0,
       "question": "Quelle machine à coder la voix a été réalisée par Alan Turing ?",
       "propositions": [
@@ -793,10 +792,10 @@
         ["Bombe",    ""]
       ],
       "answer": ["Delilah"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 54,
       "type": 0,
       "question": "À quels modèles Alan Turing va-t-il s'intéresser à la fin de sa vie ?",
       "propositions": [
@@ -808,10 +807,10 @@
         ["Cryptogenèse", ""]
       ],
       "answer": ["Morphogenèse"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 55,
       "type": 0,
       "question": "En quelle année la reine Élisabeth II a-t-elle gracié Turing à titre posthume ?",
       "propositions": [
@@ -823,10 +822,10 @@
         ["2009", ""]
       ],
       "answer": ["2013"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 56,
       "type": 0,
       "question": "Combien de pages contient le manuscrit de Turing vendu en 2015 ?",
       "propositions": [
@@ -838,10 +837,10 @@
         ["80",  ""]
       ],
       "answer": ["56"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 57,
       "type": 0,
       "question": "Quel mathématicien de Cambridge a aidé à améliorer la bombe de Turing ?",
       "propositions": [
@@ -853,10 +852,10 @@
         ["Alastair Denniston", ""]
       ],
       "answer": ["Gordon Welchman"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 58,
       "type": 0,
       "question": "Quel est le premier projet détaillé d'un ordinateur réalisé par Turing ?",
       "propositions": [
@@ -868,10 +867,10 @@
         ["MANIAC", ""]
       ],
       "answer": ["ACE"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 59,
       "type": 0,
       "question": "Quelle machine a contribué à orienter Turing vers la conception d'un ordinateur ?",
       "propositions": [
@@ -883,10 +882,10 @@
         ["Harvard Mark I", ""]
       ],
       "answer": ["Colossus"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 60,
       "type": 0,
       "question": "Qui fut directeur de la Hut 8 en l'absence d'Alan Turing ?",
       "propositions": [
@@ -898,10 +897,10 @@
         ["Peter Hilton",    ""]
       ],
       "answer": ["Hugh Alexander"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 61,
       "type": 0,
       "question": "Quel os, composé de 6 os soudés, est le plus grand du corps humain ?",
       "propositions": [
@@ -913,10 +912,10 @@
         ["Le tibia",  ""]
       ],
       "answer": ["Le bassin"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 62,
       "type": 0,
       "question": "Combien de neurones un cerveau en pleine possession de ses capacités contient-il ?",
       "propositions": [
@@ -928,10 +927,10 @@
         ["2 milliards",  ""]
       ],
       "answer": ["14 milliards"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 63,
       "type": 0,
       "question": "Quel os du corps humain est à peine plus grand qu'un grain de riz ?",
       "propositions": [
@@ -943,10 +942,10 @@
         ["Le marteau",   ""]
       ],
       "answer": ["L'étrier"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 64,
       "type": 0,
       "question": "Combien d'os même minuscules comptabilise-t-on dans chacune de nos oreilles externes ?",
       "propositions": [
@@ -958,10 +957,10 @@
         ["Quatre", ""]
       ],
       "answer": ["Aucun"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 65,
       "type": 0,
       "question": "Combien de vertèbres thoraciques ou dorsales s'articulent avec les côtes ?",
       "propositions": [
@@ -973,10 +972,10 @@
         ["5",  ""]
       ],
       "answer": ["12"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 66,
       "type": 0,
       "question": "De combien de muscles différents les abdominaux sont-ils formés ?",
       "propositions": [
@@ -988,10 +987,10 @@
         ["Cinq",   ""]
       ],
       "answer": ["Quatre"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 67,
       "type": 0,
       "question": "Quelle partie du corps secrète des substances anti-bactériennes qui détruisent les spores ?",
       "propositions": [
@@ -1003,10 +1002,10 @@
         ["Les yeux",    ""]
       ],
       "answer": ["La peau"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 68,
       "type": 0,
       "question": "Combien de dents de lait sont remplacées à partir de 6 ans par 32 dents définitives ?",
       "propositions": [
@@ -1018,10 +1017,10 @@
         ["16", ""]
       ],
       "answer": ["20"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 69,
       "type": 0,
       "question": "Combien de paires de côtes constitue la partie avant du squelette humain ?",
       "propositions": [
@@ -1033,10 +1032,10 @@
         ["14", ""]
       ],
       "answer": ["12"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 70,
       "type": 0,
       "question": "Quelle partie du corps humain protège la partie inférieure du tube digestif ?",
       "propositions": [
@@ -1048,10 +1047,10 @@
         ["Péroné",    ""]
       ],
       "answer": ["Coccyx"],
-      "difficulty": "Facile"
+      "difficulty": "Facile",
+      "subject": 1
     },
     {
-      "id": 71,
       "type": 0,
       "question": "De manière générale, quel pourcentage du poids du corps les muscles représentent-ils ?",
       "propositions": [
@@ -1063,10 +1062,10 @@
         ["65 %", ""]
       ],
       "answer": ["35 %"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 72,
       "type": 0,
       "question": "Combien de globules rouges peut-on retrouver dans une simple goutte de sang ?",
       "propositions": [
@@ -1078,10 +1077,10 @@
         ["200 000",     ""]
       ],
       "answer": ["5 000 000"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 73,
       "type": 0,
       "question": "Quelle est la durée de vie moyenne d'un globule rouge dans l'organisme ?",
       "propositions": [
@@ -1093,10 +1092,10 @@
         ["6 mois",     ""]
       ],
       "answer": ["4 mois"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 74,
       "type": 0,
       "question": "Quelle quantité de nourriture un adulte consomme-t-il environ chaque année ?",
       "propositions": [
@@ -1108,10 +1107,10 @@
         ["750 kilos", ""]
       ],
       "answer": ["500 kilos"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 75,
       "type": 0,
       "question": "À combien a été mesurée la vitesse record d'un éternuement ?",
       "propositions": [
@@ -1123,10 +1122,10 @@
         ["200 km/h", ""]
       ],
       "answer": ["165 km/h"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 76,
       "type": 0,
       "question": "Quelle quantité d'eau perd-on environ par jour en respirant ?",
       "propositions": [
@@ -1138,10 +1137,10 @@
         ["1,5 litre", ""]
       ],
       "answer": ["1 litre"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 77,
       "type": 0,
       "question": "Combien de poils comptabilise-t-on environ sur la surface de la peau d'un adulte ?",
       "propositions": [
@@ -1153,10 +1152,10 @@
         ["10 millions", ""]
       ],
       "answer": ["1 million"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 78,
       "type": 0,
       "question": "Lequel de ces gaz n'est pas un gaz essentiel du corps humain ?",
       "propositions": [
@@ -1168,10 +1167,10 @@
         ["Soufre",    ""]
       ],
       "answer": ["Sarin"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 79,
       "type": 0,
       "question": "Combien de cheveux perdons-nous chaque jour en moyenne ?",
       "propositions": [
@@ -1183,10 +1182,10 @@
         ["120", ""]
       ],
       "answer": ["80"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 80,
       "type": 0,
       "question": "La main d'un individu adulte comporte combien d'os ?",
       "propositions": [
@@ -1198,10 +1197,10 @@
         ["22", ""]
       ],
       "answer": ["26"],
-      "difficulty": "Moyen"
+      "difficulty": "Moyen",
+      "subject": 1
     },
     {
-      "id": 81,
       "type": 0,
       "question": "De combien d'os le squelette du bébé, sorti du ventre de sa mère, est-il constitué ?",
       "propositions": [
@@ -1213,10 +1212,10 @@
         ["300", ""]
       ],
       "answer": ["350"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 82,
       "type": 0,
       "question": "Combien de globules sanguins meurent chaque seconde dans notre organisme ?",
       "propositions": [
@@ -1228,10 +1227,10 @@
         ["5 millions", ""]
       ],
       "answer": ["2 000 000"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 83,
       "type": 0,
       "question": "Quel très long muscle va de l'extérieur de la hanche à la face interne du genou ?",
       "propositions": [
@@ -1243,10 +1242,10 @@
         ["Semi-tendineux", ""]
       ],
       "answer": ["Sartorius"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 84,
       "type": 0,
       "question": "En combien de temps un globule rouge fait-il le tour complet de notre corps ?",
       "propositions": [
@@ -1258,10 +1257,10 @@
         ["30 secondes", ""]
       ],
       "answer": ["1 minute"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 85,
       "type": 0,
       "question": "Combien de litres de salive produit-on en moyenne chaque jour ?",
       "propositions": [
@@ -1273,10 +1272,10 @@
         ["0,5", ""]
       ],
       "answer": ["1,5"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 86,
       "type": 0,
       "question": "Quel muscle situé au fond de l'oreille ne mesure que 2 millimètres de long ?",
       "propositions": [
@@ -1288,10 +1287,10 @@
         ["Tympanique",  ""]
       ],
       "answer": ["Stapédien"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 87,
       "type": 0,
       "question": "Au repos, combien de litres d'air un adulte inspire-t-il et expire-t-il par minute ?",
       "propositions": [
@@ -1303,10 +1302,10 @@
         ["5",  ""]
       ],
       "answer": ["6"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 88,
       "type": 0,
       "question": "Des pieds à la tête, combien de muscles squelettiques compte notre corps ?",
       "propositions": [
@@ -1318,10 +1317,10 @@
         ["500", ""]
       ],
       "answer": ["600"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 89,
       "type": 0,
       "question": "En moyenne, combien de fois le coeur bat-il au cours d'une vie entière ?",
       "propositions": [
@@ -1333,10 +1332,10 @@
         ["100 millions", ""]
       ],
       "answer": ["3 milliards"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     },
     {
-      "id": 90,
       "type": 0,
       "question": "Quelle est la durée de vie maximum d'un cheveu poussant sur la tête d'un individu ?",
       "propositions": [
@@ -1348,7 +1347,8 @@
         ["2 ans",  ""]
       ],
       "answer": ["5 ans"],
-      "difficulty": "Difficile"
+      "difficulty": "Difficile",
+      "subject": 1
     }
   ]
 }

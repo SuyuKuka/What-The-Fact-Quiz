@@ -18,7 +18,10 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -40,14 +43,16 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     val alert = remember { mutableStateOf(false) }
     val difficulty = model.difficultyList
-    val subject = model.subjectList
+    val subject = model.getSubject()
+
     val energy = model.energy
     val subscribe = model.subscription
     val lastTimeEnergy = model.lastTimeEnergy
     val now = System.currentTimeMillis()
 
     val selectedDiff = remember { mutableStateOf(difficulty[0]) }
-    val selectedSubj = remember { mutableStateOf(subject[0]) }
+    val selectedSubj = remember {mutableStateOf(subject.firstOrNull() ?: "")}
+
     val context = LocalContext.current
     val intent = Intent(context, QuizzActivity::class.java)
     intent.putExtra("difficulty", selectedDiff.value)
@@ -124,38 +129,43 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                 modifier = Modifier
                     .weight(1f)
             ) {
-                items(subject) { subj ->
-                    val isSelected = selectedSubj.value == subj
-                    Button(
-                        onClick = { selectedSubj.value = subj },
-                        modifier = Modifier
-                            .aspectRatio(1.2f)
-                            .padding(8.dp)
-                            .fillMaxWidth(),
-                        shape = RectangleShape,
-                        contentPadding = PaddingValues(0.dp)
-                    ) {
-                        Box(
-                            modifier = Modifier.fillMaxSize(),
-                            contentAlignment = Alignment.Center
-                        ) {
 
-                            Image(
-                                painter = painterResource(id = model.subjectImage(subj)),
-                                contentDescription = null,
+                if (subject.isNotEmpty()) {
+                    selectedSubj.value = subject[0]
+                    items(subject) { subj ->
+                        val isSelected = selectedSubj.value == subj
+                        Button(
+                            onClick = { selectedSubj.value = subj },
+                            modifier = Modifier
+                                .aspectRatio(1.2f)
+                                .padding(8.dp)
+                                .fillMaxWidth(),
+                            shape = RectangleShape,
+                            contentPadding = PaddingValues(0.dp)
+                        ) {
+                            Box(
                                 modifier = Modifier.fillMaxSize(),
-                                contentScale = ContentScale.Crop
-                            )
-                            if (isSelected) {
-                                Spacer(
-                                    modifier = Modifier.fillMaxSize()
-                                        .background(Color.Black.copy(alpha = 0.2f))
+                                contentAlignment = Alignment.Center
+                            ) {
+
+                                Image(
+                                    painter = painterResource(id = model.getDrawableId(context, subj)),
+                                    contentDescription = null,
+                                    modifier = Modifier.fillMaxSize(),
+                                    contentScale = ContentScale.Crop
                                 )
+                                if (isSelected) {
+                                    Spacer(
+                                        modifier = Modifier.fillMaxSize()
+                                            .background(Color.Black.copy(alpha = 0.2f))
+                                    )
+                                }
+                                DisplayText(list = currentFont, text = subj, fontSize = 24.sp)
                             }
-                            DisplayText(list = currentFont, text = subj, fontSize = 24.sp)
                         }
                     }
                 }
+
             }
             Row(
                 modifier = Modifier

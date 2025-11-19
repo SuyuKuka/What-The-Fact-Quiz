@@ -4,12 +4,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class QuizzGeoEntity(
+data class SubjectEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val type: Int,
-    val question: String,
-    val propositions: List<List<String>>,
-    val answer: List<String>,
-    val difficulty: String
+    val name: String,
+    val imagePath: String
 )
