@@ -40,7 +40,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
 
     // Leaderboard
     val usernameLeaderboard = mutableListOf<String?>()
-    val score = mutableListOf<Double?>()
+    val score = mutableListOf<Int?>()
     val bestTime = mutableListOf<Double?>()
     val subject = mutableStateOf("")
 
@@ -264,5 +264,17 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             }
             changed.value = false
         }
+    }
+
+    fun subjectImage(subject: String): Int {
+        when(subject) {
+            "Science" -> return R.drawable.science
+            "Gastronomie" -> return R.drawable.gastronomie
+            "Géographie" -> return R.drawable.geographie
+            "Nature" -> return R.drawable.nature
+            "Dessin anime" -> return R.drawable.dessinanime
+            "Informatique" -> return R.drawable.informatique
+        }
+        return 0
     }
 }

@@ -26,7 +26,7 @@ fun TopBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                DisplayText(list = font, text = "Score: ${gameData.score.doubleValue} ")
+                DisplayText(list = font, text = "Score: ${gameData.score.intValue} ")
                 DisplayText(list = font, text = "Temps: " + "%.3fs".format(gameData.time.doubleValue))
             }
         },
