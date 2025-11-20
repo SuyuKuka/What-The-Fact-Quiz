@@ -53,7 +53,7 @@ fun LeaderboardScreen(model: MenuViewModel) {
                 rows = GridCells.Fixed(3), // 3 lignes
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(150.dp),                      // hauteur totale pour 3 lignes
+                    .height(150.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
 
@@ -69,8 +69,6 @@ fun LeaderboardScreen(model: MenuViewModel) {
                     }
                 }
             }
-
-            //todo mettre une lazycolumn pour que ca soit scrollable
             if (!changed.value) {
                 if (username.isEmpty()) {
                     DisplayText(
