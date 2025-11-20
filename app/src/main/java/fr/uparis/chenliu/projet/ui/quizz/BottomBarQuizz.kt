@@ -25,6 +25,8 @@ import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
     val font = model.translateFont()
 
+
+
     BottomAppBar(
         containerColor = Color.DarkGray,
         contentColor = Color.White
@@ -36,23 +38,48 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
 
-//            TextButton(onClick = { /* action */ }) {
-//                Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-//                    DisplayText(list = font, text = "Score: ${gameData.score.value}")
-//                }
-//            }
+            if (model.data.types.isNotEmpty()) {
+                if (model.data.types[model.currentQuestion.intValue] == 2 ||
+                    model.data.types[model.currentQuestion.intValue] == 3 ||
+                    model.data.types[model.currentQuestion.intValue] == 4
+                ) {
+                    TextButton(onClick = { /* action */ }) {
+                        Box(modifier = Modifier.align(Alignment.CenterVertically)) {
+                            DisplayText(list = font, text = "Reset")
+                        }
+                    }
+                } else {
+                    TextButton(onClick = { /* action */ }) {
+                        Box(modifier = Modifier.align(Alignment.CenterVertically)) {
+                            DisplayText(list = font, text = "")
+                        }
+                    }
+                }
+            }
 
             Box(modifier = Modifier.align(Alignment.CenterVertically)) {
                 DisplayText(list = font, text = "Score: ${gameData.score.value}")
             }
 
-
-
-
-
-            TextButton(onClick = { /* action */ }) {
-                Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                    DisplayText(list = font, text = "Valider")
+            if (model.data.types.isNotEmpty()) {
+                TextButton(onClick = { /* action */ }) {
+                    Box(modifier = Modifier.align(Alignment.CenterVertically)) {
+                        if (model.gameData.gameEnded.value) {
+                            DisplayText(list = font, text = "Rejouer")
+                        } else if (
+                            model.data.types[model.currentQuestion.intValue] == 2 ||
+                            model.data.types[model.currentQuestion.intValue] == 3 ||
+                            model.data.types[model.currentQuestion.intValue] == 4
+                        ) {
+                            DisplayText(list = font, text = "Valider")
+                        } else {
+                            TextButton(onClick = { /* action */ }) {
+                                Box(modifier = Modifier.align(Alignment.CenterVertically)) {
+                                    DisplayText(list = font, text = "")
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
