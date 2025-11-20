@@ -41,6 +41,7 @@ import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 import fr.uparis.chenliu.projet.ui.viewmodel.TimeConfigViewModel
 import fr.uparis.chenliu.projet.ui.worker.WorkerReminder
+import kotlinx.coroutines.delay
 import java.util.concurrent.TimeUnit
 
 const val CHANNEL_ID = "mon_canal"

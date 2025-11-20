@@ -1,5 +1,7 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
+import android.R.attr.data
+import android.R.attr.font
 import android.app.Application
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -97,117 +99,17 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             data.question.clear()
             data.answers.clear()
             data.types.clear()
-            when (subject) {
-                "Science" -> { fetchScienceData(difficulty) }
-                "Gastronomie" -> { fetchGastronomieData(difficulty) }
-                "Géographie" -> { fetchGeographieData(difficulty) }
-                "Nature" -> { fetchNatureData(difficulty) }
-                "Dessin anime" -> { fetchDessinAnimeData(difficulty) }
-                "Informatique" -> { fetchInformatiqueData(difficulty) }
-            }
+
+            fetchQuizzData(difficulty, subject)
             loading.value = false
         }
         chronometer()
     }
-    suspend fun fetchScienceData(difficulty: String) {
+
+    suspend fun fetchQuizzData(difficulty: String, subject: String) {
         // on fetch les data
-        val currentDao = db.quizzScienceDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
-    }
-    suspend fun fetchGastronomieData(difficulty: String) {
-        val currentDao = db.quizzGastronomieDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
-    }
-    suspend fun fetchGeographieData(difficulty: String) {
-        val currentDao = db.quizzGeoDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
-    }
-    suspend fun fetchNatureData(difficulty: String) {
-        val currentDao = db.quizzNatureDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
-    }
-    suspend fun fetchDessinAnimeData(difficulty: String) {
-        val currentDao = db.quizzDessinAnimeDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
-    }
-    suspend fun fetchInformatiqueData(difficulty: String) {
-        val currentDao = db.quizzInformatiqueDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
+        val currentDao = db.quizzDao()
+        val allQuestion = currentDao.getQuestion(difficulty, subject)
         for (i in 0..allQuestion.size-1) {
             // question
             data.question.add(allQuestion[i].question)

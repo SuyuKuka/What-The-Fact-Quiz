@@ -1,10 +1,13 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
+import android.R.attr.font
 import android.app.Application
+import android.content.Context
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.platform.LocalResources
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import fr.uparis.chenliu.projet.R
@@ -13,6 +16,8 @@ import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 
@@ -47,27 +52,31 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     // Others
     val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
     val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
-    val subjectList = listOf("Science", "Gastronomie", "Géographie", "Nature", "Dessin anime", "Informatique")
     val difficultyList = listOf("Facile", "Moyen", "Difficile")
     val saved = mutableStateOf(true)
     val maxEnergy = mutableIntStateOf(20)
     val changed = mutableStateOf(false)
+    val subjectList = MutableStateFlow<List<String>>(emptyList())
+    val subjectImageList = MutableStateFlow<List<String>>(emptyList())
 
     fun init(username: String) {
         this.username.value = username
         viewModelScope.launch {
+            // init des themes
+            subjectList.value = db.SubjectDao().getAllSubjectNames()
+            subjectImageList.value = db.SubjectDao().getAllImageNames()
+            // init des paramettres utilisateur
             getUsers()
             settings.value = db.settingsDao().getSetting()
-
             music.floatValue = settings.value!!.music
             sound.floatValue = settings.value!!.sound
             background.intValue = settings.value!!.background
             font.intValue = settings.value!!.font
             preferredTopics.value = settings.value!!.preferredTopics
-
-            leaderboard = db.leaderboardDao().getLeaderboard(subjectList[0])
-            changeSubject(subjectList[0])
-            subject.value = "Science"
+            // init du leaderboard
+            leaderboard = db.leaderboardDao().getLeaderboard(subjectList.value[0])
+            changeSubject(subjectList.value[0])
+            subject.value = subjectList.value[0]
 
             while (true) {
                 getUsers()
@@ -244,6 +253,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    // pour leaderboard
     fun changeSubject(subject: String) {
         usernameLeaderboard.clear()
         score.clear()
@@ -264,17 +274,5 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             }
             changed.value = false
         }
-    }
-
-    fun subjectImage(subject: String): Int {
-        when(subject) {
-            "Science" -> return R.drawable.science
-            "Gastronomie" -> return R.drawable.gastronomie
-            "Géographie" -> return R.drawable.geographie
-            "Nature" -> return R.drawable.nature
-            "Dessin anime" -> return R.drawable.dessinanime
-            "Informatique" -> return R.drawable.informatique
-        }
-        return 0
     }
 }
