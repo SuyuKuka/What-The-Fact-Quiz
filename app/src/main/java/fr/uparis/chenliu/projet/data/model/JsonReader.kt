@@ -7,11 +7,20 @@ class JsonReader {
     )
 
     class QuizzData(
-        val id: Int,
         val type: Int,
         val question: String,
         val propositions: List<List<String>>,
         val answer: List<String>,
-        val difficulty: String
+        val difficulty: String,
+        val subject: Int
+    )
+
+    class SubjectParameter(
+        val subject: List<SubjectData>
+    )
+
+    class SubjectData(
+        val name: String,
+        val imageName: String
     )
 }
