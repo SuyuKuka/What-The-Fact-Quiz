@@ -41,7 +41,7 @@ fun LeaderboardScreen(model: MenuViewModel) {
             LazyVerticalGrid(
                 columns = GridCells.Adaptive(minSize = 150.dp)
             ) {
-                items(subjectList) { subj ->
+                items(subjectList.value) { subj ->
                     Button(onClick = {
                         if (currentSubject.value != subj) {
                             model.changeSubject(subj); changed.value = true

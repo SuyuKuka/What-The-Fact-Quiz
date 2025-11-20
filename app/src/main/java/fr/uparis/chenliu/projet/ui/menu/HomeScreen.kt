@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -19,6 +20,9 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -27,9 +31,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
 import fr.uparis.chenliu.projet.navigation.Screen
@@ -40,14 +46,21 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     val alert = remember { mutableStateOf(false) }
     val difficulty = model.difficultyList
-    val subject = model.subjectList
+    val subject by model.subjectList.collectAsState()
     val energy = model.energy
     val subscribe = model.subscription
     val lastTimeEnergy = model.lastTimeEnergy
     val now = System.currentTimeMillis()
 
     val selectedDiff = remember { mutableStateOf(difficulty[0]) }
-    val selectedSubj = remember { mutableStateOf(subject[0]) }
+    val selectedSubj = remember { mutableStateOf<String?>(null) }
+
+    LaunchedEffect(subject) {
+        if (subject.isNotEmpty()) {
+            selectedSubj.value = subject[0]
+        }
+    }
+
     val context = LocalContext.current
     val intent = Intent(context, QuizzActivity::class.java)
     intent.putExtra("difficulty", selectedDiff.value)
@@ -139,13 +152,13 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                             modifier = Modifier.fillMaxSize(),
                             contentAlignment = Alignment.Center
                         ) {
-
-                            Image(
-                                painter = painterResource(id = model.subjectImage(subj)),
-                                contentDescription = null,
-                                modifier = Modifier.fillMaxSize(),
-                                contentScale = ContentScale.Crop
-                            )
+//                            val imageResource = LocalResources.current.getIdentifier(subj, "drawable", context.packageName)
+//                            Image(
+//                                painter = painterResource(id = imageResource),
+//                                contentDescription = null,
+//                                modifier = Modifier.fillMaxSize(),
+//                                contentScale = ContentScale.Crop
+//                            )
                             if (isSelected) {
                                 Spacer(
                                     modifier = Modifier.fillMaxSize()
