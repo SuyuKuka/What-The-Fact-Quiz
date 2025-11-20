@@ -182,7 +182,8 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         val bg = when(background.intValue) {
             1 -> R.drawable.b1
             2 -> R.drawable.b2
-            else -> R.drawable.b0
+            3 -> R.drawable.b0
+            else -> R.drawable.background_default_blurred
         }
         return bg
     }

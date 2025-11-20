@@ -1,6 +1,8 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.R.attr.top
+import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
@@ -97,123 +99,143 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
     val loading = model.loading.value
     val exist = model.exist.value
 
-    if (loading) {
-        LoadingScreen()
-    } else {
-        if (exist) {
-            if (model.endDate.value != "") {
-                val endDate = model.endDate.value.split("/")
-                val dayToday = LocalDateTime.now().dayOfMonth
-                val monthToday = LocalDateTime.now().month.value
-                val yearToday = LocalDateTime.now().year
-                if (endDate[2].toInt() <= yearToday) {
-                    if (endDate[1].toInt() < monthToday) {
-                        if (endDate[0].toInt() <= dayToday) {
-                            model.expireSubscription()
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(id = R.drawable.background_default_blurred),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
+
+        if (loading) {
+            LoadingScreen()
+        } else {
+            if (exist) {
+                if (model.endDate.value != "") {
+                    val endDate = model.endDate.value.split("/")
+                    val dayToday = LocalDateTime.now().dayOfMonth
+                    val monthToday = LocalDateTime.now().month.value
+                    val yearToday = LocalDateTime.now().year
+                    if (endDate[2].toInt() <= yearToday) {
+                        if (endDate[1].toInt() < monthToday) {
+                            if (endDate[0].toInt() <= dayToday) {
+                                model.expireSubscription()
+                            }
                         }
                     }
                 }
-            }
-            intent.putExtra("username", username)
-            context.startActivity(intent)
-            activity.finish()
+                intent.putExtra("username", username)
 
-
-        } else {
-            Image(
-                painter = painterResource(id = R.drawable.background_defaut),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop
-            )
-            Column (
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(top = 80.dp),
-                verticalArrangement = Arrangement.Top,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ){
-
-                Text(
-                    text = "What The Fact",
-                    fontSize = 40.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Start,
-                    color = Color.White,
-                    style = androidx.compose.ui.text.TextStyle(
-                        shadow = Shadow(
-                            color = Color.Black,
-                            offset = Offset(4f, 4f),
-                            blurRadius = 8f
-                        ),
-                        textDecoration = TextDecoration.Underline
-                    ),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 20.dp)
+                val options = ActivityOptions.makeCustomAnimation(
+                    context,
+                    R.anim.fade_in,
+                    R.anim.fade_out
                 )
-                Text(
-                    text = "Quiz",
-                    fontSize = 60.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.End,
-                    color = Color.White,
-                    style = androidx.compose.ui.text.TextStyle(
-                        shadow = Shadow(
-                            color = Color.Black,
-                            offset = Offset(4f, 4f),
-                            blurRadius = 8f
-                        ),
-                        textDecoration = TextDecoration.Underline
-                    ),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 20.dp)
-                        .graphicsLayer(rotationZ = 15f)
-                )
-                Spacer(modifier = Modifier.height(80.dp))
-                Text("⬇\uFE0F Entrer votre pseudo ⬇\uFE0F",
-                    modifier = Modifier
-                        .background(
-                            Color.White,
-                            shape = RoundedCornerShape(4.dp)
-                            )
-                        .border(
-                            width = 1.dp,
-                            color = Color.Black,
-                            shape = RoundedCornerShape(4.dp)
-                        )
-                        .padding(horizontal = 16.dp, vertical = 8.dp)
-                )
+                context.startActivity(intent, options.toBundle())
 
-                WriteField(
-                    value = username,
-                    onValueChange = { model.username.value = it },
-                    label = "",
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 20.dp),
-                    fontSize = 25.sp,
-                    onDone = { model.insertData(context) },
+                activity.finish()
 
+
+            } else {
+                Image(
+                    painter = painterResource(id = R.drawable.background_defaut),
+                    contentDescription = null,
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Crop
                 )
-                Spacer(modifier = Modifier.height(45.dp))
-                Button(
-                    onClick = { model.insertData(context) },
+                Column(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 20.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(243,205,26),
-                        contentColor = Color.Black
-                    ),
-                    shape = RoundedCornerShape(4.dp)
+                        .fillMaxSize()
+                        .padding(top = 80.dp),
+                    verticalArrangement = Arrangement.Top,
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Text(text = if (model.username.value == "" ) {
-                        "Peut-être plus tard"
-                    } else {
-                        "Continuer"
-                }) }
+
+                    Text(
+                        text = "What The Fact",
+                        fontSize = 40.sp,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Start,
+                        color = Color.White,
+                        style = androidx.compose.ui.text.TextStyle(
+                            shadow = Shadow(
+                                color = Color.Black,
+                                offset = Offset(4f, 4f),
+                                blurRadius = 8f
+                            ),
+                            textDecoration = TextDecoration.Underline
+                        ),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 20.dp)
+                    )
+                    Text(
+                        text = "Quiz",
+                        fontSize = 60.sp,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.End,
+                        color = Color.White,
+                        style = androidx.compose.ui.text.TextStyle(
+                            shadow = Shadow(
+                                color = Color.Black,
+                                offset = Offset(4f, 4f),
+                                blurRadius = 8f
+                            ),
+                            textDecoration = TextDecoration.Underline
+                        ),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 20.dp)
+                            .graphicsLayer(rotationZ = 15f)
+                    )
+                    Spacer(modifier = Modifier.height(80.dp))
+                    Text(
+                        "⬇\uFE0F Entrer votre pseudo ⬇\uFE0F",
+                        modifier = Modifier
+                            .background(
+                                Color.White,
+                                shape = RoundedCornerShape(4.dp)
+                            )
+                            .border(
+                                width = 1.dp,
+                                color = Color.Black,
+                                shape = RoundedCornerShape(4.dp)
+                            )
+                            .padding(horizontal = 16.dp, vertical = 8.dp)
+                    )
+
+                    WriteField(
+                        value = username,
+                        onValueChange = { model.username.value = it },
+                        label = "",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 20.dp),
+                        fontSize = 25.sp,
+                        onDone = { model.insertData(context) },
+
+                        )
+                    Spacer(modifier = Modifier.height(45.dp))
+                    Button(
+                        onClick = { model.insertData(context) },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 20.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(243, 205, 26),
+                            contentColor = Color.Black
+                        ),
+                        shape = RoundedCornerShape(4.dp)
+                    ) {
+                        Text(
+                            text = if (model.username.value == "") {
+                                "Peut-être plus tard"
+                            } else {
+                                "Continuer"
+                            }
+                        )
+                    }
+                }
             }
         }
     }
