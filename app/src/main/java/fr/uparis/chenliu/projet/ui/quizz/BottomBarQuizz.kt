@@ -1,18 +1,23 @@
 package fr.uparis.chenliu.projet.ui.quizz
 
+import android.R.attr.data
 import android.R.attr.onClick
+import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BottomAppBar
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -24,6 +29,8 @@ import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 @Composable
 fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
     val font = model.translateFont()
+    val activity = LocalActivity.current
+    val alert = remember { mutableStateOf(false) }
 
 
 
@@ -39,48 +46,33 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
         ) {
 
             if (model.data.types.isNotEmpty()) {
-                if (model.data.types[model.currentQuestion.intValue] == 2 ||
-                    model.data.types[model.currentQuestion.intValue] == 3 ||
-                    model.data.types[model.currentQuestion.intValue] == 4
-                ) {
-                    TextButton(onClick = { /* action */ }) {
-                        Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                            DisplayText(list = font, text = "Reset")
-                        }
+                if (model.gameData.gameEnded.value) {
+                    Button(
+                        onClick = { activity?.finish() },
+                    ) {
+                        DisplayText(list = font, text = "Accueil")
                     }
                 } else {
-                    TextButton(onClick = { /* action */ }) {
-                        Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                            DisplayText(list = font, text = "")
-                        }
-                    }
+                    DisplayText(list = font, text = "")
                 }
             }
-
             Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                DisplayText(list = font, text = "Score: ${gameData.score.value}")
+                DisplayText(list = font, text = "%.3fs".format(gameData.time.doubleValue))
             }
-
-            if (model.data.types.isNotEmpty()) {
-                TextButton(onClick = { /* action */ }) {
+            if (model.gameData.gameEnded.value) {
+                Button(onClick = {
+                    if (model.energy.intValue == 0) {
+                        alert.value = true
+                        return@Button
+                    }
+                    model.resetStats(gameData)
+                }) {
                     Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                        if (model.gameData.gameEnded.value) {
-                            DisplayText(list = font, text = "Rejouer")
-                        } else if (
-                            model.data.types[model.currentQuestion.intValue] == 2 ||
-                            model.data.types[model.currentQuestion.intValue] == 3 ||
-                            model.data.types[model.currentQuestion.intValue] == 4
-                        ) {
-                            DisplayText(list = font, text = "Valider")
-                        } else {
-                            TextButton(onClick = { /* action */ }) {
-                                Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                                    DisplayText(list = font, text = "")
-                                }
-                            }
-                        }
+                        DisplayText(list = font, text = "Rejouer")
                     }
                 }
+            } else {
+                DisplayText(list = font, text = "")
             }
         }
     }

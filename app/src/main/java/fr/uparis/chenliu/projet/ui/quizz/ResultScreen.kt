@@ -88,26 +88,5 @@ fun ResultScreen(
                 }
             }
         }
-
-        Row(modifier = Modifier.fillMaxWidth().weight(2f), horizontalArrangement = Arrangement.Center){
-            Button(
-                onClick = { activity?.finish() },
-                modifier = Modifier.padding(8.dp)
-            ) {
-                DisplayText(list = font, text = "Accueil")
-            }
-            Button(
-                onClick = {
-                    if (model.energy.intValue == 0) {
-                        alert.value = true
-                        return@Button
-                    }
-                    model.resetStats(gameData)
-                },
-                modifier = Modifier.padding(8.dp)
-            ) {
-                DisplayText(list = font, text = "Rejouer")
-            }
-        }
     }
 }
