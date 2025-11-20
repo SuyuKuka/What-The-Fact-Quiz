@@ -60,7 +60,7 @@ fun ResultScreen(
         DisplayText(list = font, text = "RESULTAT", textAlign = TextAlign.Center, fontSize = 32.sp)
         DisplayText(
             list = font,
-            text = "Score : ${gameData.score.doubleValue}/10 | Temps : ${"%.3fs".format(gameData.time.doubleValue)}",
+            text = "Score : ${gameData.score.intValue} | Temps : ${"%.3fs".format(gameData.time.doubleValue)}",
             textAlign = TextAlign.Center
         )
 

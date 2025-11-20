@@ -17,11 +17,13 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import fr.uparis.chenliu.projet.ui.menu.DisplayText
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
@@ -72,7 +74,8 @@ fun Quizztype2(
         Button(onClick = {
             model.updateGame(
                 answerList = buildAnswer,
-                verify = data.answers[currentQuestion.intValue].answer.toList()
+                verify = data.answers[currentQuestion.intValue].answer.toList(),
+                type = 2
             )
         }, shape = RectangleShape) {
             DisplayText(
@@ -85,15 +88,17 @@ fun Quizztype2(
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-        contentPadding = PaddingValues(8.dp),
+        contentPadding = PaddingValues(8.dp)
     ) {
         items(data.answers[currentQuestion.intValue].propositions) { ans ->
             Box (
                 modifier = Modifier
                     .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
-                    .background(Color.Black)
+                    .background(Color.Black),
+                contentAlignment = Alignment.BottomCenter
             ) {
                 DragImage(answer = ans[0], url = ans[1])
+                DisplayText(list = font, text = ans[0], fontSize = 24.sp, color = Color.Red)
             }
         }
     }

@@ -47,7 +47,8 @@ fun Quizztype1 (
                 if (number != null) {
                     model.updateGame(
                         answerList = listOf(text),
-                        verify = data.answers[currentQuestion.intValue].answer
+                        verify = data.answers[currentQuestion.intValue].answer,
+                        type = 1
                     )
                 }
             },
@@ -56,7 +57,8 @@ fun Quizztype1 (
         Button(onClick = {
             model.updateGame(
                 answerList = listOf(text),
-                verify = data.answers[currentQuestion.intValue].answer
+                verify = data.answers[currentQuestion.intValue].answer,
+                type = 1
             )
         }) { DisplayText(list = font, text = "Valider") }
     }

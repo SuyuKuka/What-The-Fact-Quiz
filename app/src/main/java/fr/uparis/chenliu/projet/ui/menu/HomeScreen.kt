@@ -2,11 +2,13 @@ package fr.uparis.chenliu.projet.ui.menu
 
 import android.content.Intent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -26,7 +28,6 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation3.runtime.NavBackStack
@@ -37,7 +38,6 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
 @Composable
 fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
-    // todo: load depuis la db
     val alert = remember { mutableStateOf(false) }
     val difficulty = model.difficultyList
     val subject = model.subjectList
@@ -125,23 +125,35 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                     .weight(1f)
             ) {
                 items(subject) { subj ->
+                    val isSelected = selectedSubj.value == subj
                     Button(
                         onClick = { selectedSubj.value = subj },
                         modifier = Modifier
-                            .aspectRatio(1f)
+                            .aspectRatio(1.2f)
                             .padding(8.dp)
                             .fillMaxWidth(),
                         shape = RectangleShape,
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = if (selectedSubj.value == subj) Color.Blue else Color.Gray,
-                            contentColor = Color.White
-                        )
+                        contentPadding = PaddingValues(0.dp)
                     ) {
-                        DisplayText(
-                            list = currentFont,
-                            text = subj,
-                            textAlign = TextAlign.Center
-                        )
+                        Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.Center
+                        ) {
+
+                            Image(
+                                painter = painterResource(id = model.subjectImage(subj)),
+                                contentDescription = null,
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Crop
+                            )
+                            if (isSelected) {
+                                Spacer(
+                                    modifier = Modifier.fillMaxSize()
+                                        .background(Color.Black.copy(alpha = 0.2f))
+                                )
+                            }
+                            DisplayText(list = currentFont, text = subj, fontSize = 24.sp)
+                        }
                     }
                 }
             }
