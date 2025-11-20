@@ -21,6 +21,6 @@ class JsonReader {
 
     class SubjectData(
         val name: String,
-        val imagePath: String
+        val imageName: String
     )
 }

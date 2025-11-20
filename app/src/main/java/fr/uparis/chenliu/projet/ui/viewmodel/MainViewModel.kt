@@ -69,7 +69,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
             db.SubjectDao().insertTheme(
                 SubjectEntity(
                     name = it.name,
-                    imagePath = it.imagePath,
+                    imageName = it.imageName
                 )
             )
         }

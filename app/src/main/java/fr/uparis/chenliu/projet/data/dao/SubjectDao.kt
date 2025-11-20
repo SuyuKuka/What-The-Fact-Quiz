@@ -12,8 +12,8 @@ import fr.uparis.chenliu.projet.data.entity.SubjectEntity
         @Insert
         suspend fun insertTheme(theme: SubjectEntity)
 
-        @Query("SELECT imagePath FROM SubjectEntity WHERE name = :subjectName LIMIT 1")
-        suspend fun getImagePathByName(subjectName: String): String?
+        @Query("SELECT imageName FROM SubjectEntity")
+        suspend fun getAllImageNames(): List<String>
 
         @Query("SELECT name FROM SubjectEntity")
         suspend fun getAllSubjectNames(): List<String>

@@ -2,8 +2,27 @@
   "subject": [
     {
       "name": "Science",
-      "imagePath": "science"
+      "imageName": "science"
+    },
+    {
+      "name": "Dessin anime",
+      "imageName": "dessinanime"
+    },
+    {
+      "name": "Gastronomie",
+      "imageName": "gastronomie"
+    },
+    {
+      "name": "Geographie",
+      "imageName": "geographie"
+    },
+    {
+      "name": "Informatique",
+      "imageName": "informatique"
+    },
+    {
+      "name": "Nature",
+      "imageName": "nature"
     }
-
   ]
 }
