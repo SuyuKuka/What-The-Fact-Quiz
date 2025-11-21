@@ -98,6 +98,7 @@ fun SettingsScreen(model: MenuViewModel) {
                     },
                     label = "Domaine préféré?",
                     modifier = Modifier.padding(start = 10.dp),
+                    font = model.intToFont(),
                     fontSize = 18.sp,
                     onDone = { update() },
                     onlyNb = false

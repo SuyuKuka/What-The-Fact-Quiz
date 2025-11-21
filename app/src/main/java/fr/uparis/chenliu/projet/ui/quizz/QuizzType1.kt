@@ -12,7 +12,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.sp
 import fr.uparis.chenliu.projet.ui.WriteField
 import fr.uparis.chenliu.projet.ui.menu.DisplayText
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
@@ -41,7 +40,7 @@ fun Quizztype1 (
             },
             label = "Nombre",
             modifier = Modifier,
-            fontSize = 16.sp,
+            font = font,
             onDone = {
                 val number = text.toIntOrNull()
                 if (number != null) {

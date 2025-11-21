@@ -28,6 +28,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.TextUnit
@@ -99,7 +101,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                     onValueChange = { model.username.value = it },
                     label = "Entrer votre pseudo",
                     modifier = Modifier.padding(start = 10.dp),
-                    fontSize = 25.sp,
+                    font = listOf(-1, 0),
                     onDone = { model.insertData(context) }
                 )
                 Button(onClick = { model.insertData(context) }) { Text(text = "Continuer") }
@@ -114,9 +116,10 @@ fun WriteField(
     onValueChange: (String) -> Unit,
     label: String,
     modifier: Modifier,
-    fontSize: TextUnit,
+    font: List<Int>,
+    fontSize: TextUnit = 16.sp,
     onDone: () -> Unit,
-    onlyNb: Boolean = false
+    onlyNb: Boolean = false,
 ) {
     OutlinedTextField(
         value = value,
@@ -130,7 +133,17 @@ fun WriteField(
             unfocusedLabelColor = Color.Black
         ),
         singleLine = true,
-        label = { Text(text = label, fontSize = fontSize) },
+        label = {
+            Text(
+                text = label,
+                fontSize = (fontSize.value - font[1]).sp,
+                fontFamily = if (font[0] == -1) {
+                    FontFamily(Font(font[0]))
+                } else {
+                    FontFamily.Default
+                }
+            )
+        },
         keyboardOptions =
             if (onlyNb) {
                 KeyboardOptions(keyboardType = KeyboardType.Number, imeAction = ImeAction.Done)

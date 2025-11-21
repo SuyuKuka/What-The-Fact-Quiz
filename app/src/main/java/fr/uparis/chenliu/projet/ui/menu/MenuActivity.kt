@@ -38,7 +38,6 @@ import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 import fr.uparis.chenliu.projet.ui.viewmodel.TimeConfigViewModel
 import fr.uparis.chenliu.projet.ui.worker.WorkerReminder
-import kotlinx.coroutines.delay
 import java.util.concurrent.TimeUnit
 
 const val CHANNEL_ID = "mon_canal"
@@ -69,7 +68,7 @@ fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        topBar = { TopBarMenu(model = model) },
+        topBar = { TopBarMenu(model = model, backStack = backStack) },
         bottomBar = { BottomBar(model = model, backStack = backStack) },
         snackbarHost = { SnackbarHost(hostState = snack) }
     )
