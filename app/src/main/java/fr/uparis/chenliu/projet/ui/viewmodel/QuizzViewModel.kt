@@ -1,10 +1,6 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
-import android.R.attr.data
-import android.R.attr.font
 import android.app.Application
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
@@ -15,7 +11,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import fr.uparis.chenliu.projet.R
-
 import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity

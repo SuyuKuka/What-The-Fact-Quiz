@@ -65,7 +65,7 @@ fun ShopScreen(model: MenuViewModel) {
                         onConfirm = {
                             manageSubscription(
                                 model = model,
-                                isMonthly = if (showAlertMonth.value) true else false
+                                isMonthly = showAlertMonth.value
                             )
                             showAlertMonth.value = false
                             showAlertYear.value = false
