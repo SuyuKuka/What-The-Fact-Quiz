@@ -192,7 +192,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 8.dp),
+                    .padding(bottom = 25.dp).padding(top = 25.dp),
                 horizontalArrangement = Arrangement.Center
             ) {
                 Button(

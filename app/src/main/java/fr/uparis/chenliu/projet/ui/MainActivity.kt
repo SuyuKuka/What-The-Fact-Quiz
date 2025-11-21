@@ -16,6 +16,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -25,9 +26,13 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowDownward
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -189,8 +194,9 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                             .graphicsLayer(rotationZ = 15f)
                     )
                     Spacer(modifier = Modifier.height(80.dp))
-                    Text(
-                        "⬇\uFE0F Entrer votre pseudo ⬇\uFE0F",
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center,
                         modifier = Modifier
                             .background(
                                 Color.White,
@@ -202,8 +208,24 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                                 shape = RoundedCornerShape(4.dp)
                             )
                             .padding(horizontal = 16.dp, vertical = 8.dp)
-                    )
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.ArrowDownward,
+                            contentDescription = "Down",
+                            tint = Color.Black
+                        )
 
+                        Text(
+                            "Entrer votre pseudo",
+                            modifier = Modifier.padding(horizontal = 8.dp)
+                        )
+
+                        Icon(
+                            imageVector = Icons.Default.ArrowDownward,
+                            contentDescription = "Down",
+                            tint = Color.Black
+                        )
+                    }
                     WriteField(
                         value = username,
                         onValueChange = { model.username.value = it },
