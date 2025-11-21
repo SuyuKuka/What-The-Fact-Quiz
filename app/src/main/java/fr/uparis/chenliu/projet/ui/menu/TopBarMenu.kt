@@ -10,6 +10,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material3.Button
@@ -47,7 +48,7 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     TopAppBar(
         title = {
             Row(modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(160.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 // joueur
@@ -84,8 +85,8 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                         } else {
                             energyColor(energy)
                         }
-
-                    )
+                    ),
+                    modifier = Modifier.padding(end = 16.dp)
                 ) {
                     DisplayText(
                         list = currentFont,
