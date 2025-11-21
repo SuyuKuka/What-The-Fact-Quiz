@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -22,6 +23,20 @@ fun ShopScreen(model: MenuViewModel) {
     val showAlertYear = remember { mutableStateOf(false) }
     val currentBackground = model.intToBackground()
     val currentFont = model.intToFont()
+    val titleAlert by remember {
+        if (showAlertMonth.value) {
+            mutableStateOf("Confirmer l'abonnement mensuel")
+        } else {
+            mutableStateOf("Confirmer l'abonnement annuel")
+        }
+    }
+    val textAlert by remember {
+        if (showAlertMonth.value) {
+            mutableStateOf("L'abonnement sera actif pendant un mois. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?")
+        } else {
+            mutableStateOf("L'abonnement sera actif pendant un an. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?")
+        }
+    }
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
@@ -44,35 +59,20 @@ fun ShopScreen(model: MenuViewModel) {
                     DisplayText(list = currentFont, text = "9.99€/an")
                 }
 
-                if (showAlertMonth.value) {
+                if (showAlertMonth.value || showAlertYear.value) {
                     Alert(
                         list = currentFont,
                         onConfirm = {
                             manageSubscription(
                                 model = model,
-                                isMonthly = true
-                            ); showAlertMonth.value = false
+                                isMonthly = if (showAlertMonth.value) true else false
+                            )
+                            showAlertMonth.value = false
+                            showAlertYear.value = false
                         },
-                        onCancel = { showAlertMonth.value = false },
-                        title = "Confirmer l'abonnement mensuel",
-                        text = "L'abonnement sera actif pendant un mois. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?",
-                        onConfirmText = "Confirmer",
-                        onCancelText = "Annuler"
-                    )
-                }
-
-                if (showAlertYear.value) {
-                    Alert(
-                        list = currentFont,
-                        onConfirm = {
-                            manageSubscription(
-                                model = model,
-                                isMonthly = false
-                            ); showAlertYear.value = false
-                        },
-                        onCancel = { showAlertYear.value = false },
-                        title = "Confirmer l'abonnement annuel",
-                        text = "L'abonnement sera actif pendant un an. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?",
+                        onCancel = { showAlertMonth.value = false; showAlertYear.value = false },
+                        title = titleAlert,
+                        text = textAlert,
                         onConfirmText = "Confirmer",
                         onCancelText = "Annuler"
                     )
