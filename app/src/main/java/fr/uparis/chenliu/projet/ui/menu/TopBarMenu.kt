@@ -48,7 +48,7 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     TopAppBar(
         title = {
             Row(modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(165.dp),
+                horizontalArrangement = Arrangement.spacedBy(160.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 // joueur
@@ -78,7 +78,9 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                         ).show()
                     } },
                     colors = ButtonDefaults.buttonColors(containerColor =
-                        if (energy == 0) {
+                        if (model.subscription.value) {
+                            Color.Cyan
+                        } else if (energy == 0) {
                             breathingRed()
                         } else {
                             energyColor(energy)

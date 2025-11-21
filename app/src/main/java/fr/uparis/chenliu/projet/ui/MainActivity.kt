@@ -42,8 +42,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -125,20 +124,12 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                         }
                     }
                 }
-            }
-            intent.putExtra("username", username)
-            context.startActivity(intent)
-            activity.finish()
-        } else {
-            Column {
-                Text(text = "WTF (What The Fact) Quiz")
-                WriteField(
-                    value = username,
-                    onValueChange = { model.username.value = it },
-                    label = "Entrer votre pseudo",
-                    modifier = Modifier.padding(start = 10.dp),
-                    font = listOf(-1, 0),
-                    onDone = { model.insertData(context) }
+                intent.putExtra("username", username)
+
+                val options = ActivityOptions.makeCustomAnimation(
+                    context,
+                    R.anim.fade_in,
+                    R.anim.fade_out
                 )
                 context.startActivity(intent, options.toBundle())
 
@@ -256,10 +247,9 @@ fun WriteField(
     onValueChange: (String) -> Unit,
     label: String,
     modifier: Modifier,
-    font: List<Int>,
-    fontSize: TextUnit = 16.sp,
+    fontSize: TextUnit,
     onDone: () -> Unit,
-    onlyNb: Boolean = false,
+    onlyNb: Boolean = false
 ) {
     OutlinedTextField(
         value = value,
@@ -275,17 +265,7 @@ fun WriteField(
             unfocusedContainerColor = Color.White,
         ),
         singleLine = true,
-        label = {
-            Text(
-                text = label,
-                fontSize = (fontSize.value - font[1]).sp,
-                fontFamily = if (font[0] == -1) {
-                    FontFamily(Font(font[0]))
-                } else {
-                    FontFamily.Default
-                }
-            )
-        },
+        label = { Text(text = label, fontSize = fontSize) },
         keyboardOptions =
             if (onlyNb) {
                 KeyboardOptions(keyboardType = KeyboardType.Number, imeAction = ImeAction.Done)
