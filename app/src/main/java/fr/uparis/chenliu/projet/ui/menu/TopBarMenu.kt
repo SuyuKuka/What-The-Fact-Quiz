@@ -21,10 +21,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -43,7 +39,6 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     val timeEnergy = model.timeEnergy.value
     val currentFont = model.intToFont()
     val context = LocalContext.current
-    var textEnergy by remember { mutableStateOf("") }
 
     TopAppBar(
         title = {
@@ -64,11 +59,6 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                 }
 
                 // energie
-                textEnergy = if (model.subscription.value) {
-                    "∞"
-                } else {
-                    "$energy"
-                }
                 Button(onClick = {
                     if (!model.subscription.value && energy < 20) {
                         Toast.makeText(
@@ -90,7 +80,11 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                 ) {
                     DisplayText(
                         list = currentFont,
-                        text = textEnergy,
+                        text = if (model.subscription.value) {
+                            "∞"
+                        } else {
+                            "$energy"
+                        },
                         fontSize = 18.sp
                     )
                     Icon(
@@ -99,7 +93,6 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                         tint = Color.Yellow
                     )
                 }
-
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)
