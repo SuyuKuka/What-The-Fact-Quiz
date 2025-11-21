@@ -50,10 +50,10 @@ fun LeaderboardScreen(model: MenuViewModel) {
         Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
             DisplayText(list = currentFont, text = "Classement", fontSize = 24.sp)
             LazyHorizontalGrid(
-                rows = GridCells.Fixed(3), // 3 lignes
+                rows = GridCells.Fixed(1),
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(150.dp),
+                    .height(50.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
 
@@ -63,7 +63,7 @@ fun LeaderboardScreen(model: MenuViewModel) {
                         if (currentSubject.value != subj) {
                             model.changeSubject(subj); changed.value = true
                         }
-                    }, modifier = Modifier.width(LocalWindowInfo.current.containerSize.width.dp/7)
+                    }, modifier = Modifier.width(LocalWindowInfo.current.containerSize.width.dp/5)
                     ) {
                         DisplayText(list = currentFont, text = subj, fontSize = 16.sp)
                     }

@@ -32,6 +32,9 @@ import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
@@ -44,6 +47,14 @@ import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // cacher les barres systems (mode immerssif)
+        val windowInsetsController =
+            WindowCompat.getInsetsController(window, window.decorView)
+        windowInsetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+
         setContent {
             ProjetTheme {
                 val difficulty = intent.getStringExtra("difficulty")!!
@@ -66,6 +77,9 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
     Scaffold(
         topBar = {
             TopBarQuizz(gameData, model)
+        },
+        bottomBar = {
+            BottomBarQuizz(gameData, model)
         },
         containerColor = Color.LightGray // tmp
     ) { innerPadding ->
