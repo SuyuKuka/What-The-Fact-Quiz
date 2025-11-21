@@ -127,14 +127,16 @@ fun DisplayText(
     text: String,
     fontSize: TextUnit = 16.sp,
     color: Color = Color.Black,
-    textAlign: TextAlign = TextAlign.Start
+    textAlign: TextAlign = TextAlign.Start,
+    modifier: Modifier = Modifier
 ) {
     Text(
         text = text,
         fontSize = (fontSize.value - list[1]).sp,
         color = color,
         fontFamily = FontFamily(Font(list[0])),
-        textAlign = textAlign
+        textAlign = textAlign,
+        modifier = modifier
     )
 }
 

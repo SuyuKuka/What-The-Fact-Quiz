@@ -16,6 +16,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.ui.menu.DisplayText
@@ -46,7 +47,7 @@ fun GameScreen(
         Column(modifier = Modifier.fillMaxSize()) {
             Row(
                 modifier = Modifier
-                    .fillMaxWidth(0.5f)
+                    .fillMaxWidth(0.7f)
                     .fillMaxHeight(height)
                     .align(Alignment.CenterHorizontally),
                 horizontalArrangement = Arrangement.Center,
@@ -55,6 +56,7 @@ fun GameScreen(
                 DisplayText(
                     list = font,
                     text = data.question[currentQuestion.intValue],
+                    fontSize = 20.sp,
                     textAlign = TextAlign.Center
                 )
             }
