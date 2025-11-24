@@ -24,6 +24,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
@@ -38,7 +41,6 @@ import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 import fr.uparis.chenliu.projet.ui.viewmodel.TimeConfigViewModel
 import fr.uparis.chenliu.projet.ui.worker.WorkerReminder
-import kotlinx.coroutines.delay
 import java.util.concurrent.TimeUnit
 
 const val CHANNEL_ID = "mon_canal"
@@ -46,6 +48,15 @@ const val CHANNEL_ID = "mon_canal"
 class MenuActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+        // cacher les barres systems (mode immerssif)
+        val windowInsetsController =
+            WindowCompat.getInsetsController(window, window.decorView)
+        windowInsetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+
         createChannel(context = this)
         setContent {
             ProjetTheme {
@@ -69,7 +80,7 @@ fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        topBar = { TopBarMenu(model = model) },
+        topBar = { TopBarMenu(model = model, backStack = backStack) },
         bottomBar = { BottomBar(model = model, backStack = backStack) },
         snackbarHost = { SnackbarHost(hostState = snack) }
     )
@@ -116,14 +127,16 @@ fun DisplayText(
     text: String,
     fontSize: TextUnit = 16.sp,
     color: Color = Color.Black,
-    textAlign: TextAlign = TextAlign.Start
+    textAlign: TextAlign = TextAlign.Start,
+    modifier: Modifier = Modifier
 ) {
     Text(
         text = text,
         fontSize = (fontSize.value - list[1]).sp,
         color = color,
         fontFamily = FontFamily(Font(list[0])),
-        textAlign = textAlign
+        textAlign = textAlign,
+        modifier = modifier
     )
 }
 

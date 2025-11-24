@@ -4,25 +4,19 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Button
-import androidx.compose.material3.OutlinedTextFieldDefaults.contentPadding
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -50,10 +44,10 @@ fun LeaderboardScreen(model: MenuViewModel) {
         Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
             DisplayText(list = currentFont, text = "Classement", fontSize = 24.sp)
             LazyHorizontalGrid(
-                rows = GridCells.Fixed(3), // 3 lignes
+                rows = GridCells.Fixed(1),
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(150.dp),
+                    .height(50.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
 
@@ -63,7 +57,7 @@ fun LeaderboardScreen(model: MenuViewModel) {
                         if (currentSubject.value != subj) {
                             model.changeSubject(subj); changed.value = true
                         }
-                    }, modifier = Modifier.width(LocalWindowInfo.current.containerSize.width.dp/7)
+                    }, modifier = Modifier.width(LocalWindowInfo.current.containerSize.width.dp/5)
                     ) {
                         DisplayText(list = currentFont, text = subj, fontSize = 16.sp)
                     }

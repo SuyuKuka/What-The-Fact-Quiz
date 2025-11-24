@@ -33,17 +33,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
 import fr.uparis.chenliu.projet.navigation.Screen
 import fr.uparis.chenliu.projet.ui.quizz.QuizzActivity
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
-import kotlin.text.indexOf
 
 // pour load les subjects depuis la db, on est obligé de getIdentifier
 @SuppressLint("LocalContextResourcesRead", "DiscouragedApi")
@@ -192,7 +189,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 8.dp),
+                    .padding(bottom = 25.dp).padding(top = 25.dp),
                 horizontalArrangement = Arrangement.Center
             ) {
                 Button(

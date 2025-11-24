@@ -1,13 +1,10 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
-import android.R.attr.font
 import android.app.Application
-import android.content.Context
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.ui.platform.LocalResources
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import fr.uparis.chenliu.projet.R
@@ -17,7 +14,6 @@ import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 
@@ -182,7 +178,8 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         val bg = when(background.intValue) {
             1 -> R.drawable.b1
             2 -> R.drawable.b2
-            else -> R.drawable.b0
+            3 -> R.drawable.b0
+            else -> R.drawable.background_default_blurred
         }
         return bg
     }

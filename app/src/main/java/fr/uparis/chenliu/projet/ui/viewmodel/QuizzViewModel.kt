@@ -1,10 +1,6 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
-import android.R.attr.data
-import android.R.attr.font
 import android.app.Application
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
@@ -15,7 +11,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import fr.uparis.chenliu.projet.R
-
 import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
@@ -64,7 +59,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     // Quizz
     val subject = mutableStateOf("")
     var question = mutableStateListOf<String>()
-    val answers = mutableStateListOf<AnswerSummary>()
+    val textFieldQuestion = mutableStateOf("")
     val buildAnswer = mutableStateListOf("", "", "", "")
     var imageAnswer = mutableStateListOf("", "", "", "")
     val currentQuestion = mutableIntStateOf(0)
@@ -76,11 +71,11 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
 
     // loading des quiz
-    val data = Data(
-        listOf<String>().toMutableList(),
-        listOf<AnswerSummary>().toMutableList(),
-        listOf<Int>().toMutableList()
-    )
+    val data = mutableStateOf(Data(
+        question = listOf<String>().toMutableList(),
+        answers = listOf<AnswerSummary>().toMutableList(),
+        types = listOf<Int>().toMutableList()
+    ))
 
     // la partie
     val gameData = GameData(
@@ -96,9 +91,9 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
         this.subject.value = subject
         viewModelScope.launch {
-            data.question.clear()
-            data.answers.clear()
-            data.types.clear()
+            data.value.question.clear()
+            data.value.answers.clear()
+            data.value.types.clear()
 
             fetchQuizzData(difficulty, subject)
             loading.value = false
@@ -110,21 +105,31 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         // on fetch les data
         val currentDao = db.quizzDao()
         val allQuestion = currentDao.getQuestion(difficulty, subject)
-        for (i in 0..allQuestion.size-1) {
+        val newQuestions = mutableListOf<String>()
+        val newAnswers = mutableListOf<AnswerSummary>()
+        val newTypes = mutableListOf<Int>()
+
+        for (i in allQuestion.indices) {
             // question
-            data.question.add(allQuestion[i].question)
+            newQuestions.add(allQuestion[i].question)
             // type
-            data.types.add(allQuestion[i].type)
+            newTypes.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions =
-                if (data.types[i] == 0) {
+                if (allQuestion[i].type == 0) {
                     shuffle(currentAnswer)
                 } else {
                     currentAnswer.propositions
                 }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+            newAnswers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
+
+        data.value = Data(
+            question = newQuestions.toMutableList(),
+            answers = newAnswers.toMutableList(),
+            types = newTypes.toMutableList()
+        )
     }
 
     // permet de rendre les propositions aléatoire
@@ -192,7 +197,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun updateGame(answerList: List<String>, verify: List<String>, type: Int) {
         gameData.answerHistory.add(answerList.toList().toString())
-        gameData.questionHistory.add(data.question[currentQuestion.intValue]) // connaitre les réponses de l'user
+        gameData.questionHistory.add(data.value.question[currentQuestion.intValue]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
         calcScore(gameData = gameData, answerList = answerList, verify = verify, type = type)
         gameData.nbQuestion.intValue--      // reduire le nb de question
@@ -203,6 +208,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         if (currentQuestion.intValue == 9) { currentQuestion.intValue = 0 } else { currentQuestion.intValue++ }
         resetDragDrop()
         currentImage.intValue = 0
+        textFieldQuestion.value = ""
     }
 
     fun resetStats(gameData: GameData) {
@@ -214,6 +220,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.goodAnswer.clear()
         gameData.gameEnded.value = false
         gameData.time.doubleValue = 0.0
+        textFieldQuestion.value = ""
         resetDragDrop()
         currentQuestion.intValue = 0
         currentImage.intValue = 0
