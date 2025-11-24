@@ -88,7 +88,7 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
         } else {
             Column(modifier = Modifier.padding(innerPadding)) {
                 if (!gameData.gameEnded.value) {
-                    GameScreen(data)
+                    GameScreen(data.value)
                 } else {
                     ResultScreen(model.translateFont(), gameData)
                 }

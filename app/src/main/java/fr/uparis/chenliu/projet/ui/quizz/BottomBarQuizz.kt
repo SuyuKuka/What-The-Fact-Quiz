@@ -2,7 +2,6 @@ package fr.uparis.chenliu.projet.ui.quizz
 
 import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -12,7 +11,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -25,8 +23,9 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
     val font = model.translateFont()
     val activity = LocalActivity.current
     val alert = remember { mutableStateOf(false) }
-
-
+    val data = model.data.value
+    val type = data.types
+    val currentQuestion = model.currentQuestion.intValue
 
     BottomAppBar(
         containerColor = Color.DarkGray,
@@ -38,22 +37,12 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                 .padding(horizontal = 16.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-
-            if (model.data.types.isNotEmpty()) {
-                if (model.gameData.gameEnded.value) {
-                    Button(
-                        onClick = { activity?.finish() },
-                    ) {
-                        DisplayText(list = font, text = "Accueil")
-                    }
-                } else {
-                    DisplayText(list = font, text = "")
-                }
-            }
-            Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                DisplayText(list = font, text = "%.3fs".format(gameData.time.doubleValue))
-            }
             if (model.gameData.gameEnded.value) {
+                Button(
+                    onClick = { activity?.finish() },
+                ) {
+                    DisplayText(list = font, text = "Accueil")
+                }
                 Button(onClick = {
                     if (model.energy.intValue == 0) {
                         alert.value = true
@@ -61,12 +50,40 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                     }
                     model.resetStats(gameData)
                 }) {
-                    Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                        DisplayText(list = font, text = "Rejouer")
-                    }
+                    DisplayText(list = font, text = "Rejouer")
                 }
             } else {
-                DisplayText(list = font, text = "")
+                if (!type.isEmpty()) {
+                    if (type[currentQuestion] != 0) {
+                        Button(
+                            onClick = {
+                                val currentQuestionType = type[currentQuestion]
+                                when (currentQuestionType) {
+                                    1 -> { model.textFieldQuestion.value = "" }
+                                    2 -> { model.resetDragDrop() }
+                                    3, 4 -> { model.currentImage.intValue = 0 }
+                                }
+                            }
+                        ) {
+                            DisplayText(list = font, text = "Reset")
+                        }
+                        Button(
+                            onClick = {
+                                model.updateGame(
+                                    answerList = if (data.types[currentQuestion] == 1) {
+                                        listOf(model.textFieldQuestion.value)
+                                    } else {
+                                        model.buildAnswer
+                                    },
+                                    verify = data.answers[currentQuestion].answer.toList(),
+                                    type = type[currentQuestion]
+                                )
+                            }
+                        ) {
+                            DisplayText(list = font, text = "Valider")
+                        }
+                    }
+                }
             }
         }
     }
