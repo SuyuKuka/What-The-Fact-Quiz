@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
@@ -74,8 +75,9 @@ class MenuActivity : ComponentActivity() {
 fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
     val backStack = rememberNavBackStack(Screen.Home)
     val snack = remember { SnackbarHostState() }
+    val context = LocalContext.current
 
-    model.init(username)
+    model.init(username, context)
     DailyRemind()
 
     Scaffold(

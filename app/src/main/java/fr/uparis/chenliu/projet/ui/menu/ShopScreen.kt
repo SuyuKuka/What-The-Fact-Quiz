@@ -21,7 +21,7 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 fun ShopScreen(model: MenuViewModel) {
     val showAlertMonth = remember { mutableStateOf(false) }
     val showAlertYear = remember { mutableStateOf(false) }
-    val currentBackground = model.intToBackground()
+    val currentBackground = model.currentBackground
     val currentFont = model.intToFont()
     val titleAlert by remember {
         if (showAlertMonth.value) {
@@ -40,7 +40,7 @@ fun ShopScreen(model: MenuViewModel) {
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = currentBackground),
+            painter = painterResource(id = currentBackground.intValue),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop

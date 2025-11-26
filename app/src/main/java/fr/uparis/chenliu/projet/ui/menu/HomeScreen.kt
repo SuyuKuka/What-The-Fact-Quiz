@@ -70,7 +70,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     intent.putExtra("difficulty", selectedDiff.value)
     intent.putExtra("subject", selectedSubj.value)
 
-    val currentBackground = model.intToBackground()
+    val currentBackground = model.currentBackground
     val currentFont = model.intToFont()
 
     val sendNotification = {
@@ -108,7 +108,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = currentBackground),
+            painter = painterResource(id = currentBackground.intValue),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop

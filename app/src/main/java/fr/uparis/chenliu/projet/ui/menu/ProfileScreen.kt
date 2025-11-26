@@ -36,12 +36,12 @@ fun ProfileScreen(model: MenuViewModel) {
     val day = LocalDateTime.now().dayOfMonth
     val month = LocalDateTime.now().month.value
     val year = LocalDateTime.now().year
-    val currentBackground = model.intToBackground()
+    val currentBackground = model.currentBackground
     val currentFont = model.intToFont()
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = currentBackground),
+            painter = painterResource(id = currentBackground.intValue),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop

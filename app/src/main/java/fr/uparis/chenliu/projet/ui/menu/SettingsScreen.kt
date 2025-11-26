@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
@@ -38,14 +39,16 @@ fun SettingsScreen(model: MenuViewModel) {
     val update = { model.updateSettings(); model.saved.value = true }
     val selectedBackground = model.background
     val selectedFont = model.font
-    val currentBackground = model.intToBackground()
+    val currentBackground = model.currentBackground
     val currentFont = model.intToFont()
     val backgroundList = model.backgroundList.collectAsState()
     val fontList = model.fontList.collectAsState()
+    val context = LocalContext.current
+    val saved = model.saved
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = currentBackground),
+            painter = painterResource(id = currentBackground.intValue),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
@@ -59,14 +62,14 @@ fun SettingsScreen(model: MenuViewModel) {
                 DisplayText(list = currentFont, text = "Musique")
                 SliderManage(list = currentFont, value = model.music.floatValue) {
                     model.music.floatValue = it
-                    model.saved.value = false
+                    saved.value = false
                 }
             }
             Row {
                 DisplayText(list = currentFont, text = "Son")
                 SliderManage(list = currentFont, value = model.sound.floatValue) {
                     model.sound.floatValue = it
-                    model.saved.value = false
+                    saved.value = false
                 }
             }
             Row {
@@ -76,7 +79,7 @@ fun SettingsScreen(model: MenuViewModel) {
                     label = "Fond",
                     choice = selectedBackground.intValue,
                     onValueChange = { newValue ->
-                        selectedBackground.intValue = newValue; model.saved.value = false
+                        selectedBackground.intValue = newValue; model.updateCurrentBackground(context); saved.value = false
                     },
                     choiceList = backgroundList.value
                 )
@@ -88,7 +91,7 @@ fun SettingsScreen(model: MenuViewModel) {
                     label = "Police",
                     choice = selectedFont.intValue,
                     onValueChange = { newValue ->
-                        selectedFont.intValue = newValue; model.saved.value = false
+                        selectedFont.intValue = newValue; saved.value = false
                     },
                     choiceList = fontList.value
                 )
@@ -98,7 +101,7 @@ fun SettingsScreen(model: MenuViewModel) {
                 WriteField(
                     value = model.preferredTopics.value,
                     onValueChange = {
-                        model.preferredTopics.value = it; model.saved.value = false
+                        model.preferredTopics.value = it; saved.value = false
                     },
                     label = "Domaine préféré?",
                     modifier = Modifier.padding(start = 10.dp),

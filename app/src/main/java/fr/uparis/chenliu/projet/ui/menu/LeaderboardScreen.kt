@@ -25,7 +25,7 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
 @Composable
 fun LeaderboardScreen(model: MenuViewModel) {
-    val currentBackground = model.intToBackground()
+    val currentBackground = model.currentBackground
     val currentFont = model.intToFont()
     val username = model.usernameLeaderboard
     val score = model.score
@@ -36,7 +36,7 @@ fun LeaderboardScreen(model: MenuViewModel) {
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = currentBackground),
+            painter = painterResource(id = currentBackground.intValue),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop

@@ -42,6 +42,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val music = mutableFloatStateOf(0f)
     val sound = mutableFloatStateOf(0f)
     val background = mutableIntStateOf(0)
+    val currentBackground = mutableIntStateOf(R.drawable.background_default_blurred)
     val font = mutableIntStateOf(0)
     val preferredTopics = mutableStateOf("")
 
@@ -59,7 +60,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val subjectList = MutableStateFlow<List<String>>(emptyList())
     val subjectImageList = MutableStateFlow<List<String>>(emptyList())
 
-    fun init(username: String) {
+    fun init(username: String, context: Context) {
         this.username.value = username
         viewModelScope.launch {
             // init des themes
@@ -88,6 +89,8 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
                     fontList.value += decoNameList.value[i]
                 }
             }
+
+            updateCurrentBackground(context)
 
             while (true) {
                 getUsers()
@@ -183,22 +186,26 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun undoSettings() {
+    fun undoSettings(context: Context) {
         music.floatValue = settings.value!!.music
         sound.floatValue = settings.value!!.sound
         background.intValue = settings.value!!.background
         font.intValue = settings.value!!.font
         preferredTopics.value = settings.value!!.preferredTopics
+        updateCurrentBackground(context)
     }
 
-    fun intToBackground(context: Context): Int {
+    fun updateCurrentBackground(context: Context) {
+        if (decoPathList.value.isEmpty()) {
+            currentBackground.intValue = R.drawable.background_default_blurred
+            return
+        }
         val resources = context.resources
-        val bg = resources.getIdentifier(
+        currentBackground.intValue = resources.getIdentifier(
             decoPathList.value[background.intValue],
             "drawable",
             context.packageName
         )
-        return bg
     }
 
     fun intToFont(): List<Int> {
