@@ -19,4 +19,7 @@ interface DecoDao {
 
     @Query("SELECT type FROM DecoEntity")
     suspend fun getAllDecoTypes(): List<Int>
+
+    @Query("SELECT diff FROM DecoEntity")
+    suspend fun getAllDecoDiff(): List<Int>
 }

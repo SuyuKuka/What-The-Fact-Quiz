@@ -30,12 +30,14 @@ fun TopBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                     .fillMaxWidth(),
                 contentAlignment = Alignment.Center
             ) {
-                DisplayText(
-                    list = font,
-                    text = "Question ${currentQuestion.intValue + 1}",
-                    fontSize = 24.sp,
-                    color = Color.Black
-                )
+                if (!model.gameData.gameEnded.value) {
+                    DisplayText(
+                        list = font,
+                        text = "Question ${currentQuestion.intValue + 1}",
+                        fontSize = 24.sp,
+                        color = Color.Black
+                    )
+                }
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),

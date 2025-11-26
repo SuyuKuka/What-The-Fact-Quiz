@@ -3,47 +3,57 @@
     {
       "name": "Default",
       "path": "background_default_blurred",
-      "type": 0
+      "type": 0,
+      "diff": 0
     },
     {
       "name": "Fond 1",
       "path": "b0",
-      "type": 0
+      "type": 0,
+      "diff": 0
+
     },
     {
       "name": "Fond 2",
       "path": "b1",
-      "type": 0
+      "type": 0,
+      "diff": 0
     },
     {
       "name": "Fond 3",
       "path": "b2",
-      "type": 0
+      "type": 0,
+      "diff": 0
     },
     {
       "name": "Default",
-      "path": "R.font.default",
-      "type": 1
+      "path": "default",
+      "type": 1,
+      "diff": 0
     },
     {
       "name": "Game",
-      "path": "R.font.game",
-      "type": 1
+      "path": "game",
+      "type": 1,
+      "diff": -1
     },
     {
       "name": "Typewritter",
-      "path": "R.font.typewritter",
-      "type": 1
+      "path": "typewritter",
+      "type": 1,
+      "diff": 1
     },
     {
       "name": "Pixel",
-      "path": "R.font.pixel",
-      "type": 1
+      "path": "pixel",
+      "type": 1,
+      "diff": -5
     },
     {
       "name": "Pokemon",
-      "path": "R.font.pokemon",
-      "type": 1
+      "path": "pokemon",
+      "type": 1,
+      "diff": -2
     }
   ]
 }

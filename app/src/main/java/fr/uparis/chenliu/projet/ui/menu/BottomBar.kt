@@ -19,7 +19,7 @@ fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     val current = backStack.last()
     var alert by remember { mutableStateOf(false) }
     var destination by remember { mutableStateOf<Screen?>(null) }
-    val currentFont = model.intToFont()
+    val currentFont = model.currentFont
     val context = LocalContext.current
 
     NavigationBar {
@@ -52,7 +52,7 @@ fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             alert = false
         }
         Alert(
-            list = currentFont,
+            list = currentFont.value,
             onConfirm = {
                 if (current == Screen.Settings) {
                     model.updateSettings()

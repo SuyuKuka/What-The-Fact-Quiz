@@ -37,7 +37,7 @@ fun ProfileScreen(model: MenuViewModel) {
     val month = LocalDateTime.now().month.value
     val year = LocalDateTime.now().year
     val currentBackground = model.currentBackground
-    val currentFont = model.intToFont()
+    val currentFont = model.currentFont
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
@@ -52,15 +52,15 @@ fun ProfileScreen(model: MenuViewModel) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             DisplayText(
-                list = currentFont,
+                list = currentFont.value,
                 text = "PROFILE",
                 fontSize = 24.sp,
                 textAlign = TextAlign.Center
             )
             Row {
-                DisplayText(list = currentFont, text = "Pseudo ")
+                DisplayText(list = currentFont.value, text = "Pseudo ")
                 UnderlineTextField(
-                    list = currentFont,
+                    list = currentFont.value,
                     value = username,
                     onValueChange = { if (it.length <= 16) model.username.value = it; model.saved.value = false },
                     onDone = { model.updateUsername(); model.saved.value = true }
@@ -70,25 +70,25 @@ fun ProfileScreen(model: MenuViewModel) {
                 val remaining =
                     (endDate[2].toInt() - year) * 12 * 30 + (endDate[1].toInt() - month) * 30 + (endDate[0].toInt() - day)
                 DisplayText(
-                    list = currentFont,
+                    list = currentFont.value,
                     text = "Abonné 👑",
                     textAlign = TextAlign.Center
                 )
                 DisplayText(
-                    list = currentFont,
+                    list = currentFont.value,
                     text = "Temps restant : ${remaining}j",
                     textAlign = TextAlign.Center
                 )
             }
             if (preferredTopics != "") {
                 DisplayText(
-                    list = currentFont,
+                    list = currentFont.value,
                     text = preferredTopics,
                     textAlign = TextAlign.Center
                 )
             }
             Button(onClick = { model.updateUsername(); model.saved.value = true }
-            ) { DisplayText(list = currentFont, text = "Enregistrer") }
+            ) { DisplayText(list = currentFont.value, text = "Enregistrer") }
         }
     }
 }

@@ -31,6 +31,7 @@ class JsonReader {
     class DecoData(
         val name: String,
         val path: String,
-        val type: Int
+        val type: Int,
+        val diff: Int
     )
 }
