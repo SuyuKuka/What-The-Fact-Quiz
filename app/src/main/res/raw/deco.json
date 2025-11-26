@@ -1,0 +1,49 @@
+{
+  "deco": [
+    {
+      "name": "Default",
+      "path": "R.drawable.background_default_blurred",
+      "type": 0
+    },
+    {
+      "name": "Fond 1",
+      "path": "R.drawable.b0",
+      "type": 0
+    },
+    {
+      "name": "Fond 2",
+      "path": "R.drawable.b1",
+      "type": 0
+    },
+    {
+      "name": "Fond 3",
+      "path": "R.drawable.b2",
+      "type": 0
+    },
+    {
+      "name": "Default",
+      "path": "R.font.default",
+      "type": 1
+    },
+    {
+      "name": "Game",
+      "path": "R.font.game",
+      "type": 1
+    },
+    {
+      "name": "Typewritter",
+      "path": "R.font.typewritter",
+      "type": 1
+    },
+    {
+      "name": "Pixel",
+      "path": "R.font.pixel",
+      "type": 1
+    },
+    {
+      "name": "Pokemon",
+      "path": "R.font.pokemon",
+      "type": 1
+    }
+  ]
+}

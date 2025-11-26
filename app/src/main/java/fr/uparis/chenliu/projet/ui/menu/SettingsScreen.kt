@@ -1,6 +1,7 @@
 package fr.uparis.chenliu.projet.ui.menu
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -14,6 +15,7 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Slider
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -38,6 +40,8 @@ fun SettingsScreen(model: MenuViewModel) {
     val selectedFont = model.font
     val currentBackground = model.intToBackground()
     val currentFont = model.intToFont()
+    val backgroundList = model.backgroundList.collectAsState()
+    val fontList = model.fontList.collectAsState()
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
@@ -74,7 +78,7 @@ fun SettingsScreen(model: MenuViewModel) {
                     onValueChange = { newValue ->
                         selectedBackground.intValue = newValue; model.saved.value = false
                     },
-                    choiceList = model.backgroundList
+                    choiceList = backgroundList.value
                 )
             }
             Row {
@@ -86,7 +90,7 @@ fun SettingsScreen(model: MenuViewModel) {
                     onValueChange = { newValue ->
                         selectedFont.intValue = newValue; model.saved.value = false
                     },
-                    choiceList = model.fontList
+                    choiceList = fontList.value
                 )
             }
             Row {
@@ -98,6 +102,7 @@ fun SettingsScreen(model: MenuViewModel) {
                     },
                     label = "Domaine préféré?",
                     modifier = Modifier.padding(start = 10.dp),
+                    font = model.intToFont(),
                     fontSize = 18.sp,
                     onDone = { update() },
                     onlyNb = false
@@ -139,6 +144,11 @@ fun ChoiceField(model: MenuViewModel, label: String, choice: Int, onValueChange:
             readOnly = true,
             value = text,
             onValueChange = { },
+            colors = ExposedDropdownMenuDefaults.textFieldColors(
+                unfocusedContainerColor = Color.White,
+                focusedContainerColor = Color.White,
+                disabledContainerColor = Color.White
+            ),
             label = { DisplayText(list = currectFont, text = label) },
             trailingIcon = {
                 ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
@@ -151,7 +161,8 @@ fun ChoiceField(model: MenuViewModel, label: String, choice: Int, onValueChange:
         )
         ExposedDropdownMenu(
             expanded = expanded,
-            onDismissRequest = { expanded = false }
+            onDismissRequest = { expanded = false },
+            modifier = Modifier.background(Color.White)
         ) {
             choiceList.forEachIndexed { index, c ->
                 DropdownMenuItem(
