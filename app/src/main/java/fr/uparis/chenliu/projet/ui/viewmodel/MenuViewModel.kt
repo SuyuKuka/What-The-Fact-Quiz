@@ -142,7 +142,10 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
 
     fun updateUsername() {
         viewModelScope.launch {
-            db.usersDao().updateUsername(userId = user.value!!.userId, username = username.value)
+            if (username.value.trim() == "") {
+                username.value = "Joueur"
+            }
+            db.usersDao().updateUsername(userId = user.value!!.userId, username = username.value.trim())
             getUsers()
         }
     }

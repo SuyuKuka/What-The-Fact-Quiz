@@ -47,7 +47,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         loading.value = true
         viewModelScope.launch {
             if (!db.usersDao().isExist()) {
-                if (username.value == "") {
+                if (username.value.trim() == "") {
                     username.value = "Joueur"
                 }
                 initSubject(context)
