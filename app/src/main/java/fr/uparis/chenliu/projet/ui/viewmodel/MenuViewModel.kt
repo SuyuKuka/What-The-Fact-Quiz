@@ -1,6 +1,7 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
+import android.content.Context
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
@@ -190,14 +191,13 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         preferredTopics.value = settings.value!!.preferredTopics
     }
 
-    fun intToBackground(): Int {
-        val bg = when(background.intValue) {
-            0 -> R.drawable.background_default_blurred
-            1 -> R.drawable.b0
-            2 -> R.drawable.b1
-            3 -> R.drawable.b2
-            else -> R.drawable.background_default_blurred
-        }
+    fun intToBackground(context: Context): Int {
+        val resources = context.resources
+        val bg = resources.getIdentifier(
+            decoPathList.value[background.intValue],
+            "drawable",
+            context.packageName
+        )
         return bg
     }
 

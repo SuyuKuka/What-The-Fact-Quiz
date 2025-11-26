@@ -2,22 +2,22 @@
   "deco": [
     {
       "name": "Default",
-      "path": "R.drawable.background_default_blurred",
+      "path": "background_default_blurred",
       "type": 0
     },
     {
       "name": "Fond 1",
-      "path": "R.drawable.b0",
+      "path": "b0",
       "type": 0
     },
     {
       "name": "Fond 2",
-      "path": "R.drawable.b1",
+      "path": "b1",
       "type": 0
     },
     {
       "name": "Fond 3",
-      "path": "R.drawable.b2",
+      "path": "b2",
       "type": 0
     },
     {
