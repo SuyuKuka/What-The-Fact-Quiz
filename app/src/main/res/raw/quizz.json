@@ -8960,6 +8960,477 @@
       "answer": ["Stratus", "Cirrus", "Cumulus", "Cumulonimbus"],
       "difficulty": "Difficile",
       "subject": 6
+    },
+    {
+      "type": 1,
+      "question": "Quel ingrédient principal utilise-t-on pour préparer le guacamole traditionnel ?",
+      "propositions": [[]],
+      "answer": ["Avocat"],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 1,
+      "question": "De quel pays provient le fromage Parmigiano Reggiano ?",
+      "propositions": [[]],
+      "answer": ["Italie"],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 1,
+      "question": "Combien de minutes faut-il généralement pour cuire un œuf dur ?",
+      "propositions": [[]],
+      "answer": ["10"],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+
+      {
+        "type": 1,
+        "question": "À quelle température en degrés Celsius le sucre commence-t-il à caraméliser ?",
+        "propositions": [[]],
+        "answer": ["170"],
+        "difficulty": "Moyen",
+        "subject": 3
+      },
+      {
+        "type": 1,
+        "question": "Combien d'épices principales compose traditionnellement le mélange indien Garam Masala ?",
+        "propositions": [[]],
+        "answer": ["7"],
+        "difficulty": "Moyen",
+        "subject": 3
+      },
+      {
+        "type": 1,
+        "question": "Combien de degrés d’alcool contient habituellement un saké japonais standard ?",
+        "propositions": [[]],
+        "answer": ["15"],
+        "difficulty": "Moyen",
+        "subject": 3
+      }
+
+    ,
+      {
+        "type": 1,
+        "question": "Combien de jours faut-il environ pour produire un jambon ibérique de bellota, de l’élevage à la fin de l’affinage ?",
+        "propositions": [[]],
+        "answer": ["1095"],
+        "difficulty": "Difficile",
+        "subject": 3
+      },
+      {
+        "type": 1,
+        "question": "À combien de mètres d’altitude se situent les vignobles de la région de Salta en Argentine, parmi les plus élevés du monde ?",
+        "propositions": [[]],
+        "answer": ["3000"],
+        "difficulty": "Difficile",
+        "subject": 3
+      },
+      {
+        "type": 1,
+        "question": "Combien de fromages AOP la France compte-t-elle officiellement ?",
+        "propositions": [[]],
+        "answer": ["46"],
+        "difficulty": "Difficile",
+        "subject": 3
+      },
+    {
+      "type": 2,
+      "question": "Classez ces fruits par ordre de douceur, du moins sucré au plus sucré.",
+      "propositions": [
+        ["Citron", "https://www.jardiner-malin.fr/wp-content/uploads/2019/12/Citron-bienfaits-vertu.jpg"],
+        ["Pomme", "https://i0.wp.com/lalignegourmande.fr/wp-content/uploads/2025/01/pomme-rouge.jpg?resize=1024%2C1024&ssl=1"],
+        ["Banane", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbgdJ5RnQe9bPm8jhKcmlV3FzGEtk_OhheqQ&s"],
+        ["Mangue", "https://www.lanutrition.fr/sites/default/files/ressources/mangue.jpg"]
+      ],
+      "answer": ["Citron", "Pomme", "Banane", "Mangue"],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 2,
+      "question": "Classez ces fromages par ordre d’intensité de goût, du plus doux au plus fort.",
+      "propositions": [
+        ["Mozzarella", "https://lapetitebette.com/wp-content/uploads/2024/03/mozzarella.png"],
+        ["Comté", "https://fromagerie-artisanale-jura.fr/72-large_default/customizable-mug.jpg"],
+        ["Roquefort", "https://www.fromagerieantony.fr/wp-content/uploads/2023/09/Roquefort.jpg"],
+        ["Munster", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMgWqqZfq3fvQgXJQeHh0eQBKoZQo10E20SQ&s"]
+      ],
+      "answer": ["Mozzarella", "Comté", "Munster", "Roquefort"],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 2,
+      "question": "Classez ces herbes aromatiques par intensité de parfum, de la plus légère à la plus forte.",
+      "propositions": [
+        ["Persil", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQns5lLN8gnnUx7EVuE5BANsFWNk6R91eTaFQ&s"],
+        ["Ciboulette", "https://res.cloudinary.com/hv9ssmzrz/image/fetch/c_fill,f_auto,h_976,q_auto,w_1300/https://images-ca-1-0-1-eu.s3-eu-west-1.amazonaws.com/photos/original/439/ciboulette_Fotolia_21080676_S.jpg"],
+        ["Basilic", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJz-P0GKZtaGC3gSo1c5oGhbhCi4RArYDwcQ&s"],
+        ["Menthe", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG6jwthJym6s47UvhrKq2fpu-U-VM4kR6xgw&s"]
+      ],
+      "answer": ["Persil", "Ciboulette", "Basilic", "Menthe"],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 2,
+      "question": "Classez ces types de riz selon leur durée de cuisson moyenne, du plus rapide au plus long.",
+      "propositions": [
+        ["Riz basmati", "https://images.radio-canada.ca/v1/alimentation/recette/1x1/riz-basmati-recettes-mordu.jpg"],
+        ["Riz arborio", "https://rizpresto.ma/wp-content/uploads/2023/11/Arborio-riz.jpg"],
+        ["Riz sauvage", "https://traiteur-leclercpontlabbe.fr/cdn/shop/products/Rizsauvage-compresse.jpg?v=1673949090"],
+        ["Riz complet", "https://locavor.fr/data/produits/6/128033/riz-complet-inclus-consigne-128033-1602258481-1.jpg"]
+      ],
+      "answer": ["Riz basmati", "Riz arborio", "Riz complet", "Riz sauvage"],
+      "difficulty": "Moyen",
+      "subject": 3
+    },
+    {
+      "type": 2,
+      "question": "Classez ces huiles culinaires par point de fumée, de la plus faible à la plus élevée.",
+      "propositions": [
+        ["Huile de lin", "https://cdn.aroma-zone.com/d_default_placeholder.png/c_fit,q_auto,f_auto,w_893/b_none/v1/cf/0xsz2r7o7t3z/yGN8XgG7md4Hphd7Izhn8/41c3d1c7081476b6811eb191282b2e7e/AdobeStock_216023079.jpeg"],
+        ["Huile d’olive", "https://cdn.shopify.com/s/files/1/0464/2091/8438/articles/OLIVE.png?v=1612884649"],
+        ["Beurre clarifié (ghee)", "https://www.currycoco.fr/wp-content/uploads/2021/10/ghee_image-scaled.jpg"],
+        ["Huile d’avocat", "https://www.lanutrition.fr/sites/default/files/ressources/huile_avocat.jpg"]
+      ],
+      "answer": ["Huile de lin", "Huile d’olive", "Beurre clarifié (ghee)", "Huile d’avocat"],
+      "difficulty": "Moyen",
+      "subject": 3
+    },
+    {
+      "type": 2,
+      "question": "Classez ces modes de cuisson selon la température moyenne utilisée, de la plus basse à la plus haute.",
+      "propositions": [
+        ["Cuisson sous-vide","https://foodsaver.fr/wp-content/uploads/sites/2/2020/03/sous-vide.jpg"],
+        ["Pocher","https://images-ca-1-0-1-eu.s3-eu-west-1.amazonaws.com/photos/original/395/lexique-pocher-3000x2000.jpg"],
+        ["Four traditionnel", "https://fourabois.eu/img/cms/Blog/four-a-pain-a-lyon.jpg"],
+        ["Grill", "https://www.kikkoman.fr/fileadmin/_processed_/a/2/csm_Blog_onFIre-BBQ_Header_Desktop_046d278675.webp"]
+      ],
+      "answer": ["Cuisson sous-vide", "Pocher", "Four traditionnel", "Grill"],
+      "difficulty": "Moyen",
+      "subject": 3
+    },
+    {
+      "type": 2,
+      "question": "Classez ces techniques de cuisine moléculaire selon la température d’exécution, de la plus basse à la plus élevée.",
+      "propositions": [
+        ["Sphérification", "https://www.cuisine-innovante.fr/wp-content/uploads/2015/08/Spherification-de-Mojito1.jpg"],
+        ["Cuisson sous azote liquide", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN28Cyi1Imi0-VoyuF8pqBJ8lg-dkoPcWLvw&s"],
+        ["Sous-vide à 65°C", "https://www.machine-sous-vide.com/img/cms/Sac%20sous%20vide/Sacs%20sous%20vide%20Politec/sac%20sous%20vide%20thermoretractable.jpg"],
+        ["Caramélisation","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Iy3nUmN4joReM5UGZy6u9pLTVbc6Zk5tNA&s"]
+      ],
+      "answer": ["Cuisson sous azote liquide", "Sphérification", "Sous-vide à 65°C", "Caramélisation"],
+      "difficulty": "Difficile",
+      "subject": 3
+    },
+    {
+      "type": 2,
+      "question": "Classez ces variétés de truffes selon leur valeur commerciale moyenne, de la moins chère à la plus chère.",
+      "propositions": [
+        ["Truffe d’été","https://laumontshop.fr/cdn/shop/products/TRUFA-VERANO-2.jpg?v=1623233849&width=416"],
+        ["Truffe de Bourgogne","https://www.truffe-plantin.com/img/cms/tuber-aestivum-caracteristiques.jpg"],
+        ["Truffe noire du Périgord","https://truffe-alena.com/wp-content/uploads/2019/08/TRUFFE-NOIRE-1ERE-1-scaled.jpg"],
+        ["Truffe blanche d’Alba","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYOOEHEg46myblai5uKq1xjbeM8jop3PqDSg&s"]
+      ],
+      "answer": ["Truffe d’été", "Truffe de Bourgogne", "Truffe noire du Périgord", "Truffe blanche d’Alba"],
+      "difficulty": "Difficile",
+      "subject": 3
+    },
+    {
+      "type": 2,
+      "question": "Classez ces cépages selon leur maturité moyenne à la vendange, du plus précoce au plus tardif.",
+      "propositions": [
+        ["Chardonnay","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX5FHjUZ2OSvcJXgiS6n2MPOZcMX4UMNeG_g&s"],
+        ["Pinot noir","https://vin-weck.fr/wp-content/uploads/2020/04/sans-titre-339-scaled.jpg"],
+        ["Cabernet franc","https://garniere.com/wp-content/uploads/2020/05/Cabernet-Franc-Rouge.jpg"],
+        ["Cabernet sauvignon","https://cdn.prod.website-files.com/66046fe6dc39fafe5e90d16a/679f91a26fc515e0dac5e874_Cabernet-Sauvignon-Comparison.webp"]
+      ],
+      "answer": ["Chardonnay", "Pinot noir", "Cabernet franc", "Cabernet sauvignon"],
+      "difficulty": "Difficile",
+      "subject": 3
+    },
+    {
+      "type": 3,
+      "question": "Trois légumes sont déjà classés du plus petit au plus grand, où faut-il placer la Courgette ?",
+      "propositions": [
+        ["Radis","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoe2N3TUSpScNTaiaSi6YNZo0EtkoIoc30w1FMuKJVRT7mOA1uAbDa-SgoiiPoK4G5vx5UiV5Us9xk-MtkljZutlw285GylUhG2CLWFHc&s=10"],
+        ["Carotte","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDGIyIfzD7ib04E62EiowkzENLL-UNbqZqg&s"],
+        ["Potiron","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3r944pCiQ2662blgyxhX4ozB5vtGEOLOnMg&s"],
+        ["Courgette","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt_uSmR5COGJJG_UnznMY1q9DTY9QYy1eb2g&s"]
+      ],
+      "answer": ["Radis", "Carotte", "Courgette", "Potiron"],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 3,
+      "question": "Trois fruits sont déjà classés du plus acide au moins acide, où faut-il placer la Pomme ?",
+      "propositions": [
+        ["Citron","https://img-3.journaldesfemmes.fr/qbLBmPHJXgIJJGm5sLtu8kiVhBU=/1500x/smart/dc2b97c0686d4a5381e821419384be1f/ccmcms-jdf/26059822.jpg"],
+        ["Orange","https://img-3.journaldesfemmes.fr/a5LFTZ3qU2fUVOmwIVKDJawBJXA=/1500x/smart/83c0e4f55dd846dea2be0be27e715dcd/ccmcms-jdf/10662446.jpg"],
+        ["Banane","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQernCk56sN5EhUnLtHpiVNHHIJlW8hcC9TnA&s"],
+        ["Pomme","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfarAFccmDz22ZlfrL_vWW9Rxja-7INLgIRA&s"]
+      ],
+      "answer": ["Citron", "Orange", "Pomme", "Banane"],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 3,
+      "question": "Trois types de pain sont déjà classés du plus petit au plus grand, où faut-il placer la Baguette ?",
+      "propositions": [
+        ["Petit pain","https://odelices.ouest-france.fr/images/recettes/2016/petits_pains.jpg"],
+        ["Pain de mie","https://cuisine.nessma.tv/uploads/7/2021-02/22069af2f47bf8aac956c492b33b287c.png"],
+        ["Fougasse","https://images.radio-canada.ca/v1/alimentation/recette/16x9/ithq-fougasse-lardons.jpg"],
+        ["Baguette","https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/B10F0941-3518-440D-A69F-72EFF5F7826B/Derivates/D5691ACE-1B10-42D8-8364-11402524A36D.jpg"]
+      ],
+      "answer": ["Petit pain", "Pain de mie", "Baguette", "Fougasse"],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 3,
+      "question": "Trois fromages sont déjà classés du moins salé au plus salé, où faut-il placer le Roquefort ?",
+      "propositions": [
+        ["Mozzarella","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYLBZYnvfpZoKijgU4PXLiJ-D2JpJgAy5cA&s"],
+        ["Comté","https://www.comte.com/wp-content/uploads/2020/10/comte-produit.png"],
+        ["Gouda","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB9i0tyTUFWJnZCJ9OADSx_-xrF8cjFK_FoQ&s"],
+        ["Roquefort","https://www.fromagerieantony.fr/wp-content/uploads/2023/09/Roquefort.jpg"]
+      ],
+      "answer": ["Mozzarella", "Comté", "Gouda", "Roquefort"],
+      "difficulty": "Moyen",
+      "subject": 3
+    },
+    {
+      "type": 3,
+      "question": "Trois épices sont déjà classées du moins piquante au plus piquante, où faut-il placer le Piment de Cayenne ?",
+      "propositions": [
+        ["Paprika","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3bX2_x2B9monai-P63eg9WRfZhkFAaSaVPg&s"],
+        ["Poivre noir","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzMk63eUOn0cXZ5Zqm2EOvfcV6otk6FMOpZw&s"],
+        ["Gingembre","https://produits.bienmanger.com/34571-0w470h470_Gingembre_Bio.jpg"],
+        ["Piment de Cayenne","https://www.willemsefrance.fr/cdn/shop/files/HOR_000420_1_1712649472342.jpg?v=1763558978"]
+      ],
+      "answer": ["Paprika", "Gingembre", "Poivre noir", "Piment de Cayenne"],
+      "difficulty": "Moyen",
+      "subject": 3
+    },
+    {
+      "type": 3,
+      "question": "Trois types de chocolat sont déjà classés du moins sucré au plus sucré, où faut-il placer le chocolat au lait ?",
+      "propositions": [
+        ["Chocolat noir 85%","https://www.biocoop.fr/media/catalog/product/3/9/3969914156-3760121219732-biocoop-chocolat_noir_85_100g-bc4124.jpeg?quality=80&bg-color=255,255,255&fit=bounds&height=460&width=460&canvas=460:460"],
+        ["Chocolat noir 70%","https://www.lindt.fr/media/catalog/product/3/5/352104-lindt-dessert-tablette-noir-intense-70_-cacao-200g-pi.png?quality=80&fit=bounds&height=700&width=700&canvas=700:700"],
+        ["Chocolat blanc","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlVAirqC7yphDTH6dFJjlljuqgq5lqgKQSnw&s"],
+        ["Chocolat au lait","https://www.lindt.fr/media/catalog/product/5/6/5680f9e0327063389e3ba10e7447335f031fd3a647c45db59096d43c2a86ac1b.png?quality=80&fit=bounds&height=700&width=700&canvas=700:700"]
+      ],
+      "answer": ["Chocolat noir 85%", "Chocolat noir 70%", "Chocolat au lait", "Chocolat blanc"],
+      "difficulty": "Moyen",
+      "subject": 3
+    },
+    {
+      "type": 3,
+      "question": "Trois vins rouges sont déjà classés du moins tannique au plus tannique, où faut-il placer le Cabernet Sauvignon ?",
+      "propositions": [
+        ["Pinot Noir","https://vin-weck.fr/wp-content/uploads/2020/04/sans-titre-339-scaled.jpg"],
+        ["Merlot","https://www.vinello.fr/media/image/9c/37/fd/merlot-gallo-family-glas.png"],
+        ["Syrah","https://nosvignes.fr/wp-content/uploads/2020/09/Syrah-Seduction-ok-1-scaled.jpg"],
+        ["Cabernet Sauvignon","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhfMrW7kbN7VcEaoOpahnYGfr_bQIP_3sUKw&s"]
+      ],
+      "answer": ["Pinot Noir", "Merlot", "Syrah", "Cabernet Sauvignon"],
+      "difficulty": "Difficile",
+      "subject": 3
+    },
+    {
+      "type": 3,
+      "question": "Trois variétés de café sont déjà classées du moins corsé au plus corsé, où faut-il placer le Robusta ?",
+      "propositions": [
+        ["Arabica doux","https://cafebogota.fr/569-medium_default/arabica-doux.jpg"],
+        ["Arabica standard","https://www.coffee-spirit.maxicoffee.com/wp-content/uploads/2024/02/dou-vient-le-cafe-arabica.jpg"],
+        ["Arabica intense","https://raja.scene7.com/is/image/Raja/products/maison-caf-caf-moulu-or-intense-arabica-sachet-250-g_22380-00J.jpg?template=TemplatePictoImage&$ImageMain=asset3376140&$PictoRight=NoPicto&$PictoLeft=NoPicto&resMode=sharp2&op_usm=1.75,0.3,2,0"],
+        ["Robusta","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxt-El0ZQmAUZ3riUPOz5l3dfF5OJ32_MwOw&s"]
+      ],
+      "answer": ["Arabica doux", "Arabica standard", "Arabica intense", "Robusta"],
+      "difficulty": "Difficile",
+      "subject": 3
+    },
+    {
+      "type": 3,
+      "question": "Trois huiles d’olive sont déjà classées par acidité du plus faible au plus élevé, où faut-il placer une huile extra-vierge de première pression ?",
+      "propositions": [
+        ["Huile de pépins de raisin","https://i-sam.unimedias.fr/2023/03/31/huile-pepins-raisin.jpeg?auto=format,compress&cs=tinysrgb&ixlib=php-4.1.0&w=1200"],
+        ["Huile d’olive raffinée","https://tramier.fr/app/uploads/2023/05/TRAMIER-MHO-SAVOUREUSE-1L-724x1024.png"],
+        ["Huile d’olive vierge","https://media.carrefour.fr/medias/39e2ca3ff01b3996aa9661faaad9f4fc/p_1500x1500/3270190008262-0.jpg"],
+        ["Huile d’olive extra-vierge de première pression","https://bien-stocker.fr/cdn/shop/files/AilFraiscopie_3a57a083-21a6-466c-bd70-66320d6824cd_700x700.webp?v=1700648968"]
+      ],
+      "answer": ["Huile de pépins de raisin", "Huile d’olive raffinée", "Huile d’olive vierge", "Huile d’olive extra-vierge de première pression"],
+      "difficulty": "Difficile",
+      "subject": 3
+    },
+    {
+      "type": 4,
+      "question": "Classez ces étapes de la préparation d’un gâteau au chocolat dans l’ordre chronologique correct.",
+      "propositions": [
+        ["Préchauffer le four","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbH4YtKweoQSwqNfZtFhPRnSp3x7f_-BZVUw&s"],
+        ["Verser la pâte dans le moule","https://c8.alamy.com/zoomsfr/9/26d98b28fc73401cac5620df6b784da4/2cafmh9.jpg"],
+        ["Mélanger le sucre et le beurre","https://www.jonathanfrank.fr/wp-content/uploads/2020/07/M%C3%A9langer-les-sucre-et-le-beurre-ramoli.jpg"],
+        ["Ajouter les œufs et la farine","https://static.chefnini.com/wp-content/uploads/2015/11/oeuf.jpg"]
+      ],
+      "answer": [
+        "Mélanger le sucre et le beurre",
+        "Ajouter les œufs et la farine",
+        "Préchauffer le four",
+        "Verser la pâte dans le moule"
+      ],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 4,
+      "question": "Classez ces événements de l’histoire de la gastronomie dans l’ordre chronologique.",
+      "propositions": [
+        ["Invention de la conserve par Nicolas Appert","https://www.mangeonsbien.com/wp-content/uploads/2020/05/inventions_inventors_38-600x455.jpg"],
+        ["Introduction de la pomme de terre en Europe","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Mgtkn6-6gwZxS9X9Xk-LnmO5Nap5SQ9Pdw&s"],
+        ["Ouverture du premier restaurant à Paris","https://media.ouest-france.fr/v1/pictures/4bc5c64e7f9ed2b5814c61082f7fa97e-28740953.jpg?width=1260&client_id=eds&sign=6884177d18a985ef65eb325561393a2d8fc82c4e39d30a57aa6a58491a731c43"],
+        ["Publication du premier livre de cuisine connu","https://www.le-livre.fr/photos/RO4/RO40278907.jpg"]
+      ],
+      "answer": [
+        "Publication du premier livre de cuisine connu",
+        "Introduction de la pomme de terre en Europe",
+        "Invention de la conserve par Nicolas Appert",
+        "Ouverture du premier restaurant à Paris"
+      ],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 4,
+      "question": "Classez ces innovations culinaires majeures dans l’ordre chronologique.",
+      "propositions": [
+        ["Invention de la mayonnaise","https://www.leanature.com/media/amasty/blog/cache/7/6/767/565/767_565_post_image_mayo.jpg"],
+        ["Introduction du café en Europe","https://www.taurillon.org/local/cache-vignettes/L1200xH630/54f3796f90b1456b43a1aac5ded7f6-0eee1.jpg"],
+        ["Début de la production industrielle de chocolat","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlixfg6_lEmBneFibrteT3b8W0jF0SeoSCOQ&s"],
+        ["Création de la première école de cuisine en France","https://ehne.fr/sites/default/files/illustrations-documentaires/hotelerie%20besancon.jpg"]
+      ],
+      "answer": [
+        "Introduction du café en Europe",
+        "Invention de la mayonnaise",
+        "Création de la première école de cuisine en France",
+        "Début de la production industrielle de chocolat"
+      ],
+      "difficulty": "Facile",
+      "subject": 3
+    },
+    {
+      "type": 4,
+      "question": "Classez ces plats emblématiques européens selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["Ratatouille","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbt7_pM9CZxL57oWbcYR5_AEKMS4Gvi0nYQ&s"],
+        ["Bouillabaisse","https://lacuisinedegeraldine.fr/wp-content/uploads/2023/07/Bouillabaisse-116.jpg"],
+        ["Coq au vin","https://lacuisinedegeraldine.fr/wp-content/uploads/2025/09/coq-au-vin-10-scaled.jpg"],
+        ["Quiche Lorraine","https://assets.afcdn.com/recipe/20221010/135915_w1024h1024c1cx999cy749cxt0cyt0cxb1999cyb1499.jpg"]
+      ],
+      "answer": [
+        "Bouillabaisse",
+        "Coq au vin",
+        "Ratatouille",
+        "Quiche Lorraine"
+      ],
+      "difficulty": "Moyen",
+      "subject": 3
+    },
+    {
+      "type": 4,
+      "question": "Classez ces innovations culinaires françaises par ordre chronologique, du plus ancien au plus récent.",
+      "propositions": [
+        ["Création des grands restaurants par Boulanger","https://parisianism.com/wp-content/uploads/2024/01/Boys-Thomas-Shotter-Restaurant-Boulanger-1831.jpg"],
+        ["Invention de la crème brûlée","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvnhMJQ3U-rG1dllkBocpVPtKOUWYxntF4IA&s"],
+        ["Publication du livre 'Le Cuisinier Royal et bourgeois' de François Massialot","https://static.fnac-static.com/multimedia/PE/Images/FR/NR/73/b6/ad/11384435/1507-1/tsp20240417072458/Le-nouveau-cuisinier-royal-et-bourgeois-Tome-I-A-O.jpg"],
+        ["Introduction de la cuisson sous vide","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeGOTKXhfqUcv791nRNWhwrw-7uGYu-7wxqQ&s"]
+      ],
+      "answer": [
+        "Publication du livre 'Le Cuisinier Royal' de François Massialot",
+        "Invention de la crème brûlée",
+        "Création des grands restaurants par Boulanger",
+        "Introduction de la cuisson sous vide"
+      ],
+      "difficulty": "Moyen",
+      "subject": 3
+    },
+    {
+      "type": 4,
+      "question": "Classez ces techniques culinaires selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["Fermentation des aliments","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAEeDhTEyfD2qpn_e7Gs5Q_3_vfnip_2vWbg&s"],
+        ["Utilisation du réfrigérateur domestique","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRipcCIZiD5gnx7luzTbQX6MXCFPu9NgeY-NQ&s"],
+        ["Cuisson à la vapeur","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYMISl_YMgfTEFSjJw3v96T6m9MtuIljju1A&s"],
+       [ "Surgélation des aliments","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQpIYF6SAPDGWsE9qNZ3OS-Ou8MA_2OXsLSw&s"]
+      ],
+      "answer": [
+        "Fermentation des aliments",
+        "Cuisson à la vapeur",
+        "Utilisation du réfrigérateur domestique",
+        "Surgélation des aliments"
+      ],
+      "difficulty": "Moyen",
+      "subject": 3
+    },
+    {
+      "type": 4,
+      "question": "Classez ces grandes découvertes alimentaires par ordre chronologique, du plus ancien au plus récent.",
+      "propositions": [
+        ["Introduction du maïs en Europe","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv2NduoXr86aiBxa8G_F-jUgM4Eda5vPd4lQ&s"],
+        ["Découverte du chocolat par les Européens","https://static.nationalgeographic.fr/files/styles/image_3200/public/francois-boucher-painting.jpg?w=1600"],
+        ["Introduction du café en Europe","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReUrYkUwhsBMsvsawwmeEqk30T1mQOt9k9fQ&s"],
+        ["Introduction du thé en Europe","https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Family_portrait_by_T.Myagkov.jpg/250px-Family_portrait_by_T.Myagkov.jpg"]
+      ],
+      "answer": [
+        "Introduction du maïs en Europe",
+        "Découverte du chocolat par les Européens",
+        "Introduction du café en Europe",
+        "Introduction du thé en Europe"
+      ],
+      "difficulty": "Difficile",
+      "subject": 3
+    },
+    {
+      "type": 4,
+      "question": "Classez ces chefs français célèbres selon leur période d’activité, du plus ancien au plus récent.",
+      "propositions": [
+        ["François Pierre La Varenne","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT09KtPQtiPMEhgexwVn77f_KliKRcUawO8dg&s"],
+        ["Marie-Antoine Carême","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7P2Sa64AWxHB3loGIwPV9qHp_4s8iyL91HQ&s"],
+        ["Auguste Escoffier","https://img-3.journaldesfemmes.fr/omxPyuLmKXS5gnrGgXNnrpMfbOg=/1500x/smart/4cccd58eee2242d4b20ee9e727dcaf44/ccmcms-jdf/11015368.jpg"],
+        ["Paul Bocuse","https://bocuse.fr/media/cache/jadro_resize/rc/DDqf0fis1763393835/jadroRoot/medias/66a8a759150a8/paul-bocuse.jpg"]
+      ],
+      "answer": [
+        "François Pierre La Varenne",
+        "Marie-Antoine Carême",
+        "Auguste Escoffier",
+        "Paul Bocuse"
+      ],
+      "difficulty": "Difficile",
+      "subject": 3
+    },
+    {
+      "type": 4,
+      "question": "Classez ces événements gastronomiques majeurs par date, du plus ancien au plus récent.",
+      "propositions": [
+        ["Invention de la boîte de conserve","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDy4_Xwd3I1B-OZKSecksFoxfirjZTfNM4Jg&s"],
+        ["Première exposition universelle culinaire","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1cjJDEHz6zlw8gIdwpw5veyxn4vfkaG7jUw&s"],
+        ["Création du guide Michelin","https://d3h1lg3ksw6i6b.cloudfront.net/media/image/2020/01/09/e1ab799ce78040e0aaba30b423b9ce08_Affiche-1920.jpg"],
+        ["Début de la cuisine moléculaire","https://www.chezfood.com/wp-content/uploads/2013/06/cuisine-moderniste_1.jpg"]
+      ],
+      "answer": [
+        "Invention de la boîte de conserve",
+        "Première exposition universelle culinaire",
+        "Création du guide Michelin",
+        "Début de la cuisine moléculaire"
+      ],
+      "difficulty": "Difficile",
+      "subject": 3
     }
   ]
 }
