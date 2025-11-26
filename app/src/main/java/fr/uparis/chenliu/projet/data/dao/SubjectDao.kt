@@ -5,16 +5,15 @@ import androidx.room.Insert
 import androidx.room.Query
 import fr.uparis.chenliu.projet.data.entity.SubjectEntity
 
+@Dao
+interface SubjectDao {
 
-    @Dao
-    interface SubjectDao {
+    @Insert
+    suspend fun insertTheme(theme: SubjectEntity)
 
-        @Insert
-        suspend fun insertTheme(theme: SubjectEntity)
+    @Query("SELECT imageName FROM SubjectEntity")
+    suspend fun getAllImageNames(): List<String>
 
-        @Query("SELECT imageName FROM SubjectEntity")
-        suspend fun getAllImageNames(): List<String>
-
-        @Query("SELECT name FROM SubjectEntity")
-        suspend fun getAllSubjectNames(): List<String>
-    }
+    @Query("SELECT name FROM SubjectEntity")
+    suspend fun getAllSubjectNames(): List<String>
+}

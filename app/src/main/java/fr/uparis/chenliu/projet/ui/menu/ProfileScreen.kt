@@ -62,7 +62,7 @@ fun ProfileScreen(model: MenuViewModel) {
                 UnderlineTextField(
                     list = currentFont,
                     value = username,
-                    onValueChange = { model.username.value = it; model.saved.value = false },
+                    onValueChange = { if (it.length <= 16) model.username.value = it; model.saved.value = false },
                     onDone = { model.updateUsername(); model.saved.value = true }
                 )
             }

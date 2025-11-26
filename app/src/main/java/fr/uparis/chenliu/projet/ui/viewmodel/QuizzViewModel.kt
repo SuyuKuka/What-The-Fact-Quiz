@@ -68,8 +68,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     // Others
     val loading = mutableStateOf(true)
 
-
-
     // loading des quiz
     val data = mutableStateOf(Data(
         question = listOf<String>().toMutableList(),
@@ -137,7 +135,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
         var shuffling = true
         while (shuffling) {
-
             randomPropositions = value.propositions.shuffled().take(4)
             for (p in randomPropositions) {
                 if (p[0] == value.answer[0]) {
@@ -151,15 +148,15 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     fun calcScore(gameData: GameData, answerList: List<String>, verify: List<String>, type: Int) {
         val score = mutableIntStateOf(0)
         if (type == 0 || type == 3) {
-            if (answerList.toList().toString() == verify.toList().toString()){
+            if (answerList.toList().toString().lowercase() == verify.toList().toString().lowercase()){
                 score.intValue = score.intValue + 1000
             }
         } else if (type == 1) {
-            score.intValue = score.intValue + approxScore(answerList.toList()[0], verify.toList()[0])
+            score.intValue = score.intValue + approxScore(answerList.toList()[0].lowercase(), verify.toList()[0].lowercase())
         } else if (type == 2 || type == 4) {
             // c'est plus long, et plus compliqué d'avoir la réponse exacte, donc les type 2, 4 valent 4000 au total
             for (i in 0..verify.size - 1) {
-                if (answerList.toList()[i] == verify.toList()[i]) {
+                if (answerList.toList()[i].lowercase() == verify.toList()[i].lowercase()) {
                     score.intValue = score.intValue + 1000
                 }
             }
@@ -168,7 +165,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun approxScore(answer: String, guess: String): Int {
-
         // si answer et guess sont des nombre
         if (answer.toIntOrNull() != null  && guess.toIntOrNull() != null) {
             val a = answer.toDouble()

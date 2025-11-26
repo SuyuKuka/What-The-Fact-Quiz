@@ -5,12 +5,9 @@ import androidx.room.Insert
 import androidx.room.Query
 import fr.uparis.chenliu.projet.data.entity.QuizzEntity
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
-import javax.security.auth.Subject
-
 
 @Dao
 interface QuizzDao {
-
 
     @Insert
     suspend fun insertQuestion(question: QuizzEntity)

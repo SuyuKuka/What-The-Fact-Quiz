@@ -33,6 +33,7 @@ fun Quizztype1 (
             },
             label = "Réponse",
             modifier = Modifier,
+            font = font,
             fontSize = 16.sp,
             onDone = {
                 val number = textFieldQuestion.value.toIntOrNull()

@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.data.database.AppDatabase
+import fr.uparis.chenliu.projet.data.entity.DecoEntity
 import fr.uparis.chenliu.projet.data.entity.QuizzEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.SubjectEntity
@@ -47,12 +48,13 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         loading.value = true
         viewModelScope.launch {
             if (!db.usersDao().isExist()) {
-                if (username.value == "") {
+                if (username.value.trim() == "") {
                     username.value = "Joueur"
                 }
                 initSubject(context)
                 initQuizz(context)
                 initUser()
+                initDeco(context)
 
                 exist.value = true
                 loading.value = false
@@ -66,7 +68,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         val data = Gson().fromJson(jsonString, JsonReader.SubjectParameter::class.java)
 
         data.subject.forEach {
-            db.SubjectDao().insertTheme(
+            db.subjectDao().insertTheme(
                 SubjectEntity(
                     name = it.name,
                     imageName = it.imageName
@@ -89,6 +91,22 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                     answer = it.answer,
                     difficulty = it.difficulty,
                     subject = it.subject
+                )
+            )
+        }
+    }
+
+    suspend fun initDeco(c: Context) {
+        val inputStream = c.resources.openRawResource(R.raw.deco)
+        val jsonString = inputStream.bufferedReader().use { it.readText() }
+        val data = Gson().fromJson(jsonString, JsonReader.DecoParameter::class.java)
+
+        data.deco.forEach {
+            db.decoDao().insertDeco(
+                DecoEntity(
+                    name = it.name,
+                    path = it.path,
+                    type = it.type
                 )
             )
         }

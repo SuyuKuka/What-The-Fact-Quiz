@@ -26,7 +26,6 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDownward
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -44,6 +43,8 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -224,7 +225,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                     }
                     WriteField(
                         value = username,
-                        onValueChange = { model.username.value = it },
+                        onValueChange = { if (it.length <= 16) model.username.value = it },
                         label = "",
                         modifier = Modifier
                             .fillMaxWidth()
@@ -265,6 +266,7 @@ fun WriteField(
     onValueChange: (String) -> Unit,
     label: String,
     modifier: Modifier,
+    font: List<Int> = listOf(0, 0),
     fontSize: TextUnit,
     onDone: () -> Unit,
     onlyNb: Boolean = false
@@ -283,7 +285,14 @@ fun WriteField(
             unfocusedContainerColor = Color.White,
         ),
         singleLine = true,
-        label = { Text(text = label, fontSize = fontSize) },
+        label = {
+            Text(
+                text = label,
+                fontSize = (fontSize.value - font[1]).sp,
+                fontFamily = FontFamily(Font(font[0])),
+            )
+        },
+
         keyboardOptions =
             if (onlyNb) {
                 KeyboardOptions(keyboardType = KeyboardType.Number, imeAction = ImeAction.Done)

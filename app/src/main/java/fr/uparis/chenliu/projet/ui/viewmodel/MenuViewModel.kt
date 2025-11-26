@@ -33,6 +33,11 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val endDate = mutableStateOf("")
 
     // Settings
+    val backgroundList = MutableStateFlow<List<String>>(emptyList())
+    val fontList = MutableStateFlow<List<String>>(emptyList())
+    val decoNameList = MutableStateFlow<List<String>>(emptyList())
+    val decoPathList = MutableStateFlow<List<String>>(emptyList())
+    val decoTypeList = MutableStateFlow<List<Int>>(emptyList())
     val music = mutableFloatStateOf(0f)
     val sound = mutableFloatStateOf(0f)
     val background = mutableIntStateOf(0)
@@ -46,8 +51,6 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val subject = mutableStateOf("")
 
     // Others
-    val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
-    val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
     val difficultyList = listOf("Facile", "Moyen", "Difficile")
     val saved = mutableStateOf(true)
     val maxEnergy = mutableIntStateOf(20)
@@ -59,8 +62,8 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         this.username.value = username
         viewModelScope.launch {
             // init des themes
-            subjectList.value = db.SubjectDao().getAllSubjectNames()
-            subjectImageList.value = db.SubjectDao().getAllImageNames()
+            subjectList.value = db.subjectDao().getAllSubjectNames()
+            subjectImageList.value = db.subjectDao().getAllImageNames()
             // init des paramettres utilisateur
             getUsers()
             settings.value = db.settingsDao().getSetting()
@@ -73,6 +76,17 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             leaderboard = db.leaderboardDao().getLeaderboard(subjectList.value[0])
             changeSubject(subjectList.value[0])
             subject.value = subjectList.value[0]
+            // init des deco
+            decoNameList.value = db.decoDao().getAllDecoNames()
+            decoPathList.value = db.decoDao().getAllDecoPaths()
+            decoTypeList.value = db.decoDao().getAllDecoTypes()
+            for (i in 0..decoTypeList.value.size - 1) {
+                if (decoTypeList.value[i] == 0) {
+                    backgroundList.value += decoNameList.value[i]
+                } else {
+                    fontList.value += decoNameList.value[i]
+                }
+            }
 
             while (true) {
                 getUsers()
@@ -126,7 +140,6 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             }
             db.usersDao().updateSubscribe(userId = user.value!!.userId, subscribe = true)
             db.usersDao().updateDuration(userId = user.value!!.userId, endDate = "${day}/${month}/${year}")
-
         }
     }
 
@@ -142,7 +155,10 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
 
     fun updateUsername() {
         viewModelScope.launch {
-            db.usersDao().updateUsername(userId = user.value!!.userId, username = username.value)
+            if (username.value.trim() == "") {
+                username.value = "Joueur"
+            }
+            db.usersDao().updateUsername(userId = user.value!!.userId, username = username.value.trim())
             getUsers()
         }
     }
@@ -174,11 +190,12 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         preferredTopics.value = settings.value!!.preferredTopics
     }
 
-    fun intToBackground(): Int{
+    fun intToBackground(): Int {
         val bg = when(background.intValue) {
-            1 -> R.drawable.b1
-            2 -> R.drawable.b2
-            3 -> R.drawable.b0
+            0 -> R.drawable.background_default_blurred
+            1 -> R.drawable.b0
+            2 -> R.drawable.b1
+            3 -> R.drawable.b2
             else -> R.drawable.background_default_blurred
         }
         return bg

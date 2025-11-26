@@ -23,4 +23,14 @@ class JsonReader {
         val name: String,
         val imageName: String
     )
+
+    class DecoParameter(
+        val deco: List<DecoData>
+    )
+
+    class DecoData(
+        val name: String,
+        val path: String,
+        val type: Int
+    )
 }
