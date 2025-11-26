@@ -62,7 +62,7 @@ fun ResultScreen(
 
         LazyColumn(modifier = Modifier.fillMaxWidth().weight(4f)) {
             itemsIndexed(gameData.questionHistory) { i, question ->
-                if (gameData.answerHistory[i] == gameData.goodAnswer[i]) {
+                if (gameData.answerHistory[i].lowercase() == gameData.goodAnswer[i].lowercase()) {
                     DisplayText(list = font, text = "    Question ${i + 1}: $question", color = Color.Black)
                     DisplayText(
                         list = font,
