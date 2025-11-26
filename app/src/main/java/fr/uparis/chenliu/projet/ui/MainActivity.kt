@@ -26,7 +26,6 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDownward
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -224,7 +223,7 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
                     }
                     WriteField(
                         value = username,
-                        onValueChange = { model.username.value = it },
+                        onValueChange = { if (it.length <= 16) model.username.value = it },
                         label = "",
                         modifier = Modifier
                             .fillMaxWidth()
