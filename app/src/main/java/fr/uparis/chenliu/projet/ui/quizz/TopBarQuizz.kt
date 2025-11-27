@@ -20,7 +20,7 @@ import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
-    val font = model.translateFont()
+    val font = model.currentFont
     val currentQuestion = model.currentQuestion
 
     TopAppBar(
@@ -30,20 +30,22 @@ fun TopBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                     .fillMaxWidth(),
                 contentAlignment = Alignment.Center
             ) {
-                DisplayText(
-                    list = font,
-                    text = "Question ${currentQuestion.intValue + 1}",
-                    fontSize = 24.sp,
-                    color = Color.Black
-                )
+                if (!model.gameData.gameEnded.value) {
+                    DisplayText(
+                        list = font.value,
+                        text = "Question ${currentQuestion.intValue + 1}",
+                        fontSize = 24.sp,
+                        color = Color.Black
+                    )
+                }
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    DisplayText(list = font, text = "Score: ${gameData.score.intValue} ")
-                    DisplayText(list = font, text = "%.0fs".format(gameData.time.doubleValue), modifier = Modifier.padding(end = 16.dp))
+                    DisplayText(list = font.value, text = "Score: ${gameData.score.intValue} ")
+                    DisplayText(list = font.value, text = "%.0fs".format(gameData.time.doubleValue), modifier = Modifier.padding(end = 16.dp))
                 }
             }
         },

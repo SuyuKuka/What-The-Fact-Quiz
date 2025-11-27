@@ -25,8 +25,8 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
 @Composable
 fun LeaderboardScreen(model: MenuViewModel) {
-    val currentBackground = model.intToBackground()
-    val currentFont = model.intToFont()
+    val currentBackground = model.currentBackground
+    val currentFont = model.currentFont
     val username = model.usernameLeaderboard
     val score = model.score
     val bestTime = model.bestTime
@@ -36,13 +36,13 @@ fun LeaderboardScreen(model: MenuViewModel) {
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = currentBackground),
+            painter = painterResource(id = currentBackground.intValue),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
         Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-            DisplayText(list = currentFont, text = "Classement", fontSize = 24.sp)
+            DisplayText(list = currentFont.value, text = "Classement", fontSize = 24.sp)
             LazyHorizontalGrid(
                 rows = GridCells.Fixed(1),
                 modifier = Modifier
@@ -59,24 +59,24 @@ fun LeaderboardScreen(model: MenuViewModel) {
                         }
                     }, modifier = Modifier.width(LocalWindowInfo.current.containerSize.width.dp/5)
                     ) {
-                        DisplayText(list = currentFont, text = subj, fontSize = 16.sp)
+                        DisplayText(list = currentFont.value, text = subj, fontSize = 16.sp)
                     }
                 }
             }
             if (!changed.value) {
                 if (username.isEmpty()) {
                     DisplayText(
-                        list = currentFont,
+                        list = currentFont.value,
                         text = "Pas encore de résultat en ${currentSubject.value}"
                     )
                 } else {
-                    DisplayText(list = currentFont, text = currentSubject.value)
+                    DisplayText(list = currentFont.value, text = currentSubject.value)
                     for (i in 0..username.size - 1) {
                         Row {
-                            DisplayText(list = currentFont, text = "${i + 1} | ")
-                            DisplayText(list = currentFont, text = username[i]!! + " | ")
-                            DisplayText(list = currentFont, text = score[i].toString() + " | ")
-                            DisplayText(list = currentFont, text = bestTime[i].toString())
+                            DisplayText(list = currentFont.value, text = "${i + 1} | ")
+                            DisplayText(list = currentFont.value, text = username[i]!! + " | ")
+                            DisplayText(list = currentFont.value, text = score[i].toString() + " | ")
+                            DisplayText(list = currentFont.value, text = bestTime[i].toString())
                         }
                     }
                 }

@@ -1,6 +1,7 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
+import android.content.Context
 import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
@@ -10,13 +11,13 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlin.collections.mutableListOf
@@ -54,7 +55,14 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val subscription = mutableStateOf(false)
 
     // Settings
+    val backgroundList = MutableStateFlow<List<String>>(emptyList())
+    val fontList = MutableStateFlow<List<String>>(emptyList())
     val font = mutableIntStateOf(0)
+    val currentFont = mutableStateOf(listOf(0, 0))
+    val decoNameList = MutableStateFlow<List<String>>(emptyList())
+    val decoPathList = MutableStateFlow<List<String>>(emptyList())
+    val decoTypeList = MutableStateFlow<List<Int>>(emptyList())
+    val decoDiffList = MutableStateFlow<List<Int>>(emptyList())
 
     // Quizz
     val subject = mutableStateOf("")
@@ -254,7 +262,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun init() {
+    fun init(context: Context) {
         viewModelScope.launch {
             user.value = db.usersDao().getUser()
             energy.intValue = user.value!!.energy
@@ -262,6 +270,18 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
             settings.value = db.settingsDao().getSetting()
             font.intValue = settings.value!!.font
+            decoNameList.value = db.decoDao().getAllDecoNames()
+            decoPathList.value = db.decoDao().getAllDecoPaths()
+            decoTypeList.value = db.decoDao().getAllDecoTypes()
+            decoDiffList.value = db.decoDao().getAllDecoDiff()
+            for (i in 0..decoTypeList.value.size - 1) {
+                if (decoTypeList.value[i] == 0) {
+                    backgroundList.value += decoNameList.value[i]
+                } else {
+                    fontList.value += decoNameList.value[i]
+                }
+            }
+            getCurrentFont(context)
         }
     }
 
@@ -297,25 +317,19 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun translateFont(): List<Int> {
-        val ft = when(font.intValue) {
-            0 -> 0
-            1 -> R.font.game
-            2 -> R.font.typewritter
-            3 -> R.font.pixel
-            4 -> R.font.pokemon
-            else -> 0
+    fun getCurrentFont(context: Context) {
+        if (decoPathList.value.isEmpty()) {
+            currentFont.value = listOf(0, 0)
+            return
         }
-
-        val sz = when(font.intValue) {
-            0 -> 0
-            1 -> -1
-            2 -> 1
-            3 -> -5
-            4 -> -2
-            else -> 0
-        }
-        return listOf(ft, sz)
+        val resources = context.resources
+        val fontId = resources.getIdentifier(
+            decoPathList.value[font.intValue + backgroundList.value.size],
+            "font",
+            context.packageName
+        )
+        val fontDiff = decoDiffList.value[font.intValue + backgroundList.value.size]
+        currentFont.value = listOf(fontId, fontDiff)
     }
 
     fun insertLeaderboard() {

@@ -10,4 +10,5 @@ data class DecoEntity(
     val name: String,
     val path: String,
     val type: Int,
+    val diff: Int
 )

@@ -55,14 +55,13 @@ fun Quizztype4(
                     }
                     Box(
                         modifier = Modifier
-                            .width(250.dp)
-                            .aspectRatio(1.5f)
+                            .width(200.dp)
                             .padding(8.dp)
                             .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
                     ) {
                         DropTargetImage(
                             intValue = index,
-                            font = model.translateFont(),
+                            font = font,
                             model = model,
                             type = 4
                         )

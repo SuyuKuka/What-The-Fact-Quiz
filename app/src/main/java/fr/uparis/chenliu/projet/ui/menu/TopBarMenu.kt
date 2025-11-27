@@ -37,7 +37,7 @@ import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     val energy = model.energy.intValue
     val timeEnergy = model.timeEnergy.value
-    val currentFont = model.intToFont()
+    val currentFont = model.currentFont
     val context = LocalContext.current
 
     TopAppBar(
@@ -52,7 +52,7 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                     backStack.add(Screen.Profile)
                 }) {
                     DisplayText(
-                        list = currentFont,
+                        list = currentFont.value,
                         text = model.username.value,
                         fontSize = 18.sp
                     )
@@ -79,7 +79,7 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                     modifier = Modifier.padding(end = 16.dp)
                 ) {
                     DisplayText(
-                        list = currentFont,
+                        list = currentFont.value,
                         text = if (model.subscription.value) {
                             "∞"
                         } else {

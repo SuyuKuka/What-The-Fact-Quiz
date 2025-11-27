@@ -70,8 +70,8 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     intent.putExtra("difficulty", selectedDiff.value)
     intent.putExtra("subject", selectedSubj.value)
 
-    val currentBackground = model.intToBackground()
-    val currentFont = model.intToFont()
+    val currentBackground = model.currentBackground
+    val currentFont = model.currentFont
 
     val sendNotification = {
         if (!subscribe.value) {
@@ -91,7 +91,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 
     if (alert.value) {
         Alert(
-            list = currentFont,
+            list = currentFont.value,
             onConfirm = {
                 alert.value = false
                 backStack += Screen.Shop
@@ -108,7 +108,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = currentBackground),
+            painter = painterResource(id = currentBackground.intValue),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
@@ -118,7 +118,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            DisplayText(list = currentFont, text = "WTF QUIZ", fontSize = 24.sp)
+            DisplayText(list = currentFont.value, text = "WTF QUIZ", fontSize = 24.sp)
             Row(modifier = Modifier.fillMaxWidth()) {
                 difficulty.forEach { diff ->
                     Button(
@@ -131,7 +131,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                             contentColor = Color.White
                         )
                     ) {
-                        DisplayText(list = currentFont, text = diff)
+                        DisplayText(list = currentFont.value, text = diff)
                     }
                 }
             }
@@ -181,7 +181,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                                         .background(Color.Black.copy(alpha = 0.2f))
                                 )
                             }
-                            DisplayText(list = currentFont, text = subj, fontSize = 24.sp)
+                            DisplayText(list = currentFont.value, text = subj, fontSize = 24.sp)
                         }
                     }
                 }
@@ -204,7 +204,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                     },
                     modifier = Modifier.fillMaxWidth(0.8f)
                 ) {
-                    DisplayText(list = currentFont, text = "Jouer", fontSize = 18.sp)
+                    DisplayText(list = currentFont.value, text = "Jouer", fontSize = 18.sp)
                 }
             }
         }

@@ -12,7 +12,6 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.Slider
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -24,6 +23,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
@@ -38,14 +38,16 @@ fun SettingsScreen(model: MenuViewModel) {
     val update = { model.updateSettings(); model.saved.value = true }
     val selectedBackground = model.background
     val selectedFont = model.font
-    val currentBackground = model.intToBackground()
-    val currentFont = model.intToFont()
+    val currentBackground = model.currentBackground
+    val currentFont = model.currentFont
     val backgroundList = model.backgroundList.collectAsState()
     val fontList = model.fontList.collectAsState()
+    val context = LocalContext.current
+    val saved = model.saved
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = currentBackground),
+            painter = painterResource(id = currentBackground.intValue),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
@@ -54,55 +56,41 @@ fun SettingsScreen(model: MenuViewModel) {
             .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            DisplayText(list = currentFont, text = "Paramètre", fontSize = 24.sp)
+            DisplayText(list = currentFont.value, text = "Paramètre", fontSize = 24.sp)
             Row {
-                DisplayText(list = currentFont, text = "Musique")
-                SliderManage(list = currentFont, value = model.music.floatValue) {
-                    model.music.floatValue = it
-                    model.saved.value = false
-                }
-            }
-            Row {
-                DisplayText(list = currentFont, text = "Son")
-                SliderManage(list = currentFont, value = model.sound.floatValue) {
-                    model.sound.floatValue = it
-                    model.saved.value = false
-                }
-            }
-            Row {
-                DisplayText(list = model.intToFont(), text = "Fond")
+                DisplayText(list = currentFont.value, text = "Fond")
                 ChoiceField(
                     model = model,
                     label = "Fond",
                     choice = selectedBackground.intValue,
                     onValueChange = { newValue ->
-                        selectedBackground.intValue = newValue; model.saved.value = false
+                        selectedBackground.intValue = newValue; model.updateCurrentBackground(context); saved.value = false
                     },
                     choiceList = backgroundList.value
                 )
             }
             Row {
-                DisplayText(list = model.intToFont(), text = "Police")
+                DisplayText(list = currentFont.value, text = "Police")
                 ChoiceField(
                     model = model,
                     label = "Police",
                     choice = selectedFont.intValue,
                     onValueChange = { newValue ->
-                        selectedFont.intValue = newValue; model.saved.value = false
+                        selectedFont.intValue = newValue; model.updateCurrentFont(context); saved.value = false
                     },
                     choiceList = fontList.value
                 )
             }
             Row {
-                DisplayText(list = model.intToFont(), text = "Domaine préféré")
+                DisplayText(list = currentFont.value, text = "Domaine préféré")
                 WriteField(
                     value = model.preferredTopics.value,
                     onValueChange = {
-                        model.preferredTopics.value = it; model.saved.value = false
+                        model.preferredTopics.value = it; saved.value = false
                     },
                     label = "Domaine préféré?",
                     modifier = Modifier.padding(start = 10.dp),
-                    font = model.intToFont(),
+                    font = currentFont.value,
                     fontSize = 18.sp,
                     onDone = { update() },
                     onlyNb = false
@@ -110,22 +98,11 @@ fun SettingsScreen(model: MenuViewModel) {
             }
             Button(onClick = { update() }) {
                 DisplayText(
-                    list = model.intToFont(),
+                    list = currentFont.value,
                     text = "Enregistrer"
                 )
             }
         }
-    }
-}
-
-@Composable
-fun SliderManage(list: List<Int>, value: Float, onValueChange: (Float) -> Unit) {
-    Column {
-        Slider(
-            value = value,
-            onValueChange = onValueChange
-        )
-        DisplayText(list = list, text = ("%.0f / 100".format(value * 100)))
     }
 }
 
@@ -134,7 +111,7 @@ fun SliderManage(list: List<Int>, value: Float, onValueChange: (Float) -> Unit) 
 fun ChoiceField(model: MenuViewModel, label: String, choice: Int, onValueChange: (Int) -> Unit, choiceList: List<String>) {
     var expanded by remember { mutableStateOf(value = false) }
     val text = choiceList[choice]
-    val currectFont = model.intToFont()
+    val currentFont = model.currentFont
     ExposedDropdownMenuBox(
         expanded = expanded,
         onExpandedChange = { expanded = !expanded }
@@ -149,14 +126,14 @@ fun ChoiceField(model: MenuViewModel, label: String, choice: Int, onValueChange:
                 focusedContainerColor = Color.White,
                 disabledContainerColor = Color.White
             ),
-            label = { DisplayText(list = currectFont, text = label) },
+            label = { DisplayText(list = currentFont.value, text = label) },
             trailingIcon = {
                 ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
             },
             textStyle = TextStyle(
                 color = Color.Black,
-                fontSize = (16 - currectFont[1]).sp,
-                fontFamily = FontFamily(Font(currectFont[0]))
+                fontSize = (16 - currentFont.value[1]).sp,
+                fontFamily = FontFamily(Font(currentFont.value[0]))
             )
         )
         ExposedDropdownMenu(
@@ -170,7 +147,7 @@ fun ChoiceField(model: MenuViewModel, label: String, choice: Int, onValueChange:
                         onValueChange(index)
                         expanded = false
                     },
-                    text = { DisplayText(list = currectFont, text = c) }
+                    text = { DisplayText(list = currentFont.value, text = c) }
                 )
             }
         }
