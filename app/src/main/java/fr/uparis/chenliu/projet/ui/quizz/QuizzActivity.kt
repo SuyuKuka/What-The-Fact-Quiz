@@ -30,6 +30,7 @@ import androidx.compose.ui.draganddrop.DragAndDropTransferData
 import androidx.compose.ui.draganddrop.mimeTypes
 import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.view.WindowCompat
@@ -71,8 +72,9 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
     val data = model.data
     val gameData = model.gameData
     val loading = model.loading
+    val context = LocalContext.current
 
-    model.init() // pour l'energie
+    model.init(context = context)
 
     Scaffold(
         topBar = {
@@ -90,7 +92,7 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
                 if (!gameData.gameEnded.value) {
                     GameScreen(data.value)
                 } else {
-                    ResultScreen(model.translateFont(), gameData)
+                    ResultScreen(model.currentFont.value, gameData)
                 }
             }
         }

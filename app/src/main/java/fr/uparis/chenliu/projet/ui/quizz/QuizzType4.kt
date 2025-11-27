@@ -62,7 +62,7 @@ fun Quizztype4(
                     ) {
                         DropTargetImage(
                             intValue = index,
-                            font = model.translateFont(),
+                            font = font,
                             model = model,
                             type = 4
                         )

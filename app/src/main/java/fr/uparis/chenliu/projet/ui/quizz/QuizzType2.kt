@@ -40,10 +40,10 @@ fun Quizztype2(
                     .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
             ) {
                 DropTargetImage(
-                    data.answers[currentQuestion.intValue].propositions.indexOf(ans),
-                    model.translateFont(),
-                    model,
-                    2
+                    intValue = data.answers[currentQuestion.intValue].propositions.indexOf(ans),
+                    font = font,
+                    model = model,
+                    type = 2
                 )
             }
         }

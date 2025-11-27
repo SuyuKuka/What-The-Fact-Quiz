@@ -20,7 +20,7 @@ import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
-    val font = model.translateFont()
+    val font = model.currentFont
     val activity = LocalActivity.current
     val alert = remember { mutableStateOf(false) }
     val data = model.data.value
@@ -41,7 +41,7 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                 Button(
                     onClick = { activity?.finish() },
                 ) {
-                    DisplayText(list = font, text = "Accueil")
+                    DisplayText(list = font.value, text = "Accueil")
                 }
                 Button(onClick = {
                     if (model.energy.intValue == 0) {
@@ -50,7 +50,7 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                     }
                     model.resetStats(gameData)
                 }) {
-                    DisplayText(list = font, text = "Rejouer")
+                    DisplayText(list = font.value, text = "Rejouer")
                 }
             } else {
                 if (!type.isEmpty()) {
@@ -65,7 +65,7 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                                 }
                             }
                         ) {
-                            DisplayText(list = font, text = "Reset")
+                            DisplayText(list = font.value, text = "Reset")
                         }
                         Button(
                             onClick = {
@@ -80,7 +80,7 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                                 )
                             }
                         ) {
-                            DisplayText(list = font, text = "Valider")
+                            DisplayText(list = font.value, text = "Valider")
                         }
                     }
                 }

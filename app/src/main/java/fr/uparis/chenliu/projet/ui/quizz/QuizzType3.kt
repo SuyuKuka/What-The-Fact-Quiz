@@ -63,7 +63,7 @@ fun Quizztype3(
                     ) {
                         DropTargetImage(
                             intValue = index,
-                            font = model.translateFont(),
+                            font = font,
                             model = model,
                             type = 3,
                             movable = buildAnswer[index] == ans[0]

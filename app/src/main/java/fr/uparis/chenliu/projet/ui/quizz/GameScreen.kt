@@ -28,7 +28,7 @@ fun GameScreen(
     model: QuizzViewModel = viewModel()
 ){
     val currentQuestion = model.currentQuestion
-    val font = model.translateFont()
+    val font = model.currentFont
     val typeQuestion = data.types[currentQuestion.intValue]
     val height = if (typeQuestion == 0 || typeQuestion == 1) {
         0.5f
@@ -54,7 +54,7 @@ fun GameScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 DisplayText(
-                    list = font,
+                    list = font.value,
                     text = data.question[currentQuestion.intValue],
                     fontSize = 20.sp,
                     textAlign = TextAlign.Center
@@ -62,27 +62,27 @@ fun GameScreen(
             }
             when (typeQuestion) {
                 0 -> Quizztype0(
-                    font = font,
+                    font = font.value,
                     data = data,
                     model = model,
                     modifier = Modifier.weight(weight = 1f)
                 )
 
                 1 -> Quizztype1(
-                    font = font,
+                    font = font.value,
                     model = model,
                     data = data
                 )
 
                 2 -> Quizztype2(
-                    font = font,
+                    font = font.value,
                     data = data,
                     model = model,
                     modifier = Modifier.weight(weight = 1f)
                 )
 
                 3 -> Quizztype3(
-                    font = font,
+                    font = font.value,
                     data = data,
                     model = model,
                     modifier = Modifier
@@ -93,7 +93,7 @@ fun GameScreen(
                 )
 
                 4 -> Quizztype4(
-                    font = font,
+                    font = font.value,
                     data = data,
                     model = model,
                     Modifier
