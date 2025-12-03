@@ -29,16 +29,8 @@ fun Quizztype3(
     modifier: Modifier
 ) {
     val buildAnswer = model.buildAnswer
-    val imageAnswer = model.imageAnswer
     val currentQuestion = model.currentQuestion
     val currentImage = model.currentImage
-    if (currentImage.intValue == 0) {
-        for (i in 0..2) {
-            buildAnswer[i] = data.answers[currentQuestion.intValue].propositions[i][0]
-            imageAnswer[i] = data.answers[currentQuestion.intValue].propositions[i][1]
-            currentImage.intValue++
-        }
-    }
     val ans: List<String> = if (currentImage.intValue < buildAnswer.size) {
         data.answers[currentQuestion.intValue].propositions[currentImage.intValue]
     } else {

@@ -61,7 +61,8 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
                                 when (currentQuestionType) {
                                     1 -> { model.textFieldQuestion.value = "" }
                                     2 -> { model.resetDragDrop() }
-                                    3, 4 -> { model.currentImage.intValue = 0 }
+                                    3 -> { model.resetDragDrop() }
+                                    4 -> { model.resetDragDrop() }
                                 }
                             }
                         ) {

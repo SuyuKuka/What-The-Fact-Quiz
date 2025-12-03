@@ -211,7 +211,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         }
         if (currentQuestion.intValue == 9) { currentQuestion.intValue = 0 } else { currentQuestion.intValue++ }
         resetDragDrop()
-        currentImage.intValue = 0
         textFieldQuestion.value = ""
     }
 
@@ -232,7 +231,21 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun resetDragDrop() {
+        val type = data.value.types[currentQuestion.intValue]
         for(i in 0..buildAnswer.size - 1) { buildAnswer[i] = ""; imageAnswer[i] = "" }
+        if (type == 3) {
+            for (i in 0..2) {
+                buildAnswer[i] = data.value.answers[currentQuestion.intValue].propositions[i][0]
+                imageAnswer[i] = data.value.answers[currentQuestion.intValue].propositions[i][1]
+            }
+            currentImage.intValue = 3
+        } else if (type == 4) {
+            buildAnswer[0] = data.value.answers[currentQuestion.intValue].propositions[0][0]
+            imageAnswer[0] = data.value.answers[currentQuestion.intValue].propositions[0][1]
+            currentImage.intValue = 1
+        } else {
+            currentImage.intValue = 0
+        }
     }
 
     fun replaceAnswer(answer: String, draggedData: String, intValue: Int) {
@@ -255,15 +268,37 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             for (i in 0..buildAnswer.size - 2 - insertionIndex) {
                 buildAnswer[buildAnswer.size - 1 - i] = buildAnswer[buildAnswer.size - 2 - i]
                 imageAnswer[imageAnswer.size - 1 - i] = imageAnswer[imageAnswer.size - 2 - i]
-                if (type != 4) {
-                    buildAnswer[insertionIndex] = answer
-                    imageAnswer[insertionIndex] = url
-                } else {
-                    //TODO
-                }
             }
-
+            buildAnswer[insertionIndex] = answer
+            imageAnswer[insertionIndex] = url
             currentImage.intValue++
+
+            if (type == 4) {
+                println(data.value.answers[currentQuestion.intValue].answer)
+                println(buildAnswer.toList())
+                println(imageAnswer.toList())
+//                println(answer)
+//                println(url)
+
+
+                val goodAnswer = mutableStateListOf<String>()
+                val goodImage = mutableStateListOf<String>()
+                for (i in 0..data.value.answers[currentQuestion.intValue].answer.size - 1) {
+                    if (buildAnswer.contains(data.value.answers[currentQuestion.intValue].answer[i])) {
+                        goodAnswer.add(data.value.answers[currentQuestion.intValue].answer[i])
+                    }
+                }
+                for (i in 0..buildAnswer.size - 1) {
+                    if (goodAnswer.contains(buildAnswer[i])) {
+                        goodImage.add(imageAnswer[i])
+                    }
+                }
+
+
+                println(goodAnswer.toList())
+                println(goodImage.toList())
+
+            }
         }
     }
 
