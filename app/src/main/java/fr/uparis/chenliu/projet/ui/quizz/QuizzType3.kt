@@ -54,7 +54,7 @@ fun Quizztype3(
             if (index < buildAnswer.size) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (index == 0) {
-                        InsertionDropTarget(index = 0, model = model)
+                        InsertionDropTarget(index = 0, model = model, type = 3)
                     }
                     Box(
                         modifier = Modifier
@@ -71,9 +71,9 @@ fun Quizztype3(
                         )
                     }
                     if (index != currentImage.intValue) {
-                        InsertionDropTarget(index = index + 1, model = model)
+                        InsertionDropTarget(index = index + 1, model = model, type = 3)
                     } else {
-                        InsertionDropTarget(index = index, model = model)
+                        InsertionDropTarget(index = index, model = model, type = 3)
                     }
                 }
             }

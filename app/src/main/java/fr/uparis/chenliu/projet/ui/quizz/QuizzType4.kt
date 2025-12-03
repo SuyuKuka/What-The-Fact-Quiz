@@ -3,6 +3,7 @@ package fr.uparis.chenliu.projet.ui.quizz
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -41,6 +42,9 @@ fun Quizztype4(
     } else {
         data.answers[currentQuestion.intValue].propositions[currentImage.intValue - 1]
     }
+    Column {
+        DisplayText(list = font, text = "type 4")
+    }
 
     // EN HAUT
     LazyRow(
@@ -51,7 +55,7 @@ fun Quizztype4(
             if (index < buildAnswer.size) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (index == 0) {
-                        InsertionDropTarget(index = 0, model = model)
+                        InsertionDropTarget(index = 0, model = model, type = 4)
                     }
                     Box(
                         modifier = Modifier
@@ -63,13 +67,14 @@ fun Quizztype4(
                             intValue = index,
                             font = font,
                             model = model,
-                            type = 4
+                            type = 4,
+                            movable = false
                         )
                     }
                     if (index != currentImage.intValue) {
-                        InsertionDropTarget(index = index + 1, model = model)
+                        InsertionDropTarget(index = index + 1, model = model, type = 4)
                     } else {
-                        InsertionDropTarget(index = index, model = model)
+                        InsertionDropTarget(index = index, model = model, type = 4)
                     }
                 }
             }

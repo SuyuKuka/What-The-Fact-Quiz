@@ -250,14 +250,19 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         currentImage.intValue++
     }
 
-    fun insertAnswer(answer: String, url: String, insertionIndex: Int) {
+    fun insertAnswer(answer: String, url: String, insertionIndex: Int, type: Int) {
         if (insertionIndex <= buildAnswer.size) {
             for (i in 0..buildAnswer.size - 2 - insertionIndex) {
                 buildAnswer[buildAnswer.size - 1 - i] = buildAnswer[buildAnswer.size - 2 - i]
                 imageAnswer[imageAnswer.size - 1 - i] = imageAnswer[imageAnswer.size - 2 - i]
+                if (type != 4) {
+                    buildAnswer[insertionIndex] = answer
+                    imageAnswer[insertionIndex] = url
+                } else {
+                    //TODO
+                }
             }
-            buildAnswer[insertionIndex] = answer
-            imageAnswer[insertionIndex] = url
+
             currentImage.intValue++
         }
     }

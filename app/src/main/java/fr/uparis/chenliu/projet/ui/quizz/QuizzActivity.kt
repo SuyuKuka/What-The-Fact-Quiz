@@ -118,7 +118,7 @@ fun DragImage(answer: String, url: String) {
 @Composable
 fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type: Int, movable: Boolean = true) {
     val currentImageAnswer = model.imageAnswer[intValue]
-    val drag = if ((currentImageAnswer.isNotEmpty() && type != 3) || (type == 3 && movable)) {
+    val drag = if ((currentImageAnswer.isNotEmpty() && type != 3 && type != 4) || (type == 3 && movable)) {
         Modifier.dragAndDropSource { _ -> DragAndDropTransferData(ClipData.newPlainText("swap", intValue.toString())) }
     } else {
         Modifier
@@ -137,7 +137,7 @@ fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type:
                     if (type == 2) {
                         model.replaceAnswer(answer.toString(), draggedData.toString(), intValue)
                     } else {
-                        model.insertAnswer(answer.toString(), draggedData.toString(), intValue)
+                        model.insertAnswer(answer.toString(), draggedData.toString(), intValue, type = type)
                     }
                 }
                 return true
@@ -179,14 +179,14 @@ fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type:
 }
 
 @Composable
-fun InsertionDropTarget(index: Int, model: QuizzViewModel) {
+fun InsertionDropTarget(index: Int, model: QuizzViewModel, type: Int) {
     val dndTarget = remember(index) {
         object : DragAndDropTarget {
             override fun onDrop(event: DragAndDropEvent): Boolean {
                 val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
                 val answer = event.toAndroidDragEvent().clipData.description.label
                 if (answer != "swap") {
-                    model.insertAnswer(answer.toString(), draggedData.toString(), index)
+                    model.insertAnswer(answer.toString(), draggedData.toString(), index, type)
                     return true
                 }
                 return false
