@@ -9431,6 +9431,491 @@
       ],
       "difficulty": "Difficile",
       "subject": 3
+    },
+    {
+      "type": 1,
+      "question": "Que signifie l’acronyme CPU en informatique ?",
+      "propositions": [[]],
+      "answer": ["Central Processing Unit"],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 1,
+      "question": "Quel langage est principalement utilisé pour le développement web côté client ?",
+      "propositions": [[]],
+      "answer": ["JavaScript"],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 1,
+      "question": "Combien de bits composent un octet ?",
+      "propositions": [[]],
+      "answer": ["8"],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 1,
+      "question": "Quel protocole est principalement utilisé pour sécuriser les communications sur Internet ?",
+      "propositions": [[]],
+      "answer": ["HTTPS"],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 1,
+      "question": "En bases de données relationnelles, que signifie l’acronyme SQL ?",
+      "propositions": [[]],
+      "answer": ["Structured Query Language"],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 1,
+      "question": "Quel type de mémoire est utilisé par un ordinateur pour stocker temporairement les données pendant l'exécution des programmes ?",
+      "propositions": [[]],
+      "answer": ["RAM"],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+
+    {
+      "type": 1,
+      "question": "Quel algorithme est couramment utilisé pour chiffrer les données de manière asymétrique dans la sécurité informatique ?",
+      "propositions": [[]],
+      "answer": ["RSA"],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 1,
+      "question": "Quel est l’algorithme de hachage cryptographique largement utilisé pour vérifier l’intégrité des fichiers, mais qui n’est plus recommandé pour la sécurité ?",
+      "propositions": [[]],
+      "answer": ["MD5"],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 1,
+      "question": "Dans les réseaux neuronaux, quelle fonction est souvent utilisée comme fonction d’activation pour introduire la non-linéarité et éviter le problème du gradient nul ?",
+      "propositions": [[]],
+      "answer": ["ReLU"],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 2,
+      "question": "Classez ces langages de programmation selon leur popularité moyenne actuelle, du moins utilisé au plus utilisé.",
+      "propositions": [
+        ["Python", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png"],
+        ["Rust", "https://kinsta.com/wp-content/uploads/2022/09/logo-of-rust-programming-language.jpg"],
+        ["JavaScript", "https://coursdetechno.amazony.fr/wp-content/uploads/2022/01/Javascript_badge-946x1024.png"],
+        ["Go", "https://www.nixsolutions.com/uploads/2020/07/Golang.png"]
+      ],
+      "answer": ["Rust", "Go", "Python", "JavaScript"],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 2,
+      "question": "Classez ces systèmes d’exploitation selon leur ancienneté, du plus ancien au plus récent.",
+      "propositions": [
+        ["Windows 95", "https://www.nova.fr/wp-content/thumbnails/uploads/sites/2/2016/02/win95-1-1-t-1066x600.jpg"],
+        ["Linux", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAx6camOf_G96Zcs2Zj34Yjmy0ysPd-p0oJQ&s"],
+        ["macOS", "https://www.projectwizards.net/media/pages/blog/2020/01/macos-03-version/7301b0df7b-1693562240/macos.png"],
+        ["Windows 10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLoww1XXL77wmMdiMndPqrPIXQ8nTTeduxjQ&s"]
+      ],
+      "answer": ["Windows 95", "Linux", "macOS", "Windows 10"],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 2,
+      "question": "Classez ces types de mémoire informatique selon leur vitesse d’accès, de la plus lente à la plus rapide.",
+      "propositions": [
+        ["Disque dur (HDD)", "https://content.pearl.fr/media/cache/default/article_ultralarge_high_nocrop/shared/images/articles/K/KT9/disque-dur-3-5-seagate-barracuda-6-to-ref_KT9081_1.jpg"],
+        ["RAM", "https://www.crucial.fr/content/dam/crucial/dram-products/desktop/images/product/ddr4-udimm-dynamic-right.psd.transform/small-jpg/img.jpg"],
+        ["SSD", "https://asset.conrad.com/media10/isa/160267/c1/-/fr/1486251_RB_00_FB/image.jpg?x=400&y=400&format=jpg&ex=400&ey=400&align=center"],
+        ["Cache CPU", "https://static0.howtogeekimages.com/wordpress/wp-content/uploads/2023/01/shutterstock_68577223.jpg"]
+      ],
+      "answer": ["Disque dur (HDD)", "SSD", "RAM", "Cache CPU"],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 2,
+      "question": "Classez ces langages de programmation selon leur niveau d’abstraction, du plus bas niveau au plus haut niveau.",
+      "propositions": [
+        ["C", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPGGOif2hN0ojHqVg2OZDQgERhHVD70MoaDg&s"],
+        ["Assembly", "https://images.takeshape.io/undefined/undefined/6a7c0754-f06a-431d-b775-167f094d9edc/Screen%20Shot%202017-08-21%20at%203.05.43%20PM.png?auto=compress%2Cformat"],
+        ["Python", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png"],
+        ["Java", "https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/250px-Java_Logo.svg.png"]
+      ],
+      "answer": ["Assembly", "C", "Java", "Python"],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 2,
+      "question": "Classez ces types de bases de données selon leur popularité pour le développement web, du moins utilisé au plus utilisé.",
+      "propositions": [
+        ["MongoDB", "https://www.lemagit.fr/visuals/LeMagIT/hero_article/MongoDB.jpg"],
+        ["PostgreSQL", "https://kinsta.com/wp-content/uploads/2022/02/postgres-logo.png"],
+        ["SQLite", "https://henrywithu.com/content/images/size/w1200/2025/08/sqlite-logo.webp"],
+        ["MySQL", "https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg"]
+      ],
+      "answer": ["SQLite", "PostgreSQL", "MongoDB", "MySQL"],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 2,
+      "question": "Classez ces protocoles réseau selon leur niveau de sécurité, du moins sécurisé au plus sécurisé.",
+      "propositions": [
+        ["HTTP", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Internet1.jpg/1200px-Internet1.jpg"],
+        ["FTP", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgGp7LRgpXa9bYDvUCThLZC-vW9qsQA8wPDA&s"],
+        ["HTTPS", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Internet2.svg/1200px-Internet2.svg.png"],
+        ["SSH", "https://techterms.com/img/xl/ssh_609.png"]
+      ],
+      "answer": ["FTP", "HTTP", "HTTPS", "SSH"],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 2,
+      "question": "Classez ces algorithmes de tri selon leur complexité moyenne en temps d’exécution, du plus lent au plus rapide.",
+      "propositions": [
+        ["Tri à bulles", "https://www.pandacodeur.com/medias/images/bulle-pandacodeur.png?size=small"],
+        ["Tri fusion", "https://1.bp.blogspot.com/-fvt3f0gg1yQ/XWgSxwF8E3I/AAAAAAAAGv4/ID9n5Tt-Dr4iLV4mnlY-9Al5tAX4ntuXwCLcBGAs/s1600/tri-fusion.png"],
+        ["Tri rapide (QuickSort)", "https://static.techno-science.net/illustration/Definitions/1200px/p/partition-example.svg_a40191732f3ce6b9d8cbe19bed8b8e2d.png"],
+        ["Tri par insertion", "https://major-prepa.com/wp-content/uploads/2024/10/Tri-par-insertion-1.png"]
+      ],
+      "answer": ["Tri à bulles", "Tri par insertion", "Tri rapide (QuickSort)", "Tri fusion"],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 2,
+      "question": "Classez ces types de stockage cloud selon leur coût moyen par Go, du plus cher au moins cher.",
+      "propositions": [
+        ["Stockage objet premium", "https://www.linode.com/linode/en/images/icon/2025/object-storage-splashicon-2.svg"],
+        ["Stockage bloc standard", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXkKaCbY0_VfJuSj6vVm8FcKSwGfe8UUt8Dg&s"],
+        ["Stockage fichier standard", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwAyCbTlKyhhVm0ec0sry6q8Z0qB-ezfGJmA&s"],
+        ["Stockage archive (glacier)", "https://www-uploads.scaleway.com/Scaleway_Glacier_Tuto_Card_5634108072.webp"]
+      ],
+      "answer": ["Stockage objet premium", "Stockage bloc standard", "Stockage fichier standard", "Stockage archive (glacier)"],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 2,
+      "question": "Classez ces architectures de processeur selon leur nombre de cœurs typique dans les serveurs modernes, du moins au plus de cœurs.",
+      "propositions": [
+        ["ARM Cortex-A", "https://www.forlinx.net/file.php?f=202112/f_d56038868eb19a10c7ef1f10aaa64043&t=jpeg&o=&s=&v=1638432480"],
+        ["Intel Xeon", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaXwo2dGgfwjoxpnlPb0xbNFodzs8-kK_nQ&s"],
+        ["AMD EPYC", "https://www.amd.com/content/dam/amd/en/images/products/processors/epyc/2696428-amd-epyc-4004-processor.jpg"],
+        ["Intel Core i9", "https://media.ldlc.com/r1600/ld/products/00/06/09/60/LD0006096008.jpg"]
+      ],
+      "answer": ["ARM Cortex-A", "Intel Core i9", "Intel Xeon", "AMD EPYC"],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 3,
+      "question": "Trois frameworks web sont déjà classés du plus ancien au plus récent, où faut-il placer React ?",
+      "propositions": [
+        ["Ruby on Rails", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX_FA_Xq6EjFzb-_F5CllSzZrpOVM9ASUvMg&s"],
+        ["Angular", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXNKHsUxfPl5M2Lefvv_35xJVzhh4Vm0Brww&s"],
+        ["Django", "https://94fa3c88.delivery.rocketcdn.me/wp-content/uploads/2023/05/django-datascientest.png"],
+        ["React", "https://miro.medium.com/1*NJSv6DGoKTloI8d8im98zg.png"]
+      ],
+      "answer": ["Ruby on Rails", "Django", "Angular", "React"],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 3,
+      "question": "Trois langages de programmation sont déjà classés du moins populaire au plus populaire, où faut-il placer Python ?",
+      "propositions": [
+        ["C++", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/250px-ISO_C%2B%2B_Logo.svg.png"],
+        ["JavaScript", "https://upload.wikimedia.org/wikipedia/commons/7/73/Javascript-736400_960_720.png"],
+        ["Ruby", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHkmb3PFQ2XBorIKtcFt3jCgClYp8BSRSo1w&s"],
+        ["Python", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png"]
+      ],
+      "answer": ["Ruby", "C++", "Python", "JavaScript"],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 3,
+      "question": "Trois types de stockage cloud sont déjà classés du moins sécurisé au plus sécurisé, où faut-il placer Amazon S3 ?",
+      "propositions": [
+        ["Dropbox", "https://play-lh.googleusercontent.com/b1-MIBjlMD9kvl0Okeglm9BL9ejRpOXMio303W0tiLb8Ul5WuVzBDoDKgGRcALOsCdw=w240-h480-rw"],
+        ["Google Drive", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1200px-Google_Drive_icon_%282020%29.svg.png"],
+        ["iCloud", "https://www.liveagent.com/app/uploads/2021/08/icloud-logo.jpeg"],
+        ["Amazon S3", "https://cdn.prod.website-files.com/65cb885e207a8d416674eca1/668cf1cae5f6cd65168511af_Amazon%20s3.png"]
+      ],
+      "answer": ["Dropbox", "Google Drive", "Amazon S3", "iCloud"],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 3,
+      "question": "Trois générations de processeurs pour smartphones sont déjà classées du moins puissant au plus puissant, où faut-il placer le Snapdragon 8 Gen 2 ?",
+      "propositions": [
+        ["Snapdragon 865", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsxL8wCBcT5p9xhXLtQ0zJ9nWDBjE8CsKW5A&s"],
+        ["Snapdragon 888", "https://www.zdnet.fr/wp-content/uploads/zdnet/2024/02/Qualcomm20Snapdragon2088820A-1.jpg"],
+        ["Snapdragon 845", "https://www.01net.com/app/uploads/2018/02/8fdbacd4bbee220a68f2736b18942ce1.jpg"],
+        ["Snapdragon 8 Gen 2", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEHr4CDShCv821fGkTPxR4QSdIeYGKIJQ5hQ&s"]
+      ],
+      "answer": ["Snapdragon 845", "Snapdragon 865", "Snapdragon 888", "Snapdragon 8 Gen 2"],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 3,
+      "question": "Trois types de collections Java sont déjà classés du moins ordonné au plus ordonné, où faut-il placer TreeSet ?",
+      "propositions": [
+        ["HashSet", "https://cdn.codegym.cc/images/article/ea2c7542-7ffe-44c0-8d89-701d5573f33b/512.webp"],
+        ["ArrayList", "https://beginnersbook.com/wp-content/uploads/2013/12/Adding_Element_ArrayList_diagram.png"],
+        ["LinkedList", "https://miro.medium.com/v2/resize:fit:1400/1*g1zEksSMrSAm1UFrf3K_Dw.png"],
+        ["TreeSet", "https://i.sstatic.net/4lTrv.png"]
+      ],
+      "answer": ["HashSet", "ArrayList", "LinkedList", "TreeSet"],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 3,
+      "question": "Trois exceptions Java sont déjà classées du plus spécifique au plus général, où faut-il placer IOException ?",
+      "propositions": [
+        ["FileNotFoundException", "https://cdn.educba.com/academy/wp-content/uploads/2020/05/Java-FileNotFoundException.jpg"],
+        ["Exception", "https://media.licdn.com/dms/image/v2/D4D12AQFVw69pUXxClw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1731580681491?e=2147483647&v=beta&t=YKt-9zkFKZzEzY-oB27-Ez1Yo_t51MUcAFMSG8Lx7Hg"],
+        ["NullPointerException", "https://media.licdn.com/dms/image/v2/D4D12AQFmBa42JOiPXA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1689080292342?e=2147483647&v=beta&t=xnih2W8TZymm9ipiBcnRzDZxkERpBDtSnSToYkRugqU"],
+        ["IOException", "https://rollbar.com/wp-content/uploads/2023/10/how-to-fix-java-ioexception.jpg"]
+      ],
+      "answer": ["NullPointerException", "FileNotFoundException", "IOException", "Exception"],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 3,
+      "question": "Trois types de pointeurs sont déjà classés du moins sûr au plus sûr, où faut-il placer les pointeurs intelligents (smart pointers) ?",
+      "propositions": [
+        ["Pointeurs bruts", "https://user.oc-static.com/upload/2022/02/01/16437083372423_p2c7-3.png"],
+        ["Références", "https://hackingcpp.com/cpp/lang/references_card.png"],
+        ["Références constantes", "https://strapi.pointerlab.fr/uploads/references_02a90a2056.png"],
+        ["Pointeurs intelligents (smart pointers)", "https://i.ytimg.com/vi/UOB7-B2MfwA/maxresdefault.jpg"]
+      ],
+      "answer": ["Pointeurs bruts", "Références", "Références constantes", "Pointeurs intelligents (smart pointers)"],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 3,
+      "question": "Trois types d’héritage C++ sont déjà classés du plus restrictif au moins restrictif, où faut-il placer l’héritage public ?",
+      "propositions": [
+        ["Héritage privé", "https://www.novap.fr/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/r/i/rigide-prive-web.png"],
+        ["Héritage protégé", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yq0Vt35sDhCghp4udxWF4qlJhNUjucoGGg&s"],
+        ["Héritage virtuel", "https://media.ccmbg.com/tc/2033527490/871656/1599211615"],
+        ["Héritage public", "https://efus.eu/wp-content/uploads/2020/07/city-community-crossing-109919-1-scaled.jpg"]
+      ],
+      "answer": ["Héritage privé", "Héritage protégé", "Héritage public", "Héritage virtuel"],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 3,
+      "question": "Trois processeurs de smartphones sont déjà classés du moins puissant au plus puissant, où faut-il placer l’Apple A15 Bionic ?",
+      "propositions": [
+        ["Snapdragon 865", "https://images.frandroid.com/wp-content/uploads/2019/12/865-0.png"],
+        ["Apple A14 Bionic", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRaNaW6bjrw6NbKRc-W9p61fQz9oLLkL2emQ&s"],
+        ["Snapdragon 888", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRmbpOGa-89ufnuTXQGjc-5_mPfasPSlX1TQ&s"],
+        ["Apple A15 Bionic", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKnsM27fw0Umd4JQ_8hkk3br2kUo6wPgs8sQ&s"]
+      ],
+      "answer": ["Snapdragon 865", "Apple A14 Bionic", "Snapdragon 888", "Apple A15 Bionic"],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 4,
+      "question": "Classez ces inventions informatiques selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["Langage de programmation Python", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtyRpj3CfusKPoaqubJOa4YSR7aaInF6qag&s"],
+        ["Microprocesseur Intel 4004", "https://www.framboise314.fr/wp-content/uploads/2020/11/Intel_4004_ceramique.png"],
+        ["Premier ordinateur électronique (ENIAC)", "https://www.codyx.org/wp-content/uploads/ancien-ordinateur.jpg"],
+        ["World Wide Web", "https://www.apacom.fr/wp-content/uploads/2019/03/web-300x275.png"]
+      ],
+      "answer": [
+        "Premier ordinateur électronique (ENIAC)",
+        "Microprocesseur Intel 4004",
+        "Langage de programmation Python",
+        "World Wide Web"
+      ],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 4,
+      "question": "Classez ces dispositifs informatiques personnels selon leur apparition, du plus ancien au plus récent.",
+      "propositions": [
+        ["Calculatrice programmable", "https://www.cdiscount.com/pdt2/6/6/5/1/700x700/exe3243480106665/rw/calculatrice-texas-instruments-ti-83-premium-pytho.jpg"],
+        ["Ordinateur portable", "https://static.fnac-static.com/multimedia/Images/FR/MDM/a5/33/89/25768869/3756-1/tsp20251010031818/PC-Portable-HP-15-fd1009nf-15-6-Full-HD-Intel-Core-Ultra-5-32-Go-RAM-1-To-D-Argent-naturel.jpg"],
+        ["Smartphone", "https://www.ordissimo.fr/1686-large_default/smartphone-lenumero2-mini.jpg"],
+        ["Tablette", "https://m.media-amazon.com/images/I/71jNto020DL._AC_UF1000,1000_QL80_.jpg"]
+      ],
+      "answer": [
+        "Calculatrice programmable",
+        "Ordinateur portable",
+        "Tablette",
+        "Smartphone"
+      ],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 4,
+      "question": "Classez ces interfaces utilisateur selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["Interface en ligne de commande (CLI)", "https://hw-images.hostwinds.com/cdn-cgi/image/height=250%2Cfit=contain%2Cf=auto/strapi-images/command_line_interface_blog_header_01_4b1947661c.webp"],
+        ["Interface graphique (GUI)", "https://fr.mathworks.com/discovery/matlab-gui/_jcr_content/mainParsys/image_0.adapt.full.medium.jpg/1469940845613.jpg"],
+        ["Interface tactile", "https://i.ytimg.com/vi/0Z9Kk2Rfu_A/maxresdefault.jpg"],
+        ["Interface vocale", "https://assets.justinmind.com/wp-content/uploads/2024/12/voice-user-interface-design-768x492.png"]
+      ],
+      "answer": [
+        "Interface en ligne de commande (CLI)",
+        "Interface graphique (GUI)",
+        "Interface tactile",
+        "Interface vocale"
+      ],
+      "difficulty": "Facile",
+      "subject": 5
+    },
+    {
+      "type": 4,
+      "question": "Classez ces langages de programmation selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["COBOL", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvARyvimGEvtdWxwMUBEez9OX4GAanP62-Tg&s"],
+        ["C", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1853px-C_Programming_Language.svg.png"],
+        ["Java", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Vi-9s2kE3foR4uscDulUfu_YQxlWsl1sFQ&s"],
+        ["JavaScript", "https://www.w3schools.com/whatis/img_js.png"]
+      ],
+      "answer": [
+        "COBOL",
+        "C",
+        "Java",
+        "JavaScript"
+      ],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 4,
+      "question": "Classez ces systèmes d’exploitation selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["MS-DOS", "https://img.linuxfr.org/img/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6d6963726f736f66742f4d532d444f532f6d61737465722f6d73646f732d6c6f676f5f323530783235302e706e67/msdos-logo_250x250.png"],
+        ["Windows 3.1", "https://www.raspberrypi.com/app/uploads/2022/05/Windows3dot1-Splash-Screen-800x602.jpg"],
+        ["Windows XP", "https://www.tomshardware.fr/content/uploads/sites/3/2014/04/windows-xp-boot-640x480.jpg"],
+        ["Linux Ubuntu", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJkF5XM1bfYA7mcxdAnpmLlPbxOU1fO3Z1Pg&s"]
+      ],
+      "answer": [
+        "MS-DOS",
+        "Windows 3.1",
+        "Windows XP",
+        "Linux Ubuntu"
+      ],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 4,
+      "question": "Classez ces logiciels de bureautique selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["Lotus 1-2-3", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMt9DMTE6rqg0KIyrtPyg3tmfOjz0QPQJB9w&s"],
+        ["Microsoft Word", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Microsoft_Word_2013-2019_logo.svg/1085px-Microsoft_Word_2013-2019_logo.svg.png"],
+        ["OpenOffice", "https://upload.wikimedia.org/wikipedia/commons/a/a0/Apache_OpenOffice_4.1.16_start_centre_screenshot.png"],
+        ["Google Docs", "https://tech-paf.com/wp-content/uploads/2024/12/Google-Docs.png"]
+      ],
+      "answer": [
+        "Lotus 1-2-3",
+        "Microsoft Word",
+        "OpenOffice",
+        "Google Docs"
+      ],
+      "difficulty": "Moyen",
+      "subject": 5
+    },
+    {
+      "type": 4,
+      "question": "Classez ces systèmes de programmation parallèle selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["OpenMP", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwBXjeSdf0gKCi3rPUvCyVLtSwLY8-N91BpQ&s"],
+        ["MPI", "https://imgv2-1-f.scribdassets.com/img/word_document/874111256/original/216x287/6ff0d97051/1754080161?v=1"],
+        ["CUDA", "https://m.media-amazon.com/images/I/51is8HoWqqL._AC_UF350,350_QL50_.jpg"],
+        ["TensorFlow", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/TensorFlow_logo.svg/1200px-TensorFlow_logo.svg.png"]
+      ],
+      "answer": [
+        "MPI",
+        "OpenMP",
+        "CUDA",
+        "TensorFlow"
+      ],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 4,
+      "question": "Classez ces architectures de processeurs selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["x86", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnxUko9pYeca6I-mrxsJOqxQoLW3Z_S1aFMQ&s"],
+        ["PowerPC", "https://upload.wikimedia.org/wikipedia/commons/7/7d/IBM_PowerPC601_PPC601FD-080-2_top.jpg"],
+        ["ARM", "https://pic.clubic.com/868822a21891383/1200x663/smart/arm-cortex.jpg"],
+        ["RISC-V", "https://lembarque.com/fichiers/images/articles/Siemens_Nucleus_ReadyStart_RISC_V_Newsroom_tcm27-107856.png"]
+      ],
+      "answer": [
+        "x86",
+        "PowerPC",
+        "ARM",
+        "RISC-V"
+      ],
+      "difficulty": "Difficile",
+      "subject": 5
+    },
+    {
+      "type": 4,
+      "question": "Classez ces langages de programmation utilisés pour le calcul scientifique selon leur apparition historique, du plus ancien au plus récent.",
+      "propositions": [
+        ["Fortran", "https://peq42.com/wp-content/uploads/2023/12/Fortran-Programming-Language.webp"],
+        ["MATLAB", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3IqNcuFXblgp-hCwLPwxVhyYKYmQEgYvvkw&s"],
+        ["Python", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png"],
+        ["Julia", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn6_7DnQkNr0GAthmXOgfh-wZvjqw0_Lcg1A&s"]
+      ],
+      "answer": [
+        "Fortran",
+        "MATLAB",
+        "Python",
+        "Julia"
+      ],
+      "difficulty": "Difficile",
+      "subject": 5
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ]
 }
