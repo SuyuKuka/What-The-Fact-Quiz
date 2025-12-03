@@ -36,9 +36,6 @@ fun Quizztype4(
     } else {
         data.answers[currentQuestion.intValue].propositions[currentImage.intValue - 1]
     }
-    Column {
-        DisplayText(list = font, text = "type 4")
-    }
 
     // EN HAUT
     LazyRow(

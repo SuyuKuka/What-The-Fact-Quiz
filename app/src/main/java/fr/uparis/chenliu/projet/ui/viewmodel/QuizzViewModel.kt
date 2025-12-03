@@ -68,7 +68,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val subject = mutableStateOf("")
     var question = mutableStateListOf<String>()
     val textFieldQuestion = mutableStateOf("")
-    val buildAnswer = mutableStateListOf("", "", "", "")
+    var buildAnswer = mutableStateListOf("", "", "", "")
     var imageAnswer = mutableStateListOf("", "", "", "")
     val currentQuestion = mutableIntStateOf(0)
     val currentImage = mutableIntStateOf(0)
@@ -102,6 +102,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             data.value.types.clear()
 
             fetchQuizzData(difficulty, subject)
+            resetDragDrop()
             loading.value = false
         }
         chronometer()
@@ -161,12 +162,16 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             }
         } else if (type == 1) {
             score.intValue = score.intValue + approxScore(answerList.toList()[0].lowercase(), verify.toList()[0].lowercase())
-        } else if (type == 2 || type == 4) {
+        } else if (type == 2) {
             // c'est plus long, et plus compliqué d'avoir la réponse exacte, donc les type 2, 4 valent 4000 au total
             for (i in 0..verify.size - 1) {
                 if (answerList.toList()[i].lowercase() == verify.toList()[i].lowercase()) {
                     score.intValue = score.intValue + 1000
                 }
+            }
+        } else if (type == 4) {
+            if (answerList.toList() == verify.toList()) {
+                score.intValue = score.intValue + 1000
             }
         }
         gameData.score.intValue +=  score.intValue
@@ -233,18 +238,22 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     fun resetDragDrop() {
         val type = data.value.types[currentQuestion.intValue]
         for(i in 0..buildAnswer.size - 1) { buildAnswer[i] = ""; imageAnswer[i] = "" }
-        if (type == 3) {
-            for (i in 0..2) {
-                buildAnswer[i] = data.value.answers[currentQuestion.intValue].propositions[i][0]
-                imageAnswer[i] = data.value.answers[currentQuestion.intValue].propositions[i][1]
+        when (type) {
+            3 -> {
+                for (i in 0..2) {
+                    buildAnswer[i] = data.value.answers[currentQuestion.intValue].propositions[i][0]
+                    imageAnswer[i] = data.value.answers[currentQuestion.intValue].propositions[i][1]
+                }
+                currentImage.intValue = 3
             }
-            currentImage.intValue = 3
-        } else if (type == 4) {
-            buildAnswer[0] = data.value.answers[currentQuestion.intValue].propositions[0][0]
-            imageAnswer[0] = data.value.answers[currentQuestion.intValue].propositions[0][1]
-            currentImage.intValue = 1
-        } else {
-            currentImage.intValue = 0
+            4 -> {
+                buildAnswer[0] = data.value.answers[currentQuestion.intValue].propositions[0][0]
+                imageAnswer[0] = data.value.answers[currentQuestion.intValue].propositions[0][1]
+                currentImage.intValue = 1
+            }
+            else -> {
+                currentImage.intValue = 0
+            }
         }
     }
 
@@ -274,13 +283,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             currentImage.intValue++
 
             if (type == 4) {
-                println(data.value.answers[currentQuestion.intValue].answer)
-                println(buildAnswer.toList())
-                println(imageAnswer.toList())
-//                println(answer)
-//                println(url)
-
-
                 val goodAnswer = mutableStateListOf<String>()
                 val goodImage = mutableStateListOf<String>()
                 for (i in 0..data.value.answers[currentQuestion.intValue].answer.size - 1) {
@@ -288,16 +290,24 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                         goodAnswer.add(data.value.answers[currentQuestion.intValue].answer[i])
                     }
                 }
-                for (i in 0..buildAnswer.size - 1) {
-                    if (goodAnswer.contains(buildAnswer[i])) {
-                        goodImage.add(imageAnswer[i])
+                for (i in 0..goodAnswer.size - 1) {
+                    for (j in 0.. buildAnswer.size - 1) {
+                        if (buildAnswer[j] == goodAnswer[i]) {
+                            goodImage.add(imageAnswer[j])
+                            break
+                        }
                     }
                 }
+                val count = buildAnswer.size - goodAnswer.size
+                repeat(count) {
+                    goodAnswer.add("")
+                    goodImage.add("")
+                }
 
+                calcScore(gameData = gameData, answerList = buildAnswer, verify = goodAnswer, type = 4)
 
-                println(goodAnswer.toList())
-                println(goodImage.toList())
-
+                buildAnswer = goodAnswer
+                imageAnswer = goodImage
             }
         }
     }
@@ -374,7 +384,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun insertLeaderboard() {
         viewModelScope.launch {
-            println(gameData.score.intValue)
             db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.intValue, time = gameData.time.doubleValue, subject = subject.value))
         }
     }
