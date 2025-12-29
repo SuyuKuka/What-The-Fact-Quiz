@@ -3,8 +3,10 @@ package fr.uparis.chenliu.projet.ui.quizz
 import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -55,17 +57,24 @@ fun BottomBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
             } else {
                 if (!type.isEmpty()) {
                     if (type[currentQuestion] != 0) {
-                        Button(
-                            onClick = {
-                                val currentQuestionType = type[currentQuestion]
-                                when (currentQuestionType) {
-                                    1 -> { model.textFieldQuestion.value = "" }
-                                    2 -> { model.resetDragDrop() }
-                                    3, 4 -> { model.currentImage.intValue = 0 }
+                        if (type[currentQuestion] != 4) {
+                            Button(
+                                onClick = {
+                                    val currentQuestionType = type[currentQuestion]
+                                    when (currentQuestionType) {
+                                        1 -> {
+                                            model.textFieldQuestion.value = ""
+                                        }
+                                        2, 3, 4 -> {
+                                            model.resetDragDrop()
+                                        }
+                                    }
                                 }
+                            ) {
+                                DisplayText(list = font.value, text = "Reset")
                             }
-                        ) {
-                            DisplayText(list = font.value, text = "Reset")
+                        } else {
+                            Spacer(modifier = Modifier.size(1.dp))
                         }
                         Button(
                             onClick = {

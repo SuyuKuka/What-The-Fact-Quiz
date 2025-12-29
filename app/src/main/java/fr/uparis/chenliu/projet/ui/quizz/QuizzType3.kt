@@ -29,16 +29,8 @@ fun Quizztype3(
     modifier: Modifier
 ) {
     val buildAnswer = model.buildAnswer
-    val imageAnswer = model.imageAnswer
     val currentQuestion = model.currentQuestion
     val currentImage = model.currentImage
-    if (currentImage.intValue == 0) {
-        for (i in 0..2) {
-            buildAnswer[i] = data.answers[currentQuestion.intValue].propositions[i][0]
-            imageAnswer[i] = data.answers[currentQuestion.intValue].propositions[i][1]
-            currentImage.intValue++
-        }
-    }
     val ans: List<String> = if (currentImage.intValue < buildAnswer.size) {
         data.answers[currentQuestion.intValue].propositions[currentImage.intValue]
     } else {
@@ -54,7 +46,7 @@ fun Quizztype3(
             if (index < buildAnswer.size) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (index == 0) {
-                        InsertionDropTarget(index = 0, model = model)
+                        InsertionDropTarget(index = 0, model = model, type = 3)
                     }
                     Box(
                         modifier = Modifier
@@ -71,9 +63,9 @@ fun Quizztype3(
                         )
                     }
                     if (index != currentImage.intValue) {
-                        InsertionDropTarget(index = index + 1, model = model)
+                        InsertionDropTarget(index = index + 1, model = model, type = 3)
                     } else {
-                        InsertionDropTarget(index = index, model = model)
+                        InsertionDropTarget(index = index, model = model, type = 3)
                     }
                 }
             }
