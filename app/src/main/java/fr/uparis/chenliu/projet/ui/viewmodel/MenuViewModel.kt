@@ -1,7 +1,7 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
-import androidx.compose.runtime.mutableFloatStateOf
+import android.content.Context
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -13,6 +13,7 @@ import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 
@@ -21,10 +22,11 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     private val db = AppDatabase.getInstance(application)
     private val user = mutableStateOf<UsersEntity?>(null)
     private val settings = mutableStateOf<SettingsEntity?>(null)
-    private var leaderboard = mutableListOf<LeaderboardEntity?>(null)
+    private val leaderboard = mutableStateOf<List<LeaderboardEntity?>>(emptyList())
 
     // Users
     val username = mutableStateOf("")
+    val maxEnergy = mutableIntStateOf(20)
     val energy = mutableIntStateOf(0)
     val lastTimeEnergy = mutableLongStateOf(System.currentTimeMillis())
     val timeEnergy = mutableStateOf("")
@@ -32,10 +34,16 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val endDate = mutableStateOf("")
 
     // Settings
-    val music = mutableFloatStateOf(0f)
-    val sound = mutableFloatStateOf(0f)
+    val backgroundList = MutableStateFlow<List<String>>(emptyList())
+    val fontList = MutableStateFlow<List<String>>(emptyList())
+    val decoNameList = MutableStateFlow<List<String>>(emptyList())
+    val decoPathList = MutableStateFlow<List<String>>(emptyList())
+    val decoTypeList = MutableStateFlow<List<Int>>(emptyList())
+    val decoDiffList = MutableStateFlow<List<Int>>(emptyList())
     val background = mutableIntStateOf(0)
+    val currentBackground = mutableIntStateOf(R.drawable.background_default_blurred)
     val font = mutableIntStateOf(0)
+    val currentFont = mutableStateOf(listOf(0, 0))
     val preferredTopics = mutableStateOf("")
 
     // Leaderboard
@@ -45,29 +53,43 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     val subject = mutableStateOf("")
 
     // Others
-    val backgroundList = listOf("Fond 1", "Fond 2", "Fond 3")
-    val fontList = listOf("Default", "Game", "Typewriter", "Pixel", "Pokemon")
-    val subjectList = listOf("Science", "Gastronomie", "Géographie", "Nature", "Dessin anime", "Informatique")
     val difficultyList = listOf("Facile", "Moyen", "Difficile")
     val saved = mutableStateOf(true)
-    val maxEnergy = mutableIntStateOf(20)
     val changed = mutableStateOf(false)
+    val subjectList = MutableStateFlow<List<String>>(emptyList())
+    val subjectImageList = MutableStateFlow<List<String>>(emptyList())
 
-    fun init(username: String) {
+    fun init(username: String, context: Context) {
         this.username.value = username
         viewModelScope.launch {
+            // init des themes
+            subjectList.value = db.subjectDao().getAllSubjectNames()
+            subjectImageList.value = db.subjectDao().getAllImageNames()
+            // init des paramettres utilisateur
             getUsers()
             settings.value = db.settingsDao().getSetting()
-
-            music.floatValue = settings.value!!.music
-            sound.floatValue = settings.value!!.sound
             background.intValue = settings.value!!.background
             font.intValue = settings.value!!.font
             preferredTopics.value = settings.value!!.preferredTopics
+            // init du leaderboard
+            leaderboard.value = db.leaderboardDao().getLeaderboard(subjectList.value[0])
+            changeSubject(subjectList.value[0])
+            subject.value = subjectList.value[0]
+            // init des deco
+            decoNameList.value = db.decoDao().getAllDecoNames()
+            decoPathList.value = db.decoDao().getAllDecoPaths()
+            decoTypeList.value = db.decoDao().getAllDecoTypes()
+            decoDiffList.value = db.decoDao().getAllDecoDiff()
+            for (i in 0..decoTypeList.value.size - 1) {
+                if (decoTypeList.value[i] == 0) {
+                    backgroundList.value += decoNameList.value[i]
+                } else {
+                    fontList.value += decoNameList.value[i]
+                }
+            }
 
-            leaderboard = db.leaderboardDao().getLeaderboard(subjectList[0])
-            changeSubject(subjectList[0])
-            subject.value = "Science"
+            updateCurrentBackground(context)
+            updateCurrentFont(context)
 
             while (true) {
                 getUsers()
@@ -77,51 +99,39 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun buySubscription(isMonthly: Boolean) {
+    fun manageSubscription(isMonthly: Boolean, isBuying: Boolean) {
         viewModelScope.launch {
+            val day = mutableIntStateOf(0)
+            val month = mutableIntStateOf(0)
+            val year = mutableIntStateOf(0)
+
             db.usersDao().updateEnergy(userId = user.value!!.userId, energy = 20, lastTimeEnergy = System.currentTimeMillis())
             getUsers()
-            val today = mutableStateOf<LocalDateTime>(LocalDateTime.now())
-            val day = today.value.dayOfMonth.toString().toInt()
-            var month = today.value.month.value.toString().toInt()
-            var year = today.value.year.toString().toInt()
+            if (isBuying) {
+                val today = mutableStateOf<LocalDateTime>(LocalDateTime.now())
+                day.intValue = today.value.dayOfMonth.toString().toInt()
+                month.intValue = today.value.month.value.toString().toInt()
+                year.intValue = today.value.year.toString().toInt()
+            } else {
+                val endDate = endDate.value.split("/")
+                day.intValue = endDate[0].toInt()
+                month.intValue = endDate[1].toInt()
+                year.intValue = endDate[2].toInt()
+            }
+
             if (isMonthly) {
-                if (month == 12) {
-                    year += 1
-                    month = 1
+                if (month.intValue == 12) {
+                    year.intValue += 1
+                    month.intValue = 1
                 } else {
-                    month += 1
+                    month.intValue += 1
                 }
             } else {
-                year += 1
+                year.intValue += 1
             }
             db.usersDao().updateSubscribe(userId = user.value!!.userId, subscribe = true)
-            db.usersDao().updateDuration(userId = user.value!!.userId, endDate = "${day}/${month}/${year}")
+            db.usersDao().updateDuration(userId = user.value!!.userId, endDate = "${day.intValue}/${month.intValue}/${year.intValue}")
             getUsers()
-        }
-    }
-
-    fun extendSubscription(isMonthly: Boolean) {
-        viewModelScope.launch {
-            db.usersDao().updateEnergy(userId = user.value!!.userId, energy = 20, lastTimeEnergy = System.currentTimeMillis())
-            getUsers()
-            val endDate = endDate.value.split("/")
-            val day = endDate[0]
-            var month = endDate[1].toInt()
-            var year = endDate[2].toInt()
-            if (isMonthly) {
-                if (month == 12) {
-                    year += 1
-                    month = 1
-                } else {
-                    month += 1
-                }
-            } else {
-                year += 1
-            }
-            db.usersDao().updateSubscribe(userId = user.value!!.userId, subscribe = true)
-            db.usersDao().updateDuration(userId = user.value!!.userId, endDate = "${day}/${month}/${year}")
-
         }
     }
 
@@ -137,7 +147,10 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
 
     fun updateUsername() {
         viewModelScope.launch {
-            db.usersDao().updateUsername(userId = user.value!!.userId, username = username.value)
+            if (username.value.trim() == "") {
+                username.value = "Joueur"
+            }
+            db.usersDao().updateUsername(userId = user.value!!.userId, username = username.value.trim())
             getUsers()
         }
     }
@@ -150,8 +163,6 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch {
             val newSettings = SettingsEntity(
                 userId = user.value!!.userId,
-                music = sound.floatValue,
-                sound = music.floatValue,
                 background = background.intValue,
                 font = font.intValue,
                 preferredTopics = preferredTopics.value
@@ -161,41 +172,40 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun undoSettings() {
-        music.floatValue = settings.value!!.music
-        sound.floatValue = settings.value!!.sound
+    fun undoSettings(context: Context) {
         background.intValue = settings.value!!.background
         font.intValue = settings.value!!.font
         preferredTopics.value = settings.value!!.preferredTopics
+        updateCurrentBackground(context)
+        updateCurrentFont(context)
     }
 
-    fun intToBackground(): Int{
-        val bg = when(background.intValue) {
-            1 -> R.drawable.b1
-            2 -> R.drawable.b2
-            else -> R.drawable.b0
+    fun updateCurrentBackground(context: Context) {
+        if (decoPathList.value.isEmpty()) {
+            currentBackground.intValue = R.drawable.background_default_blurred
+            return
         }
-        return bg
+        val resources = context.resources
+        currentBackground.intValue = resources.getIdentifier(
+            decoPathList.value[background.intValue],
+            "drawable",
+            context.packageName
+        )
     }
 
-    fun intToFont(): List<Int> {
-        val ft = when(font.intValue) {
-            1 -> R.font.game
-            2 -> R.font.typewritter
-            3 -> R.font.pixel
-            4 -> R.font.pokemon
-            else -> 0
+    fun updateCurrentFont(context: Context) {
+        if (decoPathList.value.isEmpty()) {
+            currentFont.value = listOf(0, 0)
+            return
         }
-
-        // différence de taille entre default et autres (pour avoir meme taille quasiment)
-        val sz = when(font.intValue) {
-            1 -> -1
-            2 -> 1
-            3 -> -5
-            4 -> -2
-            else -> 0
-        }
-        return listOf(ft, sz)
+        val resources = context.resources
+        val fontId = resources.getIdentifier(
+            decoPathList.value[font.intValue + backgroundList.value.size],
+            "font",
+            context.packageName
+        )
+        val fontDiff = decoDiffList.value[font.intValue + backgroundList.value.size]
+        currentFont.value = listOf(fontId, fontDiff)
     }
 
     fun addEnergy() {
@@ -223,40 +233,40 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
 
     fun removeEnergy() {
         if (!subscription.value) {
+            if (energy.intValue <= 0) return
             viewModelScope.launch {
-                if (energy.intValue <= 0) return@launch
+                val lastTime = mutableLongStateOf(0)
                 energy.intValue -= 1
                 if (energy.intValue == maxEnergy.intValue - 1) {
-                    db.usersDao().updateEnergy(
-                        userId = user.value!!.userId,
-                        energy = energy.intValue,
-                        lastTimeEnergy = System.currentTimeMillis()
-                    )
+                     lastTime.longValue = System.currentTimeMillis()
                 } else {
-                    db.usersDao().updateEnergy(
-                        userId = user.value!!.userId,
-                        energy = energy.intValue,
-                        lastTimeEnergy = user.value!!.lastTimeEnergy
-                    )
+                    lastTime.longValue = user.value!!.lastTimeEnergy
                 }
+
+                db.usersDao().updateEnergy(
+                    userId = user.value!!.userId,
+                    energy = energy.intValue,
+                    lastTimeEnergy = lastTime.longValue
+                )
                 getUsers()
             }
         }
     }
 
+    // pour leaderboard
     fun changeSubject(subject: String) {
         usernameLeaderboard.clear()
         score.clear()
         bestTime.clear()
         this.subject.value = subject
         viewModelScope.launch {
-            leaderboard = db.leaderboardDao().getLeaderboard(subject)
-            if (leaderboard.isNotEmpty()) {
-                for (i in 0..leaderboard.size - 1) {
-                    if (leaderboard[i]?.userId != null) {
-                        usernameLeaderboard.add(db.usersDao().getUsername(leaderboard[i]!!.userId))
-                        score.add(leaderboard[i]!!.score)
-                        bestTime.add(leaderboard[i]!!.time)
+            leaderboard.value = db.leaderboardDao().getLeaderboard(subject)
+            if (leaderboard.value.isNotEmpty()) {
+                for (i in 0..leaderboard.value.size - 1) {
+                    if (leaderboard.value[i]?.userId != null) {
+                        usernameLeaderboard.add(db.usersDao().getUsername(leaderboard.value[i]!!.userId))
+                        score.add(leaderboard.value[i]!!.score)
+                        bestTime.add(leaderboard.value[i]!!.time)
                     } else {
                         usernameLeaderboard[i] = null
                     }
@@ -264,17 +274,5 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             }
             changed.value = false
         }
-    }
-
-    fun subjectImage(subject: String): Int {
-        when(subject) {
-            "Science" -> return R.drawable.science
-            "Gastronomie" -> return R.drawable.gastronomie
-            "Géographie" -> return R.drawable.geographie
-            "Nature" -> return R.drawable.nature
-            "Dessin anime" -> return R.drawable.dessinanime
-            "Informatique" -> return R.drawable.informatique
-        }
-        return 0
     }
 }

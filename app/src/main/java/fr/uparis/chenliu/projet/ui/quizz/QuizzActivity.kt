@@ -30,8 +30,12 @@ import androidx.compose.ui.draganddrop.DragAndDropTransferData
 import androidx.compose.ui.draganddrop.mimeTypes
 import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
@@ -44,6 +48,14 @@ import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // cacher les barres systems (mode immerssif)
+        val windowInsetsController =
+            WindowCompat.getInsetsController(window, window.decorView)
+        windowInsetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+
         setContent {
             ProjetTheme {
                 val difficulty = intent.getStringExtra("difficulty")!!
@@ -60,12 +72,16 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
     val data = model.data
     val gameData = model.gameData
     val loading = model.loading
+    val context = LocalContext.current
 
-    model.init() // pour l'energie
+    model.init(context = context)
 
     Scaffold(
         topBar = {
             TopBarQuizz(gameData, model)
+        },
+        bottomBar = {
+            BottomBarQuizz(gameData, model)
         },
         containerColor = Color.LightGray // tmp
     ) { innerPadding ->
@@ -74,9 +90,9 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
         } else {
             Column(modifier = Modifier.padding(innerPadding)) {
                 if (!gameData.gameEnded.value) {
-                    GameScreen(data)
+                    GameScreen(data.value)
                 } else {
-                    ResultScreen(model.translateFont(), gameData)
+                    ResultScreen(model.currentFont.value, gameData)
                 }
             }
         }
@@ -102,7 +118,7 @@ fun DragImage(answer: String, url: String) {
 @Composable
 fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type: Int, movable: Boolean = true) {
     val currentImageAnswer = model.imageAnswer[intValue]
-    val drag = if ((currentImageAnswer.isNotEmpty() && type != 3) || (type == 3 && movable)) {
+    val drag = if ((currentImageAnswer.isNotEmpty() && type != 3 && type != 4) || (type == 3 && movable)) {
         Modifier.dragAndDropSource { _ -> DragAndDropTransferData(ClipData.newPlainText("swap", intValue.toString())) }
     } else {
         Modifier
@@ -121,7 +137,7 @@ fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type:
                     if (type == 2) {
                         model.replaceAnswer(answer.toString(), draggedData.toString(), intValue)
                     } else {
-                        model.insertAnswer(answer.toString(), draggedData.toString(), intValue)
+                        model.insertAnswer(answer.toString(), draggedData.toString(), intValue, type = type)
                     }
                 }
                 return true
@@ -163,14 +179,14 @@ fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type:
 }
 
 @Composable
-fun InsertionDropTarget(index: Int, model: QuizzViewModel) {
+fun InsertionDropTarget(index: Int, model: QuizzViewModel, type: Int) {
     val dndTarget = remember(index) {
         object : DragAndDropTarget {
             override fun onDrop(event: DragAndDropEvent): Boolean {
                 val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
                 val answer = event.toAndroidDragEvent().clipData.description.label
                 if (answer != "swap") {
-                    model.insertAnswer(answer.toString(), draggedData.toString(), index)
+                    model.insertAnswer(answer.toString(), draggedData.toString(), index, type)
                     return true
                 }
                 return false

@@ -2,7 +2,6 @@ package fr.uparis.chenliu.projet.ui.quizz
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
@@ -11,12 +10,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -31,14 +28,8 @@ fun Quizztype4(
     modifier: Modifier
 ) {
     val buildAnswer = model.buildAnswer
-    val imageAnswer = model.imageAnswer
     val currentQuestion = model.currentQuestion
     val currentImage = model.currentImage
-    if (currentImage.intValue == 0) {
-        buildAnswer[0] = data.answers[currentQuestion.intValue].propositions[0][0]
-        imageAnswer[0] = data.answers[currentQuestion.intValue].propositions[0][1]
-        currentImage.intValue++
-    }
     val ans: List<String> = if (currentImage.intValue < buildAnswer.size) {
         data.answers[currentQuestion.intValue].propositions[currentImage.intValue]
     } else {
@@ -54,57 +45,29 @@ fun Quizztype4(
             if (index < buildAnswer.size) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (index == 0) {
-                        InsertionDropTarget(index = 0, model = model)
+                        InsertionDropTarget(index = 0, model = model, type = 4)
                     }
                     Box(
                         modifier = Modifier
-                            .width(250.dp)
-                            .aspectRatio(1.5f)
+                            .width(200.dp)
                             .padding(8.dp)
                             .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
                     ) {
                         DropTargetImage(
                             intValue = index,
-                            font = model.translateFont(),
+                            font = font,
                             model = model,
-                            type = 4
+                            type = 4,
+                            movable = false
                         )
                     }
                     if (index != currentImage.intValue) {
-                        InsertionDropTarget(index = index + 1, model = model)
+                        InsertionDropTarget(index = index + 1, model = model, type = 4)
                     } else {
-                        InsertionDropTarget(index = index, model = model)
+                        InsertionDropTarget(index = index, model = model, type = 4)
                     }
                 }
             }
-        }
-    }
-
-    // BOUTON MILIEU
-    Row (
-        modifier = Modifier
-            .fillMaxWidth().padding(end = 8.dp).padding(start = 8.dp),
-        horizontalArrangement = Arrangement.SpaceBetween
-    ){
-        Button(onClick = { currentImage.intValue = 0 }, shape = RectangleShape) {
-            DisplayText(
-                list = font,
-                text = "Reset",
-                textAlign = TextAlign.Center
-            )
-        }
-        Button(onClick = {
-            model.updateGame(
-                answerList = buildAnswer,
-                verify = data.answers[currentQuestion.intValue].answer.toList(),
-                type = 4
-            )
-        }, shape = RectangleShape) {
-            DisplayText(
-                list = font,
-                text = "Valider",
-                textAlign = TextAlign.Center
-            )
         }
     }
 

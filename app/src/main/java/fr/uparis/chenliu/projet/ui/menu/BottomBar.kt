@@ -8,6 +8,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
 import fr.uparis.chenliu.projet.navigation.Screen
@@ -18,7 +19,8 @@ fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     val current = backStack.last()
     var alert by remember { mutableStateOf(false) }
     var destination by remember { mutableStateOf<Screen?>(null) }
-    val currentFont = model.intToFont()
+    val currentFont = model.currentFont
+    val context = LocalContext.current
 
     NavigationBar {
         listOf(Screen.Profile, Screen.Leaderboard, Screen.Home, Screen.Shop, Screen.Settings).forEach { it ->
@@ -50,7 +52,7 @@ fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             alert = false
         }
         Alert(
-            list = currentFont,
+            list = currentFont.value,
             onConfirm = {
                 if (current == Screen.Settings) {
                     model.updateSettings()
@@ -61,7 +63,7 @@ fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             },
             onCancel = {
                 if (current == Screen.Settings) {
-                    model.undoSettings()
+                    model.undoSettings(context)
                 } else if (current == Screen.Profile) {
                     model.undoUsername()
                 }

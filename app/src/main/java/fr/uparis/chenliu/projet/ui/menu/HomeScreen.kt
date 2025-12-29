@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -19,8 +20,13 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -36,25 +42,36 @@ import fr.uparis.chenliu.projet.navigation.Screen
 import fr.uparis.chenliu.projet.ui.quizz.QuizzActivity
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
+// pour load les subjects depuis la db, on est obligé de getIdentifier
+@SuppressLint("LocalContextResourcesRead", "DiscouragedApi")
 @Composable
 fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     val alert = remember { mutableStateOf(false) }
     val difficulty = model.difficultyList
-    val subject = model.subjectList
+    val subject by model.subjectList.collectAsState()
+    val subjectImage by model.subjectImageList.collectAsState()
     val energy = model.energy
     val subscribe = model.subscription
     val lastTimeEnergy = model.lastTimeEnergy
     val now = System.currentTimeMillis()
 
     val selectedDiff = remember { mutableStateOf(difficulty[0]) }
-    val selectedSubj = remember { mutableStateOf(subject[0]) }
+    val selectedSubj = remember { mutableStateOf<String?>(null) }
+
+    LaunchedEffect(subject, subjectImage) {
+        if (subject.isNotEmpty()) {
+            selectedSubj.value = subject[0]
+        }
+    }
+
     val context = LocalContext.current
+    val resources = remember(context) { context.resources }
     val intent = Intent(context, QuizzActivity::class.java)
     intent.putExtra("difficulty", selectedDiff.value)
     intent.putExtra("subject", selectedSubj.value)
 
-    val currentBackground = model.intToBackground()
-    val currentFont = model.intToFont()
+    val currentBackground = model.currentBackground
+    val currentFont = model.currentFont
 
     val sendNotification = {
         if (!subscribe.value) {
@@ -74,7 +91,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 
     if (alert.value) {
         Alert(
-            list = currentFont,
+            list = currentFont.value,
             onConfirm = {
                 alert.value = false
                 backStack += Screen.Shop
@@ -91,7 +108,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = currentBackground),
+            painter = painterResource(id = currentBackground.intValue),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
@@ -101,7 +118,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            DisplayText(list = currentFont, text = "WTF QUIZ", fontSize = 24.sp)
+            DisplayText(list = currentFont.value, text = "WTF QUIZ", fontSize = 24.sp)
             Row(modifier = Modifier.fillMaxWidth()) {
                 difficulty.forEach { diff ->
                     Button(
@@ -114,7 +131,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                             contentColor = Color.White
                         )
                     ) {
-                        DisplayText(list = currentFont, text = diff)
+                        DisplayText(list = currentFont.value, text = diff)
                     }
                 }
             }
@@ -139,20 +156,32 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                             modifier = Modifier.fillMaxSize(),
                             contentAlignment = Alignment.Center
                         ) {
-
-                            Image(
-                                painter = painterResource(id = model.subjectImage(subj)),
-                                contentDescription = null,
-                                modifier = Modifier.fillMaxSize(),
-                                contentScale = ContentScale.Crop
-                            )
+                            var imageResId by remember { mutableIntStateOf(0) }
+                            LaunchedEffect(subject, subjectImage) {
+                                val index = subject.indexOf(subj)
+                                if (index >= 0 && index < subjectImage.size) {
+                                    imageResId = resources.getIdentifier(
+                                        subjectImage[index],
+                                        "drawable",
+                                        context.packageName
+                                    )
+                                }
+                            }
+                            if (imageResId != 0) {
+                                Image(
+                                    painter = painterResource(id = imageResId),
+                                    contentDescription = null,
+                                    modifier = Modifier.fillMaxSize(),
+                                    contentScale = ContentScale.Crop
+                                )
+                            }
                             if (isSelected) {
                                 Spacer(
                                     modifier = Modifier.fillMaxSize()
                                         .background(Color.Black.copy(alpha = 0.2f))
                                 )
                             }
-                            DisplayText(list = currentFont, text = subj, fontSize = 24.sp)
+                            DisplayText(list = currentFont.value, text = subj, fontSize = 24.sp)
                         }
                     }
                 }
@@ -160,7 +189,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 8.dp),
+                    .padding(bottom = 25.dp).padding(top = 25.dp),
                 horizontalArrangement = Arrangement.Center
             ) {
                 Button(
@@ -175,7 +204,7 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                     },
                     modifier = Modifier.fillMaxWidth(0.8f)
                 ) {
-                    DisplayText(list = currentFont, text = "Jouer", fontSize = 18.sp)
+                    DisplayText(list = currentFont.value, text = "Jouer", fontSize = 18.sp)
                 }
             }
         }

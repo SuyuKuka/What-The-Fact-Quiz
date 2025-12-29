@@ -1,8 +1,7 @@
 package fr.uparis.chenliu.projet.ui.viewmodel
 
 import android.app.Application
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
+import android.content.Context
 import androidx.compose.runtime.MutableDoubleState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.MutableState
@@ -12,14 +11,13 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import fr.uparis.chenliu.projet.R
-
 import fr.uparis.chenliu.projet.data.database.AppDatabase
 import fr.uparis.chenliu.projet.data.entity.LeaderboardEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlin.collections.mutableListOf
@@ -57,13 +55,20 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val subscription = mutableStateOf(false)
 
     // Settings
+    val backgroundList = MutableStateFlow<List<String>>(emptyList())
+    val fontList = MutableStateFlow<List<String>>(emptyList())
     val font = mutableIntStateOf(0)
+    val currentFont = mutableStateOf(listOf(0, 0))
+    val decoNameList = MutableStateFlow<List<String>>(emptyList())
+    val decoPathList = MutableStateFlow<List<String>>(emptyList())
+    val decoTypeList = MutableStateFlow<List<Int>>(emptyList())
+    val decoDiffList = MutableStateFlow<List<Int>>(emptyList())
 
     // Quizz
     val subject = mutableStateOf("")
     var question = mutableStateListOf<String>()
-    val answers = mutableStateListOf<AnswerSummary>()
-    val buildAnswer = mutableStateListOf("", "", "", "")
+    val textFieldQuestion = mutableStateOf("")
+    var buildAnswer = mutableStateListOf("", "", "", "")
     var imageAnswer = mutableStateListOf("", "", "", "")
     val currentQuestion = mutableIntStateOf(0)
     val currentImage = mutableIntStateOf(0)
@@ -71,14 +76,12 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     // Others
     val loading = mutableStateOf(true)
 
-
-
     // loading des quiz
-    val data = Data(
-        listOf<String>().toMutableList(),
-        listOf<AnswerSummary>().toMutableList(),
-        listOf<Int>().toMutableList()
-    )
+    val data = mutableStateOf(Data(
+        question = listOf<String>().toMutableList(),
+        answers = listOf<AnswerSummary>().toMutableList(),
+        types = listOf<Int>().toMutableList()
+    ))
 
     // la partie
     val gameData = GameData(
@@ -94,135 +97,46 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     fun getQuestionAndAnswer(subject: String, difficulty: String) {
         this.subject.value = subject
         viewModelScope.launch {
-            data.question.clear()
-            data.answers.clear()
-            data.types.clear()
-            when (subject) {
-                "Science" -> { fetchScienceData(difficulty) }
-                "Gastronomie" -> { fetchGastronomieData(difficulty) }
-                "Géographie" -> { fetchGeographieData(difficulty) }
-                "Nature" -> { fetchNatureData(difficulty) }
-                "Dessin anime" -> { fetchDessinAnimeData(difficulty) }
-                "Informatique" -> { fetchInformatiqueData(difficulty) }
-            }
+            data.value.question.clear()
+            data.value.answers.clear()
+            data.value.types.clear()
+
+            fetchQuizzData(difficulty, subject)
+            resetDragDrop()
             loading.value = false
         }
         chronometer()
     }
-    suspend fun fetchScienceData(difficulty: String) {
+
+    suspend fun fetchQuizzData(difficulty: String, subject: String) {
         // on fetch les data
-        val currentDao = db.quizzScienceDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
+        val currentDao = db.quizzDao()
+        val allQuestion = currentDao.getQuestion(difficulty, subject)
+        val newQuestions = mutableListOf<String>()
+        val newAnswers = mutableListOf<AnswerSummary>()
+        val newTypes = mutableListOf<Int>()
+
+        for (i in allQuestion.indices) {
             // question
-            data.question.add(allQuestion[i].question)
+            newQuestions.add(allQuestion[i].question)
             // type
-            data.types.add(allQuestion[i].type)
+            newTypes.add(allQuestion[i].type)
             // responses
             val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
             val currentPropositions =
-                if (data.types[i] == 0) {
+                if (allQuestion[i].type == 0) {
                     shuffle(currentAnswer)
                 } else {
                     currentAnswer.propositions
                 }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
+            newAnswers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
         }
-    }
-    suspend fun fetchGastronomieData(difficulty: String) {
-        val currentDao = db.quizzGastronomieDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
-    }
-    suspend fun fetchGeographieData(difficulty: String) {
-        val currentDao = db.quizzGeoDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
-    }
-    suspend fun fetchNatureData(difficulty: String) {
-        val currentDao = db.quizzNatureDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
-    }
-    suspend fun fetchDessinAnimeData(difficulty: String) {
-        val currentDao = db.quizzDessinAnimeDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
-    }
-    suspend fun fetchInformatiqueData(difficulty: String) {
-        val currentDao = db.quizzInformatiqueDao()
-        val allQuestion = currentDao.getQuestion(difficulty)
-        for (i in 0..allQuestion.size-1) {
-            // question
-            data.question.add(allQuestion[i].question)
-            // type
-            data.types.add(allQuestion[i].type)
-            // responses
-            val currentAnswer = currentDao.getAnswers(allQuestion[i].id)
-            val currentPropositions =
-                if (data.types[i] == 0) {
-                    shuffle(currentAnswer)
-                } else {
-                    currentAnswer.propositions
-                }
-            data.answers.add(AnswerSummary(currentPropositions, currentAnswer.answer))
-        }
+
+        data.value = Data(
+            question = newQuestions.toMutableList(),
+            answers = newAnswers.toMutableList(),
+            types = newTypes.toMutableList()
+        )
     }
 
     // permet de rendre les propositions aléatoire
@@ -230,7 +144,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
         var shuffling = true
         while (shuffling) {
-
             randomPropositions = value.propositions.shuffled().take(4)
             for (p in randomPropositions) {
                 if (p[0] == value.answer[0]) {
@@ -244,24 +157,27 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     fun calcScore(gameData: GameData, answerList: List<String>, verify: List<String>, type: Int) {
         val score = mutableIntStateOf(0)
         if (type == 0 || type == 3) {
-            if (answerList.toList().toString() == verify.toList().toString()){
+            if (answerList.toList().toString().lowercase() == verify.toList().toString().lowercase()){
                 score.intValue = score.intValue + 1000
             }
         } else if (type == 1) {
-            score.intValue = score.intValue + approxScore(answerList.toList()[0], verify.toList()[0])
-        } else if (type == 2 || type == 4) {
+            score.intValue = score.intValue + approxScore(answerList.toList()[0].lowercase(), verify.toList()[0].lowercase())
+        } else if (type == 2) {
             // c'est plus long, et plus compliqué d'avoir la réponse exacte, donc les type 2, 4 valent 4000 au total
             for (i in 0..verify.size - 1) {
-                if (answerList.toList()[i] == verify.toList()[i]) {
+                if (answerList.toList()[i].lowercase() == verify.toList()[i].lowercase()) {
                     score.intValue = score.intValue + 1000
                 }
+            }
+        } else if (type == 4) {
+            if (answerList.toList() == verify.toList()) {
+                score.intValue = score.intValue + 1000
             }
         }
         gameData.score.intValue +=  score.intValue
     }
 
     fun approxScore(answer: String, guess: String): Int {
-
         // si answer et guess sont des nombre
         if (answer.toIntOrNull() != null  && guess.toIntOrNull() != null) {
             val a = answer.toDouble()
@@ -290,7 +206,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
     fun updateGame(answerList: List<String>, verify: List<String>, type: Int) {
         gameData.answerHistory.add(answerList.toList().toString())
-        gameData.questionHistory.add(data.question[currentQuestion.intValue]) // connaitre les réponses de l'user
+        gameData.questionHistory.add(data.value.question[currentQuestion.intValue]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(verify.toList().toString()) // connaitre la bonne réponse
         calcScore(gameData = gameData, answerList = answerList, verify = verify, type = type)
         gameData.nbQuestion.intValue--      // reduire le nb de question
@@ -300,7 +216,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         }
         if (currentQuestion.intValue == 9) { currentQuestion.intValue = 0 } else { currentQuestion.intValue++ }
         resetDragDrop()
-        currentImage.intValue = 0
+        textFieldQuestion.value = ""
     }
 
     fun resetStats(gameData: GameData) {
@@ -312,6 +228,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.goodAnswer.clear()
         gameData.gameEnded.value = false
         gameData.time.doubleValue = 0.0
+        textFieldQuestion.value = ""
         resetDragDrop()
         currentQuestion.intValue = 0
         currentImage.intValue = 0
@@ -319,7 +236,25 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun resetDragDrop() {
+        val type = data.value.types[currentQuestion.intValue]
         for(i in 0..buildAnswer.size - 1) { buildAnswer[i] = ""; imageAnswer[i] = "" }
+        when (type) {
+            3 -> {
+                for (i in 0..2) {
+                    buildAnswer[i] = data.value.answers[currentQuestion.intValue].propositions[i][0]
+                    imageAnswer[i] = data.value.answers[currentQuestion.intValue].propositions[i][1]
+                }
+                currentImage.intValue = 3
+            }
+            4 -> {
+                buildAnswer[0] = data.value.answers[currentQuestion.intValue].propositions[0][0]
+                imageAnswer[0] = data.value.answers[currentQuestion.intValue].propositions[0][1]
+                currentImage.intValue = 1
+            }
+            else -> {
+                currentImage.intValue = 0
+            }
+        }
     }
 
     fun replaceAnswer(answer: String, draggedData: String, intValue: Int) {
@@ -337,7 +272,7 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         currentImage.intValue++
     }
 
-    fun insertAnswer(answer: String, url: String, insertionIndex: Int) {
+    fun insertAnswer(answer: String, url: String, insertionIndex: Int, type: Int) {
         if (insertionIndex <= buildAnswer.size) {
             for (i in 0..buildAnswer.size - 2 - insertionIndex) {
                 buildAnswer[buildAnswer.size - 1 - i] = buildAnswer[buildAnswer.size - 2 - i]
@@ -346,10 +281,38 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             buildAnswer[insertionIndex] = answer
             imageAnswer[insertionIndex] = url
             currentImage.intValue++
+
+            if (type == 4) {
+                val goodAnswer = mutableStateListOf<String>()
+                val goodImage = mutableStateListOf<String>()
+                for (i in 0..data.value.answers[currentQuestion.intValue].answer.size - 1) {
+                    if (buildAnswer.contains(data.value.answers[currentQuestion.intValue].answer[i])) {
+                        goodAnswer.add(data.value.answers[currentQuestion.intValue].answer[i])
+                    }
+                }
+                for (i in 0..goodAnswer.size - 1) {
+                    for (j in 0.. buildAnswer.size - 1) {
+                        if (buildAnswer[j] == goodAnswer[i]) {
+                            goodImage.add(imageAnswer[j])
+                            break
+                        }
+                    }
+                }
+                val count = buildAnswer.size - goodAnswer.size
+                repeat(count) {
+                    goodAnswer.add("")
+                    goodImage.add("")
+                }
+
+                calcScore(gameData = gameData, answerList = buildAnswer, verify = goodAnswer, type = 4)
+
+                buildAnswer = goodAnswer
+                imageAnswer = goodImage
+            }
         }
     }
 
-    fun init() {
+    fun init(context: Context) {
         viewModelScope.launch {
             user.value = db.usersDao().getUser()
             energy.intValue = user.value!!.energy
@@ -357,6 +320,18 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
 
             settings.value = db.settingsDao().getSetting()
             font.intValue = settings.value!!.font
+            decoNameList.value = db.decoDao().getAllDecoNames()
+            decoPathList.value = db.decoDao().getAllDecoPaths()
+            decoTypeList.value = db.decoDao().getAllDecoTypes()
+            decoDiffList.value = db.decoDao().getAllDecoDiff()
+            for (i in 0..decoTypeList.value.size - 1) {
+                if (decoTypeList.value[i] == 0) {
+                    backgroundList.value += decoNameList.value[i]
+                } else {
+                    fontList.value += decoNameList.value[i]
+                }
+            }
+            getCurrentFont(context)
         }
     }
 
@@ -392,30 +367,23 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun translateFont(): List<Int> {
-        val ft = when(font.intValue) {
-            0 -> 0
-            1 -> R.font.game
-            2 -> R.font.typewritter
-            3 -> R.font.pixel
-            4 -> R.font.pokemon
-            else -> 0
+    fun getCurrentFont(context: Context) {
+        if (decoPathList.value.isEmpty()) {
+            currentFont.value = listOf(0, 0)
+            return
         }
-
-        val sz = when(font.intValue) {
-            0 -> 0
-            1 -> -1
-            2 -> 1
-            3 -> -5
-            4 -> -2
-            else -> 0
-        }
-        return listOf(ft, sz)
+        val resources = context.resources
+        val fontId = resources.getIdentifier(
+            decoPathList.value[font.intValue + backgroundList.value.size],
+            "font",
+            context.packageName
+        )
+        val fontDiff = decoDiffList.value[font.intValue + backgroundList.value.size]
+        currentFont.value = listOf(fontId, fontDiff)
     }
 
     fun insertLeaderboard() {
         viewModelScope.launch {
-            println(gameData.score.intValue)
             db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.intValue, time = gameData.time.doubleValue, subject = subject.value))
         }
     }

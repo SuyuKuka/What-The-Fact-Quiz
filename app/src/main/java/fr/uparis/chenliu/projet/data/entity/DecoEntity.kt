@@ -4,12 +4,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class QuizzGastronomieEntity(
+data class DecoEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
+    val name: String,
+    val path: String,
     val type: Int,
-    val question: String,
-    val propositions: List<List<String>>,
-    val answer: List<String>,
-    val difficulty: String
+    val diff: Int
 )

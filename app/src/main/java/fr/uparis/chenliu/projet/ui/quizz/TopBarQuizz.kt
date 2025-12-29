@@ -1,6 +1,7 @@
 package fr.uparis.chenliu.projet.ui.quizz
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -12,24 +13,42 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import fr.uparis.chenliu.projet.ui.menu.DisplayText
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
-    val font = model.translateFont()
+    val font = model.currentFont
+    val currentQuestion = model.currentQuestion
 
     TopAppBar(
         title = {
-            Row(modifier = Modifier.fillMaxWidth().padding(end = 16.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth(),
+                contentAlignment = Alignment.Center
             ) {
-                DisplayText(list = font, text = "Score: ${gameData.score.intValue} ")
-                DisplayText(list = font, text = "Temps: " + "%.3fs".format(gameData.time.doubleValue))
+                if (!model.gameData.gameEnded.value) {
+                    DisplayText(
+                        list = font.value,
+                        text = "Question ${currentQuestion.intValue + 1}",
+                        fontSize = 24.sp,
+                        color = Color.Black
+                    )
+                }
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    DisplayText(list = font.value, text = "Score: ${gameData.score.intValue} ")
+                    DisplayText(list = font.value, text = "%.0fs".format(gameData.time.doubleValue), modifier = Modifier.padding(end = 16.dp))
+                }
             }
         },
-        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red) // tmp
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red)
     )
 }

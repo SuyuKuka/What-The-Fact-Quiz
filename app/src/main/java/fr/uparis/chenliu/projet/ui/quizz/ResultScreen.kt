@@ -3,13 +3,10 @@ package fr.uparis.chenliu.projet.ui.quizz
 import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -17,7 +14,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.uparis.chenliu.projet.ui.menu.Alert
@@ -66,7 +62,7 @@ fun ResultScreen(
 
         LazyColumn(modifier = Modifier.fillMaxWidth().weight(4f)) {
             itemsIndexed(gameData.questionHistory) { i, question ->
-                if (gameData.answerHistory[i] == gameData.goodAnswer[i]) {
+                if (gameData.answerHistory[i].lowercase() == gameData.goodAnswer[i].lowercase()) {
                     DisplayText(list = font, text = "    Question ${i + 1}: $question", color = Color.Black)
                     DisplayText(
                         list = font,
@@ -86,27 +82,6 @@ fun ResultScreen(
                         color = Color.Blue
                     )
                 }
-            }
-        }
-
-        Row(modifier = Modifier.fillMaxWidth().weight(2f), horizontalArrangement = Arrangement.Center){
-            Button(
-                onClick = { activity?.finish() },
-                modifier = Modifier.padding(8.dp)
-            ) {
-                DisplayText(list = font, text = "Accueil")
-            }
-            Button(
-                onClick = {
-                    if (model.energy.intValue == 0) {
-                        alert.value = true
-                        return@Button
-                    }
-                    model.resetStats(gameData)
-                },
-                modifier = Modifier.padding(8.dp)
-            ) {
-                DisplayText(list = font, text = "Rejouer")
             }
         }
     }

@@ -8,13 +8,10 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import fr.uparis.chenliu.projet.R
 import fr.uparis.chenliu.projet.data.database.AppDatabase
-import fr.uparis.chenliu.projet.data.entity.QuizzDessinAnimeEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzGastronomieEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzGeoEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzInformatiqueEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzNatureEntity
-import fr.uparis.chenliu.projet.data.entity.QuizzScienceEntity
+import fr.uparis.chenliu.projet.data.entity.DecoEntity
+import fr.uparis.chenliu.projet.data.entity.QuizzEntity
 import fr.uparis.chenliu.projet.data.entity.SettingsEntity
+import fr.uparis.chenliu.projet.data.entity.SubjectEntity
 import fr.uparis.chenliu.projet.data.entity.UsersEntity
 import fr.uparis.chenliu.projet.data.model.JsonReader
 
@@ -51,11 +48,13 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         loading.value = true
         viewModelScope.launch {
             if (!db.usersDao().isExist()) {
-                if (username.value == "") {
+                if (username.value.trim() == "") {
                     username.value = "Joueur"
                 }
+                initSubject(context)
                 initQuizz(context)
                 initUser()
+                initDeco(context)
 
                 exist.value = true
                 loading.value = false
@@ -63,108 +62,64 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    suspend fun initUser() {
-        db.usersDao().insertUser(UsersEntity(username = username.value.trim(), energy = 20, lastTimeEnergy = System.currentTimeMillis(),subscribe = false, endDate = ""))
-        user.value = db.usersDao().getUser()
-        db.settingsDao().init(SettingsEntity(userId = user.value!!.userId, music = 1f, sound = 1f, background = 0, font = 0, preferredTopics = ""))
-        delay(3000)
+    suspend fun initSubject(c: Context) {
+        val inputStream = c.resources.openRawResource(R.raw.subject)
+        val jsonString = inputStream.bufferedReader().use { it.readText() }
+        val data = Gson().fromJson(jsonString, JsonReader.SubjectParameter::class.java)
+
+        data.subject.forEach {
+            db.subjectDao().insertTheme(
+                SubjectEntity(
+                    name = it.name,
+                    imageName = it.imageName
+                )
+            )
+        }
     }
 
     suspend fun initQuizz(c:Context) {
-        quizz(c, R.raw.science)
-        quizz(c, R.raw.gastronomie)
-        quizz(c, R.raw.geo)
-        quizz(c, R.raw.dessinanime)
-        quizz(c, R.raw.informatique)
-        quizz(c, R.raw.nature)
-    }
-
-    suspend fun quizz(c: Context, quizz: Int) {
-        val inputStream = c.resources.openRawResource(quizz)
+        val inputStream = c.resources.openRawResource(R.raw.quizz)
         val jsonString = inputStream.bufferedReader().use { it.readText() }
-        val quizzData = Gson().fromJson(jsonString, JsonReader.QuizzParameter::class.java)
+        val data = Gson().fromJson(jsonString, JsonReader.QuizzParameter::class.java)
 
-        quizzQuestion(quizzData.quizz, quizz)
-    }
-
-    suspend fun quizzQuestion(qData: List<JsonReader.QuizzData>, quizz: Int) {
-        qData.forEach {
-            when (quizz) {
-                R.raw.science -> {
-                    db.quizzScienceDao().insertQuestion(
-                        QuizzScienceEntity(
-                            id = it.id,
-                            type = it.type,
-                            question = it.question,
-                            propositions = it.propositions,
-                            answer = it.answer,
-                            difficulty = it.difficulty
-                        )
-                    )
-                }
-                R.raw.geo -> {
-                    db.quizzGeoDao().insertQuestion(
-                        QuizzGeoEntity(
-                            id = it.id,
-                            type = it.type,
-                            question = it.question,
-                            propositions = it.propositions,
-                            answer = it.answer,
-                            difficulty = it.difficulty
-                        )
-                    )
-                }
-                R.raw.gastronomie -> {
-                    db.quizzGastronomieDao().insertQuestion(
-                        QuizzGastronomieEntity(
-                            id = it.id,
-                            type = it.type,
-                            question = it.question,
-                            propositions = it.propositions,
-                            answer = it.answer,
-                            difficulty = it.difficulty
-                        )
-                    )
-                }
-                R.raw.dessinanime -> {
-                    db.quizzDessinAnimeDao().insertQuestion(
-                        QuizzDessinAnimeEntity(
-                            id = it.id,
-                            type = it.type,
-                            question = it.question,
-                            propositions = it.propositions,
-                            answer = it.answer,
-                            difficulty = it.difficulty
-                        )
-                    )
-                }
-                R.raw.nature -> {
-                    db.quizzNatureDao().insertQuestion(
-                        QuizzNatureEntity(
-                            id = it.id,
-                            type = it.type,
-                            question = it.question,
-                            propositions = it.propositions,
-                            answer = it.answer,
-                            difficulty = it.difficulty
-                        )
-                    )
-                }
-                R.raw.informatique -> {
-                    db.quizzInformatiqueDao().insertQuestion(
-                        QuizzInformatiqueEntity(
-                            id = it.id,
-                            type = it.type,
-                            question = it.question,
-                            propositions = it.propositions,
-                            answer = it.answer,
-                            difficulty = it.difficulty
-                        )
-                    )
-                }
-            }
+        data.quizz.forEach {
+            db.quizzDao().insertQuestion(
+                QuizzEntity(
+                    type = it.type,
+                    question = it.question,
+                    propositions = it.propositions,
+                    answer = it.answer,
+                    difficulty = it.difficulty,
+                    subject = it.subject
+                )
+            )
         }
     }
+
+    suspend fun initDeco(c: Context) {
+        val inputStream = c.resources.openRawResource(R.raw.deco)
+        val jsonString = inputStream.bufferedReader().use { it.readText() }
+        val data = Gson().fromJson(jsonString, JsonReader.DecoParameter::class.java)
+
+        data.deco.forEach {
+            db.decoDao().insertDeco(
+                DecoEntity(
+                    name = it.name,
+                    path = it.path,
+                    type = it.type,
+                    diff = it.diff
+                )
+            )
+        }
+    }
+
+    suspend fun initUser() {
+        db.usersDao().insertUser(UsersEntity(username = username.value.trim(), energy = 20, lastTimeEnergy = System.currentTimeMillis(),subscribe = false, endDate = ""))
+        user.value = db.usersDao().getUser()
+        db.settingsDao().init(SettingsEntity(userId = user.value!!.userId, background = 0, font = 0, preferredTopics = ""))
+        delay(3000)
+    }
+
 
     fun expireSubscription() {
         viewModelScope.launch {

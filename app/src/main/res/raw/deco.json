@@ -1,0 +1,59 @@
+{
+  "deco": [
+    {
+      "name": "Default",
+      "path": "background_default_blurred",
+      "type": 0,
+      "diff": 0
+    },
+    {
+      "name": "Fond 1",
+      "path": "b0",
+      "type": 0,
+      "diff": 0
+
+    },
+    {
+      "name": "Fond 2",
+      "path": "b1",
+      "type": 0,
+      "diff": 0
+    },
+    {
+      "name": "Fond 3",
+      "path": "b2",
+      "type": 0,
+      "diff": 0
+    },
+    {
+      "name": "Default",
+      "path": "default",
+      "type": 1,
+      "diff": 0
+    },
+    {
+      "name": "Game",
+      "path": "game",
+      "type": 1,
+      "diff": -1
+    },
+    {
+      "name": "Typewritter",
+      "path": "typewritter",
+      "type": 1,
+      "diff": 1
+    },
+    {
+      "name": "Pixel",
+      "path": "pixel",
+      "type": 1,
+      "diff": -5
+    },
+    {
+      "name": "Pokemon",
+      "path": "pokemon",
+      "type": 1,
+      "diff": -2
+    }
+  ]
+}

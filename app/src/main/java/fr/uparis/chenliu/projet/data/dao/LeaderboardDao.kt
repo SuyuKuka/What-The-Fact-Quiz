@@ -12,6 +12,6 @@ interface LeaderboardDao {
     suspend fun insertLeaderboard(leaderboard: LeaderboardEntity)
 
     @Query("SELECT * FROM LeaderboardEntity WHERE subject = :subject ORDER BY score DESC, time ASC LIMIT 10")
-    suspend fun getLeaderboard(subject: String): MutableList<LeaderboardEntity?>
+    suspend fun getLeaderboard(subject: String): List<LeaderboardEntity?>
 
 }
