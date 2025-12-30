@@ -108,87 +108,60 @@ fun SettingsTitle(font: List<Int>) {
 
 @Composable
 fun SettingsBackground(model: MenuViewModel, selectedBackground: MutableState<Int>, backgroundList: List<String>, font: List<Int>, context: Context, saved: MutableState<Boolean>) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth(0.8f)
-            .clip(RoundedCornerShape(16.dp))
-            .background(Color.White)
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
 
+    DecoCard(
+        title = "Fond d'écran",
+        font = font,
     ) {
-        Row {
-            DisplayText(text = "Fond d'écran", font = font, fontSize = 20.sp)
-        }
-        Row {
-            ChoiceField(
-                model = model,
-                label = "",
-                choice = selectedBackground.value,
-                onValueChange = { newValue ->
-                    selectedBackground.value = newValue; model.updateCurrentBackground(context); saved.value = false
-                },
-                choiceList = backgroundList
-            )
-        }
+        ChoiceField(
+            model = model,
+            label = "",
+            choice = selectedBackground.value,
+            onValueChange = { newValue ->
+                selectedBackground.value = newValue; model.updateCurrentBackground(context); saved.value = false
+            },
+            choiceList = backgroundList
+        )
     }
 }
 
 @Composable
 fun SettingsFont(model: MenuViewModel, selectedFont: MutableState<Int>, fontList: List<String>, font: List<Int>, context: Context, saved: MutableState<Boolean>) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth(0.8f)
-            .clip(RoundedCornerShape(16.dp))
-            .background(Color.White)
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+    DecoCard(
+        title = "Police d'écriture",
+        font = font,
     ) {
-        Row {
-            DisplayText(text = "Police d'écriture", font = font, fontSize = 20.sp)
-        }
-        Row {
-            ChoiceField(
-                model = model,
-                label = "",
-                choice = selectedFont.value,
-                onValueChange = { newValue ->
-                    selectedFont.value = newValue; model.updateCurrentFont(context); saved.value =
-                    false
-                },
-                choiceList = fontList
-            )
-        }
+        ChoiceField(
+            model = model,
+            label = "",
+            choice = selectedFont.value,
+            onValueChange = { newValue ->
+                selectedFont.value = newValue; model.updateCurrentFont(context); saved.value =
+                false
+            },
+            choiceList = fontList
+        )
     }
 }
 
 @Composable
 fun SettingsPreferredTopics(model: MenuViewModel, font: List<Int>, update: () -> Unit, saved: MutableState<Boolean>) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth(0.8f)
-            .clip(RoundedCornerShape(16.dp))
-            .background(Color.White)
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+    DecoCard(
+        title = "Domaine préféré",
+        font = font,
     ) {
-        Row {
-            DisplayText(text = "Domaine préféré", font = font, fontSize = 20.sp)
-        }
-        Row {
-            WriteField(
-                value = model.preferredTopics.value,
-                onValueChange = {
-                    model.preferredTopics.value = it; saved.value = false
-                },
-                label = "",
-                modifier = Modifier.padding(start = 10.dp),
-                font = font,
-                fontSize = 18.sp,
-                onDone = { update() },
-                onlyNb = false
-            )
-        }
+        WriteField(
+            value = model.preferredTopics.value,
+            onValueChange = {
+                model.preferredTopics.value = it; saved.value = false
+            },
+            label = "",
+            modifier = Modifier.padding(start = 10.dp),
+            font = font,
+            fontSize = 18.sp,
+            onDone = { update() },
+            onlyNb = false
+        )
     }
 }
 

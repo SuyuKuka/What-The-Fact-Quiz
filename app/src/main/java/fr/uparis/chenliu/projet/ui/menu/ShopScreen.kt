@@ -124,21 +124,11 @@ fun ShopDesc(font: List<Int>) {
 
 @Composable
 fun ShopSubscriptionM(font: List<Int>, showAlertMonth: MutableState<Boolean>) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth(0.8f)
-            .clip(RoundedCornerShape(16.dp))
-            .background(Color.White)
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-
+    DecoCard(
+        title = "Abonnement mensuel",
+        title2 = "1.99€ pour 1 mois",
+        font = font,
     ) {
-        Row {
-            DisplayText(text = "Abonnement mensuel", font = font, fontSize = 20.sp)
-        }
-        Row {
-            DisplayText(text = "1.99€ pour 1 mois", font = font, fontSize = 17.sp)
-        }
         Row {
             Button(onClick = { showAlertMonth.value = true }) {
                 DisplayText(text = "Acheter", font = font)
@@ -149,21 +139,11 @@ fun ShopSubscriptionM(font: List<Int>, showAlertMonth: MutableState<Boolean>) {
 
 @Composable
 fun ShopSubscriptionY(font: List<Int>, showAlertYear: MutableState<Boolean>) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth(0.8f)
-            .clip(RoundedCornerShape(16.dp))
-            .background(Color.White)
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-
+    DecoCard(
+        title = "Abonnement annuel",
+        title2 = "9.99€ pour 1 an",
+        font = font,
     ) {
-        Row {
-            DisplayText(text = "Abonnement annuel", font = font, fontSize = 20.sp)
-        }
-        Row {
-            DisplayText(text = "9.99€ pour 1 an", font = font, fontSize = 17.sp)
-        }
         Row {
             Button(onClick = { showAlertYear.value = true }) {
                 DisplayText(text = "Acheter", font = font)

@@ -1,10 +1,18 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.provider.SyncStateContract.Helpers.update
+import android.widget.Toast
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -13,7 +21,9 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -35,9 +45,9 @@ fun ProfileScreen(model: MenuViewModel) {
     Box(modifier = Modifier.fillMaxSize()) {
         DisplayBackground(currentBackground = currentBackground.intValue)
         Column(
-            modifier = Modifier
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(18.dp)
         ) {
             ProfileTitle(font = currentFont.value)
             ProfileUsername(model = model, username = username, font = currentFont.value)
@@ -50,13 +60,28 @@ fun ProfileScreen(model: MenuViewModel) {
 
 @Composable
 fun ProfileTitle(font: List<Int>) {
-    DisplayText(text = "Profile", font = font, fontSize = 24.sp)
+    Spacer(modifier = Modifier.height(24.dp))
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.6f)
+            .background(
+                color = Color.White,
+                shape = RoundedCornerShape(16.dp)
+            )
+            .padding(vertical = 12.dp, horizontal = 16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        DisplayText(text = "Profile", font = font, fontSize = 30.sp)
+    }
+
 }
 
 @Composable
 fun ProfileUsername(model: MenuViewModel, username: String, font: List<Int>) {
-    Row {
-        DisplayText(text = "Pseudo", font = font)
+    DecoCard(
+        title = "Vous êtes...",
+        font = font,
+    ) {
         UnderlineTextField(
             list = font,
             value = username,
@@ -75,34 +100,44 @@ fun ProfileSubscription(model: MenuViewModel, subscription: Boolean, font: List<
     if (subscription) {
         val remaining =
             (endDate[2].toInt() - year) * 12 * 30 + (endDate[1].toInt() - month) * 30 + (endDate[0].toInt() - day)
-        DisplayText(
-            text = "Abonné 👑",
+        DecoCard(
+            title = "Abonné 👑",
             font = font,
-            textAlign = TextAlign.Center
-        )
-        DisplayText(
-            text = "Temps restant : ${remaining}j",
-            font = font,
-            textAlign = TextAlign.Center
-        )
+        ) {
+            DisplayText(
+                text = "Temps restant : ${remaining}j",
+                font = font,
+                textAlign = TextAlign.Center
+            )
+        }
     }
 }
 
 @Composable
 fun ProfilePreferredTopics(preferredTopics: String, font: List<Int>) {
     if (preferredTopics != "") {
-        DisplayText(
-            text = preferredTopics,
+        DecoCard(
+            title = "Domaine préféré",
             font = font,
-            textAlign = TextAlign.Center
-        )
+        ) {
+            DisplayText(
+                text = preferredTopics,
+                font = font,
+                textAlign = TextAlign.Center
+            )
+        }
     }
 }
 
 @Composable
 fun ProfileButton(model: MenuViewModel, font: List<Int>) {
+    val context = LocalContext.current
     Button(
-        onClick = { model.updateUsername(); model.saved.value = true }
+        onClick = {
+            model.updateUsername();
+            model.saved.value = true;
+            Toast.makeText(context, "Profile enregistré", Toast.LENGTH_SHORT).show()
+        }
     ) {
         DisplayText(text = "Enregistrer", font = font)
     }
@@ -116,7 +151,7 @@ fun UnderlineTextField(list: List<Int>, value: String, onValueChange: (String) -
             onValueChange = onValueChange,
             modifier = Modifier.fillMaxWidth(),
             textStyle = TextStyle(
-                fontSize = (16 - list[1]).sp,
+                fontSize = (20 - list[1]).sp,
                 color = Color.Black,
                 fontFamily = FontFamily(Font(list[0]))
             ),
