@@ -55,17 +55,17 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
     // Others
     val difficultyList = listOf("Facile", "Moyen", "Difficile")
     val saved = mutableStateOf(true)
-    val changed = mutableStateOf(false)
+    val updated = mutableStateOf(false)
     val subjectList = MutableStateFlow<List<String>>(emptyList())
     val subjectImageList = MutableStateFlow<List<String>>(emptyList())
 
     fun init(username: String, context: Context) {
         this.username.value = username
         viewModelScope.launch {
-            // init des themes
+            // init des matieres
             subjectList.value = db.subjectDao().getAllSubjectNames()
             subjectImageList.value = db.subjectDao().getAllImageNames()
-            // init des paramettres utilisateur
+            // init des parametres utilisateur
             getUsers()
             settings.value = db.settingsDao().getSetting()
             background.intValue = settings.value!!.background
@@ -73,7 +73,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
             preferredTopics.value = settings.value!!.preferredTopics
             // init du leaderboard
             leaderboard.value = db.leaderboardDao().getLeaderboard(subjectList.value[0])
-            changeSubject(subjectList.value[0])
+            updateLeaderboard(subjectList.value[0])
             subject.value = subjectList.value[0]
             // init des deco
             decoNameList.value = db.decoDao().getAllDecoNames()
@@ -235,8 +235,8 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         if (!subscription.value) {
             if (energy.intValue <= 0) return
             viewModelScope.launch {
-                val lastTime = mutableLongStateOf(0)
                 energy.intValue -= 1
+                val lastTime = mutableLongStateOf(0)
                 if (energy.intValue == maxEnergy.intValue - 1) {
                      lastTime.longValue = System.currentTimeMillis()
                 } else {
@@ -253,8 +253,7 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    // pour leaderboard
-    fun changeSubject(subject: String) {
+    fun updateLeaderboard(subject: String) {
         usernameLeaderboard.clear()
         score.clear()
         bestTime.clear()
@@ -271,8 +270,8 @@ class MenuViewModel(application: Application): AndroidViewModel(application) {
                         usernameLeaderboard[i] = null
                     }
                 }
+                updated.value = true
             }
-            changed.value = false
         }
     }
 }

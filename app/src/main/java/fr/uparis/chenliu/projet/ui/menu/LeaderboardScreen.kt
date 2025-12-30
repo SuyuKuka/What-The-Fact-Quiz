@@ -34,7 +34,7 @@ fun LeaderboardScreen(model: MenuViewModel) {
     val usernameList = model.usernameLeaderboard
     val score = model.score
     val bestTime = model.bestTime
-    val changed = model.changed
+    val updated = model.updated
     val subjectList = model.subjectList
     val currentSubject = model.subject
 
@@ -47,14 +47,14 @@ fun LeaderboardScreen(model: MenuViewModel) {
                 subjectList = subjectList.collectAsState().value,
                 currentSubject = currentSubject.value,
                 currentFont = currentFont.value,
-                changed = changed
+                updated = updated
             )
             LeaderboardList(
                 usernameList = usernameList,
                 score = score,
                 bestTime = bestTime,
                 currentFont = currentFont.value,
-                changed = changed.value,
+                updated = updated.value,
                 currentSubject = currentSubject.value
             )
         }
@@ -67,7 +67,7 @@ fun LeaderboardTitle(font: List<Int>) {
 }
 
 @Composable
-fun SubjectList(model: MenuViewModel, subjectList: List<String>, currentSubject: String, currentFont: List<Int>, changed: MutableState<Boolean>) {
+fun SubjectList(model: MenuViewModel, subjectList: List<String>, currentSubject: String, currentFont: List<Int>, updated: MutableState<Boolean>) {
     LazyHorizontalGrid(
         rows = GridCells.Fixed(1),
         modifier = Modifier
@@ -78,9 +78,7 @@ fun SubjectList(model: MenuViewModel, subjectList: List<String>, currentSubject:
     ) {
         items(subjectList) { subject ->
             Button(onClick = {
-                if (currentSubject != subject) {
-                    model.changeSubject(subject); changed.value = true
-                }
+                if (currentSubject != subject) updated.value = false; model.updateLeaderboard(subject)
             }, modifier = Modifier.width(LocalWindowInfo.current.containerSize.width.dp/5)
             ) {
                 DisplayText(text = subject, font = currentFont, fontSize = 16.sp)
@@ -90,47 +88,45 @@ fun SubjectList(model: MenuViewModel, subjectList: List<String>, currentSubject:
 }
 
 @Composable
-fun LeaderboardList(usernameList: List<String?>, score: List<Int?>, bestTime: List<Double?>, currentFont: List<Int>, changed: Boolean, currentSubject: String) {
-    if (!changed) {
-        if (usernameList.isEmpty()) {
-            DisplayText(
-                text = "Pas encore de résultat en $currentSubject",
-                font = currentFont
-            )
-        } else {
-            LazyColumn {
-                itemsIndexed(usernameList) { index, username ->
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        PositionDisplay(
-                            text = "${index + 1}",
-                            font = currentFont,
-                            modifier = Modifier.weight(0.15f).padding(15.dp)
-                        )
-                        PositionDisplay(
-                            text = username!!,
-                            font = currentFont,
-                            modifier = Modifier.weight(0.45f)
-                        )
-                        PositionDisplay(
-                            text = "${score[index] ?: 0}",
-                            font = currentFont,
-                            modifier = Modifier.weight(0.20f)
-                        )
-                        PositionDisplay(
-                            text = "${bestTime[index] ?: 0.0}s",
-                            font = currentFont,
-                            modifier = Modifier.weight(0.20f)
-                        )
-                    }
-                    HorizontalDivider(color = Color.Gray, thickness = 0.4.dp)
+fun LeaderboardList(usernameList: List<String?>, score: List<Int?>, bestTime: List<Double?>, currentFont: List<Int>, updated: Boolean, currentSubject: String) {
+    if (usernameList.isNotEmpty() && updated) {
+        LazyColumn {
+            itemsIndexed(usernameList) { index, username ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    PositionDisplay(
+                        text = "${index + 1}",
+                        font = currentFont,
+                        modifier = Modifier.weight(0.15f).padding(15.dp)
+                    )
+                    PositionDisplay(
+                        text = username!!,
+                        font = currentFont,
+                        modifier = Modifier.weight(0.45f)
+                    )
+                    PositionDisplay(
+                        text = "${score[index] ?: 0}",
+                        font = currentFont,
+                        modifier = Modifier.weight(0.20f)
+                    )
+                    PositionDisplay(
+                        text = "${bestTime[index] ?: 0.0}s",
+                        font = currentFont,
+                        modifier = Modifier.weight(0.20f)
+                    )
                 }
+                HorizontalDivider(color = Color.Gray, thickness = 0.4.dp)
             }
         }
+    } else {
+        DisplayText(
+            text = "Pas encore de résultat en $currentSubject",
+            font = currentFont
+        )
     }
 }
 

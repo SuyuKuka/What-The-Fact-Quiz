@@ -87,8 +87,8 @@ fun MenuScreen(username: String, model: MenuViewModel = viewModel()) {
             entryProvider = entryProvider{
                 entry<Screen.Profile> { model.getUsers(); ProfileScreen(model = model) }
                 entry<Screen.Leaderboard> {
-                    model.changeSubject("Science")
-                    model.changed.value = true
+                    model.updated.value = false
+                    model.updateLeaderboard("Science")
                     LeaderboardScreen(model = model)
                 }
                 entry<Screen.Home> { HomeScreen(model = model, backStack = backStack) }
