@@ -24,7 +24,7 @@ fun Quizztype1 (
             .fillMaxWidth()
             .fillMaxHeight(0.5f),
         horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
+
     ) {
         WriteField(
             value = textFieldAnswer.value,
