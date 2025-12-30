@@ -63,11 +63,9 @@ fun ShopScreen(model: MenuViewModel) {
             ShopSubscriptionM(
                 font = currentFont.value,
                 showAlertMonth = showAlertMonth,
-                showAlertYear = showAlertYear
             )
             ShopSubscriptionY(
                 font = currentFont.value,
-                showAlertMonth = showAlertMonth,
                 showAlertYear = showAlertYear
             )
             ShopAlert(
@@ -125,7 +123,7 @@ fun ShopDesc(font: List<Int>) {
 }
 
 @Composable
-fun ShopSubscriptionM(font: List<Int>, showAlertMonth: MutableState<Boolean>, showAlertYear: MutableState<Boolean>) {
+fun ShopSubscriptionM(font: List<Int>, showAlertMonth: MutableState<Boolean>) {
     Column(
         modifier = Modifier
             .fillMaxWidth(0.8f)
@@ -150,7 +148,7 @@ fun ShopSubscriptionM(font: List<Int>, showAlertMonth: MutableState<Boolean>, sh
 }
 
 @Composable
-fun ShopSubscriptionY(font: List<Int>, showAlertMonth: MutableState<Boolean>, showAlertYear: MutableState<Boolean>) {
+fun ShopSubscriptionY(font: List<Int>, showAlertYear: MutableState<Boolean>) {
     Column(
         modifier = Modifier
             .fillMaxWidth(0.8f)
