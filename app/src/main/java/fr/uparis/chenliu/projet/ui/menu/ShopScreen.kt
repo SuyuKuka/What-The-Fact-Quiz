@@ -1,6 +1,8 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.R
 import android.R.attr.onClick
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -16,6 +18,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -71,7 +75,7 @@ fun ShopTitle(font: List<Int>) {
         modifier = Modifier
             .fillMaxWidth(0.6f)
             .background(
-                color = Color.White,
+                color = MaterialTheme.colorScheme.secondary,
                 shape = RoundedCornerShape(16.dp)
             )
             .padding(vertical = 12.dp, horizontal = 16.dp),
@@ -91,7 +95,7 @@ fun ShopDesc(font: List<Int>) {
         modifier = Modifier
             .fillMaxWidth(0.9f)
             .background(
-                color = Color.White,
+                color = MaterialTheme.colorScheme.secondary,
                 shape = RoundedCornerShape(16.dp)
             )
             .padding(vertical = 12.dp, horizontal = 16.dp),
@@ -114,8 +118,19 @@ fun ShopSubscriptionM(font: List<Int>, showAlertMonth: MutableState<Boolean>) {
         font = font,
     ) {
         Row {
-            Button(onClick = { showAlertMonth.value = true }) {
-                DisplayText(text = "Acheter", font = font)
+            Button(
+                onClick = { showAlertMonth.value = true },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.White,
+                    contentColor = Color.Black
+                ),
+                border = BorderStroke(1.dp, Color.Black)
+            ) {
+                DisplayText(
+                    text = "Acheter",
+                    font = font,
+                    color = Color.Black
+                )
             }
         }
     }
@@ -129,8 +144,19 @@ fun ShopSubscriptionY(font: List<Int>, showAlertYear: MutableState<Boolean>) {
         font = font,
     ) {
         Row {
-            Button(onClick = { showAlertYear.value = true }) {
-                DisplayText(text = "Acheter", font = font)
+            Button(
+                onClick = { showAlertYear.value = true },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.White,
+                    contentColor = Color.Black
+                ),
+                border = BorderStroke(1.dp, Color.Black)
+            ) {
+                DisplayText(
+                    text = "Acheter",
+                    font = font,
+                    color = Color.Black
+                )
             }
         }
     }

@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -28,6 +29,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -54,6 +56,7 @@ import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 import fr.uparis.chenliu.projet.ui.viewmodel.TimeConfigViewModel
 import fr.uparis.chenliu.projet.ui.worker.WorkerReminder
+import java.util.Map.entry
 import java.util.concurrent.TimeUnit
 
 const val CHANNEL_ID = "mon_canal"
@@ -86,6 +89,7 @@ fun MenuScreen(username: String, model: MenuViewModel = viewModel()) {
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
+        containerColor = Color.Transparent,
         topBar = { TopBarMenu(model = model, backStack = backStack) },
         bottomBar = { BottomBarMenu(model = model, backStack = backStack) },
         snackbarHost = { SnackbarHost(hostState = snack) }
@@ -93,7 +97,9 @@ fun MenuScreen(username: String, model: MenuViewModel = viewModel()) {
     { pad ->
         NavDisplay(
             backStack = backStack,
-            modifier = Modifier.padding(paddingValues = pad),
+            modifier = Modifier
+                .padding(paddingValues = pad)
+                .background(Color.Transparent),
             entryProvider = entryProvider{
                 entry<Screen.Profile> { model.getUsers(); ProfileScreen(model = model) }
                 entry<Screen.Leaderboard> {
@@ -154,7 +160,7 @@ fun DecoCard(
     font: List<Int>,
     modifier: Modifier = Modifier,
     title2: String = "",
-    backgroundColor: Color = Color.White,
+    backgroundColor: Color = MaterialTheme.colorScheme.secondary.copy(1f),
     content: @Composable () -> Unit
 ) {
     Column(

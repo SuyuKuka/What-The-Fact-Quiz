@@ -18,6 +18,7 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -65,7 +66,7 @@ fun ProfileTitle(font: List<Int>) {
         modifier = Modifier
             .fillMaxWidth(0.6f)
             .background(
-                color = Color.White,
+                color = MaterialTheme.colorScheme.secondary,
                 shape = RoundedCornerShape(16.dp)
             )
             .padding(vertical = 12.dp, horizontal = 16.dp),

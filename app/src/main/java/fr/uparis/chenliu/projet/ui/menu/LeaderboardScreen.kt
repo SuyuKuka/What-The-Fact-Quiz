@@ -21,6 +21,7 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
@@ -78,7 +79,7 @@ fun LeaderboardTitle(font: List<Int>) {
         modifier = Modifier
             .fillMaxWidth(0.6f)
             .background(
-                color = Color.White,
+                color = MaterialTheme.colorScheme.secondary,
                 shape = RoundedCornerShape(16.dp)
             )
             .padding(vertical = 12.dp, horizontal = 16.dp),
@@ -95,9 +96,9 @@ fun SubjectList(model: MenuViewModel, subjectList: List<String>, currentSubject:
         rows = GridCells.Fixed(1),
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color.White)
+            .background(MaterialTheme.colorScheme.secondary.copy(alpha = 0.4f))
             .height(40.dp)
-            .border(1.dp, Color.White, RoundedCornerShape(16.dp)),
+            .border(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.4f)),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
 
@@ -118,7 +119,7 @@ fun SubjectList(model: MenuViewModel, subjectList: List<String>, currentSubject:
 @Composable
 fun LeaderBoardHead(currentFont: List<Int>) {
     Row(
-        modifier = Modifier.fillMaxWidth().background(Color.White),
+        modifier = Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.secondary.copy(alpha = 0.4f)),
         verticalAlignment = Alignment.CenterVertically
     ) {
         PositionDisplay(
@@ -151,7 +152,7 @@ fun LeaderboardList(usernameList: List<String?>, score: List<Int?>, bestTime: Li
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color.White, shape = RoundedCornerShape(16.dp))
+                .background(MaterialTheme.colorScheme.secondary.copy(alpha = 0.4f), shape = RoundedCornerShape(16.dp))
         ) {
             LazyColumn {
                 itemsIndexed(usernameList) { index, username ->
@@ -193,7 +194,7 @@ fun LeaderboardList(usernameList: List<String?>, score: List<Int?>, bestTime: Li
             modifier = Modifier
                 .fillMaxWidth(0.6f)
                 .background(
-                    color = Color.White,
+                    color = MaterialTheme.colorScheme.secondary,
                     shape = RoundedCornerShape(16.dp)
                 )
                 .padding(vertical = 12.dp, horizontal = 16.dp),
