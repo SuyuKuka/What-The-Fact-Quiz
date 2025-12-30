@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.quizz
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -134,7 +135,7 @@ fun AnswerSlot(model: QuizzViewModel, font: List<Int>, currentImage: Int, modifi
                     modifier = Modifier
                         .width(200.dp)
                         .padding(8.dp)
-                        .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+                        .border(2.dp, Color.Gray)
                 ) {
                     DropTargetImage(
                         model = model,
@@ -170,7 +171,21 @@ fun PropositionsSlot(font: List<Int>, answer: List<String>, buildAnswer: List<St
     ) {
         if (currentImage < buildAnswer.size) {
             DragImage(answer = answer[0], image = answer[1])
-            DisplayText(text = answer[0], font = font, fontSize = 48.sp, color = Color.Red)
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth()
+                    .background(Color.Black.copy(alpha = 0.5f))
+                    .padding(vertical = 4.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                DisplayText(
+                    text = answer[0],
+                    font = font,
+                    fontSize = 30.sp,
+                    color = Color.White
+                )
+            }
         } else {
             DisplayText(
                 text = "C'est tout!",
