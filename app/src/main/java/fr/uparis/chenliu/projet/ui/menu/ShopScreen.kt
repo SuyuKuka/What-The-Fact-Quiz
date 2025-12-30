@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.R.attr.onClick
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -21,8 +22,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
@@ -57,7 +60,12 @@ fun ShopScreen(model: MenuViewModel) {
         ) {
             ShopTitle(font = currentFont.value)
             ShopDesc(font = currentFont.value)
-            ShopSubscription(
+            ShopSubscriptionM(
+                font = currentFont.value,
+                showAlertMonth = showAlertMonth,
+                showAlertYear = showAlertYear
+            )
+            ShopSubscriptionY(
                 font = currentFont.value,
                 showAlertMonth = showAlertMonth,
                 showAlertYear = showAlertYear
@@ -110,19 +118,58 @@ fun ShopDesc(font: List<Int>) {
         DisplayText(
             text = "Profitez de l’Énergie Illimitée et de toutes les fonctionnalités !",
             font = font,
-            fontSize = 20.sp
+            fontSize = 20.sp,
+            textAlign = TextAlign.Center
         )
     }
 }
 
 @Composable
-fun ShopSubscription(font: List<Int>, showAlertMonth: MutableState<Boolean>, showAlertYear: MutableState<Boolean>) {
-    Row {
-        Button(onClick = { showAlertMonth.value = true }) {
-            DisplayText(text = "1.99€/mois", font = font)
+fun ShopSubscriptionM(font: List<Int>, showAlertMonth: MutableState<Boolean>, showAlertYear: MutableState<Boolean>) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth(0.8f)
+            .clip(RoundedCornerShape(16.dp))
+            .background(Color.White)
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+
+    ) {
+        Row {
+            DisplayText(text = "Abonnement mensuel", font = font, fontSize = 20.sp)
         }
-        Button(onClick = { showAlertYear.value = true }) {
-            DisplayText(text = "9.99€/an", font = font)
+        Row {
+            DisplayText(text = "1.99€ pour 1 mois", font = font, fontSize = 17.sp)
+        }
+        Row {
+            Button(onClick = { showAlertMonth.value = true }) {
+                DisplayText(text = "Acheter", font = font)
+            }
+        }
+    }
+}
+
+@Composable
+fun ShopSubscriptionY(font: List<Int>, showAlertMonth: MutableState<Boolean>, showAlertYear: MutableState<Boolean>) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth(0.8f)
+            .clip(RoundedCornerShape(16.dp))
+            .background(Color.White)
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+
+    ) {
+        Row {
+            DisplayText(text = "Abonnement annuel", font = font, fontSize = 20.sp)
+        }
+        Row {
+            DisplayText(text = "9.99€ pour 1 an", font = font, fontSize = 17.sp)
+        }
+        Row {
+            Button(onClick = { showAlertYear.value = true }) {
+                DisplayText(text = "Acheter", font = font)
+            }
         }
     }
 }
