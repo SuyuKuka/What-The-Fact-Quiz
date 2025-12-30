@@ -1,6 +1,5 @@
 package fr.uparis.chenliu.projet.ui.menu
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -8,26 +7,31 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Button
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalWindowInfo
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
+import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.graphics.Color
 
 @Composable
 fun LeaderboardScreen(model: MenuViewModel) {
     val currentBackground = model.currentBackground
     val currentFont = model.currentFont
-    val username = model.usernameLeaderboard
+    val usernameList = model.usernameLeaderboard
     val score = model.score
     val bestTime = model.bestTime
     val changed = model.changed
@@ -35,52 +39,107 @@ fun LeaderboardScreen(model: MenuViewModel) {
     val currentSubject = model.subject
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = currentBackground.intValue),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
+        DisplayBackground(currentBackground = currentBackground.intValue)
         Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-            DisplayText(list = currentFont.value, text = "Classement", fontSize = 24.sp)
-            LazyHorizontalGrid(
-                rows = GridCells.Fixed(1),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(50.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+            LeaderboardTitle(font = currentFont.value)
+            SubjectList(
+                model = model,
+                subjectList = subjectList.collectAsState().value,
+                currentSubject = currentSubject.value,
+                currentFont = currentFont.value,
+                changed = changed
+            )
+            LeaderboardList(
+                usernameList = usernameList,
+                score = score,
+                bestTime = bestTime,
+                currentFont = currentFont.value,
+                changed = changed.value,
+                currentSubject = currentSubject.value
+            )
+        }
+    }
+}
 
-            ) {
-                items(subjectList.value) { subj ->
-                    Button(onClick = {
-                        if (currentSubject.value != subj) {
-                            model.changeSubject(subj); changed.value = true
-                        }
-                    }, modifier = Modifier.width(LocalWindowInfo.current.containerSize.width.dp/5)
-                    ) {
-                        DisplayText(list = currentFont.value, text = subj, fontSize = 16.sp)
-                    }
+@Composable
+fun LeaderboardTitle(font: List<Int>) {
+    DisplayText(text = "Classement", font = font, fontSize = 24.sp)
+}
+
+@Composable
+fun SubjectList(model: MenuViewModel, subjectList: List<String>, currentSubject: String, currentFont: List<Int>, changed: MutableState<Boolean>) {
+    LazyHorizontalGrid(
+        rows = GridCells.Fixed(1),
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(40.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        items(subjectList) { subject ->
+            Button(onClick = {
+                if (currentSubject != subject) {
+                    model.changeSubject(subject); changed.value = true
                 }
+            }, modifier = Modifier.width(LocalWindowInfo.current.containerSize.width.dp/5)
+            ) {
+                DisplayText(text = subject, font = currentFont, fontSize = 16.sp)
             }
-            if (!changed.value) {
-                if (username.isEmpty()) {
-                    DisplayText(
-                        list = currentFont.value,
-                        text = "Pas encore de résultat en ${currentSubject.value}"
-                    )
-                } else {
-                    DisplayText(list = currentFont.value, text = currentSubject.value)
-                    for (i in 0..username.size - 1) {
-                        Row {
-                            DisplayText(list = currentFont.value, text = "${i + 1} | ")
-                            DisplayText(list = currentFont.value, text = username[i]!! + " | ")
-                            DisplayText(list = currentFont.value, text = score[i].toString() + " | ")
-                            DisplayText(list = currentFont.value, text = bestTime[i].toString())
-                        }
+        }
+    }
+}
+
+@Composable
+fun LeaderboardList(usernameList: List<String?>, score: List<Int?>, bestTime: List<Double?>, currentFont: List<Int>, changed: Boolean, currentSubject: String) {
+    if (!changed) {
+        if (usernameList.isEmpty()) {
+            DisplayText(
+                text = "Pas encore de résultat en $currentSubject",
+                font = currentFont
+            )
+        } else {
+            LazyColumn {
+                itemsIndexed(usernameList) { index, username ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        PositionDisplay(
+                            text = "${index + 1}",
+                            font = currentFont,
+                            modifier = Modifier.weight(0.15f).padding(15.dp)
+                        )
+                        PositionDisplay(
+                            text = username!!,
+                            font = currentFont,
+                            modifier = Modifier.weight(0.45f)
+                        )
+                        PositionDisplay(
+                            text = "${score[index] ?: 0}",
+                            font = currentFont,
+                            modifier = Modifier.weight(0.20f)
+                        )
+                        PositionDisplay(
+                            text = "${bestTime[index] ?: 0.0}s",
+                            font = currentFont,
+                            modifier = Modifier.weight(0.20f)
+                        )
                     }
+                    HorizontalDivider(color = Color.Gray, thickness = 0.4.dp)
                 }
             }
         }
+    }
+}
+
+@Composable
+fun PositionDisplay(text: String, font: List<Int>, modifier: Modifier) {
+    Box(
+        modifier = modifier,
+        contentAlignment = Alignment.Center
+    ) {
+        DisplayText(text = text, font = font, fontSize = 16.sp)
     }
 }

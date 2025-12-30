@@ -29,17 +29,19 @@ fun Quizztype0 (
         contentPadding = PaddingValues(8.dp),
         modifier = modifier
     ) {
-        items(data.answers[currentQuestion.intValue].propositions) { ans ->
+        items(data.answers[currentQuestion.intValue].propositions) { answer ->
             Button(
                 onClick = { model.updateGame(
-                    answerList = listOf(ans[0]),
-                    verify = data.answers[currentQuestion.intValue].answer,
+                    answerList = listOf(answer[0]),
+                    goodAnswers = data.answers[currentQuestion.intValue].answer,
                     type = 0
                 )},
                 modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
                 shape = RectangleShape
             ) {
-                DisplayText(list = font, text = ans[0], textAlign = TextAlign.Center)
+                if (answer.isNotEmpty()) {
+                    DisplayText(text = answer[0], font = font, textAlign = TextAlign.Center)
+                }
             }
         }
     }

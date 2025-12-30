@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.content.Context
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -15,23 +16,24 @@ import fr.uparis.chenliu.projet.navigation.Screen
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
 @Composable
-fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
-    val current = backStack.last()
+fun BottomBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
+    val currentScreen = backStack.last()
     var alert by remember { mutableStateOf(false) }
     var destination by remember { mutableStateOf<Screen?>(null) }
     val currentFont = model.currentFont
     val context = LocalContext.current
+    val screen = listOf(Screen.Profile, Screen.Leaderboard, Screen.Home, Screen.Shop, Screen.Settings)
 
     NavigationBar {
-        listOf(Screen.Profile, Screen.Leaderboard, Screen.Home, Screen.Shop, Screen.Settings).forEach { it ->
+        screen.forEach { it ->
             NavigationBarItem(
-                selected = current == it,
+                selected = currentScreen == it,
                 onClick = {
-                    if (current == it) {
+                    if (currentScreen == it) {
                         return@NavigationBarItem
                     }
                     backStack.clear()
-                    backStack.add(current)
+                    backStack.add(currentScreen)
                     if (!model.saved.value) {
                         destination = it
                         alert = true
@@ -51,28 +53,39 @@ fun BottomBar(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
             destination = null
             alert = false
         }
-        Alert(
-            list = currentFont.value,
-            onConfirm = {
-                if (current == Screen.Settings) {
-                    model.updateSettings()
-                } else if (current == Screen.Profile) {
-                    model.updateUsername()
-                }
-                leave()
-            },
-            onCancel = {
-                if (current == Screen.Settings) {
-                    model.undoSettings(context)
-                } else if (current == Screen.Profile) {
-                    model.undoUsername()
-                }
-                leave()
-            },
-            title = "Changements Non Sauvegardés",
-            text = "Des modifications n'ont pas été enregistrées. Voulez-vous les conserver?",
-            onConfirmText = "Oui",
-            onCancelText = "Non"
+        BottomBarAlert(
+            model = model,
+            currentScreen = currentScreen,
+            currentFont = currentFont.value,
+            context = context,
+            leave = leave
         )
     }
+}
+
+@Composable
+fun BottomBarAlert(model: MenuViewModel, currentScreen: NavKey, currentFont: List<Int>, context: Context, leave: () -> Unit) {
+    Alert(
+        font = currentFont,
+        onConfirm = {
+            if (currentScreen == Screen.Settings) {
+                model.updateSettings()
+            } else if (currentScreen == Screen.Profile) {
+                model.updateUsername()
+            }
+            leave()
+        },
+        onCancel = {
+            if (currentScreen == Screen.Settings) {
+                model.undoSettings(context)
+            } else if (currentScreen == Screen.Profile) {
+                model.undoUsername()
+            }
+            leave()
+        },
+        title = "Changements Non Sauvegardés",
+        text = "Des modifications n'ont pas été enregistrées. Voulez-vous les conserver?",
+        onConfirmText = "Oui",
+        onCancelText = "Non"
+    )
 }

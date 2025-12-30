@@ -1,7 +1,8 @@
 package fr.uparis.chenliu.projet.ui.menu
 
-import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -20,7 +21,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -42,171 +43,204 @@ import fr.uparis.chenliu.projet.navigation.Screen
 import fr.uparis.chenliu.projet.ui.quizz.QuizzActivity
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
-// pour load les subjects depuis la db, on est obligé de getIdentifier
-@SuppressLint("LocalContextResourcesRead", "DiscouragedApi")
 @Composable
 fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
-    val alert = remember { mutableStateOf(false) }
-    val difficulty = model.difficultyList
-    val subject by model.subjectList.collectAsState()
-    val subjectImage by model.subjectImageList.collectAsState()
-    val energy = model.energy
-    val subscribe = model.subscription
-    val lastTimeEnergy = model.lastTimeEnergy
-    val now = System.currentTimeMillis()
-
-    val selectedDiff = remember { mutableStateOf(difficulty[0]) }
-    val selectedSubj = remember { mutableStateOf<String?>(null) }
-
-    LaunchedEffect(subject, subjectImage) {
-        if (subject.isNotEmpty()) {
-            selectedSubj.value = subject[0]
-        }
-    }
-
     val context = LocalContext.current
-    val resources = remember(context) { context.resources }
-    val intent = Intent(context, QuizzActivity::class.java)
-    intent.putExtra("difficulty", selectedDiff.value)
-    intent.putExtra("subject", selectedSubj.value)
-
+    val alert = remember { mutableStateOf(false) }
+    val difficultyList = model.difficultyList
+    val subjectList by model.subjectList.collectAsState()
+    val subjectImage by model.subjectImageList.collectAsState()
     val currentBackground = model.currentBackground
     val currentFont = model.currentFont
-
-    val sendNotification = {
-        if (!subscribe.value) {
-            val remainingTime = 120L - ((now - lastTimeEnergy.longValue) / 1000L)
-            if (energy.intValue == 0) {
-                gainEnergyRemind(context = context, remainingTime = remainingTime)
-            }
-            if (energy.intValue < 20) {
-                fullEnergyRemind(
-                    context = context,
-                    currentEnergy = energy.intValue,
-                    remainingTime = remainingTime
-                )
-            }
-        }
+    val selectedDifficulty = remember { mutableStateOf(difficultyList[0]) }
+    val selectedSubject = if (subjectList.isEmpty()) {
+        remember { mutableStateOf("") }
+    } else {
+        remember { mutableStateOf(subjectList[0]) }
     }
 
     if (alert.value) {
-        Alert(
-            list = currentFont.value,
-            onConfirm = {
-                alert.value = false
-                backStack += Screen.Shop
-            },
-            onCancel = {
-                alert.value = false
-            },
-            title = "Joue Sans Limite ! 👑",
-            text = "Tu n'as plus d'énergie ! 😱\nNe perds plus ton temps à attendre !\nAchète l'abonnement prenium pour bénéficier de l'énergie A L'INFINI et jouer sans interruption",
-            onConfirmText = "Je m'abonne",
-            onCancelText = "Fermer"
-        )
+        HomeScreenAlert(currentFont = currentFont.value, alert = alert, backStack = backStack)
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = currentBackground.intValue),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
+        DisplayBackground(currentBackground = currentBackground.intValue)
         Column(
             modifier = Modifier
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            DisplayText(list = currentFont.value, text = "WTF QUIZ", fontSize = 24.sp)
-            Row(modifier = Modifier.fillMaxWidth()) {
-                difficulty.forEach { diff ->
-                    Button(
-                        onClick = { selectedDiff.value = diff },
-                        modifier = Modifier
-                            .weight(1f)
-                            .padding(4.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = if (selectedDiff.value == diff) Color.Blue else Color.Gray,
-                            contentColor = Color.White
-                        )
-                    ) {
-                        DisplayText(list = currentFont.value, text = diff)
-                    }
-                }
-            }
-            LazyVerticalGrid(
-                columns = GridCells.Fixed(2),
-                contentPadding = PaddingValues(8.dp),
+            HomeScreenTitle(currentFont = currentFont.value)
+            DifficultyContent(
+                difficultyList = difficultyList,
+                selectedDifficulty = selectedDifficulty,
+                currentFont = currentFont.value
+            )
+            SubjectContent(
+                subjectList = subjectList,
+                selectedSubject = selectedSubject,
+                currentFont = currentFont.value,
+                subjectImage = subjectImage,
+                context = context,
+                modifier = Modifier.weight(1f)
+            )
+            HomeScreenButton(
+                model = model,
+                selectedDifficulty = selectedDifficulty,
+                selectedSubject = selectedSubject,
+                currentFont = currentFont.value,
+                alert = alert,
+                context = context
+            )
+        }
+    }
+}
+
+fun sendNotification(model: MenuViewModel, context: Context) {
+    val energy = model.energy
+    val subscribe = model.subscription
+    val lastTimeEnergy = model.lastTimeEnergy
+    val now = System.currentTimeMillis()
+    if (!subscribe.value) {
+        val remainingTime = 120L - ((now - lastTimeEnergy.longValue) / 1000L)
+        if (energy.intValue == 0) {
+            gainEnergyRemind(context = context, remainingTime = remainingTime)
+        }
+        if (energy.intValue < 20) {
+            fullEnergyRemind(
+                context = context,
+                currentEnergy = energy.intValue,
+                remainingTime = remainingTime
+            )
+        }
+    }
+}
+
+@Composable
+fun HomeScreenTitle(currentFont: List<Int>) {
+    DisplayText(text = "WTF QUIZ", font = currentFont, fontSize = 24.sp)
+}
+
+@Composable
+fun DifficultyContent(difficultyList: List<String>, selectedDifficulty: MutableState<String>, currentFont: List<Int>) {
+    Row(modifier = Modifier.fillMaxWidth()) {
+        difficultyList.forEach { difficulty ->
+            Button(
+                onClick = { selectedDifficulty.value = difficulty },
                 modifier = Modifier
                     .weight(1f)
+                    .padding(4.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = if (selectedDifficulty.value == difficulty) Color.Blue else Color.Gray,
+                    contentColor = Color.White
+                )
             ) {
-                items(subject) { subj ->
-                    val isSelected = selectedSubj.value == subj
-                    Button(
-                        onClick = { selectedSubj.value = subj },
-                        modifier = Modifier
-                            .aspectRatio(1.2f)
-                            .padding(8.dp)
-                            .fillMaxWidth(),
-                        shape = RectangleShape,
-                        contentPadding = PaddingValues(0.dp)
-                    ) {
-                        Box(
-                            modifier = Modifier.fillMaxSize(),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            var imageResId by remember { mutableIntStateOf(0) }
-                            LaunchedEffect(subject, subjectImage) {
-                                val index = subject.indexOf(subj)
-                                if (index >= 0 && index < subjectImage.size) {
-                                    imageResId = resources.getIdentifier(
-                                        subjectImage[index],
-                                        "drawable",
-                                        context.packageName
-                                    )
-                                }
-                            }
-                            if (imageResId != 0) {
-                                Image(
-                                    painter = painterResource(id = imageResId),
-                                    contentDescription = null,
-                                    modifier = Modifier.fillMaxSize(),
-                                    contentScale = ContentScale.Crop
-                                )
-                            }
-                            if (isSelected) {
-                                Spacer(
-                                    modifier = Modifier.fillMaxSize()
-                                        .background(Color.Black.copy(alpha = 0.2f))
-                                )
-                            }
-                            DisplayText(list = currentFont.value, text = subj, fontSize = 24.sp)
-                        }
-                    }
-                }
+                DisplayText(text = difficulty, font = currentFont)
             }
-            Row(
+        }
+    }
+}
+
+@Composable
+fun SubjectContent(subjectList: List<String>, selectedSubject: MutableState<String>, currentFont: List<Int>, subjectImage: List<String>, context: Context, modifier: Modifier) {
+    val resources = remember(context) { context.resources }
+    LazyVerticalGrid(
+        columns = GridCells.Fixed(2),
+        contentPadding = PaddingValues(8.dp),
+        modifier = modifier
+    ) {
+        items(subjectList) { subject ->
+            val isSelected = selectedSubject.value == subject
+            Button(
+                onClick = { selectedSubject.value = subject },
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 25.dp).padding(top = 25.dp),
-                horizontalArrangement = Arrangement.Center
+                    .aspectRatio(1.2f)
+                    .padding(8.dp)
+                    .fillMaxWidth(),
+                shape = RectangleShape,
+                contentPadding = PaddingValues(0.dp)
             ) {
-                Button(
-                    onClick = {
-                        if (model.energy.intValue == 0) {
-                            alert.value = true
-                            return@Button
-                        }
-                        model.removeEnergy()
-                        context.startActivity(intent)
-                        sendNotification()
-                    },
-                    modifier = Modifier.fillMaxWidth(0.8f)
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
                 ) {
-                    DisplayText(list = currentFont.value, text = "Jouer", fontSize = 18.sp)
+                    SubjectImage(
+                        subjectList = subjectList,
+                        subjectImage = subjectImage,
+                        subject = subject,
+                        context = context,
+                        resources = resources
+                    )
+                    if (isSelected) {
+                        Spacer(modifier = Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.2f)))
+                    }
+                    DisplayText(text = subject, font = currentFont, fontSize = 24.sp)
                 }
             }
         }
     }
+}
+
+@Composable
+fun SubjectImage(subjectList: List<String>, subjectImage: List<String>, subject: String, context: Context, resources: Resources) {
+    var imageResId by remember { mutableIntStateOf(0) }
+    val index = subjectList.indexOf(subject)
+    if (index >= 0 && index < subjectImage.size) {
+        imageResId = resources.getIdentifier(
+            subjectImage[index],
+            "drawable",
+            context.packageName
+        )
+    }
+    if (imageResId != 0) {
+        Image(
+            painter = painterResource(id = imageResId),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop
+        )
+    }
+}
+@Composable
+fun HomeScreenButton(model: MenuViewModel, selectedDifficulty: MutableState<String>, selectedSubject: MutableState<String>, currentFont: List<Int>, alert: MutableState<Boolean>, context: Context) {
+    val intent = Intent(context, QuizzActivity::class.java)
+    Row(
+        modifier = Modifier.fillMaxWidth().padding(bottom = 25.dp).padding(top = 25.dp),
+        horizontalArrangement = Arrangement.Center
+    ) {
+        Button(
+            onClick = {
+                if (model.energy.intValue == 0) {
+                    alert.value = true
+                    return@Button
+                }
+                model.removeEnergy()
+                intent.putExtra("difficulty", selectedDifficulty.value)
+                intent.putExtra("subject", selectedSubject.value)
+                context.startActivity(intent)
+                sendNotification(model = model, context = context)
+            },
+            modifier = Modifier.fillMaxWidth(0.8f)
+        ) {
+            DisplayText(text = "Jouer", font = currentFont, fontSize = 18.sp)
+        }
+    }
+}
+
+@Composable
+fun HomeScreenAlert(currentFont: List<Int>, alert: MutableState<Boolean>, backStack: NavBackStack<NavKey>) {
+    Alert(
+        font = currentFont,
+        onConfirm = {
+            alert.value = false
+            backStack += Screen.Shop
+        },
+        onCancel = {
+            alert.value = false
+        },
+        title = "Joue Sans Limite ! 👑",
+        text = "Tu n'as plus d'énergie ! 😱\nNe perds plus ton temps à attendre !\nAchète l'abonnement prenium pour bénéficier de l'énergie A L'INFINI et jouer sans interruption",
+        onConfirmText = "Je m'abonne",
+        onCancelText = "Fermer"
+    )
 }

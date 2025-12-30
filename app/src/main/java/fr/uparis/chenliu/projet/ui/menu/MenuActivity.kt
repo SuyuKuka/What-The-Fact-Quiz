@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
@@ -7,6 +8,7 @@ import android.content.Context.NOTIFICATION_SERVICE
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.AlertDialog
@@ -19,15 +21,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
@@ -38,6 +39,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import fr.uparis.chenliu.projet.data.store.TimeConfig
 import fr.uparis.chenliu.projet.navigation.Screen
+import fr.uparis.chenliu.projet.ui.HideSystemBar
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 import fr.uparis.chenliu.projet.ui.viewmodel.TimeConfigViewModel
@@ -49,15 +51,6 @@ const val CHANNEL_ID = "mon_canal"
 class MenuActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-        // cacher les barres systems (mode immerssif)
-        val windowInsetsController =
-            WindowCompat.getInsetsController(window, window.decorView)
-        windowInsetsController.systemBarsBehavior =
-            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
-
         createChannel(context = this)
         setContent {
             ProjetTheme {
@@ -65,14 +58,15 @@ class MenuActivity : ComponentActivity() {
                 if (username == "") {
                     finish()
                 }
-                MyScreenMenu(username = username)
+                HideSystemBar(window)
+                MenuScreen(username = username)
             }
         }
     }
 }
 
 @Composable
-fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
+fun MenuScreen(username: String, model: MenuViewModel = viewModel()) {
     val backStack = rememberNavBackStack(Screen.Home)
     val snack = remember { SnackbarHostState() }
     val context = LocalContext.current
@@ -83,7 +77,7 @@ fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = { TopBarMenu(model = model, backStack = backStack) },
-        bottomBar = { BottomBar(model = model, backStack = backStack) },
+        bottomBar = { BottomBarMenu(model = model, backStack = backStack) },
         snackbarHost = { SnackbarHost(hostState = snack) }
     )
     { pad ->
@@ -92,9 +86,10 @@ fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
             modifier = Modifier.padding(paddingValues = pad),
             entryProvider = entryProvider{
                 entry<Screen.Profile> { model.getUsers(); ProfileScreen(model = model) }
-                entry<Screen.Leaderboard> { model.changeSubject("Science"); model.changed.value = true; LeaderboardScreen(
-                    model = model
-                )
+                entry<Screen.Leaderboard> {
+                    model.changeSubject("Science")
+                    model.changed.value = true
+                    LeaderboardScreen(model = model)
                 }
                 entry<Screen.Home> { HomeScreen(model = model, backStack = backStack) }
                 entry<Screen.Shop> { ShopScreen(model = model) }
@@ -105,19 +100,19 @@ fun MyScreenMenu(username: String, model: MenuViewModel = viewModel()) {
 }
 
 @Composable
-fun Alert(list: List<Int>, onConfirm: () -> Unit, onCancel: () -> Unit, title: String, text: String, onConfirmText: String, onCancelText: String) {
+fun Alert(font: List<Int>, onConfirm: () -> Unit, onCancel: () -> Unit, title: String, text: String, onConfirmText: String, onCancelText: String) {
     AlertDialog(
         onDismissRequest = onCancel,
-        title = { DisplayText(list = list, text = title) },
-        text = { DisplayText(list = list, text = text) },
+        title = { DisplayText(font = font, text = title) },
+        text = { DisplayText(font = font, text = text) },
         confirmButton = {
             Button(onClick = onConfirm) {
-                DisplayText(list = list, text = onConfirmText)
+                DisplayText(font = font, text = onConfirmText)
             }
         },
         dismissButton = {
             Button(onClick = onCancel) {
-                DisplayText(list = list, text = onCancelText)
+                DisplayText(font = font, text = onCancelText)
             }
         }
     )
@@ -125,20 +120,30 @@ fun Alert(list: List<Int>, onConfirm: () -> Unit, onCancel: () -> Unit, title: S
 
 @Composable
 fun DisplayText(
-    list: List<Int>,
     text: String,
+    font: List<Int>,
     fontSize: TextUnit = 16.sp,
     color: Color = Color.Black,
     textAlign: TextAlign = TextAlign.Start,
-    modifier: Modifier = Modifier
+    @SuppressLint("ModifierParameter") modifier: Modifier = Modifier
 ) {
     Text(
         text = text,
-        fontSize = (fontSize.value - list[1]).sp,
+        fontSize = (fontSize.value - font[1]).sp,
         color = color,
-        fontFamily = FontFamily(Font(list[0])),
+        fontFamily = FontFamily(Font(font[0])),
         textAlign = textAlign,
         modifier = modifier
+    )
+}
+
+@Composable
+fun DisplayBackground(currentBackground: Int) {
+    Image(
+        painter = painterResource(id = currentBackground),
+        contentDescription = null,
+        modifier = Modifier.fillMaxSize(),
+        contentScale = ContentScale.Crop
     )
 }
 
@@ -167,6 +172,5 @@ fun fullEnergyRemind(context: Context, currentEnergy: Int, remainingTime: Long) 
 @Composable
 private fun DailyRemind(model: TimeConfigViewModel = viewModel()) {
     val config = TimeConfig(hMorning = 8, mMorning = 0)
-    model.save(config)
     model.schedule(config)
 }

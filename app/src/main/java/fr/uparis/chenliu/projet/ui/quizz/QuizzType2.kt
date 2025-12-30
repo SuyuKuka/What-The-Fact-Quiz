@@ -28,40 +28,55 @@ fun Quizztype2(
     modifier: Modifier
 ) {
     val currentQuestion = model.currentQuestion
+    AnswerSlotQuizz2(
+        model = model,
+        font = font,
+        data = data,
+        currentQuestion = currentQuestion.intValue,
+        modifier = modifier
+    )
+    PropositionsSlotQuizz2(font = font, data = data, currentQuestion = currentQuestion.intValue)
+}
+
+@Composable
+fun AnswerSlotQuizz2(model: QuizzViewModel, font: List<Int>, data: QuizzViewModel.Data, currentQuestion: Int, modifier: Modifier = Modifier) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         contentPadding = PaddingValues(8.dp),
         modifier = modifier
     ) {
-        items(data.answers[currentQuestion.intValue].propositions) { ans ->
+        items(data.answers[currentQuestion].propositions) { ans ->
             Box (
                 modifier = Modifier
                     .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
                     .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
             ) {
                 DropTargetImage(
-                    intValue = data.answers[currentQuestion.intValue].propositions.indexOf(ans),
-                    font = font,
                     model = model,
-                    type = 2
+                    font = font,
+                    indexAnswer = data.answers[currentQuestion].propositions.indexOf(ans),
+                    quizzType = 2
                 )
             }
         }
     }
+}
 
+@Composable
+fun PropositionsSlotQuizz2(font: List<Int>, data: QuizzViewModel.Data, currentQuestion: Int) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         contentPadding = PaddingValues(8.dp)
     ) {
-        items(data.answers[currentQuestion.intValue].propositions) { ans ->
+        items(data.answers[currentQuestion].propositions) { ans ->
             Box (
                 modifier = Modifier
                     .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
                     .background(Color.Black),
                 contentAlignment = Alignment.BottomCenter
             ) {
-                DragImage(answer = ans[0], url = ans[1])
-                DisplayText(list = font, text = ans[0], fontSize = 24.sp, color = Color.Red)
+                DragImage(answer = ans[0], image = ans[1])
+                DisplayText(text = ans[0], font = font, fontSize = 24.sp, color = Color.Red)
             }
         }
     }

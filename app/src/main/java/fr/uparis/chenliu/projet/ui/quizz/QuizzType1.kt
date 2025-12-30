@@ -18,7 +18,7 @@ fun Quizztype1 (
     model: QuizzViewModel
 ) {
     val currentQuestion = model.currentQuestion
-    val textFieldQuestion = model.textFieldQuestion
+    val textFieldAnswer = model.textFieldAnswer
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -27,23 +27,20 @@ fun Quizztype1 (
         verticalAlignment = Alignment.CenterVertically
     ) {
         WriteField(
-            value = textFieldQuestion.value,
+            value = textFieldAnswer.value,
             onValueChange = {
-                newValue -> textFieldQuestion.value = newValue
+                    newValue -> textFieldAnswer.value = newValue
             },
             label = "Réponse",
             modifier = Modifier,
             font = font,
             fontSize = 16.sp,
             onDone = {
-                val number = textFieldQuestion.value.toIntOrNull()
-                if (number != null) {
-                    model.updateGame(
-                        answerList = listOf(textFieldQuestion.value),
-                        verify = data.answers[currentQuestion.intValue].answer,
-                        type = 1
-                    )
-                }
+                model.updateGame(
+                    answerList = listOf(textFieldAnswer.value),
+                    goodAnswers = data.answers[currentQuestion.intValue].answer,
+                    type = 1
+                )
             }
         )
     }

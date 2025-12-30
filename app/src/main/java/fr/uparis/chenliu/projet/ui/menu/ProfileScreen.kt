@@ -1,6 +1,5 @@
 package fr.uparis.chenliu.projet.ui.menu
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,8 +14,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -32,64 +29,82 @@ fun ProfileScreen(model: MenuViewModel) {
     val username = model.username.value
     val subscription = model.subscription.value
     val preferredTopics = model.preferredTopics.value
-    val endDate = model.endDate.value.split("/")
-    val day = LocalDateTime.now().dayOfMonth
-    val month = LocalDateTime.now().month.value
-    val year = LocalDateTime.now().year
     val currentBackground = model.currentBackground
     val currentFont = model.currentFont
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = currentBackground.intValue),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
+        DisplayBackground(currentBackground = currentBackground.intValue)
         Column(
             modifier = Modifier
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            DisplayText(
-                list = currentFont.value,
-                text = "PROFILE",
-                fontSize = 24.sp,
-                textAlign = TextAlign.Center
-            )
-            Row {
-                DisplayText(list = currentFont.value, text = "Pseudo ")
-                UnderlineTextField(
-                    list = currentFont.value,
-                    value = username,
-                    onValueChange = { if (it.length <= 16) model.username.value = it; model.saved.value = false },
-                    onDone = { model.updateUsername(); model.saved.value = true }
-                )
-            }
-            if (subscription) {
-                val remaining =
-                    (endDate[2].toInt() - year) * 12 * 30 + (endDate[1].toInt() - month) * 30 + (endDate[0].toInt() - day)
-                DisplayText(
-                    list = currentFont.value,
-                    text = "Abonné 👑",
-                    textAlign = TextAlign.Center
-                )
-                DisplayText(
-                    list = currentFont.value,
-                    text = "Temps restant : ${remaining}j",
-                    textAlign = TextAlign.Center
-                )
-            }
-            if (preferredTopics != "") {
-                DisplayText(
-                    list = currentFont.value,
-                    text = preferredTopics,
-                    textAlign = TextAlign.Center
-                )
-            }
-            Button(onClick = { model.updateUsername(); model.saved.value = true }
-            ) { DisplayText(list = currentFont.value, text = "Enregistrer") }
+            ProfileTitle(font = currentFont.value)
+            ProfileUsername(model = model, username = username, font = currentFont.value)
+            ProfileSubscription(model = model, subscription = subscription, font = currentFont.value)
+            ProfilePreferredTopics(preferredTopics = preferredTopics, font = currentFont.value)
+            ProfileButton(model = model, font = currentFont.value)
         }
+    }
+}
+
+@Composable
+fun ProfileTitle(font: List<Int>) {
+    DisplayText(text = "Profile", font = font, fontSize = 24.sp)
+}
+
+@Composable
+fun ProfileUsername(model: MenuViewModel, username: String, font: List<Int>) {
+    Row {
+        DisplayText(text = "Pseudo", font = font)
+        UnderlineTextField(
+            list = font,
+            value = username,
+            onValueChange = { if (it.length <= 16) model.username.value = it; model.saved.value = false },
+            onDone = { model.updateUsername(); model.saved.value = true }
+        )
+    }
+}
+
+@Composable
+fun ProfileSubscription(model: MenuViewModel, subscription: Boolean, font: List<Int>) {
+    val endDate = model.endDate.value.split("/")
+    val day = LocalDateTime.now().dayOfMonth
+    val month = LocalDateTime.now().month.value
+    val year = LocalDateTime.now().year
+    if (subscription) {
+        val remaining =
+            (endDate[2].toInt() - year) * 12 * 30 + (endDate[1].toInt() - month) * 30 + (endDate[0].toInt() - day)
+        DisplayText(
+            text = "Abonné 👑",
+            font = font,
+            textAlign = TextAlign.Center
+        )
+        DisplayText(
+            text = "Temps restant : ${remaining}j",
+            font = font,
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+@Composable
+fun ProfilePreferredTopics(preferredTopics: String, font: List<Int>) {
+    if (preferredTopics != "") {
+        DisplayText(
+            text = preferredTopics,
+            font = font,
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+@Composable
+fun ProfileButton(model: MenuViewModel, font: List<Int>) {
+    Button(
+        onClick = { model.updateUsername(); model.saved.value = true }
+    ) {
+        DisplayText(text = "Enregistrer", font = font)
     }
 }
 

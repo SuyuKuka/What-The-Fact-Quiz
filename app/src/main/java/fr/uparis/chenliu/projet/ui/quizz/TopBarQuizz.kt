@@ -19,36 +19,41 @@ import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopBarQuizz(gameData: QuizzViewModel.GameData, model: QuizzViewModel) {
+fun TopBarQuizz(model: QuizzViewModel, gameData: QuizzViewModel.GameData) {
     val font = model.currentFont
     val currentQuestion = model.currentQuestion
 
     TopAppBar(
         title = {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                contentAlignment = Alignment.Center
-            ) {
-                if (!model.gameData.gameEnded.value) {
-                    DisplayText(
-                        list = font.value,
-                        text = "Question ${currentQuestion.intValue + 1}",
-                        fontSize = 24.sp,
-                        color = Color.Black
-                    )
-                }
-
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    DisplayText(list = font.value, text = "Score: ${gameData.score.intValue} ")
-                    DisplayText(list = font.value, text = "%.0fs".format(gameData.time.doubleValue), modifier = Modifier.padding(end = 16.dp))
-                }
+            Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                QuestionNumber(model = model, font = font.value, currentQuestion = currentQuestion.intValue)
+                ScoreAndTime(font = font.value, gameData = gameData)
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red)
     )
+}
+
+@Composable
+fun QuestionNumber(model: QuizzViewModel, font: List<Int>, currentQuestion: Int) {
+    if (!model.gameData.gameEnded.value) {
+        DisplayText(
+            text = "Question ${currentQuestion + 1}",
+            font = font,
+            fontSize = 24.sp,
+            color = Color.Black
+        )
+    }
+}
+
+@Composable
+fun ScoreAndTime(font: List<Int>, gameData: QuizzViewModel.GameData) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        DisplayText(text = "Score: ${gameData.score.intValue} ", font = font)
+        DisplayText(text = "%.0fs".format(gameData.time.doubleValue), modifier = Modifier.padding(end = 16.dp), font = font)
+    }
 }
