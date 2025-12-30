@@ -20,20 +20,6 @@ fun ShopScreen(model: MenuViewModel) {
     val showAlertYear = remember { mutableStateOf(false) }
     val currentBackground = model.currentBackground
     val currentFont = model.currentFont
-    val titleAlert = remember {
-        if (showAlertMonth.value) {
-            mutableStateOf("Confirmer l'abonnement mensuel")
-        } else {
-            mutableStateOf("Confirmer l'abonnement annuel")
-        }
-    }
-    val textAlert = remember {
-        if (showAlertMonth.value) {
-            mutableStateOf("L'abonnement sera actif pendant un mois. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?")
-        } else {
-            mutableStateOf("L'abonnement sera actif pendant un an. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?")
-        }
-    }
 
     Box(modifier = Modifier.fillMaxSize()) {
         DisplayBackground(currentBackground = currentBackground.intValue)
@@ -51,9 +37,7 @@ fun ShopScreen(model: MenuViewModel) {
                 model = model,
                 font = currentFont.value,
                 showAlertMonth = showAlertMonth,
-                showAlertYear = showAlertYear,
-                titleAlert = titleAlert.value,
-                textAlert = textAlert.value
+                showAlertYear = showAlertYear
             )
         }
     }
@@ -77,7 +61,19 @@ fun ShopSubscription(font: List<Int>, showAlertMonth: MutableState<Boolean>, sho
 }
 
 @Composable
-fun ShopAlert(model: MenuViewModel, font: List<Int>, showAlertMonth: MutableState<Boolean>, showAlertYear: MutableState<Boolean>, titleAlert: String, textAlert: String) {
+fun ShopAlert(model: MenuViewModel, font: List<Int>, showAlertMonth: MutableState<Boolean>, showAlertYear: MutableState<Boolean>) {
+    val titleAlert =
+        if (showAlertMonth.value) {
+            "Confirmer l'abonnement mensuel"
+        } else {
+            "Confirmer l'abonnement annuel"
+        }
+    val textAlert =
+        if (showAlertMonth.value) {
+            "L'abonnement sera actif pendant un mois. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?"
+        } else {
+            "L'abonnement sera actif pendant un an. Pas de renouvelement automatique ni remboursement. \nConfirmez-vous cet achat?"
+        }
     if (showAlertMonth.value || showAlertYear.value) {
         Alert(
             font = font,
