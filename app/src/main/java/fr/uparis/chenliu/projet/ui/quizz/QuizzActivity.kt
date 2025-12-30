@@ -28,7 +28,9 @@ import androidx.compose.ui.draganddrop.DragAndDropTransferData
 import androidx.compose.ui.draganddrop.mimeTypes
 import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -99,7 +101,8 @@ fun DragImage(answer: String, image: String) {
             .dragAndDropSource { _ ->
             DragAndDropTransferData(ClipData.newPlainText(answer, image))
         },
-        loading = placeholder { R.drawable.placeholder }
+        loading = placeholder { R.drawable.placeholder },
+        contentScale = ContentScale.Crop
     )
 }
 
@@ -143,7 +146,7 @@ fun DropTargetImage(model: QuizzViewModel, font: List<Int>, indexAnswer: Int, qu
     }
 
     Box(
-        Modifier.border(2.dp, Color.Gray, RoundedCornerShape(8.dp)).then(drag)
+        Modifier.border(2.dp, Color.Gray)
     ) {
         SlotDrop(font = font, indexAnswer = indexAnswer, dragTarget = dragTarget, currentImageAnswer = currentImageAnswer)
     }
@@ -163,7 +166,8 @@ fun SlotDrop(font: List<Int>, indexAnswer: Int, dragTarget: DragAndDropTarget, c
                         .contains(ClipDescription.MIMETYPE_TEXT_PLAIN)
                 },
                 target = dragTarget
-            )
+            ),
+        contentScale = ContentScale.Crop
     )
     if (currentImageAnswer.isEmpty()) {
         Column(

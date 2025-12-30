@@ -1,16 +1,36 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.R
+import android.R.attr.onClick
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
@@ -23,14 +43,19 @@ fun ShopScreen(model: MenuViewModel) {
 
     Box(modifier = Modifier.fillMaxSize()) {
         DisplayBackground(currentBackground = currentBackground.intValue)
-        Column(modifier = Modifier
-            .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(18.dp)
         ) {
             ShopTitle(font = currentFont.value)
-            ShopSubscription(
+            ShopDesc(font = currentFont.value)
+            ShopSubscriptionM(
                 font = currentFont.value,
                 showAlertMonth = showAlertMonth,
+            )
+            ShopSubscriptionY(
+                font = currentFont.value,
                 showAlertYear = showAlertYear
             )
             ShopAlert(
@@ -45,17 +70,94 @@ fun ShopScreen(model: MenuViewModel) {
 
 @Composable
 fun ShopTitle(font: List<Int>) {
-    DisplayText(text = "Boutique", font = font, fontSize = 24.sp)
+    Spacer(modifier = Modifier.height(24.dp))
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.6f)
+            .background(
+                color = MaterialTheme.colorScheme.secondary,
+                shape = RoundedCornerShape(16.dp)
+            )
+            .padding(vertical = 12.dp, horizontal = 16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        DisplayText(
+            text = "Boutique",
+            font = font,
+            fontSize = 30.sp
+        )
+    }
 }
 
 @Composable
-fun ShopSubscription(font: List<Int>, showAlertMonth: MutableState<Boolean>, showAlertYear: MutableState<Boolean>) {
-    Row {
-        Button(onClick = { showAlertMonth.value = true }) {
-            DisplayText(text = "1.99€/mois", font = font)
+fun ShopDesc(font: List<Int>) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.9f)
+            .background(
+                color = MaterialTheme.colorScheme.secondary,
+                shape = RoundedCornerShape(16.dp)
+            )
+            .padding(vertical = 12.dp, horizontal = 16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        DisplayText(
+            text = "Profitez de l’Énergie Illimitée et de toutes les fonctionnalités !",
+            font = font,
+            fontSize = 20.sp,
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+@Composable
+fun ShopSubscriptionM(font: List<Int>, showAlertMonth: MutableState<Boolean>) {
+    DecoCard(
+        title = "Abonnement mensuel",
+        title2 = "1.99€ pour 1 mois",
+        font = font,
+    ) {
+        Row {
+            Button(
+                onClick = { showAlertMonth.value = true },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.White,
+                    contentColor = Color.Black
+                ),
+                border = BorderStroke(1.dp, Color.Black)
+            ) {
+                DisplayText(
+                    text = "Acheter",
+                    font = font,
+                    color = Color.Black
+                )
+            }
         }
-        Button(onClick = { showAlertYear.value = true }) {
-            DisplayText(text = "9.99€/an", font = font)
+    }
+}
+
+@Composable
+fun ShopSubscriptionY(font: List<Int>, showAlertYear: MutableState<Boolean>) {
+    DecoCard(
+        title = "Abonnement annuel",
+        title2 = "9.99€ pour 1 an",
+        font = font,
+    ) {
+        Row {
+            Button(
+                onClick = { showAlertYear.value = true },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.White,
+                    contentColor = Color.Black
+                ),
+                border = BorderStroke(1.dp, Color.Black)
+            ) {
+                DisplayText(
+                    text = "Acheter",
+                    font = font,
+                    color = Color.Black
+                )
+            }
         }
     }
 }

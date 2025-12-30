@@ -256,12 +256,14 @@ fun WriteField(
             focusedContainerColor = Color.White,
             unfocusedContainerColor = Color.White,
         ),
+        shape = RoundedCornerShape(12.dp),
         singleLine = true,
         label = {
             Text(
                 text = label,
                 fontSize = (fontSize.value - font[1]).sp,
                 fontFamily = FontFamily(Font(font[0])),
+                color = Color.Black
             )
         },
         keyboardOptions =

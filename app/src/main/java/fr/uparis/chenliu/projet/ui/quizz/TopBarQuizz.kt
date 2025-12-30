@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -30,7 +31,7 @@ fun TopBarQuizz(model: QuizzViewModel, gameData: QuizzViewModel.GameData) {
                 ScoreAndTime(font = font.value, gameData = gameData)
             }
         },
-        colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Red)
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)
     )
 }
 
@@ -41,7 +42,7 @@ fun QuestionNumber(model: QuizzViewModel, font: List<Int>, currentQuestion: Int)
             text = "Question ${currentQuestion + 1}",
             font = font,
             fontSize = 24.sp,
-            color = Color.Black
+            color = MaterialTheme.colorScheme.secondary
         )
     }
 }
@@ -53,7 +54,16 @@ fun ScoreAndTime(font: List<Int>, gameData: QuizzViewModel.GameData) {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        DisplayText(text = "Score: ${gameData.score.intValue} ", font = font)
-        DisplayText(text = "%.0fs".format(gameData.time.doubleValue), modifier = Modifier.padding(end = 16.dp), font = font)
+        DisplayText(
+            text = "Score: ${gameData.score.intValue} ",
+            font = font,
+            color = MaterialTheme.colorScheme.secondary
+        )
+        DisplayText(
+            text = "%.0fs".format(gameData.time.doubleValue),
+            modifier = Modifier.padding(end = 16.dp),
+            font = font,
+            color = MaterialTheme.colorScheme.secondary
+        )
     }
 }

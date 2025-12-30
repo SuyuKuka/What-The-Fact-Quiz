@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.quizz
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,6 +21,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import fr.uparis.chenliu.projet.ui.menu.DecoCard
 import fr.uparis.chenliu.projet.ui.menu.DisplayBackground
 import fr.uparis.chenliu.projet.ui.menu.DisplayText
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
@@ -49,21 +51,30 @@ fun GameScreen(
 
 @Composable
 fun GameContent(model: QuizzViewModel, font: List<Int>, height: Float, data: QuizzViewModel.Data, typeQuestion: Int, currentQuestion: Int) {
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(18.dp)
+    ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth(0.7f)
+                .fillMaxWidth(0.9f)
                 .fillMaxHeight(height)
                 .align(Alignment.CenterHorizontally),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            DisplayText(
-                text = data.question[currentQuestion],
-                font = font,
-                fontSize = 20.sp,
-                textAlign = TextAlign.Center
-            )
+            DecoCard(
+                title = "",
+                font = font
+            ) {
+                DisplayText(
+                    text = data.question[currentQuestion],
+                    font = font,
+                    fontSize = 20.sp,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
         QuizzType(model = model, font = font, data = data, typeQuestion = typeQuestion, modifier = Modifier.weight(1f))
     }
@@ -124,7 +135,7 @@ fun AnswerSlot(model: QuizzViewModel, font: List<Int>, currentImage: Int, modifi
                     modifier = Modifier
                         .width(200.dp)
                         .padding(8.dp)
-                        .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+                        .border(2.dp, Color.Gray)
                 ) {
                     DropTargetImage(
                         model = model,
@@ -160,7 +171,21 @@ fun PropositionsSlot(font: List<Int>, answer: List<String>, buildAnswer: List<St
     ) {
         if (currentImage < buildAnswer.size) {
             DragImage(answer = answer[0], image = answer[1])
-            DisplayText(text = answer[0], font = font, fontSize = 48.sp, color = Color.Red)
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth()
+                    .background(Color.Black.copy(alpha = 0.5f))
+                    .padding(vertical = 4.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                DisplayText(
+                    text = answer[0],
+                    font = font,
+                    fontSize = 30.sp,
+                    color = Color.White
+                )
+            }
         } else {
             DisplayText(
                 text = "C'est tout!",

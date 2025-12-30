@@ -24,14 +24,14 @@ fun Quizztype1 (
             .fillMaxWidth()
             .fillMaxHeight(0.5f),
         horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
+
     ) {
         WriteField(
             value = textFieldAnswer.value,
             onValueChange = {
                     newValue -> textFieldAnswer.value = newValue
             },
-            label = "Réponse",
+            label = "",
             modifier = Modifier,
             font = font,
             fontSize = 16.sp,

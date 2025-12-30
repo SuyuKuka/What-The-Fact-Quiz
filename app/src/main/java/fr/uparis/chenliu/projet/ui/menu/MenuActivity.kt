@@ -9,17 +9,28 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -28,6 +39,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.entryProvider
@@ -44,6 +56,7 @@ import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 import fr.uparis.chenliu.projet.ui.viewmodel.TimeConfigViewModel
 import fr.uparis.chenliu.projet.ui.worker.WorkerReminder
+import java.util.Map.entry
 import java.util.concurrent.TimeUnit
 
 const val CHANNEL_ID = "mon_canal"
@@ -76,6 +89,7 @@ fun MenuScreen(username: String, model: MenuViewModel = viewModel()) {
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
+        containerColor = Color.Transparent,
         topBar = { TopBarMenu(model = model, backStack = backStack) },
         bottomBar = { BottomBarMenu(model = model, backStack = backStack) },
         snackbarHost = { SnackbarHost(hostState = snack) }
@@ -83,7 +97,9 @@ fun MenuScreen(username: String, model: MenuViewModel = viewModel()) {
     { pad ->
         NavDisplay(
             backStack = backStack,
-            modifier = Modifier.padding(paddingValues = pad),
+            modifier = Modifier
+                .padding(paddingValues = pad)
+                .background(Color.Transparent),
             entryProvider = entryProvider{
                 entry<Screen.Profile> { model.getUsers(); ProfileScreen(model = model) }
                 entry<Screen.Leaderboard> {
@@ -137,6 +153,42 @@ fun DisplayText(
         modifier = modifier
     )
 }
+
+@Composable
+fun DecoCard(
+    title: String,
+    font: List<Int>,
+    modifier: Modifier = Modifier,
+    title2: String = "",
+    backgroundColor: Color = MaterialTheme.colorScheme.secondary,
+    content: @Composable () -> Unit
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth(0.8f)
+            .clip(RoundedCornerShape(16.dp))
+            .background(backgroundColor)
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        if (title != "") {
+            Row {
+                DisplayText(text = title, font = font, fontSize = 20.sp, textAlign = TextAlign.Center)
+            }
+        }
+        if (title2 != "") {
+            Row {
+                DisplayText(text = title2, font = font, fontSize = 20.sp, textAlign = TextAlign.Center)
+            }
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+        content()
+    }
+}
+
+
+
+
 
 @Composable
 fun DisplayBackground(currentBackground: Int) {

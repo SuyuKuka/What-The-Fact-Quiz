@@ -49,7 +49,7 @@ fun AnswerSlotQuizz2(model: QuizzViewModel, font: List<Int>, data: QuizzViewMode
             Box (
                 modifier = Modifier
                     .aspectRatio(1.5f).padding(8.dp).fillMaxWidth()
-                    .border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
+                    .border(2.dp, Color.Gray)
             ) {
                 DropTargetImage(
                     model = model,
@@ -76,7 +76,21 @@ fun PropositionsSlotQuizz2(font: List<Int>, data: QuizzViewModel.Data, currentQu
                 contentAlignment = Alignment.BottomCenter
             ) {
                 DragImage(answer = ans[0], image = ans[1])
-                DisplayText(text = ans[0], font = font, fontSize = 24.sp, color = Color.Red)
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .background(Color.Black.copy(alpha = 0.5f))
+                        .padding(vertical = 4.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    DisplayText(
+                        text = ans[0],
+                        font = font,
+                        fontSize = 15.sp,
+                        color = Color.White
+                    )
+                }
             }
         }
     }

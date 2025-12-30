@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -37,7 +38,7 @@ fun Quizztype0 (
                     type = 0
                 )},
                 modifier = Modifier.aspectRatio(1.5f).padding(8.dp).fillMaxWidth(),
-                shape = RectangleShape
+                shape = RoundedCornerShape(16.dp),
             ) {
                 if (answer.isNotEmpty()) {
                     DisplayText(text = answer[0], font = font, textAlign = TextAlign.Center)
