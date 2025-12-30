@@ -69,7 +69,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
     val decoDiffList = MutableStateFlow<List<Int>>(emptyList())
 
     // Quizz
-    val subject = mutableStateOf("")
     var question = mutableStateListOf<String>()
     val textFieldAnswer = mutableStateOf("")
     var buildAnswer = mutableStateListOf("", "", "", "")
@@ -98,21 +97,44 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         score = mutableIntStateOf(0)
     )
 
-    fun getQuestionAndAnswer(subject: String, difficulty: String) {
-        this.subject.value = subject
+    fun init(context: Context) {
         viewModelScope.launch {
-            data.value.question.clear()
-            data.value.answers.clear()
-            data.value.types.clear()
+            user.value = db.usersDao().getUser()
+            energy.intValue = user.value!!.energy
+            subscription.value = user.value!!.subscribe
 
-            fetchQuizzData(difficulty, subject)
-            resetDragDrop()
-            loading.value = false
+            settings.value = db.settingsDao().getSetting()
+            font.intValue = settings.value!!.font
+            background.intValue = settings.value!!.background
+            decoNameList.value = db.decoDao().getAllDecoNames()
+            decoPathList.value = db.decoDao().getAllDecoPaths()
+            decoTypeList.value = db.decoDao().getAllDecoTypes()
+            decoDiffList.value = db.decoDao().getAllDecoDiff()
+            for (i in 0..decoTypeList.value.size - 1) {
+                if (decoTypeList.value[i] == 0) {
+                    backgroundList.value += decoNameList.value[i]
+                } else {
+                    fontList.value += decoNameList.value[i]
+                }
+            }
+            getCurrentFontAndBackground(context)
         }
-        chronometer()
     }
 
-    suspend fun fetchQuizzData(difficulty: String, subject: String) {
+    fun getQuestionAndAnswer(subject: String, difficulty: String) {
+        data.value.question.clear()
+        data.value.answers.clear()
+        data.value.types.clear()
+
+        viewModelScope.launch {
+            fetchQuizzData(subject, difficulty)
+            resetDragDrop()
+            loading.value = false
+            chronometer()
+        }
+    }
+
+    suspend fun fetchQuizzData(subject: String, difficulty: String) {
         // on fetch les data
         val currentDao = db.quizzDao()
         val allQuestion = currentDao.getQuestion(difficulty, subject)
@@ -143,46 +165,32 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         )
     }
 
-    // permet de rendre les propositions aléatoire
     fun shuffle(value: AnswerSummary): List<List<String>> {
-        var randomPropositions = value.propositions.shuffled().take(4) // prop [[e,""],[e,""]]
-        var shuffling = true
-        while (shuffling) {
-            randomPropositions = value.propositions.shuffled().take(4)
+        while (true) {
+            val randomPropositions = value.propositions.shuffled().take(4)
             for (p in randomPropositions) {
                 if (p[0] == value.answer[0]) {
-                    shuffling = false   // answer fait partie des proposition
+                    return randomPropositions.shuffled()
                 }
-            }// si ya pas la réponse parmis les propositions
+            }
         }
-        return randomPropositions.shuffled()
     }
 
     fun calcScore(gameData: GameData, answerList: List<String>, goodAnswers: List<String>, type: Int) {
-        val score = mutableIntStateOf(0)
-        if (type == 0 || type == 3) {
-            if (answerList.toList().toString().lowercase() == goodAnswers.toList().toString().lowercase()){
-                score.intValue = score.intValue + 1000
-            }
+        if ((type == 0 || type == 3 || type == 4) && answerList.toList().toString().lowercase() == goodAnswers.toList().toString().lowercase()) {
+            gameData.score.intValue += 1000
         } else if (type == 1) {
-            score.intValue = score.intValue + approxScore(answer = answerList.toList()[0].lowercase(), goodAnswer = goodAnswers.toList()[0].lowercase())
+            gameData.score.intValue += approxScore(answer = answerList.toList()[0].lowercase(), goodAnswer = goodAnswers.toList()[0].lowercase())
         } else if (type == 2) {
-            // c'est plus long, et plus compliqué d'avoir la réponse exacte, donc les type 2, 4 valent 4000 au total
             for (i in 0..goodAnswers.size - 1) {
                 if (answerList.toList()[i].lowercase() == goodAnswers.toList()[i].lowercase()) {
-                    score.intValue = score.intValue + 1000
+                    gameData.score.intValue += 1000
                 }
             }
-        } else if (type == 4) {
-            if (answerList.toList() == goodAnswers.toList()) {
-                score.intValue = score.intValue + 1000
-            }
         }
-        gameData.score.intValue +=  score.intValue
     }
 
     fun approxScore(answer: String, goodAnswer: String): Int {
-        // si answer et guess sont des nombre
         if (answer.toIntOrNull() != null && goodAnswer.toIntOrNull() != null) {
             val a = answer.toDouble()
             val g = goodAnswer.toDouble()
@@ -196,7 +204,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             for (i in 0..size-1) {
                 if (answer[i] == goodAnswer[i]) correct++
             }
-            // nb de lettre correcte sur le nb de lettre de la réponse
             val percent = (correct.toDouble() / maxOf(answer.length, goodAnswer.length)) * 100
             val score = (percent / 100) * 1000
             return score.toInt()
@@ -213,14 +220,13 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.questionHistory.add(data.value.question[currentQuestion.intValue]) // connaitre les réponses de l'user
         gameData.goodAnswer.add(goodAnswers.toList().toString()) // connaitre la bonne réponse
         calcScore(gameData = gameData, answerList = answerList, goodAnswers = goodAnswers, type = type)
-        gameData.nbQuestion.intValue--      // reduire le nb de question
+        gameData.nbQuestion.intValue-- // reduire le nb de question
         if (gameData.nbQuestion.intValue <= 0) { // regarder si la partie est fini
             gameData.gameEnded.value = true
             stopChronometer()
         }
-        if (currentQuestion.intValue == 9) { currentQuestion.intValue = 0 } else { currentQuestion.intValue++ }
+        if (currentQuestion.intValue != 9) { currentQuestion.intValue++ }
         resetDragDrop()
-        textFieldAnswer.value = ""
     }
 
     fun resetStats(gameData: GameData) {
@@ -232,7 +238,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         gameData.goodAnswer.clear()
         gameData.gameEnded.value = false
         gameData.time.doubleValue = 0.0
-        textFieldAnswer.value = ""
         resetDragDrop()
         currentQuestion.intValue = 0
         currentImage.intValue = 0
@@ -243,6 +248,9 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         val type = data.value.types[currentQuestion.intValue]
         for(i in 0..buildAnswer.size - 1) { buildAnswer[i] = ""; imageAnswer[i] = "" }
         when (type) {
+            2 -> {
+                textFieldAnswer.value = ""
+            }
             3 -> {
                 for (i in 0..2) {
                     buildAnswer[i] = data.value.answers[currentQuestion.intValue].propositions[i][0]
@@ -285,7 +293,6 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
             buildAnswer[indexAnswer] = answer
             imageAnswer[indexAnswer] = image
             currentImage.intValue++
-
             if (quizzType == 4) {
                 val goodAnswers = mutableStateListOf<String>()
                 val goodImage = mutableStateListOf<String>()
@@ -309,34 +316,9 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
                 }
 
                 calcScore(gameData = gameData, answerList = buildAnswer, goodAnswers = goodAnswers, type = 4)
-
                 buildAnswer = goodAnswers
                 imageAnswer = goodImage
             }
-        }
-    }
-
-    fun init(context: Context) {
-        viewModelScope.launch {
-            user.value = db.usersDao().getUser()
-            energy.intValue = user.value!!.energy
-            subscription.value = user.value!!.subscribe
-
-            settings.value = db.settingsDao().getSetting()
-            font.intValue = settings.value!!.font
-            background.intValue = settings.value!!.background
-            decoNameList.value = db.decoDao().getAllDecoNames()
-            decoPathList.value = db.decoDao().getAllDecoPaths()
-            decoTypeList.value = db.decoDao().getAllDecoTypes()
-            decoDiffList.value = db.decoDao().getAllDecoDiff()
-            for (i in 0..decoTypeList.value.size - 1) {
-                if (decoTypeList.value[i] == 0) {
-                    backgroundList.value += decoNameList.value[i]
-                } else {
-                    fontList.value += decoNameList.value[i]
-                }
-            }
-            getCurrentFontAndBackground(context)
         }
     }
 
@@ -394,9 +376,9 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         currentBackground.intValue = backgroundId
     }
 
-    fun insertLeaderboard() {
+    fun insertLeaderboard(subject: String) {
         viewModelScope.launch {
-            db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.intValue, time = gameData.time.doubleValue, subject = subject.value))
+            db.leaderboardDao().insertLeaderboard(LeaderboardEntity(userId = user.value!!.userId, score = gameData.score.intValue, time = gameData.time.doubleValue, subject = subject))
         }
     }
 
@@ -413,10 +395,8 @@ class QuizzViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    // pour eviter plusieur coroutine
     fun stopChronometer() {
         chronoJob?.cancel()
         chronoJob = null
     }
-
 }
