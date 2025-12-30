@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.R.attr.font
 import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
@@ -14,12 +15,15 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
@@ -66,9 +70,9 @@ fun HomeScreen(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
     Box(modifier = Modifier.fillMaxSize()) {
         DisplayBackground(currentBackground = currentBackground.intValue)
         Column(
-            modifier = Modifier
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(18.dp)
         ) {
             HomeScreenTitle(currentFont = currentFont.value)
             DifficultyContent(
@@ -118,7 +122,20 @@ fun sendNotification(model: MenuViewModel, context: Context) {
 
 @Composable
 fun HomeScreenTitle(currentFont: List<Int>) {
-    DisplayText(text = "WTF QUIZ", font = currentFont, fontSize = 24.sp)
+    Spacer(modifier = Modifier.height(24.dp))
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.6f)
+            .background(
+                color = MaterialTheme.colorScheme.secondary,
+                shape = RoundedCornerShape(16.dp)
+            )
+            .padding(vertical = 12.dp, horizontal = 16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        DisplayText(text = "WTF QUIZ", font = currentFont, fontSize = 30.sp)
+    }
+
 }
 
 @Composable
@@ -131,7 +148,7 @@ fun DifficultyContent(difficultyList: List<String>, selectedDifficulty: MutableS
                     .weight(1f)
                     .padding(4.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (selectedDifficulty.value == difficulty) Color.Blue else Color.Gray,
+                    containerColor = if (selectedDifficulty.value == difficulty) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.primaryContainer,
                     contentColor = Color.White
                 )
             ) {
@@ -157,7 +174,7 @@ fun SubjectContent(subjectList: List<String>, selectedSubject: MutableState<Stri
                     .aspectRatio(1.2f)
                     .padding(8.dp)
                     .fillMaxWidth(),
-                shape = RectangleShape,
+                shape = RoundedCornerShape(16.dp),
                 contentPadding = PaddingValues(0.dp)
             ) {
                 Box(
@@ -172,9 +189,27 @@ fun SubjectContent(subjectList: List<String>, selectedSubject: MutableState<Stri
                         resources = resources
                     )
                     if (isSelected) {
-                        Spacer(modifier = Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.2f)))
+                        Spacer(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(Color.Black.copy(alpha = 0.2f))
+                        )
                     }
-                    DisplayText(text = subject, font = currentFont, fontSize = 24.sp)
+                    Box(
+                        modifier = Modifier
+                            .align(Alignment.BottomCenter)
+                            .fillMaxWidth()
+                            .background(Color.Black.copy(alpha = 0.5f))
+                            .padding(vertical = 4.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        DisplayText(
+                            text = subject,
+                            font = currentFont,
+                            fontSize = 24.sp,
+                            color = Color.White
+                        )
+                    }
                 }
             }
         }
@@ -205,7 +240,10 @@ fun SubjectImage(subjectList: List<String>, subjectImage: List<String>, subject:
 fun HomeScreenButton(model: MenuViewModel, selectedDifficulty: MutableState<String>, selectedSubject: MutableState<String>, currentFont: List<Int>, alert: MutableState<Boolean>, context: Context) {
     val intent = Intent(context, QuizzActivity::class.java)
     Row(
-        modifier = Modifier.fillMaxWidth().padding(bottom = 25.dp).padding(top = 25.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 25.dp)
+            .padding(top = 25.dp),
         horizontalArrangement = Arrangement.Center
     ) {
         Button(
