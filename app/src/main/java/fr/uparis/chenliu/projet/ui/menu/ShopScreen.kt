@@ -1,9 +1,19 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -11,6 +21,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 
@@ -37,11 +50,13 @@ fun ShopScreen(model: MenuViewModel) {
 
     Box(modifier = Modifier.fillMaxSize()) {
         DisplayBackground(currentBackground = currentBackground.intValue)
-        Column(modifier = Modifier
-            .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(18.dp)
         ) {
             ShopTitle(font = currentFont.value)
+            ShopDesc(font = currentFont.value)
             ShopSubscription(
                 font = currentFont.value,
                 showAlertMonth = showAlertMonth,
@@ -61,7 +76,43 @@ fun ShopScreen(model: MenuViewModel) {
 
 @Composable
 fun ShopTitle(font: List<Int>) {
-    DisplayText(text = "Boutique", font = font, fontSize = 24.sp)
+    Spacer(modifier = Modifier.height(24.dp))
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.6f)
+            .background(
+                color = Color.White,
+                shape = RoundedCornerShape(16.dp)
+            )
+            .padding(vertical = 12.dp, horizontal = 16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        DisplayText(
+            text = "Boutique",
+            font = font,
+            fontSize = 30.sp
+        )
+    }
+}
+
+@Composable
+fun ShopDesc(font: List<Int>) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.9f)
+            .background(
+                color = Color.White,
+                shape = RoundedCornerShape(16.dp)
+            )
+            .padding(vertical = 12.dp, horizontal = 16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        DisplayText(
+            text = "Profitez de l’Énergie Illimitée et de toutes les fonctionnalités !",
+            font = font,
+            fontSize = 20.sp
+        )
+    }
 }
 
 @Composable
