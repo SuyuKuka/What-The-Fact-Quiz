@@ -31,7 +31,7 @@ fun Quizztype1 (
             onValueChange = {
                     newValue -> textFieldAnswer.value = newValue
             },
-            label = "Réponse",
+            label = "",
             modifier = Modifier,
             font = font,
             fontSize = 16.sp,

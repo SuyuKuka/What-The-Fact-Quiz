@@ -160,7 +160,7 @@ fun DecoCard(
     font: List<Int>,
     modifier: Modifier = Modifier,
     title2: String = "",
-    backgroundColor: Color = MaterialTheme.colorScheme.secondary.copy(1f),
+    backgroundColor: Color = MaterialTheme.colorScheme.secondary,
     content: @Composable () -> Unit
 ) {
     Column(
@@ -171,12 +171,14 @@ fun DecoCard(
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Row {
-            DisplayText(text = title, font = font, fontSize = 20.sp)
+        if (title != "") {
+            Row {
+                DisplayText(text = title, font = font, fontSize = 20.sp, textAlign = TextAlign.Center)
+            }
         }
         if (title2 != "") {
             Row {
-                DisplayText(text = title2, font = font, fontSize = 20.sp)
+                DisplayText(text = title2, font = font, fontSize = 20.sp, textAlign = TextAlign.Center)
             }
         }
         Spacer(modifier = Modifier.height(8.dp))

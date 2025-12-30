@@ -20,6 +20,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import fr.uparis.chenliu.projet.ui.menu.DecoCard
 import fr.uparis.chenliu.projet.ui.menu.DisplayBackground
 import fr.uparis.chenliu.projet.ui.menu.DisplayText
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
@@ -49,21 +50,30 @@ fun GameScreen(
 
 @Composable
 fun GameContent(model: QuizzViewModel, font: List<Int>, height: Float, data: QuizzViewModel.Data, typeQuestion: Int, currentQuestion: Int) {
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(18.dp)
+    ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth(0.7f)
+                .fillMaxWidth(0.9f)
                 .fillMaxHeight(height)
                 .align(Alignment.CenterHorizontally),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            DisplayText(
-                text = data.question[currentQuestion],
-                font = font,
-                fontSize = 20.sp,
-                textAlign = TextAlign.Center
-            )
+            DecoCard(
+                title = "",
+                font = font
+            ) {
+                DisplayText(
+                    text = data.question[currentQuestion],
+                    font = font,
+                    fontSize = 20.sp,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
         QuizzType(model = model, font = font, data = data, typeQuestion = typeQuestion, modifier = Modifier.weight(1f))
     }
