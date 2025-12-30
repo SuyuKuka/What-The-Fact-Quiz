@@ -79,7 +79,8 @@ fun MyQuizzScreen(subject: String, difficulty: String, model: QuizzViewModel = v
                         model = model,
                         font = model.currentFont.value,
                         background = model.currentBackground.intValue,
-                        gameData = gameData
+                        gameData = gameData,
+                        subject = subject
                     )
                 }
             }

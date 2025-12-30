@@ -29,10 +29,11 @@ fun ResultScreen(
     font: List<Int>,
     background: Int,
     gameData: QuizzViewModel.GameData,
+    subject: String
 ) {
     val activity = LocalActivity.current
     val alert = remember { mutableStateOf(false) }
-    model.insertLeaderboard()
+    model.insertLeaderboard(subject)
 
     Box(modifier = Modifier.fillMaxSize()) {
         DisplayBackground(currentBackground = background)
