@@ -32,10 +32,10 @@
       "diff": 0
     },
     {
-      "name": "Game",
-      "path": "game",
+      "name": "Pulang",
+      "path": "pulang",
       "type": 1,
-      "diff": -1
+      "diff": 1
     },
     {
       "name": "Typewritter",
@@ -44,14 +44,14 @@
       "diff": 1
     },
     {
-      "name": "Pixel",
-      "path": "pixel",
+      "name": "Retrow Mentho",
+      "path": "retrowmentho",
       "type": 1,
-      "diff": -5
+      "diff": 0
     },
     {
-      "name": "Pokemon",
-      "path": "pokemon",
+      "name": "Pixel",
+      "path": "pixel",
       "type": 1,
       "diff": -2
     }

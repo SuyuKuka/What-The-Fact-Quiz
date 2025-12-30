@@ -114,7 +114,8 @@ fun Alert(font: List<Int>, onConfirm: () -> Unit, onCancel: () -> Unit, title: S
             Button(onClick = onCancel) {
                 DisplayText(font = font, text = onCancelText)
             }
-        }
+        },
+        containerColor = Color.White
     )
 }
 
