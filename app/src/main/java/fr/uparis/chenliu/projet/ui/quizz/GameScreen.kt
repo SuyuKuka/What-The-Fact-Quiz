@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -36,6 +35,7 @@ fun GameScreen(
     val font = model.currentFont
     val typeQuestion = data.types[currentQuestion.intValue]
     val height = if (typeQuestion == 0 || typeQuestion == 1) 0.5f else 0.20f
+
     Box(modifier = Modifier.fillMaxSize()) {
         DisplayBackground(currentBackground = background.intValue)
         GameContent(
@@ -58,9 +58,10 @@ fun GameContent(model: QuizzViewModel, font: List<Int>, height: Float, data: Qui
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth(0.9f)
+                .fillMaxWidth(1f)
                 .fillMaxHeight(height)
-                .align(Alignment.CenterHorizontally),
+                .align(Alignment.CenterHorizontally)
+                .padding(top = 8.dp),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {

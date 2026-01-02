@@ -65,7 +65,6 @@ fun energyColor(energy: Int, maxEnergy: Int = 20): Color {
     val ratio = energy.toFloat() / maxEnergy.toFloat()
     val red = (255 * (1f - ratio)).toInt()
     val green = (255 * ratio).toInt()
-
     return Color(red, green, 0)
 }
 

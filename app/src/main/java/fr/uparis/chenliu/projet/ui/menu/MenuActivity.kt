@@ -10,12 +10,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
@@ -29,7 +28,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -56,7 +54,6 @@ import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
 import fr.uparis.chenliu.projet.ui.viewmodel.TimeConfigViewModel
 import fr.uparis.chenliu.projet.ui.worker.WorkerReminder
-import java.util.Map.entry
 import java.util.concurrent.TimeUnit
 
 const val CHANNEL_ID = "mon_canal"
@@ -159,6 +156,7 @@ fun DecoCard(
     title: String,
     font: List<Int>,
     modifier: Modifier = Modifier,
+    fontSize: TextUnit = 20.sp,
     title2: String = "",
     backgroundColor: Color = MaterialTheme.colorScheme.secondary,
     content: @Composable () -> Unit
@@ -169,26 +167,22 @@ fun DecoCard(
             .clip(RoundedCornerShape(16.dp))
             .background(backgroundColor)
             .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
         if (title != "") {
             Row {
-                DisplayText(text = title, font = font, fontSize = 20.sp, textAlign = TextAlign.Center)
+                DisplayText(text = title, font = font, fontSize = fontSize, textAlign = TextAlign.Center)
             }
         }
         if (title2 != "") {
             Row {
-                DisplayText(text = title2, font = font, fontSize = 20.sp, textAlign = TextAlign.Center)
+                DisplayText(text = title2, font = font, fontSize = 18.sp, textAlign = TextAlign.Center)
             }
         }
-        Spacer(modifier = Modifier.height(8.dp))
         content()
     }
 }
-
-
-
-
 
 @Composable
 fun DisplayBackground(currentBackground: Int) {

@@ -1,6 +1,5 @@
 package fr.uparis.chenliu.projet.ui.menu
 
-import android.R.attr.font
 import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
@@ -35,7 +34,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -135,7 +133,6 @@ fun HomeScreenTitle(currentFont: List<Int>) {
     ) {
         DisplayText(text = "WTF QUIZ", font = currentFont, fontSize = 30.sp)
     }
-
 }
 
 @Composable
@@ -148,7 +145,7 @@ fun DifficultyContent(difficultyList: List<String>, selectedDifficulty: MutableS
                     .weight(1f)
                     .padding(4.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (selectedDifficulty.value == difficulty) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.primaryContainer,
+                    containerColor = if (selectedDifficulty.value == difficulty) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.primaryFixed,
                     contentColor = Color.White
                 )
             ) {
@@ -161,6 +158,7 @@ fun DifficultyContent(difficultyList: List<String>, selectedDifficulty: MutableS
 @Composable
 fun SubjectContent(subjectList: List<String>, selectedSubject: MutableState<String>, currentFont: List<Int>, subjectImage: List<String>, context: Context, modifier: Modifier) {
     val resources = remember(context) { context.resources }
+
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         contentPadding = PaddingValues(8.dp),
@@ -192,7 +190,7 @@ fun SubjectContent(subjectList: List<String>, selectedSubject: MutableState<Stri
                         Spacer(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .background(Color.Black.copy(alpha = 0.2f))
+                                .background(Color.Black.copy(alpha = 0.3f))
                         )
                     }
                     Box(

@@ -26,7 +26,6 @@ import fr.uparis.chenliu.projet.ui.menu.Alert
 import fr.uparis.chenliu.projet.ui.menu.DecoCard
 import fr.uparis.chenliu.projet.ui.menu.DisplayBackground
 import fr.uparis.chenliu.projet.ui.menu.DisplayText
-import fr.uparis.chenliu.projet.ui.menu.UnderlineTextField
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 
 @Composable
@@ -72,8 +71,9 @@ fun ResultContent(font: List<Int>, gameData: QuizzViewModel.GameData) {
 fun ResultTitle(font: List<Int>, gameData: QuizzViewModel.GameData) {
     Spacer(modifier = Modifier.height(15.dp))
     DecoCard(
-        title = "RESULTAT",
+        title = "Résultats",
         font = font,
+        fontSize = 26.sp
     ) {
         DisplayText(
             text = "Score : ${gameData.score.intValue} | Temps : ${"%.3fs".format(gameData.time.doubleValue)}",
@@ -86,11 +86,11 @@ fun ResultTitle(font: List<Int>, gameData: QuizzViewModel.GameData) {
 @Composable
 fun GoodAndWrongAnswers(font: List<Int>, gameData: QuizzViewModel.GameData, index: Int, question: String) {
     val check = gameData.answerHistory[index].lowercase() == gameData.goodAnswer[index].lowercase()
-
     DecoCard(
         title = "Question ${index + 1}",
         title2 = question,
         font = font,
+        fontSize = 24.sp,
         backgroundColor = if (check) MaterialTheme.colorScheme.secondary else Color.Gray
     ) {
         DisplayText(
@@ -107,8 +107,6 @@ fun GoodAndWrongAnswers(font: List<Int>, gameData: QuizzViewModel.GameData, inde
             )
         }
     }
-
-
 }
 
 

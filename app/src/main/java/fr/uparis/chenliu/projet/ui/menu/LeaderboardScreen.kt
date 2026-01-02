@@ -1,6 +1,5 @@
 package fr.uparis.chenliu.projet.ui.menu
 
-import android.R.attr.font
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -12,7 +11,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
@@ -20,13 +18,13 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import fr.uparis.chenliu.projet.ui.viewmodel.MenuViewModel
@@ -87,7 +85,6 @@ fun LeaderboardTitle(font: List<Int>) {
     ) {
         DisplayText(text = "Classement", font = font, fontSize = 30.sp)
     }
-
 }
 
 @Composable
@@ -100,21 +97,22 @@ fun SubjectList(model: MenuViewModel, subjectList: List<String>, currentSubject:
             .height(40.dp)
             .border(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.4f)),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(subjectList) { subject ->
             Button(onClick = {
-                if (currentSubject != subject) updated.value = false;
+                if (currentSubject != subject) updated.value = false
                 model.updateLeaderboard(subject)
-            }, modifier = Modifier.fillMaxWidth(0.7f)
+            }, modifier = Modifier.fillMaxWidth(0.7f),
+                colors = ButtonDefaults.buttonColors(
+                     if (currentSubject == subject) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.primaryFixed,
+                )
             ) {
                 DisplayText(text = subject, font = currentFont, fontSize = 16.sp)
             }
         }
     }
 }
-
 
 @Composable
 fun LeaderBoardHead(currentFont: List<Int>) {

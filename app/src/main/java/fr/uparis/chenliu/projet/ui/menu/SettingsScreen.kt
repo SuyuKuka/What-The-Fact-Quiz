@@ -7,13 +7,11 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.DropdownMenuItem
@@ -109,14 +107,12 @@ fun SettingsTitle(font: List<Int>) {
 
 @Composable
 fun SettingsBackground(model: MenuViewModel, selectedBackground: MutableState<Int>, backgroundList: List<String>, font: List<Int>, context: Context, saved: MutableState<Boolean>) {
-
     DecoCard(
         title = "Fond d'écran",
-        font = font,
+        font = font
     ) {
         ChoiceField(
             model = model,
-            label = "",
             choice = selectedBackground.value,
             onValueChange = { newValue ->
                 selectedBackground.value = newValue; model.updateCurrentBackground(context); saved.value = false
@@ -130,11 +126,10 @@ fun SettingsBackground(model: MenuViewModel, selectedBackground: MutableState<In
 fun SettingsFont(model: MenuViewModel, selectedFont: MutableState<Int>, fontList: List<String>, font: List<Int>, context: Context, saved: MutableState<Boolean>) {
     DecoCard(
         title = "Police d'écriture",
-        font = font,
+        font = font
     ) {
         ChoiceField(
             model = model,
-            label = "",
             choice = selectedFont.value,
             onValueChange = { newValue ->
                 selectedFont.value = newValue; model.updateCurrentFont(context); saved.value =
@@ -149,7 +144,7 @@ fun SettingsFont(model: MenuViewModel, selectedFont: MutableState<Int>, fontList
 fun SettingsPreferredTopics(model: MenuViewModel, font: List<Int>, update: () -> Unit, saved: MutableState<Boolean>) {
     DecoCard(
         title = "Domaine préféré",
-        font = font,
+        font = font
     ) {
         WriteField(
             value = model.preferredTopics.value,
@@ -169,7 +164,6 @@ fun SettingsPreferredTopics(model: MenuViewModel, font: List<Int>, update: () ->
 @Composable
 fun SettingsButton(font: List<Int>, update: () -> Unit) {
     val context = LocalContext.current
-
     Button(onClick = {
         update()
         Toast.makeText(context, "Paramètres enregistrés", Toast.LENGTH_SHORT).show()
@@ -183,7 +177,7 @@ fun SettingsButton(font: List<Int>, update: () -> Unit) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ChoiceField(model: MenuViewModel, label: String, choice: Int, onValueChange: (Int) -> Unit, choiceList: List<String>) {
+fun ChoiceField(model: MenuViewModel, choice: Int, onValueChange: (Int) -> Unit, choiceList: List<String>) {
     var expanded by remember { mutableStateOf(value = false) }
     val text = choiceList[choice]
     val currentFont = model.currentFont
@@ -206,7 +200,6 @@ fun ChoiceField(model: MenuViewModel, label: String, choice: Int, onValueChange:
                 unfocusedIndicatorColor = Color.Transparent,
                 focusedIndicatorColor = Color.Transparent
             ),
-            label = { DisplayText(text = label, font = currentFont.value) },
             trailingIcon = {
                 ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
             },

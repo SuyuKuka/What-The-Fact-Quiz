@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -30,7 +29,6 @@ import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -146,7 +144,7 @@ fun DropTargetImage(model: QuizzViewModel, font: List<Int>, indexAnswer: Int, qu
     }
 
     Box(
-        Modifier.border(2.dp, Color.Gray)
+        drag.border(2.dp, Color.Gray)
     ) {
         SlotDrop(font = font, indexAnswer = indexAnswer, dragTarget = dragTarget, currentImageAnswer = currentImageAnswer)
     }

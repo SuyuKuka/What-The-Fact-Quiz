@@ -1,12 +1,10 @@
 package fr.uparis.chenliu.projet.ui.menu
 
-import android.provider.SyncStateContract.Helpers.update
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -22,7 +20,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
@@ -74,14 +71,13 @@ fun ProfileTitle(font: List<Int>) {
     ) {
         DisplayText(text = "Profile", font = font, fontSize = 30.sp)
     }
-
 }
 
 @Composable
 fun ProfileUsername(model: MenuViewModel, username: String, font: List<Int>) {
     DecoCard(
         title = "Vous êtes...",
-        font = font,
+        font = font
     ) {
         UnderlineTextField(
             list = font,
@@ -103,7 +99,7 @@ fun ProfileSubscription(model: MenuViewModel, subscription: Boolean, font: List<
             (endDate[2].toInt() - year) * 12 * 30 + (endDate[1].toInt() - month) * 30 + (endDate[0].toInt() - day)
         DecoCard(
             title = "Abonné 👑",
-            font = font,
+            font = font
         ) {
             DisplayText(
                 text = "Temps restant : ${remaining}j",
@@ -119,7 +115,7 @@ fun ProfilePreferredTopics(preferredTopics: String, font: List<Int>) {
     if (preferredTopics != "") {
         DecoCard(
             title = "Domaine préféré",
-            font = font,
+            font = font
         ) {
             DisplayText(
                 text = preferredTopics,
@@ -135,8 +131,8 @@ fun ProfileButton(model: MenuViewModel, font: List<Int>) {
     val context = LocalContext.current
     Button(
         onClick = {
-            model.updateUsername();
-            model.saved.value = true;
+            model.updateUsername()
+            model.saved.value = true
             Toast.makeText(context, "Profile enregistré", Toast.LENGTH_SHORT).show()
         }
     ) {
