@@ -14,9 +14,7 @@ import fr.uparis.chenliu.projet.ui.MainActivity
 
 class WorkerReminder(val context: Context, params: WorkerParameters): Worker(context, params) {
     override fun doWork(): Result {
-
         val notificationType = inputData.getString("NOTIFICATION_TYPE")
-
         val title: String
         val text: String
 

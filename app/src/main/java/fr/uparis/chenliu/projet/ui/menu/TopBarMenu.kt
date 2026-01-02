@@ -1,5 +1,6 @@
 package fr.uparis.chenliu.projet.ui.menu
 
+import android.content.Context
 import android.widget.Toast
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -46,53 +47,14 @@ fun TopBarMenu(model: MenuViewModel, backStack: NavBackStack<NavKey>) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // joueur
-                Button (onClick = {
-                    backStack.clear()
-                    backStack.add(Screen.Profile)
-                }) {
-                    DisplayText(
-                        list = currentFont.value,
-                        text = model.username.value,
-                        fontSize = 18.sp
-                    )
-                }
-
-                // energie
-                Button(onClick = {
-                    if (!model.subscription.value && energy < 20) {
-                        Toast.makeText(
-                            context,
-                            "Prochain point d’énergie dans $timeEnergy",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    } },
-                    colors = ButtonDefaults.buttonColors(containerColor =
-                        if (model.subscription.value) {
-                            Color.Cyan
-                        } else if (energy == 0) {
-                            breathingRed()
-                        } else {
-                            energyColor(energy)
-                        }
-                    ),
-                    modifier = Modifier.padding(end = 16.dp)
-                ) {
-                    DisplayText(
-                        list = currentFont.value,
-                        text = if (model.subscription.value) {
-                            "∞"
-                        } else {
-                            "$energy"
-                        },
-                        fontSize = 18.sp
-                    )
-                    Icon(
-                        imageVector = Icons.Default.Bolt,
-                        contentDescription = "Énergie",
-                        tint = Color.Yellow
-                    )
-                }
+                TopBarPlayer(model = model, font = currentFont.value, backStack = backStack)
+                TopBarEnergy(
+                    model = model,
+                    font = currentFont.value,
+                    context = context,
+                    energy = energy,
+                    timeEnergy = timeEnergy
+                )
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)
@@ -103,14 +65,60 @@ fun energyColor(energy: Int, maxEnergy: Int = 20): Color {
     val ratio = energy.toFloat() / maxEnergy.toFloat()
     val red = (255 * (1f - ratio)).toInt()
     val green = (255 * ratio).toInt()
-
     return Color(red, green, 0)
+}
+
+@Composable
+fun TopBarPlayer(model: MenuViewModel, font: List<Int>, backStack: NavBackStack<NavKey>) {
+    Button (onClick = {
+        backStack.clear()
+        backStack.add(Screen.Profile)
+    }) {
+        DisplayText(
+            text = model.username.value,
+            font = font,
+            fontSize = 18.sp
+        )
+    }
+}
+
+@Composable
+fun TopBarEnergy(model: MenuViewModel, font: List<Int>, context: Context, energy: Int, timeEnergy: String) {
+    Button(onClick = {
+        if (!model.subscription.value && energy < 20) {
+            Toast.makeText(
+                context,
+                "Prochain point d’énergie dans $timeEnergy",
+                Toast.LENGTH_SHORT
+            ).show()
+        } },
+        colors = ButtonDefaults.buttonColors(containerColor =
+            if (model.subscription.value) {
+                Color.Cyan
+            } else if (energy == 0) {
+                breathingRed()
+            } else {
+                energyColor(energy)
+            }
+        ),
+        modifier = Modifier.padding(end = 16.dp)
+    ) {
+        DisplayText(
+            text = if (model.subscription.value) "∞" else "$energy",
+            font = font,
+            fontSize = 18.sp
+        )
+        Icon(
+            imageVector = Icons.Default.Bolt,
+            contentDescription = "Energy",
+            tint = Color.Yellow
+        )
+    }
 }
 
 @Composable
 fun breathingRed(): Color {
     val infiniteTransition = rememberInfiniteTransition(label = "blink")
-
     val alpha = infiniteTransition.animateFloat(
         initialValue = 1f,
         targetValue = 0.2f,
@@ -120,6 +128,5 @@ fun breathingRed(): Color {
         ),
         label = "blinkAlpha"
     )
-
     return Color.Red.copy(alpha = alpha.value)
 }

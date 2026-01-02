@@ -38,7 +38,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                 exist.value = true
                 username.value = user.value!!.username
                 endDate.value = user.value!!.endDate
-                delay(3000)
+                delay(2000)
             }
             loading.value = false
         }
@@ -53,8 +53,8 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
                 }
                 initSubject(context)
                 initQuizz(context)
-                initUser()
                 initDeco(context)
+                initUser()
 
                 exist.value = true
                 loading.value = false
@@ -117,9 +117,8 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         db.usersDao().insertUser(UsersEntity(username = username.value.trim(), energy = 20, lastTimeEnergy = System.currentTimeMillis(),subscribe = false, endDate = ""))
         user.value = db.usersDao().getUser()
         db.settingsDao().init(SettingsEntity(userId = user.value!!.userId, background = 0, font = 0, preferredTopics = ""))
-        delay(3000)
+        delay(2000)
     }
-
 
     fun expireSubscription() {
         viewModelScope.launch {

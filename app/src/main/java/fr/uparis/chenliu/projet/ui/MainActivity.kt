@@ -1,10 +1,12 @@
 package fr.uparis.chenliu.projet.ui
 
 import android.app.ActivityOptions
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.view.Window
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.RequiresApi
@@ -14,7 +16,6 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -24,12 +25,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -43,6 +41,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -68,38 +67,34 @@ class MainActivity : ComponentActivity() {
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // cacher les barres systems (mode immerssif)
-        val windowInsetsController =
-            WindowCompat.getInsetsController(window, window.decorView)
-        windowInsetsController.systemBarsBehavior =
-            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
-
         setContent {
             ProjetTheme {
                 val permission = android.Manifest.permission.POST_NOTIFICATIONS
                 val permissionCheckResult = ContextCompat.checkSelfPermission(this, permission)
                 if (permissionCheckResult != PackageManager.PERMISSION_GRANTED) {
                     if (!shouldShowRequestPermissionRationale(permission)) {
-                        requestPermissions(
-                            arrayOf(permission),
-                            0
-                        )
+                        requestPermissions(arrayOf(permission), 0)
                     }
                 }
-                MyScreen(activity = this)
+                HideSystemBar(window)
+                MainScreen(activity = this)
             }
         }
     }
 }
 
 @Composable
-fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
+fun MainScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
     val context = LocalContext.current
     val intent = Intent(context, MenuActivity::class.java)
     val username = model.username.value
     val loading = model.loading.value
     val exist = model.exist.value
+    val animation = ActivityOptions.makeCustomAnimation(
+        context,
+        R.anim.fade_in,
+        R.anim.fade_out
+    )
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
@@ -114,149 +109,126 @@ fun MyScreen(activity: MainActivity, model: MainViewModel = viewModel()) {
         } else {
             if (exist) {
                 if (model.endDate.value != "") {
-                    val endDate = model.endDate.value.split("/")
-                    val dayToday = LocalDateTime.now().dayOfMonth
-                    val monthToday = LocalDateTime.now().month.value
-                    val yearToday = LocalDateTime.now().year
-                    if (endDate[2].toInt() <= yearToday) {
-                        if (endDate[1].toInt() < monthToday) {
-                            if (endDate[0].toInt() <= dayToday) {
-                                model.expireSubscription()
-                            }
-                        }
-                    }
+                    checkSubscriptionDate(model = model)
                 }
                 intent.putExtra("username", username)
-
-                val options = ActivityOptions.makeCustomAnimation(
-                    context,
-                    R.anim.fade_in,
-                    R.anim.fade_out
-                )
-                context.startActivity(intent, options.toBundle())
-
+                context.startActivity(intent, animation.toBundle())
                 activity.finish()
-
-
             } else {
-                Image(
-                    painter = painterResource(id = R.drawable.background_defaut),
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop
-                )
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(top = 80.dp),
-                    verticalArrangement = Arrangement.Top,
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-
-                    Text(
-                        text = "What The Fact",
-                        fontSize = 40.sp,
-                        fontWeight = FontWeight.Bold,
-                        textAlign = TextAlign.Start,
-                        color = Color.White,
-                        style = androidx.compose.ui.text.TextStyle(
-                            shadow = Shadow(
-                                color = Color.Black,
-                                offset = Offset(4f, 4f),
-                                blurRadius = 8f
-                            ),
-                            textDecoration = TextDecoration.Underline
-                        ),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 20.dp)
-                    )
-                    Text(
-                        text = "Quiz",
-                        fontSize = 60.sp,
-                        fontWeight = FontWeight.Bold,
-                        textAlign = TextAlign.End,
-                        color = Color.White,
-                        style = androidx.compose.ui.text.TextStyle(
-                            shadow = Shadow(
-                                color = Color.Black,
-                                offset = Offset(4f, 4f),
-                                blurRadius = 8f
-                            ),
-                            textDecoration = TextDecoration.Underline
-                        ),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 20.dp)
-                            .graphicsLayer(rotationZ = 15f)
-                    )
-                    Spacer(modifier = Modifier.height(80.dp))
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center,
-                        modifier = Modifier
-                            .background(
-                                Color.White,
-                                shape = RoundedCornerShape(4.dp)
-                            )
-                            .border(
-                                width = 1.dp,
-                                color = Color.Black,
-                                shape = RoundedCornerShape(4.dp)
-                            )
-                            .padding(horizontal = 16.dp, vertical = 8.dp)
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.ArrowDownward,
-                            contentDescription = "Down",
-                            tint = Color.Black
-                        )
-
-                        Text(
-                            "Entrer votre pseudo",
-                            modifier = Modifier.padding(horizontal = 8.dp)
-                        )
-
-                        Icon(
-                            imageVector = Icons.Default.ArrowDownward,
-                            contentDescription = "Down",
-                            tint = Color.Black
-                        )
-                    }
-                    WriteField(
-                        value = username,
-                        onValueChange = { if (it.length <= 16) model.username.value = it },
-                        label = "",
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 20.dp),
-                        fontSize = 25.sp,
-                        onDone = { model.insertData(context) },
-
-                        )
-                    Spacer(modifier = Modifier.height(45.dp))
-                    Button(
-                        onClick = { model.insertData(context) },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 20.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(243, 205, 26),
-                            contentColor = Color.Black
-                        ),
-                        shape = RoundedCornerShape(4.dp)
-                    ) {
-                        Text(
-                            text = if (model.username.value == "") {
-                                "Peut-être plus tard"
-                            } else {
-                                "Continuer"
-                            }
-                        )
-                    }
-                }
+                MainElement(model = model, username = username, context = context)
             }
         }
+    }
+}
+
+fun checkSubscriptionDate(model: MainViewModel) {
+    val endDate = model.endDate.value.split("/")
+    val dayToday = LocalDateTime.now().dayOfMonth
+    val monthToday = LocalDateTime.now().month.value
+    val yearToday = LocalDateTime.now().year
+    if (endDate[2].toInt() <= yearToday) {
+        if (endDate[1].toInt() < monthToday) {
+            if (endDate[0].toInt() <= dayToday) {
+                model.expireSubscription()
+            }
+        }
+    }
+}
+
+@Composable
+fun MainElement(model: MainViewModel, username: String, context: Context) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(top = 80.dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        MainTitle(
+            text = "What The Fact",
+            fontSize = 40.sp,
+            textAlign = TextAlign.Start,
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)
+        )
+        MainTitle(
+            text = "Quiz",
+            fontSize = 60.sp,
+            textAlign = TextAlign.End,
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp).graphicsLayer(rotationZ = 15f)
+        )
+        Spacer(modifier = Modifier.height(80.dp))
+        MainContent(model = model, username = username, context = context)
+        Spacer(modifier = Modifier.height(45.dp))
+        MainButton(model = model, context = context)
+    }
+}
+
+@Composable
+fun MainTitle(text: String, fontSize: TextUnit, textAlign: TextAlign, modifier: Modifier) {
+    Text(
+        text = text,
+        fontSize = fontSize,
+        fontWeight = FontWeight.Bold,
+        textAlign = textAlign,
+        color = Color.White,
+        style = TextStyle(
+            shadow = Shadow(
+                color = Color.Black,
+                offset = Offset(4f, 4f),
+                blurRadius = 8f
+            ),
+            textDecoration = TextDecoration.Underline
+        ),
+        modifier = modifier
+    )
+}
+
+@Composable
+fun MainContent(model: MainViewModel, username: String, context: Context) {
+    Text(
+        text = "Entrer votre pseudo",
+        modifier = Modifier
+            .background(
+                Color.White,
+                shape = RoundedCornerShape(4.dp)
+            )
+            .border(
+                width = 1.dp,
+                color = Color.Black,
+                shape = RoundedCornerShape(4.dp)
+            )
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+    )
+    WriteField(
+        value = username,
+        onValueChange = { if (it.length <= 16) model.username.value = it },
+        label = "",
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp),
+        fontSize = 25.sp,
+        onDone = { model.insertData(context) },
+    )
+}
+
+@Composable
+fun MainButton(model: MainViewModel, context: Context) {
+    Button(
+        onClick = { model.insertData(context) },
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color(243, 205, 26),
+            contentColor = Color.Black
+        ),
+        shape = RoundedCornerShape(4.dp)
+    ) {
+        Text(
+            text = if (model.username.value == "") {
+                "Peut-être plus tard"
+            } else {
+                "Continuer"
+            }
+        )
     }
 }
 
@@ -284,15 +256,16 @@ fun WriteField(
             focusedContainerColor = Color.White,
             unfocusedContainerColor = Color.White,
         ),
+        shape = RoundedCornerShape(12.dp),
         singleLine = true,
         label = {
             Text(
                 text = label,
                 fontSize = (fontSize.value - font[1]).sp,
                 fontFamily = FontFamily(Font(font[0])),
+                color = Color.Black
             )
         },
-
         keyboardOptions =
             if (onlyNb) {
                 KeyboardOptions(keyboardType = KeyboardType.Number, imeAction = ImeAction.Done)
@@ -334,4 +307,13 @@ fun LoadingScreen() {
             Spacer(modifier = Modifier.weight(weight = 0.5f))
         }
     }
+}
+
+@Composable
+fun HideSystemBar(window: Window) {
+    val windowInsetsController =
+        WindowCompat.getInsetsController(window, window.decorView)
+    windowInsetsController.systemBarsBehavior =
+        WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+    windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
 }

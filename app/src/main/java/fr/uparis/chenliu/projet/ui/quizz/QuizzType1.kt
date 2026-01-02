@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 import fr.uparis.chenliu.projet.ui.WriteField
@@ -18,32 +17,30 @@ fun Quizztype1 (
     model: QuizzViewModel
 ) {
     val currentQuestion = model.currentQuestion
-    val textFieldQuestion = model.textFieldQuestion
+    val textFieldAnswer = model.textFieldAnswer
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxHeight(0.5f),
         horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
+
     ) {
         WriteField(
-            value = textFieldQuestion.value,
+            value = textFieldAnswer.value,
             onValueChange = {
-                newValue -> textFieldQuestion.value = newValue
+                    newValue -> textFieldAnswer.value = newValue
             },
-            label = "Réponse",
+            label = "",
             modifier = Modifier,
             font = font,
             fontSize = 16.sp,
             onDone = {
-                val number = textFieldQuestion.value.toIntOrNull()
-                if (number != null) {
-                    model.updateGame(
-                        answerList = listOf(textFieldQuestion.value),
-                        verify = data.answers[currentQuestion.intValue].answer,
-                        type = 1
-                    )
-                }
+                model.updateGame(
+                    answerList = listOf(textFieldAnswer.value),
+                    goodAnswers = data.answers[currentQuestion.intValue].answer,
+                    type = 1
+                )
             }
         )
     }

@@ -1,6 +1,5 @@
 package fr.uparis.chenliu.projet.ui.quizz
 
-import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipDescription
 import android.os.Bundle
@@ -12,13 +11,11 @@ import androidx.compose.foundation.draganddrop.dragAndDropTarget
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -30,17 +27,16 @@ import androidx.compose.ui.draganddrop.DragAndDropTransferData
 import androidx.compose.ui.draganddrop.mimeTypes
 import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import fr.uparis.chenliu.projet.R
+import fr.uparis.chenliu.projet.ui.HideSystemBar
 import fr.uparis.chenliu.projet.ui.menu.DisplayText
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
 import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
@@ -48,27 +44,19 @@ import fr.uparis.chenliu.projet.ui.viewmodel.QuizzViewModel
 class QuizzActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // cacher les barres systems (mode immerssif)
-        val windowInsetsController =
-            WindowCompat.getInsetsController(window, window.decorView)
-        windowInsetsController.systemBarsBehavior =
-            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
-
         setContent {
             ProjetTheme {
-                val difficulty = intent.getStringExtra("difficulty")!!
                 val subject = intent.getStringExtra("subject")!!
-                MyQuizzScreen(difficulty, subject)
+                val difficulty = intent.getStringExtra("difficulty")!!
+                HideSystemBar(window)
+                MyQuizzScreen(subject = subject, difficulty = difficulty)
             }
         }
     }
 }
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel()){
+fun MyQuizzScreen(subject: String, difficulty: String, model: QuizzViewModel = viewModel()){
     val data = model.data
     val gameData = model.gameData
     val loading = model.loading
@@ -77,116 +65,128 @@ fun MyQuizzScreen(diff: String, subj: String, model: QuizzViewModel = viewModel(
     model.init(context = context)
 
     Scaffold(
-        topBar = {
-            TopBarQuizz(gameData, model)
-        },
-        bottomBar = {
-            BottomBarQuizz(gameData, model)
-        },
-        containerColor = Color.LightGray // tmp
+        topBar = { TopBarQuizz(model = model, gameData = gameData) },
+        bottomBar = { BottomBarQuizz(model = model, gameData = gameData) }
     ) { innerPadding ->
         if (loading.value) {
-            model.getQuestionAndAnswer(subj, diff)
+            model.getQuestionAndAnswer(subject = subject, difficulty = difficulty)
         } else {
             Column(modifier = Modifier.padding(innerPadding)) {
                 if (!gameData.gameEnded.value) {
-                    GameScreen(data.value)
+                    GameScreen(data = data.value)
                 } else {
-                    ResultScreen(model.currentFont.value, gameData)
+                    ResultScreen(
+                        model = model,
+                        font = model.currentFont.value,
+                        background = model.currentBackground.intValue,
+                        gameData = gameData,
+                        subject = subject
+                    )
                 }
             }
         }
     }
 }
 
-@OptIn(ExperimentalGlideComposeApi::class)  // on prend ici
+@OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-fun DragImage(answer: String, url: String) {
+fun DragImage(answer: String, image: String) {
     GlideImage(
-        model = url,
+        model = image,
         contentDescription = "Dragged Image",
         modifier = Modifier
             .fillMaxSize()
             .dragAndDropSource { _ ->
-            DragAndDropTransferData(ClipData.newPlainText(answer, url))
+            DragAndDropTransferData(ClipData.newPlainText(answer, image))
         },
-        loading = placeholder { R.drawable.placeholder }
+        loading = placeholder { R.drawable.placeholder },
+        contentScale = ContentScale.Crop
     )
 }
 
-@OptIn(ExperimentalGlideComposeApi::class) // on pose ici
+@OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-fun DropTargetImage(intValue: Int, font: List<Int>, model: QuizzViewModel, type: Int, movable: Boolean = true) {
-    val currentImageAnswer = model.imageAnswer[intValue]
-    val drag = if ((currentImageAnswer.isNotEmpty() && type != 3 && type != 4) || (type == 3 && movable)) {
-        Modifier.dragAndDropSource { _ -> DragAndDropTransferData(ClipData.newPlainText("swap", intValue.toString())) }
+fun DropTargetImage(model: QuizzViewModel, font: List<Int>, indexAnswer: Int, quizzType: Int, movable: Boolean = true) {
+    val currentImageAnswer = model.imageAnswer[indexAnswer]
+    val drag = if ((currentImageAnswer.isNotEmpty() && quizzType == 2) || (quizzType == 3 && movable)) {
+        Modifier.dragAndDropSource { _ -> DragAndDropTransferData(ClipData.newPlainText("swap", indexAnswer.toString())) }
     } else {
         Modifier
     }
-
-    val dndTarget = remember(intValue) {
+    val dragTarget = remember(indexAnswer) {
         object : DragAndDropTarget {
             override fun onDrop(event: DragAndDropEvent): Boolean {
-                val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
                 val answer = event.toAndroidDragEvent().clipData.description.label
+                val image = event.toAndroidDragEvent().clipData.getItemAt(0).text
 
                 if (answer == "swap") {
-                    val i = draggedData.toString().toInt()
-                    model.swapAnswers(i, intValue)
+                    val indexImage = image.toString().toInt()
+                    model.swapAnswers(indexAnswer = indexAnswer, indexImage = indexImage)
                 } else {
-                    if (type == 2) {
-                        model.replaceAnswer(answer.toString(), draggedData.toString(), intValue)
+                    if (quizzType == 2) {
+                        model.replaceAnswer(
+                            answer = answer.toString(),
+                            image = image.toString(),
+                            indexAnswer = indexAnswer
+                        )
                     } else {
-                        model.insertAnswer(answer.toString(), draggedData.toString(), intValue, type = type)
+                        model.insertAnswer(
+                            answer = answer.toString(),
+                            image = image.toString(),
+                            indexAnswer = indexAnswer,
+                            quizzType = quizzType
+                        )
                     }
                 }
                 return true
             }
         }
     }
+
     Box(
-        Modifier.border(2.dp, Color.Gray, RoundedCornerShape(8.dp))
-            .then(drag)
+        drag.border(2.dp, Color.Gray)
     ) {
-        GlideImage(
-            model = currentImageAnswer,
-            contentDescription = "Dropped Image",
-            modifier = Modifier
-                .fillMaxSize()
-                .dragAndDropTarget(
-                    shouldStartDragAndDrop = { event ->
-                        event.mimeTypes()
-                            .contains(ClipDescription.MIMETYPE_TEXT_PLAIN)
-                    },
-                    target = dndTarget
-                )
-        )
-        if (currentImageAnswer.isEmpty()) {
-            Column(
-                modifier = Modifier.fillMaxSize(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    DisplayText(list = font, text = (intValue + 1).toString(), fontSize = 26.sp)
-                }
-            }
+        SlotDrop(font = font, indexAnswer = indexAnswer, dragTarget = dragTarget, currentImageAnswer = currentImageAnswer)
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+fun SlotDrop(font: List<Int>, indexAnswer: Int, dragTarget: DragAndDropTarget, currentImageAnswer: String) {
+    GlideImage(
+        model = currentImageAnswer,
+        contentDescription = "Dropped Image",
+        modifier = Modifier
+            .fillMaxSize()
+            .dragAndDropTarget(
+                shouldStartDragAndDrop = { event ->
+                    event.mimeTypes()
+                        .contains(ClipDescription.MIMETYPE_TEXT_PLAIN)
+                },
+                target = dragTarget
+            ),
+        contentScale = ContentScale.Crop
+    )
+    if (currentImageAnswer.isEmpty()) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            DisplayText(text = (indexAnswer + 1).toString(), font = font, fontSize = 26.sp)
         }
     }
 }
 
 @Composable
-fun InsertionDropTarget(index: Int, model: QuizzViewModel, type: Int) {
-    val dndTarget = remember(index) {
+fun InsertionDropTarget(model: QuizzViewModel, indexAnswer: Int, quizzType: Int) {
+    val dragTarget = remember(quizzType) {
         object : DragAndDropTarget {
             override fun onDrop(event: DragAndDropEvent): Boolean {
-                val draggedData = event.toAndroidDragEvent().clipData.getItemAt(0).text
                 val answer = event.toAndroidDragEvent().clipData.description.label
+                val image = event.toAndroidDragEvent().clipData.getItemAt(0).text
                 if (answer != "swap") {
-                    model.insertAnswer(answer.toString(), draggedData.toString(), index, type)
+                    model.insertAnswer(answer = answer.toString(), image = image.toString(), indexAnswer = indexAnswer, quizzType = quizzType)
                     return true
                 }
                 return false
@@ -200,7 +200,7 @@ fun InsertionDropTarget(index: Int, model: QuizzViewModel, type: Int) {
             .height(200.dp)
             .dragAndDropTarget(
                 shouldStartDragAndDrop = { event -> event.mimeTypes().contains(ClipDescription.MIMETYPE_TEXT_PLAIN) },
-                target = dndTarget
+                target = dragTarget
             )
     )
 }
