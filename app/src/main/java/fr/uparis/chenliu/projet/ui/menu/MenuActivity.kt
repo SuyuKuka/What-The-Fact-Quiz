@@ -47,7 +47,6 @@ import androidx.work.Data
 import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import fr.uparis.chenliu.projet.data.store.TimeConfig
 import fr.uparis.chenliu.projet.navigation.Screen
 import fr.uparis.chenliu.projet.ui.HideSystemBar
 import fr.uparis.chenliu.projet.ui.theme.ProjetTheme
@@ -218,6 +217,5 @@ fun fullEnergyRemind(context: Context, currentEnergy: Int, remainingTime: Long) 
 
 @Composable
 private fun DailyRemind(model: TimeConfigViewModel = viewModel()) {
-    val config = TimeConfig(hMorning = 8, mMorning = 0)
-    model.schedule(config)
+    model.schedule()
 }
