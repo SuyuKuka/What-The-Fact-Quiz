@@ -17,7 +17,7 @@ class TimeConfigViewModel(val app: Application) : AndroidViewModel(app) {
         val wm = WorkManager.getInstance(app)
         wm.enqueueUniquePeriodicWork(
             "daily_reminder",
-            ExistingPeriodicWorkPolicy.KEEP,
+            ExistingPeriodicWorkPolicy.UPDATE,
             perRequest()
         )
     }
@@ -25,8 +25,10 @@ class TimeConfigViewModel(val app: Application) : AndroidViewModel(app) {
     private fun perRequest(): PeriodicWorkRequest {
         val now = Calendar.getInstance()
         val target = Calendar.getInstance().apply {
-            set(Calendar.HOUR_OF_DAY, 10)
+            set(Calendar.HOUR_OF_DAY, 9)
+            set(Calendar.MINUTE, 45)
             set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
         }
         if (target.before(now)) target.add(Calendar.DAY_OF_YEAR, 1)
         val delta = target.timeInMillis - now.timeInMillis
